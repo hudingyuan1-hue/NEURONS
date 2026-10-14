@@ -1,0 +1,10 @@
+Mode: built-in imagegen, style-transfer edit, opaque source.
+Input: art/guides/bedroom_shell_layout_v001.png — geometry guide only.
+
+Paint this exact empty room geometry as a production 2D game background shell. Preserve the 1280 x 720 framing and every corner/edge coordinate exactly; no camera, perspective, cropping, furniture or layout changes. Fixed oblique projection, parallel horizontal x edges, parallel down-right depth edges. The room consists ONLY of a wood plank floor, a back plaster wall, a left plaster wall and their baseboards. Keep the exterior flat dark slate #222c30.
+
+Use hand-painted broad opaque gouache blocks, restrained painterly edges, purposeful 2–4 logical-pixel brush clusters at the eventual 640 x 360 runtime scale. Warm daily-life paper, grey sage plaster and soft ochre wood, gentle upper-left daylight with cooler muted shadows. Express surfaces using broad, selective strokes and subtle tonal variation, not dense grunge or photo texture. Quiet adult psychological-narrative game mood, still an ordinary cared-for bedroom at opening. No blood, cracks, horror symbols, grime, noise overlay or decay. Floor remains light enough to read small grey-green characters.
+
+Geometry lock in the 1280 x 720 source: rear wall corners (90,96),(986,96),(986,264),(90,264); left wall corners (90,96),(303,446),(303,614),(90,264); floor projection corners (90,264),(986,264),(1199,614),(303,614). The left wall naturally overlaps part of the floor. Preserve these boundaries and maintain complete uninterrupted floor underneath all future furniture. The plank seams follow the guide's axes without perspective convergence.
+
+Absolutely no people, creatures, furniture, doors, windows, rugs, lamps, hanging objects, loose props, captions, UI or text. Doors/windows and all interactable items will be separate engine layers. Do not invent openings. Keep the source fully opaque, no alpha or checkerboard. This is the empty structural background layer, not a full finished scene.

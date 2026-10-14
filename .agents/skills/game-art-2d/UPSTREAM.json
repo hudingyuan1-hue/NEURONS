@@ -1,0 +1,100 @@
+{
+  "repository": "https://github.com/woliveiras/geremmyas",
+  "commit": "dee77ae174c2ace7faeac95103ac27f79c0f86ab",
+  "source_path": "content/skills/game-art-2d",
+  "retrieved": "2026-10-14",
+  "license": "MIT",
+  "installation_method": "official skill-installer --method download",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "upstream_blob_sha1": "863296d906ac89d9d2326bf2f99a9112dd3f3153",
+      "bytes": 10169
+    },
+    {
+      "path": "agents/openai.yaml",
+      "upstream_blob_sha1": "7b754302eebbfef861ed96cad8245cdeb42e56c5",
+      "bytes": 212
+    },
+    {
+      "path": "references/animation-and-spritesheets.md",
+      "upstream_blob_sha1": "cea9fa47f2224188415b19af54ff7532449ee605",
+      "bytes": 4021
+    },
+    {
+      "path": "references/art-direction.md",
+      "upstream_blob_sha1": "8a6c5b696c5a74ffab01f03912a7f10138c44bc8",
+      "bytes": 3908
+    },
+    {
+      "path": "references/characters-and-enemies.md",
+      "upstream_blob_sha1": "35ecc84649b993e3a9dc77716a02f8797adf9f07",
+      "bytes": 3554
+    },
+    {
+      "path": "references/godot/asset-pipeline.md",
+      "upstream_blob_sha1": "2db2ebf2a41fe74478a3f6d90ed062449d9a0190",
+      "bytes": 7716
+    },
+    {
+      "path": "references/items-props-vfx-and-ui.md",
+      "upstream_blob_sha1": "feffe472f6a85420f6e536a8c4306ce617acf07f",
+      "bytes": 3357
+    },
+    {
+      "path": "references/maps-and-levels.md",
+      "upstream_blob_sha1": "4ef1f149430bd428ecc3392553a0c8fa2908d6fc",
+      "bytes": 4797
+    },
+    {
+      "path": "references/phaser/asset-pipeline.md",
+      "upstream_blob_sha1": "fd5568e60ee3e1121c554dd0f01caab8ebd78fc1",
+      "bytes": 6905
+    },
+    {
+      "path": "references/pixel-art/style-guide.md",
+      "upstream_blob_sha1": "6cf35252b19f2fc2d0bd9e91a24badaccfdfb520",
+      "bytes": 5386
+    },
+    {
+      "path": "references/pop-art/style-guide.md",
+      "upstream_blob_sha1": "bf81bfd76b5f5fb1ae0481f45762436e0c08507e",
+      "bytes": 3174
+    },
+    {
+      "path": "references/runtime-packaging-and-qa.md",
+      "upstream_blob_sha1": "04e5e62b883b96c41679da2a6972cc2969cc0602",
+      "bytes": 4228
+    },
+    {
+      "path": "references/style-pack-contract.md",
+      "upstream_blob_sha1": "c13e0fdf40ed9e4bf1aa5a523a78b99b290d64e6",
+      "bytes": 1713
+    },
+    {
+      "path": "scripts/asset_qa.py",
+      "upstream_blob_sha1": "a6b849aeb0df0d5994dc9380f45883f787945921",
+      "bytes": 5095
+    },
+    {
+      "path": "scripts/make_contact_sheet.py",
+      "upstream_blob_sha1": "7c97197a07027bd0726ccf3c48bdc1acd6c1e67a",
+      "bytes": 4450
+    },
+    {
+      "path": "scripts/pack_spritesheet.py",
+      "upstream_blob_sha1": "a38f9457269e2c7b12e759f32d60ed27519894c3",
+      "bytes": 5559
+    },
+    {
+      "path": "scripts/pixel_art_process.py",
+      "upstream_blob_sha1": "628f96fae931bb920edae2431de8122c5d9fbb83",
+      "bytes": 6070
+    },
+    {
+      "path": "scripts/slice_spritesheet.py",
+      "upstream_blob_sha1": "a5d217da2e2a7ef0982a1ab2c38c7c7e8f942968",
+      "bytes": 4269
+    }
+  ]
+}

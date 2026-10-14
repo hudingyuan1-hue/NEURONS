@@ -1,0 +1,46 @@
+[
+  {
+    "path": "art\\source\\bedroom_shell_v001.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1672,
+    "height": 941,
+    "has_alpha_channel": false,
+    "alpha_range": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "transparent_ratio": 0.0,
+    "visible_bbox": [
+      0,
+      0,
+      1672,
+      941
+    ],
+    "color_count": 26982,
+    "issues": []
+  },
+  {
+    "path": "neurons\\assets\\environment\\bedroom_shell_v001.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 640,
+    "height": 360,
+    "has_alpha_channel": false,
+    "alpha_range": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "transparent_ratio": 0.0,
+    "visible_bbox": [
+      0,
+      0,
+      640,
+      360
+    ],
+    "color_count": 12042,
+    "issues": []
+  }
+]

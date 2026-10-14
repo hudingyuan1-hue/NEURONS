@@ -1,0 +1,24 @@
+[
+  {
+    "path": "art\\source\\player_master_v001.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1133,
+    "height": 1388,
+    "has_alpha_channel": false,
+    "alpha_range": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "transparent_ratio": 0.0,
+    "visible_bbox": [
+      0,
+      0,
+      1133,
+      1388
+    ],
+    "color_count": 64757,
+    "issues": []
+  }
+]

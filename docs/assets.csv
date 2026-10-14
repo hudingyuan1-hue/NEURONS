@@ -1,0 +1,9 @@
+asset_id,purpose,source,version,status,source_path,runtime_path,width,height,anchor,runtime_reference,license_or_note
+player_master,玩家小怪物母图,内置image_gen参考用户附图原创设计,v001,pending_user_approval,art/source/player_master_v001.png,,1133,1388,未切帧脚锚待透明稿确认,,不透明完整原图保留
+player_preview,菜单及对白候选形象,Pillow LANCZOS统一比例缩小母图,v001,imported_rendered_preview,art/source/player_master_v001.png,neurons/assets/player/player_master_preview_v001.png,104,128,Control居中等比,neuron_menu.gd及bedroom_sample.gd,非正式透明精灵无动作派生
+noto_cjk_sc,中文英文界面字体,Noto官方固定commit,v001,imported_13_corpus_glyphs_missing,neurons/assets/fonts/OFL-NotoSansCJK.txt,neurons/assets/fonts/NotoSansCJKsc-Regular.otf,,,基线由Godot字体度量,UI主题,OFL1.1详细来源见字体README
+bedroom_greybox,布局动线与交互验证,本轮二维代码绘制,v001,greybox_not_production,,neurons/scripts/world/room_view.gd,640,360,逻辑米投影与脚底,bedroom_sample.tscn,正式场景待制作
+actors_greybox,主角母亲父亲猫动作验证,本轮二维关节剪影,v001,greybox_not_identity_design,,neurons/scripts/world/room_view.gd,64,80,逻辑脚底为局部0点,bedroom_sample.tscn,主角完整造型依据待核定
+feedback_tones,短反馈音效原型,本地确定性正弦合成,v001,provisional_not_final_audio,,neurons/scripts/ui/feedback_audio.gd,,,游戏事件触发,bedroom_sample.gd,未生产配音与环境正式音轨
+bedroom_shell_source,卧室墙地面原图,内置imagegen编辑固定几何参考,v001,opaque_candidate,art/source/bedroom_shell_v001.png,,1672,941,参考全画布0点,,提示词见docs/prompts/bedroom_shell_v001.txt
+bedroom_shell_runtime,卧室完整空房底图,Pillow LANCZOS缩小保留不透明原图,v001,imported_render_pending,art/source/bedroom_shell_v001.png,neurons/assets/environment/bedroom_shell_v001.png,640,360,原点0 0；按米制投影轮廓绘制,room_view.gd ROOM_SHELL,没有活动物与家具；几何遮罩在Godot内完成

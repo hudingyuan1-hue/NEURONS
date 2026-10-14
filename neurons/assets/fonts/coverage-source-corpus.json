@@ -1,0 +1,90 @@
+{
+  "font": "neurons/assets/fonts/NotoSansCJKsc-Regular.otf",
+  "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+  "bytes": 16437364,
+  "upstream_blob_sha1": "dc15562470b4f842321894787a0d066879ccff8b",
+  "method": "OpenType Unicode cmap format 4 and 12 codepoint coverage; no shaping or Godot visual verification",
+  "corpora": [
+    {
+      "source": "游玩体验 需求",
+      "unique_chars": 781,
+      "missing": []
+    },
+    {
+      "source": "人物",
+      "unique_chars": 748,
+      "missing": [
+        {
+          "char": "◡",
+          "codepoint": "U+25E1",
+          "name": "LOWER HALF CIRCLE"
+        },
+        {
+          "char": "䶷",
+          "codepoint": "U+4DB7",
+          "name": "CJK UNIFIED IDEOGRAPH-4DB7"
+        },
+        {
+          "char": "䶸",
+          "codepoint": "U+4DB8",
+          "name": "CJK UNIFIED IDEOGRAPH-4DB8"
+        },
+        {
+          "char": "䶹",
+          "codepoint": "U+4DB9",
+          "name": "CJK UNIFIED IDEOGRAPH-4DB9"
+        },
+        {
+          "char": "䶺",
+          "codepoint": "U+4DBA",
+          "name": "CJK UNIFIED IDEOGRAPH-4DBA"
+        },
+        {
+          "char": "䶼",
+          "codepoint": "U+4DBC",
+          "name": "CJK UNIFIED IDEOGRAPH-4DBC"
+        },
+        {
+          "char": "𨉣",
+          "codepoint": "U+28263",
+          "name": "CJK UNIFIED IDEOGRAPH-28263"
+        },
+        {
+          "char": "𩇬",
+          "codepoint": "U+291EC",
+          "name": "CJK UNIFIED IDEOGRAPH-291EC"
+        },
+        {
+          "char": "𩇯",
+          "codepoint": "U+291EF",
+          "name": "CJK UNIFIED IDEOGRAPH-291EF"
+        },
+        {
+          "char": "𩇱",
+          "codepoint": "U+291F1",
+          "name": "CJK UNIFIED IDEOGRAPH-291F1"
+        },
+        {
+          "char": "𩉻",
+          "codepoint": "U+2927B",
+          "name": "CJK UNIFIED IDEOGRAPH-2927B"
+        },
+        {
+          "char": "𩉼",
+          "codepoint": "U+2927C",
+          "name": "CJK UNIFIED IDEOGRAPH-2927C"
+        },
+        {
+          "char": "𩍮",
+          "codepoint": "U+2936E",
+          "name": "CJK UNIFIED IDEOGRAPH-2936E"
+        }
+      ]
+    },
+    {
+      "source": "关卡 周目 环境",
+      "unique_chars": 579,
+      "missing": []
+    }
+  ]
+}
