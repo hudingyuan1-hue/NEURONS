@@ -1,0 +1,8 @@
+Built-in image_gen, 2026-10-15, one call; output source 1254x1254 RGB.
+Original prompt:
+Create an original game texture asset, NOT an illustration of a cabinet. A single flat front-on orthographic seamless-looking square field of aged muted warm grey-brown walnut wood, fine horizontal wood grain with broad painterly pixel clusters and sparse rubbed faded patches. Full bleed opaque 1024x1024 image, all pixels are wood material, evenly lit, no object silhouette, no perspective, no borders, no gaps between planks, no text, no objects, no handles, no cast shadows. Low contrast restrained palette: midtone #87684f, faded warm #b09a78, dark grain #655745, faint cool grey olive patina #727e72. Old lived-in bedroom, subtle vintage tactility, NOT rotten, no dramatic cracks, no scratches shaped like symbols. Designed to be downsampled to 64x64 logical pixels and mapped on a small 2D oblique bedside cabinet with separate drawer geometry. Texture shapes should remain legible at this size: broad clustered 2-4 logical pixel wear patches, only a few dark grain lines, clean visual hierarchy, no full-surface speckle or photographic noise. Deliver only the opaque flat material image.
+
+Observed: tool returned 1254 square rather than requested 1024. Original retained;
+BOX downsample to 64 square via tools/prepare_bedside.py. This is a material,
+not a character, complete room, or transparent sprite. No reference image was
+copied into runtime. No second generation or paid API was used.

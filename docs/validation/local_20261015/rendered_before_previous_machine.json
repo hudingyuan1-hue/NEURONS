@@ -1,0 +1,27 @@
+{
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"passes": [
+		"click protagonist opens neuron menu",
+		"menu freezes world position search and cooldown clock",
+		"one valid skin submission spends exactly one neuron",
+		"skin submission does not apply while screen closes",
+		"manual pause during closing defers pending body reaction",
+		"skin actual reaction cancels unfinished search without reward",
+		"close does not reopen menu or leak a click",
+		"resumed autonomous search spends a new attempt",
+		"resisted skin keeps search progress",
+		"mother transfer commits at actual contact endpoint",
+		"receiving porridge does not eat it or award food resources",
+		"replayed transfer completion cannot duplicate ownership",
+		"interrupted receiving leaves item with mother",
+		"father grip starts only at actual close facing unobstructed contact",
+		"paired drag preserves physical offset without snapping",
+		"menu freezes father motion and pressure",
+		"startle pays two neurons and rewards only actual separation",
+		"cat actual hit applies HP/SP minus ten exactly once",
+		"cat replay cannot repeat damage"
+	],
+	"rendered": true,
+	"scope": "isolated bedroom mechanics, not complete game"
+}

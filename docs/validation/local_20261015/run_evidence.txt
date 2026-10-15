@@ -1,0 +1,411 @@
+2026-10-15 / Godot 4.7.2 / local NEURONS verification
+Git baseline d36826eddce41cfe1323f0bb41f8f68aaf22fa28; old machine stopped and pushed per user confirmation.
+Commands: godot --headless --path neurons --editor --import --quit; godot --headless --path neurons --script res://tests/test_rules.gd; godot --headless --path neurons --script res://tests/test_layout.gd; godot --path neurons -- --visual-check; godot --path neurons -- --bedside-check.
+Original stdout .log files are ignored; this text preserves actual outputs.
+
+=== rules_before.log ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+NEURONS interaction rules: 71 checks, 0 failures
+
+
+=== layout_before.log ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+NEURONS room layout: 158 checks, 0 failures
+
+
+=== render_before.log ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 - Build 32.0.101.6737 - Compatibility - Using Device: Intel - Intel(R) Arc(TM) 130T GPU (16GB)
+
+VISUAL_CHECK: real rendering and input simulation started
+EVENT: 开始搜寻 床；已占用次数 1/10
+SCREENSHOT 01_autonomous_search result=0
+PASS: click protagonist opens neuron menu
+PASS: menu freezes world position search and cooldown clock
+SCREENSHOT 02_neuron_menu result=0
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+PASS: one valid skin submission spends exactly one neuron
+PASS: skin submission does not apply while screen closes
+PASS: manual pause during closing defers pending body reaction
+EVENT: 干预成功：抓挠 0.5 秒；未完成搜寻取消，不发完成奖励
+PASS: skin actual reaction cancels unfinished search without reward
+SCREENSHOT 03_skin_interruption result=0
+EVENT: 开始搜寻 床；已占用次数 2/10
+PASS: close does not reopen menu or leak a click
+PASS: resumed autonomous search spends a new attempt
+SCREENSHOT 04_zoom_080 result=0
+SCREENSHOT 05_zoom_130 result=0
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+EVENT: 干预被抵抗；费用已支付，原搜寻进度继续。
+PASS: resisted skin keeps search progress
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 实际接碗：唯一归属 mother → hero；未食用，不恢复精神，不发资源。
+EVENT: 递物场次结束；原上床/转场剧情待接。可重开验证交付前干预。
+PASS: mother transfer commits at actual contact endpoint
+PASS: receiving porridge does not eat it or award food resources
+PASS: replayed transfer completion cannot duplicate ownership
+SCREENSHOT 06_mother_transfer result=0
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+EVENT: 干预成功：抓挠 0.5 秒；不额外结算伤害
+EVENT: 接碗已被打断；粥保持母亲唯一持有。
+PASS: interrupted receiving leaves item with mother
+EVENT: 父亲测试夹具：无其他人物；正式事件后段待接。SKIN不能解已成立抓握。
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 抓取前摇 1 秒；尚未抓牢。
+EVENT: 抓握实际成立；保持原相对位置，抓稳转身 2 秒后带行。
+PASS: father grip starts only at actual close facing unobstructed contact
+PASS: paired drag preserves physical offset without snapping
+SCREENSHOT 07_father_drag result=0
+PASS: menu freezes father motion and pressure
+EVENT: 惊跳已提交：2神经元 / 强度2 / 冷却4游戏秒；实际后撤完成才结算专属脱离。
+EVENT: 惊跳实际脱离，+5精神一次；父亲压迫仍存在。测试止于释放，后续追抓待接。
+PASS: startle pays two neurons and rewards only actual separation
+SCREENSHOT 08_father_release result=0
+EVENT: 猫占床搜索目标：实际搜寻中成功外显干预，才触发抓伤。
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 开始搜寻 床；已占用次数 1/10
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+EVENT: 干预成功：抓挠 0.5 秒；未完成搜寻取消，不发完成奖励
+EVENT: 猫抓伤实际命中一次：生命 -10 / 精神 -10。
+EVENT: 受击验证止于命中；后续跳窗与下一行为尾段待接。
+PASS: cat actual hit applies HP/SP minus ten exactly once
+PASS: cat replay cannot repeat damage
+SCREENSHOT 09_cat_hit result=0
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 开始搜寻 床；已占用次数 1/10
+SCREENSHOT 10_collision_overlay result=0
+RENDERED_INTEGRATION: 19 passed, 0 failed
+
+
+=== render_before.err ===
+
+
+=== import_after.log ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started 项目初始化 (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | 正在扫描文件结构……[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | 正在加载全局类名……[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | 正在校验 GDExtension……[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | 正在创建自动加载脚本……[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | 正在初始化插件……[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | 正在启动文件扫描……[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started 正在注册全局类…… (4 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  20% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  40% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  60% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started 正在导入或重新导入资产 (1 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | 正在准备重新导入文件……[39m[0m
+[   0% ] [90m[1mreimport[22m | 正在执行重新导入的前置操作……[39m[0m
+[   0% ] [90m[1mreimport[22m | bedside_wood_v001.png[39m[0m
+[  50% ] [90m[1mreimport[22m | 正在结束资产导入……[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started 正在导入或重新导入资产 (1 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | 正在执行重新导入的后置操作……[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started 正在加载编辑器 (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | 正在加载编辑器布局……[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | 正在加载停靠面板……[39m[0m
+[  33% ] [90m[1mloading_editor_layout[22m | 正在重新打开场景……[39m[0m
+[  50% ] [90m[1mloading_editor_layout[22m | 正在加载中央编辑器布局……[39m[0m
+[  66% ] [90m[1mloading_editor_layout[22m | 正在加载插件窗口布局……[39m[0m
+[  83% ] [90m[1mloading_editor_layout[22m | 编辑器布局就绪。[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+
+
+=== rules_after.log ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+NEURONS interaction rules: 71 checks, 0 failures
+
+
+=== layout_after.log ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+NEURONS room layout: 158 checks, 0 failures
+
+
+=== render_after.log ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 - Build 32.0.101.6737 - Compatibility - Using Device: Intel - Intel(R) Arc(TM) 130T GPU (16GB)
+
+VISUAL_CHECK: real rendering and input simulation started
+EVENT: 开始搜寻 床；已占用次数 1/10
+SCREENSHOT 01_autonomous_search result=0
+PASS: click protagonist opens neuron menu
+PASS: menu freezes world position search and cooldown clock
+SCREENSHOT 02_neuron_menu result=0
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+PASS: one valid skin submission spends exactly one neuron
+PASS: skin submission does not apply while screen closes
+PASS: manual pause during closing defers pending body reaction
+EVENT: 干预成功：抓挠 0.5 秒；未完成搜寻取消，不发完成奖励
+PASS: skin actual reaction cancels unfinished search without reward
+SCREENSHOT 03_skin_interruption result=0
+EVENT: 开始搜寻 床；已占用次数 2/10
+PASS: close does not reopen menu or leak a click
+PASS: resumed autonomous search spends a new attempt
+SCREENSHOT 04_zoom_080 result=0
+SCREENSHOT 05_zoom_130 result=0
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+EVENT: 干预被抵抗；费用已支付，原搜寻进度继续。
+PASS: resisted skin keeps search progress
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 实际接碗：唯一归属 mother → hero；未食用，不恢复精神，不发资源。
+EVENT: 递物场次结束；原上床/转场剧情待接。可重开验证交付前干预。
+PASS: mother transfer commits at actual contact endpoint
+PASS: receiving porridge does not eat it or award food resources
+PASS: replayed transfer completion cannot duplicate ownership
+SCREENSHOT 06_mother_transfer result=0
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+EVENT: 干预成功：抓挠 0.5 秒；不额外结算伤害
+EVENT: 接碗已被打断；粥保持母亲唯一持有。
+PASS: interrupted receiving leaves item with mother
+EVENT: 父亲测试夹具：无其他人物；正式事件后段待接。SKIN不能解已成立抓握。
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 抓取前摇 1 秒；尚未抓牢。
+EVENT: 抓握实际成立；保持原相对位置，抓稳转身 2 秒后带行。
+PASS: father grip starts only at actual close facing unobstructed contact
+PASS: paired drag preserves physical offset without snapping
+SCREENSHOT 07_father_drag result=0
+PASS: menu freezes father motion and pressure
+EVENT: 惊跳已提交：2神经元 / 强度2 / 冷却4游戏秒；实际后撤完成才结算专属脱离。
+EVENT: 惊跳实际脱离，+5精神一次；父亲压迫仍存在。测试止于释放，后续追抓待接。
+PASS: startle pays two neurons and rewards only actual separation
+SCREENSHOT 08_father_release result=0
+EVENT: 猫占床搜索目标：实际搜寻中成功外显干预，才触发抓伤。
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 开始搜寻 床；已占用次数 1/10
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+EVENT: 干预成功：抓挠 0.5 秒；未完成搜寻取消，不发完成奖励
+EVENT: 猫抓伤实际命中一次：生命 -10 / 精神 -10。
+EVENT: 受击验证止于命中；后续跳窗与下一行为尾段待接。
+PASS: cat actual hit applies HP/SP minus ten exactly once
+PASS: cat replay cannot repeat damage
+SCREENSHOT 09_cat_hit result=0
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 开始搜寻 床；已占用次数 1/10
+SCREENSHOT 10_collision_overlay result=0
+RENDERED_INTEGRATION: 19 passed, 0 failed
+
+
+=== render_after.err ===
+
+
+=== bedside.log ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 - Build 32.0.101.6737 - Compatibility - Using Device: Intel - Intel(R) Arc(TM) 130T GPU (16GB)
+
+VISUAL_CHECK: real rendering and input simulation started
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+PASS: wood imported at 64 square logical pixels
+PASS: world nearest sampling retained
+EVENT: 开始搜寻 床头柜；已占用次数 1/10
+PASS: autonomous route reaches existing bedside approach
+PASS: drawer remains closed before hand contact
+PASS: search hand follows actual drawer handle
+PASS: drawer opens progressively after contact
+SCREENSHOT 11_bedside_contact result=0
+PASS: pause freezes drawer and search clock
+PASS: pause gates world audio events
+SCREENSHOT 12_bedside_zoom_0 result=0
+PASS: zoom 0 preserves footprint and action position
+SCREENSHOT 12_bedside_zoom_1 result=0
+PASS: zoom 1 preserves footprint and action position
+SCREENSHOT 12_bedside_zoom_2 result=0
+PASS: zoom 2 preserves footprint and action position
+SCREENSHOT 12_bedside_zoom_3 result=0
+PASS: zoom 3 preserves footprint and action position
+PASS: zoom reset restores baseline
+EVENT: 搜寻完成：bedside；+1神经元（一次结算）
+PASS: completion awards exactly one neuron
+PASS: completed drawer remains physically open
+PASS: drawer movement emits one contact cue
+SCREENSHOT 13_bedside_complete result=0
+SCREENSHOT 14_bedside_collision result=0
+PASS: rear occlusion fixture is walkable
+SCREENSHOT 15_bedside_behind result=0
+PASS: front occlusion fixture is walkable
+SCREENSHOT 16_bedside_front result=0
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 开始搜寻 床头柜；已占用次数 1/10
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+PASS: closing plus manual pause keeps drawer and pending skill frozen
+EVENT: 干预成功：抓挠 0.5 秒；未完成搜寻取消，不发完成奖励
+PASS: interrupted search cannot backfill completion reward
+PASS: interrupted drawer cannot continue opening
+SCREENSHOT 17_bedside_interrupted result=0
+PASS: audio registers a separate loop copy
+PASS: audio registration preserves source stream
+PASS: loop starts
+PASS: same active loop cannot stack
+PASS: world event starts
+PASS: duplicate event rejected
+PASS: ambient loop pauses
+PASS: paused loop playback position stays fixed
+PASS: paused world event is rejected without a replay queue
+PASS: UI cue remains available during world pause
+PASS: master slider mutes all channels
+PASS: loop resumes without restart
+PASS: resumed loop continues from held playback position
+PASS: scene reset clears playback and event identities
+PASS: voice channel accepts a supplied stream
+PASS: dialogue freezes world but permits its voice
+PASS: manual pause also freezes dialogue voice
+PASS: audio controls pause the world
+SCREENSHOT 18_audio_controls result=0
+PASS: audio controls restore world pause state
+BEDSIDE_INTEGRATION: 40 passed, 0 failed
+
+
+=== bedside.err ===
+
+
+=== bedside_first_fixture_error.log ===
+SCRIPT ERROR: Invalid assignment of property or key 'selected' with value of type 'Array' on a base object of type 'Control (bedroom_sample.gd)'.
+   at: fixture (res://tests/bedside_check.gd:33)
+   GDScript backtrace (most recent call first):
+       [0] fixture (res://tests/bedside_check.gd:33)
+       [1] run (res://tests/bedside_check.gd:36)
+       [2] _ready (res://tests/bedside_check.gd:11)
+SCRIPT ERROR: Invalid access to property or key 'bedside' on a base object of type 'Dictionary'.
+   at: run (res://tests/bedside_check.gd:46)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/bedside_check.gd:46)
+       [1] wait_for (res://tests/bedside_check.gd:24)
+
+
+=== bedside_first_assertions.log ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 - Build 32.0.101.6737 - Compatibility - Using Device: Intel - Intel(R) Arc(TM) 130T GPU (16GB)
+
+VISUAL_CHECK: real rendering and input simulation started
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+PASS: wood imported at 64 square logical pixels
+PASS: world nearest sampling retained
+EVENT: 开始搜寻 床头柜；已占用次数 1/10
+PASS: autonomous route reaches existing bedside approach
+PASS: drawer remains closed before hand contact
+PASS: search hand follows actual drawer handle
+PASS: drawer opens progressively after contact
+SCREENSHOT 11_bedside_contact result=0
+PASS: pause freezes drawer and search clock
+FAIL: pause freezes world audio
+SCREENSHOT 12_bedside_zoom_0 result=0
+PASS: zoom 0 preserves footprint and action position
+SCREENSHOT 12_bedside_zoom_1 result=0
+PASS: zoom 1 preserves footprint and action position
+SCREENSHOT 12_bedside_zoom_2 result=0
+PASS: zoom 2 preserves footprint and action position
+SCREENSHOT 12_bedside_zoom_3 result=0
+PASS: zoom 3 preserves footprint and action position
+PASS: zoom reset restores baseline
+EVENT: 搜寻完成：bedside；+1神经元（一次结算）
+PASS: completion awards exactly one neuron
+PASS: completed drawer remains physically open
+PASS: drawer movement emits one contact cue
+SCREENSHOT 13_bedside_complete result=0
+SCREENSHOT 14_bedside_collision result=0
+PASS: rear occlusion fixture is walkable
+SCREENSHOT 15_bedside_behind result=0
+PASS: front occlusion fixture is walkable
+SCREENSHOT 16_bedside_front result=0
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 开始搜寻 床头柜；已占用次数 1/10
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+PASS: closing plus manual pause keeps drawer and pending skill frozen
+EVENT: 干预成功：抓挠 0.5 秒；未完成搜寻取消，不发完成奖励
+PASS: interrupted search cannot backfill completion reward
+PASS: interrupted drawer cannot continue opening
+SCREENSHOT 17_bedside_interrupted result=0
+PASS: audio registers a separate loop copy
+PASS: audio registration preserves source stream
+PASS: loop starts
+PASS: same active loop cannot stack
+PASS: world event starts
+PASS: duplicate event rejected
+PASS: ambient loop pauses
+PASS: paused world event is rejected without a replay queue
+PASS: UI cue remains available during world pause
+PASS: master slider mutes all channels
+PASS: loop resumes without restart
+PASS: scene reset clears playback and event identities
+PASS: audio controls pause the world
+SCREENSHOT 18_audio_controls result=0
+PASS: audio controls restore world pause state
+BEDSIDE_INTEGRATION: 34 passed, 1 failed
+
+
+=== bedside_second_assertions.log ===
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 - Build 32.0.101.6737 - Compatibility - Using Device: Intel - Intel(R) Arc(TM) 130T GPU (16GB)
+
+VISUAL_CHECK: real rendering and input simulation started
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+PASS: wood imported at 64 square logical pixels
+PASS: world nearest sampling retained
+EVENT: 开始搜寻 床头柜；已占用次数 1/10
+PASS: autonomous route reaches existing bedside approach
+PASS: drawer remains closed before hand contact
+PASS: search hand follows actual drawer handle
+PASS: drawer opens progressively after contact
+SCREENSHOT 11_bedside_contact result=0
+PASS: pause freezes drawer and search clock
+PASS: pause gates world audio events
+SCREENSHOT 12_bedside_zoom_0 result=0
+PASS: zoom 0 preserves footprint and action position
+SCREENSHOT 12_bedside_zoom_1 result=0
+PASS: zoom 1 preserves footprint and action position
+SCREENSHOT 12_bedside_zoom_2 result=0
+PASS: zoom 2 preserves footprint and action position
+SCREENSHOT 12_bedside_zoom_3 result=0
+PASS: zoom 3 preserves footprint and action position
+PASS: zoom reset restores baseline
+EVENT: 搜寻完成：bedside；+1神经元（一次结算）
+PASS: completion awards exactly one neuron
+PASS: completed drawer remains physically open
+PASS: drawer movement emits one contact cue
+SCREENSHOT 13_bedside_complete result=0
+SCREENSHOT 14_bedside_collision result=0
+PASS: rear occlusion fixture is walkable
+SCREENSHOT 15_bedside_behind result=0
+PASS: front occlusion fixture is walkable
+SCREENSHOT 16_bedside_front result=0
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 开始搜寻 床头柜；已占用次数 1/10
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+PASS: closing plus manual pause keeps drawer and pending skill frozen
+EVENT: 干预成功：抓挠 0.5 秒；未完成搜寻取消，不发完成奖励
+PASS: interrupted search cannot backfill completion reward
+PASS: interrupted drawer cannot continue opening
+SCREENSHOT 17_bedside_interrupted result=0
+PASS: audio registers a separate loop copy
+PASS: audio registration preserves source stream
+PASS: loop starts
+PASS: same active loop cannot stack
+PASS: world event starts
+PASS: duplicate event rejected
+PASS: ambient loop pauses
+FAIL: paused loop playback position stays fixed
+FAIL: paused world event is rejected without a replay queue
+PASS: UI cue remains available during world pause
+PASS: master slider mutes all channels
+PASS: loop resumes without restart
+PASS: resumed loop continues from held playback position
+PASS: scene reset clears playback and event identities
+PASS: audio controls pause the world
+SCREENSHOT 18_audio_controls result=0
+PASS: audio controls restore world pause state
+BEDSIDE_INTEGRATION: 35 passed, 2 failed

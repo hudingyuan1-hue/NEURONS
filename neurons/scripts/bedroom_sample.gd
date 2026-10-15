@@ -69,6 +69,7 @@ var drawer_open:Dictionary={}
 var demo_assertions:Array[String]=[]
 var demo_failures:Array[String]=[]
 var paused_snapshot:Dictionary={}
+var audio_panel:PanelContainer
 
 func _ready() -> void:
  process_mode=Node.PROCESS_MODE_ALWAYS
@@ -88,15 +89,16 @@ func _ready() -> void:
  menu.visible=false
  audio=Feedback.new()
  add_child(audio)
+ create_audio_controls()
  rng.randomize()
  reset_sample(0)
- demo_mode="--visual-check" in OS.get_cmdline_user_args()
+ demo_mode="--visual-check" in OS.get_cmdline_user_args() or "--bedside-check" in OS.get_cmdline_user_args()
  if demo_mode:
   dialogue_queue.clear()
   dialogue_panel.hide()
   print("VISUAL_CHECK: real rendering and input simulation started")
   var driver:=Node.new()
-  driver.set_script(load("res://tests/visual_check.gd"))
+  driver.set_script(load("res://tests/bedside_check.gd" if "--bedside-check" in OS.get_cmdline_user_args() else "res://tests/visual_check.gd"))
   add_child(driver)
 
 func create_world() -> void:
@@ -165,7 +167,7 @@ func create_ui() -> void:
  label_at("N E U R O N S",Vector2(28,15),24)
  label_at("BEDROOM / INTERACTION STUDY",Vector2(29,52),11,Color("99ada9"))
  scenario_label=label_at("",Vector2(365,16),20)
- label_at("规则隔离样板 · 人物 / 家具为灰盒 · 不写正式剧情进度",Vector2(365,53),13,Color("b3afa0"))
+ label_at("床头柜美术候选 · 其余人物/家具灰盒 · 不写剧情进度",Vector2(365,53),13,Color("b3afa0"))
  var name_field:=LineEdit.new()
  name_field.position=Vector2(1000,18)
  name_field.size=Vector2(245,34)
@@ -185,7 +187,8 @@ func create_ui() -> void:
  button_at("抗性夹具 0 / 1",Vector2(640,603),145,toggle_resistance)
  button_at("显示碰撞",Vector2(797,603),112,toggle_geometry)
  button_at("复位视野",Vector2(921,603),112,reset_zoom)
- button_at("轻反馈 开/关",Vector2(1045,603),152,toggle_effects)
+ button_at("轻反馈",Vector2(1045,603),85,toggle_effects)
+ button_at("音量",Vector2(1140,603),90,toggle_audio_controls)
  state_label=label_at("",Vector2(24,648),14,Color("b6c9ba"))
  event_label=label_at("",Vector2(24,678),13,Color("aaa995"))
  for info_rect in [Rect2(16,106,395,35),Rect2(765,106,490,35)]:
@@ -197,6 +200,7 @@ func create_ui() -> void:
   add_child(info)
  status_label=label_at("",Vector2(26,112),16)
  debug_label=label_at("",Vector2(785,112),13,Color("b7b9a9"))
+ button_at("床头柜局部",Vector2(24,151),145,start_bedside_sample)
  startle_button=button_at("惊跳：已解锁测试夹具",Vector2(892,151),298,cast_startle)
  startle_button.hide()
  dialogue_panel=PanelContainer.new()
@@ -228,6 +232,7 @@ func create_ui() -> void:
  dialogue_panel.hide()
 
 func reset_sample(index:int) -> void:
+ if audio!=null:audio.reset_scene()
  if menu!=null:menu.hide()
  event_generation+=1
  scenario=index
@@ -299,12 +304,23 @@ func reset_sample(index:int) -> void:
  view.queue_redraw()
 
 func world_paused() -> bool:
- return paused_manual or not dialogue_queue.is_empty() or menu.visible or closing_left>0
+ return paused_manual or not dialogue_queue.is_empty() or menu.visible or closing_left>0 or (audio_panel!=null and audio_panel.visible)
+
+func start_bedside_sample() -> void:
+ reset_sample(0)
+ selected.clear()
+ selected.append(1)
+ scenario_label.text="01 / 床头柜局部 · 自主搜寻"
+
+func sync_audio_pause() -> void:
+ # Spoken dialogue may continue while the world is frozen by that dialogue.
+ audio.set_world_paused(world_paused(),paused_manual or menu.visible or closing_left>0 or audio_panel.visible)
 
 func _process(delta:float) -> void:
  input_lock_frames=maxi(0,input_lock_frames-1)
  if closing_left>0:
   closing_left=maxf(0,closing_left-delta)
+ sync_audio_pause()
  if not world_paused():
   if not rules.pending_skin.is_empty():apply_cast()
   if not world_paused():advance_world(delta*(0.5 if scenario==2 else 1.0))
@@ -317,7 +333,11 @@ func advance_world(delta:float) -> void:
  world_visual_time+=delta
  if rules.search_active and target_index>=0:
   var active_id:String=layout.furniture[target_index].id
-  drawer_open[active_id]=minf(1.0,float(drawer_open.get(active_id,0.0))+delta*2)
+  if active_id!="bedside" or (view.bedside_contact() and rules.search_elapsed>=0.18):
+   var old_open:float=float(drawer_open.get(active_id,0.0))
+   drawer_open[active_id]=minf(1.0,old_open+delta*2)
+   if active_id=="bedside" and old_open==0.0:
+    audio.cue("drawer","drawer:%d:bedside"%event_generation)
  var result:Dictionary=rules.tick(delta)
  if result.search_completed:
   completed.append(result.target_id)
@@ -427,7 +447,7 @@ func advance_mother(delta:float) -> void:
   if state_time>=0.8:
    var ok:bool=rules.commit_transfer("mother:%d"%event_generation,"porridge","mother","hero",hero_pos.distance_to(npc_pos),layout.clear_segment(hero_pos,npc_pos),facing_each_other(),actual_contact())
    if ok:
-    audio.cue("transfer")
+    audio.cue("transfer","transfer:%d"%event_generation)
     note("实际接碗：唯一归属 mother → hero；未食用，不恢复精神，不发资源。")
    scene_phase="mother_retract"
    state_time=0
@@ -550,7 +570,7 @@ func advance_cat(delta:float) -> void:
    hero_state="hit"
    status_visible=true
    first_damage=true
-   audio.cue("hit")
+   audio.cue("hit","cat:%d"%event_generation)
    note("猫抓伤实际命中一次：生命 -10 / 精神 -10。")
  if state_time>=0.5:
   cat_pending=false
@@ -668,8 +688,45 @@ func reset_zoom() -> void:
 func toggle_effects() -> void:
  reduced_effects=not reduced_effects
  menu.reduced_effects=reduced_effects
- audio.enabled=not reduced_effects
  note("降低反馈已%s；不影响判定与世界时序。"%("开启" if reduced_effects else "关闭"))
+
+func create_audio_controls() -> void:
+ audio_panel=PanelContainer.new()
+ audio_panel.position=Vector2(805,230)
+ audio_panel.custom_minimum_size=Vector2(390,330)
+ audio_panel.add_theme_stylebox_override("panel",panel_style(Color("283332"),Color("869a8d")))
+ add_child(audio_panel)
+ var column:=VBoxContainer.new()
+ column.add_theme_constant_override("separation",8)
+ audio_panel.add_child(column)
+ var title:=Label.new()
+ title.text="音量 · 当前音效为待替换测试音"
+ title.add_theme_font_size_override("font_size",16)
+ column.add_child(title)
+ for channel in ["master","ui","world","ambience","music","voice"]:
+  var row:=HBoxContainer.new()
+  column.add_child(row)
+  var caption:=Label.new()
+  caption.text={"master":"总音量","ui":"界面","world":"动作音效","ambience":"环境","music":"音乐","voice":"配音"}[channel]
+  caption.custom_minimum_size.x=100
+  row.add_child(caption)
+  var slider:=HSlider.new()
+  slider.min_value=0
+  slider.max_value=1
+  slider.step=0.01
+  slider.value=audio.levels[channel]
+  slider.custom_minimum_size.x=210
+  slider.value_changed.connect(func(value:float):audio.set_level(channel,value))
+  row.add_child(slider)
+ var close:=Button.new()
+ close.text="关闭 · 恢复"
+ close.pressed.connect(toggle_audio_controls)
+ column.add_child(close)
+ audio_panel.hide()
+
+func toggle_audio_controls() -> void:
+ audio_panel.visible=not audio_panel.visible
+ sync_audio_pause()
 
 func snapshot(tag:String) -> void:
  var folder:=ProjectSettings.globalize_path("res://../docs/validation/screenshots")

@@ -6,6 +6,56 @@ var debug_geometry := false
 var font := ThemeDB.fallback_font
 const INK := Color("293333")
 const ROOM_SHELL := preload("res://assets/environment/bedroom_shell_v001.png")
+const BEDSIDE_WOOD := preload("res://assets/environment/bedside_wood_v001.png")
+
+# The bedside art is mapped onto the existing metre projection. No raster
+# silhouette is used for navigation, collision, or interaction facts.
+func wood_face(points:Array, tint:Color, uv_rect:Rect2=Rect2(0,0,1,1)) -> void:
+ var a:=uv_rect.position
+ var b:=uv_rect.end
+ draw_polygon(PackedVector2Array(points),PackedColorArray([tint]),PackedVector2Array([a,Vector2(b.x,a.y),b,Vector2(a.x,b.y)]),BEDSIDE_WOOD)
+
+func bedside_contact() -> bool:
+ return app.rules.search_active and app.target_index==1 and app.hero_pos.distance_to(layout.furniture[1].at)<=0.04 and app.hero_state=="search"
+
+func bedside_handle() -> Vector2:
+ var r:Rect2=layout.furniture[1].rect
+ var b:=layout.project(r.position+Vector2(r.size.x,0)).round()
+ var c:=layout.project(r.end).round()
+ return (b+c)/2+Vector2(4*float(app.drawer_open.get("bedside",0.0)),-14)
+
+func bedside_hand() -> Vector2:
+ var start:=layout.project(app.hero_pos)+Vector2(-12,-25)
+ return start.lerp(bedside_handle(),clampf(app.rules.search_elapsed/0.18,0,1))
+
+func draw_bedside(f:Dictionary) -> void:
+ var r:Rect2=f.rect
+ var a:=layout.project(r.position).round()
+ var b:=layout.project(r.position+Vector2(r.size.x,0)).round()
+ var c:=layout.project(r.end).round()
+ var d:=layout.project(r.position+Vector2(0,r.size.y)).round()
+ var up:=Vector2(0,-22)
+ # Separate ground shadow, short feet, side, top and east-facing drawers.
+ poly([a+Vector2(2,2),b+Vector2(4,2),c+Vector2(4,3),d+Vector2(2,3)],Color(0.08,0.1,0.1,0.23))
+ for p in [a,b,c,d]:draw_rect(Rect2(p+Vector2(-1,-5),Vector2(3,5)),Color("514638"))
+ wood_face([d+up,c+up,c+Vector2(0,-4),d+Vector2(0,-4)],Color(1.0,0.96,0.9))
+ wood_face([b+up,c+up,c+Vector2(0,-4),b+Vector2(0,-4)],Color("a1aaa0"))
+ wood_face([a+up,b+up,c+up,d+up],Color(1.25,1.2,1.1))
+ draw_polyline(PackedVector2Array([a+up,b+up,c+up,d+up,a+up]),Color("c0a986"),1)
+ draw_line(d+Vector2(0,-20),c+Vector2(0,-20),Color("655541"),1)
+ # Grain remains stationary; only the upper drawer translates, at contact.
+ for level in range(2):
+  var y:float=-20+level*9
+  var left:=b+Vector2(0,y)+Vector2(2,3)
+  var right:=c+Vector2(0,y)+Vector2(-2,-3)
+  var shift:=Vector2(4*float(app.drawer_open.get("bedside",0.0)),0) if level==0 else Vector2.ZERO
+  poly([left,right,right+Vector2(0,7),left+Vector2(0,7)],Color("342f28"))
+  if shift.x>0:
+   wood_face([left,left+shift,right+shift,right],Color("a69d87"))
+  wood_face([left+shift,right+shift,right+shift+Vector2(0,7),left+shift+Vector2(0,7)],Color("c7c0aa"),Rect2(0,level*0.4,0.7,0.35))
+  draw_line(left+shift,right+shift,Color("bca17a"),1)
+  var grip:Vector2=(left+right)/2+shift+Vector2(0,6)
+  draw_line(grip+Vector2(-1,-2),grip+Vector2(2,2),Color("ddc398"),2)
 
 func poly(points:Array,color:Color) -> void:
  draw_colored_polygon(PackedVector2Array(points),color)
@@ -91,7 +141,9 @@ func draw_furniture(f:Dictionary) -> void:
  var center:=layout.project(r.get_center())
  var h:float=f.height
  var col:Color=f.color
- if f.kind=="fan":
+ if f.id=="bedside":
+  draw_bedside(f)
+ elif f.kind=="fan":
   draw_set_transform(center)
   draw_circle(Vector2.ZERO,9,col.darkened(0.3))
   draw_line(Vector2.ZERO,Vector2(0,-h+12),col,3)
@@ -200,6 +252,8 @@ func draw_actor(who:String) -> void:
   var hand:Vector2=Vector2(12,-25+bend)
   if state in ["search","give","grab"]:hand=Vector2(20,-31+bend+sin(phase*5)*2)
   if state=="scratch":hand=Vector2(4+sin(phase*30)*3,-38)
+  if who=="hero" and bedside_contact():
+   hand=(bedside_hand()-center)*Vector2(-1 if facing.x<0 else 1,1)
   if (app.scenario==1 and app.scene_phase=="mother_give") or (app.grabbed and app.scene_phase!="startle_escape"):
    var shared:Vector2=(layout.project(app.hero_pos)+layout.project(app.npc_pos))*0.5+Vector2(0,-28)
    hand=(shared-center)*Vector2(-1 if facing.x<0 else 1,1)
