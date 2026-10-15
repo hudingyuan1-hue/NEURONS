@@ -1,0 +1,1172 @@
+[
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\参考图\\2\\ENV_ALL_014_v001_RAW.glb",
+    "error": "文件头是PNG图片，不是GLB；保留原件，不导入为模型。"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_MAIN_v001_RAW.glb",
+    "sha256": "453e74b25e91534dade33b39ac2c2b3e3d77887254b9533f6c868bad2173a82d",
+    "triangles_mesh_total": 11420,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_OTHER_NPCS_CAT_v001_RAW.glb",
+    "sha256": "245083f86d9eafc0cbf5ea24fdb84cff800396e89e240414b360831a18c2bf1c",
+    "triangles_mesh_total": 5806,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_OTHER_NPCS_DOG_v001_RAW.glb",
+    "sha256": "d5b9861ab6bb56ea8d3619d309c86e9d68f0b39bd96f097800d461fa28bc31b6",
+    "triangles_mesh_total": 5694,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_OTHER_NPCS_FATHER_v001_RAW.glb",
+    "sha256": "2a4acc2486b57558f38b500be8a8cd6680f415bb7994b63c8858f4c1f225d77a",
+    "triangles_mesh_total": 7663,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_OTHER_NPCS_MOTHER_v001_RAW.glb",
+    "sha256": "c3242ebb90a5be48a1f30c11845eade504863c99c6bd3e75627c97ddb13af25d",
+    "triangles_mesh_total": 7816,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_PLAYER_01_05_01_v001_RAW.glb",
+    "sha256": "c3da6126a9cdaef6df17c63edde40df5ac93775f2cf44b8b41164daba726bc6b",
+    "triangles_mesh_total": 5603,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_PLAYER_01_05_02_v001_RAW (1).glb",
+    "sha256": "641196550e07f214c156afdb88cc4816d8ebc03c6469907305f79d3cb7890141",
+    "triangles_mesh_total": 5788,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_PLAYER_01_05_02_v001_RAW .glb",
+    "sha256": "641196550e07f214c156afdb88cc4816d8ebc03c6469907305f79d3cb7890141",
+    "triangles_mesh_total": 5788,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_PLAYER_01_05_03_v001_RAW.glb",
+    "sha256": "c0532c3409207db57adbc05f9bfa88f018af8bdbf134cffca6fe4e6d15ad927f",
+    "triangles_mesh_total": 5892,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_PLAYER_01_05_04_v001_RAW.glb",
+    "sha256": "366d88f271e06f023c4edbcd5e6c45de9462f9d9e3cdaf86c40f87f9b0713290",
+    "triangles_mesh_total": 5760,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_PLAYER_01_05_05_v001_RAW.glb",
+    "sha256": "6f40af1161303c32ad4aa18cd49cbb393425c44a92b77518295f339bc8b3e80b",
+    "triangles_mesh_total": 5868,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\CHR_PLAYER_01_05_06_v001_RAW.glb",
+    "sha256": "f8eaa438c0b013bc11201d8ef77df88ee5fb0675d19bfaf5057c89a2e8113559",
+    "triangles_mesh_total": 5876,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "需骨架、权重、变形测试和动作；不能仅导入便算可用角色"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_013_v001_RAW.glb",
+    "sha256": "e6f03436ea5e01a2093c33df352a4dcb5fe2d5f4b2e2326110ea9702cea900d1",
+    "triangles_mesh_total": 2660,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_014_v001_RAW.glb",
+    "sha256": "fde54d48949d855ced803d3497dea68d1fc2f0f5a5af607fdedfdcd5c6dacfac",
+    "triangles_mesh_total": 1810,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_015_v001_RAW.glb.glb",
+    "sha256": "0d8c909b253db1986a10692f8005843d3a203526beab401e7182972ea26b17e4",
+    "triangles_mesh_total": 2019,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_016_v001_RAW.glb.glb",
+    "sha256": "0a18ad0835e853295b5a578492ae39aceb841fed07ff3edb54eb022b270b2173",
+    "triangles_mesh_total": 2119,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_017_v001_RAW.glb.glb",
+    "sha256": "179ee08550abae5cf8a822a9c2f0161aef1be006deb7f6e1201cbbd95f270b51",
+    "triangles_mesh_total": 1454,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_018_v001_RAW.glb.glb",
+    "sha256": "35b3eda9190342362a615a4e238165beecd1b9ad782d2b88a8b0687502cc9a9d",
+    "triangles_mesh_total": 1860,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_019_v001_RAW.glb.glb",
+    "sha256": "78e4032c9be9f00419f17ace4a2d30bcdaf82baa11595948d5f410f8f9c7a242",
+    "triangles_mesh_total": 2494,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_020_v001_RAW.glb.glb",
+    "sha256": "4552f397e88a480c4d3c72433efcfd713b67bbb5f108a0cc4c23fe3e696238f0",
+    "triangles_mesh_total": 1742,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_021_v001_RAW.glb.glb",
+    "sha256": "195038c3ef4b38a4ab2e6c2d1e8b0895906be9ad9f31cebed80c855fd67133e1",
+    "triangles_mesh_total": 2557,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_022_v001_RAW.glb.glb",
+    "sha256": "54b10f1c17e5d2833a2dd11b5c037aab78f2b4863984394280bf968035bc0eff",
+    "triangles_mesh_total": 1460,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_023_v001_RAW.glb.glb",
+    "sha256": "6c00a1b4139dd0be0f6fa3722be1f30c420310f0aa467360853a69fc16614399",
+    "triangles_mesh_total": 1841,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_024_v001_RAW.glb.glb",
+    "sha256": "152991a495a032f981b5dada564b38cbcb751f9ee907eb5708c3e6d6fe8d9d28",
+    "triangles_mesh_total": 2109,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_025_v001_RAW.glb.glb",
+    "sha256": "5c9ed40c979768e79424d406e4622a273b1c8bddeb8a51dc03ffca27166810f8",
+    "triangles_mesh_total": 1951,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_026_v001_RAW.glb.glb",
+    "sha256": "e3e26fdbfa99f92ebd714015b69030ed00eee6de532402562d784dde07348888",
+    "triangles_mesh_total": 2218,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_027_v001_RAW.glb.glb",
+    "sha256": "29cd59acac95a17db8386047f5f5831e1e8644bc2c8e6e0604a05186e791d753",
+    "triangles_mesh_total": 1538,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_029_v001_RAW.glb.glb",
+    "sha256": "d9aac7ecad765a73f7b7910455394046789a59e0d7410153d9635f5257ae0146",
+    "triangles_mesh_total": 1484,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_030_v001_RAW.glb.glb",
+    "sha256": "d07bec35cef61173bddd74f403b6fa4d32a9f868f8b90a5260bbb58dbd71a593",
+    "triangles_mesh_total": 2052,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_031_v001_RAW.glb.glb",
+    "sha256": "e41efe1d9ab749153706ffebde547a081c52884c0152e48dc00dce0223aaf521",
+    "triangles_mesh_total": 2427,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_032_v001_RAW.glb.glb",
+    "sha256": "671da3e231e9f8c3b4cf5bd3a54a8d909fb72e5a591ffb774b2b54e69f7a9dc7",
+    "triangles_mesh_total": 2256,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_033_v001_RAW.glb.glb",
+    "sha256": "53b16cc2d1095438812299252381cc1dfc4a3e057c2ff1e50685f291291a89cb",
+    "triangles_mesh_total": 2080,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_034_v001_RAW.glb.glb",
+    "sha256": "ef2affcb9073acd74c01cfbbec0e2784f733621ce1b14f653fa9bcd03cb93890",
+    "triangles_mesh_total": 2272,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_035_v001_RAW.glb.glb",
+    "sha256": "be4f55e6d2f5d99300e8c5b607dd2407c5f805b7823b251c799fe4ddcbea304f",
+    "triangles_mesh_total": 1675,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_036_v001_RAW.glb.glb",
+    "sha256": "856e117e4cfbcb03d498274a6c854b859e9eedd2f6f77b8feb4ad89a7f773ac7",
+    "triangles_mesh_total": 1958,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_037_v001_RAW.glb.glb",
+    "sha256": "7dc85230ef53a21af7ddfa2880d8183adac0c7d37a5095ad8f83fe047a927732",
+    "triangles_mesh_total": 1972,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_ALL_038_v001_RAW.glb.glb",
+    "sha256": "76fd1fdc88d8f3eaaa2f8dfff859875a8191340e853b228f5ef0c28b16040cbf",
+    "triangles_mesh_total": 2339,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_BED_v001_RAW.glb",
+    "sha256": "904958decbd5ada484a4ce1e802b9c38e2d548177a7fc74b9e7f9b743c1313eb",
+    "triangles_mesh_total": 3183,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_BEDSIDE_v001_RAW.glb",
+    "sha256": "8f5512bf56a22ff9681c5d1049058d11fc7d850a879d4820b92b91342964a809",
+    "triangles_mesh_total": 1004,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_BOOKSHELF_v001_RAW.glb",
+    "sha256": "8caf002832b6ea50ed59d2548d00a343e78d15a4a1aef55c8506594da2963de7",
+    "triangles_mesh_total": 2311,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "检查活动部件、枢轴、背底面及贴图；单个mesh不代表已分门盖"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_CHAIR_v001_RAW.glb",
+    "sha256": "adc6d41b7cfd7ea988884356dfb8deb67c7e3295329b2925ea43645bad45ec2d",
+    "triangles_mesh_total": 1159,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_COATRACK_v001_RAW.glb",
+    "sha256": "9241b80e5e5e6ae55e6b705e3a49a113531daa507efe55aae87c3807c756c6d3",
+    "triangles_mesh_total": 1122,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_DESK_v001_RAW.glb",
+    "sha256": "dd1626fc8f4c1a74e361ac4af11a1f08f8bc384df33e78e4e9c4d9933f444b2a",
+    "triangles_mesh_total": 1533,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "检查活动部件、枢轴、背底面及贴图；单个mesh不代表已分门盖"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_FAN_v001_RAW.glb",
+    "sha256": "6a0ba5a0f059266b85a32ea079b43207a725176933f41ff417364c642e6211c6",
+    "triangles_mesh_total": 2752,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_LAMP_v001_RAW.glb",
+    "sha256": "962978fbbd0f642dd4de9e06748195ed22febf6dfe88292f1f039ca4b4c31222",
+    "triangles_mesh_total": 1045,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_STOOL_v001_RAW.glb.glb",
+    "sha256": "59a90283f1b3ca70ab3ddacec35dee012fb87b938a393bb186102947b762eb3d",
+    "triangles_mesh_total": 7054,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_STORAGE_v001_RAW.glb",
+    "sha256": "0147dde743fce7fa0d6a72b6626f222ca0472f305fdb17284cf724dd212017eb",
+    "triangles_mesh_total": 1294,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "检查活动部件、枢轴、背底面及贴图；单个mesh不代表已分门盖"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_TRUNK_v001_RAW.glb",
+    "sha256": "c3aa78bb19b7dc9c64c48557146f30a184e3cf3dce57ca68a98854d31f108caa",
+    "triangles_mesh_total": 1020,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\ENV_WINDOW_v001_RAW.glb.glb",
+    "sha256": "8b896bd16edbef3b7392c102cc12ba309f122acb70404cc8bcec4269d0435c72",
+    "triangles_mesh_total": 966,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "统一尺寸/轴向/材质并设置碰撞后，逐件确认"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\NV_WARDROBE_v001_RAW.glb",
+    "sha256": "ae583ee31a466036e3a56ee06e0fbe8b912f55e16ee49c0e341740057f342b77",
+    "triangles_mesh_total": 1429,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "检查活动部件、枢轴、背底面及贴图；单个mesh不代表已分门盖"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\SYS_BOOK_v001_RAW.glb",
+    "sha256": "0086baddab357ba85f10041933f066666eaca1d5f82e443fc1e93b08b0a1959b",
+    "triangles_mesh_total": 1993,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "检查活动部件、枢轴、背底面及贴图；单个mesh不代表已分门盖"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\SYS_CRT_v001_RAW.glb.glb",
+    "sha256": "90da7db9f266de6aa1edc366158316925ac05abfde7aa512457cfc8fe6387bd8",
+    "triangles_mesh_total": 2560,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "检查活动部件、枢轴、背底面及贴图；单个mesh不代表已分门盖"
+  },
+  {
+    "file": "D:\\GitHub\\NEURONS\\素材\\素材模型\\SYS_FREEZER_v001_RAW.glb",
+    "sha256": "c8f6f27dbfb5d5781ba3de8858fc37b1272aef618c0b9a78dc3b11550bc6993f",
+    "triangles_mesh_total": 3309,
+    "meshes": 1,
+    "mesh_nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "joints": 0,
+    "images": 3,
+    "materials": 1,
+    "image_locations": [
+      "embedded",
+      "embedded",
+      "embedded"
+    ],
+    "primitive_modes": [
+      4
+    ],
+    "status": "结构可读取；未做Unity运行/绑定/外观验收",
+    "action": "检查活动部件、枢轴、背底面及贴图；单个mesh不代表已分门盖"
+  }
+]
