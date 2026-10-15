@@ -1,0 +1,31 @@
+{
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"finished_unix": 1792048808.801,
+	"input": "original handler simulation, not manual OS clicking",
+	"passes": [
+		"all eleven existing search points retained",
+		"all eleven anchors have actual existing-grid routes",
+		"nearest filtering retained",
+		"autonomous route reaches trial approach",
+		"no drawer movement before hand contact",
+		"drawer progressively opens after contact",
+		"hand tracks measured moving handle",
+		"pause freezes search and drawer",
+		"zoom 0 preserves collision and contact",
+		"zoom 1 preserves collision and contact",
+		"zoom 2 preserves collision and contact",
+		"zoom 3 preserves collision and contact",
+		"zoom reset uses original default",
+		"search completes once and drawer remains open",
+		"rear occlusion pose is legal",
+		"front occlusion pose is legal",
+		"original mouse hit handler opens menu on trial actor",
+		"pausing during menu close preserves pending intervention and drawer",
+		"interrupted search cannot backfill reward",
+		"interrupted moving art stays at actual partial position"
+	],
+	"rendered": true,
+	"scope": "reversible bedside plus bed edge; remaining assets greybox; art not approved",
+	"status": "complete"
+}

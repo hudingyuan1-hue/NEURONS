@@ -1,0 +1,119 @@
+{
+  "protected_unchanged": {
+    "neurons/project.godot": true,
+    "neurons/scenes/bedroom_sample.tscn": true,
+    "neurons/scripts/bedroom_sample.gd": true,
+    "neurons/scripts/world/room_view.gd": true,
+    "neurons/scripts/world/room_layout.gd": true,
+    "neurons/scripts/core/interaction_rules.gd": true,
+    "art/source/bedroom_visual_candidate_v003.png": true
+  },
+  "runtime_images": {
+    "alarm_clock.png": {
+      "mode": "RGBA",
+      "size": [
+        96,
+        80
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 7506,
+      "sha256": "df889fe165fe9c790bf1edc972dbbcabbbcf1b9563a3a13c211c9db65d569652"
+    },
+    "bed_edge.png": {
+      "mode": "RGBA",
+      "size": [
+        188,
+        42
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1875,
+      "sha256": "630d3a0ca19b33171bd4f4cd04efa35319e0c2a4ddd3d2a22cd69240e6693935"
+    },
+    "book.png": {
+      "mode": "RGBA",
+      "size": [
+        96,
+        80
+      ],
+      "alpha_range": [
+        0,
+        253
+      ],
+      "transparent_pixels": 7604,
+      "sha256": "89af4bf505fa802f856aec973cd27eede74e5766a4285cb26a4706c59ade1c13"
+    },
+    "cabinet_frame.png": {
+      "mode": "RGBA",
+      "size": [
+        96,
+        80
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 5366,
+      "sha256": "16fad66ca7e6cd155f5bdd5bacdfbc1d6f54f601a32766428e208da466ac8e64"
+    },
+    "drawer_face.png": {
+      "mode": "RGBA",
+      "size": [
+        96,
+        80
+      ],
+      "alpha_range": [
+        0,
+        253
+      ],
+      "transparent_pixels": 7570,
+      "sha256": "85e8bc788a20a3a3decee1db285fb5ed2ed8d7dd18ec0498780c2483b1874c57"
+    },
+    "drawer_tray.png": {
+      "mode": "RGBA",
+      "size": [
+        48,
+        24
+      ],
+      "alpha_range": [
+        0,
+        253
+      ],
+      "transparent_pixels": 1,
+      "sha256": "6230efac56d8a6a45548bf694825d49e6065615f00ad13a1c63def69264785ec"
+    },
+    "foreground_rail_v002.png": {
+      "mode": "RGBA",
+      "size": [
+        96,
+        80
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 7483,
+      "sha256": "62c3f371b2e88773b851b808d71e21cae36e5ccef9887320382e86ff1946f588"
+    }
+  },
+  "capture": {
+    "frames": 434,
+    "fps": 30,
+    "seconds": 14.466666666666667,
+    "format": "1280x720 H264/AAC, continuous engine Movie Maker capture, no cuts; existing provisional audio only"
+  },
+  "generation_calls": {
+    "room_revision": 1,
+    "targeted_room_correction": 1,
+    "transparent_layer_derivation": 1,
+    "total": 3
+  },
+  "manual_review": "runtime stills and sampled video frames; no claim of manual OS clicking or full audio review",
+  "final_result_unix": 1792048808.801,
+  "final_status": "rendered_20_passed_0_failed_art_pending"
+}

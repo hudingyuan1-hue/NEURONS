@@ -1,0 +1,55 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 - Build 32.0.101.6737 - Compatibility - Using Device: Intel - Intel(R) Arc(TM) 130T GPU (16GB)
+
+Movie Maker mode enabled, recording movie in 1280×720 @ 30 FPS...
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+PASS: all eleven existing search points retained
+PASS: all eleven anchors have actual existing-grid routes
+PASS: nearest filtering retained
+ART_TRIAL_SCREENSHOT 01_trial_scope result=0
+EVENT: 开始搜寻 床头柜；已占用次数 1/10
+PASS: autonomous route reaches trial approach
+PASS: no drawer movement before hand contact
+ART_TRIAL_SCREENSHOT 02_arrival result=0
+PASS: drawer progressively opens after contact
+PASS: hand tracks measured moving handle
+ART_TRIAL_SCREENSHOT 03_contact_paused result=0
+PASS: pause freezes search and drawer
+ART_TRIAL_SCREENSHOT 04_zoom_0 result=0
+PASS: zoom 0 preserves collision and contact
+ART_TRIAL_SCREENSHOT 04_zoom_1 result=0
+PASS: zoom 1 preserves collision and contact
+ART_TRIAL_SCREENSHOT 04_zoom_2 result=0
+PASS: zoom 2 preserves collision and contact
+ART_TRIAL_SCREENSHOT 04_zoom_3 result=0
+PASS: zoom 3 preserves collision and contact
+PASS: zoom reset uses original default
+EVENT: 搜寻完成：bedside；+1神经元（一次结算）
+PASS: search completes once and drawer remains open
+ART_TRIAL_SCREENSHOT 05_open_completed result=0
+PASS: rear occlusion pose is legal
+ART_TRIAL_SCREENSHOT 06_rear_occlusion result=0
+PASS: front occlusion pose is legal
+ART_TRIAL_SCREENSHOT 07_front_occlusion result=0
+ART_TRIAL_SCREENSHOT 08_collision_overlay result=0
+EVENT: 露底夹具：书/闹钟位移仅供背景检查，尚未接入逐项搜寻演出。
+ART_TRIAL_SCREENSHOT 09_revealed_background result=0
+EVENT: 本场开始；所有结果仅属于当前测试，不登记周目或结局。
+EVENT: 开始搜寻 床头柜；已占用次数 1/10
+PASS: original mouse hit handler opens menu on trial actor
+ART_TRIAL_SCREENSHOT 10_menu result=0
+EVENT: SKIN已提交：-1神经元；身体反应等待关屏完成。
+PASS: pausing during menu close preserves pending intervention and drawer
+ART_TRIAL_SCREENSHOT 11_pause_during_close result=0
+EVENT: 干预成功：抓挠 0.5 秒；未完成搜寻取消，不发完成奖励
+PASS: interrupted search cannot backfill reward
+PASS: interrupted moving art stays at actual partial position
+ART_TRIAL_SCREENSHOT 12_interrupted result=0
+ART_TRIAL: 20 passed, 0 failed
+--------------------------------------------------------------------------------
+Done recording movie at path: C:/Users/莫蕊源/Documents/GitHub/NEURONS/neurons/../tmp/art_trial_final.avi
+434 frames at 30 FPS (movie length: 00:00:14:14), recorded in 00:00:10 (140% of real-time speed).
+CPU render time: 0.15 seconds (average: 0.35 ms/frame)
+GPU render time: 0.24 seconds (average: 0.55 ms/frame)
+Encoding time: 3.90 seconds (average: 9.00 ms/frame)
+--------------------------------------------------------------------------------

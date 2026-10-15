@@ -1,0 +1,36 @@
+{
+  "source": "art/source/bedside_layers_v001.png",
+  "canvas": [
+    96,
+    80
+  ],
+  "anchor": [
+    8,
+    40
+  ],
+  "footprint_m": [
+    0.58,
+    0.48
+  ],
+  "height_world_px": 30,
+  "handle_closed": [
+    60.739425911559366,
+    25.77440762495845
+  ],
+  "open_delta_world_px": [
+    7,
+    0
+  ],
+  "drawer_top_closed": [
+    [
+      55.17423564421912,
+      11.864191924758444
+    ],
+    [
+      66.36663769085035,
+      30.451481852966314
+    ]
+  ],
+  "method": "measured face reprojection and alpha-preserving slices, not lossless automatic room extraction",
+  "approval": "experimental_pending_user_review"
+}
