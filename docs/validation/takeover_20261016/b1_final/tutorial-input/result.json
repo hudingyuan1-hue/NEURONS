@@ -1,0 +1,66 @@
+{
+  "failures": [
+    "introduction reaches body prompt without advancing formal world",
+    "viewport left-body click opens CRT",
+    "original first CRT sentence remains until actual acknowledgement",
+    "pause remains clickable above CRT and freezes hover lesson",
+    "resume allows real bright-node hover",
+    "real locked-node hover observes two-second wait",
+    "locked-node dialogue is never replaced by a timed COIN message",
+    "unread original instructions cannot be bypassed by a paid node press",
+    "real node press, closing and body reaction complete in order",
+    "viewport right-body click opens freezer",
+    "original cluster narration uses actual three-cluster practice balance",
+    "real star click reveals inspection panel before original explanation",
+    "return cancels inspection with no payment or unlock",
+    "confirmation unlocks once after actual inspection",
+    "gut preview starts after inspection closes",
+    "model preview is visible after panel departure",
+    "full two-second preview returns to T pose before exit instruction",
+    "all nineteen player tutorial lines were acknowledged before complete exit",
+    "real CLOSE exits tutorial",
+    "full tutorial returns original two hero lines to formal dialogue in order",
+    "actual completion is saved once",
+    "formal viewport left-body click reaches campaign handler",
+    "formal viewport right-body click opens freezer without debug handler",
+    "formal freezer still unlocks through its real confirmation button",
+    "freezer cold material plays on UI channel during world pause"
+  ],
+  "lesson_history": [
+    {
+      "source": "体验P67",
+      "speaker": "玩家 · 教学",
+      "stage": 1,
+      "text": "左键点击角色身体使用Neurons神经元 可以选择一种方式干扰他的行动"
+    },
+    {
+      "source": "体验P124",
+      "speaker": "玩家 · 沮丧",
+      "stage": 2,
+      "text": "我暂且只掌握了这一种能力...不过再怎么说我是也会努力的"
+    },
+    {
+      "source": "体验P128",
+      "speaker": "玩家 · 沉思",
+      "stage": 2,
+      "text": "话说...这家伙好像也是会成长的...呃...回到正题"
+    },
+    {
+      "source": "体验P133",
+      "speaker": "玩家 · 教学",
+      "stage": 2,
+      "text": "将鼠标悬停到发亮节点处 会在右侧展示详细的能力信息"
+    }
+  ],
+  "passes": [
+    "real title/profile mouse buttons launch isolated tutorial",
+    "full practice input never pays from or advances formal campaign",
+    "old five-cluster narration never grants extra practice funds",
+    "wrong tutorial node cannot spend practice funds or strand required unlock",
+    "practice pause freezes actual body preview and interface timeline",
+    "preview and unlock never contaminate formal resources, control or cognition",
+    "formal model preview runs only in UI time while campaign stays frozen"
+  ],
+  "rendered": true,
+  "scope": "viewport mouse events; isolated practice plus formal freezer; code-drawn placeholder body; audio loaded/played but not subjectively auditioned"
+}

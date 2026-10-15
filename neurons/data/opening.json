@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "source": "DOCX/早期文档/游玩体验 需求.docx; OOXML body paragraphs and paired text boxes P4–60",
+  "ordering": "Original instruction P4: left column top-to-bottom, then right; Choice/Fallback text is one frame, not two.",
+  "revision": {
+    "source": "R1:T1R4/P29",
+    "withheld": "P40/P46 planet and P53 left spaceship images move out of opening; planet is reserved for ending epilogue. No author identity is shown. P20 old five-form choice stays disabled.",
+    "uncertainty": "Narrator crisis, accident and invasion descriptions retain their original speculative wording. They do not write actual/known/institutional fact ledgers."
+  },
+  "presentation_parameters": {
+    "label": "Adjustable presentation parameters; no gameplay timing or numerical rules",
+    "characters_per_second": 28,
+    "fade_seconds": 0.22,
+    "auto_hold_seconds": 1.6,
+    "blank_hold_seconds": 0.8
+  },
+  "sequences": {
+    "startup": {
+      "next": "title",
+      "auto_play": true,
+      "cards": [
+        {"id":"opening_crisis","source":"体验P5 left","visual":"crisis","speaker":"开场叙述","text":"这个世界因为某种不可抗力陷入危机.."},
+        {"id":"opening_city","source":"体验P11 left world 1","visual":"city","speaker":"开场叙述","text":"世界毁灭..."},
+        {"id":"opening_country","source":"体验P11 left world 2","visual":"country","speaker":"","text":""},
+        {"id":"opening_sea","source":"体验P11 left world 3","visual":"sea","speaker":"","text":""},
+        {"id":"opening_accident","source":"体验P11 left laboratory","visual":"laboratory","speaker":"开场叙述","text":"但据说 这是一场实验事故...\n?"},
+        {"id":"opening_invasion","source":"体验P5 right","visual":"crisis","speaker":"开场叙述","text":"又或者 这是一场星球入侵...\n???"},
+        {"id":"opening_room","source":"体验P11 right bedroom","visual":"bedroom","speaker":"","text":""},
+        {"id":"opening_logo","source":"体验P13","visual":"logo","speaker":"","text":"NEURONS"}
+      ]
+    },
+    "parasite": {
+      "next": "tutorial",
+      "auto_play": false,
+      "cards": [
+        {"id":"intro_name","source":"体验P23 left","visual":"back","speaker":"玩家","text":"我叫{name} \n..."},
+        {"id":"intro_id","source":"体验P31 left","visual":"back","speaker":"玩家","text":"据资料\n我是这里的第{invader_id}名入侵生物　"},
+        {"id":"intro_denial","source":"体验P21 right","visual":"gesture","speaker":"玩家","text":"这不是俗套的入侵哈..."},
+        {"id":"intro_turn","source":"体验P28 right","visual":"turn","speaker":"玩家","text":"但总之"},
+        {"id":"intro_parasite","source":"体验P34 right","visual":"turn","speaker":"玩家","text":"我只是’’被迫’’寄生到了这个家伙身上\n... "},
+        {"id":"intro_sleep","source":"体验P41 right","visual":"sleep","speaker":"玩家","text":"不过"},
+        {"id":"intro_motive","source":"体验P47 right","visual":"sleep","speaker":"玩家","text":"这家伙有问题 世界末日了\n还一心出去寻死...可他一旦死了...\n为了我的安危 我伟大的[]][][] 我只能..."},
+        {"id":"intro_wake","source":"体验P53 right","visual":"wake","speaker":"玩家","text":"糟糕!!!\n他又要开始行动了...我得阻止他!!!"},
+        {"id":"intro_black","source":"体验P60","visual":"black","speaker":"","text":""}
+      ]
+    }
+  }
+}

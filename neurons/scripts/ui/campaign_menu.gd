@@ -32,6 +32,9 @@ var description_clock:float=0.0
 var page_clock:float=0.0
 var preview_left:float=0.0
 var preview_delay:float=0.0
+var preview_id:String=""
+var crt_language:int=-1
+const CRT_LANGUAGES=["C","C++","Java","JavaScript","C#","Go","PHP","Ruby","Swift","Kotlin","Rust","Lua","Python"]
 var inspect_panel:Panel
 var inspect_return:Button
 var inspect_clock:float=0.0
@@ -84,7 +87,7 @@ func build_cast() -> void:
  box(page,Rect2(70,115,590,480))
  box(page,Rect2(685,115,535,480))
  _label(page,"CRT  /  已解锁节点",Rect2(90,132,540,30),18,DIM)
- _description=_label(page,"",Rect2(710,140,480,360),18,INK)
+ _description=_label(page,"",Rect2(710,140,480,360),17,INK)
  _description.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
  var ids:Array=["SKIN","GUT","PORES","TEMP","TINNITUS","DRYMOUTH","KNEE","WITHDRAW","STARTLE","FEAR","JOY","CONTROL"]
  for i in range(ids.size()):
@@ -136,6 +139,7 @@ func build_tree() -> void:
   var b:=_button(page,id,Rect2(Vector2.ZERO,Vector2(92,32)))
   b.z_index=2
   b.add_theme_font_size_override("font_size",12)
+  b.size=Vector2(92,32) # Reapply after font change; old 18px minimum otherwise survives.
   tree_nodes[id]=b
   b.pressed.connect(func():
    if inspect_closing>0:return
@@ -205,7 +209,7 @@ func open_page(key:String) -> void:
  _build_ui()
  panel_mode=key
  cast_pending.clear();page_clock=0.0;_submitted=false
- preview_left=0.0;preview_delay=0.0;inspect_closing=0.0;inspect_clock=0.0
+ preview_left=0.0;preview_delay=0.0;preview_id="";inspect_closing=0.0;inspect_clock=0.0
  for id in pages:pages[id].visible=id==key
  visible=true
  _status.text=""
@@ -228,18 +232,43 @@ func refresh_state() -> void:
 func describe(id:String) -> void:
  selected_id=id
  if rules==null:return
- var entry:Dictionary=rules.spec(id)
  var state:Dictionary=rules.skill_states[id]
+ if not state.unlocked:
+  _description.text="";full_description="";return
  var reason:String=rules.availability(id,context_provider.call() if context_provider.is_valid() else {})
- var detail:String=str(entry.exploration_description if rules.mode=="exploration" else entry.combat_description)
  var extra:String="强度 %d"%int(state.power)
  if rules.book_extensions.has("book_role_resistance"):extra+="  /  抗性 %d"%(int(state.resistance)+rules.global_resistance)
- _description.text="%s · %s\n{\n  %s\n}\n\n%s\n%s"%[id,entry.name,detail.replace("。","。\n  "),extra,reason_text(reason)]
- full_description=_description.text
- var style:int=randi_range(0,2) # UI RNG, independent of saved campaign RNG.
- if style==1:full_description=full_description.replace("{","def response():").replace("}","return result")
- elif style==2:full_description=full_description.replace("{","BEGIN NODE").replace("}","END NODE;")
+ crt_language=randi_range(0,CRT_LANGUAGES.size()-1) # Presentation RNG only; never campaign RNG.
+ full_description=crt_text(id,crt_language)+"\n\n"+extra+"  ·  "+("探索" if rules.mode=="exploration" else "战斗")+"\n"+reason_text(reason)
  _description.text=full_description;_description.visible_characters=0;description_clock=0.0
+
+func crt_text(id:String,language:int) -> String:
+ # Experience P143–276 defines the wrappers. S2:T17 explicitly replaces the old
+ # probability wording: preserve its three sentences verbatim for every node.
+ var entry:Dictionary=rules.spec(id)
+ var lines:Array[String]=[]
+ for sentence in str(entry.description).split("。",false):lines.append("###"+sentence+"。")
+ var header:String
+ var suffix:String=";"
+ match language:
+  0:header='char* %s = "%s";\nint COIN = %d;'%[id,entry.name,entry.cost]
+  1:header='#include <string>\nstd::string %s = "%s";\nint COIN = %d;'%[id,entry.name,entry.cost]
+  2:header='String %s = "%s";\nint COIN = %d;'%[id,entry.name,entry.cost]
+  3:header='const %s = "%s";\nconst COIN = %d;'%[id,entry.name,entry.cost]
+  4:header='string %s = "%s";\nint COIN = %d;'%[id,entry.name,entry.cost]
+  5:header='package main\nvar %s string = "%s"\nvar COIN int = %d'%[id,entry.name,entry.cost]
+  6:header='$%s = "%s";\n$COIN = %d;'%[id,entry.name,entry.cost]
+  _:
+   var keyword:String={8:"let ",9:"val ",10:"let "}.get(language,"")
+   if language in [7,8,9,11,12]:suffix=""
+   header='%s%s = "%s"%s\n%sCOIN = %d%s'%[keyword,id,entry.name,suffix,keyword,entry.cost,suffix]
+ var opening:String="/*"
+ var ending:String="*/"
+ if language==7:opening="=begin";ending="=end"
+ elif language==11:opening="--[[";ending="]]"
+ elif language==12:opening="";ending=""
+ var comment:String="# " if language in [7,12] else ("-- " if language==11 else "// ")
+ return comment+str(CRT_LANGUAGES[clampi(language,0,12)])+"\n"+header+"\n"+opening+"\n"+"\n".join(lines)+"\n"+ending
 
 func reason_text(reason:String) -> String:
  if reason=="recognition_lock":return "角色正在抵制干预；完成一次自主行动后恢复"
@@ -268,7 +297,7 @@ func submit_selected(with_direction:bool) -> void:
 func close_menu() -> void:
  cast_pending.clear()
  if direction_panel!=null:direction_panel.hide()
- preview_left=0.0;preview_delay=0.0;inspect_closing=0.0
+ preview_left=0.0;preview_delay=0.0;preview_id="";inspect_closing=0.0
  super.close_menu()
 
 func describe_tree() -> void:
@@ -299,7 +328,7 @@ func tree_action(kind:String) -> void:
  if result.ok and kind in ["unlock","upgrade","emergency"]:refund_note="growth"
  if result.ok and kind in ["unlock","upgrade"]:
   inspect_closing=0.18
-  if selected_id=="GUT":preview_delay=0.36
+  preview_id=selected_id;preview_delay=0.36;preview_left=0.0
  feedback_requested.emit("SFX_UI_CONFIRM" if result.ok else "SFX_UI_DENIED")
  tree_result.emit(kind,selected_id,result)
  refresh_state();queue_redraw()
@@ -367,7 +396,9 @@ func draw_art(canvas:Node2D) -> void:
   for id in tree_positions:
    for parent in rules.spec(id).prerequisites:
     if tree_positions.has(parent):canvas.draw_line(tree_positions[id],tree_positions[parent],Color("56745f"),1)
- BodyPreview.draw(canvas,body_angle,page_clock,preview_left)
+ BodyPreview.draw(canvas,body_angle,page_clock,preview_left,preview_id,reduced_effects)
+ if preview_delay>0 or preview_left>0:
+  canvas.draw_string(theme.default_font,Vector2(95,184),"%s · 二维动作预览 / 不施放"%preview_id,HORIZONTAL_ALIGNMENT_LEFT,-1,15,INK)
  if inspect_closing>0:
   var hit:Vector2=inspect_panel.position+Vector2(-8,150)
   canvas.draw_line(hit+Vector2(-65,-40*inspect_closing/0.18),hit,Color("c7b79a"),5)

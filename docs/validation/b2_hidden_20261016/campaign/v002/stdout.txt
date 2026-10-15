@@ -1,0 +1,48 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 - Build 32.0.101.6737 - Compatibility - Using Device: Intel - Intel(R) Arc(TM) 130T GPU (16GB)
+
+Movie Maker mode enabled, recording movie in 1280×720 @ 30 FPS...
+PASS father actually approaches, winds up and establishes original grip/blood door
+PASS already-owned key cannot replace father blood-door route with hospital
+PASS actual Escape key pauses established father grip
+PASS world pause freezes father pressure and drag before hidden transition
+PASS actual stabilizing and drag cross blood door and load independent hidden plaza
+PASS hidden entry ends father grip/half-rate/pressure and switches to combat
+PASS hidden entry preserves actual HP and SP already lost to father pressure
+PASS hidden entry preserves zero resources and unique owned candy
+PASS hidden route remains L1, grants no hospital/L6 unlock and does not create a key task
+PASS actual 2D layout contains solid, sight-blocking fountain
+PASS actual living hunter perceives and pursues after entry
+PASS manual pause freezes rendered hunter position and world clock
+PASS zero-resource autonomous escape advances normally before exit
+PASS production Save button creates checksummed JSON in independent test root
+PASS production Load button reconstructs rule instance from actual JSON
+PASS half-route actual JSON restores hidden map and paused world clock
+PASS half-route JSON preserves both bodies, AI phase and pursuit state
+PASS load neither duplicates owned item nor resets enemy HP/mode
+PASS zero-resource autonomous body escapes living hunter through actual E1 exit
+PASS E1 does not require killing hunter or grant hospital/L6 unlock
+PASS Escape pause freezes separate ending presentation as well as world
+PASS actual exit persists exactly the two E1 global achievements
+PASS production Save button creates checksummed JSON in independent test root
+PASS production Load button reconstructs rule instance from actual JSON
+PASS actual ending JSON restores the same light/wake presentation phase
+PASS ending JSON/replay does not duplicate global achievement receipt
+PASS first plaza beat actually reaches reality-bed wake-up placeholder
+PASS ending presentation completes without auto revival or hospital transition
+PASS ending retains frozen world, body values and previously owned inventory
+PASS older half-route profile is restored independently from global progress
+PASS production JSON restores pre-E1 route while global record remains earned
+PASS actual rendered hunter attack commits fatal body contact
+PASS hidden death actually revives in first bedroom instead of hospital/fourth/sixth level
+PASS hidden death adds three total cycles, one invader ID and one actual L1 attempt
+PASS revival uses existing 5N floor without hidden scene/unlock cluster rewards
+PASS restoring older profile and dying cannot remove or duplicate earned global E1 achievements
+HIDDEN_CAMPAIGN_CHECK 36 passed 0 failed
+--------------------------------------------------------------------------------
+Done recording movie at path: C:/Users/莫蕊源/Documents/GitHub/NEURONS/tmp/b2_source_intake/gpu_v002/hidden.avi
+822 frames at 30 FPS (movie length: 00:00:27:12), recorded in 00:00:15 (180% of real-time speed).
+CPU render time: 0.26 seconds (average: 0.31 ms/frame)
+GPU render time: 0.31 seconds (average: 0.37 ms/frame)
+Encoding time: 6.68 seconds (average: 8.13 ms/frame)
+--------------------------------------------------------------------------------

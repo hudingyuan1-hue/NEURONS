@@ -2,6 +2,42 @@ extends "res://scripts/world/room_view.gd"
 const Catalog=preload("res://scripts/presentation/asset_catalog.gd")
 var catalog=Catalog.new()
 
+func draw_hidden_plaza() -> void:
+ if app==null or layout==null:return
+ if app.room_id!="hidden_street":super._draw();return
+ draw_rect(Rect2(-800,-600,2200,1600),Color("172426"))
+ poly([layout.project(Vector2.ZERO),layout.project(Vector2(5.6,0)),layout.project(layout.SIZE),layout.project(Vector2(0,3.8))],Color("596a69"))
+ for i in range(20):draw_line(layout.project(Vector2(0,i*0.2)),layout.project(Vector2(5.6,i*0.2)),Color("4b5b5b"),1)
+ var ordered:Array=[]
+ for f in layout.furniture:ordered.append({"type":"furniture","data":f,"depth":layout.project(f.rect.end).y})
+ ordered.append({"type":"actor","data":"hero","depth":layout.project(app.hero_pos).y})
+ ordered.append_array(extra_actors());ordered.sort_custom(func(a,b):return a.depth<b.depth)
+ for entry in ordered:
+  if entry.type=="furniture":draw_furniture(entry.data)
+  else:draw_actor(entry.data)
+ var exit:Vector2=layout.project(Vector2(5.12,0.42))
+ draw_line(exit+Vector2(-17,0),exit+Vector2(17,0),Color("b7c7b0"),3)
+ draw_string(font,exit+Vector2(-17,-14),"出口",HORIZONTAL_ALIGNMENT_LEFT,-1,11,Color("e1d8b2"))
+ var frame:Dictionary=app.hidden_route.ending_frame()
+ if not frame.is_empty():
+  var glow:float=float(frame.light)
+  draw_rect(Rect2(-800,-600,2200,1600),Color(0.82,0.86,0.77,glow*0.65))
+  if frame.phase!="plaza":
+   draw_rect(Rect2(-800,-600,2200,1600),Color(0.11,0.19,0.19,float(frame.wake)))
+   draw_rect(Rect2(135,100,350,150),Color("364a49"))
+   draw_rect(Rect2(210,170,200,65),Color("abbab3"))
+   draw_circle(Vector2(245,167),18,Color("c6c8b6"))
+   if float(frame.wake)<0.35:
+    draw_line(Vector2(235,164),Vector2(241,164),Color("334645"),2)
+    draw_line(Vector2(247,164),Vector2(253,164),Color("334645"),2)
+   else:
+    draw_circle(Vector2(238,164),1.0+float(frame.wake)*1.5,Color("334645"))
+    draw_circle(Vector2(250,164),1.0+float(frame.wake)*1.5,Color("334645"))
+   draw_rect(Rect2(280,104,65,5),Color("e1dfc8"))
+   draw_string(font,Vector2(185,269),"现实宿主睁眼 · 尾声占位",HORIZONTAL_ALIGNMENT_LEFT,-1,12,Color("d9e0cd"))
+  draw_string(font,Vector2(210,98),str(frame.title),HORIZONTAL_ALIGNMENT_LEFT,-1,24,Color("e8e8d8"))
+  draw_string(font,Vector2(200,303),str(frame.achievement),HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("e8e8d8"))
+
 func rest_pose() -> Dictionary:
  var t:float=clampf((1.2-app.action_left)/0.3,0,1) if app.action_phase=="resting" else 0.0
  var from:Vector2=layout.project(app.hero_pos)+Vector2(0,-30)
@@ -44,6 +80,8 @@ func draw_resting_actor() -> void:
 func extra_actors() -> Array:
  var actors:Array=app.home.actors() if app!=null and app.home!=null else []
  if app!=null and app.family!=null:actors.append_array(app.family.actors())
+ if app!=null and app.hospital!=null:actors.append_array(app.hospital.actors())
+ if app!=null and app.hidden_route!=null:actors.append_array(app.hidden_route.actors())
  if app!=null and app.search_actions!=null and app.room_id=="bedroom":
   var props:Dictionary=app.search_actions.state("box")
   if props.has("upper_shift"):
@@ -78,6 +116,33 @@ func bedside_handle() -> Vector2:
  return layout.project(layout.furniture[1].rect.position)-Vector2(float(spec.foot[0]),float(spec.foot[1]))+Vector2(float(spec.handle[0]),float(spec.handle[1]))+Vector2(float(spec.travel[0]),float(spec.travel[1]))*float(app.drawer_open.get("bedside",0.0))
 
 func draw_actor(who:String) -> void:
+ if who=="hidden_hunter" or who.begins_with("hospital_"):
+  var id:String=who.trim_prefix("hospital_")
+  var at:Vector2=layout.project(app.hidden_route.position() if who=="hidden_hunter" else app.hospital.position(id))
+  var phase:String=str(app.hidden_route.data.hunter.phase) if who=="hidden_hunter" else str(app.hospital.actor(id).phase)
+  var color:=Color("754e55") if who=="hidden_hunter" else Color("9aaba2")
+  draw_circle(at,9,Color(0.05,0.08,0.08,0.3))
+  draw_rect(Rect2(at+Vector2(-8,-43),Vector2(16,29)),color)
+  draw_circle(at+Vector2(0,-51),8,color.lightened(0.2))
+  for side in [-1,1]:
+   draw_line(at+Vector2(side*5,-14),at+Vector2(side*5,0),color,5)
+   draw_line(at+Vector2(side*7,-37),at+Vector2(side*12,-20),color,4)
+  if who=="hidden_hunter" and phase in ["windup","attack"]:
+   var direction:Array=app.hidden_route.data.hunter.direction
+   var v:Vector2=layout.project(Vector2(float(direction[0]),float(direction[1])))-layout.project(Vector2.ZERO)
+   draw_line(at+Vector2(0,-30),at+Vector2(0,-30)+v.normalized()*28,Color("b5a490"),5)
+  var name:String="猎手" if who=="hidden_hunter" else str(app.hospital.config.names[id])
+  draw_string(font,at+Vector2(-22,-65),name+"·占位",HORIZONTAL_ALIGNMENT_LEFT,-1,8,Color("e0e1cb"))
+  if who!="hidden_hunter":
+   var body:Dictionary=app.hospital.data.body
+   if not body.is_empty() and body.actor==id and app.hospital.near(id,0.65):
+    var hand:Vector2=layout.project(app.hero_pos)+Vector2(10,-34)
+    draw_line(at+Vector2(-6,-35),hand,Color("c4cab6"),3)
+    draw_string(font,at+Vector2(-20,-77),str(body.kind),HORIZONTAL_ALIGNMENT_LEFT,-1,8,Color("e4c997"))
+    if body.kind=="bandage":draw_rect(Rect2(hand-Vector2(4,2),Vector2(8,4)),Color("d7d8c4"))
+   if id=="doctor" and phase=="sample":draw_line(at+Vector2(-4,-35),layout.project(app.hero_pos)+Vector2(10,-34),Color("b9d1c8"),1)
+  if id=="wheelchair":draw_arc(at+Vector2(0,-8),12,0,TAU,12,Color("485c5a"),2)
+  return
  if who=="upper_box":
   var shift:Array=app.search_actions.state("box").upper_shift
   var base:Rect2=layout.furniture[5].rect
@@ -133,11 +198,17 @@ func draw_actor(who:String) -> void:
  draw_circle(Vector2.ZERO,10,Color(0.05,0.07,0.08,0.3))
  draw_set_transform(Vector2.ZERO)
  var crouch:float=0.68 if app.hero_state=="search" and app.search_actions!=null and app.search_actions.pose=="low" else 1.0
+ if app.room_id=="hidden_street":crouch=app.hidden_route.body_height()/float(app.hidden_route.config.test_parameters.standing_body_height)
  draw_texture_rect_region(frame.texture,Rect2(center-Vector2(frame.foot.x,frame.foot.y*crouch),Vector2(frame.size.x,frame.size.y*crouch)),frame.source)
  if float(app.rules.effects.get("PORES",0))>0:
   for i in range(5):draw_circle(center+Vector2(9+i%2*3,-35+i*3),1.0,Color("9fcebc"))
  if float(app.rules.effects.get("DRYMOUTH",0))>0:draw_line(center+Vector2(7,-43),center+Vector2(10,-35),Color("d6c8b0"),2)
  if app.hero_state=="eat":draw_eating_gesture(center)
+ if app.session.data.level==2 and app.rules.owners.get("hospital_cup","")=="hero":
+  var raising:bool=app.hospital.data.body.get("kind","")=="raise_cup"
+  var hand:Vector2=center+Vector2(12,-43 if raising else -27)
+  draw_line(center+Vector2(7,-36),hand,Color("8caebc"),3)
+  draw_rect(Rect2(hand+Vector2(-3,-4),Vector2(6,6)),Color("d2d6bc"))
  if app.hero_state=="search":
   var hand:Vector2=bedside_hand() if app.room_id=="bedroom" and bedside_contact() else center+Vector2(16,-46 if app.search_actions!=null and app.search_actions.pose=="high" else -12 if crouch<1 else -28)
   if app.target_index>=0 and app.room_id=="bedroom" and app.layout.furniture[app.target_index].id!="bedside":
@@ -208,6 +279,7 @@ func draw_ellipse_blood(at:Vector2) -> void:
  draw_set_transform(Vector2.ZERO)
 
 func _draw() -> void:
+ if app!=null and app.room_id=="hidden_street":draw_hidden_plaza();return
  super._draw()
  if app==null:return
  if app.family!=null and not app.family.data.is_empty() and app.family.data.blood_door:

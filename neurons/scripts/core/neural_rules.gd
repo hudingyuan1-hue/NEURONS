@@ -117,7 +117,7 @@ func availability(id:String, context:Dictionary={}) -> String:
  if intervention_lock and mode=="exploration" and not context.get("father_rescue",false):return "recognition_lock"
  if not pending_neural.is_empty() or not pending_skin.is_empty():return "pending"
  var mental:bool=id in ["FEAR","JOY"] and stun_left<=0
- var rescue:bool=context.get("father_rescue",false) and id in ["KNEE","STARTLE","FEAR","JOY"] and stun_left<=0
+ var rescue:bool=(context.get("father_rescue",false) and id in ["KNEE","STARTLE","FEAR","JOY"] or context.get("medical_rescue",false) and id=="KNEE") and stun_left<=0
  if (body_busy() or gripped) and not mental and not rescue:return "body_unavailable"
  if not action.is_empty():
   if action.phase!="prepare" or not id in ["SKIN","WITHDRAW","STARTLE"]:return "action_active"
@@ -159,7 +159,7 @@ func apply_pending() -> Dictionary:
  if settled.has(event_id):return _rejected("already_settled")
  settled[event_id]="resisted"
  var mental:bool=id in ["FEAR","JOY"] and stun_left<=0
- var rescue:bool=result.context.get("father_rescue",false) and id in ["KNEE","STARTLE","FEAR","JOY"] and stun_left<=0
+ var rescue:bool=(result.context.get("father_rescue",false) and id in ["KNEE","STARTLE","FEAR","JOY"] or result.context.get("medical_rescue",false) and id=="KNEE") and stun_left<=0
  if hp<=0 or ((body_busy() or gripped) and not mental and not rescue) or transitioning:
   result.success=false
   result.reason="interrupted"
@@ -254,7 +254,7 @@ func record_awakening(id:String) -> bool:
  return true
 
 func body_busy() -> bool:
- return super.body_busy() or float(effects.get("TINNITUS",0))>0
+ return super.body_busy() or float(effects.get("TINNITUS",0))>0 or float(effects.get("MEDICINE",0))>0
 
 func movement_rate() -> float:
  if float(effects.get("TEMP",0))<=0:return 1.0
@@ -263,7 +263,7 @@ func movement_rate() -> float:
 func tick(delta:float) -> Dictionary:
  var result:Dictionary={"search_completed":false,"reaction_finished":false,"target_id":""}
  if hp<=0 or loading or transitioning or not is_finite(delta) or delta<=0:return result
- var blocked:float=maxf(maxf(reaction_left,stun_left),maxf(hurt_left,float(effects.get("TINNITUS",0))))
+ var blocked:float=maxf(maxf(reaction_left,stun_left),maxf(hurt_left,maxf(float(effects.get("TINNITUS",0)),float(effects.get("MEDICINE",0)))))
  var temp_left:float=float(effects.get("TEMP",0))
  var active_search:bool=search_active
  var old_control:float=control_left

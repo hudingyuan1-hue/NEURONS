@@ -15,6 +15,16 @@ func click(target:BaseButton) -> void:
   var event:=InputEventMouseButton.new();event.position=point;event.global_position=point;event.button_index=MOUSE_BUTTON_LEFT;event.pressed=down
   Input.parse_input_event(event);await frames(2)
 
+func await_live(predicate:Callable,timeout_seconds:float=4.0) -> bool:
+ # Real frames drive the production UI/world. Frame counts are not durations:
+ # an uncapped fast GPU must still wait for 0.12/0.18s closing and 3.3s UI cues.
+ var elapsed:float=0.0
+ while elapsed<timeout_seconds:
+  if predicate.call():return true
+  await get_tree().process_frame
+  elapsed+=get_process_delta_time()
+ return predicate.call()
+
 func _ready() -> void:
  folder="res://../docs/validation/feedback_20261015"
  for argument in OS.get_cmdline_user_args():
@@ -115,11 +125,9 @@ func _ready() -> void:
  await click(app.father_prompt.buttons.KNEE)
  check(app.menu.visible and app.menu.selected_id=="KNEE" and app.rules.neurons==neurons,"hint button focuses existing CRT without submitting or charging")
  await click(app.menu.nodes.KNEE)
- for i in range(60):
-  if app.rules.neurons<neurons and app.rules.pending_neural.is_empty() and app.closing_left<=0:break
-  await frames(1)
+ var settled:bool=await await_live(func():return app.rules.neurons<neurons and app.rules.pending_neural.is_empty() and app.closing_left<=0)
  app.paused_manual=true
- check(app.rules.neurons==neurons-int(app.rules.spec("KNEE").cost) and app.rules.gripped,"real CRT resisted rescue pays once and cannot free the established grip")
+ check(settled and app.rules.neurons==neurons-int(app.rules.spec("KNEE").cost) and app.rules.gripped,"real CRT resisted rescue pays once and cannot free the established grip")
  check(float(app.rules.skill_states.KNEE.until)>app.rules.world_time,"resisted rescue keeps its configured cooldown")
  await capture("05_resisted_rescue")
 
@@ -127,11 +135,11 @@ func _ready() -> void:
  app.vitality_panel.restore({"manual":true,"hint_acknowledged":false})
  app.vitality_panel.hint_demo_seen=false;app.reduced_effects=false
  world=app.rules.world_time;neurons=app.rules.neurons
- await frames(17)
- check(app.vitality_panel.hint_demo_running and app.vitality_panel.keycap.position.y>1,"X keycap visibly presses while the world is paused")
+ var visibly_pressed:bool=await await_live(func():return app.vitality_panel.hint_demo_running and app.vitality_panel.keycap.position.y>1,1.5)
+ check(visibly_pressed,"X keycap visibly presses while the world is paused")
  await capture("06_keycap_press")
- await frames(105)
- check(not app.vitality_panel.hint_demo_running and app.vitality_panel.keycap.position==Vector2(1,1),"X demo stops after its bounded three cycles")
+ var demo_finished:bool=await await_live(func():return not app.vitality_panel.hint_demo_running and app.vitality_panel.hint_demo_time>=app.vitality_panel.HINT_PRESS_CYCLE*app.vitality_panel.HINT_PRESS_COUNT)
+ check(demo_finished and app.vitality_panel.keycap.position==Vector2(1,1),"X demo stops after its bounded three cycles")
  check(app.rules.world_time==world and app.rules.neurons==neurons,"UI hint animation changes neither world clock nor resources")
  saved=app.snapshot_data();app.store.save_snapshot(saved);disk=app.store.load_snapshot();app.restore_snapshot(disk.data)
  await frames(3)

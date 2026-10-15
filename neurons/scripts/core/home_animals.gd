@@ -162,14 +162,22 @@ func advance_dog(delta:float) -> void:
     if int(dog.remaining)==0:cue("DOG_THANK","complete")
  if dog.phase=="bring":
   if move("dog",app.hero_pos,delta,1.2):
-   var receipt:String="dog_key:%d"%app.rules.actual_attempt
-   if app.rules.commit_transfer(receipt,"key","dog","hero",position("dog").distance_to(app.hero_pos),app.layout.clear_segment(position("dog"),app.hero_pos),true,true):
-    app.rules.cancel_search()
-    app.hero_route=PackedVector2Array();app.target_index=-1
-    app.session.data.key_seen=true;app.session.data.key_owner="hero"
-    app.rules.observe("物品","key","大黄实际叼回并交付了一把钥匙。")
-    dog.phase="idle";dog.route=[]
-    cue("DOG_THANK","key")
+   dog.key_contact_pending=true
+
+func settle_key_contact() -> void:
+ # S5 R3: a search that reaches completion at this verdict is preserved.
+ # Transfer then cancels only unfinished work; harmful contacts run first.
+ if not enabled or data.is_empty() or app.room_id!="bedroom" or not data.dog.get("key_contact_pending",false):return
+ data.dog.key_contact_pending=false
+ if not present("dog") or not data.dog.alive or app.rules.hp<=0:return
+ var receipt:String="dog_key:%d"%app.rules.actual_attempt
+ if app.rules.commit_transfer(receipt,"key","dog","hero",position("dog").distance_to(app.hero_pos),app.layout.clear_segment(position("dog"),app.hero_pos),true,true):
+  app.rules.cancel_search()
+  app.hero_route=PackedVector2Array();app.target_index=-1
+  app.session.data.key_seen=true;app.session.data.key_owner="hero"
+  app.rules.observe("物品","key","大黄实际叼回并交付了一把钥匙。")
+  data.dog.phase="idle";data.dog.route=[]
+  cue("DOG_THANK","key")
 
 func kill_dog() -> void:
  if not present("dog") or not data.dog.alive:return

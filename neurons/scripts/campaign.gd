@@ -15,6 +15,12 @@ const SearchActions=preload("res://scripts/presentation/search_actions.gd")
 const FatherPrompt=preload("res://scripts/ui/father_prompt.gd")
 const VitalityPanel=preload("res://scripts/ui/vitality_panel.gd")
 const Tutorial=preload("res://scripts/ui/tutorial_overlay.gd")
+const HospitalEvents=preload("res://scripts/core/hospital_events.gd")
+const HospitalRecords=preload("res://scripts/core/hospital_records.gd")
+const HiddenStreet=preload("res://scripts/core/hidden_street.gd")
+const HiddenLayout=preload("res://scripts/world/hidden_layout.gd")
+const Achievements=preload("res://scripts/core/achievement_store.gd")
+const Opening=preload("res://scripts/ui/opening_flow.gd")
 var session=Session.new()
 var store=Store.new()
 var profile:Dictionary={}
@@ -49,6 +55,11 @@ var vitality_panel
 var father_prompt
 var auto_status_box:CheckBox
 var auto_status_enabled:bool=true
+var hospital
+var hidden_route
+var achievements
+var restoring:bool=false
+var opening_ui
 
 func make_menu() -> Control:
  return CampaignMenu.new()
@@ -145,6 +156,10 @@ func _ready() -> void:
  bind_status_rules()
  home=HomeAnimals.new(self)
  family=FamilyEvents.new(self)
+ hospital=HospitalEvents.new(self)
+ hospital.records=HospitalRecords.new(hospital)
+ hidden_route=HiddenStreet.new(self)
+ achievements=Achievements.new();achievements.root=store.root
  search_actions=SearchActions.new(self)
  menu.rules=rules
  menu.context_provider=skill_context
@@ -171,7 +186,23 @@ func _ready() -> void:
   home.start_exploration_line()
  else:
   restore_snapshot(loaded)
- if not bool(profile.get("tutorial_completed",true)):open_tutorial(false)
+ if not bool(profile.get("opening_completed",true)):open_parasite(loaded.get("opening_state",{}))
+ elif not bool(profile.get("tutorial_completed",true)):open_tutorial(false)
+
+func open_parasite(saved:Dictionary={}) -> void:
+ if opening_ui!=null:return
+ opening_ui=Opening.new();opening_ui.reduced_effects=reduced_effects
+ add_child(opening_ui)
+ opening_ui.state_changed.connect(func(_state):save_requested=true)
+ opening_ui.completed.connect(func(_sequence,_skipped):
+  profile.opening_completed=true;session.data.profile=profile.duplicate(true)
+  opening_ui.queue_free();opening_ui=null;save_requested=true
+  if not bool(profile.get("tutorial_completed",false)):open_tutorial(false)
+ )
+ opening_ui.start("parasite",profile,saved)
+ if opening_ui.finished:
+  profile.opening_completed=true;opening_ui.queue_free();opening_ui=null
+  if not bool(profile.get("tutorial_completed",false)):open_tutorial(false)
 
 func open_tutorial(guide:bool) -> void:
  if tutorial_ui!=null or rules.hp<=0:return
@@ -180,17 +211,29 @@ func open_tutorial(guide:bool) -> void:
  add_child(tutorial_ui)
 
 func world_paused() -> bool:
- return tutorial_ui!=null or super.world_paused()
+ return opening_ui!=null or tutorial_ui!=null or (hidden_route!=null and hidden_route.blocks_hero()) or super.world_paused()
 
 func sync_audio_pause() -> void:
  if audio==null:return
- audio.set_world_paused(world_paused(),paused_manual or menu.visible or closing_left>0 or audio_panel.visible or tutorial_ui!=null)
+ audio.set_world_paused(world_paused(),paused_manual or menu.visible or closing_left>0 or audio_panel.visible or tutorial_ui!=null or opening_ui!=null)
 
 func _process(delta:float) -> void:
  if not campaign_ready:return
  process_requests()
  if not campaign_ready:return
+ if hidden_route!=null and hidden_route.data.get("status","")=="ending":
+  input_lock_frames=maxi(0,input_lock_frames-1)
+  closing_left=maxf(0,closing_left-delta)
+  hidden_route.advance_ending(delta)
+  if not hidden_route.data.pending_achievements.is_empty():
+   var result:Dictionary=achievements.grant_e1(hidden_route.event_id("exit"))
+   if result.ok:hidden_route.data.pending_achievements=[]
+   else:status_note="结局已成立；全局成就保存失败，保留待重试："+str(result.get("error",""))
+  sync_audio_pause();update_ui();view.queue_redraw();return
+ if family.data.get("hidden_pending",false) and not world_paused():
+  enter_hidden_street()
  if family.collapse_active() or rules.hp<=0:
+  input_lock_frames=maxi(0,input_lock_frames-1)
   closing_left=maxf(0.0,closing_left-delta)
   audio.set_world_paused(true,paused_manual or menu.visible or closing_left>0 or audio_panel.visible)
  if family.collapse_active():
@@ -260,21 +303,27 @@ func set_auto_status(value:bool) -> void:
  status_preferences_changed.emit(value)
 
 func room_title(id:String) -> String:
- return {"bedroom":"卧室","ward":"小病房","lobby":"候诊区","clinic":"诊室","pharmacy":"药房","office":"医护办公室","stairs":"楼梯"}.get(id,id)
+ return {"bedroom":"卧室","ward":"小病房","lobby":"候诊区","clinic":"诊室","pharmacy":"药房","office":"医护办公室","stairs":"楼梯","hidden_street":"隐藏Street · 广场"}.get(id,id)
 
-func enter_room(id:String) -> void:
- if not room_id.is_empty():session.data.rooms[room_id]={"drawer":drawer_open.duplicate(true)}
- room_id=id
- layout=Layout.new()
+func layout_for_room(id:String):
+ if id=="hidden_street":return HiddenLayout.new()
+ var floor_layout=Layout.new()
  if id!="bedroom" and id!="ward":
-  layout.furniture.clear()
+  floor_layout.furniture.clear()
   for i in range(Session.ROOM_POINTS[id].size()):
    var side:int=i%2
    var row:int=i/2
    var p:=Vector2(0.25 if side==0 else 4.85,0.65+row*0.51)
    var at:=p+Vector2(0.75 if side==0 else -0.3,0.2)
-   layout.furniture.append({"id":"%s:%d"%[id,i],"name":Session.ROOM_POINTS[id][i],"rect":Rect2(p,Vector2(0.5,0.35)),"at":at,"height":25.0,"color":Color("819593"),"kind":"drawer"})
-  layout._init()
+   floor_layout.furniture.append({"id":"%s:%d"%[id,i],"name":Session.ROOM_POINTS[id][i],"rect":Rect2(p,Vector2(0.5,0.35)),"at":at,"height":25.0,"color":Color("819593"),"kind":"drawer"})
+  floor_layout._init()
+ return floor_layout
+
+func enter_room(id:String) -> void:
+ var previous:String=room_id
+ if not room_id.is_empty():session.data.rooms[room_id]={"drawer":drawer_open.duplicate(true)}
+ room_id=id
+ layout=layout_for_room(id)
  view.layout=layout
  hero_pos=layout.BED_STOP if id=="bedroom" or id=="ward" else Vector2(2.8,1.4)
  hero_route=PackedVector2Array()
@@ -291,19 +340,34 @@ func enter_room(id:String) -> void:
  if search_actions!=null:search_actions.enter_room()
  if audio!=null:
   if id!="bedroom":audio.stop_channel("ambience")
+ if hospital!=null and not restoring:hospital.on_enter(previous,id)
+
+func enter_hidden_street() -> void:
+ family.data.hidden_pending=false;family.data.pressure=0;family.data.blood_door=false
+ family.data.father.present=false;family.data.father.phase="absent"
+ hidden_route.start();view.layout=layout;visible_doors=[]
+ menu.close_menu();dialogue_queue.clear();show_dialogue()
+ status_note="隐藏Street · 自主逃离；猎手与场景均为程序占位"
+ audio.stop_channel("ambience")
 
 func point_id(index:int) -> String:
  return "%s:%d"%[room_id,index]
 
 func door_point(id:String) -> Vector2:
- if room_id in ["bedroom","ward"]:return layout.DOOR
- var index:int=maxi(0,visible_doors.find(id))
+ return door_point_for(room_id,id)
+
+func door_point_for(room:String,id:String) -> Vector2:
+ if room in ["bedroom","ward"]:return Layout.DOOR
+ var doors:Array=Session.GRAPH.get(room,[]).duplicate()
+ if room=="lobby":doors.append("stairs")
+ var index:int=maxi(0,doors.find(id))
  return Vector2(1.25+index*0.78,0.24)
 
 func has_key() -> bool:
  return session.has_key()
 
 func key_visible() -> bool:
+ if room_id=="hidden_street":return false
  return bool(session.data.key_seen) and str(session.data.key_target).get_slice(":",0)==room_id
 
 func key_position() -> Vector2:
@@ -314,8 +378,13 @@ func key_position() -> Vector2:
 
 func advance_world(delta:float) -> void:
  bind_status_rules()
+ if room_id=="hidden_street":
+  rules.tick(delta);world_visual_time+=delta
+  hidden_route.tick(delta)
+  return
  if home!=null:home.tick(delta)
  if family!=null:family.tick(delta)
+ if hospital!=null:hospital.tick(delta)
  if not rules.search_active and rules.public_action.get("kind","")=="search" and rules.settled.has(rules._search_id):rules.finish_public_action(search_action_origin)
  world_visual_time+=delta
  var was_controlled:bool=rules.control_left>0
@@ -323,6 +392,7 @@ func advance_world(delta:float) -> void:
  var completed_index:int=target_index
  search_actions.tick(bool(result.search_completed))
  if rules.hp<=0:return
+ if home!=null:home.settle_key_contact()
  if result.search_completed:
   vitality_panel.action_completed("search:"+str(result.event_id))
   rules.finish_public_action(search_action_origin)
@@ -340,6 +410,7 @@ func advance_world(delta:float) -> void:
    hero_state="idle"
    status_note="搜寻完成：+1神经元；此处无钥匙"
   if completed_index>=0:search_actions.on_complete(completed_index,id==session.data.key_target)
+  if completed_index>=0 and session.data.level==2:hospital.on_search_complete(completed_index,id==session.data.key_target)
   target_index=-1
   return
  if not dialogue_queue.is_empty():return
@@ -354,6 +425,7 @@ func advance_world(delta:float) -> void:
  if not rules.action.is_empty():
   var attack:Dictionary=rules.advance_kick(delta)
   family.kick_contact()
+  if hospital!=null and session.data.level==2:hospital.kick_contact()
   hero_state="grab" if attack.get("phase","")=="prepare" else "give"
   return
  if not motion.is_empty():
@@ -372,6 +444,7 @@ func advance_world(delta:float) -> void:
  elif rules.stun_left>0 or rules.hurt_left>0:hero_state="hit"
  elif hero_state in ["scratch","hit","eat"]:hero_state="idle"
  if rules.body_busy() or rules.gripped:return
+ if hospital!=null and session.data.level==2 and hospital.blocks_hero():return
  if family!=null and family.blocks_hero():
   var pose:String=family.hero_pose()
   if not pose.is_empty():hero_state=pose
@@ -546,6 +619,7 @@ func unlock_hospital() -> void:
  session.new_attempt(2,rng)
  rules.actual_attempt=int(session.data.attempts["2"])
  rules.owners["key"]=session.data.key_owner
+ hospital.start_attempt()
  enter_room("lobby")
 
 func finish_rest() -> void:
@@ -575,6 +649,8 @@ func restart_attempt(cycle_increment:int,revival:bool) -> void:
  completed.clear()
  session.new_attempt(int(session.data.level),rng)
  rules.owners["key"]=session.data.key_owner
+ hidden_route.data.clear();rules.mode="exploration"
+ if session.data.level==2:hospital.start_attempt()
  enter_room("bedroom" if session.data.level==1 else "ward")
  family.start_attempt()
  if mother_unlock:unlock_hospital()
@@ -593,6 +669,8 @@ func apply_cast() -> void:
   return
  var id:String=result.id
  if home!=null:home.anomaly(index_before,result)
+ if session.data.level==2:hospital.on_skill(result)
+ if room_id=="hidden_street":hidden_route.on_skill(result)
  var interrupted:bool=result.search_cancelled or id in ["CONTROL","STARTLE","FEAR"]
  if action_phase=="observe_cuff" and id in ["SKIN","GUT","KNEE","WITHDRAW","STARTLE","FEAR","CONTROL"]:
   action_phase="autonomy";search_actions.observing_index=-1
@@ -635,9 +713,12 @@ func skill_context() -> Dictionary:
  if family!=null and family.present("father"):target="father";kind="father_event"
  elif family!=null and family.present("mother"):target="mother";kind="mother_event"
  var intended:Vector2=layout.furniture[target_index].at if target_index>=0 else hero_route[-1] if not hero_route.is_empty() else hero_pos
- return {"father_rescue":family!=null and family.rescue_context(),"room":room_id,"action":kind,"target":target,"intent_point":[intended.x,intended.y]}
+ var context:Dictionary={"father_rescue":family!=null and family.rescue_context(),"medical_rescue":session.data.level==2 and hospital.data.get("holder","")=="doctor","room":room_id,"action":kind,"target":target,"intent_point":[intended.x,intended.y]}
+ if room_id=="hidden_street":context.merge(hidden_route.skill_context(),true)
+ return context
 
 func world_rate() -> float:
+ if room_id=="hidden_street":return 1.0
  return family.world_rate() if family!=null else 1.0
 
 func close_neuron_menu() -> void:
@@ -692,12 +773,15 @@ func world_mouse_position(screen:Vector2) -> Vector2:
  return world_viewport.get_canvas_transform().affine_inverse()*(screen/2.0)
 
 func _unhandled_input(event:InputEvent) -> void:
- if input_lock_frames>0 or tutorial_ui!=null:return
+ if input_lock_frames>0 or tutorial_ui!=null or opening_ui!=null:return
  if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_X:
   if first_damage and not menu.visible and not audio_panel.visible:vitality_panel.toggle_manual()
   get_viewport().set_input_as_handled();return
  if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_ESCAPE and not menu.visible and dialogue_queue.is_empty():
   paused_manual=not paused_manual;return
+ if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_F and room_id=="hidden_street" and not world_paused():
+  rules.begin_kick({"direction":[hero_facing.x,hero_facing.y]},true)
+  get_viewport().set_input_as_handled();return
  if event is InputEventMouseButton and event.pressed and not world_paused():
   var pixel:Vector2=world_mouse_position(event.position)
   var actor_screen:Vector2=layout.project(hero_pos)
@@ -722,7 +806,7 @@ func _unhandled_input(event:InputEvent) -> void:
       if room_id=="bedroom" and i==6 and point_id(i) in completed and not "cuff_seam" in rules.known:
        hero_route=layout.path(hero_pos,layout.furniture[i].at)
        search_actions.observing_index=i;controlled_route=false;action_phase="controlled_observe_cuff";return
-      if i>=Session.ROOM_POINTS[room_id].size() or point_id(i) in completed or rules.search_attempts>=rules.search_limit:
+      if room_id=="hidden_street" or i>=Session.ROOM_POINTS[room_id].size() or point_id(i) in completed or rules.search_attempts>=rules.search_limit:
        status_note="此处当前没有可执行搜寻";return
       rules.cancel_search()
       target_index=i
@@ -768,13 +852,16 @@ func snapshot_data() -> Dictionary:
   "menu_open":menu.visible,"menu_page":menu.panel_mode,"zoom_index":zoom_index,"presentation_id":presentation_id,
   "deferred_targets":deferred_targets.duplicate(true),"motion":motion.duplicate(true),"controlled_route":controlled_route,
   "audio_state":audio.snapshot_playback(),"footstep_left":footstep_left,"footstep_serial":footstep_serial,"home_state":home.data.duplicate(true),"family_state":family.data.duplicate(true),"death_left":death_left,"first_damage":first_damage,"status_visible":status_visible,"first_damage_pending":first_damage_pending,"vitality_display":vitality_panel.snapshot(),
-  "search_props":search_actions.states.duplicate(true),"prop_receipts":search_actions.receipts.duplicate(true),"observing_index":search_actions.observing_index,"route_action_origin":route_action_origin,"search_action_origin":search_action_origin}
+  "search_props":search_actions.states.duplicate(true),"prop_receipts":search_actions.receipts.duplicate(true),"observing_index":search_actions.observing_index,"route_action_origin":route_action_origin,"search_action_origin":search_action_origin,
+  "hospital_state":hospital.data.duplicate(true),"hidden_state":hidden_route.data.duplicate(true),"opening_state":opening_ui.snapshot() if opening_ui!=null else {}}
  # Animal actions and their unique search/transfer receipts survive loads.
 
 func restore_snapshot(data:Dictionary) -> bool:
  if int(data.get("schema",0)) not in [1,2] or not data.has("session") or not data.has("rules"):return false
  var proposed:Dictionary=data.session
- if int(proposed.get("level",0)) not in [1,2] or not Session.ROOM_POINTS.has(str(data.get("room_id",""))):return false
+ if int(proposed.get("level",0)) not in [1,2] or not (Session.ROOM_POINTS.has(str(data.get("room_id",""))) or data.get("room_id","")=="hidden_street"):return false
+ restoring=true
+ if opening_ui!=null:opening_ui.queue_free();opening_ui=null
  runtime_generation+=1
  profile=data.profile.duplicate(true)
  invader_id=int(profile.invader_id)
@@ -791,6 +878,8 @@ func restore_snapshot(data:Dictionary) -> bool:
   else:rules.set(key,restored_rules[key])
  rules.sync_skin()
  family.restore_state(data.get("family_state",{}))
+ hospital.restore(data.get("hospital_state",{}))
+ hidden_route.data=data.get("hidden_state",{}).duplicate(true)
  if family.data.is_empty():family.start_attempt()
  death_left=float(data.get("death_left",0))
  first_damage=bool(data.get("first_damage",false))
@@ -833,5 +922,7 @@ func restore_snapshot(data:Dictionary) -> bool:
  else:menu.close_menu()
  sync_audio_pause()
  audio.restore_playback(data.get("audio_state",{}))
+ restoring=false
+ if not bool(profile.get("opening_completed",true)):open_parasite(data.get("opening_state",{}))
  if int(data.schema)==1:status_note="已载入旧版存档；下次保存升级，原有效档单独保留为profile.schema1.json"
  return true

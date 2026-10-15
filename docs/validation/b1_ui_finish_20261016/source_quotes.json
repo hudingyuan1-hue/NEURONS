@@ -1,0 +1,73 @@
+{
+  "input": "DOCX/AI整理后文档/NEURONS_第二阶段_角色玩家规则_合并修订版.docx",
+  "sha256": "d5d0b71bd14fe4605b081404e66b0d13cd2028f0c337969e7127dbc0a817e379",
+  "comparison": "exact current descriptions; UI splits only at full stops then restores punctuation",
+  "checks": [
+    {
+      "id": "SKIN",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "GUT",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "PORES",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "TEMP",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "TINNITUS",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "DRYMOUTH",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "KNEE",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "WITHDRAW",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "STARTLE",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "FEAR",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "JOY",
+      "source": "S2:T17",
+      "ok": true
+    },
+    {
+      "id": "CONTROL",
+      "source": "S2:T17",
+      "ok": true
+    }
+  ],
+  "other_source_ranges": [
+    "体验P143–276:13 programming-language declarations/comment blocks",
+    "体验P356–358:UI body reaction, GUT red abdomen/delay/2 second T-pose return",
+    "S2:T18:other eleven preview body gestures",
+    "体验P367–368:target clarity and outside dim/soften"
+  ]
+}

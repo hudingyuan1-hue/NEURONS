@@ -1,0 +1,26 @@
+[
+  {
+    "case": "tutorial-input",
+    "returncode": 0,
+    "seconds": 8.97,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "tutorial",
+    "returncode": 0,
+    "seconds": 4.77,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "b1",
+    "returncode": 0,
+    "seconds": 5.08,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  }
+]

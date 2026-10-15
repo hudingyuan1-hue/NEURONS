@@ -1,0 +1,15 @@
+[
+  {
+    "case": "hospital",
+    "returncode": 1,
+    "seconds": 6.79,
+    "stderr": "",
+    "checks": null,
+    "failed": [
+      "real CRT knee reaches actual doctor contact and interrupts unfinished sample",
+      "interruption retains needle damage and charges one ordinary neural fee",
+      "wheelchair uses actual independent patient paperwork without protagonist registration / true",
+      "wheelchair uses actual independent patient paperwork without protagonist registration / false"
+    ]
+  }
+]

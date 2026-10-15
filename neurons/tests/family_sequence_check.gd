@@ -3,6 +3,14 @@ extends "res://tests/family_check.gd"
 ## separately by status_check; this suite records the original-line event order.
 var transcript:Array=[]
 
+func await_live(predicate:Callable,timeout_seconds:float) -> bool:
+ var elapsed:float=0.0
+ while elapsed<timeout_seconds:
+  if predicate.call():return true
+  await get_tree().process_frame
+  elapsed+=get_process_delta_time()
+ return predicate.call()
+
 func clear_lines() -> void:
  if app!=null:
   for line in app.dialogue_queue:transcript.append(line.duplicate(true))
@@ -118,11 +126,10 @@ func _ready() -> void:
  check(app.action_phase=="collapse" and app.action_left==0,"exclusive collapse cancels pending ordinary action/presentation phase")
  var before:int=int(app.session.data.cycle)
  app.paused_manual=false
- for i in range(400):
-  if not app.family.collapse_active():break
-  await frames(1)
+ # Ten configured caption beats run on UI delta, independent of render FPS.
+ var revived:bool=await await_live(func():return not app.family.collapse_active(),float(app.family.config.test_parameters.collapse_caption)*10.0+2.0)
  app.paused_manual=true
- check(not app.family.collapse_active(),"interrupted eviction collapse reaches one real revival")
+ check(revived,"interrupted eviction collapse reaches one real revival")
  check(app.session.data.cycle==before+3 and app.family.data.inventory.is_empty(),"collapse cannot complete old eviction transfer after revival")
 
  fixture(false,true);transcript.clear();app.family.spawn("father")

@@ -29,6 +29,8 @@ var lesson_history:Array=[]
 var lesson_input_shield:Control
 var guide_canvas:Node2D
 var finishing:bool=false
+var focus_mask:ColorRect
+var focus_material:ShaderMaterial
 
 func _init(owner) -> void:
  app=owner
@@ -61,6 +63,31 @@ func _ready() -> void:
  add_child(lesson_input_shield)
  guide_canvas=Node2D.new();guide_canvas.set_script(load("res://scripts/ui/menu_art.gd"))
  guide_canvas.host=self;guide_canvas.z_index=8;add_child(guide_canvas)
+ # Experience P367–368: isolate the current target without modifying room art
+ # or stealing input. This screen-space material is local to the practice UI.
+ focus_mask=ColorRect.new();focus_mask.size=Vector2(1280,720);focus_mask.z_index=4
+ focus_mask.mouse_filter=Control.MOUSE_FILTER_IGNORE
+ focus_material=ShaderMaterial.new()
+ var focus_shader:=Shader.new()
+ focus_shader.code="""shader_type canvas_item;
+render_mode unshaded;
+uniform sampler2D screen_tex : hint_screen_texture, repeat_disable, filter_linear;
+uniform vec4 focus_rect = vec4(0.0);
+uniform float blur_pixels = 1.4;
+void fragment() {
+ vec2 p = SCREEN_UV * vec2(1280.0, 720.0);
+ vec2 outside_axis = max(focus_rect.xy - p, p - focus_rect.zw);
+ float outside = smoothstep(0.0, 7.0, max(outside_axis.x, outside_axis.y));
+ vec2 d = SCREEN_PIXEL_SIZE * blur_pixels;
+ vec3 sharp = textureLod(screen_tex, SCREEN_UV, 0.0).rgb;
+ vec3 soft = sharp * 0.2;
+ soft += textureLod(screen_tex, SCREEN_UV + vec2(d.x, 0.0), 0.0).rgb * 0.2;
+ soft += textureLod(screen_tex, SCREEN_UV - vec2(d.x, 0.0), 0.0).rgb * 0.2;
+ soft += textureLod(screen_tex, SCREEN_UV + vec2(0.0, d.y), 0.0).rgb * 0.2;
+ soft += textureLod(screen_tex, SCREEN_UV - vec2(0.0, d.y), 0.0).rgb * 0.2;
+ COLOR = vec4(mix(sharp, soft * 0.48, outside), 1.0);
+}"""
+ focus_material.shader=focus_shader;focus_mask.material=focus_material;add_child(focus_mask)
  var instructions:=Panel.new();instructions.position=Vector2(25,575);instructions.size=Vector2(1230,125);instructions.z_index=10
  instructions.add_theme_stylebox_override("panel",app.panel_style(Color("20322d"),Color("849a83")));add_child(instructions)
  hint=Label.new();hint.position=Vector2(18,10);hint.size=Vector2(1175,30);hint.add_theme_font_size_override("font_size",21);instructions.add_child(hint)
@@ -204,6 +231,7 @@ func finish(complete_exit:bool=false) -> void:
 
 func _process(delta:float) -> void:
  sync_lesson_controls()
+ sync_focus_mask()
  audio.set_world_paused(manual_paused or lesson_pending() or terminal.visible or closing>0,manual_paused or terminal.visible or lesson_pending())
  if manual_paused:return
  clock+=delta
@@ -249,8 +277,7 @@ func find_button(root:Node,text:String) -> Button:
   if found!=null:return found
  return null
 
-func draw_guidance(canvas:Node2D) -> void:
- if guide_only or demo==null or terminal==null:return
+func guidance_target() -> Dictionary:
  var target:Rect2=Rect2()
  var mode:String="点击"
  var right:bool=false
@@ -270,6 +297,24 @@ func draw_guidance(canvas:Node2D) -> void:
  elif stage==11:
   var close:Button=find_button(terminal,"CLOSE")
   if close!=null:target=close.get_global_rect()
+ return {"rect":target,"mode":mode,"right":right}
+
+func sync_focus_mask() -> void:
+ if focus_mask==null:return
+ var info:Dictionary=guidance_target()
+ var target:Rect2=info.rect
+ focus_mask.visible=not guide_only and target.size!=Vector2.ZERO
+ if not focus_mask.visible:return
+ target=target.grow(9)
+ focus_material.set_shader_parameter("focus_rect",Vector4(target.position.x,target.position.y,target.end.x,target.end.y))
+ focus_material.set_shader_parameter("blur_pixels",0.0 if app.reduced_effects else 1.4)
+
+func draw_guidance(canvas:Node2D) -> void:
+ if guide_only or demo==null or terminal==null:return
+ var info:Dictionary=guidance_target()
+ var target:Rect2=info.rect
+ var mode:String=info.mode
+ var right:bool=info.right
  if target.size==Vector2.ZERO:return
  var breathe:float=0.0 if app.reduced_effects or manual_paused else sin(clock*2.0)*1.5
  var center:Vector2=target.get_center()

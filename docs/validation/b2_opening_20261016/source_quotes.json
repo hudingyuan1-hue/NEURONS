@@ -1,0 +1,67 @@
+{
+  "input": "DOCX/早期文档/游玩体验 需求.docx",
+  "sha256": "9b0a0316fd7101ca519abd3386fe21778c8f41de3d3966014323e8a9b254982a",
+  "comparison": "exact text and text-box paragraph line breaks; only player name and invader number placeholders substituted",
+  "checks": [
+    {
+      "id": "opening_crisis",
+      "source": "体验P5 left",
+      "ok": true
+    },
+    {
+      "id": "opening_city",
+      "source": "体验P11 left world 1",
+      "ok": true
+    },
+    {
+      "id": "opening_accident",
+      "source": "体验P11 left laboratory",
+      "ok": true
+    },
+    {
+      "id": "opening_invasion",
+      "source": "体验P5 right",
+      "ok": true
+    },
+    {
+      "id": "intro_name",
+      "source": "体验P23 left",
+      "ok": true
+    },
+    {
+      "id": "intro_id",
+      "source": "体验P31 left",
+      "ok": true
+    },
+    {
+      "id": "intro_denial",
+      "source": "体验P21 right",
+      "ok": true
+    },
+    {
+      "id": "intro_turn",
+      "source": "体验P28 right",
+      "ok": true
+    },
+    {
+      "id": "intro_parasite",
+      "source": "体验P34 right",
+      "ok": true
+    },
+    {
+      "id": "intro_sleep",
+      "source": "体验P41 right",
+      "ok": true
+    },
+    {
+      "id": "intro_motive",
+      "source": "体验P47 right",
+      "ok": true
+    },
+    {
+      "id": "intro_wake",
+      "source": "体验P53 right",
+      "ok": true
+    }
+  ]
+}

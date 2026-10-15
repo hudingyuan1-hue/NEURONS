@@ -1,0 +1,893 @@
+{
+  "sources": [
+    "S3:P338–613/T7–17",
+    "S4:P113–118/P162–192/T10–11/T13/T15–16",
+    "S5:R3/R4明确补丁（报告延后接收不销毁）"
+  ],
+  "groups": {
+    "lobby": [
+      "guide",
+      "wheelchair",
+      "porter"
+    ],
+    "clinic": [
+      "doctor",
+      "assistant"
+    ],
+    "office": [
+      "archivist",
+      "guard"
+    ],
+    "nurse": [
+      "nurse"
+    ],
+    "pharmacist": [
+      "pharmacist"
+    ],
+    "patient": [
+      "patient"
+    ]
+  },
+  "rooms": {
+    "guide": "lobby",
+    "wheelchair": "lobby",
+    "porter": "lobby",
+    "doctor": "clinic",
+    "assistant": "clinic",
+    "archivist": "office",
+    "guard": "office",
+    "nurse": "ward",
+    "pharmacist": "pharmacy",
+    "patient": "lobby"
+  },
+  "names": {
+    "guide": "导诊护士",
+    "wheelchair": "轮椅患者",
+    "porter": "转运工",
+    "doctor": "检查医生",
+    "assistant": "检查助手",
+    "archivist": "档案员",
+    "guard": "保安",
+    "nurse": "小护士",
+    "pharmacist": "药师",
+    "patient": "跨关病人"
+  },
+  "timing": {
+    "return_check": 20.0,
+    "spawn_batch": 10.0,
+    "bandage": 3.0,
+    "sample": 2.0,
+    "exam_max": 4.0,
+    "cup_raise": 1.0,
+    "medicine_stop": 1.0,
+    "guard_max": 6.0,
+    "drymouth": 2.0
+  },
+  "values": {
+    "heal": 10,
+    "needle_hp": 5,
+    "medicine_sp": 15,
+    "witness_sp": 10,
+    "guard_hp": 5,
+    "guard_sp": 10
+  },
+  "test_parameters": {
+    "note": "原文未定动作表现/距离仅集中测试参数；不覆盖已定治疗/取样/伤害/药效/有限检查。",
+    "walk_speed": 0.9,
+    "approach_distance": 0.55,
+    "notice_distance": 1.2,
+    "handoff": 0.55,
+    "registration": 0.65,
+    "needle_prepare": 0.5,
+    "grab_prepare": 0.5,
+    "mix": 0.8,
+    "paperwork": 0.75,
+    "finger_release": 0.6
+  },
+  "dialogue": {
+    "NURSE": [
+      {
+        "speaker": "小护士[平静]",
+        "text": "手给我看看。",
+        "source": "S3:P355"
+      },
+      {
+        "speaker": "角色[疑惑]",
+        "text": "你胸牌戴反了。",
+        "source": "S3:P356"
+      },
+      {
+        "speaker": "小护士[平静]",
+        "text": "不影响。",
+        "source": "S3:P357"
+      },
+      {
+        "speaker": "玩家[无语]",
+        "text": "名字不让看，手倒得给她。",
+        "source": "S3:P358"
+      }
+    ],
+    "NURSE_DONE": [
+      {
+        "speaker": "角色[认真]",
+        "text": "好了吧？",
+        "source": "S3:P361"
+      },
+      {
+        "speaker": "小护士[平静]",
+        "text": "还要核一下号。",
+        "source": "S3:P362"
+      }
+    ],
+    "REGISTER": [
+      {
+        "speaker": "角色[疑惑]",
+        "text": "我只是想出去。",
+        "source": "S3:P400"
+      },
+      {
+        "speaker": "导诊护士[平静]",
+        "text": "先登记。",
+        "source": "S3:P401"
+      },
+      {
+        "speaker": "玩家[无语]",
+        "text": "问路也得登记？",
+        "source": "S3:P402"
+      },
+      {
+        "speaker": "角色[疑惑]",
+        "text": "后面还有一栏。",
+        "source": "S3:P404"
+      },
+      {
+        "speaker": "导诊护士[平静]",
+        "text": "那栏不用你填。",
+        "source": "S3:P405"
+      }
+    ],
+    "WHEELCHAIR": [
+      {
+        "speaker": "轮椅患者[疑问]",
+        "text": "外面有人来找我吗？",
+        "source": "S3:P414"
+      },
+      {
+        "speaker": "角色[迟疑]",
+        "text": "我刚进来，没看见。",
+        "source": "S3:P415"
+      },
+      {
+        "speaker": "轮椅患者[认真]",
+        "text": "要是有人问，就说我还在这。",
+        "source": "S3:P416"
+      }
+    ],
+    "TRANSFER": [
+      {
+        "speaker": "导诊护士[平静]",
+        "text": "家属没来？那不用等了。",
+        "source": "S3:P425"
+      },
+      {
+        "speaker": "轮椅患者[急切]",
+        "text": "我给他们留过地址。",
+        "source": "S3:P426"
+      },
+      {
+        "speaker": "转运工[平静]",
+        "text": "手收进去。",
+        "source": "S3:P427"
+      }
+    ],
+    "FRAME": [
+      {
+        "speaker": "轮椅患者[抗拒]",
+        "text": "我不走。你让他们过来。",
+        "source": "S3:P429"
+      }
+    ],
+    "TRANSFER_DONE": [
+      {
+        "speaker": "角色[震惊]",
+        "text": "他不是说不走吗？",
+        "source": "S3:P431"
+      },
+      {
+        "speaker": "导诊护士[平静]",
+        "text": "已经办完了。",
+        "source": "S3:P432"
+      },
+      {
+        "speaker": "玩家[凝重]",
+        "text": "他本人答没答应，表上根本没填。",
+        "source": "S3:P433"
+      }
+    ],
+    "PATIENT": [
+      {
+        "speaker": "人物[认真]",
+        "text": "名字他们会换。看后面的数。",
+        "source": "S3:P443"
+      },
+      {
+        "speaker": "角色[疑惑]",
+        "text": "你说哪个？",
+        "source": "S3:P444"
+      },
+      {
+        "speaker": "人物[认真]",
+        "text": "翻过来。",
+        "source": "S3:P445"
+      },
+      {
+        "speaker": "玩家[认真]",
+        "text": "他说的是背面。",
+        "source": "S3:P446"
+      }
+    ],
+    "PATIENT_ANOMALY": [
+      {
+        "speaker": "人物[认真]",
+        "text": "刚才不是你自己停下来的吧。",
+        "source": "S3:P450"
+      },
+      {
+        "speaker": "角色[迟疑]",
+        "text": "……你也看见了？",
+        "source": "S3:P452"
+      },
+      {
+        "speaker": "玩家[警惕]",
+        "text": "他怎么会问这个？",
+        "source": "S3:P453"
+      }
+    ],
+    "PATIENT_AWARE": [
+      {
+        "speaker": "人物[认真]",
+        "text": "刚才不是你自己停下来的吧。",
+        "source": "S3:P450"
+      },
+      {
+        "speaker": "角色[冷淡]",
+        "text": "你还看见了什么？",
+        "source": "S3:P455"
+      },
+      {
+        "speaker": "人物[平静]",
+        "text": "就刚才那一下。",
+        "source": "S3:P456"
+      }
+    ],
+    "DOCTOR": [
+      {
+        "speaker": "医生[平静]",
+        "text": "手伸出来。",
+        "source": "S3:P472"
+      },
+      {
+        "speaker": "角色[疑惑]",
+        "text": "检查什么？",
+        "source": "S3:P473"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "哪里疼以后再说，先看能不能用。",
+        "source": "S3:P475"
+      },
+      {
+        "speaker": "角色[怀疑]",
+        "text": "什么叫能不能用？",
+        "source": "S3:P476"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "先做检查。",
+        "source": "S3:P477"
+      },
+      {
+        "speaker": "玩家[疑惑]",
+        "text": "他连哪里不舒服都没问。",
+        "source": "S3:P478"
+      }
+    ],
+    "AVOID": [
+      {
+        "speaker": "角色[警惕]",
+        "text": "等一下，我还没答应。",
+        "source": "S3:P483"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "那就写拒绝。",
+        "source": "S3:P484"
+      },
+      {
+        "speaker": "玩家[认真]",
+        "text": "总比先扎进去再说好。",
+        "source": "S3:P485"
+      }
+    ],
+    "NEEDLE": [
+      {
+        "speaker": "角色[疼痛]",
+        "text": "嘶……轻点！",
+        "source": "S3:P487"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "别动。",
+        "source": "S3:P488"
+      },
+      {
+        "speaker": "玩家[不满]",
+        "text": "问话不回答，动手倒挺快。",
+        "source": "S3:P489"
+      }
+    ],
+    "SAMPLE": [
+      {
+        "speaker": "角色[疑惑]",
+        "text": "结果什么时候给我？",
+        "source": "S3:P491"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "不用你拿。",
+        "source": "S3:P492"
+      }
+    ],
+    "PRESCRIPTION": [
+      {
+        "speaker": "医生[平静]",
+        "text": "拿去药房。",
+        "source": "S3:P495"
+      },
+      {
+        "speaker": "角色[疑惑]",
+        "text": "检查还没出结果，就开药？",
+        "source": "S3:P496"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "照单拿。",
+        "source": "S3:P497"
+      }
+    ],
+    "ASSIST_REFUSE": [
+      {
+        "speaker": "助手[平静]",
+        "text": "不配合检查。",
+        "source": "S3:P508"
+      },
+      {
+        "speaker": "角色[生气]",
+        "text": "我只是让他先说清楚。",
+        "source": "S3:P509"
+      },
+      {
+        "speaker": "助手[平静]",
+        "text": "我写的是你没配合。",
+        "source": "S3:P510"
+      },
+      {
+        "speaker": "玩家[无语]",
+        "text": "原因一个字不写。",
+        "source": "S3:P511"
+      }
+    ],
+    "ASSIST_KICK": [
+      {
+        "speaker": "助手[认真]",
+        "text": "攻击工作人员。",
+        "source": "S3:P513"
+      },
+      {
+        "speaker": "角色[愤怒]",
+        "text": "是他先按住我的。",
+        "source": "S3:P514"
+      }
+    ],
+    "PHARMACY": [
+      {
+        "speaker": "药师[平静]",
+        "text": "单子给我。",
+        "source": "S3:P537"
+      },
+      {
+        "speaker": "角色[疑惑]",
+        "text": "杯子上怎么只有号码？",
+        "source": "S3:P538"
+      },
+      {
+        "speaker": "药师[平静]",
+        "text": "按单子配的。",
+        "source": "S3:P539"
+      },
+      {
+        "speaker": "玩家[疑惑]",
+        "text": "配了什么，还是没说。",
+        "source": "S3:P540"
+      }
+    ],
+    "REFUSE_MEDICINE": [
+      {
+        "speaker": "角色[警惕]",
+        "text": "先告诉我里面是什么。",
+        "source": "S3:P542"
+      },
+      {
+        "speaker": "药师[平静]",
+        "text": "不喝就放下。",
+        "source": "S3:P543"
+      }
+    ],
+    "SWALLOW": [
+      {
+        "speaker": "角色[难受]",
+        "text": "……等一下。",
+        "source": "S3:P546"
+      },
+      {
+        "speaker": "玩家[凝重]",
+        "text": "刚喝下去就这样？",
+        "source": "S3:P547"
+      }
+    ],
+    "FALSE_MEDICINE": [
+      {
+        "speaker": "角色[质问]",
+        "text": "我没喝，你贴这个干什么？",
+        "source": "S3:P556"
+      },
+      {
+        "speaker": "小护士[平静]",
+        "text": "这栏要填完。",
+        "source": "S3:P557"
+      },
+      {
+        "speaker": "角色[生气]",
+        "text": "那也不是喝了。",
+        "source": "S3:P558"
+      },
+      {
+        "speaker": "玩家[凝重]",
+        "text": "杯子还在那儿。",
+        "source": "S3:P559"
+      }
+    ],
+    "STOP_FILE": [
+      {
+        "speaker": "档案员[平静]",
+        "text": "这份放下。",
+        "source": "S3:P565"
+      },
+      {
+        "speaker": "角色[疑惑]",
+        "text": "这是什么记录？",
+        "source": "S3:P570"
+      },
+      {
+        "speaker": "档案员[冷淡]",
+        "text": "你不用看这个。",
+        "source": "S3:P567"
+      },
+      {
+        "speaker": "玩家[凝重]",
+        "text": "他要收走了。",
+        "source": "S3:P568"
+      }
+    ],
+    "REPORT": [
+      {
+        "speaker": "档案员[平静]",
+        "text": "他一直在翻这些。",
+        "source": "S3:P572"
+      },
+      {
+        "speaker": "保安[平静]",
+        "text": "哪个人？",
+        "source": "S3:P573"
+      }
+    ],
+    "GUARD": [
+      {
+        "speaker": "保安[严肃]",
+        "text": "手里的东西先停一下。",
+        "source": "S3:P581"
+      },
+      {
+        "speaker": "角色[警惕]",
+        "text": "我在看记录。",
+        "source": "S3:P582"
+      }
+    ],
+    "GUARD_MISS": [
+      {
+        "speaker": "角色[生气]",
+        "text": "别碰我。",
+        "source": "S3:P584"
+      }
+    ],
+    "GUARD_DRAG": [
+      {
+        "speaker": "角色[疼痛]",
+        "text": "松手！我自己会走。",
+        "source": "S3:P587"
+      },
+      {
+        "speaker": "保安[平静]",
+        "text": "到门口去。",
+        "source": "S3:P588"
+      }
+    ],
+    "GUARD_RELEASE": [
+      {
+        "speaker": "玩家[凝重]",
+        "text": "先看看手，还能动吗？",
+        "source": "S3:P590"
+      }
+    ],
+    "PATIENT_STOP": [
+      {
+        "speaker": "病人[压低声音]",
+        "text": "先别问了。",
+        "source": "S3:P601"
+      }
+    ],
+    "PATIENT_HELD": [
+      {
+        "speaker": "病人[平静]",
+        "text": "我还没说完。",
+        "source": "S3:P603"
+      },
+      {
+        "speaker": "保安[冷淡]",
+        "text": "走。",
+        "source": "S3:P604"
+      }
+    ],
+    "PATIENT_GONE": [
+      {
+        "speaker": "角色[凝重]",
+        "text": "他只是跟我说了几句话。",
+        "source": "S3:P606"
+      },
+      {
+        "speaker": "玩家[凝重]",
+        "text": "没说完的，先别替他猜。",
+        "source": "S3:P607"
+      }
+    ],
+    "BAG": [
+      {
+        "speaker": "转运工[平静]",
+        "text": "这袋？",
+        "source": "S3:P382"
+      },
+      {
+        "speaker": "小护士[平静]",
+        "text": "对一下标签。",
+        "source": "S3:P383"
+      },
+      {
+        "speaker": "角色[疑惑]",
+        "text": "里面那件衣服要拿去哪？",
+        "source": "S3:P385"
+      },
+      {
+        "speaker": "转运工[平静]",
+        "text": "单上没写给你看。",
+        "source": "S3:P386"
+      },
+      {
+        "speaker": "玩家看见标签时[认真]",
+        "text": "先看清号码。",
+        "source": "S3:P387"
+      }
+    ]
+  },
+  "points": {
+    "lobby": [
+      {
+        "id": "lobby:0",
+        "action": "拉开票据抽屉，查看资料格",
+        "lines": [
+          "只有单子，没有钥匙。",
+          "每张都得翻一下。"
+        ],
+        "source": "S3:T11R2"
+      },
+      {
+        "id": "lobby:1",
+        "action": "蹲下查看低位盒体及可开启小格",
+        "lines": [
+          "下面也没有。",
+          "还好不用爬上去找。"
+        ],
+        "source": "S3:T11R3"
+      },
+      {
+        "id": "lobby:2",
+        "action": "查看出票槽和托盘",
+        "lines": [
+          "卡着一张纸……不是。",
+          "别把机器拆了。"
+        ],
+        "source": "S3:T11R4"
+      },
+      {
+        "id": "lobby:3",
+        "action": "查看盆沿与底托",
+        "lines": [
+          "盆边没有。",
+          "至少没把土全刨出来。"
+        ],
+        "source": "S3:T11R5"
+      },
+      {
+        "id": "lobby:4",
+        "action": "翻资料层，查看底层",
+        "lines": [
+          "怎么每层都放一样的？",
+          "多放几份显得很齐全。"
+        ],
+        "source": "S3:T11R6"
+      },
+      {
+        "id": "lobby:5",
+        "action": "打开下柜，检查底部",
+        "lines": [
+          "没有，关上吧。",
+          "下一处。"
+        ],
+        "source": "S3:T11R7"
+      }
+    ],
+    "clinic": [
+      {
+        "id": "clinic:0",
+        "action": "查看抽屉底与文件夹层",
+        "lines": [
+          "这里没有钥匙。",
+          "这些表怎么先签了字？"
+        ],
+        "source": "S3:T11R8"
+      },
+      {
+        "id": "clinic:1",
+        "action": "逐格拨开物件检查",
+        "lines": [
+          "里面也没有。",
+          "柜子倒是不少。"
+        ],
+        "source": "S3:T11R9"
+      },
+      {
+        "id": "clinic:2",
+        "action": "蹲下开柜，查看管道旁",
+        "lines": [
+          "这里也没有……",
+          "找完记得洗手。"
+        ],
+        "source": "S3:T11R10"
+      },
+      {
+        "id": "clinic:3",
+        "action": "检查床沿、床垫边与可见床底",
+        "lines": [
+          "床底没东西。",
+          "找完就起来。"
+        ],
+        "source": "S3:T11R11"
+      },
+      {
+        "id": "clinic:4",
+        "action": "查看开放层与底部托盘",
+        "lines": [
+          "没有钥匙，都是器械。",
+          "别伸进那些尖的里面。"
+        ],
+        "source": "S3:T11R12"
+      },
+      {
+        "id": "clinic:5",
+        "action": "挪开盒子，检查后方",
+        "lines": [
+          "盒子后面也没有。",
+          "又是空找一遍。"
+        ],
+        "source": "S3:T11R13"
+      },
+      {
+        "id": "clinic:6",
+        "action": "倾看桶内，拨开上层废纸",
+        "lines": [
+          "没有……谁会放这里啊。",
+          "你不还是找了。"
+        ],
+        "source": "S3:T11R14"
+      },
+      {
+        "id": "clinic:7",
+        "action": "查看窗台与框沿缝隙",
+        "lines": [
+          "缝里也没有。",
+          "再看看别处。"
+        ],
+        "source": "S3:T11R15"
+      }
+    ],
+    "pharmacy": [
+      {
+        "id": "pharmacy:0",
+        "action": "查看柜面、交接托盘及可开启抽屉",
+        "lines": [
+          "只有药杯和单子。",
+          "钥匙不在这。"
+        ],
+        "source": "S3:T16R2"
+      },
+      {
+        "id": "pharmacy:1",
+        "action": "打开未锁柜门，查看外包装之间与层板边缘",
+        "lines": [
+          "这层没有。",
+          "里面的箱子先别拆。"
+        ],
+        "source": "S3:T16R3"
+      },
+      {
+        "id": "pharmacy:2",
+        "action": "蹲下开柜，检查管道旁与柜底",
+        "lines": [
+          "下面也没有。",
+          "又一个空柜子。"
+        ],
+        "source": "S3:T16R4"
+      },
+      {
+        "id": "pharmacy:3",
+        "action": "逐格挪开备用物件，查看后方",
+        "lines": [
+          "后面没有钥匙。",
+          "放回去吧。"
+        ],
+        "source": "S3:T16R5"
+      },
+      {
+        "id": "pharmacy:4",
+        "action": "翻查可触及层板与药盒之间",
+        "lines": [
+          "药盒之间也没有。",
+          "这里倒是都写了药名。"
+        ],
+        "source": "S3:T16R6"
+      },
+      {
+        "id": "pharmacy:5",
+        "action": "移开处方夹，查看台面与托盘下方",
+        "lines": [
+          "压在下面的也不是。",
+          "只有纸。"
+        ],
+        "source": "S3:T16R7"
+      },
+      {
+        "id": "pharmacy:6",
+        "action": "翻看资料层、底格及架脚旁",
+        "lines": [
+          "这里没有。",
+          "册子倒是一摞一摞的。"
+        ],
+        "source": "S3:T16R8"
+      }
+    ],
+    "office": [
+      {
+        "id": "office:0",
+        "action": "查看当前文件夹之间、层板与底格",
+        "lines": [
+          "夹子后面没有。",
+          "再看一下底下。"
+        ],
+        "source": "S3:T16R9"
+      },
+      {
+        "id": "office:1",
+        "action": "检查窗沿、窗框下缝",
+        "lines": [
+          "窗边没有。",
+          "别把自己卡在这里。"
+        ],
+        "source": "S3:T16R10"
+      },
+      {
+        "id": "office:2",
+        "action": "开柜查看桶侧、柜底",
+        "lines": [
+          "里面也没有。",
+          "关上吧。"
+        ],
+        "source": "S3:T16R11"
+      },
+      {
+        "id": "office:3",
+        "action": "查看桶口和可触及废纸之间",
+        "lines": [
+          "只有废纸。",
+          "看看有没有夹着。"
+        ],
+        "source": "S3:T16R12"
+      },
+      {
+        "id": "office:4",
+        "action": "拉开抽屉，检查格层与柜底",
+        "lines": [
+          "这几个格子都没有。",
+          "小柜子也没省事。"
+        ],
+        "source": "S3:T16R13"
+      },
+      {
+        "id": "office:5",
+        "action": "拉开可开启柜格，检查文件夹与底板",
+        "lines": [
+          "没有钥匙。",
+          "别把编号看串了。"
+        ],
+        "source": "S3:T16R14"
+      },
+      {
+        "id": "office:6",
+        "action": "翻查登记夹、转运文件旁及抽屉",
+        "lines": [
+          "桌上和抽屉里都没有。",
+          "都是登记的东西。"
+        ],
+        "source": "S3:T16R15"
+      },
+      {
+        "id": "office:7",
+        "action": "抬起纸叠，检查托盘与边缝",
+        "lines": [
+          "托盘里没有。",
+          "不用拆机器。"
+        ],
+        "source": "S3:T16R16"
+      },
+      {
+        "id": "office:8",
+        "action": "查看柜底、管道两侧",
+        "lines": [
+          "这里也没有。",
+          "起来吧。"
+        ],
+        "source": "S3:T16R17"
+      },
+      {
+        "id": "office:9",
+        "action": "移开备用文件盒，检查格层后方",
+        "lines": [
+          "盒子后面是空的。",
+          "这一格也找完了。"
+        ],
+        "source": "S3:T16R18"
+      },
+      {
+        "id": "office:10",
+        "action": "查看死亡、费用及报告夹周边与抽屉",
+        "lines": [
+          "没有钥匙，只有这些表。",
+          "先分清是哪一份。"
+        ],
+        "source": "S3:T16R19"
+      }
+    ]
+  },
+  "unconfirmed_glyphs": {
+    "bed_card_old": null,
+    "uniform_label": null
+  }
+}

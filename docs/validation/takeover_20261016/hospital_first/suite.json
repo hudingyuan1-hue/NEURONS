@@ -1,0 +1,37 @@
+[
+  {
+    "case": "hospital",
+    "returncode": 1,
+    "seconds": 13.05,
+    "stderr": "WARNING: 5 ObjectDB instances were leaked at exit (run with `--verbose` for details).\n   at: cleanup (core/object/object.cpp:2536)\nERROR: 2 resources still in use at exit (run with --verbose for details).\n   at: clear (core/io/resource.cpp:822)",
+    "checks": null,
+    "failed": [
+      "doctor invites examination before actual needle contact",
+      "doctor physically approaches before visible grab preparation",
+      "needle actually enters and begins sampling",
+      "one actual needle contact costs five HP but is not yet a valid sample",
+      "two-second sampling creates one valid sample",
+      "successful sample releases grip and ends this encounter",
+      "prescription uses its own later actual transfer",
+      "passing the same doctor cannot repeat needle damage or sampling",
+      "four-second maximum ends unreachable examination without locking the world",
+      "no needle means no damage; independent prescription can still be handed over",
+      "real CRT knee reaches actual doctor contact and interrupts unfinished sample",
+      "interruption retains needle damage and charges one ordinary neural fee",
+      "actual doctor release permits independent prescription transfer",
+      "medicine bodily stop consumes an existing control window without effective control milliseconds",
+      "porter actually walks to exit before the bag is removed",
+      "bag removal owns one receipt but unread office stub remains unknown",
+      "real paperwork/frame/fingers/exit transport completes / witnessed true",
+      "only complete actual witness loses ten SP and learns forced transport / true",
+      "actual patient's photo and dropped shoe keep distinct owners / true",
+      "real paperwork/frame/fingers/exit transport completes / witnessed false",
+      "actual patient's photo and dropped shoe keep distinct owners / false",
+      "absent guard causes actual navigation and deposition at office desk two",
+      "guard actually approaches, reaches and closes one grip",
+      "real guard grip commits exactly five HP and ten SP",
+      "actual JSON retains established guard grip without new damage",
+      "later drag/reload cannot repay guard damage or open another disposition"
+    ]
+  }
+]

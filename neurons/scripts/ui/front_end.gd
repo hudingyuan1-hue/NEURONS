@@ -2,6 +2,7 @@ extends Control
 const Campaign=preload("res://scripts/campaign.gd")
 const Store=preload("res://scripts/core/save_store.gd")
 const Feedback=preload("res://scripts/ui/feedback_audio.gd")
+const Opening=preload("res://scripts/ui/opening_flow.gd")
 var store=Store.new()
 var active:Control
 var content:VBoxContainer
@@ -15,6 +16,7 @@ var reduced_box:CheckBox
 var pending_invader_id:int=0
 var title_audio
 var exiting:bool=false
+var startup_opening
 
 func _ready() -> void:
  process_mode=Node.PROCESS_MODE_ALWAYS
@@ -36,8 +38,13 @@ func _ready() -> void:
   call_deferred("open_legacy_check")
   return
  create_title()
+ if not is_check_run():
+  startup_opening=Opening.new();startup_opening.reduced_effects=bool(preferences.reduced)
+  add_child(startup_opening)
+  startup_opening.completed.connect(func(_sequence,_skipped):startup_opening.queue_free();startup_opening=null)
+  startup_opening.start("startup")
  var checks:Dictionary={
-  "--campaign-check":"campaign_check", "--b1-check":"b1_check",
+  "--campaign-check":"campaign_check", "--b1-check":"b1_check", "--b1-acceptance-check":"b1_acceptance_check", "--hospital-check":"hospital_check", "--hidden-campaign-check":"hidden_campaign_check", "--opening-campaign-check":"opening_campaign_check",
   "--animals-check":"animals_check", "--family-check":"family_check",
   "--story-record":"story_record", "--search-actions-check":"search_actions_check",
   "--tutorial-check":"tutorial_check", "--awareness-check":"awareness_check",
@@ -49,6 +56,11 @@ func _ready() -> void:
    driver.set_script(load("res://tests/%s.gd"%checks[argument]))
    add_child(driver)
    break
+
+func is_check_run() -> bool:
+ for argument in OS.get_cmdline_user_args():
+  if argument.ends_with("-check") or argument=="--story-record":return true
+ return false
 
 func open_legacy_check() -> void:
  get_tree().change_scene_to_file("res://scenes/bedroom_sample.tscn")
@@ -82,7 +94,7 @@ func create_title() -> void:
  content.add_child(title)
  message=Label.new()
  message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
- message.text="自主行动与神经干预\n当前可玩批次：建档、持久搜寻与第一/二关探索；完整开场、人物分支与后续关卡推进中。"
+ message.text="自主行动与神经干预\n当前开发批次：开场、首关、医院人物与隐藏Street；画面使用标注占位，后续关卡继续制作。"
  content.add_child(message)
  add_button("CONTINUE / 继续",continue_game,not store.load_snapshot().ok)
  add_button("NEW GAME / 建立档案",show_profile)
@@ -136,7 +148,7 @@ func new_game() -> void:
   overwrite_armed=true
   message.text="已有档案；再次点击“建立并开始”确认覆盖（保留上一份备份）。"
   return
- var profile:Dictionary={"name":name_field.text.strip_edges(),"invader_id":pending_invader_id,"tutorial_completed":false}
+ var profile:Dictionary={"name":name_field.text.strip_edges(),"invader_id":pending_invader_id,"tutorial_completed":false,"opening_completed":is_check_run() and not "--opening-campaign-check" in OS.get_cmdline_user_args()}
  launch(profile,{})
  active.save_requested=true
 
@@ -154,6 +166,7 @@ func launch(profile:Dictionary,snapshot:Dictionary) -> void:
  active.name="Campaign"
  active.profile=profile
  active.loaded=snapshot
+ active.reduced_effects=bool(preferences.reduced)
  active.auto_status_enabled=bool(preferences.auto_status)
  active.store.root=store.root
  active.return_to_title.connect(close_campaign)

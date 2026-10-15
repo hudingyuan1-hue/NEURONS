@@ -1,0 +1,10 @@
+[
+  {
+    "case": "hospital",
+    "returncode": 0,
+    "seconds": 5.59,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  }
+]

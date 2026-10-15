@@ -1,0 +1,34 @@
+[
+  {
+    "case": "feedback",
+    "returncode": 0,
+    "seconds": 3.61,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "home-adverse",
+    "returncode": 0,
+    "seconds": 3.09,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "family-sequence",
+    "returncode": 0,
+    "seconds": 4.53,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "rest-input",
+    "returncode": 0,
+    "seconds": 2.88,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  }
+]

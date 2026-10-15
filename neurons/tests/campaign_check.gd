@@ -64,6 +64,7 @@ func _ready() -> void:
  if app.tutorial_ui!=null:app.tutorial_ui.finish() # Exercises skip; full practice has its own suite.
  app.family.enabled=false # Separate family branch suite owns these fixtures.
  app.home.enabled=false # Isolated exploration/save/replacement regression; NPCs have their own suite.
+ app.hospital.enabled=false # Hospital events now have an independent suite; retain this exploration/replacement scope.
  check(app!=null and app.profile.name=="测试建档","profile name and stable invader ID created through real UI handlers")
  check(app.rules.neurons==5 and app.rules.plexus==3,"new profile receives initial resources once")
  check(is_equal_approx(float(app.audio.levels.master),0.37),"saved master volume setting reaches actual audio channel mixer")

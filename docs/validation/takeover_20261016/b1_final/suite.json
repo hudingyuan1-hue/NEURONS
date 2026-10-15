@@ -1,0 +1,99 @@
+[
+  {
+    "case": "b1-acceptance",
+    "returncode": 0,
+    "seconds": 2.1,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "tutorial-input",
+    "returncode": 1,
+    "seconds": 16.42,
+    "stderr": "",
+    "checks": null,
+    "failed": [
+      "introduction reaches body prompt without advancing formal world",
+      "viewport left-body click opens CRT",
+      "original first CRT sentence remains until actual acknowledgement",
+      "pause remains clickable above CRT and freezes hover lesson",
+      "resume allows real bright-node hover",
+      "real locked-node hover observes two-second wait",
+      "locked-node dialogue is never replaced by a timed COIN message",
+      "unread original instructions cannot be bypassed by a paid node press",
+      "real node press, closing and body reaction complete in order",
+      "viewport right-body click opens freezer",
+      "original cluster narration uses actual three-cluster practice balance",
+      "real star click reveals inspection panel before original explanation",
+      "return cancels inspection with no payment or unlock",
+      "confirmation unlocks once after actual inspection",
+      "gut preview starts after inspection closes",
+      "model preview is visible after panel departure",
+      "full two-second preview returns to T pose before exit instruction",
+      "all nineteen player tutorial lines were acknowledged before complete exit",
+      "real CLOSE exits tutorial",
+      "full tutorial returns original two hero lines to formal dialogue in order",
+      "actual completion is saved once",
+      "formal viewport left-body click reaches campaign handler",
+      "formal viewport right-body click opens freezer without debug handler",
+      "formal freezer still unlocks through its real confirmation button",
+      "freezer cold material plays on UI channel during world pause"
+    ]
+  },
+  {
+    "case": "tutorial",
+    "returncode": 1,
+    "seconds": 8.38,
+    "stderr": "",
+    "checks": null,
+    "failed": [
+      "bedside introduction uses UI time while formal world stays frozen",
+      "actual left-body handler opens same CRT component",
+      "actual bright-node hover prints description before locked-node lesson",
+      "two-second locked hover advances guidance without payment",
+      "practice pause during close defers actual body reaction",
+      "completed skin reaction produces no adaptation or cognition progress",
+      "right-body lesson cannot be bypassed with left click",
+      "actual right-body handler opens freezer",
+      "star-node inspection precedes confirmation",
+      "practice star unlock pays one practice cluster",
+      "two-second UI-only preview completes before exit instruction",
+      "closing after full lesson returns to formal game",
+      "tutorial order includes stage 3",
+      "tutorial order includes stage 4",
+      "tutorial order includes stage 5",
+      "tutorial order includes stage 6",
+      "tutorial order includes stage 7",
+      "tutorial order includes stage 8",
+      "tutorial order includes stage 9",
+      "tutorial order includes stage 10",
+      "tutorial order includes stage 11",
+      "actual formal save records completion without reissuing initial resources",
+      "free guide remains accessible without hidden identity or loss threshold"
+    ]
+  },
+  {
+    "case": "b1",
+    "returncode": 1,
+    "seconds": 5.06,
+    "stderr": "",
+    "checks": null,
+    "failed": [
+      "cast closes terminal with isolated transition: GUT",
+      "GUT actually interrupts cabinet search",
+      "observed body reactions enter free character bookmark",
+      "cast closes terminal with isolated transition: CONTROL",
+      "actual formal campaign control window starts after closing",
+      "manual return starts twenty-second cooldown"
+    ]
+  },
+  {
+    "case": "campaign",
+    "returncode": 0,
+    "seconds": 2.78,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  }
+]

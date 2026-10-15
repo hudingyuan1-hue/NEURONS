@@ -1,0 +1,10 @@
+[
+  {
+    "case": "home-adverse",
+    "returncode": 0,
+    "seconds": 3.07,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  }
+]

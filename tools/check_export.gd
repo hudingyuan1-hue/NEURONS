@@ -46,7 +46,7 @@ func run_check() -> void:
  check(OS.has_feature("windows"),"package validation runs on target Windows platform")
  check(not FileAccess.file_exists("res://tests/test_rules.gd"),"test scripts are excluded from shipped pack")
  check(not DirAccess.dir_exists_absolute("res://DOCX"),"source documents are not shipped")
- for name in ["skills","home_rules","home_dialogue","tutorial_dialogue","search_actions","presentation","audio_bindings"]:
+ for name in ["skills","home_rules","home_dialogue","tutorial_dialogue","search_actions","presentation","audio_bindings","hospital","hidden_street","opening"]:
   check(JSON.parse_string(FileAccess.get_file_as_string("res://data/%s.json"%name)) is Dictionary,"dynamic JSON is in PCK: "+name)
  var bindings=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_bindings.json"))
  for entry in bindings.assets:
@@ -55,11 +55,16 @@ func run_check() -> void:
  check(catalog.errors.is_empty() and not catalog.current.is_empty(),"runtime actor/cabinet catalog resolves imported textures inside pack")
  catalog=null
  frontend=load("res://scenes/front_end.tscn").instantiate();root.add_child(frontend)
+ if frontend.startup_opening!=null:frontend.startup_opening.skip()
  await frames(4);await capture("01_windows_title")
  await press(button(frontend,"建立档案"));frontend.name_field.text="EXE资源验证"
  await press(button(frontend,"建立并开始"))
  if frontend.active==null:await press(button(frontend,"建立并开始"))
  app=frontend.active
+ if app.opening_ui!=null:
+  check(app.opening_ui.current_text().contains("EXE资源验证"),"exported introduction resolves actual profile name")
+  await capture("01b_windows_introduction")
+  await press(button(app.opening_ui,"跳过"))
  check(app!=null and app.tutorial_ui!=null,"exported title/profile buttons reach actual tutorial")
  await capture("02_windows_tutorial")
  await press(button(app.tutorial_ui,"跳过练习"))

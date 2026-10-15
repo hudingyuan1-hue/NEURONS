@@ -1,0 +1,24 @@
+[
+  {
+    "case": "rules",
+    "returncode": 0,
+    "seconds": 0.38,
+    "stderr": "",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNEURONS interaction rules: 71 checks, 0 failures\n"
+  },
+  {
+    "case": "layout",
+    "returncode": 0,
+    "seconds": 0.35,
+    "stderr": "",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNEURONS room layout: 158 checks, 0 failures\n"
+  },
+  {
+    "case": "neural",
+    "returncode": 0,
+    "seconds": 0.44,
+    "stderr": "",
+    "checks": 384,
+    "failed": 0
+  }
+]

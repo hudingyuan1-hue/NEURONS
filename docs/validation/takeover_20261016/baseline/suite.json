@@ -1,0 +1,125 @@
+[
+  {
+    "case": "rules",
+    "returncode": 0,
+    "seconds": 1.25,
+    "stderr": "",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNEURONS interaction rules: 71 checks, 0 failures\n"
+  },
+  {
+    "case": "layout",
+    "returncode": 0,
+    "seconds": 0.33,
+    "stderr": "",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNEURONS room layout: 158 checks, 0 failures\n"
+  },
+  {
+    "case": "neural",
+    "returncode": 0,
+    "seconds": 0.52,
+    "stderr": "",
+    "checks": 384,
+    "failed": 0
+  },
+  {
+    "case": "campaign",
+    "returncode": 0,
+    "seconds": 4.31,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "animals",
+    "returncode": 0,
+    "seconds": 2.6,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "family",
+    "returncode": 0,
+    "seconds": 2.8,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "home-adverse",
+    "returncode": 1,
+    "seconds": 3.52,
+    "stderr": "",
+    "checks": null,
+    "failed": [
+      "resistance permits actual threshold crossing and one forced-follow prompt"
+    ]
+  },
+  {
+    "case": "feedback",
+    "returncode": 1,
+    "seconds": 4.48,
+    "stderr": "",
+    "checks": null,
+    "failed": [
+      "X keycap visibly presses while the world is paused",
+      "X demo stops after its bounded three cycles"
+    ]
+  },
+  {
+    "case": "awareness",
+    "returncode": 0,
+    "seconds": 1.84,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "search-actions",
+    "returncode": 0,
+    "seconds": 2.4,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "status",
+    "returncode": 0,
+    "seconds": 17.75,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "family-sequence",
+    "returncode": 1,
+    "seconds": 5.78,
+    "stderr": "",
+    "checks": null,
+    "failed": [
+      "interrupted eviction collapse reaches one real revival",
+      "collapse cannot complete old eviction transfer after revival"
+    ]
+  },
+  {
+    "case": "rest-input",
+    "returncode": 1,
+    "seconds": 3.37,
+    "stderr": "",
+    "checks": null,
+    "failed": [
+      "left-click lying body opens CRT at mapped body position",
+      "real GUT click interrupts unfinished rest and current persuasion",
+      "interrupt pays configured skill once and cannot award rest/unlock early",
+      "already-delivered porridge survives interruption; presentation offset never teleports logical position"
+    ]
+  },
+  {
+    "case": "persistence-ui",
+    "returncode": 0,
+    "seconds": 2.58,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  }
+]

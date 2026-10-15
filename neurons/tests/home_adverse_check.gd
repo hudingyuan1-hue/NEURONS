@@ -98,21 +98,21 @@ func _ready() -> void:
   app.paused_manual=false;app.open_neuron_menu();get_window().grab_focus()
   var before:int=app.rules.neurons
   await click(app.menu.nodes.TEMP)
-  var queued:bool=false
-  for i in range(60):
-   if not app.rules.pending_neural.is_empty():queued=true;break
-   await frames(1)
+  var queued:bool=await await_live(func():return not app.rules.pending_neural.is_empty())
   check(queued and app.closing_left>0 and app.rules.sp==60,"actual CRT submission freezes threshold while closing / success "+str(success))
   var paid:int=app.rules.neurons
   check(snapshot_roundtrip() and app.rules.neurons==paid,"queued paid intervention reloads without second charge")
-  for i in range(100):
-   if app.rules.pending_neural.is_empty() and app.closing_left<=0:break
-   await frames(1)
+  var settled:bool=await await_live(func():return app.rules.pending_neural.is_empty() and app.closing_left<=0)
+  # At high FPS the first resumed world delta can be <0.01s. A resisted
+  # submission must allow the remaining pressure to run, not force the entire
+  # threshold into the first render frame or pause before it can be reached.
+  var pressure_crossed:bool=true
+  if not success:pressure_crossed=await await_live(func():return app.rules.sp<60 or app.family.data.father.phase!="think",1.0)
   app.paused_manual=true
   if success:
-   check(app.family.data.father.phase=="leave" and app.rules.sp==60 and not app.family.data.system_prompts.has("FATHER_LOW_SP"),"successful effect expels father before same-node pressure crosses threshold")
+   check(settled and app.family.data.father.phase=="leave" and app.rules.sp==60 and not app.family.data.system_prompts.has("FATHER_LOW_SP"),"successful effect expels father before same-node pressure crosses threshold")
   else:
-   check(app.family.data.father.phase=="approach" and app.rules.sp==59 and app.family.data.system_prompts.has("FATHER_LOW_SP"),"resistance permits actual threshold crossing and one forced-follow prompt")
+   check(settled and pressure_crossed and app.family.data.father.phase=="approach" and app.rules.sp==59 and app.family.data.system_prompts.has("FATHER_LOW_SP"),"resistance permits actual threshold crossing and one forced-follow prompt")
   check(paid==before-int(app.rules.spec("TEMP").cost) and app.rules.neurons==paid,"threshold result consumes one configured fee / success "+str(success))
   await capture("03_threshold_"+str(success))
 

@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "source": "S1:P24–26; S3:P312–337/T6; S4:P214/P239/T18R7/T23/T24R9; R1:P24/P28/T4R2/T6R9–10",
+  "rules": {
+    "hunter_hp": 60,
+    "attack_hp_damage": 15,
+    "attack_sp_damage": 0,
+    "windup": 1.0,
+    "attack": 0.5,
+    "recover": 0.8,
+    "cooldown_after_recover": 1.5,
+    "lunge_max_metres": 1.8,
+    "kick_hp_damage": 15,
+    "kick_push_max_metres": 0.8,
+    "kick_stagger": 0.8
+  },
+  "test_parameters": {
+    "note": "以下是固定纯2D样块的可调整几何/表现参数，不是原稿新增定值。所有距离为逻辑米，显示像素另由layout映射。",
+    "hunter_speed": 1.0,
+    "patrol_speed": 0.6,
+    "hunter_vision_metres": 4.2,
+    "hero_vision_metres": 4.5,
+    "attack_start_metres": 1.25,
+    "direction_lock_fraction": 0.8,
+    "attack_half_width": 0.23,
+    "attack_arm_reach": 0.42,
+    "attack_trajectory_height": 0.9,
+    "standing_body_height": 1.5,
+    "crouched_body_height": 0.62,
+    "exit_radius": 0.13,
+    "route_recheck": 0.15,
+    "investigate_seconds": 1.2,
+    "dodge_distance": 0.6,
+    "ending_light_seconds": 2.0,
+    "ending_wake_seconds": 2.0
+  },
+  "layout": {
+    "entry": [0.6, 3.35],
+    "exit": [5.12, 0.42],
+    "hunter_start": [3.7, 2.9],
+    "patrol": [[1.5, 0.8], [4.5, 0.95], [4.5, 2.8], [0.9, 2.9]]
+  },
+  "feedback": {
+    "saw": [
+      {"speaker": "角色 · 警惕", "text": "那家伙过来了。", "source": "S3:P329"},
+      {"speaker": "玩家 · 认真", "text": "出口在后面。", "source": "S3:P329"}
+    ],
+    "evaded": [
+      {"speaker": "角色 · 紧张", "text": "差一点……", "source": "S3:P330"},
+      {"speaker": "玩家 · 认真", "text": "继续走。", "source": "S3:P330"}
+    ],
+    "hit": [
+      {"speaker": "角色 · 疼痛", "text": "嘶……还能走。", "source": "S3:P331"},
+      {"speaker": "玩家 · 认真", "text": "别停在这里。", "source": "S3:P331"}
+    ]
+  },
+  "ending": {
+    "id": "E1",
+    "title": "结局一",
+    "achievement": "又短又快真厉害",
+    "global_keys": ["hidden_clear", "host_wins"],
+    "note": "原出口无新增对白；先保留广场内镜头与结局字样，再按R1转现实病床灯、宿主睁眼、脑内出口消退。现实身体仍为标注占位，不重新定义面貌。"
+  }
+}

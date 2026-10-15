@@ -13,6 +13,14 @@ func body_click(which:int) -> void:
  var point:Vector2=(app.world_viewport.get_canvas_transform()*app.view.hero_body_rect().get_center())*2.0
  await click_at(point,which)
 
+func await_live(predicate:Callable,timeout_seconds:float=3.0) -> bool:
+ var elapsed:float=0.0
+ while elapsed<timeout_seconds:
+  if predicate.call():return true
+  await get_tree().process_frame
+  elapsed+=get_process_delta_time()
+ return predicate.call()
+
 func find_button(root:Node,text:String) -> Button:
  for child in root.get_children():
   if child is Button and child.text.contains(text):return child
@@ -49,17 +57,13 @@ func _ready() -> void:
  await capture("02_freezer_during_saved_rest")
  var close:Button=find_button(app.menu,"CLOSE")
  await click_at(close.get_global_rect().get_center())
- for i in range(15):
-  if app.closing_left<=0:break
-  await frames(1)
+ var closed:bool=await await_live(func():return app.closing_left<=0 and not app.menu.visible)
  await body_click(MOUSE_BUTTON_LEFT)
- check(app.menu.visible and app.menu.panel_mode=="cast" and app.action_phase=="resting","left-click lying body opens CRT at mapped body position")
+ check(closed and app.menu.visible and app.menu.panel_mode=="cast" and app.action_phase=="resting","left-click lying body opens CRT at mapped body position")
  var neurons:int=app.rules.neurons
  await click_at(app.menu.nodes.GUT.get_global_rect().get_center())
- for i in range(100):
-  if app.rules.reaction_skill=="GUT" and app.rules.reaction_left>0:break
-  await frames(1)
- check(app.rules.reaction_skill=="GUT" and app.action_phase=="autonomy" and app.family.data.mother.phase=="leave","real GUT click interrupts unfinished rest and current persuasion")
+ var reacted:bool=await await_live(func():return app.rules.reaction_skill=="GUT" and app.rules.reaction_left>0)
+ check(reacted and app.action_phase=="autonomy" and app.family.data.mother.phase=="leave","real GUT click interrupts unfinished rest and current persuasion")
  check(app.rules.neurons==neurons-int(app.rules.spec("GUT").cost) and app.session.data.level==1 and app.session.data.cycle==1,"interrupt pays configured skill once and cannot award rest/unlock early")
  check(app.rules.owners.get(app.family.food_id("porridge"),"")=="hero" and app.hero_pos==position,"already-delivered porridge survives interruption; presentation offset never teleports logical position")
  await capture("03_actual_rest_interruption")

@@ -1,0 +1,36 @@
+[
+  {
+    "case": "feedback",
+    "returncode": 0,
+    "seconds": 6.28,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "home-adverse",
+    "returncode": 1,
+    "seconds": 2.94,
+    "stderr": "",
+    "checks": null,
+    "failed": [
+      "resistance permits actual threshold crossing and one forced-follow prompt"
+    ]
+  },
+  {
+    "case": "family-sequence",
+    "returncode": 0,
+    "seconds": 9.43,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  },
+  {
+    "case": "rest-input",
+    "returncode": 0,
+    "seconds": 2.84,
+    "stderr": "",
+    "checks": null,
+    "failed": []
+  }
+]
