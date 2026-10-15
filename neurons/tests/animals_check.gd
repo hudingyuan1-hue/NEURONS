@@ -46,6 +46,8 @@ func capture(name:String) -> void:
  get_viewport().get_texture().get_image().save_png(ProjectSettings.globalize_path(folder).path_join(name+".png"))
 
 func _ready() -> void:
+ for argument in OS.get_cmdline_user_args():
+  if argument.begins_with("--validation-root="):folder=argument.trim_prefix("--validation-root=")
  name="CampaignCheck";frontend=get_parent()
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
  await frames();frontend.show_profile();await frames()
@@ -95,7 +97,18 @@ func _ready() -> void:
  await capture("04_cat_damage")
  var saved:Dictionary=app.snapshot_data()
  var home_state:String=JSON.stringify(app.home.data,"",true)
- check(app.restore_snapshot(saved) and JSON.stringify(app.home.data,"",true)==home_state,"load retains cat phase, position and counted rounds without reroll")
+ var restored:bool=app.restore_snapshot(saved)
+ var restored_home:String=JSON.stringify(app.home.data,"",true)
+ if restored_home!=home_state:
+  print("ANIMAL_SAVE_BEFORE "+home_state)
+  print("ANIMAL_SAVE_AFTER "+restored_home)
+ check(restored and restored_home==home_state,"load retains cat phase, position and counted rounds without reroll")
+ check(app.store.save_snapshot(saved).ok,"departing cat snapshot writes through actual save store")
+ var disk:Dictionary=app.store.load_snapshot()
+ check(disk.ok and app.restore_snapshot(disk.data) and app.home.data==disk.data.home_state,"JSON save reload preserves cat route as well as its action phase")
+ var hp_before:int=app.rules.hp
+ check(until(func():return not app.home.present("cat")),"restored departing cat actually finishes saved path to window")
+ check(app.rules.hp==hp_before,"resuming departure does not replay settled scratch damage")
  fixture(true,true)
  advance(2)
  check(app.home.data.fighting and app.home.data.dog.remaining==3 and app.home.data.cat.rounds==0,"combination priority pauses assistance and cat occupancy counters")
@@ -107,4 +120,4 @@ func _ready() -> void:
  var f:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
  f.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":true,"scope":"formal entry with deterministic animal/key fixtures; no parent branches or human gameplay acceptance"},"  "))
  print("ANIMALS_CHECK %d passed %d failed"%[passes.size(),failures.size()])
- get_tree().quit(0 if failures.is_empty() else 1)
+ frontend.request_exit(0 if failures.is_empty() else 1)

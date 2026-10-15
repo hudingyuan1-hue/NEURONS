@@ -3,6 +3,7 @@ extends "res://scripts/bedroom_sample.gd"
 ## NPC branches and subsequent levels remain explicitly in the coverage list.
 signal return_to_title
 signal visual_preferences_changed(value:bool)
+signal status_preferences_changed(value:bool)
 const Session=preload("res://scripts/core/campaign_session.gd")
 const Store=preload("res://scripts/core/save_store.gd")
 const CampaignView=preload("res://scripts/world/campaign_view.gd")
@@ -11,6 +12,8 @@ const CampaignMenu=preload("res://scripts/ui/campaign_menu.gd")
 const HomeAnimals=preload("res://scripts/core/home_animals.gd")
 const FamilyEvents=preload("res://scripts/core/family_events.gd")
 const SearchActions=preload("res://scripts/presentation/search_actions.gd")
+const FatherPrompt=preload("res://scripts/ui/father_prompt.gd")
+const VitalityPanel=preload("res://scripts/ui/vitality_panel.gd")
 const Tutorial=preload("res://scripts/ui/tutorial_overlay.gd")
 var session=Session.new()
 var store=Store.new()
@@ -24,6 +27,7 @@ var destination:String=""
 var status_note:String=""
 var runtime_generation:int=1
 var save_requested:bool=false
+var title_requested:bool=false
 var presentation_id:String="a"
 var campaign_ready:bool=false
 var request_load:bool=false
@@ -41,6 +45,10 @@ var search_actions
 var route_action_origin:String="autonomous"
 var search_action_origin:String="autonomous"
 var tutorial_ui
+var vitality_panel
+var father_prompt
+var auto_status_box:CheckBox
+var auto_status_enabled:bool=true
 
 func make_menu() -> Control:
  return CampaignMenu.new()
@@ -71,6 +79,8 @@ func create_ui() -> void:
  scenario_label=label_at("",Vector2(365,16),20)
  label_at("程序占位 · 自主探索与人物分支 · 后续关卡待接",Vector2(365,53),13)
  button_at("暂停",Vector2(1130,42),105,func():paused_manual=not paused_manual)
+ button_at("设置",Vector2(900,42),95,toggle_audio_controls)
+ button_at("图书",Vector2(795,42),95,func():open_system_page("book"))
  button_at("操作指引",Vector2(1005,42),115,func():open_tutorial(true))
  var footer:=ColorRect.new()
  footer.position=Vector2(0,589)
@@ -80,8 +90,8 @@ func create_ui() -> void:
  add_child(footer)
  button_at("保存",Vector2(24,603),110,func():save_requested=true)
  button_at("读取",Vector2(145,603),110,func():request_load=true)
- button_at("返回标题",Vector2(266,603),130,return_to_title.emit)
- button_at("音量",Vector2(410,603),100,toggle_audio_controls)
+ button_at("保存并回标题",Vector2(266,603),130,request_title_return)
+ button_at("设置",Vector2(410,603),100,toggle_audio_controls)
  button_at("复位视野",Vector2(522,603),130,reset_zoom)
  button_at("降低反馈",Vector2(665,603),130,toggle_effects)
  button_at("图书",Vector2(805,603),100,func():open_system_page("book"))
@@ -97,6 +107,15 @@ func create_ui() -> void:
   plate.color=Color(0.12,0.17,0.18,0.94)
   plate.mouse_filter=Control.MOUSE_FILTER_IGNORE
   add_child(plate)
+ vitality_panel=VitalityPanel.new()
+ vitality_panel.auto_enabled=auto_status_enabled
+ add_child(vitality_panel)
+ father_prompt=FatherPrompt.new();father_prompt.app=self
+ father_prompt.node_requested.connect(func(id:String):
+  open_neuron_menu()
+  if menu.visible:menu.describe(id)
+ )
+ add_child(father_prompt)
  status_label=label_at("",Vector2(26,112),16)
  debug_label=label_at("",Vector2(785,112),13)
  startle_button=Button.new()
@@ -119,14 +138,18 @@ func create_ui() -> void:
  dialogue_panel.hide()
 
 func _ready() -> void:
+ set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+ mouse_filter=Control.MOUSE_FILTER_IGNORE
  super._ready()
  rules=NeuralRules.new()
+ bind_status_rules()
  home=HomeAnimals.new(self)
  family=FamilyEvents.new(self)
  search_actions=SearchActions.new(self)
  menu.rules=rules
  menu.context_provider=skill_context
  menu.skill_requested.connect(cast_skill)
+ menu.feedback_requested.connect(func(id:String):audio.cue_ui(id))
  menu.food_requested.connect(func(kind:String):
   var accepted:bool=family.request_gift() if kind=="gift" else family.request_food(kind)
   if accepted:close_neuron_menu()
@@ -145,7 +168,7 @@ func _ready() -> void:
   enter_room("bedroom")
   family.start_attempt()
   home.start_attempt()
-  add_dialogue("角色 · 认真","总之继续行动吧!")
+  home.start_exploration_line()
  else:
   restore_snapshot(loaded)
  if not bool(profile.get("tutorial_completed",true)):open_tutorial(false)
@@ -166,6 +189,7 @@ func sync_audio_pause() -> void:
 func _process(delta:float) -> void:
  if not campaign_ready:return
  process_requests()
+ if not campaign_ready:return
  if family.collapse_active() or rules.hp<=0:
   closing_left=maxf(0.0,closing_left-delta)
   audio.set_world_paused(true,paused_manual or menu.visible or closing_left>0 or audio_panel.visible)
@@ -185,11 +209,24 @@ func _process(delta:float) -> void:
   audio.cue("MUS_ROOM","music:%d:%d"%[session.data.level,rules.actual_attempt])
   if room_id=="bedroom":audio.cue("AMB_FAN","fan:%d"%rules.actual_attempt)
 
+func request_title_return() -> void:
+ title_requested=true
+ save_requested=true
+ request_load=false
+
 func process_requests() -> void:
  if save_requested:
   save_requested=false
   var result:Dictionary=store.save_snapshot(snapshot_data())
   status_note="已保存（动作、钥匙、随机状态与暂停均保留）" if result.ok else str(result.error)
+  if title_requested:
+   title_requested=false
+   if result.ok:
+    campaign_ready=false
+    return_to_title.emit()
+    return
+   paused_manual=true
+   status_note="保存失败，已暂停并留在当前游戏："+str(result.error)
  if request_load:
   request_load=false
   var result:Dictionary=store.load_snapshot()
@@ -197,6 +234,30 @@ func process_requests() -> void:
    restore_snapshot(result.data)
    status_note=("旧档已载入，下次保存将保留schema1原件；" if int(result.data.schema)==1 else "已读档；旧运行回调失效")+("；恢复备份" if result.get("recovered_backup",false) else "")
   else:status_note=str(result.error)
+
+func bind_status_rules() -> void:
+ if not rules.vitality_lost.is_connected(on_vitality_lost):rules.vitality_lost.connect(on_vitality_lost)
+
+func on_vitality_lost() -> void:
+ if not first_damage:first_damage=true;first_damage_pending=true
+ vitality_panel.damaged()
+
+func create_audio_controls() -> void:
+ super.create_audio_controls()
+ var column:VBoxContainer=audio_panel.get_child(0)
+ column.get_child(0).text="设置 · 界面与声音"
+ auto_status_box=CheckBox.new()
+ auto_status_box.text="受伤后自动显示角色状态"
+ auto_status_box.button_pressed=auto_status_enabled
+ auto_status_box.add_theme_font_size_override("font_size",16)
+ auto_status_box.toggled.connect(set_auto_status)
+ column.add_child(auto_status_box);column.move_child(auto_status_box,1)
+
+func set_auto_status(value:bool) -> void:
+ auto_status_enabled=value
+ vitality_panel.set_automatic(value)
+ if auto_status_box!=null:auto_status_box.set_pressed_no_signal(value)
+ status_preferences_changed.emit(value)
 
 func room_title(id:String) -> String:
  return {"bedroom":"卧室","ward":"小病房","lobby":"候诊区","clinic":"诊室","pharmacy":"药房","office":"医护办公室","stairs":"楼梯"}.get(id,id)
@@ -252,6 +313,7 @@ func key_position() -> Vector2:
  return layout.furniture[index].at if index<layout.furniture.size() else hero_pos
 
 func advance_world(delta:float) -> void:
+ bind_status_rules()
  if home!=null:home.tick(delta)
  if family!=null:family.tick(delta)
  if not rules.search_active and rules.public_action.get("kind","")=="search" and rules.settled.has(rules._search_id):rules.finish_public_action(search_action_origin)
@@ -260,10 +322,9 @@ func advance_world(delta:float) -> void:
  var result:Dictionary=rules.tick(delta)
  var completed_index:int=target_index
  search_actions.tick(bool(result.search_completed))
- if not first_damage and (rules.hp<100 or rules.sp<100):
-  first_damage=true;status_visible=true;first_damage_pending=true
  if rules.hp<=0:return
  if result.search_completed:
+  vitality_panel.action_completed("search:"+str(result.event_id))
   rules.finish_public_action(search_action_origin)
   var id:String=result.target_id
   completed.append(id)
@@ -309,9 +370,12 @@ func advance_world(delta:float) -> void:
   return
  if rules.reaction_left>0:hero_state="hit" if rules.reaction_skill=="GUT" else "give" if rules.reaction_skill=="WITHDRAW" else "scratch"
  elif rules.stun_left>0 or rules.hurt_left>0:hero_state="hit"
- elif hero_state in ["scratch","hit"]:hero_state="idle"
+ elif hero_state in ["scratch","hit","eat"]:hero_state="idle"
  if rules.body_busy() or rules.gripped:return
- if family!=null and family.blocks_hero():return
+ if family!=null and family.blocks_hero():
+  var pose:String=family.hero_pose()
+  if not pose.is_empty():hero_state=pose
+  return
  if not rules.awareness_feedback.is_empty() and action_phase=="autonomy" and not rules.search_active:
   var line:String=str(rules.awareness_feedback.pop_front())
   rules.observe("角色","awareness:%d"%rules.awareness_stage,line)
@@ -330,6 +394,7 @@ func advance_world(delta:float) -> void:
   first_damage_pending=false
   add_dialogue("玩家 · 捧腹大笑","这算不算咎由自取呢 哈哈哈")
   return
+ vitality_panel.present_after_feedback()
  if session.data.exploration_boundary:return
  if rules.search_active:
   hero_state="search"
@@ -384,10 +449,15 @@ func advance_world(delta:float) -> void:
   action_left=0.6 if action_phase=="opening" else 1.2
   hero_state="give" if action_phase=="opening" else "idle"
   if action_phase=="opening":audio.cue("SFX_DOOR_OPEN","door:%d:%s:%s"%[rules.actual_attempt,room_id,destination])
-  if action_phase=="resting" and family.present("mother"):family.on_node("mother_return_bed")
+  if action_phase=="resting" and family.present("mother"):
+   family.on_node("mother_return_bed")
   return
  if action_phase in ["opening","resting"]:
   action_left-=delta
+  if action_phase=="resting" and action_left<=0.9 and family.present("mother") and not family.data.mother.get("bed_line_shown",false):
+   family.data.mother.bed_line_shown=true
+   add_dialogue("母亲 · 剪影","乖孩子...")
+   return
   if action_left>0:return
   if action_phase=="resting":finish_rest()
   elif destination=="stairs":
@@ -488,6 +558,7 @@ func restart_attempt(cycle_increment:int,revival:bool) -> void:
  if revival:
   invader_id+=1;profile.invader_id=invader_id;session.data.profile=profile.duplicate(true)
  death_left=0
+ vitality_panel.clear_transient()
  rules.pending_skin.clear();rules.pending_neural.clear();rules.cancel_search()
  rules.reaction_left=0;rules.stun_left=0;rules.hurt_left=0;rules.transitioning=false
  var key:String=str(session.data.level)
@@ -507,7 +578,8 @@ func restart_attempt(cycle_increment:int,revival:bool) -> void:
  enter_room("bedroom" if session.data.level==1 else "ward")
  family.start_attempt()
  if mother_unlock:unlock_hospital()
- elif session.data.level==1:home.start_attempt()
+ elif session.data.level==1:
+  home.start_attempt();home.start_exploration_line()
  status_note="休息实际完成：新尝试；抗性增长提交；冷却不清零"
 
 func apply_cast() -> void:
@@ -600,7 +672,9 @@ func move_hero(delta:float) -> void:
   if footstep_left<=0:
    footstep_serial+=1;footstep_left=0.45
    audio.cue("SFX_FOOTSTEP","foot:%d"%footstep_serial)
- if had_route and hero_route.is_empty() and rules.public_action.get("kind","")=="navigation":rules.finish_public_action(route_action_origin)
+ if had_route and hero_route.is_empty() and rules.public_action.get("kind","")=="navigation":
+  vitality_panel.action_completed("navigation:%d"%rules.public_action.serial)
+  rules.finish_public_action(route_action_origin)
 
 func cancel_control_route() -> void:
  if controlled_route:
@@ -618,19 +692,23 @@ func world_mouse_position(screen:Vector2) -> Vector2:
  return world_viewport.get_canvas_transform().affine_inverse()*(screen/2.0)
 
 func _unhandled_input(event:InputEvent) -> void:
- if input_lock_frames>0:return
+ if input_lock_frames>0 or tutorial_ui!=null:return
+ if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_X:
+  if first_damage and not menu.visible and not audio_panel.visible:vitality_panel.toggle_manual()
+  get_viewport().set_input_as_handled();return
  if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_ESCAPE and not menu.visible and dialogue_queue.is_empty():
   paused_manual=not paused_manual;return
  if event is InputEventMouseButton and event.pressed and not world_paused():
   var pixel:Vector2=world_mouse_position(event.position)
   var actor_screen:Vector2=layout.project(hero_pos)
-  if Rect2(actor_screen+Vector2(-16,-62),Vector2(32,65)).has_point(pixel):
+  if view.hero_body_rect().has_point(pixel):
    if event.button_index==MOUSE_BUTTON_RIGHT:open_system_page("tree");return
+   if event.button_index==MOUSE_BUTTON_LEFT:open_neuron_menu();return
   if rules.control_left>0 and not rules.body_busy() and not rules.gripped:
    var point:Vector2=layout.unproject(pixel)
    if event.button_index==MOUSE_BUTTON_RIGHT:
     hero_facing=(point-hero_pos).normalized();return
-   if event.button_index==MOUSE_BUTTON_LEFT and not Rect2(actor_screen+Vector2(-16,-62),Vector2(32,65)).has_point(pixel):
+   if event.button_index==MOUSE_BUTTON_LEFT and not view.hero_body_rect().has_point(pixel):
     for door in visible_doors:
      if pixel.distance_to(layout.project(door_point(door)))<18:
       if door in ["stairs","lobby"] and room_id=="bedroom" or door=="stairs":
@@ -667,7 +745,12 @@ func update_ui() -> void:
  if rules.control_left>0:control_end_button.text="交回 %.1fs"%rules.control_left
  scenario_label.text="第%d关 · %s · 实际尝试%d"%[session.data.level,room_title(room_id),rules.actual_attempt]
  status_label.text="N %d   C %d    %s #%d"%[rules.neurons,rules.plexus,profile.name,int(profile.invader_id)]
- if status_visible:status_label.text+="   HP %d  SP %d"%[rules.hp,rules.sp]
+ view.self_modulate=Color.WHITE.lerp(Color("63716b"),float(view.rest_pose().t)*0.6)
+ if not family.data.is_empty() and family.data.blood_door:view.self_modulate=view.self_modulate.lerp(Color("aaa0a2"),0.28)
+ vitality_panel.set_reduced_effects(reduced_effects)
+ vitality_panel.refresh(rules.hp,rules.sp)
+ father_prompt.refresh()
+ status_visible=vitality_panel.visible
  debug_label.text="钥匙%s · 视野%.2f×"%["已携带" if has_key() else "未取得",ZOOM_STEPS[zoom_index]]
  state_label.text="%s / %s    搜寻 %d/%d    左键身体：神经菜单 · 空格：暂停"%[action_phase,hero_state,rules.search_attempts,rules.search_limit]
  event_label.text=status_note
@@ -684,7 +767,7 @@ func snapshot_data() -> Dictionary:
   "paused_manual":paused_manual,"closing_left":closing_left,"dialogue":dialogue_queue.duplicate(true),
   "menu_open":menu.visible,"menu_page":menu.panel_mode,"zoom_index":zoom_index,"presentation_id":presentation_id,
   "deferred_targets":deferred_targets.duplicate(true),"motion":motion.duplicate(true),"controlled_route":controlled_route,
-  "audio_state":audio.snapshot_playback(),"footstep_left":footstep_left,"footstep_serial":footstep_serial,"home_state":home.data.duplicate(true),"family_state":family.data.duplicate(true),"death_left":death_left,"first_damage":first_damage,"status_visible":status_visible,"first_damage_pending":first_damage_pending,
+  "audio_state":audio.snapshot_playback(),"footstep_left":footstep_left,"footstep_serial":footstep_serial,"home_state":home.data.duplicate(true),"family_state":family.data.duplicate(true),"death_left":death_left,"first_damage":first_damage,"status_visible":status_visible,"first_damage_pending":first_damage_pending,"vitality_display":vitality_panel.snapshot(),
   "search_props":search_actions.states.duplicate(true),"prop_receipts":search_actions.receipts.duplicate(true),"observing_index":search_actions.observing_index,"route_action_origin":route_action_origin,"search_action_origin":search_action_origin}
  # Animal actions and their unique search/transfer receipts survive loads.
 
@@ -707,11 +790,13 @@ func restore_snapshot(data:Dictionary) -> bool:
   if key=="facts":rules.facts.assign(restored_rules[key])
   else:rules.set(key,restored_rules[key])
  rules.sync_skin()
- family.data=data.get("family_state",{}).duplicate(true)
+ family.restore_state(data.get("family_state",{}))
  if family.data.is_empty():family.start_attempt()
  death_left=float(data.get("death_left",0))
  first_damage=bool(data.get("first_damage",false))
  status_visible=bool(data.get("status_visible",false))
+ vitality_panel.restore(data.get("vitality_display",{}),status_visible)
+ bind_status_rules()
  first_damage_pending=bool(data.get("first_damage_pending",false))
  menu.rules=rules
  room_id=""

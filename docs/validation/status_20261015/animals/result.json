@@ -1,0 +1,33 @@
+{
+  "failures": [],
+  "passes": [
+    "dog autonomously chooses reachable open point after hero search begins",
+    "dog chooses a different exposed point, never sealed cabinet",
+    "dog actually walks before sniffing",
+    "dog completes real search and holds discovered key",
+    "key held by dog is not prematurely delivered to hero",
+    "dog actually returns and transfers key at contact",
+    "dog and hero share one key ownership record",
+    "dog search has one shared completion receipt",
+    "dog completion replay cannot duplicate reward",
+    "hero really starts attempted search at occupied cat point",
+    "resisted skill neither scares cat nor cancels search",
+    "cat block consumes existing opportunity without reward or completion",
+    "third actual hero action settlement starts cat departure",
+    "walking and dog actions do not count as extra cat rounds",
+    "fresh cat scare fixture reaches real contact",
+    "scare uses pre-interruption search object snapshot",
+    "cat actual contact deals exactly ten HP and SP once",
+    "cat follow-up frames do not repeat damage",
+    "load retains cat phase, position and counted rounds without reroll",
+    "departing cat snapshot writes through actual save store",
+    "JSON save reload preserves cat route as well as its action phase",
+    "restored departing cat actually finishes saved path to window",
+    "resuming departure does not replay settled scratch damage",
+    "combination priority pauses assistance and cat occupancy counters",
+    "combination actors occupy actual clear floor, not exit or furniture",
+    "manual pause freezes natural animal action data"
+  ],
+  "rendered": true,
+  "scope": "formal entry with deterministic animal/key fixtures; no parent branches or human gameplay acceptance"
+}

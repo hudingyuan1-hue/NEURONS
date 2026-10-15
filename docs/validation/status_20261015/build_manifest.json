@@ -1,0 +1,76 @@
+{
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "baseline": "main/b479f12",
+  "git_writes": false,
+  "development_build_only": true,
+  "pck": {
+    "passed": 29,
+    "failed": 0
+  },
+  "exe_startup": {
+    "window_created": true,
+    "close_message_sent": true,
+    "passed": true,
+    "exit_code": 0,
+    "scope": "Actual Windows release EXE, normal main scene and OS WM_CLOSE; no custom script/project override; Dummy audio, no full gameplay or listening claim",
+    "closed_normally": true,
+    "stderr": null
+  },
+  "files": [
+    {
+      "path": "exports/status_20261015/NEURONS.exe",
+      "bytes": 109168640,
+      "sha256": "3d19ee4a764e8bb153bfa7f811f98e0dfb0139c9e0c8bc6b76b93d3ed09185bf"
+    },
+    {
+      "path": "exports/status_20261015/NEURONS.pck",
+      "bytes": 21274420,
+      "sha256": "fba9a2ca25874c1710dddb82612ca02f50def065024771e12363dcd5a60cd2fc"
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "bytes": 38794,
+      "sha256": "0fbcf1bba3183b2ff635738034d19ecdbfdf2c4c12de78d7d53071cd89aadbf5"
+    },
+    {
+      "path": "neurons/scripts/ui/vitality_panel.gd",
+      "bytes": 2850,
+      "sha256": "507a017df7ee6fa5a9fd8d2c8c53b36066f1f23d3abaaa2190dd3f19982b4928"
+    },
+    {
+      "path": "neurons/scripts/ui/front_end.gd",
+      "bytes": 9646,
+      "sha256": "a964afcc3c786e9f92ac0d032600c7c147a1b61227c145d3c08e7d7314c39da1"
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd",
+      "bytes": 20373,
+      "sha256": "b11c0e947b59a896fefac948c9ff2f9804ecd210902a06faafd57b654d096cc0"
+    },
+    {
+      "path": "neurons/scripts/core/home_animals.gd",
+      "bytes": 8839,
+      "sha256": "2f5a9ec44123d736f760267d9b8025a5bee63d071217d0d5b886025985f0ef7b"
+    },
+    {
+      "path": "neurons/scripts/core/family_events.gd",
+      "bytes": 26368,
+      "sha256": "84217e50d12909c01b0687cbe00c37b556034235f8a6683f71f06d2728ad6c6b"
+    },
+    {
+      "path": "neurons/scripts/world/campaign_view.gd",
+      "bytes": 12369,
+      "sha256": "32a62a674bb5c47abf66262b00a5c292378d3c3158cd365ee40d86a0e88619d4"
+    },
+    {
+      "path": "neurons/data/home_dialogue.json",
+      "bytes": 9507,
+      "sha256": "cc17034e3e914344ff9c20968c457791e11e182631c9d09b3d0885988df37206"
+    },
+    {
+      "path": "neurons/data/home_rules.json",
+      "bytes": 1046,
+      "sha256": "f4c49bd06eaa74c5d41eeb8df4fe25cee0f7afb39645a211feaeffea9b1f2751"
+    }
+  ]
+}

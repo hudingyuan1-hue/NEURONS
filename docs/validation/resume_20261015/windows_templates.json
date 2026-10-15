@@ -1,0 +1,32 @@
+{
+  "source": "https://downloads.godotengine.org/?version=4.7.2&flavor=stable&slug=export_templates.tpz&platform=templates",
+  "range_download_bytes": 72299258,
+  "full_archive_bytes": 1281349702,
+  "files": [
+    {
+      "filename": "version.txt",
+      "bytes": 13,
+      "sha256": "38885c88f75abbc797a1db7559719800279a00cfb9fa8b2e2868a7f6f84bad2e"
+    },
+    {
+      "filename": "windows_debug_x86_64.exe",
+      "bytes": 103176704,
+      "sha256": "51498b72b3a237f882ebd7d1787f06a4bc1eaf0572daab93837adcfd3cfdc107"
+    },
+    {
+      "filename": "windows_debug_x86_64_console.exe",
+      "bytes": 188928,
+      "sha256": "5514c7645ee897a01f540d3cf22ede5badf92394521a08bfab66a54d7369e6e6"
+    },
+    {
+      "filename": "windows_release_x86_64.exe",
+      "bytes": 109268480,
+      "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562"
+    },
+    {
+      "filename": "windows_release_x86_64_console.exe",
+      "bytes": 188928,
+      "sha256": "52bdcae9068e8d23b840e5c63b0c1798ffe2cb66144e5c4bc7af11fb8c8600df"
+    }
+  ]
+}

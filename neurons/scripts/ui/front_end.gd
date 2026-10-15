@@ -8,14 +8,19 @@ var content:VBoxContainer
 var message:Label
 var name_field:LineEdit
 var overwrite_armed:bool=false
-var preferences:Dictionary={"master":0.8,"reduced":true,"channels":{"ui":0.7,"world":0.7,"ambience":0.5,"music":0.5,"voice":0.8}}
+var preferences:Dictionary={"master":0.8,"reduced":true,"auto_status":true,"channels":{"ui":0.7,"world":0.7,"ambience":0.5,"music":0.5,"voice":0.8}}
 var volume_slider:HSlider
+var status_box:CheckBox
 var reduced_box:CheckBox
 var pending_invader_id:int=0
 var title_audio
+var exiting:bool=false
 
 func _ready() -> void:
  process_mode=Node.PROCESS_MODE_ALWAYS
+ mouse_filter=Control.MOUSE_FILTER_IGNORE
+ get_tree().auto_accept_quit=false
+ get_window().close_requested.connect(request_exit)
  theme=Theme.new()
  theme.default_font=load("res://assets/fonts/NotoSansCJKsc-Regular.otf")
  theme.default_font_size=21
@@ -25,15 +30,25 @@ func _ready() -> void:
  if config.load(store.root.path_join("preferences.cfg"))==OK:
   preferences.master=clampf(float(config.get_value("audio","master",0.8)),0,1)
   preferences.reduced=bool(config.get_value("visual","reduced",true))
+  preferences.auto_status=bool(config.get_value("interface","auto_status",true))
   for channel in preferences.channels:preferences.channels[channel]=clampf(float(config.get_value("audio",channel,preferences.channels[channel])),0,1)
  if "--visual-check" in OS.get_cmdline_user_args() or "--bedside-check" in OS.get_cmdline_user_args():
   call_deferred("open_legacy_check")
   return
  create_title()
- if "--campaign-check" in OS.get_cmdline_user_args() or "--b1-check" in OS.get_cmdline_user_args() or "--animals-check" in OS.get_cmdline_user_args() or "--family-check" in OS.get_cmdline_user_args() or "--story-record" in OS.get_cmdline_user_args() or "--search-actions-check" in OS.get_cmdline_user_args() or "--tutorial-check" in OS.get_cmdline_user_args() or "--awareness-check" in OS.get_cmdline_user_args():
-  var driver:=Node.new()
-  driver.set_script(load("res://tests/awareness_check.gd" if "--awareness-check" in OS.get_cmdline_user_args() else "res://tests/tutorial_check.gd" if "--tutorial-check" in OS.get_cmdline_user_args() else "res://tests/search_actions_check.gd" if "--search-actions-check" in OS.get_cmdline_user_args() else "res://tests/story_record.gd" if "--story-record" in OS.get_cmdline_user_args() else "res://tests/family_check.gd" if "--family-check" in OS.get_cmdline_user_args() else "res://tests/animals_check.gd" if "--animals-check" in OS.get_cmdline_user_args() else "res://tests/b1_check.gd" if "--b1-check" in OS.get_cmdline_user_args() else "res://tests/campaign_check.gd"))
-  add_child(driver)
+ var checks:Dictionary={
+  "--campaign-check":"campaign_check", "--b1-check":"b1_check",
+  "--animals-check":"animals_check", "--family-check":"family_check",
+  "--story-record":"story_record", "--search-actions-check":"search_actions_check",
+  "--tutorial-check":"tutorial_check", "--awareness-check":"awareness_check",
+  "--natural-home-check":"natural_home_check", "--home-adverse-check":"home_adverse_check", "--feedback-check":"feedback_check", "--rest-input-check":"rest_input_check", "--family-sequence-check":"family_sequence_check", "--status-check":"status_check", "--tutorial-input-check":"tutorial_input_check", "--persistence-ui-check":"persistence_ui_check"}
+ for argument in OS.get_cmdline_user_args():
+  if checks.has(argument):
+   if store.root=="user://profiles":store.root="res://../tmp/check_saves/"+str(checks[argument])
+   var driver:=Node.new()
+   driver.set_script(load("res://tests/%s.gd"%checks[argument]))
+   add_child(driver)
+   break
 
 func open_legacy_check() -> void:
  get_tree().change_scene_to_file("res://scenes/bedroom_sample.tscn")
@@ -72,7 +87,19 @@ func create_title() -> void:
  add_button("CONTINUE / 继续",continue_game,not store.load_snapshot().ok)
  add_button("NEW GAME / 建立档案",show_profile)
  add_button("SETTING / 设置",show_settings)
- add_button("EXIT / 退出",get_tree().quit)
+ add_button("EXIT / 退出",request_exit)
+
+func request_exit(exit_code:int=0) -> void:
+ if exiting:return
+ exiting=true
+ if is_instance_valid(active):active.paused_manual=true
+ for sound in get_tree().get_nodes_in_group("neurons_audio"):
+  sound.reset_scene()
+ # Audio mixing is asynchronous wall time, independent of fixed-FPS movie
+ # capture. The world is already frozen; this is process teardown only.
+ var retire_at:int=Time.get_ticks_msec()+100
+ while Time.get_ticks_msec()<retire_at:await get_tree().process_frame
+ get_tree().quit(exit_code)
 
 func add_button(text:String,callback:Callable,disabled:bool=false) -> Button:
  var button:=Button.new()
@@ -127,6 +154,7 @@ func launch(profile:Dictionary,snapshot:Dictionary) -> void:
  active.name="Campaign"
  active.profile=profile
  active.loaded=snapshot
+ active.auto_status_enabled=bool(preferences.auto_status)
  active.store.root=store.root
  active.return_to_title.connect(close_campaign)
  add_child(active)
@@ -137,12 +165,14 @@ func launch(profile:Dictionary,snapshot:Dictionary) -> void:
   else:preferences.channels[channel]=value
   save_preferences()
  )
+ active.status_preferences_changed.connect(func(value:bool):preferences.auto_status=value;save_preferences())
  active.visual_preferences_changed.connect(func(value:bool):preferences.reduced=value;save_preferences())
  active.reduced_effects=bool(preferences.reduced)
  active.menu.reduced_effects=bool(preferences.reduced)
 
 func close_campaign() -> void:
  if active!=null:
+  active.audio.reset_scene()
   remove_child(active)
   active.queue_free()
   active=null
@@ -165,6 +195,10 @@ func show_settings() -> void:
  reduced_box.text="降低扫描线与界面动效"
  reduced_box.button_pressed=bool(preferences.reduced)
  content.add_child(reduced_box)
+ status_box=CheckBox.new()
+ status_box.text="受伤后自动显示角色状态（X可手动开关）"
+ status_box.button_pressed=bool(preferences.auto_status)
+ content.add_child(status_box)
  message=Label.new()
  message.text="游戏内还可分别调整音乐、环境、世界反馈和对白。"
  message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
@@ -175,11 +209,13 @@ func show_settings() -> void:
 func apply_settings() -> void:
  preferences.master=volume_slider.value
  preferences.reduced=reduced_box.button_pressed
+ preferences.auto_status=status_box.button_pressed
  if is_instance_valid(title_audio):title_audio.set_level("master",float(preferences.master))
  AudioServer.set_bus_volume_db(0,0) # Per-channel master gain is applied once in FeedbackAudio.
  var config:=ConfigFile.new()
  config.set_value("audio","master",preferences.master)
  config.set_value("visual","reduced",preferences.reduced)
+ config.set_value("interface","auto_status",preferences.auto_status)
  for channel in preferences.channels:config.set_value("audio",channel,preferences.channels[channel])
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(store.root))
  var result:int=config.save(store.root.path_join("preferences.cfg"))
@@ -189,6 +225,7 @@ func save_preferences() -> void:
  var config:=ConfigFile.new()
  config.set_value("audio","master",preferences.master)
  config.set_value("visual","reduced",preferences.reduced)
+ config.set_value("interface","auto_status",preferences.auto_status)
  for channel in preferences.channels:config.set_value("audio",channel,preferences.channels[channel])
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(store.root))
  config.save(store.root.path_join("preferences.cfg"))

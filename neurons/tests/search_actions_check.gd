@@ -44,6 +44,8 @@ func capture(name:String) -> void:
  get_viewport().get_texture().get_image().save_png(ProjectSettings.globalize_path(folder).path_join(name+".png"))
 
 func _ready() -> void:
+ for argument in OS.get_cmdline_user_args():
+  if argument.begins_with("--validation-root="):folder=argument.trim_prefix("--validation-root=")
  name="CampaignCheck";frontend=get_parent()
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
  await frames();frontend.show_profile();await frames()
@@ -96,4 +98,4 @@ func _ready() -> void:
  var f:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
  f.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":true,"scope":"11-point action/collision/knowledge fixtures in formal entry; graybox poses; exact uniform label still missing"},"  "))
  print("SEARCH_ACTIONS_CHECK %d passed %d failed"%[passes.size(),failures.size()])
- get_tree().quit(0 if failures.is_empty() else 1)
+ frontend.request_exit(0 if failures.is_empty() else 1)

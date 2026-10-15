@@ -1,0 +1,405 @@
+{
+  "source": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+  "source_sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+  "data_sha256": "caadbec27dd707324fa1e599e3d52d0f1dd4d0618d09746367b4394c0a70fc35",
+  "method": "exact Unicode substring match against original DOCX document.xml text; no normalization or paraphrase",
+  "count": 79,
+  "failed": [],
+  "entries": [
+    {
+      "entry": ".cues.MOTHER_ENTRY.lines.0",
+      "text": "宝贝 妈妈能进来吗?",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.MOTHER_ENTRY.lines.1",
+      "text": "宝贝 妈妈想进来看看你",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.HERO_ADMIT_MOTHER.lines.0",
+      "text": "可以的 妈妈",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.HERO_ADMIT_MOTHER.lines.1",
+      "text": "当然...可以",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.HERO_ADMIT_MOTHER.lines.2",
+      "text": "您进来吧",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.MOTHER_CONDITION.lines.0",
+      "text": "宝贝 你脸色看起来不太好",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.MOTHER_CONDITION.lines.1",
+      "text": "宝贝...你幸苦了",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.HERO_CONDITION.lines.0",
+      "text": "没有...吧",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.HERO_CONDITION.lines.1",
+      "text": "很明显吗...妈妈",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.MOTHER_REST.lines.0",
+      "text": "宝贝 你需要好好休息",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.MOTHER_REST.lines.1",
+      "text": "宝贝 妈妈希望你好好的...好好休息...好好的",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.FATHER_ENTRY.lines.0",
+      "text": "嘿 儿子 爹进门咯!!!",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.FATHER_ENTRY.lines.1",
+      "text": "儿砸 爹想你啦!!!",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.FATHER_CAT_QUESTION.lines.0",
+      "text": "爹说话 你怎么不回答呢?儿子",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.FATHER_CAT_QUESTION.lines.1",
+      "text": "耳朵出问题了吗 儿子 哈哈哈",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.FOOD_TASTE.lines.0",
+      "text": "...",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.FOOD_TASTE.lines.1",
+      "text": "?",
+      "matches_original": true
+    },
+    {
+      "entry": ".cues.FOOD_TASTE.lines.2",
+      "text": "嘶...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.0.0",
+      "text": "啊...大黄怎么在这?",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.0.1",
+      "text": "... ...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.0.2",
+      "text": "... ...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.1.0",
+      "text": "啊...大黄怎么在这?",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.1.1",
+      "text": "我也想知道",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.1.2",
+      "text": "... ...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.2.0",
+      "text": "嘿~这里刷新了一个黄色生物~让我瞧瞧是不是大黄呀~(●'◡'●)",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.2.1",
+      "text": "要不要跳过认亲现场啊喂...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.2.2",
+      "text": "... ...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.3.0",
+      "text": "嘿~这里刷新了一个黄色生物~让我瞧瞧是不是大黄呀~(●'◡'●)",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.3.1",
+      "text": "???装可爱呢",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_OPEN.variants.3.2",
+      "text": "... ...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_HELP.variants.0.0",
+      "text": "大黄呐...我有个任务交给你",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_HELP.variants.1.0",
+      "text": "大黄要不要帮帮我?",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_THANK.variants.0.0",
+      "text": "好狗狗",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_THANK.variants.1.0",
+      "text": "乖狗狗o(*^＠^*)o",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_OPEN.variants.0.0",
+      "text": "啊...它为什么会在这?",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_OPEN.variants.0.1",
+      "text": "... ...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_OPEN.variants.0.2",
+      "text": "... ...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_OPEN.variants.1.0",
+      "text": "啊...它为什么会在这?",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_OPEN.variants.1.1",
+      "text": "我同样也想知道",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_OPEN.variants.1.2",
+      "text": "... ...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_BLOCK.variants.0.0",
+      "text": "喵?!",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_BLOCK.variants.0.1",
+      "text": "我就是不小心碰到了",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_BLOCK.variants.0.2",
+      "text": "那真是太不小心了呢",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_BLOCK.variants.1.0",
+      "text": "@#￥%",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_BLOCK.variants.1.1",
+      "text": "你凶啥呀 小可爱",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_BLOCK.variants.1.2",
+      "text": "侵犯了雄狮的领地了哟~",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_HIT_START.variants.0.0",
+      "text": "喵!!!",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_HIT_START.variants.0.1",
+      "text": "我真是不小心碰到了...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_HIT_FEEDBACK.variants.0.0",
+      "text": "I Feel bad",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_HIT_FEEDBACK.variants.0.1",
+      "text": "嘿嘿",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_HIT_FEEDBACK.variants.1.0",
+      "text": "这傻猫",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_HIT_FEEDBACK.variants.1.1",
+      "text": "傻mao o(=•ェ•=)m",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_EXIT.variants.0.0",
+      "text": "喵@#￥%……",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_EXIT.variants.0.1",
+      "text": "？？？",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_EXIT.variants.0.2",
+      "text": "？？？",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_EXIT.variants.1.0",
+      "text": "喵@#￥%……",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_EXIT.variants.1.1",
+      "text": "？？？",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.CAT_EXIT.variants.1.2",
+      "text": "不会吧...",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_CAT_FIGHT.variants.0.0",
+      "text": "这是在?... ...玩?...好甜蜜呀",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_CAT_FIGHT.variants.0.1",
+      "text": "？",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_CAT_FIGHT.variants.0.2",
+      "text": "？",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_CAT_FIGHT.variants.1.0",
+      "text": "这是在?... ...玩?...好甜蜜呀",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_CAT_FIGHT.variants.1.1",
+      "text": "... ... ?",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.DOG_CAT_FIGHT.variants.1.2",
+      "text": "... ... ?",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.S1_START.variants.0.0",
+      "text": "总之继续行动吧!",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.S1_START.variants.1.0",
+      "text": "继续找钥匙!",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.S1_START.variants.2.0",
+      "text": "该做正事了!",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.S1_START.variants.3.0",
+      "text": "Go Go Go 出发喽!",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.S1_START.variants.4.0",
+      "text": "继续",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.S1_START.variants.5.0",
+      "text": "我是要成为钥匙王的男人",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.S1_START.variants.6.0",
+      "text": "我要找到钥匙 并且成为猎人",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.S1_START.variants.7.0",
+      "text": "我要把所有钥匙全部祓除",
+      "matches_original": true
+    },
+    {
+      "entry": ".groups.S1_START.variants.8.0",
+      "text": "我要取回钥匙...",
+      "matches_original": true
+    },
+    {
+      "entry": ".system.FATHER_THINK.lines.0",
+      "text": "可根据角色当前精神状态判定是否能够”出去走走”",
+      "matches_original": true
+    },
+    {
+      "entry": ".system.FATHER_THINK.lines.1",
+      "text": "可使用任意能力打断角色思考",
+      "matches_original": true
+    },
+    {
+      "entry": ".system.FATHER_LOW_SP.lines.0",
+      "text": "当角色精神值低于60时会强制跟随父亲”出门”~哟~",
+      "matches_original": true
+    },
+    {
+      "entry": ".system.FATHER_RESCUE.lines.0",
+      "text": "可使用中级技能",
+      "matches_original": true
+    },
+    {
+      "entry": ".system.FATHER_RESCUE.lines.1",
+      "text": "膝跳反射概率击退父亲并回复10点精神值",
+      "matches_original": true
+    },
+    {
+      "entry": ".system.FATHER_RESCUE.lines.2",
+      "text": "惊跳反应逃离父亲一次抓取并回复5点精神值",
+      "matches_original": true
+    }
+  ]
+}

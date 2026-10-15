@@ -1,0 +1,17 @@
+{
+  "failures": [],
+  "passes": [
+    "failed save retains active campaign and pauses instead of losing progress",
+    "save failure shows specific feedback without changing resources or damage",
+    "save failure cannot secretly advance the interrupted world",
+    "successful real save-and-title button returns to title",
+    "title is reached only after an actual verified save",
+    "previous valid save backup remains available",
+    "real continue reloads completed tutorial without issuing another practice",
+    "continue preserves resource balance, health and unique key ownership",
+    "continue preserves actual position, active route and RNG",
+    "saved manual pause resumes frozen instead of progressing behind title"
+  ],
+  "rendered": true,
+  "scope": "actual mouse save/return/continue with own unwritable-path fixture and independent test profile"
+}

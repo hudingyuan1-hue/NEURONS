@@ -1,5 +1,6 @@
 extends "res://scripts/core/interaction_rules.gd"
 ## Campaign extension. Timing/receipts are independent of sprite frames.
+signal vitality_lost
 const CONFIG_PATH="res://data/skills.json"
 var skill_states:Dictionary={}
 var effects:Dictionary={}
@@ -223,6 +224,7 @@ func note_reaction(id:String) -> void:
 func change_sp(amount:int) -> void:
  var previous:int=sp
  sp=clampi(sp+amount,0,100)
+ if sp<previous:vitality_lost.emit()
  if sp>=20:_sp_depleted=false
  if previous>0 and sp==0 and not _sp_depleted and hp>0:
   _sp_depleted=true
@@ -308,6 +310,7 @@ func tick(delta:float) -> Dictionary:
 func commit_hit(event_id:String,distance:float,line_of_sight:bool,facing:bool,active:bool,source_id:String="cat",target_id:String="protagonist") -> bool:
  var hit:bool=super.commit_hit(event_id,distance,line_of_sight,facing,active,source_id,target_id)
  if hit:
+  vitality_lost.emit()
   pending_neural.clear()
   action.clear()
   if hp<=0:end_control()

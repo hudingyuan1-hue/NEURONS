@@ -17,8 +17,16 @@ var channels:Dictionary={}
 var played_events:Dictionary={}
 var starts:Array[Dictionary]=[]
 
+func _exit_tree() -> void:
+ # Explicitly detach playback before the audio server shuts down. Ogg
+ # playback otherwise retains the packet sequence when the window exits.
+ reset_scene()
+ assets.clear()
+ tones.clear()
+
 func _ready() -> void:
  process_mode=Node.PROCESS_MODE_ALWAYS
+ add_to_group("neurons_audio")
  for channel in ["ui","world","ambience","music","voice"]:
   channels[channel]=[]
   for i in range(4 if channel=="world" else 1):
@@ -70,6 +78,7 @@ func set_world_paused(value:bool, pause_voice:bool=false) -> void:
 func reset_scene() -> void:
  for channel in channels:
   for player in channels[channel]:
+   if not is_instance_valid(player):continue
    player.stop()
    player.stream=null
  played_events.clear()
@@ -93,17 +102,22 @@ func restore_playback(state:Dictionary) -> void:
   var id:String=str(entry.id)
   if not assets.has(id):continue
   var spec:Dictionary=assets[id]
+  var channel:String=str(spec.channel)
+  if entry.get("channel","")=="ui" and channel=="world":channel="ui"
   var position:float=float(entry.position)
   if position<0 or position>=spec.stream.get_length():continue
-  for player in channels[spec.channel]:
+  for player in channels[channel]:
    if player.playing:continue
    player.stream=spec.stream
    player.set_meta("cue_id",id)
    player.play(position)
-   player.stream_paused=voice_frozen if spec.channel=="voice" else world_frozen if spec.channel!="ui" else false
+   player.stream_paused=voice_frozen if channel=="voice" else world_frozen if channel!="ui" else false
    break
 
-func cue(kind:String, event_id:String="") -> bool:
+func cue_ui(kind:String,event_id:String="") -> bool:
+ return cue(kind,event_id,"ui")
+
+func cue(kind:String, event_id:String="",presentation_channel:String="") -> bool:
  var spec:Array=CUES.get(kind,[kind,"world",0.0])
  var id:String=spec[0]
  var channel:String=spec[1]
@@ -118,6 +132,7 @@ func cue(kind:String, event_id:String="") -> bool:
   sound=tones[kind]
  else:
   return false # Missing music/ambience/voice remains silent.
+ if presentation_channel=="ui" and channel in ["ui","world"]:channel="ui"
  if not enabled or (voice_frozen and channel=="voice") or (world_frozen and channel not in ["ui","voice"]):return false
  var key:=id+":"+event_id
  if not event_id.is_empty() and played_events.has(key):return false

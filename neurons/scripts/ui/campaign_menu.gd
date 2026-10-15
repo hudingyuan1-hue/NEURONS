@@ -1,8 +1,10 @@
 extends "res://scripts/ui/neuron_menu.gd"
 ## Code-drawn campaign UI. No world clock or gameplay mutation in animations.
+const BodyPreview=preload("res://scripts/ui/body_preview.gd")
 signal skill_requested(id:String,context:Dictionary)
 signal food_requested(kind:String)
 signal tree_result(kind:String,id:String,result:Dictionary)
+signal feedback_requested(id:String)
 var rules
 var context_provider:Callable
 var art_canvas:Node2D
@@ -29,6 +31,13 @@ var full_description:String=""
 var description_clock:float=0.0
 var page_clock:float=0.0
 var preview_left:float=0.0
+var preview_delay:float=0.0
+var inspect_panel:Panel
+var inspect_return:Button
+var inspect_clock:float=0.0
+var inspect_closing:float=0.0
+var ui_paused:bool=false
+var tree_action_filter:Callable
 
 func _build_ui() -> void:
  if _built:return
@@ -108,33 +117,38 @@ func build_tree() -> void:
  var page:Control=pages.tree
  box(page,Rect2(70,115,430,480))
  box(page,Rect2(525,115,440,480))
- box(page,Rect2(985,115,235,480))
+ inspect_panel=box(page,Rect2(985,115,235,480))
  _label(page,"CRYO / 二维人体比例占位",Rect2(90,132,400,30),17,INK)
  _label(page,"螺旋星环 · 连线为实际前置",Rect2(545,132,420,30),16,INK)
  _button(page,"↶ 人体",Rect2(95,531,160,43)).pressed.connect(func():body_angle=(body_angle+3)%4;queue_redraw())
  _button(page,"人体 ↷",Rect2(280,531,160,43)).pressed.connect(func():body_angle=(body_angle+1)%4;queue_redraw())
  _button(page,"↶ 星环",Rect2(550,531,160,43)).pressed.connect(func():orbit-=0.35;layout_tree())
  _button(page,"星环 ↷",Rect2(775,531,160,43)).pressed.connect(func():orbit+=0.35;layout_tree())
- inspect=_label(page,"选择节点检查",Rect2(1000,137,200,230),16,INK)
+ inspect=_label(inspect_panel,"选择节点检查",Rect2(15,22,200,205),16,INK)
  inspect.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
- _button(page,"确认解锁",Rect2(1000,365,200,40)).pressed.connect(func():tree_action("unlock"))
- _button(page,"升级强度 · 1C",Rect2(1000,415,200,40)).pressed.connect(func():tree_action("upgrade"))
- _button(page,"10N → 1C",Rect2(1000,465,200,40)).pressed.connect(func():tree_action("exchange"))
- _button(page,"应急重连 · 5N",Rect2(1000,515,200,40)).pressed.connect(func():tree_action("emergency"))
+ _button(inspect_panel,"确认解锁",Rect2(15,245,200,40)).pressed.connect(func():tree_action("unlock"))
+ _button(inspect_panel,"升级强度 · 1C",Rect2(15,295,200,40)).pressed.connect(func():tree_action("upgrade"))
+ inspect_return=_button(inspect_panel,"返回星环",Rect2(15,345,200,40))
+ inspect_return.pressed.connect(return_to_tree)
+ _button(page,"10N → 1C",Rect2(1000,535,200,40)).pressed.connect(func():tree_action("exchange"))
+ _button(page,"应急重连 · 5N",Rect2(1000,585,200,40)).pressed.connect(func():tree_action("emergency"))
  for id in positions:
   var b:=_button(page,id,Rect2(Vector2.ZERO,Vector2(92,32)))
   b.z_index=2
   b.add_theme_font_size_override("font_size",12)
   tree_nodes[id]=b
-  b.pressed.connect(func():selected_id=id;describe_tree())
+  b.pressed.connect(func():
+   if inspect_closing>0:return
+   selected_id=id;describe_tree()
+  )
  layout_tree()
 
 func layout_tree() -> void:
  var i:int=0
  for id in tree_nodes:
   var angle:float=orbit+i*TAU/5.7
-  var radius:float=65+i*9.0
-  var p:=Vector2(745,325)+Vector2(cos(angle)*radius,sin(angle)*radius*0.7)
+  var radius:float=116+i*1.0
+  var p:=Vector2(745,445-i*22)+Vector2(cos(angle)*radius,sin(angle)*radius*0.24)
   tree_positions[id]=p
   tree_nodes[id].position=p-Vector2(46,16)
   i+=1
@@ -191,11 +205,14 @@ func open_page(key:String) -> void:
  _build_ui()
  panel_mode=key
  cast_pending.clear();page_clock=0.0;_submitted=false
+ preview_left=0.0;preview_delay=0.0;inspect_closing=0.0;inspect_clock=0.0
  for id in pages:pages[id].visible=id==key
  visible=true
  _status.text=""
  title.text={"cast":"NEURONS / CRT 神经干预","tree":"NEURONS / CRYO 冰柜与星环","book":"NEURONS / 已见信息档案"}[key]
- if key=="tree":describe_tree()
+ if key=="tree":
+  inspect_panel.hide()
+  feedback_requested.emit("SFX_COLD")
  elif key=="book":refresh_book()
  refresh_state()
  if art_canvas!=null:art_canvas.queue_redraw()
@@ -251,16 +268,27 @@ func submit_selected(with_direction:bool) -> void:
 func close_menu() -> void:
  cast_pending.clear()
  if direction_panel!=null:direction_panel.hide()
+ preview_left=0.0;preview_delay=0.0;inspect_closing=0.0
  super.close_menu()
 
 func describe_tree() -> void:
  if rules==null:return
  var entry:Dictionary=rules.spec(selected_id)
  var state:Dictionary=rules.skill_states[selected_id]
+ inspect_panel.show();inspect_panel.modulate.a=1.0;inspect_clock=0.0;inspect_closing=0.0
  inspect.text="%s · %s\n\n前置：%s\n%s\n解锁 %dC\n当前强度 %d"%[selected_id,entry.name," / ".join(entry.prerequisites),"任一满足" if entry.prerequisite_mode=="any" else "全部满足",entry.unlock_cost,state.power]
+
+func return_to_tree() -> void:
+ if inspect_closing>0:return
+ inspect_closing=0.18
+ feedback_requested.emit("SFX_UI_BACK")
 
 func tree_action(kind:String) -> void:
  if rules==null:return
+ if tree_action_filter.is_valid() and not tree_action_filter.call(kind,selected_id):
+  _status.text="先按教程完成当前步骤；没有扣费"
+  return
+ if inspect_closing>0:return
  var result:Dictionary
  match kind:
   "unlock":result=rules.unlock(selected_id)
@@ -269,9 +297,13 @@ func tree_action(kind:String) -> void:
   _:result=rules.emergency_reconnect()
  _status.text="已完成 · %s"%selected_id if result.ok else reason_text(str(result.reason))
  if result.ok and kind in ["unlock","upgrade","emergency"]:refund_note="growth"
- if result.ok and selected_id=="GUT":preview_left=2.0
+ if result.ok and kind in ["unlock","upgrade"]:
+  inspect_closing=0.18
+  if selected_id=="GUT":preview_delay=0.36
+ feedback_requested.emit("SFX_UI_CONFIRM" if result.ok else "SFX_UI_DENIED")
  tree_result.emit(kind,selected_id,result)
- refresh_state();describe_tree();queue_redraw()
+ refresh_state();queue_redraw()
+ if not result.ok:describe_tree()
 
 func refresh_book() -> void:
  if rules==null:return
@@ -284,10 +316,22 @@ func refresh_book() -> void:
  extension_button.text="已开启参数明细" if rules.book_extensions.has(rules.book_extension_id(book_category)) else "解锁参数明细 · 5C（基本观察免费）"
 
 func _process(delta:float) -> void:
- if not visible:return
+ if not visible or ui_paused:return
  _phase+=delta
  page_clock+=delta
- preview_left=maxf(0.0,preview_left-delta)
+ inspect_clock+=delta
+ if inspect_panel.visible:
+  var slide:float=clampf(inspect_clock/0.18,0,1)
+  inspect_panel.position.x=lerpf(1235.0,985.0,1.0-pow(1.0-slide,3))
+ if inspect_closing>0:
+  inspect_closing=maxf(0.0,inspect_closing-delta)
+  inspect_panel.position.x=985.0-(1.0-inspect_closing/0.18)*260
+  inspect_panel.modulate.a=inspect_closing/0.18
+  if inspect_closing<=0:inspect_panel.hide();inspect_panel.modulate.a=1.0
+ if preview_delay>0:
+  preview_delay=maxf(0.0,preview_delay-delta)
+  if preview_delay<=0:preview_left=2.0
+ else:preview_left=maxf(0.0,preview_left-delta)
  if not full_description.is_empty():
   description_clock+=delta
   _description.visible_characters=mini(full_description.length(),int(description_clock*220))
@@ -315,22 +359,19 @@ func draw_art(canvas:Node2D) -> void:
   canvas.draw_rect(Rect2(head-Vector2(12,4),Vector2(24,8)),Color("879b92"))
  if panel_mode!="tree":return
  var opening:float=clampf(page_clock/0.45,0,1)
- canvas.draw_rect(Rect2(90,495,385,28),Color("3b626b"))
- canvas.draw_polyline(PackedVector2Array([Vector2(92,495),Vector2(98,495-46*opening),Vector2(470,495-46*opening),Vector2(475,495)]),Color("9ebfbe"),3)
+ var bottom:float=495+70*pow(1.0-opening,3)
+ for band in range(12):
+  canvas.draw_rect(Rect2(90,bottom+band*2.5,385,2.5),Color("3b626b").lerp(Color("172b42"),band/11.0))
+ canvas.draw_polyline(PackedVector2Array([Vector2(92,bottom),Vector2(98,bottom-46*opening),Vector2(470,bottom-46*opening),Vector2(475,bottom)]),Color("9ebfbe"),3)
  if rules!=null:
   for id in tree_positions:
    for parent in rules.spec(id).prerequisites:
     if tree_positions.has(parent):canvas.draw_line(tree_positions[id],tree_positions[parent],Color("56745f"),1)
- var middle:=Vector2(285,330)
- var width:float=1.0 if body_angle%2==0 else 0.38
- var cloth:=Color("89b5c5")
- canvas.draw_circle(middle+Vector2(0,-102),25,Color("d4c8ac"))
- canvas.draw_rect(Rect2(middle+Vector2(-31*width,-75),Vector2(62*width,110)),cloth)
- if preview_left>0:
-  canvas.draw_circle(middle+Vector2(0,5),17,Color(0.65,0.3,0.25,0.4))
- canvas.draw_line(middle+Vector2(-26*width,-59),middle+Vector2(-113*width,-59),cloth,17)
- canvas.draw_line(middle+Vector2(26*width,-59),middle+Vector2(113*width,-59),cloth,17)
- for side in [-1,1]:canvas.draw_line(middle+Vector2(side*18*width,30),middle+Vector2(side*22*width,133),cloth,19)
+ BodyPreview.draw(canvas,body_angle,page_clock,preview_left)
+ if inspect_closing>0:
+  var hit:Vector2=inspect_panel.position+Vector2(-8,150)
+  canvas.draw_line(hit+Vector2(-65,-40*inspect_closing/0.18),hit,Color("c7b79a"),5)
+  canvas.draw_rect(Rect2(hit-Vector2(12,5),Vector2(24,10)),Color("91b4ad"))
  if not reduced_effects:
   for i in range(5):
    var x:float=112+i*75

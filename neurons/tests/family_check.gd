@@ -60,6 +60,8 @@ func cast(id:String) -> Dictionary:
  app.apply_cast();return result
 
 func _ready() -> void:
+ for argument in OS.get_cmdline_user_args():
+  if argument.begins_with("--validation-root="):folder=argument.trim_prefix("--validation-root=")
  name="CampaignCheck";frontend=get_parent()
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
  await frames();frontend.show_profile();await frames()
@@ -111,7 +113,7 @@ func _ready() -> void:
  fixture(false,true)
  app.family.spawn("mother")
  check(until(func():return app.family.data.mother.phase=="request_rest"),"full-SP/cat mother approaches cat then gives chocolate")
- check(app.rules.hp==100 and not app.home.data.fighting and app.home.data.cat.phase=="leave","mother eviction never triggers player scare damage")
+ check(app.rules.hp==100 and not app.home.data.fighting and not app.home.present("cat"),"mother eviction completes actual cat departure without player scare damage")
  await capture("03_mother_cat")
  fixture(true,false)
  app.family.spawn("father")
@@ -199,4 +201,4 @@ func _ready() -> void:
  var f:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
  f.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":true,"scope":"formal entry with deterministic parent/animal fixtures; original RNG table retained in production; not human playthrough"},"  "))
  print("FAMILY_CHECK %d passed %d failed"%[passes.size(),failures.size()])
- get_tree().quit(0 if failures.is_empty() else 1)
+ frontend.request_exit(0 if failures.is_empty() else 1)

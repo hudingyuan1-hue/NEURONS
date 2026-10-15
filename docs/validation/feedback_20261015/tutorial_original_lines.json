@@ -1,0 +1,142 @@
+{
+  "source": "DOCX/早期文档/游玩体验 需求.docx",
+  "source_sha256": "9b0a0316fd7101ca519abd3386fe21778c8f41de3d3966014323e8a9b254982a",
+  "data_sha256": "c859de4355ecd8787fda545093b5abc3ce618486192e37cb062c867c24efb3e5",
+  "revision": {
+    "source": "S4:T2 新游戏=5神经元/3神经簇，教程不重复发放",
+    "replaces": "体验P345/P372中的旧初始5簇；仅替换余额数字，保留其余原句",
+    "presentation": "P372的{clusters}取当前独立练习demo.plexus，不发放或修改正式资源"
+  },
+  "count": 21,
+  "method": "exact Unicode substring; P372 compares preserved original while runtime changes only {clusters}",
+  "entries": [
+    {
+      "source": "体验P67",
+      "speaker": "玩家 · 教学",
+      "text": "左键点击角色身体使用Neurons神经元 可以选择一种方式干扰他的行动",
+      "matches_original": true
+    },
+    {
+      "source": "体验P124",
+      "speaker": "玩家 · 沮丧",
+      "text": "我暂且只掌握了这一种能力...不过再怎么说我是也会努力的",
+      "matches_original": true
+    },
+    {
+      "source": "体验P128",
+      "speaker": "玩家 · 沉思",
+      "text": "话说...这家伙好像也是会成长的...呃...回到正题",
+      "matches_original": true
+    },
+    {
+      "source": "体验P133",
+      "speaker": "玩家 · 教学",
+      "text": "将鼠标悬停到发亮节点处 会在右侧展示详细的能力信息",
+      "matches_original": true
+    },
+    {
+      "source": "体验P279",
+      "speaker": "玩家 · 教学",
+      "text": "将鼠标悬停到灰暗节点处...",
+      "matches_original": true
+    },
+    {
+      "source": "体验P284",
+      "speaker": "玩家 · 尴尬",
+      "text": "...呃...我还没有这个能力",
+      "matches_original": true
+    },
+    {
+      "source": "体验P288",
+      "speaker": "玩家 · 尬笑",
+      "text": "咳咳...我们一步步来",
+      "matches_original": true
+    },
+    {
+      "source": "体验P292",
+      "speaker": "玩家 · 自嗨",
+      "text": "看到左上角的COIN值了吗 这是我的”财产” 用鼠标点击发光的神经节点 我会让这家伙受到”惩罚”!!! 桀桀桀桀桀~",
+      "matches_original": true
+    },
+    {
+      "source": "体验P313",
+      "speaker": "玩家 · 高兴",
+      "text": "看到了吗 这家伙刚才的样子 哈哈哈哈 当然 我们之后也可以对这家伙使用更多”手段”...",
+      "matches_original": true
+    },
+    {
+      "source": "体验P317",
+      "speaker": "玩家 · 得意",
+      "text": "好了 我说过我是会成长的吧 我接下来要秀一下新的能力...",
+      "matches_original": true
+    },
+    {
+      "source": "体验P321",
+      "speaker": "玩家 · 教学",
+      "text": "右键点击角色 使用Plexus神经簇获得新能力",
+      "matches_original": true
+    },
+    {
+      "source": "体验P360",
+      "speaker": "玩家 · 自豪",
+      "text": "看到右侧的”星星树”了吗 这是我们星球最伟大的发明 我能通过他来获得能力",
+      "matches_original": true
+    },
+    {
+      "source": "体验P365",
+      "speaker": "玩家 · 教学",
+      "text": "来来来 我们看看星仓还有多少神经簇 (这不是冰箱吗喂？) ？谁在说话？",
+      "matches_original": true
+    },
+    {
+      "source": "体验P372; 余额按S4:T2",
+      "speaker": "玩家",
+      "text": "好了 现在还剩{clusters}簇 不过没事 星仓可以通过这家伙神经活性自产果实 看来之后得经常来查看了",
+      "original": "好了 现在还剩5簇 不过没事 星仓可以通过这家伙神经活性自产果实 看来之后得经常来查看了",
+      "matches_original": true
+    },
+    {
+      "source": "体验P374",
+      "speaker": "玩家",
+      "text": "点击未发光的一颗星",
+      "matches_original": true
+    },
+    {
+      "source": "体验P379",
+      "speaker": "玩家 · 严肃",
+      "text": "这块智能面板展示了这一神经簇的详细信息 我们可以花费...1神经簇解锁 但要注意节制 星仓可不是随时都有产出的",
+      "matches_original": true
+    },
+    {
+      "source": "体验P385",
+      "speaker": "玩家 · 疯狂",
+      "text": "现在我们回去看看这家伙将会发生什么样的囧样吧 哈哈...咳...桀桀桀桀桀~",
+      "matches_original": true
+    },
+    {
+      "source": "体验P393",
+      "speaker": "玩家 · 阴恻恻",
+      "text": "呵呵 这家伙想寻死 结果导致我累死累活...就得让他受到点小小惩罚",
+      "matches_original": true
+    },
+    {
+      "source": "体验P397",
+      "speaker": "玩家",
+      "text": "好了 该回去看看这家伙的情况了 有啥问题可以多”看看书”",
+      "matches_original": true
+    },
+    {
+      "source": "体验P401",
+      "speaker": "角色",
+      "text": "似乎 身体有些变化???",
+      "matches_original": true
+    },
+    {
+      "source": "体验P403",
+      "speaker": "角色",
+      "text": "不管了 继续想办法逃出去吧",
+      "matches_original": true
+    }
+  ],
+  "failed": []
+}

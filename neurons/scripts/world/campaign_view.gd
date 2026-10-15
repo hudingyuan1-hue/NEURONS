@@ -2,6 +2,45 @@ extends "res://scripts/world/room_view.gd"
 const Catalog=preload("res://scripts/presentation/asset_catalog.gd")
 var catalog=Catalog.new()
 
+func rest_pose() -> Dictionary:
+ var t:float=clampf((1.2-app.action_left)/0.3,0,1) if app.action_phase=="resting" else 0.0
+ var from:Vector2=layout.project(app.hero_pos)+Vector2(0,-30)
+ var to:Vector2=layout.project(layout.furniture[0].rect.get_center())+Vector2(0,-float(layout.furniture[0].height))
+ return {"t":t,"center":from.lerp(to,smoothstep(0,1,t)),"angle":-PI/2*smoothstep(0,1,t)}
+
+func hero_body_rect() -> Rect2:
+ if app.action_phase!="resting":return Rect2(layout.project(app.hero_pos)+Vector2(-16,-62),Vector2(32,65))
+ var pose:Dictionary=rest_pose()
+ var extent:=Vector2(16,33).lerp(Vector2(34,16),float(pose.t))
+ return Rect2(pose.center-extent,extent*2)
+
+func eating_pose() -> Dictionary:
+ if app.family==null or app.family.data.is_empty() or app.family.data.eating.is_empty():return {}
+ var action:Dictionary=app.family.data.eating
+ var t:float=clampf(float(action.elapsed)/float(app.family.config.timing.eat),0,1)
+ var contact:float=smoothstep(0.0,0.3,t) if t<0.3 else 1.0 if t<0.78 else 1.0-smoothstep(0.78,1.0,t)
+ return {"progress":t,"hand":Vector2(15,-17).lerp(Vector2(7,-44),contact),"item":str(action.item),"stage":"准备" if t<0.3 else "入口" if t<0.78 else "吞服"}
+
+func draw_eating_gesture(center:Vector2) -> void:
+ var pose:Dictionary=eating_pose()
+ if pose.is_empty():return
+ var hand:Vector2=center+pose.hand
+ draw_line(center+Vector2(8,-37),hand,Color("8caebc"),4)
+ draw_circle(hand,2.5,Color("d6c8b0"))
+ var kind:String=str(app.family.data.food_types.get(pose.item,""))
+ if kind=="porridge":draw_arc(hand+Vector2(0,-2),5,0,PI,10,Color("e0dfd5"),3)
+ else:draw_rect(Rect2(hand+Vector2(-3,-4),Vector2(7,5)),Color("b8ab8d") if kind=="candy" else Color("735146"))
+ draw_string(font,center+Vector2(-20,-73),"食用 · "+str(pose.stage),HORIZONTAL_ALIGNMENT_LEFT,-1,9,Color("e5e3cd"))
+
+func draw_resting_actor() -> void:
+ var pose:Dictionary=rest_pose()
+ var frame:Dictionary=catalog.actor_frame("idle",app.hero_facing,0)
+ draw_set_transform(pose.center,float(pose.angle))
+ # Rotate about the body's middle, keeping the source foot anchor unchanged.
+ draw_texture_rect_region(frame.texture,Rect2(Vector2(-frame.foot.x,30-frame.foot.y),frame.size),frame.source)
+ draw_set_transform(Vector2.ZERO)
+ draw_string(font,pose.center+Vector2(-20,24),"躺下 · 占位",HORIZONTAL_ALIGNMENT_LEFT,-1,8,Color("d7dfcf"))
+
 func extra_actors() -> Array:
  var actors:Array=app.home.actors() if app!=null and app.home!=null else []
  if app!=null and app.family!=null:actors.append_array(app.family.actors())
@@ -47,6 +86,7 @@ func draw_actor(who:String) -> void:
  if who in ["mother","father"]:
   var at:Vector2=layout.project(app.family.position(who))
   var color:=Color("b9a28d") if who=="mother" else Color("66777b")
+  if app.action_phase=="resting":color=color.darkened(0.65)
   if app.family.collapse_active():
    var phase:float=float(app.family.data.collapse.elapsed)
    at+=Vector2(sin(phase*53)*1.5,0)
@@ -80,6 +120,7 @@ func draw_actor(who:String) -> void:
  if who!="hero" or catalog.current.is_empty():
   super.draw_actor(who)
   return
+ if app.action_phase=="resting":return # The bed surface draws the attached pose above itself.
  var center:Vector2=layout.project(app.hero_pos)
  # Body action poses follow the same saved game clock as contact settlement.
  var phase:float=app.world_visual_time
@@ -96,6 +137,7 @@ func draw_actor(who:String) -> void:
  if float(app.rules.effects.get("PORES",0))>0:
   for i in range(5):draw_circle(center+Vector2(9+i%2*3,-35+i*3),1.0,Color("9fcebc"))
  if float(app.rules.effects.get("DRYMOUTH",0))>0:draw_line(center+Vector2(7,-43),center+Vector2(10,-35),Color("d6c8b0"),2)
+ if app.hero_state=="eat":draw_eating_gesture(center)
  if app.hero_state=="search":
   var hand:Vector2=bedside_hand() if app.room_id=="bedroom" and bedside_contact() else center+Vector2(16,-46 if app.search_actions!=null and app.search_actions.pose=="high" else -12 if crouch<1 else -28)
   if app.target_index>=0 and app.room_id=="bedroom" and app.layout.furniture[app.target_index].id!="bedside":
@@ -108,6 +150,8 @@ func draw_actor(who:String) -> void:
  draw_line(center+Vector2(0,-2),center+app.hero_facing*9,Color("f1c17d"),1)
 
 func draw_furniture(f:Dictionary) -> void:
+ if f.id=="bed" and app.action_phase=="resting" and not catalog.current.is_empty():
+  super.draw_furniture(f);draw_resting_actor();return
  if app.search_actions==null or app.room_id!="bedroom":super.draw_furniture(f);return
  # Tall foreground props remain physical but reveal an obscured interaction.
  # Only presentation alpha changes; depth ordering/collision stay intact.
@@ -158,11 +202,25 @@ func draw_furniture(f:Dictionary) -> void:
   draw_line(at,at+Vector2(-15,-6),Color("d9d9cd"),5)
   for i in range(4):draw_line(at+Vector2(-13+i*3,-6),at+Vector2(-12+i*3,-3),Color("6b7473"),1)
 
+func draw_ellipse_blood(at:Vector2) -> void:
+ draw_set_transform(at,0,Vector2(1,0.2))
+ draw_circle(Vector2.ZERO,17,Color(0.3,0.04,0.06,0.48))
+ draw_set_transform(Vector2.ZERO)
+
 func _draw() -> void:
  super._draw()
  if app==null:return
  if app.family!=null and not app.family.data.is_empty() and app.family.data.blood_door:
-  draw_rect(Rect2(layout.project(Vector2(4.28,0))+Vector2(0,-76),Vector2(69,76)),Color(0.45,0.1,0.12,0.7))
+  var portal:Vector2=layout.project(Vector2(4.28,0))+Vector2(0,-76)
+  draw_rect(Rect2(portal,Vector2(69,76)),Color(0.45,0.1,0.12,0.7))
+  # Local irregular streaks/soft margins, driven only by this actual event.
+  for i in range(9):
+   var x:float=4+i*7
+   var length:float=11+(i*19)%48
+   var color:=Color(0.3,0.035,0.05,0.7)
+   draw_line(portal+Vector2(x,0),portal+Vector2(x+((i%3)-1)*3,length),color,2+i%2)
+  for i in range(4):draw_rect(Rect2(portal-Vector2(2+i,1+i),Vector2(73+i*2,78+i*2)),Color(0.32,0.12,0.14,0.07),false,2)
+  draw_ellipse_blood(portal+Vector2(30,77))
  if app.family!=null and not app.family.data.is_empty() and not app.family.data.gift.is_empty():
   var at:Vector2=layout.project(app.layout.DOOR)+Vector2(-8,0)
   draw_rect(Rect2(at+Vector2(-4,-5),Vector2(8,5)),Color("b28d69"))

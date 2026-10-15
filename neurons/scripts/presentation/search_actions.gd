@@ -21,7 +21,7 @@ func state(id:String) -> Dictionary:
 func enter_room() -> void:
  base_rects.clear()
  for f in app.layout.furniture:base_rects[f.id]=f.rect
- apply_geometry()
+ apply_geometry(false)
 
 func point(id:String) -> Dictionary:
  for entry in config.points:
@@ -95,7 +95,7 @@ func finish_cuff() -> void:
  app.add_dialogue("玩家 · 疑惑","谁缝的？")
  observing_index=-1
 
-func apply_geometry() -> void:
+func apply_geometry(invalidate_routes:bool=true) -> void:
  if app.room_id!="bedroom":return
  app.layout.movable_blockers.clear()
  for f in app.layout.furniture:
@@ -109,6 +109,7 @@ func apply_geometry() -> void:
    var shift:Array=props.upper_shift
    app.layout.movable_blockers.append(Rect2(base.position+Vector2(float(shift[0]),float(shift[1])),base.size))
  app.layout._init()
+ if not invalidate_routes:return # Rebuild saved geometry without erasing saved motion.
  if app.home!=null and not app.home.data.is_empty():
   app.home.data.dog.route=[];app.home.data.cat.route=[]
  if app.family!=null and not app.family.data.is_empty():

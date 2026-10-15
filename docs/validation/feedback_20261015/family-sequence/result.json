@@ -1,0 +1,127 @@
+{
+  "failures": [],
+  "passes": [
+    "chosen variant never rerolls: MOTHER_ENTRY / seed 0",
+    "chosen variant never rerolls: HERO_ADMIT_MOTHER / seed 0",
+    "chosen variant never rerolls: MOTHER_CONDITION / seed 0",
+    "chosen variant never rerolls: HERO_CONDITION / seed 0",
+    "chosen variant never rerolls: MOTHER_REST / seed 0",
+    "chosen variant never rerolls: FATHER_ENTRY / seed 0",
+    "chosen variant never rerolls: FATHER_CAT_QUESTION / seed 0",
+    "chosen variant never rerolls: FOOD_TASTE / seed 0",
+    "fixed seeds cover every original family random alternative",
+    "chosen dialogue alternatives save through JSON store",
+    "JSON load retains every chosen alternative without reroll",
+    "fixed seeds cover all dog/cat/combined/start original alternatives",
+    "same animal dialogue node does not replay or reroll",
+    "dog A/B entry retains paired player response",
+    "dog A/B entry retains paired player response",
+    "dog A/B entry retains paired player response",
+    "dog A/B entry retains paired player response",
+    "later attempts select short original start line rather than early theatrical introduction",
+    "restored already-spoken search opening cannot replay or reroll",
+    "door entry does not speak close-up health line or give food remotely",
+    "mother actually navigates to hero before health concern",
+    "health exchange starts at real contact distance",
+    "head scratch has visible game-time action before response",
+    "paused head-scratch animation does not advance its action clock",
+    "mid-head-scratch action saves",
+    "head-scratch elapsed phase survives actual JSON reload",
+    "scratch ends before original response and rest request",
+    "missing hero response and both rest alternatives are connected",
+    "prepared porridge remains uniquely mother-owned before handoff",
+    "original give-porridge line waits for real transfer completion",
+    "acquisition message and ownership occur before queued post-handoff speech",
+    "post-handoff original porridge line is retained",
+    "mother route reaches bed and lies down before good-child closing line",
+    "good-child original line precedes actual rest/unlock completion",
+    "lying presentation attaches only after actual bed approach",
+    "bed pose has matching separate body click region",
+    "rest completes and unlocks hospital after its original closing line",
+    "mother has explicit wait for actual cat departure",
+    "moving cat cannot be replaced by instant disappearance or early chocolate",
+    "mid-eviction JSON reload retains mother's wait and cat route",
+    "cat actually exits before mother walks back and hands chocolate",
+    "eviction retains cat's original exit line and causes no scratch",
+    "original thank-you follows completed chocolate handoff",
+    "actual father arrival during eviction takes exclusive collapse without unearned chocolate",
+    "exclusive collapse cancels pending ordinary action/presentation phase",
+    "interrupted eviction collapse reaches one real revival",
+    "collapse cannot complete old eviction transfer after revival",
+    "father physically holds cat before selected questioning alternative",
+    "successful thinking interruption starts departure before reflection",
+    "post-departure realization is not spoken while father still present",
+    "departure continuation saves without premature reflection",
+    "father really walks out carrying cat",
+    "original three reflection lines follow actual father/cat exit",
+    "departure replay cannot repeat reflection or award dialogue-implied awakening"
+  ],
+  "rendered": true,
+  "scope": "fixed household branch/clock fixtures, actual movement/contact/save handlers; UI input covered separately; no full B1 acceptance",
+  "transcript": [
+    {
+      "speaker": "父亲 · 剪影",
+      "text": "嘿 儿子 爹进门咯!!!"
+    },
+    {
+      "speaker": "父亲 · 高兴",
+      "text": "诶哟 小猫儿 你咋在这儿呢"
+    },
+    {
+      "speaker": "黑猫 · 撒娇",
+      "text": "喵~"
+    },
+    {
+      "speaker": "父亲 · 冷淡",
+      "text": "爹说话 你怎么不回答呢?儿子"
+    },
+    {
+      "speaker": "角色 · 害怕",
+      "text": "没...没有...我刚在忙忙一些...一些..."
+    },
+    {
+      "speaker": "父亲 · 大笑",
+      "text": "忙? 我看你不忙啊 要不要出来走走？"
+    },
+    {
+      "speaker": "系统 · 神经干预",
+      "text": "可根据角色当前精神状态判定是否能够”出去走走”\n可使用任意能力打断角色思考"
+    },
+    {
+      "speaker": "角色 · 大吼",
+      "text": "滚!!!滚!!!滚!!!给我滚出去!!!"
+    },
+    {
+      "speaker": "父亲 · 无所谓",
+      "text": "啊...这家伙翅膀硬了呀...哟吼吼...哈哈哈哈哈"
+    },
+    {
+      "speaker": "角色 · 愤怒盯着",
+      "text": "... ..."
+    },
+    {
+      "speaker": "父亲 · 冷漠",
+      "text": "... ..."
+    },
+    {
+      "speaker": "父亲 · 妥协",
+      "text": "行吧...臭小子"
+    },
+    {
+      "speaker": "角色 · 疑惑",
+      "text": "刚才怎么回事……"
+    },
+    {
+      "speaker": "角色 · 凝重",
+      "text": "他绝对不是我父亲 我在他身上感受到无比浓重的[恶意]...这是怎么回事...难道?"
+    },
+    {
+      "speaker": "玩家 · 长舒一口气",
+      "text": "确实是浓重的恶意呀...父不父亲我不知道...但...总算渡过了"
+    },
+    {
+      "speaker": "玩家 · 凝重",
+      "text": "话说...这家伙不会因此[觉醒]吧"
+    }
+  ]
+}

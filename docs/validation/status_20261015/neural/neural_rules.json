@@ -1,0 +1,1543 @@
+{
+  "checks": 384,
+  "failed": 0,
+  "results": [
+    {
+      "label": "exactly twelve definitions; SKIN initially unlocked",
+      "ok": true
+    },
+    {
+      "label": "missing prerequisites never charges",
+      "ok": true
+    },
+    {
+      "label": "locked cast never charges",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: GUT",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: PORES",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: TEMP",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: KNEE",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: FEAR",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: JOY",
+      "ok": true
+    },
+    {
+      "label": "twenty-two-cluster tree: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "entire tree costs exactly 22 clusters",
+      "ok": true
+    },
+    {
+      "label": "one cluster upgrade changes strength only",
+      "ok": true
+    },
+    {
+      "label": "upgrade does not change cost or cooldown",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: SKIN",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: SKIN",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: SKIN",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: GUT",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: GUT",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: GUT",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: PORES",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: PORES",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: PORES",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: TEMP",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: TEMP",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: TEMP",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: KNEE",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: KNEE",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: KNEE",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: FEAR",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: FEAR",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: FEAR",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: JOY",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: JOY",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: JOY",
+      "ok": true
+    },
+    {
+      "label": "equal resistance still pays: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "resistance cannot fabricate reaction: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "resistance still cools down: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "unknown id invalid",
+      "ok": true
+    },
+    {
+      "label": "insufficient funds no cooldown",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "skill preserves unfinished search: PORES",
+      "ok": true
+    },
+    {
+      "label": "specified progress rate: PORES",
+      "ok": true
+    },
+    {
+      "label": "world clock independent of effect: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "skill preserves unfinished search: TEMP",
+      "ok": true
+    },
+    {
+      "label": "specified progress rate: TEMP",
+      "ok": true
+    },
+    {
+      "label": "world clock independent of effect: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "skill preserves unfinished search: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "specified progress rate: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "world clock independent of effect: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "tinnitus resumes same action after exactly one second",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "skill preserves unfinished search: JOY",
+      "ok": true
+    },
+    {
+      "label": "specified progress rate: JOY",
+      "ok": true
+    },
+    {
+      "label": "world clock independent of effect: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "specified search cancellation: SKIN",
+      "ok": true
+    },
+    {
+      "label": "cancel neither refunds opportunity nor awards income: SKIN",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "specified search cancellation: GUT",
+      "ok": true
+    },
+    {
+      "label": "cancel neither refunds opportunity nor awards income: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "specified search cancellation: KNEE",
+      "ok": true
+    },
+    {
+      "label": "cancel neither refunds opportunity nor awards income: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "specified search cancellation: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "cancel neither refunds opportunity nor awards income: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "specified search cancellation: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "cancel neither refunds opportunity nor awards income: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "specified search cancellation: FEAR",
+      "ok": true
+    },
+    {
+      "label": "cancel neither refunds opportunity nor awards income: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "specified search cancellation: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "cancel neither refunds opportunity nor awards income: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "fear causing zero-SP gives one actual stupor",
+      "ok": true
+    },
+    {
+      "label": "joy gives exactly twenty SP without health change",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "unexpired sustained effect cannot be refreshed for payment",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "ordinary reflex cannot free established grip",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "drymouth does not retroactively transfer or consume anything",
+      "ok": true
+    },
+    {
+      "label": "basic observations free",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "three actual reactions queue growth only",
+      "ok": true
+    },
+    {
+      "label": "growth cannot accumulate twice in same attempt",
+      "ok": true
+    },
+    {
+      "label": "awakening has unique receipt",
+      "ok": true
+    },
+    {
+      "label": "real attempt commits targeted and global growth once",
+      "ok": true
+    },
+    {
+      "label": "subsequent attempt cannot replay committed growth",
+      "ok": true
+    },
+    {
+      "label": "combat resistance lockout emergency reconnect",
+      "ok": true
+    },
+    {
+      "label": "emergency is paid strength change, no fabricated cast",
+      "ok": true
+    },
+    {
+      "label": "combat natural recovery capped route recovers one after four seconds",
+      "ok": true
+    },
+    {
+      "label": "emergency disabled once any owned skill passes resistance",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "control pays five; cooldown starts only after window",
+      "ok": true
+    },
+    {
+      "label": "control blocks concurrent neural skill payment",
+      "ok": true
+    },
+    {
+      "label": "grip consumes window but not effective milliseconds",
+      "ok": true
+    },
+    {
+      "label": "partial hit-stop excludes exact blocked interval",
+      "ok": true
+    },
+    {
+      "label": "loading freezes window and effective total",
+      "ok": true
+    },
+    {
+      "label": "expiration counts effective remainder then twenty-second cooldown",
+      "ok": true
+    },
+    {
+      "label": "early end retains earned milliseconds",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "thirty-second boundary queued once",
+      "ok": true
+    },
+    {
+      "label": "sixty-second boundary replaces deferred feedback for an already-passed stage",
+      "ok": true
+    },
+    {
+      "label": "120000ms exact internal ending boundary",
+      "ok": true
+    },
+    {
+      "label": "stage effects not queued again each tick; all stage receipts retained",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "control time never produces natural recovery",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "combat sidestep needs explicit mouse direction before charge",
+      "ok": true
+    },
+    {
+      "label": "preparation cannot deal damage",
+      "ok": true
+    },
+    {
+      "label": "kick cannot hit beyond one metre",
+      "ok": true
+    },
+    {
+      "label": "kick cannot hit behind",
+      "ok": true
+    },
+    {
+      "label": "kick cannot hit through obstacle",
+      "ok": true
+    },
+    {
+      "label": "actual front contact commits once per target",
+      "ok": true
+    },
+    {
+      "label": "controlled kick shares neural knee cooldown",
+      "ok": true
+    },
+    {
+      "label": "controlled physical kick has no second neural fee or adaptation",
+      "ok": true
+    },
+    {
+      "label": "legacy schema one remains writable and valid",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: GUT",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: PORES",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TEMP",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: TINNITUS",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: DRYMOUTH",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: KNEE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: WITHDRAW",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: STARTLE",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: FEAR",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: JOY",
+      "ok": true
+    },
+    {
+      "label": "unlock follows actual prerequisite: CONTROL",
+      "ok": true
+    },
+    {
+      "label": "new nested pending skill state saves with checksum",
+      "ok": true
+    },
+    {
+      "label": "pending paid cast survives JSON roundtrip",
+      "ok": true
+    },
+    {
+      "label": "migration preserves original valid legacy slot separately",
+      "ok": true
+    },
+    {
+      "label": "unseen category cannot sell invented information",
+      "ok": true
+    },
+    {
+      "label": "basic observed fact is free",
+      "ok": true
+    },
+    {
+      "label": "optional resistance parameter extension costs exactly five clusters",
+      "ok": true
+    },
+    {
+      "label": "already-open extension never charges again",
+      "ok": true
+    },
+    {
+      "label": "extension lists owned nodes only and never exposes hidden self-loss threshold",
+      "ok": true
+    },
+    {
+      "label": "buying parameter UI cannot invent protagonist knowledge or institutional fact",
+      "ok": true
+    },
+    {
+      "label": "one actual perceived reaction produces suspicion only",
+      "ok": true
+    },
+    {
+      "label": "replayed perception event cannot count as a new context",
+      "ok": true
+    },
+    {
+      "label": "repeat movement or same target context never fakes the second context",
+      "ok": true
+    },
+    {
+      "label": "three-plus perceptions, two contexts, repeated same skill permit awareness",
+      "ok": true
+    },
+    {
+      "label": "aware protagonist marks next real autonomous action as a trial",
+      "ok": true
+    },
+    {
+      "label": "perception without changing trial intent does not recognize player",
+      "ok": true
+    },
+    {
+      "label": "new contrary reaction in actual trial recognizes once",
+      "ok": true
+    },
+    {
+      "label": "first recognition restriction rejects without payment",
+      "ok": true
+    },
+    {
+      "label": "cancelled recognition-triggering action cannot immediately clear restriction",
+      "ok": true
+    },
+    {
+      "label": "controlled action remains controlled after takeover expires",
+      "ok": true
+    },
+    {
+      "label": "one completed new autonomous action clears exploration restriction",
+      "ok": true
+    },
+    {
+      "label": "tutorial body response adds neither formal perception nor adaptation",
+      "ok": true
+    },
+    {
+      "label": "taking over same intended interaction does not fabricate a contrary act",
+      "ok": true
+    },
+    {
+      "label": "actual contrary controlled movement can recognize without trial",
+      "ok": true
+    },
+    {
+      "label": "one takeover contributes at most one perception event",
+      "ok": true
+    }
+  ],
+  "scope": "rules only; combat world/NPC not certified"
+}

@@ -40,6 +40,7 @@
     "gift_pickup": 0.4,
     "collapse_caption": 0.7,
     "death_presentation": 1.0,
-    "note": "仅未定表现/接触测试参数；不改资源、次数、概率、固定技能数值或胜负。"
+    "note": "仅未定表现/接触测试参数；不改资源、次数、概率、固定技能数值或胜负。",
+    "mother_head_scratch": 0.5
   }
 }

@@ -3,9 +3,11 @@ extends RefCounted
 var app
 var enabled:bool=true
 var data:Dictionary={}
+var dialogue:Dictionary={}
 
 func _init(owner) -> void:
  app=owner
+ dialogue=JSON.parse_string(FileAccess.get_file_as_string("res://data/home_dialogue.json")).groups
 
 func start_attempt(fixture:Dictionary={}) -> void:
  var step:int=mini(4,maxi(0,app.rules.actual_attempt-1))
@@ -15,28 +17,40 @@ func start_attempt(fixture:Dictionary={}) -> void:
  data={"dog":{"present":dog,"alive":true,"pos":[3.1,1.6],"phase":"idle","route":[],"target":-1,"left":0.0,"remaining":3},
   "cat":{"present":cat,"pos":xy(app.layout.furniture[index].at),"point":index,"rounds":0,"phase":"occupy","left":0.0,"route":[]},
   "fighting":dog and cat,"tracked_search":"","counted":{},"blocked_search":"","blocked_left":0.0,"dog_serial":0,"key_drop":[]}
+ data.dialogue_choices={};data.dialogue_played={}
  if data.fighting:
   data.dog.pos=[3.15,1.6];data.cat.pos=[3.5,1.6]
  if not enabled:return
  if dog:app.rules.observe("人物","dog","大黄，戴着红项圈；本周目实际见到。")
  if cat:app.rules.observe("人物","cat","一只黑猫占着物件旁的位置。")
  if dog and cat:
-  app.add_dialogue("角色 · 疑问","这是在?... ...玩?...好甜蜜呀")
-  app.add_dialogue("玩家 · 无语","... ... ?")
+  cue("DOG_CAT_FIGHT","arrival")
  elif dog:
-  app.add_dialogue("角色 · 疑问","啊...大黄怎么在这?")
-  app.add_dialogue("玩家 · 无语","我也想知道")
-  app.add_dialogue("大黄 · 发呆","... ...")
+  cue("DOG_OPEN","arrival")
   app.add_dialogue("大黄 · 可爱","汪...(●'◡'●)")
   app.add_dialogue("角色 · 开心","汪...大黄很可爱哦")
   app.add_dialogue("玩家 · 无语","我是在期待什么?...赶紧给我说正事啊喂")
-  app.add_dialogue("角色 · 认真","大黄呐...我有个任务交给你")
+  cue("DOG_HELP","request")
   app.add_dialogue("大黄 · 认真","汪!")
   app.add_dialogue("玩家 · 认真","这家伙现在是要找那小狗帮忙了...得注意一下")
+  cue("DOG_THANK","initial")
  elif cat:
-  app.add_dialogue("角色 · 疑问","啊...它为什么会在这?")
-  app.add_dialogue("玩家 · 好奇","我同样也想知道")
-  app.add_dialogue("黑猫 · 不屑","... ...")
+  cue("CAT_OPEN","arrival")
+
+func cue(id:String,node:String,allowed:Array=[]) -> void:
+ var key:String=id+":"+node
+ if not data.has("dialogue_played"):data.dialogue_played={}
+ if not data.has("dialogue_choices"):data.dialogue_choices={}
+ if data.dialogue_played.has(key):return
+ var variants:Array=dialogue[id].variants
+ if not data.dialogue_choices.has(key):
+  data.dialogue_choices[key]=app.rng.randi_range(0,variants.size()-1) if allowed.is_empty() else allowed[app.rng.randi_range(0,allowed.size()-1)]
+ data.dialogue_played[key]=true
+ for line in variants[int(data.dialogue_choices[key])]:app.add_dialogue(str(line.speaker),str(line.text))
+
+func start_exploration_line() -> void:
+ if app.session.has_key() or app.rules.mode!="exploration" or app.family.busy():return
+ cue("S1_START","attempt",[] if app.rules.actual_attempt<=1 else [2,4])
 
 func xy(p:Vector2) -> Array:
  return [p.x,p.y]
@@ -74,16 +88,15 @@ func tick(delta:float) -> void:
    if distance>0.4:
     move("cat",app.hero_pos,delta,2.0)
    elif app.rules.commit_hit("cat:%d"%app.rules.actual_attempt,distance,app.layout.clear_segment(position("cat"),app.hero_pos),true,true):
-    app.status_visible=true
     app.rules.observe("人物","cat_hit:%d"%app.rules.actual_attempt,"黑猫实际抓伤了角色，生命和精神各降低10。")
     app.audio.cue("hit","cat:%d"%app.rules.actual_attempt)
-    if app.rules.hp>0:app.add_dialogue("角色 · 难受","I Feel bad")
+    if app.rules.hp>0:cue("CAT_HIT_FEEDBACK","injury")
     leave_cat()
  if cat.present and cat.phase=="leave":
   if move("cat",Vector2(3.95,3.6),delta,1.8):
    cat.present=false
-   app.add_dialogue("黑猫","喵@#￥%……")
-   if app.rules.hp>0:app.add_dialogue("角色 · 震惊","？？？")
+   if app.rules.hp>0:cue("CAT_EXIT","window")
+   else:app.add_dialogue("黑猫","喵@#￥%……")
 
 func track_hero_search(delta:float) -> void:
  var cat:Dictionary=data.cat
@@ -98,8 +111,7 @@ func track_hero_search(delta:float) -> void:
   if data.blocked_left<=0 and cat.phase=="occupy":
    app.rules.cancel_search()
    app.hero_state="idle";app.target_index=-1
-   app.add_dialogue("黑猫 · 警惕","喵?!")
-   app.add_dialogue("角色 · 糊弄","我就是不小心碰到了")
+   cue("CAT_BLOCK",str(data.blocked_search))
    data.blocked_search=""
  if not str(data.tracked_search).is_empty() and app.rules.settled.has(data.tracked_search) and not data.counted.has(data.tracked_search):
   data.counted[data.tracked_search]=true
@@ -113,7 +125,7 @@ func anomaly(point:int,result:Dictionary) -> void:
  data.cat.phase="attack";data.cat.left=0.22
  app.rules.cancel_search()
  data.blocked_search=""
- app.add_dialogue("黑猫 · 生气","喵!!!")
+ cue("CAT_HIT_START","scare")
 
 func leave_cat() -> void:
  data.cat.phase="leave";data.cat.route=[]
@@ -147,7 +159,7 @@ func advance_dog(delta:float) -> void:
     dog.phase="bring";dog.route=[]
    else:
     dog.phase="idle"
-    if int(dog.remaining)==0:app.add_dialogue("角色 · 开心","好狗狗")
+    if int(dog.remaining)==0:cue("DOG_THANK","complete")
  if dog.phase=="bring":
   if move("dog",app.hero_pos,delta,1.2):
    var receipt:String="dog_key:%d"%app.rules.actual_attempt
@@ -157,7 +169,7 @@ func advance_dog(delta:float) -> void:
     app.session.data.key_seen=true;app.session.data.key_owner="hero"
     app.rules.observe("物品","key","大黄实际叼回并交付了一把钥匙。")
     dog.phase="idle";dog.route=[]
-    app.add_dialogue("角色 · 开心","好狗狗")
+    cue("DOG_THANK","key")
 
 func kill_dog() -> void:
  if not present("dog") or not data.dog.alive:return

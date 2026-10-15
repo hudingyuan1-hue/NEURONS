@@ -28,6 +28,8 @@ func _init() -> void:
  test_book()
  test_awareness()
  var folder:String=ProjectSettings.globalize_path("res://../docs/validation/b1_20261015")
+ for argument in OS.get_cmdline_user_args():
+  if argument.begins_with("--validation-root="):folder=ProjectSettings.globalize_path(argument.trim_prefix("--validation-root="))
  DirAccess.make_dir_recursive_absolute(folder)
  var file:=FileAccess.open(folder.path_join("neural_rules.json"),FileAccess.WRITE)
  file.store_string(JSON.stringify({"checks":checks,"failed":failed,"results":results,"scope":"rules only; combat world/NPC not certified"},"  "))

@@ -1,20 +1,20 @@
 {
   "schema_version": 2,
   "kind": "progress",
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "art": [
     {
       "id": "ART_CODE_UI",
-      "status": "B1进行中，部分已验证",
+      "status": "B1进行中，实机分项通过",
       "file": "neurons/scripts/ui/campaign_menu.gd",
-      "notes": "正式入口CRT十二节点、可操作二维冰柜星环、免费观察书签已接；21项GPU自动检查通过；开盖/预览/教程与付费内容未完成。",
+      "notes": "CRT/冰柜/图书/状态与保存保留；新增父亲实时技能指引、首次X有限动效和教程21句/逐句继续/代码鼠标圈。反馈39/0、教程真实鼠标32/0；未读不可跳过施放。教程暗罩/局部虚化、其他技能人体预览/CRT多语言与B1整体仍待。",
       "owner": "Codex"
     },
     {
       "id": "ART_CODE_DERIVED",
       "status": "B1进行中，部分已验证",
       "file": "neurons/scripts/core/neural_rules.gd",
-      "notes": "十二技能时序独立映射与schema2保存接入；规则363项通过，主角/活动柜替换70项GPU回归；正式图未到齐。",
+      "notes": "规则384/0；家庭原句与演出54/0、父母59/0、食用/父亲反馈39/0、不利组合32/0；三次无夹具新档自然到医院，其中一次正常速度。正式造型未获确认，不新增人工条目。",
       "owner": "Codex"
     }
   ],
@@ -23,13 +23,13 @@
       "id": "AUD_CODE_UI",
       "status": "开发链路已接，未听验",
       "file": "neurons/data/audio_bindings.json",
-      "notes": "本地UI开发副本已接，实际加载/暂停检查通过；未主观听验/未核发布许可。"
+      "notes": "冷气等既有材质可走UI通道，世界暂停不误停UI声；正常退出异步Ogg清理已修，最终相关检查stderr空。只加载/播放状态验证，未主观听验。"
     },
     {
       "id": "AUD_CODE_MOVE",
       "status": "开发链路已接，未听验",
       "file": "neurons/data/audio_bindings.json",
-      "notes": "离线脚步/衣料等材质候选已接；未听验，不算音效完成。"
+      "notes": "现有衣料声复用食用准备；每次合法尝试独立音效ID，跨JSON与新尝试不吞重试提示。保留既有脚步材质，未主观听验。"
     },
     {
       "id": "AUD_CODE_BODY",

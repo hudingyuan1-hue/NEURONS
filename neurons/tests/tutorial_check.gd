@@ -13,11 +13,25 @@ func check(value:bool,label:String) -> void:
 func frames(count:int=3) -> void:
  for i in range(count):await get_tree().process_frame
 
+func wait_stage(value:int,limit:int=120) -> void:
+ for i in range(limit):
+  if tutor.stage==value:return
+  await frames(1)
+
+func read_lesson() -> void:
+ for attempt in range(300):
+  if not is_instance_valid(tutor) or not tutor.lesson_pending():return
+  if tutor.next.visible and not tutor.next.disabled:tutor.next.pressed.emit()
+  await frames(1)
+ check(false,"finite handler lesson reading completes")
+
 func capture(name:String) -> void:
  await frames();await RenderingServer.frame_post_draw
  get_viewport().get_texture().get_image().save_png(ProjectSettings.globalize_path(folder).path_join(name+".png"))
 
 func _ready() -> void:
+ for argument in OS.get_cmdline_user_args():
+  if argument.begins_with("--validation-root="):folder=argument.trim_prefix("--validation-root=")
  name="CampaignCheck";frontend=get_parent()
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
  await frames();frontend.show_profile();await frames()
@@ -27,33 +41,42 @@ func _ready() -> void:
  await frames(65)
  check(tutor.stage==1 and app.rules.world_time==0,"bedside introduction uses UI time while formal world stays frozen")
  await capture("01_practice_body")
+ await read_lesson()
  tutor.open_body(MOUSE_BUTTON_LEFT)
  check(tutor.stage==2 and tutor.terminal.visible,"actual left-body handler opens same CRT component")
+ await read_lesson()
  tutor.terminal.nodes.SKIN.mouse_entered.emit();await frames(24)
  check(tutor.stage==3 and not tutor.terminal._description.text.is_empty(),"actual bright-node hover prints description before locked-node lesson")
+ await read_lesson()
  tutor.terminal.nodes.SKIN.mouse_exited.emit();tutor.terminal.nodes.GUT.mouse_entered.emit();await frames(63)
  check(tutor.stage==4 and tutor.demo.neurons==5,"two-second locked hover advances guidance without payment")
  await capture("02_hover_and_coin")
- tutor.terminal.nodes.SKIN.pressed.emit();await frames(4)
+ await read_lesson()
+ tutor.terminal.nodes.SKIN.pressed.emit();await wait_stage(5)
  tutor.manual_paused=true;await frames(12)
  check(tutor.stage==5 and not tutor.demo.pending_neural.is_empty() and tutor.demo.reaction_left==0,"practice pause during close defers actual body reaction")
  check(app.rules.neurons==5 and app.rules.plexus==3 and app.rules.world_time==0,"practice payment never touches formal resources or clock")
- tutor.manual_paused=false;await frames(19)
+ tutor.manual_paused=false;await wait_stage(6)
  check(tutor.stage==6 and tutor.demo.skin_reactions==0 and tutor.demo.evidence.is_empty(),"completed skin reaction produces no adaptation or cognition progress")
  await capture("03_body_response")
- tutor.next.pressed.emit()
+ await read_lesson()
+ await read_lesson()
  tutor.open_body(MOUSE_BUTTON_LEFT)
  check(tutor.stage==7 and not tutor.terminal.visible,"right-body lesson cannot be bypassed with left click")
  tutor.open_body(MOUSE_BUTTON_RIGHT)
  check(tutor.stage==8 and tutor.terminal.panel_mode=="tree","actual right-body handler opens freezer")
- tutor.terminal.tree_nodes.GUT.pressed.emit();await frames(2)
+ await read_lesson()
+ tutor.terminal.tree_nodes.GUT.pressed.emit();await wait_stage(9)
  check(tutor.stage==9,"star-node inspection precedes confirmation")
+ await read_lesson()
  tutor.terminal.tree_action("unlock")
  check(tutor.stage==10 and tutor.demo.skill_states.GUT.unlocked and tutor.demo.plexus==2,"practice star unlock pays one practice cluster")
  check(not app.rules.skill_states.GUT.unlocked and app.rules.plexus==3,"model preview and practice unlock never unlock formal skill")
- await capture("04_star_unlock_preview");await frames(65)
+ await read_lesson()
+ await capture("04_star_unlock_preview");await wait_stage(11)
  check(tutor.stage==11,"two-second UI-only preview completes before exit instruction")
  var history:Array=tutor.history.duplicate()
+ await read_lesson()
  tutor.close_terminal();await frames()
  check(app.tutorial_ui==null and app.profile.tutorial_completed,"closing after full lesson returns to formal game")
  check(app.rules.neurons==5 and app.rules.plexus==3 and app.rules.control_ms==0 and app.rules.evidence.is_empty(),"formal start remains exactly five N, three C, no tutorial progress contamination")
@@ -61,9 +84,11 @@ func _ready() -> void:
  var saved:Dictionary=app.store.load_snapshot()
  check(saved.ok and saved.data.profile.tutorial_completed and saved.data.rules.neurons==5,"actual formal save records completion without reissuing initial resources")
  app.open_tutorial(true);await frames()
+ var lines_before:int=app.dialogue_queue.size()
  check(app.tutorial_ui.guide_only and not app.tutorial_ui.detail.text.contains("120000") and not app.tutorial_ui.detail.text.contains("宿主"),"free guide remains accessible without hidden identity or loss threshold")
  app.tutorial_ui.finish();await frames()
+ check(app.dialogue_queue.size()==lines_before,"guide return never inserts the complete-tutorial hero lines again")
  var f:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
  f.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":true,"scope":"real tutorial UI handlers/clock with independent practice state; no voice/art acceptance"},"  "))
  print("TUTORIAL_CHECK %d passed %d failed"%[passes.size(),failures.size()])
- get_tree().quit(0 if failures.is_empty() else 1)
+ frontend.request_exit(0 if failures.is_empty() else 1)

@@ -37,6 +37,8 @@ func settle_cast(id:String) -> void:
  await hold(0.3)
 
 func _ready() -> void:
+ for argument in OS.get_cmdline_user_args():
+  if argument.begins_with("--validation-root="):folder=argument.trim_prefix("--validation-root=")
  name="CampaignCheck"
  frontend=get_parent()
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
@@ -122,4 +124,4 @@ func _ready() -> void:
  var f:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
  f.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":true,"scope":"formal UI/campaign automation with explicit advanced-tree fixture; no NPC/combat acceptance"},"  "))
  print("B1_UI_CHECK %d passed %d failed"%[passes.size(),failures.size()])
- get_tree().quit(0 if failures.is_empty() else 1)
+ frontend.request_exit(0 if failures.is_empty() else 1)

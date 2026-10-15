@@ -1,0 +1,67 @@
+{
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "baseline": "main/b479f12",
+  "git_writes": false,
+  "development_build_only": true,
+  "pck_check": {
+    "passed": 28,
+    "failed": 0,
+    "stderr_empty": true
+  },
+  "exe_normal_start_and_close": {
+    "window_created": true,
+    "close_message_sent": true,
+    "passed": true,
+    "closed_normally": true,
+    "exit_code": 0,
+    "stderr": null,
+    "scope": "Actual Windows release EXE, normal main scene and OS WM_CLOSE; no custom script/project override; Dummy audio, no full gameplay or listening claim"
+  },
+  "files": [
+    {
+      "path": "exports/resume_20261015/NEURONS.exe",
+      "bytes": 109168640,
+      "sha256": "3d19ee4a764e8bb153bfa7f811f98e0dfb0139c9e0c8bc6b76b93d3ed09185bf"
+    },
+    {
+      "path": "exports/resume_20261015/NEURONS.pck",
+      "bytes": 21255872,
+      "sha256": "bbacddfd4980bdb970e3763a2aceea63c6db10d43dd1e6546758847f37b6a6f8"
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "bytes": 36413,
+      "sha256": "1673adb7ab4c626985accebfc30e4fae223651a764666044dd967e299e27c10f"
+    },
+    {
+      "path": "neurons/scripts/ui/front_end.gd",
+      "bytes": 9071,
+      "sha256": "9aea16846c9c3212aa3f109427293d80b02bfad7021c5dc74aa610b557c9fe74"
+    },
+    {
+      "path": "neurons/scripts/ui/campaign_menu.gd",
+      "bytes": 17739,
+      "sha256": "178a13c879d2fab3973193560057a43190a3839f7711d5c2dd0fbb02b13f3fb8"
+    },
+    {
+      "path": "neurons/scripts/ui/body_preview.gd",
+      "bytes": 2221,
+      "sha256": "c5f32ceb9485f13fa90523ed22a561c3bab789f9ef6a7cc939b0bb60963cfefe"
+    },
+    {
+      "path": "neurons/scripts/ui/tutorial_overlay.gd",
+      "bytes": 9753,
+      "sha256": "f4c6103d7600aa5f3288a40427e2198e54c3991573992c93335d0f3646cdb623"
+    },
+    {
+      "path": "neurons/scripts/ui/feedback_audio.gd",
+      "bytes": 6395,
+      "sha256": "b858fb6f4c9bc61d89846b7a3307f107aa631617c74e10a44757fedb2b032d5e"
+    },
+    {
+      "path": "neurons/scripts/presentation/search_actions.gd",
+      "bytes": 5193,
+      "sha256": "27528fe1483ac4d4924a0142647605de907da370c95847bd05c92c7b19ddebc3"
+    }
+  ]
+}

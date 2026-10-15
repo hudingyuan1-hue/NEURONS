@@ -187,4 +187,4 @@ func _ready() -> void:
  output.store_string(JSON.stringify({"engine":Engine.get_version_info().string,"rendered":true,"passes":passes,"failures":failures,"scope":"profile save/load presentation replacement and L1/L2 exploration; NPC/remaining levels not complete"},"\t"))
  output.close()
  print("CAMPAIGN_CHECK %d passed %d failed"%[passes.size(),failures.size()])
- get_tree().quit(0 if failures.is_empty() else 1)
+ frontend.request_exit(0 if failures.is_empty() else 1)
