@@ -1,0 +1,9 @@
+{
+  "actual_special_escape_verified": true,
+  "forced_father_fixture": true,
+  "initial_5N_3C_preserved": true,
+  "pause_during_close_verified": true,
+  "real_clock_frames": true,
+  "rendered": true,
+  "scope": "continuous automated UI inputs; actor presence fixed, normal rules/timing/cost/contact; graybox art, not human playthrough"
+}

@@ -1,0 +1,383 @@
+{
+  "schema": 1,
+  "points": [
+    {
+      "id": "bed",
+      "source": "S3:T4R2",
+      "action": "床：掀开被角，检查床沿，再蹲下查看床底；作为一次搜寻。",
+      "role_lines": [
+        "这里没有",
+        "我的床铺看来很干净"
+      ],
+      "player_lines": [
+        "床上床下都找了，还真没有。"
+      ],
+      "steps": [
+        {
+          "at": 0.15,
+          "action": "掀被角",
+          "pose": "mid"
+        },
+        {
+          "at": 0.4,
+          "action": "检查床沿",
+          "pose": "mid"
+        },
+        {
+          "at": 0.65,
+          "action": "查看床底",
+          "pose": "low"
+        }
+      ]
+    },
+    {
+      "id": "bedside",
+      "source": "S3:T4R3",
+      "action": "床头柜：移开书本、查看闹钟后方，拉开抽屉翻找。",
+      "role_lines": [
+        "这里也没有",
+        "奇怪...我一般会把东西放床头柜来着..."
+      ],
+      "player_lines": [
+        "一般放这里，这次就不一定了。"
+      ],
+      "steps": [
+        {
+          "at": 0.15,
+          "action": "移开书本",
+          "pose": "mid"
+        },
+        {
+          "at": 0.32,
+          "action": "查看闹钟后方",
+          "pose": "mid"
+        },
+        {
+          "at": 0.55,
+          "action": "拉开抽屉",
+          "pose": "mid"
+        },
+        {
+          "at": 0.75,
+          "action": "翻找抽屉",
+          "pose": "mid"
+        }
+      ]
+    },
+    {
+      "id": "chair",
+      "source": "S3:T4R4",
+      "action": "靠背椅：扶住椅背挪开椅子，检查座面与椅底。",
+      "role_lines": [
+        "这椅子上应该没有的",
+        "椅子很干净"
+      ],
+      "player_lines": [
+        "你倒是先找完再说啊。"
+      ],
+      "steps": [
+        {
+          "at": 0.18,
+          "action": "扶椅背",
+          "pose": "mid"
+        },
+        {
+          "at": 0.35,
+          "action": "挪开椅子",
+          "pose": "mid"
+        },
+        {
+          "at": 0.6,
+          "action": "检查座面",
+          "pose": "mid"
+        },
+        {
+          "at": 0.8,
+          "action": "检查椅底",
+          "pose": "low"
+        }
+      ]
+    },
+    {
+      "id": "desk",
+      "source": "S3:T4R5",
+      "action": "书桌及书：逐叠翻动书本，拨开文具、纸张与纸巾；不一挥手完成搜寻。",
+      "role_lines": [
+        "这...桌上太乱了...还是没有",
+        "...好乱...不过应该没有"
+      ],
+      "player_lines": [
+        "这么乱找得到才怪呢..."
+      ],
+      "steps": [
+        {
+          "at": 0.18,
+          "action": "翻动第一叠书",
+          "pose": "mid"
+        },
+        {
+          "at": 0.38,
+          "action": "翻动第二叠书",
+          "pose": "mid"
+        },
+        {
+          "at": 0.58,
+          "action": "拨开文具纸张",
+          "pose": "mid"
+        },
+        {
+          "at": 0.78,
+          "action": "查看纸巾下方",
+          "pose": "mid"
+        }
+      ]
+    },
+    {
+      "id": "stool",
+      "source": "S3:T4R6",
+      "action": "小圆凳：扶稳蓝色圆凳，打开其上的纸箱，翻查箱底。",
+      "role_lines": [
+        "这纸箱里也没有的",
+        "... ...没有钥匙"
+      ],
+      "player_lines": [
+        "别找完又把箱子盖上了，下次还翻它。"
+      ],
+      "steps": [
+        {
+          "at": 0.15,
+          "action": "扶稳蓝色圆凳",
+          "pose": "mid"
+        },
+        {
+          "at": 0.35,
+          "action": "打开纸箱",
+          "pose": "mid"
+        },
+        {
+          "at": 0.65,
+          "action": "翻查箱底",
+          "pose": "mid"
+        }
+      ]
+    },
+    {
+      "id": "box",
+      "source": "S3:T4R7",
+      "action": "杂物箱：把上层纸箱移到旁边，分别检查纸箱与下层塑料箱。",
+      "role_lines": [
+        "费劲...没找到",
+        "箱子里都没有"
+      ],
+      "player_lines": [
+        "搬了半天，白忙。"
+      ],
+      "steps": [
+        {
+          "at": 0.18,
+          "action": "抓住上层纸箱",
+          "pose": "mid"
+        },
+        {
+          "at": 0.35,
+          "action": "移开上层箱",
+          "pose": "mid"
+        },
+        {
+          "at": 0.6,
+          "action": "检查纸箱",
+          "pose": "low"
+        },
+        {
+          "at": 0.8,
+          "action": "检查塑料箱",
+          "pose": "low"
+        }
+      ]
+    },
+    {
+      "id": "rack",
+      "source": "S3:T4R8",
+      "action": "衣帽架：扶住白大褂，依次检查衣袋；翻袖口属于附属观察。",
+      "role_lines": [
+        "..还是没有找到钥匙...但这是谁的衣服？",
+        "衣服包里没有"
+      ],
+      "player_lines": [
+        "你自己的房间，你也不知道？"
+      ],
+      "steps": [
+        {
+          "at": 0.2,
+          "action": "扶住白大褂",
+          "pose": "high"
+        },
+        {
+          "at": 0.4,
+          "action": "检查第一侧衣袋",
+          "pose": "mid"
+        },
+        {
+          "at": 0.7,
+          "action": "检查另一侧衣袋",
+          "pose": "mid"
+        }
+      ]
+    },
+    {
+      "id": "wardrobe",
+      "source": "S3:T4R9",
+      "action": "衣柜：检查已打开的一侧，再翻查另一侧可触及的衣物与底部。",
+      "role_lines": [
+        "..衣柜里也没有？",
+        "这里也没有...奇怪..."
+      ],
+      "player_lines": [
+        "衣服倒是叠得挺齐，桌子怎么不收拾。"
+      ],
+      "steps": [
+        {
+          "at": 0.18,
+          "action": "检查打开的一侧",
+          "pose": "mid"
+        },
+        {
+          "at": 0.4,
+          "action": "翻查衣物",
+          "pose": "high"
+        },
+        {
+          "at": 0.65,
+          "action": "检查另一侧",
+          "pose": "mid"
+        },
+        {
+          "at": 0.85,
+          "action": "查看柜底",
+          "pose": "low"
+        }
+      ]
+    },
+    {
+      "id": "books",
+      "source": "S3:T4R10",
+      "action": "书架：依次查看五层书缝与书后；五层合计一个点位。",
+      "role_lines": [
+        "..书架上也没有...",
+        "钥匙钥匙你在哪..."
+      ],
+      "player_lines": [
+        "你喊它也不会答应啊。"
+      ],
+      "steps": [
+        {
+          "at": 0.16,
+          "action": "检查第一层",
+          "pose": "low"
+        },
+        {
+          "at": 0.32,
+          "action": "检查第二层",
+          "pose": "mid"
+        },
+        {
+          "at": 0.48,
+          "action": "检查第三层",
+          "pose": "mid"
+        },
+        {
+          "at": 0.64,
+          "action": "检查第四层",
+          "pose": "high"
+        },
+        {
+          "at": 0.8,
+          "action": "检查第五层",
+          "pose": "high"
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "source": "S3:T4R11",
+      "action": "储物柜：逐层翻查旧衣杂物，取出露角的病服，查看领口后放回。",
+      "role_lines": [
+        "..储物柜里...怎么...会有一件病服",
+        "这里面没有钥匙...但是好奇怪啊...为什么会有一件病服"
+      ],
+      "player_lines": [
+        "这东西为什么收在你房间里？"
+      ],
+      "steps": [
+        {
+          "at": 0.18,
+          "action": "翻查旧衣杂物",
+          "pose": "mid"
+        },
+        {
+          "at": 0.35,
+          "action": "看见露角血迹",
+          "pose": "high"
+        },
+        {
+          "at": 0.5,
+          "action": "取出展开病服",
+          "pose": "mid"
+        },
+        {
+          "at": 0.75,
+          "action": "翻看磨损领标",
+          "pose": "mid"
+        },
+        {
+          "at": 0.93,
+          "action": "放回病服",
+          "pose": "mid"
+        }
+      ]
+    },
+    {
+      "id": "fan",
+      "source": "S3:T4R12",
+      "action": "立式风扇：蹲下检查外露底座、底座后侧与地面接缝；不拆电机。",
+      "role_lines": [
+        "..风扇底部也没有",
+        "我之前在底部藏过东西...不过这里没有钥匙"
+      ],
+      "player_lines": [
+        "你藏东西的地方还挺多。"
+      ],
+      "steps": [
+        {
+          "at": 0.18,
+          "action": "查看外露底座",
+          "pose": "low"
+        },
+        {
+          "at": 0.45,
+          "action": "检查底座后侧",
+          "pose": "low"
+        },
+        {
+          "at": 0.7,
+          "action": "查看地面接缝",
+          "pose": "low"
+        }
+      ]
+    }
+  ],
+  "test_parameters": {
+    "timing_note": "各子动作进度比例仅表现测试参数；搜寻总时长/扣次/收入仍由规则决定。",
+    "chair_shift": [
+      -0.15,
+      -0.1
+    ],
+    "box_shift": [
+      0.3,
+      -1.0
+    ],
+    "cuff_observation_seconds": 1.2
+  },
+  "uniform_label_fragment": null,
+  "uniform_label_status": "原始标签具体字形未交付；不可编造数字，原画到齐后才登记可读片段。"
+}

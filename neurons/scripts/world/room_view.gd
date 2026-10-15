@@ -113,6 +113,7 @@ func _draw() -> void:
  for f in layout.furniture:
   ordered.append({"type":"furniture","data":f,"depth":layout.project((f.rect as Rect2).end).y})
  ordered.append({"type":"actor","data":"hero","depth":layout.project(app.hero_pos).y})
+ ordered.append_array(extra_actors())
  if app.scenario in [1,2,3]:
   ordered.append({"type":"actor","data":"npc","depth":layout.project(app.npc_pos).y})
  ordered.sort_custom(func(a,b):return a.depth<b.depth)
@@ -135,6 +136,9 @@ func _draw() -> void:
   for p in app.hero_route:
    draw_circle(layout.project(p),1.1,Color("84ddbd"))
   draw_circle(layout.project(app.hero_pos),4,Color("efbe78"),false,1)
+
+func extra_actors() -> Array:
+ return []
 
 func draw_furniture(f:Dictionary) -> void:
  var r:Rect2=f.rect

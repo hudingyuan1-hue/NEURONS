@@ -20,6 +20,7 @@ var furniture: Array[Dictionary] = [
  {"id":"fan", "name":"立式风扇", "rect":Rect2(3.83,0.22,0.4,0.4), "at":Vector2(3.7,0.9), "height":54.0, "color":Color("6d8485"), "kind":"fan"}
 ]
 var grid := AStarGrid2D.new()
+var movable_blockers:Array[Rect2]=[]
 
 func _init() -> void:
  grid.region = Rect2i(0,0,57,39)
@@ -43,6 +44,8 @@ func walkable(p:Vector2, radius:float=RADIUS) -> bool:
  for f in furniture:
   if (f.rect as Rect2).grow(radius).has_point(p):
    return false
+ for rect in movable_blockers:
+  if rect.grow(radius).has_point(p):return false
  return true
 
 func clear_segment(a:Vector2,b:Vector2,radius:float=0.0) -> bool:
@@ -53,6 +56,8 @@ func clear_segment(a:Vector2,b:Vector2,radius:float=0.0) -> bool:
   for f in furniture:
    if (f.rect as Rect2).grow(radius).has_point(p):
     return false
+  for rect in movable_blockers:
+   if rect.grow(radius).has_point(p):return false
  return true
 
 func path(a:Vector2,b:Vector2) -> PackedVector2Array:

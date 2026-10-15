@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "sources": [
+    "S3:P99–249/T2–3",
+    "S4:P129–141/P161/P251–264/T4/T12/T22"
+  ],
+  "probabilities": {
+    "mother_base": 0.12,
+    "father_base": 0.08,
+    "extra_base": 0.08,
+    "growth_per_attempt": 0.02,
+    "ordinary_nodes": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "gift_weights": [
+      0.6,
+      0.3,
+      0.1
+    ]
+  },
+  "timing": {
+    "father_prepare": 2.0,
+    "father_grab": 1.0,
+    "father_stabilize": 2.0,
+    "father_drag_speed": 1.0,
+    "father_world_rate": 0.5,
+    "father_pressure_interval": 1.0,
+    "gift_wait": 3.0,
+    "eat": 1.5
+  },
+  "test_parameters": {
+    "parent_walk_speed": 1.0,
+    "transfer_duration": 0.8,
+    "grab_distance": 0.6,
+    "cat_attempt": 0.5,
+    "dog_search_base": 4.0,
+    "gift_pickup": 0.4,
+    "collapse_caption": 0.7,
+    "death_presentation": 1.0,
+    "note": "仅未定表现/接触测试参数；不改资源、次数、概率、固定技能数值或胜负。"
+  }
+}

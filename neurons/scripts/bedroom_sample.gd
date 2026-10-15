@@ -5,7 +5,7 @@ const Layout=preload("res://scripts/world/room_layout.gd")
 const RoomView=preload("res://scripts/world/room_view.gd")
 const Menu=preload("res://scripts/ui/neuron_menu.gd")
 const Feedback=preload("res://scripts/ui/feedback_audio.gd")
-var rules:InteractionRules
+var rules
 var layout:RoomLayout
 var view:Node2D
 var camera:Camera2D
@@ -82,7 +82,7 @@ func _ready() -> void:
  theme.default_font_size=17
  create_world()
  create_ui()
- menu=Menu.new()
+ menu=make_menu()
  add_child(menu)
  menu.cast_requested.connect(cast_skin)
  menu.close_requested.connect(close_neuron_menu)
@@ -100,6 +100,9 @@ func _ready() -> void:
   var driver:=Node.new()
   driver.set_script(load("res://tests/bedside_check.gd" if "--bedside-check" in OS.get_cmdline_user_args() else "res://tests/visual_check.gd"))
   add_child(driver)
+
+func make_menu() -> Control:
+ return Menu.new()
 
 func create_world() -> void:
  var container:=SubViewportContainer.new()
@@ -323,11 +326,14 @@ func _process(delta:float) -> void:
  sync_audio_pause()
  if not world_paused():
   if not rules.pending_skin.is_empty():apply_cast()
-  if not world_paused():advance_world(delta*(0.5 if scenario==2 else 1.0))
+  if not world_paused():advance_world(delta*world_rate())
  update_ui()
  view.queue_redraw()
  if demo_mode:
   run_visual_check(delta)
+
+func world_rate() -> float:
+ return 0.5 if scenario==2 else 1.0
 
 func advance_world(delta:float) -> void:
  world_visual_time+=delta

@@ -1,16 +1,18 @@
 extends Control
 const Campaign=preload("res://scripts/campaign.gd")
 const Store=preload("res://scripts/core/save_store.gd")
+const Feedback=preload("res://scripts/ui/feedback_audio.gd")
 var store=Store.new()
 var active:Control
 var content:VBoxContainer
 var message:Label
 var name_field:LineEdit
 var overwrite_armed:bool=false
-var preferences:Dictionary={"master":0.8,"reduced":true}
+var preferences:Dictionary={"master":0.8,"reduced":true,"channels":{"ui":0.7,"world":0.7,"ambience":0.5,"music":0.5,"voice":0.8}}
 var volume_slider:HSlider
 var reduced_box:CheckBox
 var pending_invader_id:int=0
+var title_audio
 
 func _ready() -> void:
  process_mode=Node.PROCESS_MODE_ALWAYS
@@ -23,13 +25,14 @@ func _ready() -> void:
  if config.load(store.root.path_join("preferences.cfg"))==OK:
   preferences.master=clampf(float(config.get_value("audio","master",0.8)),0,1)
   preferences.reduced=bool(config.get_value("visual","reduced",true))
+  for channel in preferences.channels:preferences.channels[channel]=clampf(float(config.get_value("audio",channel,preferences.channels[channel])),0,1)
  if "--visual-check" in OS.get_cmdline_user_args() or "--bedside-check" in OS.get_cmdline_user_args():
   call_deferred("open_legacy_check")
   return
  create_title()
- if "--campaign-check" in OS.get_cmdline_user_args():
+ if "--campaign-check" in OS.get_cmdline_user_args() or "--b1-check" in OS.get_cmdline_user_args() or "--animals-check" in OS.get_cmdline_user_args() or "--family-check" in OS.get_cmdline_user_args() or "--story-record" in OS.get_cmdline_user_args() or "--search-actions-check" in OS.get_cmdline_user_args() or "--tutorial-check" in OS.get_cmdline_user_args() or "--awareness-check" in OS.get_cmdline_user_args():
   var driver:=Node.new()
-  driver.set_script(load("res://tests/campaign_check.gd"))
+  driver.set_script(load("res://tests/awareness_check.gd" if "--awareness-check" in OS.get_cmdline_user_args() else "res://tests/tutorial_check.gd" if "--tutorial-check" in OS.get_cmdline_user_args() else "res://tests/search_actions_check.gd" if "--search-actions-check" in OS.get_cmdline_user_args() else "res://tests/story_record.gd" if "--story-record" in OS.get_cmdline_user_args() else "res://tests/family_check.gd" if "--family-check" in OS.get_cmdline_user_args() else "res://tests/animals_check.gd" if "--animals-check" in OS.get_cmdline_user_args() else "res://tests/b1_check.gd" if "--b1-check" in OS.get_cmdline_user_args() else "res://tests/campaign_check.gd"))
   add_child(driver)
 
 func open_legacy_check() -> void:
@@ -44,6 +47,10 @@ func clear_title() -> void:
 
 func create_title() -> void:
  clear_title()
+ title_audio=Feedback.new()
+ add_child(title_audio)
+ title_audio.set_level("master",float(preferences.master))
+ title_audio.cue("MUS_MENU","title")
  var bg:=ColorRect.new()
  bg.color=Color("17272a")
  bg.size=Vector2(1280,720)
@@ -102,7 +109,7 @@ func new_game() -> void:
   overwrite_armed=true
   message.text="已有档案；再次点击“建立并开始”确认覆盖（保留上一份备份）。"
   return
- var profile:Dictionary={"name":name_field.text.strip_edges(),"invader_id":pending_invader_id}
+ var profile:Dictionary={"name":name_field.text.strip_edges(),"invader_id":pending_invader_id,"tutorial_completed":false}
  launch(profile,{})
  active.save_requested=true
 
@@ -114,6 +121,7 @@ func continue_game() -> void:
  launch(result.data.profile,result.data)
 
 func launch(profile:Dictionary,snapshot:Dictionary) -> void:
+ if is_instance_valid(title_audio):title_audio.reset_scene()
  clear_title()
  active=Campaign.new()
  active.name="Campaign"
@@ -123,6 +131,13 @@ func launch(profile:Dictionary,snapshot:Dictionary) -> void:
  active.return_to_title.connect(close_campaign)
  add_child(active)
  active.audio.set_level("master",float(preferences.master))
+ for channel in preferences.channels:active.audio.set_level(channel,float(preferences.channels[channel]))
+ active.audio.level_changed.connect(func(channel:String,value:float):
+  if channel=="master":preferences.master=value
+  else:preferences.channels[channel]=value
+  save_preferences()
+ )
+ active.visual_preferences_changed.connect(func(value:bool):preferences.reduced=value;save_preferences())
  active.reduced_effects=bool(preferences.reduced)
  active.menu.reduced_effects=bool(preferences.reduced)
 
@@ -160,11 +175,21 @@ func show_settings() -> void:
 func apply_settings() -> void:
  preferences.master=volume_slider.value
  preferences.reduced=reduced_box.button_pressed
+ if is_instance_valid(title_audio):title_audio.set_level("master",float(preferences.master))
  AudioServer.set_bus_volume_db(0,0) # Per-channel master gain is applied once in FeedbackAudio.
  var config:=ConfigFile.new()
  config.set_value("audio","master",preferences.master)
  config.set_value("visual","reduced",preferences.reduced)
+ for channel in preferences.channels:config.set_value("audio",channel,preferences.channels[channel])
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(store.root))
  var result:int=config.save(store.root.path_join("preferences.cfg"))
  message.text="设置已保存" if result==OK else "设置本次有效；文件无法写入：%s"%result
+
+func save_preferences() -> void:
+ var config:=ConfigFile.new()
+ config.set_value("audio","master",preferences.master)
+ config.set_value("visual","reduced",preferences.reduced)
+ for channel in preferences.channels:config.set_value("audio",channel,preferences.channels[channel])
+ DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(store.root))
+ config.save(store.root.path_join("preferences.cfg"))
 

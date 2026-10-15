@@ -1,4 +1,5 @@
 extends AudioStreamPlayer
+signal level_changed(channel:String,value:float)
 ## User audio replaces provisional tones. Playback cannot submit game facts.
 const CUES := {
  "open":["SFX_UI_CONFIRM","ui",170.0], "close":["SFX_UI_BACK","ui",120.0],
@@ -25,6 +26,7 @@ func _ready() -> void:
    add_child(player)
    channels[channel].append(player)
  refresh_levels()
+
  var bindings=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_bindings.json"))
  if bindings is Dictionary:
   for entry in bindings.get("assets",[]):
@@ -51,6 +53,7 @@ func set_level(channel:String, value:float) -> void:
  if not levels.has(channel):return
  levels[channel]=clampf(value,0,1)
  refresh_levels()
+ level_changed.emit(channel,float(levels[channel]))
 
 func refresh_levels() -> void:
  for channel in channels:
@@ -71,6 +74,34 @@ func reset_scene() -> void:
    player.stream=null
  played_events.clear()
  starts.clear()
+
+func stop_channel(channel:String) -> void:
+ for player in channels.get(channel,[]):player.stop()
+
+func snapshot_playback() -> Dictionary:
+ var playing:Array=[]
+ for channel in channels:
+  for player in channels[channel]:
+   if player.playing:
+    playing.append({"id":str(player.get_meta("cue_id","")),"position":player.get_playback_position(),"channel":channel})
+ return {"receipts":played_events.duplicate(true),"playing":playing}
+
+func restore_playback(state:Dictionary) -> void:
+ reset_scene()
+ played_events=state.get("receipts",{}).duplicate(true)
+ for entry in state.get("playing",[]):
+  var id:String=str(entry.id)
+  if not assets.has(id):continue
+  var spec:Dictionary=assets[id]
+  var position:float=float(entry.position)
+  if position<0 or position>=spec.stream.get_length():continue
+  for player in channels[spec.channel]:
+   if player.playing:continue
+   player.stream=spec.stream
+   player.set_meta("cue_id",id)
+   player.play(position)
+   player.stream_paused=voice_frozen if spec.channel=="voice" else world_frozen if spec.channel!="ui" else false
+   break
 
 func cue(kind:String, event_id:String="") -> bool:
  var spec:Array=CUES.get(kind,[kind,"world",0.0])
@@ -101,6 +132,7 @@ func cue(kind:String, event_id:String="") -> bool:
   if channel=="world":return false # No delayed replay queue.
   player=channels[channel][0]
  player.stream=sound
+ player.set_meta("cue_id",id)
  player.stream_paused=false
  player.play()
  if not event_id.is_empty():played_events[key]=true

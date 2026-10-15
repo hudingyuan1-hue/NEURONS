@@ -2,6 +2,46 @@
   "schema_version": 2,
   "kind": "progress",
   "updated": "2026-10-15",
-  "art": [],
-  "audio": []
+  "art": [
+    {
+      "id": "ART_CODE_UI",
+      "status": "B1进行中，部分已验证",
+      "file": "neurons/scripts/ui/campaign_menu.gd",
+      "notes": "正式入口CRT十二节点、可操作二维冰柜星环、免费观察书签已接；21项GPU自动检查通过；开盖/预览/教程与付费内容未完成。",
+      "owner": "Codex"
+    },
+    {
+      "id": "ART_CODE_DERIVED",
+      "status": "B1进行中，部分已验证",
+      "file": "neurons/scripts/core/neural_rules.gd",
+      "notes": "十二技能时序独立映射与schema2保存接入；规则363项通过，主角/活动柜替换70项GPU回归；正式图未到齐。",
+      "owner": "Codex"
+    }
+  ],
+  "audio": [
+    {
+      "id": "AUD_CODE_UI",
+      "status": "开发链路已接，未听验",
+      "file": "neurons/data/audio_bindings.json",
+      "notes": "本地UI开发副本已接，实际加载/暂停检查通过；未主观听验/未核发布许可。"
+    },
+    {
+      "id": "AUD_CODE_MOVE",
+      "status": "开发链路已接，未听验",
+      "file": "neurons/data/audio_bindings.json",
+      "notes": "离线脚步/衣料等材质候选已接；未听验，不算音效完成。"
+    },
+    {
+      "id": "AUD_CODE_BODY",
+      "status": "开发链路已接，未听验",
+      "file": "neurons/data/audio_bindings.json",
+      "notes": "离线抓挠/腹部候选按事件接入；未听验。"
+    },
+    {
+      "id": "AUD_MUSIC_ROOM",
+      "status": "开发链路已接，未听验",
+      "file": "neurons/data/audio_bindings.json",
+      "notes": "用户本地MUS_MENU/ROOM转换开发副本已播放，保留母版；不循环，循环与情绪未听验。"
+    }
+  ]
 }
