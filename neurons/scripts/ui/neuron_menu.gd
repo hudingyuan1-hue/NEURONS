@@ -7,7 +7,7 @@ signal close_requested
 @export var reduced_effects: bool = false
 
 const FONT_PATH := "res://assets/fonts/NotoSansCJKsc-Regular.otf"
-const PLAYER_PREVIEW_PATH := "res://assets/player/player_master_preview_v001.png"
+const PLAYER_PREVIEW_PATH := "" # v001 rejected by user; keep source, stop adoption.
 const INK := Color("#c6d9be")
 const DIM := Color("#53635b")
 const ACCENT := Color("#b7d6a4")
@@ -178,10 +178,10 @@ void fragment() {
 	preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	preview.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	preview.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	if ResourceLoader.exists(PLAYER_PREVIEW_PATH):
+	if not PLAYER_PREVIEW_PATH.is_empty() and ResourceLoader.exists(PLAYER_PREVIEW_PATH):
 		preview.texture = load(PLAYER_PREVIEW_PATH) as Texture2D
 	add_child(preview)
-	_label(self, "玩家小怪物 · 母图候选\n造型待确认", Rect2(255, 598, 360, 65), 18, INK)
+	_label(self, "玩家小怪物 · 使用占位\n正式形象由用户制作", Rect2(255, 598, 360, 65), 18, INK)
 	_label(self, "ESC 关闭", Rect2(1000, 651, 160, 30), 17, INK)
 
 

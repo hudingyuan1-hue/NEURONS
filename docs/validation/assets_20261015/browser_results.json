@@ -1,0 +1,22 @@
+[
+  {
+    "kind": "art",
+    "count": 793,
+    "visible": 1,
+    "roundtrip": true,
+    "otherKind": true,
+    "duplicateRejected": true,
+    "download": true,
+    "errors": []
+  },
+  {
+    "kind": "audio",
+    "count": 496,
+    "visible": 1,
+    "roundtrip": true,
+    "otherKind": true,
+    "duplicateRejected": true,
+    "download": true,
+    "errors": []
+  }
+]

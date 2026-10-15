@@ -1,0 +1,162 @@
+{
+  "reused_complete_originals_and_pdfs": [
+    {
+      "path": "DOCX/早期文档/游玩体验 需求.docx",
+      "sha256": "9b0a0316fd7101ca519abd3386fe21778c8f41de3d3966014323e8a9b254982a",
+      "complete_read_reused": true,
+      "prior_read_blocks_or_pages": 337,
+      "images_reviewed_previously": 39
+    },
+    {
+      "path": "DOCX/早期文档/人物.docx",
+      "sha256": "77bc60e16afd60c719dead04db32b10648a4a8806aa0d1e076648e2386de48db",
+      "complete_read_reused": true,
+      "prior_read_blocks_or_pages": 314,
+      "images_reviewed_previously": 0
+    },
+    {
+      "path": "DOCX/早期文档/关卡 周目 环境.docx",
+      "sha256": "a25042016ddc4acd92a00c5df9fc5caf2070f354add48dd3df37597983493e79",
+      "complete_read_reused": true,
+      "prior_read_blocks_or_pages": 328,
+      "images_reviewed_previously": 50
+    },
+    {
+      "path": "DOCX/视觉建议/game_visual_reference_library_optimized.pdf",
+      "sha256": "8b4d789bc09b0171cd52fb7834aac6c243edf9427aa7eb71467e6b403c3ff535",
+      "complete_read_reused": true,
+      "prior_read_blocks_or_pages": 5,
+      "images_reviewed_previously": 0
+    },
+    {
+      "path": "DOCX/视觉建议/Shader视觉效果与风格总清单_高覆盖率核验版.pdf",
+      "sha256": "a14194be779d919db0478cf32fbc4c0730b6c61cb71594b009ea91ad2b7cb66d",
+      "complete_read_reused": true,
+      "prior_read_blocks_or_pages": 6,
+      "images_reviewed_previously": 0
+    }
+  ],
+  "supplement_read": [
+    {
+      "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第4轮_医院联动与转运测试.zip",
+      "entry": "NEURONS_Stage5_R4/规则接入与修订.md",
+      "sha256": "301b512d8508b5518c8fe52341634d43637223c41b1cb176b967e62a08c3431c",
+      "read": "全文；新本轮补读；未执行归档代码"
+    },
+    {
+      "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第9轮_角落病友与作业康复联动测试.zip",
+      "entry": "neurons_stage5_r9/source_boundary_audit.txt",
+      "sha256": "da2365a858c60339b567a144970dc7bc92dc52f9f4b2e80c3ee3cce533b15cda",
+      "read": "全文；新本轮补读；未执行归档代码"
+    },
+    {
+      "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第12轮_第五关二三层联动测试.zip",
+      "entry": "neurons_stage5_r12/revisions.json",
+      "sha256": "f4fd5902bf0a7ff086ffc391fd3ccf4813d80925b1235caf65421e552222d807",
+      "read": "全文；新本轮补读；未执行归档代码"
+    }
+  ],
+  "stage5_reuse_checks": [
+    {
+      "archive": "NEURONS_第五阶段第18轮_不利路线与结局测试.zip",
+      "entry": "stage5_r18/CONTINUE.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第18轮_不利路线与结局测试.zip",
+      "entry": "stage5_r18/README.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第17轮_存读档与跨关继承测试.zip",
+      "entry": "neurons_stage5_r17/CONTINUE.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第17轮_存读档与跨关继承测试.zip",
+      "entry": "neurons_stage5_r17/README.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第13轮续_技能链路测试.zip",
+      "entry": "neurons_stage5_r13_skills/CONTINUE.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第13轮续_技能链路测试.zip",
+      "entry": "neurons_stage5_r13_skills/README.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第13轮续_技能链路测试.zip",
+      "entry": "neurons_stage5_r13_skills/effects_notes.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第13轮续_技能链路测试.zip",
+      "entry": "neurons_stage5_r13_skills/family_skill_notes.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第13轮续_技能链路测试.zip",
+      "entry": "neurons_stage5_r13_skills/skills_notes.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第14轮_探索技能与交互测试.zip",
+      "entry": "neurons_stage5_r14/ADAPTER_CONTRACT.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第14轮_探索技能与交互测试.zip",
+      "entry": "neurons_stage5_r14/CONTINUE.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第14轮_探索技能与交互测试.zip",
+      "entry": "neurons_stage5_r14/README.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第15轮_操作抽样与人物概率测试.zip",
+      "entry": "neurons_stage5_r15/CONTINUE.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第15轮_操作抽样与人物概率测试.zip",
+      "entry": "neurons_stage5_r15/README.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第15轮_操作抽样与人物概率测试.zip",
+      "entry": "neurons_stage5_r15/operations_notes.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第15轮_操作抽样与人物概率测试.zip",
+      "entry": "neurons_stage5_r15/sampling_notes.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第16轮_人物概率与事件接入测试.zip",
+      "entry": "neurons_stage5_r16/CONTINUE.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第16轮_人物概率与事件接入测试.zip",
+      "entry": "neurons_stage5_r16/README.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第16轮_人物概率与事件接入测试.zip",
+      "entry": "neurons_stage5_r16/operations_notes.txt",
+      "unchanged_from_prior_read": true
+    },
+    {
+      "archive": "NEURONS_第五阶段第16轮_人物概率与事件接入测试.zip",
+      "entry": "neurons_stage5_r16/sampling_notes.txt",
+      "unchanged_from_prior_read": true
+    }
+  ],
+  "corrections": "纠错.docx P1–136全文补读；五选一/旧猫/旧升级等仅由S1–S4明确替换条款覆盖；Doctor仅P1–27外观，未采用其过时规则"
+}

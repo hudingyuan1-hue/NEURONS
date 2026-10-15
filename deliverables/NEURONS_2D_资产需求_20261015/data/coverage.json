@@ -1,0 +1,57 @@
+{
+  "scope": "完整需求初表；非最终逐项制作/台本审核完成",
+  "art": 793,
+  "audio": 496,
+  "legacy_art_preserved": 773,
+  "legacy_audio_preserved": 244,
+  "art_groups": {
+    "角色精灵": 93,
+    "UI与效果": 174,
+    "物件分层": 253,
+    "二维物件或角色": 5,
+    "场景分层": 62,
+    "动作": 81,
+    "肖像": 86,
+    "开场与结局": 26,
+    "角色外观层": 12,
+    "文字资源": 1
+  },
+  "audio_groups": {
+    "音乐": 15,
+    "环境": 12,
+    "音效": 70,
+    "角色非语言": 4,
+    "对白": 388,
+    "待核台本": 3,
+    "台本待核": 4
+  },
+  "first_art": [
+    "CHR_MAIN",
+    "CHR_MAIN_ACT_IDLE",
+    "CHR_MAIN_ACT_WALK",
+    "CHR_MAIN_ACT_SEARCH",
+    "CHR_MAIN_SKILL_SKIN",
+    "ENV_BEDSIDE",
+    "ENV_SMALL_PROPS_KEY",
+    "CHR_PLAYER_MASTER_2D",
+    "UI_SKILL_SKIN"
+  ],
+  "first_audio": [
+    "SFX_UI_CONFIRM",
+    "SFX_UI_DENIED",
+    "SFX_DRAWER",
+    "SFX_FOOTSTEP",
+    "SFX_KEY",
+    "SFX_ITEM_HANDOFF",
+    "SFX_SKIN",
+    "SFX_CRT_ON",
+    "SFX_CRT_OFF"
+  ],
+  "open_items": [
+    "旧表NPC动作与表情数为候选，逐人物实现前校准",
+    "照片参与者等原稿未指定内容不自动生成",
+    "主角年龄/具体发型未确认",
+    "原文对白中的随机/同框/动态名字需分轨校对",
+    "R1结局/尾声已补读，E1无原对白，不擅加旁白"
+  ]
+}

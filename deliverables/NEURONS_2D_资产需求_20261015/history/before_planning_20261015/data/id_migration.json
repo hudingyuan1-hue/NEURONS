@@ -1,0 +1,5162 @@
+{
+  "art": {
+    "CHR_MAIN": {
+      "status": "程序占位已接入；正式由用户制作",
+      "alias_of": ""
+    },
+    "SYS_CRT": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SYS_FREEZER": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SYS_BOOK": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_BED": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_BEDSIDE": {
+      "status": "已有局部候选；功能已测；美术未定稿",
+      "alias_of": ""
+    },
+    "ENV_DESK": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_CHAIR": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_STOOL": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_TRUNK": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_COATRACK": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_STORAGE": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_BOOKSHELF": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_WARDROBE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_FAN": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_LAMP": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_01_05_01": {
+      "status": "停用",
+      "alias_of": "CHR_PLAYER_MASTER_2D"
+    },
+    "CHR_PLAYER_01_05_02": {
+      "status": "停用",
+      "alias_of": "CHR_PLAYER_MASTER_2D"
+    },
+    "CHR_PLAYER_01_05_03": {
+      "status": "停用",
+      "alias_of": "CHR_PLAYER_MASTER_2D"
+    },
+    "CHR_PLAYER_01_05_04": {
+      "status": "停用",
+      "alias_of": "CHR_PLAYER_MASTER_2D"
+    },
+    "CHR_PLAYER_01_05_05": {
+      "status": "停用",
+      "alias_of": "CHR_PLAYER_MASTER_2D"
+    },
+    "SYS_BOOK_PROP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_013": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_014": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_015": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_016": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_017": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_018": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_019": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_020": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_021": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_022": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_023": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_024": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_025": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_026": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_027": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_WINDOW": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_029": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_030": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_031": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_032": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_033": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_034": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_035": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_036": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_037": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_038": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_039": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_040": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_041": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_042": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_043": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_044": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_045": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_046": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_047": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_048": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_049": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_050": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_051": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_052": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_053": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_054": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_055": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_056": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_057": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_058": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_059": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_060": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_061": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_062": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_063": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_064": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_065": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_066": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_067": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_068": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_069": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_070": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_071": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_072": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_073": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_074": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_075": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_076": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_077": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_078": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_079": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_080": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_081": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_082": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_083": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_084": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_085": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_086": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_087": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_088": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_089": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_090": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_091": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_092": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_093": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_094": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_095": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_096": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_097": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_098": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_099": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_100": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_101": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_102": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_103": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_104": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_105": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_106": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_107": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_108": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_109": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_110": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_111": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_112": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_113": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_114": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_115": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_116": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_117": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_118": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_119": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_120": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_121": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_122": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_123": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_124": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_125": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_126": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_127": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_128": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_129": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_130": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_131": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_132": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_133": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_134": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ALL_135": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_136": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_137": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_138": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_139": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_140": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_141": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_142": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_143": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_144": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_145": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_146": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_147": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_148": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_149": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_150": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_151": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_152": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_153": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_154": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_155": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_156": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_157": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_158": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_159": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_160": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_161": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_162": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_163": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_164": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_165": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_166": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_167": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_168": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_169": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_170": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_171": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_172": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_173": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_174": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_175": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_176": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_177": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_178": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_179": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_180": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_181": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_182": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_183": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_184": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_185": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_186": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_187": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_188": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_189": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_190": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_191": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_192": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_193": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_194": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ALL_195": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L1_ROOM": {
+      "status": "墙地已接入；v005仅候选未整体铺图",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L2_WARD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L2_LOBBY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L2_CLINIC": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L2_PHARMACY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L2_OFFICE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_WARD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_RECEPTION": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_CLINIC": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_TREATMENT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_OFFICE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_STAIRS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_CORRIDOR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_ACTIVITY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_GROUP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_QUIET": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_BATH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_DOUBLE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L3_WORK": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_ATRIUM": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_MEMORY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_VISUAL": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_DECISION": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_BODY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_BRIDGE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_RHYTHM": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_INDEX": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_SWITCH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_VERIFY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_IDENTITY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L5_THALAMUS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L5_CEREBELLUM": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L5_BRAINSTEM": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L5_HYPOTHALAMUS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L5_BASAL": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L5_HIPPOCAMPUS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L5_AMYGDALA": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L6_SQUARE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L6_SIDE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L6_NARROW": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L6_TWIST": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L6_MAINT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L6_MUTATION": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L6_EXIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L4_ATRIUM_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_ATRIUM"
+    },
+    "ENV_ROOM_L4_MEMORY_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_MEMORY"
+    },
+    "ENV_ROOM_L4_VISUAL_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_VISUAL"
+    },
+    "ENV_ROOM_L4_DECISION_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_DECISION"
+    },
+    "ENV_ROOM_L4_BODY_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_BODY"
+    },
+    "ENV_ROOM_L4_BRIDGE_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_BRIDGE"
+    },
+    "ENV_ROOM_L4_RHYTHM_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_RHYTHM"
+    },
+    "ENV_ROOM_L4_INDEX_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_INDEX"
+    },
+    "ENV_ROOM_L4_SWITCH_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_SWITCH"
+    },
+    "ENV_ROOM_L4_VERIFY_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_VERIFY"
+    },
+    "ENV_ROOM_L4_IDENTITY_L5": {
+      "status": "复用+状态层待制作",
+      "alias_of": "ENV_ROOM_L4_IDENTITY"
+    },
+    "ENV_ROOM_TUTORIAL": {
+      "status": "复用卧室",
+      "alias_of": "ENV_ROOM_L1_ROOM"
+    },
+    "ENV_ROOM_HIDDEN_STREET": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_HUNTER": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_HUNTER_ACTION": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_ROOM_HOME_MODULES": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_HOSPITAL_MODULES": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_CORTEX_MODULES": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_STREET_MODULES": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_DOOR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_KEY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PORRIDGE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_CANDY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_CHOCOLATE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_BOTTLE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_CIGARETTE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_GLASSES": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_COLLAR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_DOCTOR_COAT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PATIENT_GOWN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_LAUNDRY_BAG": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_WHEELCHAIR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_STRETCHER": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_NURSING_TRAY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_GAUZE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_WRISTBAND": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_CLIPBOARD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_NUMBER_FOLDER": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_STAMP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_MEDICINE_CUP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_MEDICINE_BOX": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PILLS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_SYRINGE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_SAMPLE_TUBE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_KEYRING": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_RESTRAINT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_BEDSHEET": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_CLEAN_BAG": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_MOP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_RELIC_BAG": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_SHOES": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PHOTO": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_RECORDER_CABLE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PACKING_BOX": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PACKING_TAPE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_CLAMP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PEN": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PAPER": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_ALARM_CLOCK": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_TISSUE": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_TUTOR_GLASSES": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_TUTOR_POINTER": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_TUTOR_HAMMER": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_EYE_INSPECTOR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_BOOK_OPEN": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PENCIL_CASE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_ERASER": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_RULER": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_CLOTH_FOLDED": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_CALL_BUTTON": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_COVER_CLOTH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_TRANSPORT_BOARD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_SOILED_BIN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_OLD_DOOR_SIGN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PAINT_BRUSH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_SMALL_PROPS_PAPER_SCISSORS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_EVENT_BODY_UNKNOWN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENV_ROOM_L1_DESK_DETAIL": {
+      "status": "复用明细",
+      "alias_of": "ENV_DESK"
+    },
+    "CHR_OTHER_NPCS_FATHER": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_FATHER_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_FATHER_PORTRAIT": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_FATHER_ACTION_REF": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N02": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N02_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N02_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N02_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N03": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N03_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N03_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N03_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N04": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N04_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N04_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N04_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N05": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N05_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N05_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N05_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N06": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N06_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N06_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N06_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N07": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N07_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N07_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N07_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N08": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N08_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N08_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N08_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N09": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N09_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N09_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N09_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N10": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N10_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N10_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N10_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N11": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N11_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N11_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N11_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_CAT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_CAT_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_CAT_PORTRAIT": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_CAT_ACTION_REF": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N13": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N13_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N13_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N13_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N14": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N14_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N14_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N14_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N15": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N15_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N15_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N15_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N16": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N16_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N16_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N16_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N17": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N17_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N17_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N17_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N18": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N18_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N18_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N18_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N19": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N19_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N19_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N19_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N20": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N20_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N20_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N20_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N21": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N21_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N21_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N21_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N22": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N22_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N22_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N22_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N23": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N23_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N23_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N23_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N24": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N24_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N24_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N24_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N25": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N25_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N25_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N25_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_DOG": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_DOG_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_DOG_PORTRAIT": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_DOG_ACTION_REF": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N27": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N27_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N27_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N27_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N28": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N28_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N28_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N28_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N29": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N29_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N29_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N29_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N30": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N30_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N30_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N30_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N31": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N31_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N31_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N31_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_MOTHER": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_MOTHER_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_MOTHER_PORTRAIT": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_MOTHER_ACTION_REF": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N33": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N33_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N33_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N33_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N34": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N34_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N34_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N34_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N35": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N35_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N35_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N35_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N36": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N36_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N36_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N36_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N37": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N37_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N37_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N37_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N38": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N38_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N38_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N38_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N39": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N39_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N39_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N39_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N40": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N40_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N40_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N40_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N41": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N41_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N41_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N41_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N42": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N42_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N42_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N42_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N43": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N43_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N43_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N43_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N44": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N44_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N44_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N44_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N45": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N45_ALTERED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N45_PORTRAIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_OTHER_NPCS_N45_ACTION_REF": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_01": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_02": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_03": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_04": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_05": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_06": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_07": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_08": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_09": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_10": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_11": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_12": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_13": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_14": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_15": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_16": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_PORTRAIT_17": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_01": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_02": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_03": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_04": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_05": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_06": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_07": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_08": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_09": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_10": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_11": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_12": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_13": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_14": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_15": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_16": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_17": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_18": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_19": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_20": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_21": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_22": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_23": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_PORTRAIT_24": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_STATE_EARLY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_STATE_STEADY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_STATE_COLD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_STATE_RUTHLESS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_STATE_AWAKEN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_STATE_LOST": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_IDLE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_WALK": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_TURN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_SLEEP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_SEARCH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_PICKUP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_EAT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_DOOR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_MORPH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_HURT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_SCRATCH_HEAD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_ACT_AWAKEN_EVENT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_ACT_BACK": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_ACT_TURN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_ACT_TEACH": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_ACT_HAMMER": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_TUTOR_ACT_PANEL": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_SKILL_SKIN": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_SKIN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_GUT": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_GUT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_PORES": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_PORES": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_TEMP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_TEMP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_TINNITUS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_TINNITUS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_DRYMOUTH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_DRYMOUTH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_KNEE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_KNEE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_WITHDRAW": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_WITHDRAW": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_STARTLE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_STARTLE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_FEAR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_FEAR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_JOY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_JOY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_CONTROL": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_SKILL_CONTROL": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_MENU": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_PROFILE": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "UI_SETTINGS": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_DIALOGUE": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_DIALOGUE_AUTO": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SYS_BOOK_PAGES": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_BOOKMARKS": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_BOOKMARKS_PEOPLE": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_BOOKMARKS_ITEMS": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_BOOKMARKS_ACTOR": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_BOOKMARKS_UNLOCK": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "UI_STATUS": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "UI_SAVE": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "UI_GUIDE": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_TOAST": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_CURSOR": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SYS_CRT_SCREEN": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SYS_CRT_NODE": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SYS_CRT_CODE": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "SYS_STAR_GRAPH": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "SYS_BODY_PREVIEW": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SYS_FREEZER_COMPOSITION": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_NODE_INSPECT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_EMERGENCY": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_INVENTORY": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_PAUSE": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_LOADING": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "UI_ENDING": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "UI_ACHIEVEMENTS": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_ICONS_settings": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_ICONS_book": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_ICONS_back": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_ICONS_close": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_ICONS_pause": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_ICONS_camera_reset": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_ICONS_sound": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_ICONS_mute": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_ITEM_KEY": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_KEY"
+    },
+    "UI_ITEM_PORRIDGE": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_PORRIDGE"
+    },
+    "UI_ITEM_CANDY": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_CANDY"
+    },
+    "UI_ITEM_CHOCOLATE": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_CHOCOLATE"
+    },
+    "UI_ITEM_BOTTLE": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_BOTTLE"
+    },
+    "UI_ITEM_CIGARETTE": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_CIGARETTE"
+    },
+    "UI_ITEM_GLASSES": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_GLASSES"
+    },
+    "UI_ITEM_COLLAR": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_COLLAR"
+    },
+    "UI_ITEM_DOCTOR_COAT": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_DOCTOR_COAT"
+    },
+    "UI_ITEM_PATIENT_GOWN": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_PATIENT_GOWN"
+    },
+    "UI_ITEM_LAUNDRY_BAG": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_LAUNDRY_BAG"
+    },
+    "UI_ITEM_WHEELCHAIR": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_WHEELCHAIR"
+    },
+    "UI_ITEM_STRETCHER": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_STRETCHER"
+    },
+    "UI_ITEM_NURSING_TRAY": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_NURSING_TRAY"
+    },
+    "UI_ITEM_GAUZE": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_GAUZE"
+    },
+    "UI_ITEM_WRISTBAND": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_WRISTBAND"
+    },
+    "UI_ITEM_CLIPBOARD": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_CLIPBOARD"
+    },
+    "UI_ITEM_NUMBER_FOLDER": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_NUMBER_FOLDER"
+    },
+    "UI_ITEM_STAMP": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_STAMP"
+    },
+    "UI_ITEM_MEDICINE_CUP": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_MEDICINE_CUP"
+    },
+    "UI_ITEM_MEDICINE_BOX": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_MEDICINE_BOX"
+    },
+    "UI_ITEM_PILLS": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_PILLS"
+    },
+    "UI_ITEM_SYRINGE": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_SYRINGE"
+    },
+    "UI_ITEM_SAMPLE_TUBE": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_SAMPLE_TUBE"
+    },
+    "UI_ITEM_KEYRING": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_KEYRING"
+    },
+    "UI_ITEM_RESTRAINT": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_RESTRAINT"
+    },
+    "UI_ITEM_BEDSHEET": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_BEDSHEET"
+    },
+    "UI_ITEM_CLEAN_BAG": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_CLEAN_BAG"
+    },
+    "UI_ITEM_MOP": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_MOP"
+    },
+    "UI_ITEM_RELIC_BAG": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_RELIC_BAG"
+    },
+    "UI_ITEM_SHOES": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_SHOES"
+    },
+    "UI_ITEM_PHOTO": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_PHOTO"
+    },
+    "UI_ITEM_RECORDER_CABLE": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_RECORDER_CABLE"
+    },
+    "UI_ITEM_PACKING_BOX": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_PACKING_BOX"
+    },
+    "UI_ITEM_PACKING_TAPE": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_PACKING_TAPE"
+    },
+    "UI_ITEM_CLAMP": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_CLAMP"
+    },
+    "UI_ITEM_PEN": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_PEN"
+    },
+    "UI_ITEM_PAPER": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_PAPER"
+    },
+    "UI_ITEM_ALARM_CLOCK": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_ALARM_CLOCK"
+    },
+    "UI_ITEM_TISSUE": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_TISSUE"
+    },
+    "UI_ITEM_TUTOR_GLASSES": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_TUTOR_GLASSES"
+    },
+    "UI_ITEM_TUTOR_POINTER": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_TUTOR_POINTER"
+    },
+    "UI_ITEM_TUTOR_HAMMER": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_TUTOR_HAMMER"
+    },
+    "UI_ITEM_EYE_INSPECTOR": {
+      "status": "复用物件图派生",
+      "alias_of": "ENV_SMALL_PROPS_EYE_INSPECTOR"
+    },
+    "SLIDE_A01": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_A02": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_A03": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_A04": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_A05": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SLIDE_A06": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_A07": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "SLIDE_A08": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_A09": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "SLIDE_B01": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_B02": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SLIDE_B03": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "SLIDE_B04": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_B06": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_B07": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_B08": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "SLIDE_B09": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_B10": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SLIDE_B05": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_B11": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "SLIDE_E1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SLIDE_E2": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "TEX_COMMON_WOOD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "TEX_COMMON_METAL": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "TEX_COMMON_FABRIC": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "TEX_PAPER": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "TEX_FACE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "TEX_MASKS_DAMAGE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "TEX_MASKS_HOLY": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_DUST": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_COLD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_PULSE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_MORPH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_CRT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_INTERACT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_DEBRIS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_BLOOD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_BRAINSTEM": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_WATER": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_BREATH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_RECORD_01": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_02": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_03": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_04": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_05": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_06": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_07": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_08": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_09": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_10": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_11": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_12": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_13": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_14": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_15": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_16": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_17": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_18": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_19": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_20": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_21": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_22": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_23": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_24": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_25": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_26": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_27": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_28": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_29": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_30": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_31": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_32": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_33": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_34": {
+      "status": "内容待核验",
+      "alias_of": ""
+    },
+    "TEX_BOOK_COVER": {
+      "status": "已有候选待校准",
+      "alias_of": ""
+    },
+    "UI_LABEL_MEDICINE": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_LABEL_SEAT": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_LABEL_ANKLE": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_RECORD_DINING": {
+      "status": "代码排版+共用纸底",
+      "alias_of": "TEX_PAPER"
+    },
+    "UI_EVIDENCE_REHAB_PHOTO": {
+      "status": "内容待核验",
+      "alias_of": ""
+    },
+    "UI_EVIDENCE_FAMILY_PHOTO": {
+      "status": "内容待核验",
+      "alias_of": ""
+    },
+    "UI_REHAB_WORK_ART": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_SKILL_RANK_OVERLAY": {
+      "status": "代码绘制",
+      "alias_of": ""
+    },
+    "UI_GLYPH_BOOKMARK_PEOPLE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_BOOKMARK_ITEMS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_BOOKMARK_ACTOR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_HEALTH": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_MENTAL": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_NEURON": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_CLUSTER": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_LOCK": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_UNLOCK": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_UNREAD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_SUCCESS": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_WARNING": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_SAVE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_GLYPH_ACHIEVEMENT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_PLAYER_MASTER_2D": {
+      "status": "用户制作新稿",
+      "alias_of": ""
+    },
+    "CHR_MAIN_OUTFIT_L1_NEW": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_OUTFIT_L1_WORN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_OUTFIT_L1_DAMAGED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_OUTFIT_L2_NEW": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_OUTFIT_L2_WORN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_OUTFIT_L3_NEW": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_OUTFIT_L3_WORN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_OUTFIT_L4_COAT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_OUTFIT_L5_SUIT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_OUTFIT_L6_ROBE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENDING_E1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENDING_E2": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENDING_E3": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "ENDING_EPILOGUE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FX_BLOOD_STATE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "UI_BODY_TURN_2D": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_CONTROL_DISTANT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "CHR_MAIN_CONTROL_FRAGMENTED": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "FONT_CJK_COVERAGE": {
+      "status": "待核验授权与字形",
+      "alias_of": ""
+    }
+  },
+  "audio": {
+    "MUS_OPEN": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "MUS_MENU": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "MUS_STORY": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "MUS_ROOM": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "MUS_DANGER": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "MUS_STREET": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "MUS_END": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "AMB_ROOM": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "AMB_FAN": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "AMB_CRT": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "AMB_FREEZER": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "AMB_WORLD_WIND": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "AMB_SEA": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "AMB_STREET": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_UI_CONFIRM": {
+      "status": "测试合成音待替换",
+      "alias_of": ""
+    },
+    "SFX_UI_BACK": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_UI_DENIED": {
+      "status": "测试合成音待替换",
+      "alias_of": ""
+    },
+    "SFX_UI_FOCUS": {
+      "status": "测试合成音待替换",
+      "alias_of": ""
+    },
+    "SFX_UI_PANEL": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_UI_BOOK": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_UI_SAVE": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_UI_REWARD": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_DOOR_OPEN": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_DOOR_CLOSE": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_DOOR_LOCK": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_FOOTSTEP": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_FABRIC": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_BED": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_DRAWER": {
+      "status": "测试合成音待替换",
+      "alias_of": ""
+    },
+    "SFX_SEARCH_PAPER": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_SEARCH_CLOTH": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_SEARCH_BOX": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_CHAIR_MOVE": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_KEY": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_ITEM_HANDOFF": {
+      "status": "测试合成音待替换",
+      "alias_of": ""
+    },
+    "SFX_BOWL": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_WRAPPER": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_CRT_ON": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_CRT_OFF": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_FREEZER_OPEN": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_FREEZER_CLOSE": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_COLD": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_HAMMER": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_NEURAL": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_RESIST": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_SKIN": {
+      "status": "测试合成音待替换",
+      "alias_of": ""
+    },
+    "SFX_GUT": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_TINNITUS": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_DRYMOUTH": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_HIT": {
+      "status": "测试合成音待替换",
+      "alias_of": ""
+    },
+    "SFX_SHIFT": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_AWAKE": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_CAT_MEOW": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_CAT_EXIT": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_DOG": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_PET_FIGHT": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_BOTTLE": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_DOOR_CHANGE": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_COLLAPSE": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_DOG_CHANGE": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_HUNTER": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_WORLD_IMPACT": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_DEATH": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "SFX_ESCAPE": {
+      "status": "待收集",
+      "alias_of": ""
+    },
+    "VOC_HOST_BREATH": {
+      "status": "待确认",
+      "alias_of": ""
+    },
+    "VOC_HOST_PAIN": {
+      "status": "待确认",
+      "alias_of": ""
+    },
+    "VOC_PLAYER_LAUGH": {
+      "status": "待确认",
+      "alias_of": ""
+    },
+    "VOC_PARENTS_CHANGE": {
+      "status": "待确认",
+      "alias_of": ""
+    },
+    "VO_A01": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_A02": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_A05": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_A07": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B01": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B02": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B03": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B04": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B06": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B07": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B08": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B09": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B10": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B05": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_B11": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0273": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0338": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0342": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0347": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0493": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0498": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0502": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0506": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0527": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0531": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0535": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0574": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0579": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0586": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0588": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0593": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0599": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0607": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0611": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0615": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0617": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_TUT_P0647": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0064": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0065": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0066": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0068": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0069": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0070": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0072": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0078": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0079": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0080": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0081": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0082": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0083": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0086": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0108": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0109": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0110": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0119": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0120": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0121": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0126": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0127": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0131": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0132": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0136": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0149": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0150": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0151": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0170": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0182": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0185": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0187": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0188": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0191": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0194": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0195": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0201": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0209": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0210": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0211": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0212": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0213": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0223": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0224": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0225": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0228": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0233": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0234": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0235": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0245": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0254": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0255": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0256": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0257": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0258": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0259": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0260": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0261": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0277": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0288": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0289": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0290": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0291": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0292": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0311": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0320": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0321": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0323": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0324": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0325": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0338": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0339": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0340": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0341": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0342": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0344": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0345": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0346": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0352": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0354": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0355": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0358": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0359": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0360": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0361": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_NPC_P0362": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0392": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0393": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0396": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0397": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0400": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0401": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0404": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0405": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0408": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0409": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0412": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0413": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0416": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0417": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0420": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0421": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0424": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0425": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0428": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0429": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0432": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0433": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0436": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0437": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0439": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0440": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0446": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0447": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0449": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0450": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0452": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0453": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0455": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0456": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0458": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0459": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0461": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0462": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0464": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0465": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0467": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0468": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0470": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0471": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0473": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0474": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0476": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0477": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0479": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_S2_P0480": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_PENDING_SEARCH": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_PENDING_ITEMS": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "VO_PENDING_STREET": {
+      "status": "台本候选待核",
+      "alias_of": ""
+    },
+    "MUS_HOSPITAL": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "MUS_ASYLUM": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "MUS_CORTEX": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "MUS_DEEP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "MUS_STREET_FINAL": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "MUS_ENDING_E2": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "MUS_ENDING_E3": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "MUS_EPILOGUE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "AMB_HOSPITAL": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "AMB_WARD": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "AMB_CORTEX": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "AMB_DEEP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "AMB_STREET_FINAL": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_WHEELCHAIR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_BANDAGE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_STAMP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_MEDICINE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_NEEDLE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_STRAP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_TRANSPORT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_ISOLATION": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_RECORDER": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_CLAMP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_PAPER_TEAR": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_CORE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_TEMP_ZONE": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_SLAM": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_KICK": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_ALERT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_WATER_STEP": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_BODY_TURN": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_STAR_UNLOCK": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "SFX_CHECKPOINT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P348_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P355_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P356_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P357_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P358_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P361_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P362_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P365_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P366_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P367_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P382_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P383_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P385_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P386_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P387_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P400_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P401_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P402_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P404_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P405_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P414_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P415_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P416_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P425_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P426_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P427_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P429_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P431_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P432_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P433_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P443_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P444_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P445_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P446_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P450_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P452_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P453_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P455_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P456_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P472_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P473_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P475_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P476_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P477_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P478_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P483_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P484_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P485_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P487_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P488_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P489_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P491_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P492_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P495_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P496_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P497_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P509_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P511_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P514_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P537_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P538_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P539_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P540_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P542_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P543_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P546_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P547_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P556_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P557_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P558_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P559_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P566_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P568_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P570_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P573_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P581_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P582_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P584_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P587_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P588_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P590_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P601_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P603_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P604_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P606_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P607_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P627_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P628_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P629_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P631_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P633_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P642_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P643_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P644_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P646_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P647_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P649_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P651_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P652_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P659_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P660_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P668_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P669_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P670_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P673_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P674_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P675_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P677_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P678_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P691_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P693_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P711_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P712_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P713_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P715_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P721_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P722_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P723_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P730_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P731_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P739_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P742_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P752_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P753_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P755_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P756_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P758_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P771_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P773_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P787_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P793_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P794_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P797_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P806_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P807_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P808_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P819_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P820_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P822_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P823_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P835_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P836_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P838_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P839_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P841_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P842_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P853_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P854_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P856_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P858_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P864_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P868_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P869_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P879_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P880_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P883_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P884_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P894_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P897_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P898_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P900_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P908_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P909_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P910_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P935_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P936_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P939_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P940_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P942_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P947_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P948_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P964_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P967_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P968_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P988_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P990_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P992_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P993_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P995_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P997_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1007_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1010_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1012_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1023_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1025_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1027_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1029_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1040_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1041_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1042_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1044_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1045_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1270_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1325_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1346_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1453_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1487_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1526_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1526_2": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1533_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1539_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1545_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1552_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1558_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1565_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1574_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1625_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1668_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1805_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1947_1": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1947_2": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1947_3": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_S3_P1947_4": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_ENDING_E1": {
+      "status": "原文已核验：复用/无新增对白",
+      "alias_of": ""
+    },
+    "VO_ENDING_E2": {
+      "status": "原文已核验：复用/无新增对白",
+      "alias_of": ""
+    },
+    "VO_ENDING_E3": {
+      "status": "原文已核验：复用/无新增对白",
+      "alias_of": ""
+    },
+    "VO_ENDING_EPILOGUE": {
+      "status": "原文已核验：复用/无新增对白",
+      "alias_of": ""
+    },
+    "VO_R1_P32_DISTANT": {
+      "status": "待制作",
+      "alias_of": ""
+    },
+    "VO_R1_P32_FRAGMENTED": {
+      "status": "待制作",
+      "alias_of": ""
+    }
+  }
+}

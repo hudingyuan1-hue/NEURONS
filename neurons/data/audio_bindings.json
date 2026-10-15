@@ -1,0 +1,5 @@
+{
+  "schema": 1,
+  "assets": [],
+  "contract": "每项包含id、stream仓库res路径、channel(ui/world/ambience/music/voice)、loop布尔、license记录；收到正式声音后接入，音频不能提交玩法结果。"
+}

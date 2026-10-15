@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "default": "a",
+  "sets": {
+    "a": {
+      "CHR_MAIN": {
+        "texture": "res://assets/placeholders/host_a.png",
+        "cell": [
+          64,
+          80
+        ],
+        "foot": [
+          32,
+          72
+        ],
+        "hand": [
+          45,
+          44
+        ],
+        "directions": 4,
+        "frames": 4,
+        "states": [
+          "idle",
+          "walk",
+          "search",
+          "scratch",
+          "give",
+          "grab",
+          "hit",
+          "fear"
+        ],
+        "frame_seconds": 0.16,
+        "status": "程序占位，非正式造型"
+      },
+      "ENV_BEDSIDE": {
+        "canvas": [
+          96,
+          80
+        ],
+        "foot": [
+          8,
+          40
+        ],
+        "handle": [
+          60.7394,
+          25.7744
+        ],
+        "travel": [
+          7,
+          0
+        ],
+        "body": "res://assets/environment/bedside_trial_v001/cabinet_frame.png",
+        "drawer": "res://assets/environment/bedside_trial_v001/drawer_face.png",
+        "tray": "res://assets/environment/bedside_trial_v001/drawer_tray.png",
+        "tray_size": [
+          48,
+          24
+        ],
+        "book": "res://assets/environment/bedside_trial_v001/book.png",
+        "clock": "res://assets/environment/bedside_trial_v001/alarm_clock.png",
+        "front": "res://assets/environment/bedside_trial_v001/foreground_rail_v002.png",
+        "tint": "ffffff"
+      }
+    },
+    "b": {
+      "CHR_MAIN": {
+        "texture": "res://assets/placeholders/host_b.png",
+        "cell": [
+          64,
+          80
+        ],
+        "foot": [
+          32,
+          72
+        ],
+        "hand": [
+          45,
+          44
+        ],
+        "directions": 4,
+        "frames": 4,
+        "states": [
+          "idle",
+          "walk",
+          "search",
+          "scratch",
+          "give",
+          "grab",
+          "hit",
+          "fear"
+        ],
+        "frame_seconds": 0.16,
+        "status": "程序占位，非正式造型"
+      },
+      "ENV_BEDSIDE": {
+        "canvas": [
+          96,
+          80
+        ],
+        "foot": [
+          8,
+          40
+        ],
+        "handle": [
+          60.7394,
+          25.7744
+        ],
+        "travel": [
+          7,
+          0
+        ],
+        "body": "res://assets/environment/bedside_trial_v001/cabinet_frame.png",
+        "drawer": "res://assets/environment/bedside_trial_v001/drawer_face.png",
+        "tray": "res://assets/environment/bedside_trial_v001/drawer_tray.png",
+        "tray_size": [
+          48,
+          24
+        ],
+        "book": "res://assets/environment/bedside_trial_v001/book.png",
+        "clock": "res://assets/environment/bedside_trial_v001/alarm_clock.png",
+        "front": "res://assets/environment/bedside_trial_v001/foreground_rail_v002.png",
+        "tint": "b9c9cf"
+      }
+    }
+  }
+}

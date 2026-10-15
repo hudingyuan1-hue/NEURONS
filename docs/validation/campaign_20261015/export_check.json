@@ -1,0 +1,12 @@
+{
+  "platform": "Windows Desktop",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "pck_built": true,
+  "pck_bytes": 14778272,
+  "pck_sha256": "3175d32b7b6ad42033e6617afe3411ba7aa29493f53420e91b65728026e36365",
+  "pck_headless_title_boot": true,
+  "exe_exported": false,
+  "reason": "Missing Windows debug/release x86_64 4.7.2 export templates in this environment",
+  "target_machine_tested": false,
+  "editor_setting_cache_diagnostics": "Sandbox AppData write unavailable; pack itself created and reloaded successfully"
+}

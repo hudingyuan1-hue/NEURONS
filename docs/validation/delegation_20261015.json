@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-15",
+  "scope": "delegation prompt and audio intake metadata only",
+  "checks": {
+    "runtime_81_files_unchanged": true,
+    "17_audio_files_real_and_unchanged": true,
+    "17_stable_ids_match_existing_table": true,
+    "all_headers_48000_24_stereo": true,
+    "no_audio_binding_added": true,
+    "task_file_exists": true,
+    "read_only_confirmation_explicit": true,
+    "handoff_links_task_and_intake": true,
+    "historical_handoff_preserved": true
+  },
+  "runtime_files": 81,
+  "audio_files": 17,
+  "audio_total_bytes": 265141188,
+  "audio_listened": false,
+  "godot_run": false,
+  "git_write": false
+}

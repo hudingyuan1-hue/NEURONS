@@ -1,0 +1,47 @@
+[
+  {
+    "kind": "art",
+    "defaultHuman": true,
+    "count": 99,
+    "rows": 793,
+    "groups": 103,
+    "promptCopy": true,
+    "deliveryCopy": true,
+    "progress": {
+      "editedGroup": true,
+      "atomicDuplicate": true,
+      "oldLeaf": true,
+      "unknown": true,
+      "other": true
+    },
+    "download": true,
+    "connectedSave": true,
+    "refuseRequirementOverwrite": true,
+    "codexSearch": true,
+    "mobileNoOverflow": true,
+    "errors": []
+  },
+  {
+    "kind": "audio",
+    "defaultHuman": true,
+    "count": 8,
+    "rows": 496,
+    "groups": 77,
+    "promptCopy": true,
+    "deliveryCopy": true,
+    "progress": {
+      "editedGroup": true,
+      "atomicDuplicate": true,
+      "oldLeaf": true,
+      "unknown": true,
+      "other": true
+    },
+    "download": true,
+    "connectedSave": true,
+    "refuseRequirementOverwrite": true,
+    "codexSearch": true,
+    "cueSearch": true,
+    "mobileNoOverflow": true,
+    "errors": []
+  }
+]

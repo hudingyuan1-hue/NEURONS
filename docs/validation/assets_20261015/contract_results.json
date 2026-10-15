@@ -1,0 +1,18 @@
+{
+  "art": {
+    "rows": 793,
+    "legacy_ids_retained": 773,
+    "description_present": 793,
+    "max_prompt_chars": 71,
+    "alias_records": 99,
+    "retired": 5
+  },
+  "audio": {
+    "rows": 496,
+    "legacy_ids_retained": 244,
+    "description_present": 496,
+    "max_prompt_chars": 57,
+    "alias_records": 0,
+    "retired": 0
+  }
+}

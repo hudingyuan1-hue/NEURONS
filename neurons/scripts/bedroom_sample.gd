@@ -212,7 +212,7 @@ func create_ui() -> void:
  row.add_theme_constant_override("separation",24)
  dialogue_panel.add_child(row)
  var monster:=TextureRect.new()
- monster.texture=load("res://assets/player/player_master_preview_v001.png")
+ monster.texture=null # Rejected v001 retained as source history, no longer presented.
  monster.custom_minimum_size=Vector2(104,132)
  monster.expand_mode=TextureRect.EXPAND_IGNORE_SIZE
  monster.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED

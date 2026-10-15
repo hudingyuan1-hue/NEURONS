@@ -1,0 +1,26 @@
+{
+  "art": {
+    "records": 793,
+    "groups": 103,
+    "human_groups": 99
+  },
+  "audio": {
+    "records": 496,
+    "groups": 77,
+    "human_groups": 8
+  },
+  "rooms_base_packs": 39,
+  "search_points": {
+    "L1": 11,
+    "L2": 32,
+    "L3": 45,
+    "L4": 62
+  },
+  "identities_street": 45,
+  "event_families_including_street": 88,
+  "systems": 13,
+  "skills": 12,
+  "source_dialogue_cues": 688,
+  "old_ids_preserved": true,
+  "unassigned_ids": []
+}

@@ -1,0 +1,224 @@
+{
+  "checks": [
+    {
+      "name": "art stable leaf IDs unchanged",
+      "passed": true
+    },
+    {
+      "name": "art IDs globally unique",
+      "passed": true
+    },
+    {
+      "name": "art each leaf assigned exactly once",
+      "passed": true
+    },
+    {
+      "name": "art aliases resolve",
+      "passed": true
+    },
+    {
+      "name": "art all source paths exist",
+      "passed": true
+    },
+    {
+      "name": "art ownership method and progress explicit",
+      "passed": true
+    },
+    {
+      "name": "art human delivery fields complete",
+      "passed": true
+    },
+    {
+      "name": "art common specs resolve",
+      "passed": true
+    },
+    {
+      "name": "art copied prompts short",
+      "passed": true
+    },
+    {
+      "name": "art prompts contain no engine/file instructions",
+      "passed": true
+    },
+    {
+      "name": "art original filled file/license/notes retained",
+      "passed": true
+    },
+    {
+      "name": "art original completion status retained",
+      "passed": true
+    },
+    {
+      "name": "five retired forms not restored",
+      "passed": true
+    },
+    {
+      "name": "UI/common effects Codex",
+      "passed": true
+    },
+    {
+      "name": "art HTML exactly matches requirement JSON",
+      "passed": true
+    },
+    {
+      "name": "art self-contained offline",
+      "passed": true
+    },
+    {
+      "name": "audio stable leaf IDs unchanged",
+      "passed": true
+    },
+    {
+      "name": "audio IDs globally unique",
+      "passed": true
+    },
+    {
+      "name": "audio each leaf assigned exactly once",
+      "passed": true
+    },
+    {
+      "name": "audio aliases resolve",
+      "passed": true
+    },
+    {
+      "name": "audio all source paths exist",
+      "passed": true
+    },
+    {
+      "name": "audio ownership method and progress explicit",
+      "passed": true
+    },
+    {
+      "name": "audio human delivery fields complete",
+      "passed": true
+    },
+    {
+      "name": "audio common specs resolve",
+      "passed": true
+    },
+    {
+      "name": "audio copied prompts short",
+      "passed": true
+    },
+    {
+      "name": "audio prompts contain no engine/file instructions",
+      "passed": true
+    },
+    {
+      "name": "audio original filled file/license/notes retained",
+      "passed": true
+    },
+    {
+      "name": "audio original completion status retained",
+      "passed": true
+    },
+    {
+      "name": "original scripts and random alternatives retained",
+      "passed": true
+    },
+    {
+      "name": "human audio only music",
+      "passed": true
+    },
+    {
+      "name": "all SFX/ambience assigned Codex",
+      "passed": true
+    },
+    {
+      "name": "audio HTML exactly matches requirement JSON",
+      "passed": true
+    },
+    {
+      "name": "audio self-contained offline",
+      "passed": true
+    },
+    {
+      "name": "event asset refs resolve",
+      "passed": true
+    },
+    {
+      "name": "room refs resolve",
+      "passed": true
+    },
+    {
+      "name": "45 distinct Street identities",
+      "passed": true
+    },
+    {
+      "name": "12 skills unique",
+      "passed": true
+    },
+    {
+      "name": "150 source-driven search points",
+      "passed": true
+    },
+    {
+      "name": "batch dependencies valid",
+      "passed": true
+    },
+    {
+      "name": "source hash unchanged DOCX/AI整理后文档/NEURONS_第一阶段_空间物品人员_合并修订版.docx",
+      "passed": true
+    },
+    {
+      "name": "source hash unchanged DOCX/AI整理后文档/NEURONS_第二阶段_角色玩家规则_合并修订版.docx",
+      "passed": true
+    },
+    {
+      "name": "source hash unchanged DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "passed": true
+    },
+    {
+      "name": "source hash unchanged DOCX/AI整理后文档/NEURONS_第四阶段_数值与完整流程_合并修订版.docx",
+      "passed": true
+    },
+    {
+      "name": "source hash unchanged DOCX/AI整理后文档/NEURONS_规则增补与卧室样片规格_R1.docx",
+      "passed": true
+    },
+    {
+      "name": "source hash unchanged DOCX/早期文档/游玩体验 需求.docx",
+      "passed": true
+    },
+    {
+      "name": "source hash unchanged DOCX/早期文档/人物.docx",
+      "passed": true
+    },
+    {
+      "name": "source hash unchanged DOCX/早期文档/关卡 周目 环境.docx",
+      "passed": true
+    },
+    {
+      "name": "source hash unchanged DOCX/早期文档/纠错.docx",
+      "passed": true
+    },
+    {
+      "name": "source hash unchanged DOCX/早期文档/Doctor.docx",
+      "passed": true
+    },
+    {
+      "name": "event paragraph ranges valid",
+      "passed": true
+    },
+    {
+      "name": "script cue IDs unique",
+      "passed": true
+    },
+    {
+      "name": "progress JSON unchanged",
+      "passed": true
+    },
+    {
+      "name": "previous versions immutable",
+      "passed": true
+    },
+    {
+      "name": "runtime sources/scenes/assets/config unchanged this turn",
+      "passed": true
+    }
+  ],
+  "passed": 54,
+  "failed": 0,
+  "runtime_file_count": 81,
+  "runtime_unchanged": true
+}

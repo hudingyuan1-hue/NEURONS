@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NEURONS"
-run/main_scene="res://scenes/bedroom_sample.tscn"
+run/main_scene="res://scenes/front_end.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

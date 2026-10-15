@@ -1,39 +1,36 @@
-# NEURONS — 纯 2D 卧室交互样板
+# NEURONS — 纯2D自主行动与神经干预
 
-工程入口：`neurons/project.godot`。本轮在既有空白工程中实现可运行的规则灰盒、新玩家小怪物母图预览、绘画空房底图和神经菜单。**不是完整游戏，也不是已验收的正式美术样板。**
+工程入口`neurons/project.godot`，Godot4.7.2 / GL Compatibility；默认场景`scenes/front_end.tscn`。当前批次可从标题建档，经第一关自主找钥匙/拿取/开门进入医院，并进行五室跨房搜寻到楼梯开发边界。完整游戏仍在开发，全部未完成范围见`docs/FEATURE_COVERAGE.md`。
 
-用 Godot 4.7.2 打开工程后按 F6/F5 运行主场景 `scenes/bedroom_sample.tscn`。工程使用 GL Compatibility；没有运行时3D节点。游戏不依赖旧工程、D盘素材或个人临时目录。
+## 制作与接手入口
 
-## 操作
+- **当前转交另一台Codex先做只读接手确认。** 可直接发送的任务提示词：`docs/NEXT_CODEX_PROMPT.md`。用户确认开工后按既定B1推进，无须重新规划。全案顺序见`docs/PRODUCTION_PLAN.md`。
+- 早期音频17个WAV已收到，尚未试听/导入：`docs/audio/EARLY_AUDIO_INTAKE.md`及JSON记录格式、时长、哈希和稳定ID。原件在`DOCX/早期音乐素材/音频/`，处理副本与正式发布记录另管。
+- 两份全游戏需求表及首批制作单：`deliverables/NEURONS_2D_资产需求_20261015/`。描述、拆层、使用范围和验收详细；提示词简短。原表/稳定ID保留，五选一停用。
+- 用户负责主要美术，同伴负责配乐/核心氛围音乐；Codex负责全部UI、通用图标动效/Shader、零碎音效合成加工复用及处理导入测试。配音只按已有约定。HTML默认人工交付包，其余折叠；保存/导出`data/progress.json`随仓库同步，Git操作由用户完成。
+- 当前交接`docs/HANDOFF.md`，功能覆盖`docs/FEATURE_COVERAGE.md`，来源`docs/SOURCES.md`，美术参数`docs/ART_SPEC.md`。不每轮重新读取所有原稿。
 
-- 开场原句后点“继续”或 Enter；主角自主选点、移动、搜寻，不能WASD直接操控。
-- 左键主角身体打开神经菜单（Tab为测试快捷键），悬停 SKIN 查看说明，点击提交。菜单/对白/空格暂停冻结世界；关闭菜单有输入隔离。
-- 滚轮切换相对默认视野0.8/1/1.15/1.3，R或“复位视野”回1；X在首次实际受损后显示/关闭生命精神。
-- 底栏按钮选择四个**隔离测试场次**：自主搜寻、母亲递物、父亲抓握、黑猫受击。切场重置夹具，不登记正式周目、技能解锁、通关或结局。
-- 父亲场次等抓取前摇/抓牢后点“惊跳”：此场预置已合法解锁，费用2N、强度2、CD4游戏秒。实际分离才+5精神；仅测暂时脱离，不代表高级救援或完整事件结束。
-- “抗性夹具0/1”用于检验强度相等时抵抗，“显示碰撞”展示足底/导航，“轻反馈”控制试验音效/菜单轻扫描线。
+## 游玩与真实范围
 
-## 本轮范围
+F5运行：NEW GAME输入姓名，固定入侵者编号；已有档案再次确认后覆盖。CONTINUE恢复已保存状态。世界中主角自主移动和搜寻，玩家不能常驻WASD直接控制。左键身体（Tab为测试快捷）开CRT，提交SKIN后关屏/恢复实际反应；空格暂停。滚轮0.8/1/1.15/1.3，R复位。下栏保存/读取、音量与反馈设置可用。
 
-11必要家具与独立逻辑碰撞/0.1m导航网格；自主搜寻启动占次数、完成一次收入；SKIN暂停提交/恢复实际反应；母亲准备→手部共同接触点→唯一归属→收手及中断；父亲预备/前摇/抓稳/碰撞约束配对拖行/实际挣脱；合法猫干预触发一次10HP/10SP受击。实际事实、已知信息、机构记录为独立数据槽。
+新档5N/3C只发一次。取消搜寻消耗已占次数且不发奖励；钥匙固定至实际新尝试，拿取完成才改归属。门口真实动作后切场，医院0+6+8+7+11点共32，抽12点。搜寻、物件位置、暂停/剩余时间与RNG均随存档；损坏主档可恢复上一有效备份。休息真实完成才结算，冷却保留。
 
-人物/家具仍为程序灰盒，不能作为正式资产验收。新小怪物仅1张不透明母图候选+104×128 UI预览，等待用户确认后才能派生。另有1张绘画空房底图，墙地面完整保留，所有交互物独立绘制；源图1672×941，运行稿640×360，按既有投影轮廓在引擎内裁绘。原图不随运行包发布。
+人物事件目前仍在隔离场景验证，没有接入正式自然概率调度；完整开场/教程与后续关卡/分支尚未完成。角色A/B为程序占位，家具为已有候选；未将一条探索路线称作全游戏。被否决的小怪物v001保留原图但停止运行展示。
 
-后续未实现：正式主角/场景/动作；完整开场与教程、对白配音、多语言代码随机展示、怪物砸节点、CRT曲面/关屏演出、冰柜/可旋转人体/星环树、微缩焦外、完整钥匙与休息周目、人物自然概率/完整剧情尾段、存读档/跨房/结局/导出。详细状态和限制见 [交接](docs/HANDOFF.md)。
+## 替换资产
 
-## 验证与接手
+`neurons/data/presentation.json`映射CHR_MAIN与ENV_BEDSIDE。主角基础图集、各动作独立sheet支持规格检查；同画布/脚锚/方向，实际手锚按接触对象测量。家具主体/抽屉/前沿独立，可替换纹理和显示配置而不重写规则。声音映射在`data/audio_bindings.json`，包含稳定ID、stream路径、通道、循环、授权；正式声音尚未收到。
 
-环境中调用Godot（路径由每台机器确定）：
+## 检查
 
 ```text
 <godot> --headless --editor --path neurons --import --quit
 <godot> --headless --path neurons --script res://tests/test_rules.gd
 <godot> --headless --path neurons --script res://tests/test_layout.gd
-<godot> --path neurons -- --visual-check
+<godot> --path neurons -- --campaign-check --save-root=res://../tmp/campaign_saves_local
 ```
 
-第一条在新机器/新增资源后生成本地导入缓存；不要跳过后直接运行带preload的场景。最后一条使用真实GPU渲染，有限场次自动运行并退出，写 `docs/validation/rendered_integration.json` 和截图；不能用headless替代。若GPU不可用，记录未验证，不伪造截图。
+规则71/0、布局158/0、新GPU70/0；浏览器表单结果和真实运行帧见`docs/validation/`本批目录。新主菜单保留`--visual-check`/`--bedside-check`到旧隔离场景，旧结果不等于新关卡/分支通过。
 
-阅读顺序：[HANDOFF](docs/HANDOFF.md) → [ART_SPEC](docs/ART_SPEC.md) → [SOURCES](docs/SOURCES.md) → 当前任务对应条款。素材清单 `docs/assets.csv`；Skill在 `.agents/skills/game-art-2d/`，已固定MIT上游版本，每台机器核对依赖和授权。
-
-本轮没有Git写操作。用户通过GitHub Desktop人工Commit/Push/Pull；保留 `.uid` 与资源旁 `.import`，排除 `.godot/`/`tmp/`/导出。最大单文件为16.4MB OFL字体，本轮未配置LFS；若以后引入大资产，提交前先核对额度。
+Windows导出预设已建；PCK构建成功，EXE缺本机4.7.2模板，尚无已验收发布包。资源/源码用相对路径，无D盘运行依赖。保留.uid与.import，排除.godot/、tmp/、exports、密钥；用户通过GitHub Desktop人工提交、推送与拉取。

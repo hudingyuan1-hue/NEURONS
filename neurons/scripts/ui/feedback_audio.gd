@@ -25,6 +25,12 @@ func _ready() -> void:
    add_child(player)
    channels[channel].append(player)
  refresh_levels()
+ var bindings=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_bindings.json"))
+ if bindings is Dictionary:
+  for entry in bindings.get("assets",[]):
+   if entry.get("license","").is_empty() or not ResourceLoader.exists(str(entry.get("stream",""))):continue
+   var stream=load(str(entry.stream))
+   if stream is AudioStream:register_asset(str(entry.id),stream,str(entry.channel),bool(entry.get("loop",false)))
 
 func register_asset(id:String, source:AudioStream, channel:String, looping:bool=false) -> bool:
  if source==null or not channels.has(channel):return false
