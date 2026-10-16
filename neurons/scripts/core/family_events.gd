@@ -45,7 +45,7 @@ func hero_pose() -> String:
  return "scratch" if present("mother") and data.mother.phase=="comfort" else ""
 
 func actor() -> Dictionary:
- return {"present":false,"used":false,"pos":[4.6,0.22],"route":[],"phase":"absent","elapsed":0.0,"branch":""}
+ return {"present":false,"used":false,"pos":[4.6,0.22],"route":[],"phase":"absent","elapsed":0.0,"branch":"","facing":[0.0,1.0],"release_left":0.0}
 
 func position(id:String) -> Vector2:
  var p:Array=data[id].pos
@@ -60,6 +60,11 @@ func move(id:String,to:Vector2,delta:float) -> bool:
  for p in body.route:route.append(Vector2(float(p[0]),float(p[1])))
  if route.is_empty() and position(id).distance_to(to)>0.04:route=app.layout.path(position(id),to)
  var result:Dictionary=app.layout.move_path(position(id),route,float(config.test_parameters.parent_walk_speed)*delta)
+ var displacement:Vector2=result.position-position(id)
+ if displacement.length_squared()>0.000001:
+  var old:Array=body.get("facing",[0.0,1.0])
+  var direction:=Vector2(float(old[0]),float(old[1]))
+  body.facing=xy(Vector2.from_angle(rotate_toward(direction.angle(),displacement.angle(),delta*5.0)))
  body.pos=xy(result.position);body.route=Array(result.route).map(func(p):return [p.x,p.y])
  return position(id).distance_to(to)<=0.4
 
@@ -109,12 +114,16 @@ func spawn(who:String) -> void:
  if data[who].used:return
  var body:Dictionary=data[who]
  body.used=true;body.present=true;body.phase="intro";body.elapsed=0.0
- body.pos=xy(app.layout.DOOR)
+ body.pos=xy(app.layout.door_position())
  if not data.has("spawn_order"):data.spawn_order=[]
  data.spawn_order.append(who)
  if data.spawn_order.size()>1:
-  var side:Vector2=app.layout.DOOR+Vector2(-0.45,0.25)
-  if app.layout.walkable(side):body.pos=xy(side)
+  # The doorway's adjacent space changes with room geometry. Try both real
+  # sides instead of spawning the second parent inside a moved coat rack.
+  for offset in [Vector2(-0.45,0.25),Vector2(0.45,0.25),Vector2(0,0.6)]:
+   var side:Vector2=app.layout.door_position()+offset
+   if app.layout.walkable(side) and app.layout.clear_segment(app.layout.door_position(),side,app.layout.body_radius):
+    body.pos=xy(side);break
  app.rules.cancel_search();app.hero_route=PackedVector2Array();app.target_index=-1
  if not app.rules.public_action.is_empty():app.rules.finish_public_action(str(app.rules.public_action.origin))
  app.rules.observe("人物",who,"本周目实际见到"+("母亲" if who=="mother" else "父亲"))
@@ -219,11 +228,11 @@ func advance_mother(delta:float) -> void:
   "request_rest":
    if try_auto_food():return
    data.mother_rest=true
-   app.action_phase="return_bed";app.hero_route=app.layout.path(app.hero_pos,app.layout.BED_STOP)
+   app.action_phase="return_bed";app.hero_route=app.layout.path(app.hero_pos,app.layout.bed_position())
    mother.phase="waiting_rest"
   "waiting_rest":
    if app.action_phase=="autonomy" and app.rules.reaction_left<=0 and not app.rules.body_busy():
-    app.action_phase="return_bed";app.hero_route=app.layout.path(app.hero_pos,app.layout.BED_STOP)
+    app.action_phase="return_bed";app.hero_route=app.layout.path(app.hero_pos,app.layout.bed_position())
   "drop":
    if float(data.gift_roll)<0:data.gift_roll=app.rng.randf()
    var kinds:Array=["candy"] if data.gift_roll<0.6 else ["chocolate"] if data.gift_roll<0.9 else ["candy","chocolate"]
@@ -238,11 +247,12 @@ func advance_mother(delta:float) -> void:
    if mother.elapsed>=float(config.timing.gift_wait):
     mother.present=false;mother.phase="absent"
   "leave":
-   if move("mother",app.layout.DOOR,delta):mother.present=false;mother.phase="absent"
+   if move("mother",app.layout.door_position(),delta):mother.present=false;mother.phase="absent"
 
 func advance_father(delta:float) -> void:
  if not present("father"):return
  var father:Dictionary=data.father
+ father.release_left=maxf(0.0,float(father.get("release_left",0.0))-delta)
  # Optional presentation receipts migrate old in-progress saves without
  # replaying existing prompts or advancing pressure before the missing hint.
  var shown:Dictionary=data.get("system_prompts",{})
@@ -297,7 +307,14 @@ func advance_father(delta:float) -> void:
    if app.rules.sp<60:begin_abduct(true)
   "approach":
    father.elapsed+=delta
-   var reached:bool=move("father",app.hero_pos,delta)
+   # Stop at real arm's reach during the remaining preparation time. Moving
+   # all the way to the host while waiting collapsed both bodies to one point.
+   var reached:bool=position("father").distance_to(app.hero_pos)<=0.4 and app.layout.clear_segment(position("father"),app.hero_pos)
+   if not reached:reached=move("father",app.hero_pos,delta)
+   if reached:
+    father.route=[]
+    var toward:Vector2=app.hero_pos-position("father")
+    if toward.length_squared()>0.0001:father.facing=xy(toward.normalized())
    if reached and father.elapsed>=float(config.timing.father_prepare):
     on_node("before_grab")
     if collapse_active():return
@@ -309,26 +326,31 @@ func advance_father(delta:float) -> void:
      app.rules.gripped=true;app.rules.cancel_search();app.hero_route=PackedVector2Array()
      if not data.startle.is_empty() and not data.startle.held:data.startle.clear()
      father.phase="steady";father.elapsed=0.0
+     father.facing=xy((app.hero_pos-position("father")).normalized())
     else:
      reward_startle(false)
      father.phase="approach";father.elapsed=0.0;father.route=[]
   "steady":
    father.elapsed+=delta
+   var current:Array=father.get("facing",[0.0,1.0])
+   var heading:=Vector2(float(current[0]),float(current[1]))
+   var toward:Vector2=app.layout.door_position()-position("father")
+   if toward.length_squared()>0.0001:father.facing=xy(Vector2.from_angle(rotate_toward(heading.angle(),toward.angle(),delta*2.4)))
    if father.elapsed>=float(config.timing.father_stabilize):father.phase="drag";father.route=[]
   "drag":
    var at:Vector2=position("father")
    var route:PackedVector2Array=app.layout.path(app.hero_pos,at)
    var moved:Dictionary=app.layout.move_path(app.hero_pos,route,float(config.timing.father_drag_speed)*delta)
    app.hero_pos=moved.position;app.hero_state="hit"
-   if app.hero_pos.distance_to(at)<0.5:move("father",app.layout.DOOR,delta)
-   if app.hero_pos.distance_to(app.layout.DOOR)<0.13:
+   if app.hero_pos.distance_to(at)<0.5:move("father",app.layout.door_position(),delta)
+   if app.hero_pos.distance_to(app.layout.door_position())<0.13:
     on_node("before_blood_door")
     if not collapse_active():
      data.hidden_pending=true;app.rules.end_control();app.rules.transitioning=true
-     app.status_note="已实际到血门；隐藏Street待B2接入，当前停在明确开发边界"
+     app.status_note="父亲带至血门，进入独立广场片段"
   "leave","rescued":
    if app.home.present("cat") and app.home.data.cat.phase=="held":app.home.data.cat.pos=xy(position("father"))
-   if move("father",app.layout.DOOR,delta):
+   if move("father",app.layout.door_position(),delta):
     father.present=false;father.phase="absent"
     if app.home.present("cat") and app.home.data.cat.phase=="held":app.home.data.cat.present=false
     if father.get("departure_reflection_pending",false):
@@ -372,6 +394,21 @@ func begin_abduct(low_sp:bool=false) -> void:
 func rescue_context() -> bool:
  return present("father") and data.father.phase in ["approach","grab","steady","drag","stagger"]
 
+func start_release_pose() -> void:
+ # Presentation only: the actual release still commits in its original skill
+ # callback. The saved world-clock tail neither locks the body nor adds time.
+ data.father.release_left=0.35
+ data.father.release_point=xy(app.hero_pos)
+
+func father_presentation() -> Dictionary:
+ if not present("father"):return {}
+ var father:Dictionary=data.father
+ var phase:String=str(father.phase)
+ var release:float=float(father.get("release_left",0.0))
+ var label:String={"intro":"门口出现","approach":"接近 · 准备抓取","grab":"伸手抓取","steady":"已抓住 · 转身","drag":"抓握带行","stagger":"受阻 · 松手","rescued":"松手离开","leave":"离开","cat_approach":"接近黑猫","think":"抱猫劝说","kill_dog":"门口发动"}.get(phase,phase)
+ if release>0:label="松手 · 收回手臂"
+ return {"phase":phase,"label":label,"elapsed":float(father.elapsed),"facing":father.get("facing",[0.0,1.0]),"held":app.rules.gripped and phase in ["steady","drag"],"reach":clampf(float(father.elapsed)/float(config.timing.father_grab),0,1) if phase=="grab" else 1.0 if app.rules.gripped and phase in ["steady","drag"] else release/0.35,"release":release,"release_point":father.get("release_point",xy(app.hero_pos)),"moving":not father.route.is_empty()}
+
 func on_skill(result:Dictionary) -> void:
  if not result.get("success",false) or data.is_empty():return
  var id:String=str(result.id)
@@ -383,6 +420,7 @@ func on_skill(result:Dictionary) -> void:
   data.mother_rest=false;data.mother.phase="leave";data.mother.route=[];app.action_phase="autonomy"
  if present("father") and data.father.phase=="think":expel_father();return
  if rescue_context() and id in ["FEAR","JOY"]:
+  start_release_pose()
   app.rules.gripped=false;data.blood_door=false;data.rescued=true;data.pressure=0
   data.father.phase="rescued";data.father.route=[]
   app.add_dialogue("角色 · 震惊","什么鬼!!!")
@@ -397,9 +435,10 @@ func after_motion_started() -> void:
   app.motion.allow_gripped=true
 
 func after_motion_step() -> void:
- if data.is_empty() or data.startle.is_empty() or not data.startle.held:return
+ if data.is_empty() or data.startle.is_empty() or not data.startle.held or not app.rules.gripped:return
  var start:Array=data.startle.start
  if Vector2(float(start[0]),float(start[1])).distance_to(app.hero_pos)>0.001:
+  start_release_pose()
   app.rules.gripped=false;data.father.phase="approach";data.father.elapsed=0;data.father.route=[]
 
 func reward_startle(held:bool) -> void:
@@ -418,10 +457,11 @@ func kick_contact() -> void:
  var offset:Vector2=position("father")-app.hero_pos
  if app.rules.kick_contact("father",offset.length(),offset.normalized().dot(facing)>0.65,app.layout.clear_segment(app.hero_pos,position("father"))):
   if app.rng.randf()<0.70:
+   start_release_pose()
    app.rules.gripped=false;app.rules.change_sp(10)
    data.father.phase="stagger";data.father.elapsed=0.0
    var endpoint:Vector2=position("father")+offset.normalized()*0.3
-   if app.layout.walkable(endpoint) and app.layout.clear_segment(position("father"),endpoint,app.layout.RADIUS):data.father.pos=xy(endpoint)
+   if app.layout.walkable(endpoint) and app.layout.clear_segment(position("father"),endpoint,app.layout.body_radius):data.father.pos=xy(endpoint)
 
 func expel_father() -> void:
  data.father.phase="leave";data.father.route=[];data.blood_door=false;data.pressure=0
@@ -459,17 +499,17 @@ func try_auto_food() -> bool:
 func request_gift() -> bool:
  if data.is_empty() or data.gift.is_empty() or app.rules.hp<=0 or app.rules.gripped or app.rules.body_busy():return false
  data.picking_gift=true;data.gift_pick=0.0
- app.hero_route=app.layout.path(app.hero_pos,app.layout.DOOR)
+ app.hero_route=app.layout.path(app.hero_pos,app.layout.door_position())
  return true
 
 func advance_gift(delta:float) -> void:
  if app.rules.hp<=0 or app.rules.gripped or app.rules.body_busy():return
  app.move_hero(delta)
- if app.hero_pos.distance_to(app.layout.DOOR)>0.05:return
+ if app.hero_pos.distance_to(app.layout.door_position())>0.05:return
  data.gift_pick+=delta
  if float(data.gift_pick)<float(config.test_parameters.gift_pickup):return
  for id in data.gift.duplicate():
-  if app.rules.commit_transfer("gift_pick:"+id,id,"floor","hero",app.hero_pos.distance_to(app.layout.DOOR),true,true,true):
+  if app.rules.commit_transfer("gift_pick:"+id,id,"floor","hero",app.hero_pos.distance_to(app.layout.door_position()),true,true,true):
    data.inventory.append(id);data.gift.erase(id)
    app.rules.observe("物品",id,"实际拾取门口礼物："+str(data.food_types[id])+"，尚未食用。")
  data.picking_gift=false;data.auto_food_used=false

@@ -4,6 +4,7 @@ const Neural=preload("res://scripts/core/neural_rules.gd")
 const Menu=preload("res://scripts/ui/campaign_menu.gd")
 const Catalog=preload("res://scripts/presentation/asset_catalog.gd")
 const Feedback=preload("res://scripts/ui/feedback_audio.gd")
+const DialogueDisplay=preload("res://scripts/ui/dialogue_playback.gd")
 var app
 var demo
 var terminal
@@ -103,8 +104,8 @@ void fragment() {
  if guide_only:
   stage=99;lesson_lines.clear();lesson_index=0;lesson_input_shield.hide()
   hint.text="操作详解 · 自主角色与神经干预"
-  detail.text="左键身体打开CRT，悬停查看三句说明；右键身体查看前置与解锁升级。菜单/对白冻结世界。基本观察免费，参数扩展5C。"
-  if app.rules.skill_states.CONTROL.unlocked:detail.text+="掌控每次5N、最长6秒、结束后20秒冷却；不是持续直接控制。"
+  detail.text="左键身体打开CRT，悬停查看三句说明；右键身体查看前置与解锁升级。菜单/对白冻结世界。基本观察免费，参数扩展5神经簇。"
+  if app.rules.skill_states.CONTROL.unlocked:detail.text+="掌控每次5神经元、最长6秒、结束后20秒冷却；不是持续直接控制。"
   next.visible=true;next.disabled=false;next.text="返回关卡"
 
 func button(parent:Node,text:String,pos:Vector2,callback:Callable) -> Button:
@@ -133,16 +134,16 @@ func change_stage(value:int) -> void:
  var hints:Dictionary={
   0:["教程练习 · 正式进度保持不动","先观察床边的角色。角色自主行动，玩家通过神经干预影响他。"],
   1:["左键点击角色身体","请用鼠标左键点击角色身体。继续按钮不会代替点击。"],
-  2:["悬停发亮的 SKIN 节点","请把鼠标移到 SKIN 节点，查看右侧实际技能说明。"],
-  3:["悬停灰暗的 GUT 节点约2秒","请把鼠标移到 GUT 节点，保持悬停约2秒。"],
-  4:["点击发亮的 SKIN 节点","请实际点击 SKIN；收屏后才执行独立练习的身体反应。"],
+  2:["悬停发亮的皮肤刺激节点","请把鼠标移到皮肤刺激节点，查看右侧实际技能说明。"],
+  3:["悬停灰暗的肠胃蠕动节点约2秒","请把鼠标移到肠胃蠕动节点，保持悬停约2秒。"],
+  4:["点击发亮的皮肤刺激节点","请实际点击皮肤刺激；收屏后才执行独立练习的身体反应。"],
   5:["观察实际身体反应","收屏完成、世界恢复后才执行反应；练习不会改变正式资源。"],
   6:["身体反馈已经发生","读完后进入右键教程。"],
   7:["右键点击角色身体","请用鼠标右键点击角色身体。左键不会完成这一步。"],
-  8:["转动人体和星环，选择 GUT","点击未发光的一颗星。前置、当前余额与费用都在检查面板中。"],
-  9:["确认解锁 GUT · 练习费用1C","请在实际检查面板点击确认解锁。返回不扣费。"],
-  10:["冰柜人体预览 · 不施放到实际角色","解锁和升级只改变对应节点；升级每次1C只加强度。预览不计干预、成长或认知。"],
-  11:["关闭冰柜，正式开始","请点击冰柜 CLOSE 返回关卡。正式以5N、3C、仅SKIN开始。"]}
+  8:["转动人体和星环，选择肠胃蠕动","点击未发光的一颗星。前置、当前余额与费用都在检查面板中。"],
+  9:["确认解锁肠胃蠕动 · 练习费用1神经簇","请在实际检查面板点击确认解锁。返回不扣费。"],
+  10:["冰柜人体预览 · 不施放到实际角色","解锁和升级只改变对应节点；升级每次1神经簇只加强度。预览不计干预、成长或认知。"],
+  11:["关闭冰柜，正式开始","请点击冰柜关闭按钮返回关卡。正式以5神经元、3神经簇、仅皮肤刺激开始。"]}
  if hints.has(stage):hint.text=hints[stage][0]
  detail.set_meta("instruction",str(hints.get(stage,["",""])[1]))
  refresh_lesson_text();sync_lesson_controls()
@@ -163,7 +164,7 @@ func refresh_lesson_text() -> void:
   detail.text="教学即将开始…";next.visible=true;next.text="稍候"
  else:
   var entry:Dictionary=lesson_lines[lesson_index]
-  detail.text=str(entry.speaker)+"："+lesson_text(entry)
+  detail.text=DialogueDisplay.display_text(str(entry.speaker)+":"+lesson_text(entry))
   next.visible=true;next.text="继续 %d / %d"%[lesson_index+1,lesson_lines.size()]
 
 func sync_lesson_controls() -> void:

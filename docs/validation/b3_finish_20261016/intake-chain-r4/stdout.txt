@@ -1,0 +1,42 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS chain starts with physical trio/key fixtures and no completed transport or packing history
+PASS same original photograph starts with patient before any real footplate drop
+PASS actual paperwork/push/frame/fingers reaches visible original photograph collection contact
+PASS contact window retains live original chair and uncompleted transfer
+PASS same actual porter contact-packs photograph, returns for original shoe and carries container to source exit
+PASS ready manifest has exactly two real original-object pickup receipts and one genuine patient transfer
+PASS one source container retains both original objects before crossing chapters
+PASS initial key uses real L2 navigation and stair-door opening without calling a chapter unlock directly
+PASS protagonist physically reaches actual keyed door before chapter transition
+PASS unfinished normal door animation cannot create early L3 arrival
+PASS real mid-door JSON restores unfinished chapter transition without replaying source packing
+PASS mid-door restore preserves actual source manifest and both original packing receipts
+PASS remaining actual door time invokes normal L2-to-L3 transition and arrival hook
+PASS chapter transition delivers one original container at actual L3 entrance, not already received or stored
+PASS arrival changes only container ownership and grants no read information
+PASS normal transition passes unchanged actual L2 source manifest and receipts
+PASS existing nurse actually walks from original desk to the container delivered by transition hook
+PASS real nurse preparation/contact is visible before transfer of container ownership
+PASS mid-receive JSON preserves partial contact without repeating chapter arrival
+PASS cross-chapter restore cannot replay original hospital object collection
+PASS same nurse genuinely receives, carries and places original container at desk
+PASS one actual receipt per handoff and placement preserves both originals inside one stored bag
+PASS offscreen actual storage alone cannot teach bag contents or recognition
+PASS protagonist actually uses existing stair/lobby doorway to approach stored evidence
+PASS contents remain unavailable before a separate actual bag-number inspection
+PASS real CRT mouse submits initially unlocked CONTROL and starts ordinary paid intervention window
+PASS cross-chapter CONTROL uses exactly original five-neuron submission cost, without refilling earned resources
+PASS first actual viewport mouse click targets original container's visible tabletop marker
+PASS normal process really approaches and reads bag label after tabletop mouse click through prepare/contact/finish
+PASS actual label read records unprovided number as unknown and does not fabricate matching digits
+PASS second actual tabletop-container mouse click requests separately unread contents
+PASS ordinary process second click completes physical reading of actually received original photograph and shoe
+PASS real contents read sees two original objects without converting null bag number to a confirmed patient match
+PASS no prior photo reading or recognition flag was seeded to manufacture conditional dialogue
+PASS two actual evidence mouse inspections add no search attempt, income or extra intervention charge
+PASS actual final JSON retains both distinct completed physical reads
+PASS later frames and restored read history cannot repeat packing, arrival, handoff or storage
+PASS same two original objects and one actual container retain unique final physical owners
+ASYLUM_INTAKE_CHAIN_CHECK 38 passed 0 failed

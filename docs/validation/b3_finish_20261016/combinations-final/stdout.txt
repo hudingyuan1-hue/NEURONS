@@ -1,0 +1,89 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS original drain bracelet is physically taken before the combined hold/read case
+PASS same item holder traverses real bathroom-corridor-quiet door actions
+PASS signed order is actually received and isolation staff physically reach the existing protagonist
+PASS holding an acquired relic still permits actual public-paper read during the pre-grip intervention window
+PASS pre-grip reading has visible preparation without premature paper knowledge
+PASS actual hand contact establishes the sole isolation holder while the paper read is unfinished
+PASS actual grip cancels its in-flight public reading and clears only that action
+PASS grip grants no unread paper content and neither drops nor duplicates the separately owned bracelet
+PASS checksummed mid-grip JSON retains the one holder and independent item ownership
+PASS same actual held target is delivered and the existing quiet-room door really closes
+PASS finishing isolation cannot retroactively finish the cancelled paper action
+PASS read/grip/item interleaving creates one grip and no invented bodily cost
+PASS full observation and actual opening end the same signed isolation once
+PASS post-opening reload cannot invent a late read or second relic
+PASS office page begins from its actual contact stand
+PASS unfinished office read survives ordinary disk JSON before intervention
+PASS real paid SKIN applies to the already-restored reading action
+PASS successful intervention pays its original cost and cancels the read
+PASS cancelled-action snapshot is written and accepted by the existing loader
+PASS world time after interrupted-action load cannot award the unread archive page
+PASS interruption creates neither a completed document receipt nor a stale public action
+PASS fresh complete read remains legal after the real reaction ends
+PASS only a newly completed physical read creates the knowledge
+PASS completed reread/load leaves exactly one knowledge entry
+PASS original NPC is physically isolated through the real signed-paper/contact/door chain
+PASS one nurse and the isolation worker have genuinely overlapping independent jobs bound to this exact signed source
+PASS NPC isolation keeps the real target indoors without assigning a protagonist holder
+PASS overlapping nurse job and NPC door observation both survive one real JSON snapshot
+PASS nurse finishes physical read/check/cross-floor write/clip and isolation independently ends
+PASS the shared signed source creates exactly one public duty copy
+PASS copy retains the original isolated subject without inventing visible number matches
+PASS report copying creates neither a medication eyewitness nor a paper-owner transfer
+PASS same nurse really traverses pharmacy/lobby/stairs/corridor while processing this report
+PASS simultaneous report users retain twenty-one unique identities and one actual target grip/closure
+PASS independent NPC handling/paperwork adds no protagonist harm or lingering grip
+PASS duty source key is identical for the same integer attempt before and after JSON numeric conversion
+PASS unknown attempt, supplied zero, different source type and different actual attempt never collapse into one paper source
+PASS old float-spelled completed-source index loads through actual checksummed disk save
+PASS legacy source index is rebuilt from the existing entry fields while retaining the original physical copy ID
+PASS restored completed source cannot start a new copy, create another clipping receipt or await an unnecessary job
+PASS explicit two-written-copy historical input is accepted without pretending this fixture newly played two writes
+PASS historical duplicate remains a second physical entry marked with its first source copy rather than silently deleted
+PASS historical institutional records are retained while the shared semantic source has one canonical completion index
+PASS stale third-copy job is stopped while its already-written partial action remains explicit migration history
+PASS loading historical duplicate copies neither erases either old record nor manufactures a third copy
+PASS genuine one-copy snapshot is restored after the declared historical migration fixtures
+PASS repeat-attempt case first takes one real relic then uses existing doors to the workshop
+PASS actual rack contact transfers the existing finite paper to the protagonist
+PASS workshop logical material and unique owner agree before any rest
+PASS real reaction 1 of three is accepted before rest
+PASS real reaction 2 of three is accepted before rest
+PASS real reaction 3 of three is accepted before rest
+PASS three paid successful reactions earn one actual pending resistance increment
+PASS explicit legacy alias fixture is written through the checksummed save store
+PASS real disk loading accepts the legacy 3/3.0 attempt aliases
+PASS legacy attempt spellings merge to the highest counter and never their sum
+PASS alias normalization itself creates no actual retry, search settlement, neuron or cluster reward
+PASS alias migration preserves the existing sample, facts, unique material and still-uncommitted earned growth
+PASS genuine original snapshot is independently saved back after the migration fixture
+PASS genuine original attempt is restored before all three unchanged physical return/rest checks
+PASS real return/rest 1 advances exactly one attempt and one cycle
+PASS normal rest 1 restores at the designated bed without a revival identity increment
+PASS rest 1 preserves the same held relic and finite paper without rack respawn
+PASS rest 1 rebuilds the original identity slots and fourteen-point sample without duplicated search settlement
+PASS rest 1 commits earned growth once and cannot commit it again
+PASS rest 1 disk reload preserves unique item/material ownership
+PASS next retry again physically crosses the two floors to the original workshop
+PASS real return/rest 2 advances exactly one attempt and one cycle
+PASS normal rest 2 restores at the designated bed without a revival identity increment
+PASS rest 2 preserves the same held relic and finite paper without rack respawn
+PASS rest 2 rebuilds the original identity slots and fourteen-point sample without duplicated search settlement
+PASS rest 2 commits earned growth once and cannot commit it again
+PASS rest 2 disk reload preserves unique item/material ownership
+PASS next retry again physically crosses the two floors to the original workshop
+PASS real return/rest 3 advances exactly one attempt and one cycle
+PASS normal rest 3 restores at the designated bed without a revival identity increment
+PASS rest 3 preserves the same held relic and finite paper without rack respawn
+PASS rest 3 rebuilds the original identity slots and fourteen-point sample without duplicated search settlement
+PASS rest 3 commits earned growth once and cannot commit it again
+PASS rest 3 disk reload preserves unique item/material ownership
+PASS three rests and reloads cannot replay the original relic pickup receipt
+PASS first real low-SP return crosses both floors and original reception rather than teleporting to bed
+PASS post-rest material verification returns through the actual established doors
+PASS original worker still waits for the held-away finite paper after repeated rest instead of generating a replacement
+PASS repeated interaction cannot retake either already-owned original material or create a floor relic
+ASYLUM_COMBINATIONS_CHECK 85 passed 0 failed

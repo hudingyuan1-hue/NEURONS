@@ -1,0 +1,51 @@
+{
+  "failures": [],
+  "passes": [
+    "normal hero movement routes around a real stationary original NPC without body overlap",
+    "detour never snaps or moves the obstructing actor",
+    "ordinary body obstruction creates no damage or extra cost",
+    "actual neural displacement also respects physical NPC body instead of bypassing ordinary movement collision",
+    "blocked neural motion does not invent collision damage",
+    "occupied destination doorway prevents spawning the hero inside an existing NPC",
+    "destination NPC genuinely walks aside along a legal path",
+    "same opening completes after actual destination clearance",
+    "arrival retains body separation rather than post-arrival repair",
+    "default rhythm actor actually spawns at original door and walks to its authored furniture-side stand",
+    "three real default rhythm crossings stay in walkable space and do not freeze against an invisible wall",
+    "real default moving support can be passed on its side without endless wait or body crossing",
+    "rhythm yielding preserves health and search attempt count",
+    "nearby unseen behind-the-back pointing cannot start a forced loop",
+    "actually looking at the original actor starts its visible pointing preparation",
+    "actual key ownership acquired during pointing prevents a new forced loop",
+    "original document read starts through actual legal approach handler",
+    "witnessed original read really causes walking, pinching and extraction",
+    "original actor physically returns to cabinet after putting away the label",
+    "completed removal leaves the terminal's unique search/read stand clear",
+    "retreat preserves the one actual label owner",
+    "post-retreat JSON preserves actor position and original ownership",
+    "the vacated original terminal remains physically readable",
+    "the same vacated terminal still supports genuine seven-second key search"
+  ],
+  "rendered": true,
+  "samples": [
+    {
+      "ordinary_actor_detour": {
+        "minimum": 0.345442563295364,
+        "reached": true,
+        "steps": 97
+      }
+    },
+    {
+      "count": 4,
+      "rhythm_default_from": [
+        1.5,
+        1.02383875846863
+      ],
+      "rhythm_default_to": [
+        1.5,
+        2.52383875846863
+      ]
+    }
+  ],
+  "scope": "Finite declared actor/room/position fixtures, real move_hero and neural motion, actual source and destination doorway checks, default spawned rhythm crossing, original read→label extraction→physical retreat→terminal search. NPC clock/ordinary campaign handlers and real JSON; no claim of all crowd permutations or human full play."
+}

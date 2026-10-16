@@ -1,0 +1,45 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS wheelchair_gone alone creates neither a relic bag nor readable evidence
+PASS even an explicit manifest cannot replace the missing real transport receipt
+PASS receipt from another attempt cannot certify this source delivery
+PASS packed objects whose same carrier has not finished its outgoing route cannot arrive early
+PASS unpacked floor shoe and unreceipted photo are never pulled into L3
+PASS player-held originals cannot be copied into an otherwise valid saved manifest
+PASS real packed shoe can arrive independently without duplicating the player's photo
+PASS arrival moves only the actual container, preserving each original's sole owner
+PASS arrival is idempotent and the actual receiver is reserved during intake
+PASS validated serialized L2 container arrives only through the explicit transition hook
+PASS arriving container is not already stored or automatically read
+PASS same registration nurse actually navigates from the desk to the entrance container
+PASS nurse reaches genuine contact rather than collecting the bag across the room
+PASS visible receive preparation/contact precedes ownership transfer
+PASS checksummed JSON retains the partial receive clock and original container
+PASS manual pause freezes receiving and the world clock together
+PASS receiver losing actual contact cannot finish the pending handoff remotely
+PASS receiver reapproaches and completes one genuine container handoff
+PASS carrying bag follows its nurse while the photo stays inside the same container
+PASS saved carrying stage restores physical ownership rather than redoing arrival
+PASS genuine new attempt keeps the one already carrying nurse at its real saved location
+PASS new attempt cannot erase its carrier, move the bag or roll a second registration nurse
+PASS nurse actually walks back to the desk and completes a distinct placement action
+PASS placement alone stores bag and releases nurse for ordinary registration
+PASS receive and desk storage have separate one-time actual-event receipts
+PASS offscreen storage gives no protagonist photo recognition or read bag number
+PASS bag contents require a separate earlier actual inspection of the bag label
+PASS actual preparation/contact/finish reads bag label before its contents
+PASS unprovided bag-number glyph remains unknown rather than manufacturing a patient match
+PASS actual second inspection sees only the original objects actually received
+PASS without prior sight of the original photo there is no recognition dialogue or invented identity
+PASS receiving and inspecting relics gives no search income or consumed search attempt
+PASS continued world time never replays storage settlement
+PASS prior-photo case still requires real intake and desk placement
+PASS recognition case still requires both actual bag inspections
+PASS recognising the original photo does not turn null bag-number glyph into verified patient identity
+PASS prior visual knowledge enables only the two exact conditional source lines
+PASS ordinary JSON preserves the actual inspection and recognition separately from scene arrival
+PASS later new attempt preserves the actually stored bag without requiring a newly spawned carrier
+PASS a fresh real read in a later attempt cannot replay already spoken photo-recognition dialogue
+PASS recognition has one actual receipt across saved reload and genuine later attempts
+ASYLUM_INTAKE_CHECK 41 passed 0 failed

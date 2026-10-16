@@ -93,7 +93,7 @@ func tick(delta:float) -> void:
     if app.rules.hp>0:cue("CAT_HIT_FEEDBACK","injury")
     leave_cat()
  if cat.present and cat.phase=="leave":
-  if move("cat",Vector2(3.95,3.6),delta,1.8):
+  if move("cat",app.layout.cat_exit_position(),delta,1.8):
    cat.present=false
    if app.rules.hp>0:cue("CAT_EXIT","window")
    else:app.add_dialogue("黑猫","喵@#￥%……")
@@ -135,6 +135,7 @@ func advance_dog(delta:float) -> void:
  if not present("dog") or not data.dog.alive:return
  var dog:Dictionary=data.dog
  if app.has_key():dog.phase="idle";dog.route=[];return
+ if not str(app.session.data.key_target).is_empty() and app.session.data.key_owner!="dog":dog.phase="idle";dog.route=[];return
  if dog.phase=="idle" and int(dog.remaining)>0 and app.rules.search_active:
   var choices:Array=[]
   for i in [0,2,10]: # Open bed underside / chair / exposed fan base. No sealed cabinets.
@@ -154,8 +155,8 @@ func advance_dog(delta:float) -> void:
     app.rules.settled[receipt]="completed";app.rules.neurons+=1
     app.rules._record("dog_search_completed",receipt,{"target":target,"neurons":1})
    dog.remaining-=1
-   if target==app.session.data.key_target:
-    app.session.data.key_owner="dog";app.rules.owners.key="dog"
+   var discovery:Dictionary=app.resolve_completed_key(target,receipt,"dog")
+   if discovery.get("newly_found",false):
     dog.phase="bring";dog.route=[]
    else:
     dog.phase="idle"

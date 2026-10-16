@@ -1,0 +1,15 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS transport chain begins with actual live patient/porter/head nurse, no written isolation result
+PASS original porter really receives order, checks patient, obtains nurse signature and delivers bed across real door
+PASS full onsite paper/contact/signature/return receipts arise from the one actual transfer
+PASS isolation worker actually fetches the original signed authorization after delivery and closes on that same patient
+PASS real porter exits before close while the original live target stays inside and observing hero remains outside
+PASS transport and isolation keep one stable report, target and live identity without an ordinary duplicate
+PASS full-chain mid-isolation JSON retains real closed-door time and paper receipt
+PASS pause freezes the full-chain isolation without resetting it
+PASS same patient's real closed-door eight-second observation opens and completes
+PASS NPC chain adds no hero injury, false treatment or permanent control
+PASS completed transfer/isolation does not respawn patient, duplicate paper or restart confinement
+ASYLUM_CHAIN_CHECK 11 passed 0 failed

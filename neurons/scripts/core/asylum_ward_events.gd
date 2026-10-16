@@ -19,6 +19,18 @@ func state() -> Dictionary:
   value.work={"phase":"take_paper","elapsed":0.0,"paper":"rack","label":"rack","box":"none","batch":null,"products":0,"table":"workshop:1"}
  if not value.has("therapy"):
   value.therapy={"phase":"idle","elapsed":0.0,"recording":false,"segment_exists":false,"original_spoken":false,"retraction_spoken":false,"heard_original":false,"heard_retraction":false,"saw_deletion":false,"paper":"therapist","speaker_number":null,"seat_required":false}
+ # Persist the actual sheet/product alongside their pre-existing action state.
+ # Loading an older action may recover current ownership, never fabricate a
+ # handover history, signature, label glyph or a new usable material instance.
+ if not value.therapy.has("statement_asset"):
+  value.therapy.statement_asset={"id":"asylum_statement_paper","version":1,"holder":str(value.therapy.paper),"exposed":value.therapy.paper=="speaker","history":[]}
+ if not value.therapy.has("signature_asset"):
+  value.therapy.signature_asset={"id":"asylum_signature_record","version":1,"holder":"therapist","history":[]}
+ if not value.work.has("box_asset"):
+  value.work.box_asset={"id":"asylum_work_box","version":1,"history":[]}
+ owner.app.rules.owners.asylum_statement_paper=str(value.therapy.statement_asset.holder)
+ owner.app.rules.owners.asylum_signature_record=str(value.therapy.signature_asset.holder)
+ sync_work_owners(value.work)
  if not value.has("transfer"):
   value.transfer={"phase":"idle","elapsed":0.0,"patient_number":null,"order":"porter","brake":true,"hand_done":false,"band_drop":{},"delivered":false,"isolation_authorized":false,"bed_room":"corridor","bed_pos":[],"seen":[]}
   # New actual attempts rebuild local uncollected props. A band already in
@@ -72,6 +84,65 @@ func furniture(room:String,index:int) -> Dictionary:
 func target_point(room:String,index:int) -> Vector2:
  var item:Dictionary=furniture(room,index)
  return item.get("at",Vector2(2.8,1.1))
+
+func sync_work_owners(work:Dictionary) -> void:
+ var holder:String="labor_patient" if work.paper=="labor_patient" else "workshop_table2"
+ if work.box!="none":owner.app.rules.owners.asylum_work_box=holder
+ else:owner.app.rules.owners.erase("asylum_work_box")
+ owner.app.rules.owners.asylum_work_paper="asylum_work_box" if work.box!="none" else ("workshop_material_rack" if work.paper=="rack" else str(work.paper))
+ owner.app.rules.owners.asylum_work_label="asylum_work_box" if work.label=="box" else ("workshop_material_rack" if work.label=="rack" else str(work.label))
+
+func work_contact(work:Dictionary,node:String) -> void:
+ var asset:Dictionary=work.box_asset
+ asset.version=int(asset.version)+1
+ asset.history.append({"node":node,"phase":str(work.phase),"box":str(work.box),"paper":str(work.paper),"label":str(work.label),"attempt":owner.app.rules.actual_attempt})
+ sync_work_owners(work)
+
+func evidence_target(id:String) -> Dictionary:
+ var value:Dictionary=state()
+ if id=="asylum_statement_paper":
+  var paper:Dictionary=value.therapy.statement_asset;var holder:String=str(paper.holder)
+  if not paper.exposed or not owner.present(holder):return {}
+  return {"id":id,"holder":holder,"room":str(owner.actor(holder).room),"pos":xy(owner.position(holder)),"furniture":2,"visible":true,"version":int(paper.version)}
+ if id=="asylum_product_label":
+  var work:Dictionary=value.work
+  # A fetched loose label and a folded-but-unlabelled box are not a labelled
+  # product. Physical paste contact must have happened; placing is separate.
+  if work.box not in ["labelled","table2"] or work.label!="box":return {}
+  if work.box=="table2" and int(work.products)<=0:return {}
+  var at:Vector2=target_point("workshop",int(config.workshop.table_index))
+  return {"id":id,"asset_id":"asylum_work_box","holder":"workshop_table2","room":"workshop","pos":xy(at),"furniture":int(config.workshop.table_index),"visible":true,"version":int(work.box_asset.version)}
+ if id=="asylum_signature_record":
+  # S1:P168 provides the existing attached record; S3:P888 supplies its
+  # actual clipboard holder. P915 supplies no signer, name or signing node.
+  var record:Dictionary=value.therapy.signature_asset;var holder:String=str(record.holder)
+  if not owner.present(holder):return {}
+  return {"id":id,"holder":holder,"room":str(owner.actor(holder).room),"pos":xy(owner.position(holder)),"furniture":5,"visible":true,"version":int(record.version)}
+ return {}
+
+func evidence_fields(id:String) -> Dictionary:
+ var target:Dictionary=evidence_target(id)
+ if target.is_empty():return {}
+ if id=="asylum_statement_paper":
+  return {"text":str(config.evidence.statement_text),"holder":target.holder,"document_version":int(target.version),"acknowledged":null,"actually_signed":null,"prefilled_name":null,"proxy_signature":null,"source":"S3:P914–915","note":"读纸不是同意、照读或亲手签署；未知签字栏不补造事实。"}
+ if id=="asylum_signature_record":
+  return {"holder":target.holder,"document_version":int(target.version),"prefilled_name":null,"actual_signature":null,"actual_signer":null,"proxy_signature":null,"signature_date":null,"source":"S1:P168 / S3:P888/P915","note":"实际翻看记录夹中的附属签字记录；具体字形未提供，不能由预填姓名或一页纸制造本人亲手落笔事实。"}
+ var work:Dictionary=state().work
+ return {"asset_id":"asylum_work_box","batch":work.batch,"folded":true,"label_pasted":true,"placed":work.box=="table2","holder":target.holder,"document_version":int(target.version),"contents":null,"source":"S3:P1037–1038/P1048","note":"实际成品标签；批次不等于患者编号，标签不证明箱内内容。"}
+
+func evidence_revision(id:String) -> String:
+ var fields:Dictionary=evidence_fields(id)
+ return "" if fields.is_empty() else "ward-evidence-1:"+JSON.stringify(fields,"",true).sha256_text().substr(0,16)
+
+func evidence_markers() -> Array:
+ var result:Array=[]
+ var paper:Dictionary=evidence_target("asylum_statement_paper")
+ if not paper.is_empty():
+  paper.kind="note";paper.label="统一陈述纸 · 在病友手中";paper.draw_offset=[12,-32];result.append(paper)
+ var record:Dictionary=evidence_target("asylum_signature_record")
+ if not record.is_empty():
+  record.kind="note";record.label="签字记录附页 · 字形未定";record.draw_offset=[-12,-32];result.append(record)
+ return result
 
 func tick(delta:float) -> void:
  if owner.data.is_empty() or owner.app.session.data.level!=3:return
@@ -171,28 +242,34 @@ func advance_work(delta:float) -> void:
    if event.paper!="rack":stage(event,"waiting_materials");return
    if elapsed(event,delta,timing("take_material")):
     event.paper="labor_patient";event.box="unfolded";stage(event,"fold")
+    work_contact(event,"take_paper")
     owner.claim("paper_taken","asylum_material_taken",{"material":"visible_paper","table":2})
   "fold":
    if event.paper!="labor_patient":stage(event,"waiting_materials");return
    if elapsed(event,delta,timing("fold")):
     event.box="folded";stage(event,"flatten")
+    work_contact(event,"fold")
     owner.claim("box_folded","asylum_work_partial",{"table":2})
   "flatten":
    if elapsed(event,delta,timing("flatten")):
     event.box="unlabelled";event.paper="table2";stage(event,"take_label")
+    work_contact(event,"flatten")
   "take_label":
    if event.label!="rack":stage(event,"waiting_materials");return
    if elapsed(event,delta,timing("take_material")):
     event.label="labor_patient";stage(event,"paste")
+    work_contact(event,"take_label")
     owner.claim("label_taken","asylum_material_taken",{"material":"visible_label","table":2})
   "paste":
    if event.box!="unlabelled" or event.label!="labor_patient":stage(event,"waiting_materials");return
    if elapsed(event,delta,timing("paste")):
     event.label="box";event.box="labelled";stage(event,"place")
+    work_contact(event,"paste")
     owner.claim("label_pasted","asylum_work_partial",{"batch":event.batch})
   "place":
    if elapsed(event,delta,timing("place")):
     event.paper="box";event.box="table2";event.products=int(event.products)+1;stage(event,"done")
+    work_contact(event,"place")
     owner.claim("box_placed","asylum_work_completed",{"table":2,"batch":event.batch,"resources":0})
 
 func take_material(which:String) -> bool:
@@ -202,6 +279,7 @@ func take_material(which:String) -> bool:
  var at:Vector2=target_point("workshop",int(config.workshop.material_rack_index))
  if owner.app.hero_pos.distance_to(at)>float(config.rules.pickup_distance) or not owner.app.layout.clear_segment(owner.app.hero_pos,at):return false
  event[which]="hero";owner.app.rules.owners["asylum_work_"+which]="hero"
+ work_contact(event,"hero_took_"+which)
  owner.claim("take_material:"+which,"asylum_material_taken",{"material":which,"holder":"hero"})
  return true
 
@@ -258,8 +336,14 @@ func advance_therapy(delta:float) -> void:
    stage(event,"give_paper")
   "give_paper":
    if owner.position("therapist").distance_to(owner.position("speaker"))>0.65:stage(event,"approach_paper");return
+   if not owner.layout_for("group_therapy").clear_segment(owner.position("therapist"),owner.position("speaker")):stage(event,"approach_paper");return
    if elapsed(event,delta,timing("paper_handoff")):
-    event.paper="speaker";owner.claim("statement_given","asylum_statement_given",{"holder":"speaker"})
+    event.paper="speaker"
+    event.statement_asset.holder="speaker";event.statement_asset.exposed=true
+    event.statement_asset.version=int(event.statement_asset.version)+1
+    event.statement_asset.history.append({"node":"actual_handoff","from":"therapist","to":"speaker","attempt":owner.app.rules.actual_attempt})
+    owner.app.rules.owners.asylum_statement_paper="speaker"
+    owner.claim("statement_given","asylum_statement_given",{"holder":"speaker","asset_id":"asylum_statement_paper","version":int(event.statement_asset.version)})
     stage(event,"request_read");local_say("THERAPY_READ",["therapist","speaker"])
   "request_read":
    stage(event,"retraction_spoken")
@@ -920,6 +1004,7 @@ func markers() -> Array:
  if work.box!="none":
   var at:Vector2=owner.position("labor_patient") if work.paper=="labor_patient" and owner.present("labor_patient") else target_point("workshop",1)
   result.append({"id":"asylum_work_box","room":"workshop","pos":xy(at),"kind":"box","label":"纸盒 · "+phase_label(str(work.box))})
+ result.append_array(evidence_markers())
  return result
 
 func phase_label(phase:String) -> String:return str(config.phase_labels.get(phase,phase))

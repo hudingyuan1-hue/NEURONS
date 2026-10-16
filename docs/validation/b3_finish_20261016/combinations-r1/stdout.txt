@@ -1,0 +1,58 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS original drain bracelet is physically taken before the combined hold/read case
+PASS same item holder traverses real bathroom-corridor-quiet door actions
+PASS signed order is actually received and isolation staff physically reach the existing protagonist
+PASS holding an acquired relic still permits actual public-paper read during the pre-grip intervention window
+PASS pre-grip reading has visible preparation without premature paper knowledge
+PASS actual hand contact establishes the sole isolation holder while the paper read is unfinished
+PASS actual grip cancels its in-flight public reading and clears only that action
+PASS grip grants no unread paper content and neither drops nor duplicates the separately owned bracelet
+PASS checksummed mid-grip JSON retains the one holder and independent item ownership
+PASS same actual held target is delivered and the existing quiet-room door really closes
+PASS finishing isolation cannot retroactively finish the cancelled paper action
+PASS read/grip/item interleaving creates one grip and no invented bodily cost
+PASS full observation and actual opening end the same signed isolation once
+PASS post-opening reload cannot invent a late read or second relic
+PASS office page begins from its actual contact stand
+PASS unfinished office read survives ordinary disk JSON before intervention
+PASS real paid SKIN applies to the already-restored reading action
+PASS successful intervention pays its original cost and cancels the read
+PASS cancelled-action snapshot is written and accepted by the existing loader
+PASS world time after interrupted-action load cannot award the unread archive page
+PASS interruption creates neither a completed document receipt nor a stale public action
+PASS fresh complete read remains legal after the real reaction ends
+PASS only a newly completed physical read creates the knowledge
+PASS completed reread/load leaves exactly one knowledge entry
+FAIL original NPC is physically isolated while the one nurse independently processes the actual shared paper
+PASS NPC isolation keeps the real target indoors without assigning a protagonist holder
+PASS overlapping nurse job and NPC door observation both survive one real JSON snapshot
+PASS nurse finishes physical read/check/cross-floor write/clip and isolation independently ends
+PASS the shared signed source creates exactly one public duty copy
+PASS copy retains the original isolated subject without inventing visible number matches
+PASS report copying creates neither a medication eyewitness nor a paper-owner transfer
+PASS same nurse really traverses pharmacy/lobby/stairs/corridor while processing this report
+PASS simultaneous report users retain twenty-one unique identities and one actual target grip/closure
+PASS independent NPC handling/paperwork adds no protagonist harm or lingering grip
+PASS repeat-attempt case first takes one real relic then uses existing doors to the workshop
+PASS actual rack contact transfers the existing finite paper to the protagonist
+PASS workshop logical material and unique owner agree before any rest
+PASS real reaction 1 of three is accepted before rest
+PASS real reaction 2 of three is accepted before rest
+PASS real reaction 3 of three is accepted before rest
+PASS three paid successful reactions earn one actual pending resistance increment
+PASS real return/rest 1 advances exactly one attempt and one cycle
+PASS normal rest 1 restores at the designated bed without a revival identity increment
+PASS rest 1 preserves the same held relic and finite paper without rack respawn
+PASS rest 1 rebuilds the original identity slots and fourteen-point sample without duplicated search settlement
+PASS rest 1 commits earned growth once and cannot commit it again
+PASS rest 1 disk reload preserves unique item/material ownership
+PASS next retry again physically crosses the two floors to the original workshop
+FAIL real return/rest 2 advances exactly one attempt and one cycle
+FAIL normal rest 2 restores at the designated bed without a revival identity increment
+PASS rest 2 preserves the same held relic and finite paper without rack respawn
+FAIL rest 2 rebuilds the original identity slots and fourteen-point sample without duplicated search settlement
+PASS rest 2 commits earned growth once and cannot commit it again
+PASS rest 2 disk reload preserves unique item/material ownership
+PASS next retry again physically crosses the two floors to the original workshop

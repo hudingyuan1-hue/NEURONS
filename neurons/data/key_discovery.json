@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "source": "S4 P49/P56/P90 with 2026-10-16 user override: no initial key placement; first genuine completion uses deferred uniform discovery among sampled targets",
+  "status": "Source-consistent discovery policy; not a measured whole-level clear-rate claim",
+  "initial_group_sizes": {"1": 10, "2": 12, "3": 14, "4": 16},
+  "probability_policy": "1 / remaining uncompleted eligible initial targets; final eligible completion guarantees discovery in L1-L4",
+  "recent_result_cooldown_attempts": 1,
+  "recent_result_policy": "Implementation choice for repeated-location feedback: exclude the latest actual result only from the immediately next attempt's sample when other legal candidates can fill the required count; never remove world points or block CONTROL",
+  "interference_scope": "Facts only. Cancellation, cat/NPC interruption, time and mental-state consequences remain in existing rules; no additional key-probability penalty",
+  "out_of_group_policy": "Legal CONTROL and L4 supplemental searches keep normal action/reward semantics but do not widen the initial eligible key set",
+  "legacy_l4_recovery_policy": "Only migrating a v1 L4 save with all sixteen initial points already empty and no discovered key: preserve those verdicts, expose unfinished legal supplemental points as migration_recovery_targets, and discover only on genuine completion with the final remaining recovery point guaranteed. This is save compatibility, not a new-attempt rule."
+}

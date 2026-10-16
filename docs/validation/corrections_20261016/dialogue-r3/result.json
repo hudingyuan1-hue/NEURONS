@@ -1,0 +1,28 @@
+{
+  "failures": [
+    "dialogue freezes real world and action audio clocks",
+    "manual pause freezes background audio and dialogue reading time together",
+    "JSON preserves dialogue reading time and original line data",
+    "paused JSON voice restores its playback cursor without replaying the line",
+    "automatic mode waits for voice even after short subtitle reading time has elapsed"
+  ],
+  "passes": [
+    "normal dialogue defaults to automatic and settings reflect the mode",
+    "Chinese primary node labels preserve twelve stable skill IDs and thirteen CRT code styles",
+    "freezer inspection explains prerequisites and unlock currency in Chinese",
+    "runtime resource balances use Chinese names",
+    "display formatting normalizes punctuation and ellipsis without corrupting emoticons or authored unusual glyphs",
+    "silent reading duration depends on text length, not render frame count",
+    "source dialogue stays unchanged while the rendered line uses half-width punctuation",
+    "already playing music and ambience continue across dialogue",
+    "automatic dialogue advances after readable real time without a Continue click",
+    "in-game manual dialogue setting persists through the shared front-end preferences file",
+    "manual dialogue mode does not advance after its reading duration",
+    "manual Continue action advances the actual dialogue queue",
+    "an available registered voice starts on the voice channel",
+    "manual Continue cannot truncate an unfinished available voice",
+    "automatic mode advances after actual voice playback finishes",
+    "settings pause all non-interface channels according to manual pause policy"
+  ],
+  "scope": "Actual process seconds, world/audio cursors, manual/automatic queue, JSON and display punctuation. Temporary in-memory silent streams; no final speech or subjective listening claim."
+}

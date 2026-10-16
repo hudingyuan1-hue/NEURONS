@@ -3,6 +3,14 @@
   "sources": ["S3:P811–815/P824–843/T26", "S3:P887–917/T28", "S3:P1014–1054/T33", "S4:T15R8/P181–207", "第五阶段第8–9轮"],
   "scope": "二层：真实推床、录音删改、作业夹手/有限材料、术后展示—告密—接报许可—普通护工带离，以及角色实际翻查内部报告—护士长制止写报签联—普通护工真实扭抓并限时带站侧。隔离仅接取已实际送达释放后的本模块签联；尸体清理与角落旧凭条另模块，不以本模块通过宣告全部21身份完成。",
   "unknown_fields": {"transport_patient_number": null, "speaker_transfer_number": null, "workshop_batch": null},
+  "evidence": {
+    "statement_text": "此前所述均不属实",
+    "statement_source": "S3:P914–915",
+    "product_source": "S3:P1037–1038/P1048",
+    "signature_record": {"supported": true, "source": "S1:P168 / S3:P888/P915", "actual_signature": null, "prefilled_name": null, "proxy_signature": null, "reason": "S1明确现有附属签字记录，随主任的记录夹保留并可实际翻看；P915规定亲手落笔、预填与代签须分账，未指定签署人、姓名或签署节点，不凭空增加签字事件或通行条件。"},
+    "whiteboard_written_text": null,
+    "note": "只提供实际可见实物和动态位置/版本，不自动授予已读、已知、同意、照读或签署。纸盒原有有限库存及半成品跨真实周目保留，读标签不产出资源。"
+  },
   "presentation_timing": {
     "note": "下列准备/接触时长是可替换表现参数，不改原文伤害、次数、药效或通行条件。",
     "drawer_windup": 0.8,

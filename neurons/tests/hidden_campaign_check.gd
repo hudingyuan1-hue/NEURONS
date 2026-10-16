@@ -23,6 +23,13 @@ func await_live(predicate:Callable,timeout:float=15.0,continue_lines:bool=true) 
  return predicate.call()
 
 func key(code:Key) -> void:
+ # Finishing a real dialogue intentionally locks world input for three
+ # frames. Wait for that production shield; never bypass it by writing pause
+ # state or by clearing a live line, then mistaking a rejected Escape for pause.
+ var waited:int=0
+ while app!=null and app.input_lock_frames>0 and waited<30:
+  await get_tree().process_frame
+  waited+=1
  for down in [true,false]:
   var event:=InputEventKey.new();event.keycode=code;event.physical_keycode=code;event.pressed=down
   Input.parse_input_event(event);await frames(1)
@@ -56,7 +63,9 @@ func save_and_load() -> Dictionary:
  return disk.data
 
 func trace(label:String) -> void:
- timeline.append({"label":label,"world_time":app.rules.world_time,"room":app.room_id,"hp":app.rules.hp,"sp":app.rules.sp,"N":app.rules.neurons,"C":app.rules.plexus,"hero":[app.hero_pos.x,app.hero_pos.y],"hidden":app.hidden_route.data.duplicate(true)})
+ timeline.append({"label":label,"world_time":app.rules.world_time,"room":app.room_id,"hp":app.rules.hp,"sp":app.rules.sp,"N":app.rules.neurons,"C":app.rules.plexus,"hero":[app.hero_pos.x,app.hero_pos.y],"paused_manual":app.paused_manual,"world_paused":app.world_paused(),"input_lock_frames":app.input_lock_frames,"dialogue_count":app.dialogue_queue.size(),"hidden":app.hidden_route.data.duplicate(true)})
+ timeline.back()["father"]=app.family.data.get("father",{}).duplicate(true)
+ timeline.back()["door"]=[app.layout.door_position().x,app.layout.door_position().y]
 
 func finish_run() -> void:
  var result:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
@@ -86,15 +95,20 @@ func _ready() -> void:
  app.session.data.key_owner="hero";app.rules.owners.key="hero"
  var item:String=app.family.ensure_food("candy","hero")
  app.family.data.inventory.append(item)
- app.hero_pos=Vector2(4.45,0.65);app.hero_route=PackedVector2Array()
+ # This fixture selects a real walkable contact station from the active
+ # layout. The old fixed coordinate is inside the v2 coat rack.
+ app.hero_pos=app.layout.furniture[1].at;app.hero_route=PackedVector2Array()
+ check(app.layout.walkable(app.hero_pos),"father fixture starts at a reachable station in the active geometry")
  app.family.spawn("father")
  initial_snapshot=app.snapshot_data();trace("fixed_household_start")
  await capture("01_father_arrival")
  app.paused_manual=false;get_window().grab_focus()
  var grabbed:bool=await await_live(func():return app.rules.gripped,18)
  check(grabbed and app.family.data.blood_door,"father actually approaches, winds up and establishes original grip/blood door")
+ check(app.family.position("father").distance_to(app.hero_pos)>0.28,"actual grabbing bodies remain distinct at arm reach rather than walking into one point")
  check(app.session.data.level==1 and app.has_key() and not 2 in app.session.data.unlocked,"already-owned key cannot replace father blood-door route with hospital")
  if not grabbed:await finish_run();return
+ check(app.family.father_presentation().get("held",false) and app.family.father_presentation().get("label","")=="已抓住 · 转身","father presentation reads the same actual held/turn state instead of a static idle pose")
  await key(KEY_ESCAPE)
  check(app.paused_manual,"actual Escape key pauses established father grip")
  await capture("02_actual_father_grip")
@@ -105,7 +119,12 @@ func _ready() -> void:
  var entered:bool=await await_live(func():return app.room_id=="hidden_street",15)
  check(entered,"actual stabilizing and drag cross blood door and load independent hidden plaza")
  if not entered:trace("entry_failed");await finish_run();return
+ check(app.hidden_route.data.feedback_receipts.has("saw"),"actual sight feedback starts during pursuit instead of waiting until the hunter returns to patrol")
+ check(not JSON.stringify(app.dialogue_queue).contains("出口在后面。"),"first-attempt player does not encourage escape in the current dialogue")
+ check(await await_live(func():return app.dialogue_queue.is_empty(),5),"actual Continue input finishes sight feedback before resuming the world")
  await key(KEY_ESCAPE)
+ check(app.paused_manual,"Escape after the dialogue input shield actually pauses hidden exploration")
+ if not app.paused_manual:trace("hidden_pause_rejected");await finish_run();return
  check(app.rules.mode=="combat" and app.world_rate()==1.0 and not app.rules.gripped and not app.family.present("father"),"hidden entry ends father grip/half-rate/pressure and switches to combat")
  check(app.rules.hp==74 and app.rules.sp<=86 and app.rules.sp>70,"hidden entry preserves actual HP and SP already lost to father pressure")
  check(app.rules.neurons==0 and app.rules.plexus==0 and app.rules.owners[item]=="hero","hidden entry preserves zero resources and unique owned candy")
@@ -118,10 +137,14 @@ func _ready() -> void:
  await frames(15)
  check(app.rules.world_time==frozen and app.hidden_route.data.hunter.pos==hunter_position,"manual pause freezes rendered hunter position and world clock")
  await key(KEY_ESCAPE)
+ check(not app.paused_manual,"Escape resumes the same paused hidden pursuit")
+ if app.paused_manual:trace("hidden_resume_rejected");await finish_run();return
  var midway:bool=await await_live(func():return app.rules.world_time>frozen+1.0 or app.hidden_route.data.status!="active",4)
  check(midway and app.hidden_route.data.status=="active","zero-resource autonomous escape advances normally before exit")
  if app.hidden_route.data.status!="active":trace("premature_ending");await finish_run();return
  await key(KEY_ESCAPE)
+ check(app.paused_manual,"actual mid-route pause is established before requesting the JSON snapshot")
+ if not app.paused_manual:trace("midroute_pause_rejected");await finish_run();return
  var hero_position:Vector2=app.hero_pos
  hunter_position=app.hidden_route.data.hunter.pos.duplicate()
  var phase:String=app.hidden_route.data.hunter.phase
@@ -132,10 +155,15 @@ func _ready() -> void:
  check(app.rules.mode=="combat" and app.rules.owners[item]=="hero" and app.hidden_route.data.hunter.hp==60,"load neither duplicates owned item nor resets enemy HP/mode")
  trace("mid_route_json_restored");await capture("04_mid_route_saved_and_loaded")
  await key(KEY_ESCAPE)
+ check(not app.paused_manual,"loaded mid-route snapshot resumes through real Escape input")
+ if app.paused_manual:trace("loaded_resume_rejected");await finish_run();return
  var ended:bool=await await_live(func():return app.hidden_route.data.get("status","")=="ending",12)
  check(ended and app.rules.hp>0,"zero-resource autonomous body escapes living hunter through actual E1 exit")
  if not ended:trace("escape_failed");await finish_run();return
  check(int(app.hidden_route.data.hunter.hp)==60 and int(app.session.data.level)==1 and app.session.data.unlocked.size()==1 and int(app.session.data.unlocked[0])==1,"E1 does not require killing hunter or grant hospital/L6 unlock")
+ var boundary:Vector2=app.hidden_route.vector(app.hidden_route.config.layout.exit)
+ check((app.hero_pos-boundary).dot(app.hidden_route.EXIT_OUTWARD)>=0,"E1 is reached beyond the visible threshold, not by approaching its radius")
+ check(app.hidden_route.data.feedback_receipts.has("evaded") or "evaded" in app.hidden_route.data.get("ending_feedback",[]),"actual evade feedback is either presented or retained across exit settlement")
  await key(KEY_ESCAPE)
  await capture("05_E1_plaza_first_beat")
  var ending_elapsed:float=app.hidden_route.data.ending.elapsed
@@ -153,6 +181,28 @@ func _ready() -> void:
  check(await await_live(func():return app.hidden_route.ending_frame().get("complete",false),4),"ending presentation completes without auto revival or hospital transition")
  trace("E1_complete");await capture("07_E1_complete")
  check(is_equal_approx(app.rules.world_time,frozen) and app.rules.owners[item]=="hero","ending retains frozen world, body values and previously owned inventory")
+ var panel=app.get("ending_panel")
+ check(panel!=null and panel.visible,"completed E1 exposes an explicit ending panel")
+ if panel!=null and panel.visible:
+  var resources:Array=[app.rules.hp,app.rules.sp,app.rules.neurons,app.rules.plexus]
+  await click(find_button(app,"查看本次记录"));await frames(2)
+  check(panel.showing_records and panel.record_text.text.contains("宿主胜利"),"actual ending record button works while the world remains frozen")
+  check(not panel.record_text.text.contains("出口在后面。") and not panel.record_text.text.contains("继续走。") and not panel.record_text.text.contains("别停在这里。"),"ending records retain the latest player stance rather than reviving overridden assistance lines")
+  check([app.rules.hp,app.rules.sp,app.rules.neurons,app.rules.plexus]==resources and is_equal_approx(app.rules.world_time,frozen),"ending record is read-only and never runs the world or buys book extensions")
+  await capture("07b_E1_records")
+  await click(find_button(app,"返回结局"));await frames(2)
+  check(not panel.showing_records and find_button(panel,"返回主菜单")!=null and find_button(panel,"新游戏")!=null,"ending exposes record return, title and new-game actions")
+  await click(find_button(panel,"返回主菜单"));await frames(8)
+  check(frontend.active==null and find_button(frontend,"继续游戏")!=null,"actual ending title action saves then returns to the title")
+  await click(find_button(frontend,"继续游戏"));await frames(8);app=frontend.active
+  check(app!=null and app.ending_panel.visible and app.hidden_route.data.ending.complete,"actual Continue restores the completed ending without rerunning it")
+  await click(find_button(app.ending_panel,"新游戏"));await frames(10)
+  var retained:Dictionary=frontend.store.load_snapshot()
+  check(frontend.active==null and find_button(frontend,"建立并开始")!=null and retained.ok and retained.data.hidden_state.ending.complete,"ending New Game opens profile creation without silently overwriting the completed save")
+  await capture("07c_new_profile_preserves_ending")
+  await click(find_button(frontend,"返回"));await frames(5)
+  await click(find_button(frontend,"继续游戏"));await frames(8);app=frontend.active
+  check(app!=null and app.ending_panel.visible and app.achievements.load_progress().data.receipts.size()==receipt_count,"returning from profile creation and continuing preserves the one ending receipt")
 
  # Separate actual-contact fixture exercises production death presentation
  # and real L1 revival (not direct hit). Same-node fatal exit precedence is

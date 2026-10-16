@@ -1,0 +1,47 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS package validation runs on target Windows platform
+PASS test scripts are excluded from shipped pack
+PASS source documents are not shipped
+PASS dynamic JSON is in PCK: skills
+PASS dynamic JSON is in PCK: home_rules
+PASS dynamic JSON is in PCK: home_dialogue
+PASS dynamic JSON is in PCK: tutorial_dialogue
+PASS dynamic JSON is in PCK: search_actions
+PASS dynamic JSON is in PCK: presentation
+PASS dynamic JSON is in PCK: audio_bindings
+PASS dynamic JSON is in PCK: hospital
+PASS dynamic JSON is in PCK: hospital_observations
+PASS dynamic JSON is in PCK: hidden_street
+PASS dynamic JSON is in PCK: opening
+PASS dynamic JSON is in PCK: asylum
+PASS dynamic JSON is in PCK: asylum_records
+PASS dynamic JSON is in PCK: asylum_ward_events
+PASS dynamic JSON is in PCK: asylum_trace_events
+PASS dynamic JSON is in PCK: asylum_isolation
+PASS dynamic JSON is in PCK: asylum_observations
+PASS dynamic JSON is in PCK: asylum_nurse_duty
+PASS dynamic JSON is in PCK: asylum_intake
+PASS audio stream loads from PCK: MUS_MENU
+PASS audio stream loads from PCK: MUS_ROOM
+PASS audio stream loads from PCK: AMB_FAN
+PASS audio stream loads from PCK: SFX_UI_CONFIRM
+PASS audio stream loads from PCK: SFX_UI_BACK
+PASS audio stream loads from PCK: SFX_UI_DENIED
+PASS audio stream loads from PCK: SFX_DOOR_OPEN
+PASS audio stream loads from PCK: SFX_DOOR_CLOSE
+PASS audio stream loads from PCK: SFX_FOOTSTEP
+PASS audio stream loads from PCK: SFX_SEARCH_CLOTH
+PASS audio stream loads from PCK: SFX_SEARCH_PAPER
+PASS audio stream loads from PCK: SFX_SKIN
+PASS audio stream loads from PCK: SFX_GUT
+PASS audio stream loads from PCK: SFX_DRAWER
+PASS audio stream loads from PCK: SFX_COLD
+PASS runtime actor/cabinet catalog resolves imported textures inside pack
+PASS exported introduction resolves actual profile name
+PASS exported title/profile buttons reach actual tutorial
+PASS exported world body click opens actual freezer
+PASS all configured development audio bindings load in exported game
+PASS exported process writes independent profile successfully
+EXPORTED_GAME_CHECK 43 passed 0 failed

@@ -28,7 +28,36 @@ func matching_record(prefix:String) -> Dictionary:
  var id:String=prefix+str(owner.app.rules.actual_attempt)
  for record in owner.app.rules.institutional_records:
   if str(record.get("id",""))==id:return record
+ if prefix=="asylum_departure_copy:":
+  for record in owner.app.rules.institutional_records:
+   var identifier:String=str(record.get("id",""))
+   if identifier.begins_with(prefix) and matching_departure_attempt(identifier.trim_prefix(prefix)):return record
  return {}
+
+func matching_departure_attempt(literal:String) -> bool:
+ # JSON-era text IDs may carry "1" or "1.0". Compare exact integer-valued
+ # decimal literals without float rounding, accepting no unknown/fractional
+ # attempt and never rewriting the original stored institutional record.
+ if literal.is_empty() or literal.strip_edges()!=literal:return false
+ if literal.is_valid_int():return literal.to_int()==owner.app.rules.actual_attempt
+ var parts:PackedStringArray=literal.split(".",true)
+ if parts.size()!=2 or not parts[0].is_valid_int() or parts[1].is_empty():return false
+ for digit in parts[1]:
+  if digit!="0":return false
+ return parts[0].to_int()==owner.app.rules.actual_attempt
+
+func departure_copy_holder() -> String:
+ var owners:Dictionary=owner.app.rules.owners
+ if owners.has("asylum_departure_copy"):return str(owners.asylum_departure_copy)
+ # Older schema2 B3 saves contain the actual presented page and its existing
+ # institutional record, but predate this explicit ownership field. Recover
+ # only that already-present nurse-held original. Do not create a page,
+ # record, observation or historical contact from a carry flag alone.
+ if not owner.data.get("departure_page",false) or not owner.present("registration_nurse"):return ""
+ var paper:Dictionary=matching_record("asylum_departure_copy:")
+ if paper.is_empty() or str(paper.get("text","")).is_empty():return ""
+ owners.asylum_departure_copy="registration_nurse"
+ return "registration_nurse"
 
 func medicine_record() -> Dictionary:
  for prefix in ["asylum_false_medicine:","asylum_medicine:","asylum_refusal:"]:
@@ -37,25 +66,51 @@ func medicine_record() -> Dictionary:
  return {}
 
 func paper_actor(target:Dictionary) -> String:
- return "doctor" if str(target.get("kind",""))=="diagnosis" else ""
+ return "doctor" if str(target.get("kind",""))=="diagnosis" else "registration_nurse" if str(target.get("kind",""))=="departure" else ""
+
+func dynamic_target(target:Dictionary) -> Dictionary:
+ var kind:String=str(target.get("kind",""))
+ if kind=="ward_evidence" and owner.ward_events!=null:return owner.ward_events.evidence_target(str(target.id))
+ if kind=="intake" and owner.intake!=null:return owner.intake.observation_target(str(target.id))
+ return {}
 
 func target_room(target:Dictionary) -> String:
+ var dynamic:Dictionary=dynamic_target(target)
+ if not dynamic.is_empty():return str(dynamic.room)
  var actor:String=paper_actor(target)
  if not actor.is_empty() and owner.present(actor):return str(owner.actor(actor).room)
  return str(target.get("room",""))
 
 func target_position(target:Dictionary) -> Vector2:
+ var dynamic:Dictionary=dynamic_target(target)
+ if not dynamic.is_empty():return Vector2(float(dynamic.pos[0]),float(dynamic.pos[1]))
  var actor:String=paper_actor(target)
  if not actor.is_empty() and owner.present(actor):return owner.position(actor)
  var room:String=target_room(target)
  if room.is_empty():return Vector2.INF
- if str(target.get("kind",""))=="door_panel":return owner.app.door_point_for("office","lobby")+Vector2(0,0.4)
+ if str(target.get("kind",""))=="door_panel":
+  var portal:Dictionary=owner.app.portal_for_room("office","lobby")
+  return portal.at+portal.inward*0.4
  var layout=owner.layout_for(room);var index:int=int(target.get("furniture",-1))
  return layout.furniture[index].at if index>=0 and index<layout.furniture.size() else Vector2.INF
+
+func approach_position(target:Dictionary) -> Vector2:
+ var at:Vector2=target_position(target)
+ var dynamic:Dictionary=dynamic_target(target)
+ var holder:String=str(dynamic.get("holder",paper_actor(target)))
+ if holder.is_empty() or not owner.present(holder):return at
+ var layout=owner.layout_for(target_room(target))
+ if owner.app.hero_pos.distance_to(at)<=0.6 and layout.clear_segment(owner.app.hero_pos,at):return owner.app.hero_pos
+ for offset in [Vector2(0.5,0),Vector2(-0.5,0),Vector2(0,0.5),Vector2(0,-0.5)]:
+  var stand:Vector2=at+offset
+  if layout.walkable(stand) and layout.clear_segment(stand,at) and not layout.path(owner.app.hero_pos,stand).is_empty():return stand
+ return Vector2.INF
 
 func available(target:Dictionary) -> bool:
  if not usable() or target.is_empty():return false
  match str(target.kind):
+  "ward_evidence","intake":return not dynamic_target(target).is_empty()
+  "departure":return owner.data.get("departure_page",false) and not matching_record("asylum_departure_copy:").is_empty() and owner.present("registration_nurse") and departure_copy_holder()=="registration_nurse"
   "laundry_bag":return owner.data.get("carry",{}).get("bag","")=="ward"
   "laundry_vacancy":return owner.data.get("carry",{}).get("bag","")=="removed"
   "diagnosis":return owner.data.get("diagnosed",false) and not matching_record("asylum_diagnosis:").is_empty() and owner.present("doctor")
@@ -66,6 +121,11 @@ func available(target:Dictionary) -> bool:
 func revision(target:Dictionary) -> String:
  var variant:Variant="static"
  match str(target.kind):
+  "ward_evidence":return owner.ward_events.evidence_revision(str(target.id))
+  "intake":return owner.intake.observation_revision(str(target.id))
+  "departure":variant=matching_record("asylum_departure_copy:")
+  "screen":variant=config.glyphs.get("number_screen",null)
+  "whiteboard":variant=config.glyphs.get("whiteboard_text",null)
   "diagnosis":variant=matching_record("asylum_diagnosis:")
   "medicine_update":variant=medicine_record()
   "nurse_duty":variant=owner.data.get("nurse_duty_state",{}).get("entries",[])
@@ -139,9 +199,15 @@ func cancel() -> void:
 func blocks_hero() -> bool:return usable() and not state().active.is_empty()
 
 func observed_fields(target:Dictionary) -> Dictionary:
+ if str(target.kind)=="ward_evidence":return owner.ward_events.evidence_fields(str(target.id))
+ if str(target.kind)=="intake":return owner.intake.observation_fields(str(target.id))
  var fields:Dictionary={}
  for key in target.get("fields",{}):fields[key]=config.glyphs.get(str(target.fields[key]),null)
  match str(target.kind):
+  "departure":fields.paper=matching_record("asylum_departure_copy:").duplicate(true);fields.identity_confirmed=false;fields.transfer_witnessed=false
+  "screen":fields.displayed_number=config.glyphs.get("number_screen",null);fields.identity_confirmed=false;fields.departure_proved=false
+  "whiteboard":fields.written_text=config.glyphs.get("whiteboard_text",null)
+  "self_photo_slot":fields.actual_photo_present=false;fields.capture_record=null;fields.injury_does_not_generate_photo=true
   "diagnosis":fields.paper=matching_record("asylum_diagnosis:").duplicate(true)
   "medicine_update":fields.paper=medicine_record().duplicate(true)
   "nurse_duty":fields.entries=owner.data.get("nurse_duty_state",{}).get("entries",[]).duplicate(true)
@@ -169,6 +235,8 @@ func complete(target:Dictionary) -> void:
  var text:String=str(target.text)
  if str(target.kind)=="diagnosis":text+=" 本次实际纸面内容："+str(fields.paper.get("text",""))
  if str(target.kind)=="medicine_update":text+=" 本次实际纸面内容："+str(fields.paper.get("text",""))
+ if str(target.kind)=="departure":text+=" 本页实际文字："+str(fields.paper.get("text",""))
+ if str(target.kind)=="ward_evidence" and fields.has("text"):text+=" 本纸原句："+str(fields.text)
  owner.observe(id,text)
  # A changed actual document remains a separate read version in the book;
  # remembered older text is not silently overwritten or promoted to fact.
@@ -178,7 +246,27 @@ func complete(target:Dictionary) -> void:
  if id=="asylum_waste_label_under":value.links.label_layers_exposed=true
  var dialogue:String=str(target.get("dialogue",""))
  cancel();say(dialogue)
+ if str(target.kind)=="intake":owner.intake.on_observation_complete(id)
  if str(target.kind)=="nurse_duty" and owner.get("nurse_duty")!=null:owner.nurse_duty.on_table_read()
 
 func on_skill(result:Dictionary) -> void:
  if result.get("success",false) and str(result.get("id","")) in ["SKIN","GUT","KNEE","WITHDRAW","STARTLE","FEAR","CONTROL"]:cancel()
+
+func for_item(id:String) -> Dictionary:
+ var ids:Array=[id]
+ if id=="asylum_work_box":ids=["asylum_product_label"]
+ if owner.intake!=null and id==owner.intake.bag_id():ids=["asylum_relic_bag_number","asylum_relic_bag_photo"]
+ for key in ids:
+  var target:Dictionary=specification(str(key))
+  if target.is_empty() or not available(target):continue
+  if str(state().completed.get(str(key),""))==revision(target):continue
+  return {"id":str(key),"kind":"observation","pos":[target_position(target).x,target_position(target).y]}
+ return {}
+
+func markers() -> Array:
+ if not usable():return []
+ var result:Array=[]
+ if available(specification("asylum_departure_page")):
+  var target:Dictionary=specification("asylum_departure_page");var at:Vector2=target_position(target)
+  result.append({"id":"asylum_departure_page","room":target_room(target),"pos":[at.x,at.y],"kind":"note","draw_offset":[18,-31],"label":"离院单副本"})
+ return result

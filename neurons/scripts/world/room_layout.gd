@@ -6,6 +6,14 @@ const RADIUS := 0.14
 const CELL := 0.1
 const DOOR := Vector2(4.6, 0.22)
 const BED_STOP := Vector2(2.55, 1.2)
+# Legacy constants remain valid for rooms not yet migrated. Geometry v2 callers
+# use the instance accessors instead of changing the scale of every old room.
+var body_radius:float=RADIUS
+var geometry_version:int=1
+var bounds_size:Vector2=SIZE
+var door_anchor:Vector2=DOOR
+var bed_anchor:Vector2=BED_STOP
+var cat_exit_anchor:Vector2=Vector2(3.95,3.6)
 var furniture: Array[Dictionary] = [
  {"id":"bed", "name":"床", "rect":Rect2(0.18,0.18,2.15,1.42), "at":Vector2(2.55,1.2), "height":27.0, "color":Color("8b9b9c"), "kind":"bed"},
  {"id":"bedside", "name":"床头柜", "rect":Rect2(0.18,1.82,0.58,0.48), "at":Vector2(0.97,1.85), "height":22.0, "color":Color("967857"), "kind":"drawer"},
@@ -23,12 +31,28 @@ var grid := AStarGrid2D.new()
 var movable_blockers:Array[Rect2]=[]
 
 func _init() -> void:
- grid.region = Rect2i(0,0,57,39)
+ rebuild_grid()
+
+func world_size() -> Vector2:
+ return bounds_size
+
+func door_position() -> Vector2:
+ return door_anchor
+
+func bed_position() -> Vector2:
+ return bed_anchor
+
+func cat_exit_position() -> Vector2:
+ return cat_exit_anchor
+
+func rebuild_grid() -> void:
+ var cells := Vector2i(ceili(world_size().x/CELL-0.00001)+1,ceili(world_size().y/CELL-0.00001)+1)
+ grid.region = Rect2i(Vector2i.ZERO,cells)
  grid.cell_size = Vector2(CELL,CELL)
  grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_ONLY_IF_NO_OBSTACLES
  grid.update()
- for y in range(39):
-  for x in range(57):
+ for y in range(cells.y):
+  for x in range(cells.x):
    grid.set_point_solid(Vector2i(x,y), not walkable(Vector2(x,y)*CELL))
 
 func project(p:Vector2) -> Vector2:
@@ -38,8 +62,9 @@ func unproject(p:Vector2) -> Vector2:
  var depth := (p.y-132.0)/46.0
  return Vector2((p.x-45.0-28.0*depth)/80.0,depth)
 
-func walkable(p:Vector2, radius:float=RADIUS) -> bool:
- if not Rect2(Vector2(radius,radius),SIZE-Vector2.ONE*radius*2).has_point(p):
+func walkable(p:Vector2, radius:float=-1.0) -> bool:
+ if radius<0.0:radius=body_radius
+ if not Rect2(Vector2(radius,radius),world_size()-Vector2.ONE*radius*2).has_point(p):
   return false
  for f in furniture:
   if (f.rect as Rect2).grow(radius).has_point(p):
@@ -49,10 +74,11 @@ func walkable(p:Vector2, radius:float=RADIUS) -> bool:
  return true
 
 func clear_segment(a:Vector2,b:Vector2,radius:float=0.0) -> bool:
+ if radius<0.0:radius=body_radius
  var steps := maxi(2,ceili(a.distance_to(b)/0.03))
  for i in range(steps+1):
   var p := a.lerp(b,float(i)/steps)
-  if not Rect2(Vector2(radius,radius),SIZE-Vector2.ONE*radius*2).has_point(p):return false
+  if not Rect2(Vector2(radius,radius),world_size()-Vector2.ONE*radius*2).has_point(p):return false
   for f in furniture:
    if (f.rect as Rect2).grow(radius).has_point(p):
     return false
@@ -62,6 +88,7 @@ func clear_segment(a:Vector2,b:Vector2,radius:float=0.0) -> bool:
 
 func path(a:Vector2,b:Vector2) -> PackedVector2Array:
  if not walkable(a) or not walkable(b):return PackedVector2Array()
+ if geometry_version>=2:return _connected_path(a,b)
  var ai := Vector2i((a/CELL+Vector2.ONE*0.0001).round())
  var bi := Vector2i((b/CELL+Vector2.ONE*0.0001).round())
  if not grid.is_in_boundsv(ai) or not grid.is_in_boundsv(bi):
@@ -72,20 +99,71 @@ func path(a:Vector2,b:Vector2) -> PackedVector2Array:
   result[result.size()-1]=b
  return result
 
+func _connected_path(a:Vector2,b:Vector2) -> PackedVector2Array:
+ # Exact endpoints connect to visible legal cells. Replacing rounded endpoints
+ # can otherwise cut through an inflated cabinet corner or a moved object.
+ if a.is_equal_approx(b):return PackedVector2Array([a])
+ if clear_segment(a,b,body_radius):return PackedVector2Array([a,b])
+ var starts:Array[Vector2i]=_grid_candidates(a)
+ var ends:Array[Vector2i]=_grid_candidates(b)
+ for start in starts:
+  for finish in ends:
+   var middle:PackedVector2Array=grid.get_point_path(start,finish)
+   if middle.is_empty():continue
+   var result:=PackedVector2Array([a])
+   for point in middle:
+    if not result[-1].is_equal_approx(point):result.append(point)
+   if not result[-1].is_equal_approx(b):result.append(b)
+   var valid:=true
+   for index in range(1,result.size()):
+    if not clear_segment(result[index-1],result[index],body_radius):
+     valid=false
+     break
+   if valid:return _visible_waypoints(result)
+ return PackedVector2Array()
+
+func _visible_waypoints(points:PackedVector2Array) -> PackedVector2Array:
+ # A moving target can require a new path every frame. Keeping the nearest
+ # start grid cell behind the actor makes that actor walk back to it forever.
+ # Keep exact endpoints and only remove waypoints reachable at full radius.
+ var result:=PackedVector2Array([points[0]])
+ var index:int=0
+ while index<points.size()-1:
+  var next:int=points.size()-1
+  while next>index+1 and not clear_segment(points[index],points[next],body_radius):next-=1
+  result.append(points[next]);index=next
+ return result
+
+func _grid_candidates(point:Vector2) -> Array[Vector2i]:
+ var center:=Vector2i((point/CELL).round())
+ var candidates:Array[Vector2i]=[]
+ for y in range(center.y-3,center.y+4):
+  for x in range(center.x-3,center.x+4):
+   var cell:=Vector2i(x,y)
+   if not grid.is_in_boundsv(cell) or grid.is_point_solid(cell):continue
+   if clear_segment(point,Vector2(cell)*CELL,body_radius):candidates.append(cell)
+ candidates.sort_custom(func(a:Vector2i,b:Vector2i)->bool:
+  var da:float=snappedf(point.distance_squared_to(Vector2(a)*CELL),0.000001)
+  var db:float=snappedf(point.distance_squared_to(Vector2(b)*CELL),0.000001)
+  if not is_equal_approx(da,db):return da<db
+  return a.y<b.y or (a.y==b.y and a.x<b.x))
+ if candidates.size()>8:candidates.resize(8)
+ return candidates
+
 func move_path(p:Vector2, route:PackedVector2Array, distance:float) -> Dictionary:
  var current := p
  var remaining := route.duplicate()
  while remaining.size()>0 and distance>0:
   var step := current.distance_to(remaining[0])
   if step<=distance:
-   if not walkable(remaining[0]) or not clear_segment(current,remaining[0],RADIUS):
+   if not walkable(remaining[0]) or not clear_segment(current,remaining[0],body_radius):
     break
    current=remaining[0]
    remaining.remove_at(0)
    distance-=step
   else:
    var candidate := current.move_toward(remaining[0],distance)
-   if walkable(candidate) and clear_segment(current,candidate,RADIUS):
+   if walkable(candidate) and clear_segment(current,candidate,body_radius):
     current=candidate
    break
  return {"position":current,"route":remaining}

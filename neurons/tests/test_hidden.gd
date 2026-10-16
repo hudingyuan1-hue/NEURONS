@@ -192,17 +192,30 @@ func test_body_and_kick() -> void:
 
 func test_exit_and_storage() -> void:
  var pair:Dictionary=fresh();var app=pair.app;var module=pair.module
+ var threshold:Vector2=module.vector(module.config.layout.exit)
+ var inside:Vector2=threshold+Vector2(0,0.05)
+ var outside:Vector2=threshold-Vector2(0,0.05)
+ app.hero_pos=inside
+ check(not module.commit_exit(inside),"standing near an exit marker is not a crossing")
+ app.hero_pos=threshold
+ check(not module.commit_exit(),"legacy proximity callback without a movement segment cannot award E1")
+ check(module.crossed_exit(inside,outside) and not module.crossed_exit(outside,inside),"only an inside-to-outside threshold crossing has valid direction")
+ check(not module.crossed_exit(inside+Vector2(-0.8,0),outside+Vector2(-0.8,0)),"crossing beside the finite doorway cannot award E1")
+ check(not app.layout.path(inside,module.exit_destination()).is_empty(),"outer landing is reachable by ordinary collision-aware movement")
  stationary(pair,app.layout.EXIT,Vector2(4.8,0.42));force_attack(pair)
  app.rules.hp=15
  tick(pair,0.01)
  check(app.rules.hp==0 and module.data.status=="dead" and module.data.ending.is_empty(),"fatal contact at actual exit wins over E1")
  check(module.data.pending_feedback.is_empty(),"fatal hit cannot queue still-alive or escape-success dialogue")
  pair=fresh();app=pair.app;module=pair.module
- stationary(pair,app.layout.EXIT,Vector2(4.8,0.42));force_attack(pair)
+ stationary(pair,inside,Vector2(4.8,0.42));force_attack(pair)
  app.rules.hp=16
  tick(pair,0.01)
- check(app.rules.hp==1 and module.data.status=="ending","nonfatal same-node contact deducts before valid E1 exit")
+ check(app.rules.hp==1 and module.data.status=="active","nonfatal hit beside threshold does not itself complete E1")
+ app.hero_pos=outside # Isolated swept-crossing fixture after the real contact.
+ check(module.commit_exit(inside),"valid crossing commits only after nonfatal damage has been applied")
  check(module.data.ending.id=="E1" and module.data.pending_achievements==["hidden_clear","host_wins"],"E1 requests the two original global achievement keys")
+ check("hit" in module.data.ending_feedback and not module.encounter_record().is_empty(),"feedback due at crossing survives into the ending record without blocking E1")
  check(app.rules.transitioning and module.blocks_hero() and app.hero_route.is_empty(),"ending locks old world, attack and player movement")
  var hp:int=app.rules.hp
  module._hit_hero("stale_after_exit")
@@ -222,6 +235,15 @@ func test_exit_and_storage() -> void:
  tick(pair,0.2)
  check(app.rules.hp==hp_after and module.data.hunter.attack_hit,"JSON-restored attack preserves contact receipt and cannot hit twice")
  check(typeof(module.data.hunter.pos)==TYPE_ARRAY and typeof(module.data.hunter.phase)==TYPE_STRING,"module persistence uses portable JSON primitives")
+ pair=fresh();app=pair.app;module=pair.module
+ module.tick(0.01)
+ check(module.data.feedback_receipts.has("saw") and not app.dialogue_queue.is_empty(),"first actual sight is presented during the encounter rather than waiting for patrol")
+ var lines:String=JSON.stringify(app.dialogue_queue)
+ check(not "出口在后面。" in lines and "……" in lines,"latest player-opposition instruction suppresses only the contradictory assistance quote")
+ module.data=JSON.parse_string(JSON.stringify(module.data));app.dialogue_queue.clear()
+ module._perceive();module._safe_feedback()
+ check(app.dialogue_queue.is_empty(),"restoring an already-presented sight receipt does not repeat its dialogue")
+ check(module.config.feedback.saw[1].text=="出口在后面。","historical source dialogue remains intact while the explicit user override controls playback")
 
 func test_natural_escape() -> void:
  var pair:Dictionary=fresh();var app=pair.app;var module=pair.module
@@ -234,6 +256,7 @@ func test_natural_escape() -> void:
   if module.data.status!="active":break
  check(seen_living and module.data.status=="ending" and app.rules.hp>0,"zero-resource autonomous body evades a live hunter to the real exit")
  check(module.data.hunter.hp==60 and app.rules.sp==100,"natural autonomous escape does not require attacks, resource purchase or mental damage")
+ check(module.data.feedback_receipts.has("saw") and module.data.feedback_receipts.has("evaded"),"natural pursuit presents both actual sight and real evade feedback")
  pair=fresh();app=pair.app;module=pair.module
  stationary(pair,Vector2(1.7,0.9),Vector2(1,0.9));force_attack(pair)
  app.rules.loading=true

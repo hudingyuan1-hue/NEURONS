@@ -1,0 +1,46 @@
+{
+  "version": "asylum-intake-1",
+  "sources": [
+    "S1:P108–110",
+    "S3:P436/T12R3/T20R5/P656/P659–660"
+  ],
+  "implementation_note": "分阶段接收为原稿既定遗物收存结果的二维动作实现；不新增人物身份、强制对话、资源或通行前置。上游必须实际接近并收得原物，不能只以wheelchair_gone造袋。",
+  "timing": {
+    "prepare": 0.25,
+    "contact": 0.4,
+    "finish": 0.35
+  },
+  "contact_distance": 0.55,
+  "receiver": "registration_nurse",
+  "room": "lobby",
+  "desk_index": 0,
+  "incoming_from": "stairs",
+  "bag_number": null,
+  "source_items": {
+    "family_photo": "wheelchair_footplate",
+    "patient_shoe": "lobby_floor"
+  },
+  "source_contract": {
+    "carry_field": "relic_delivery",
+    "manifest": "{version:1, ready:true, bag_departed:true, exit_room:'lobby', exit_pos:[actual x,y], source_attempt:int, transport_receipt:String, bag_id:String, items:Array, packed_receipts:Dictionary, source_owners:Dictionary}",
+    "transport_receipt_kind": "patient_transport_completed",
+    "packed_receipt_kind": "hospital_relic_packed",
+    "incoming_bag_owner": "hospital_relic_carry",
+    "arrival_hook": "arrive_from_hospital() is called once at the real L2-to-L3 transition. Restore only restores JSON; it must not run the arrival hook again.",
+    "ownership": "Each original item stays owned by manifest.bag_id; only the bag owner changes at actual arrival, nurse contact and placement. No loose L2 object is moved by this module."
+  },
+  "dialogue": {
+    "PHOTO_RECOGNISE": [
+      {
+        "speaker": "角色[凝重]",
+        "text": "照片是他一直拿着的。",
+        "source": "S3:P659"
+      },
+      {
+        "speaker": "玩家[认真]",
+        "text": "再对一下袋上的号。",
+        "source": "S3:P660"
+      }
+    ]
+  }
+}

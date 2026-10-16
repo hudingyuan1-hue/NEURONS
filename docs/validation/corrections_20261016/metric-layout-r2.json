@@ -1,0 +1,23 @@
+{
+  "checks": 1700,
+  "engine": "4.7.2-stable (official)",
+  "failed": 14,
+  "failures": [
+    "initial door -> bed_stop incremental motion arrives",
+    "initial door -> bed incremental motion arrives",
+    "initial door -> box incremental motion arrives",
+    "initial fan -> bed_stop incremental motion arrives",
+    "initial fan -> bed incremental motion arrives",
+    "per-frame repath follows moving contact around a real cabinet corner",
+    "moved door -> bed_stop incremental motion arrives",
+    "moved door -> bed incremental motion arrives",
+    "moved door -> box incremental motion arrives",
+    "moved cat_window -> bed_stop incremental motion arrives",
+    "moved cat_window -> bed incremental motion arrives",
+    "moved cat_window -> bedside incremental motion arrives",
+    "moved fan -> bed_stop incremental motion arrives",
+    "moved fan -> bed incremental motion arrives"
+  ],
+  "passed": 1686,
+  "scope": "Headless real geometry/navigation/move_path; all new L1 targets before and after furniture moves; legacy layouts remain v1. No GPU, NPC pairing, artwork or normal-play acceptance."
+}

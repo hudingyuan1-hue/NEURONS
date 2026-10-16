@@ -1,0 +1,134 @@
+{
+  "failures": [
+    "ordinary process and actual CRT/world mouse complete a source-paper read then resume autonomous search",
+    "one real paid intervention and only the later finished search settle their original resource amounts"
+  ],
+  "frames": 1843,
+  "passes": [
+    "visible paper inspection never manufactures an actual signature"
+  ],
+  "rendered": true,
+  "scope": "One stated group-therapy actor/paper/50N/unlocked-CONTROL/two-target fixture. Thereafter ordinary _process and actual UI inputs only; no manual advance_world, debug completion or new capture/signature event. Silent continuous MovieMaker recording; not human all-RNG or formal-art/audio acceptance.",
+  "timeline": [
+    {
+      "action": "autonomy",
+      "control": 0.0,
+      "frame": 0,
+      "reading": {},
+      "stage": 0,
+      "world_time": 0.0
+    },
+    {
+      "action": "autonomy",
+      "control": 0.0,
+      "frame": 7,
+      "reading": {},
+      "stage": 1,
+      "world_time": 0.0
+    },
+    {
+      "action": "asylum_reading",
+      "control": 5.63333333333333,
+      "frame": 42,
+      "reading": {
+        "controlled": true,
+        "elapsed": 0.1,
+        "id": "asylum_signature_record",
+        "name": "翻看主任记录夹中的签字附页",
+        "phase": "prepare",
+        "phase_progress": 0.4,
+        "pos": [
+          3.0,
+          1.5
+        ],
+        "pose": "middle",
+        "revision": "ward-evidence-1:1dded11b9dd07f32",
+        "room": "group_therapy"
+      },
+      "stage": 2,
+      "world_time": 0.366666666666667
+    },
+    {
+      "action": "asylum_reading",
+      "control": 5.53333333333334,
+      "frame": 45,
+      "reading": {
+        "controlled": true,
+        "elapsed": 0.2,
+        "id": "asylum_signature_record",
+        "name": "翻看主任记录夹中的签字附页",
+        "phase": "prepare",
+        "phase_progress": 0.8,
+        "pos": [
+          3.0,
+          1.5
+        ],
+        "pose": "middle",
+        "revision": "ward-evidence-1:1dded11b9dd07f32",
+        "room": "group_therapy"
+      },
+      "stage": 3,
+      "world_time": 0.466666666666667
+    },
+    {
+      "action": "asylum_reading",
+      "control": 5.46666666666667,
+      "frame": 47,
+      "reading": {
+        "controlled": true,
+        "elapsed": 0.266666666666667,
+        "id": "asylum_signature_record",
+        "name": "翻看主任记录夹中的签字附页",
+        "phase": "contact",
+        "phase_progress": 0.0416666666666667,
+        "pos": [
+          3.0,
+          1.5
+        ],
+        "pose": "middle",
+        "revision": "ward-evidence-1:1dded11b9dd07f32",
+        "room": "group_therapy"
+      },
+      "stage": 3,
+      "world_time": 0.533333333333333
+    },
+    {
+      "action": "asylum_reading",
+      "control": 5.06666666666667,
+      "frame": 59,
+      "reading": {
+        "controlled": true,
+        "elapsed": 0.666666666666667,
+        "id": "asylum_signature_record",
+        "name": "翻看主任记录夹中的签字附页",
+        "phase": "finish",
+        "phase_progress": 0.0476190476190475,
+        "pos": [
+          3.0,
+          1.5
+        ],
+        "pose": "middle",
+        "revision": "ward-evidence-1:1dded11b9dd07f32",
+        "room": "group_therapy"
+      },
+      "stage": 3,
+      "world_time": 0.933333333333333
+    },
+    {
+      "action": "autonomy",
+      "control": 4.7,
+      "frame": 70,
+      "reading": {},
+      "stage": 3,
+      "world_time": 1.3
+    },
+    {
+      "action": "autonomy",
+      "control": 4.50000000000001,
+      "frame": 83,
+      "reading": {},
+      "stage": 4,
+      "world_time": 1.5
+    }
+  ]
+}

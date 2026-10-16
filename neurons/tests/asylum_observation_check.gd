@@ -38,9 +38,9 @@ func legal_control() -> bool:
 func finish3() -> void:
  var output:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
  output.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":true,
-  "scope":"B3 twenty-three observation configurations: finite real prepare/contact/finish APIs, interruption and original source/knowledge boundaries, actual checksummed JSON plus real CRT CONTROL and furniture/world mouse driven by ordinary _process. Not all natural-RNG combinations, formal-art acceptance or subjective sound.",
+  "scope":"Original twenty-three B3 physical observations within thirty-two configured targets: finite prepare/contact/finish, interruption, source/knowledge boundaries, JSON plus real CRT/world mouse. Added dynamic papers and intake are checked in separate finite suites; not all natural-RNG or formal art/audio acceptance.",
   "fixtures":"Real walkable initial stands; no random arrivals; source-declared prior laundry movement or earlier cuff clue only in their dedicated carry tests. Diagnosis positive case uses real doctor writing/order timing. No successful read/overlay exposure or matching unknown number is assigned as a fixture.",
-  "deferred":"Eight source-specific items stay explicitly deferred in asylum_observations.json; no made-up photo intake, screen number, signature, whiteboard text or invisible paper content. Actual nurse-duty writing/clip-back/reading feedback is also covered by its own finite event suite."},"  "));output.close()
+  "content_pending":"Physical checks and source-bound intake now have separate suites. Number glyphs, real self-photograph capture, actual signature and whiteboard text remain unavailable source content, never invented from a read. Nurse-duty writing has its own event suite."},"  "));output.close()
  print("ASYLUM_OBSERVATION_CHECK %d passed %d failed"%[passes.size(),failures.size()]);frontend.request_exit(0 if failures.is_empty() else 1)
 
 func _ready() -> void:
@@ -57,8 +57,8 @@ func _ready() -> void:
  observation_fixture("ward")
  var ids:Dictionary={}
  for target in observations3().config.targets:ids[str(target.id)]=true
- check(ids.size()==23 and ids.size()==observations3().config.targets.size(),"all twenty-three physical observation IDs are unique and separate from deferred items")
- check(observations3().config.deferred.size()==8,"source conditions without physical runtime evidence remain explicit deferred records")
+ check(ids.size()==32 and ids.size()==observations3().config.targets.size(),"all thirty-two physical observation IDs remain unique as dynamic papers and intake are added")
+ check(observations3().config.deferred.is_empty() and observations3().config.content_pending.size()==5,"physical target implementations remain separate from five explicit unknown-content conditions")
  var before_n:int=app.rules.neurons;var before_search:int=app.rules.search_attempts
  app.hero_pos=Vector2(4.2,1.3)
  check(not observations3().begin("asylum_bed_card_under"),"distant old-card observation cannot start without actually approaching its stand")

@@ -109,6 +109,7 @@ func _draw() -> void:
  var win:=layout.project(Vector2(3.9,3.8))
  draw_line(win,win+Vector2(60,0),Color("a6c4c3"),4)
  poly([layout.project(Vector2(2.95,1.8)),layout.project(Vector2(4.2,1.8)),layout.project(Vector2(3.8,3.7)),layout.project(Vector2(2.6,3.7))],Color(0.94,0.88,0.67,0.16))
+ draw_room_overlays()
  var ordered:Array[Dictionary]=[]
  for f in layout.furniture:
   ordered.append({"type":"furniture","data":f,"depth":layout.project((f.rect as Rect2).end).y})
@@ -136,6 +137,9 @@ func _draw() -> void:
   for p in app.hero_route:
    draw_circle(layout.project(p),1.1,Color("84ddbd"))
   draw_circle(layout.project(app.hero_pos),4,Color("efbe78"),false,1)
+
+func draw_room_overlays() -> void:
+ pass
 
 func extra_actors() -> Array:
  return []

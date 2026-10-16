@@ -1,0 +1,16 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+Movie Maker mode enabled, recording movie in 1280×720 @ 30 FPS...
+PASS declared paper and protagonist stands are outside fixed chair collision geometry
+PASS ordinary process and actual CRT/world mouse complete a source-paper read then resume autonomous search
+PASS visible paper inspection never manufactures an actual signature
+PASS one real paid intervention and only the later finished search settle their original resource amounts
+ASYLUM_EVIDENCE_SEQUENCE_CHECK 4 passed 0 failed
+--------------------------------------------------------------------------------
+Done recording movie at path: C:\Users\23623\Documents\GitHub\NEURONS\tmp\b3_finish_20261016\b3_evidence_sequence_r2.avi
+482 frames at 30 FPS (movie length: 00:00:16:02), recorded in 00:00:11 (145% of real-time speed).
+CPU render time: 0.14 seconds (average: 0.30 ms/frame)
+GPU render time: 0.29 seconds (average: 0.60 ms/frame)
+Encoding time: 4.30 seconds (average: 8.92 ms/frame)
+--------------------------------------------------------------------------------

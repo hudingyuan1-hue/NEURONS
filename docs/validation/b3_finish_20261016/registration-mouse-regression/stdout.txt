@@ -1,0 +1,25 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS mouse fixture earns the real initial departure-copy answer without injecting a follow-up outcome
+PASS actual Enter inputs finish the first answer while the explicit manual pause preserves the unasked state
+PASS actual CRT payment starts legal CONTROL before a new autonomous question
+PASS real registration-desk mouse click requests the implemented route/contact interaction
+PASS ordinary process reaches the nurse and asks the original follow-up after the desk click
+PASS desk route physically moves before the actual question; speech alone issues no completed paper
+PASS desk-initiated nurse really completes interruptible writing before the accusation exists
+PASS finished desk-initiated paper remains unread until the separate viewing clock
+PASS desk-initiated actual viewing completes and obtains the source reaction through normal process
+PASS actual mouse sequence keeps one nurse-owned paper, one CONTROL fee and no invented damage
+PASS mouse fixture earns the real initial departure-copy answer without injecting a follow-up outcome
+PASS actual Enter inputs finish the first answer while the explicit manual pause preserves the unasked state
+PASS actual CRT payment starts legal CONTROL before a new autonomous question
+PASS real visible nurse-body click also enters the physical registration interaction
+PASS nurse-body click reaches actual question rather than a debug completion
+PASS nurse-body sequence earns the original finished sheet before interruption
+PASS new-command target is an explicitly checked walkable floor position
+PASS actual new floor command cancels only unfinished viewing and preserves the one written accusation
+PASS same controlled protagonist really follows the new floor route while genuine body feedback is continued through Enter
+PASS later real nurse click routes back and reads the same completed paper
+PASS re-reading through actual input creates no duplicate paper, settlement or second CONTROL fee
+ASYLUM_REGISTRATION_MOUSE_CHECK 21 passed 0 failed

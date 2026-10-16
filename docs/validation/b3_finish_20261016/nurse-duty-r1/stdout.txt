@@ -1,0 +1,55 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS unvisited-pharmacy corridor entry uses the original linked pharmacy group roll and remaining check budget
+PASS successful shared corridor roll actually spawns the existing linked group at its original pharmacy door offscreen
+PASS both one-per-ID actors begin at pharmacy instead of a second upstairs nurse clone
+PASS nurse physically waits while linked pharmacist first walks clear of the single pharmacy doorway instead of both racing into each other
+PASS same nurse physically travels to upstairs duty station with no fabricated source paper
+PASS first corridor scheduling retains actual pharmacy/lobby/stairs/corridor passage
+PASS no-source duty posting writes no classification, moves no pharmacist and creates no identity
+PASS already-drawn group's corridor revisit does not reroll, duplicate or reset the posted nurse
+PASS actual doctor/pharmacist/cup flow reaches visible pre-swallow while the one nurse is onsite
+PASS real complete cup raise commits original swallowing once
+PASS continuous swallowing witness queues work without pretending nurse has already written
+PASS actual drug effect is independent of later nurse paperwork
+PASS onsite nurse really finishes writing while protagonist drug stop is still active
+PASS own witnessed record forms once and hero body stop cannot freeze nurse writing
+PASS continued writing/copying cannot repeat medication or own-witness record
+PASS unaccompanied pharmacist reaches same real cup window without spawning an upstairs witness
+PASS pharmacist completes actual ingestion with nurse genuinely upstairs
+PASS upstairs nurse receives no remote full-swallow witness or onsite record
+PASS one nurse identity remains upstairs instead of duplicating a pharmacy observer
+PASS actual refusal and actual false-record writing produce a real source before duty copying
+PASS refusal facts and institution's written already-taken paper stay separate
+PASS same nurse physically reads/checks actual lower-floor source and arrives at upstairs writing stand
+PASS read/check/contact do not produce an already-finished duty row
+PASS one actor really crosses pharmacy/lobby/stairs/corridor rather than teleporting between records
+PASS manual pause freezes actual upstairs writing game clock
+PASS real checksummed JSON retains exact mid-writing source, timing and physical actor
+PASS resumed nurse physically completes writing and clipping before public row exists
+PASS duty copy preserves exact source ID/text/attempt instead of rewriting provenance
+PASS unprovided number stays null and no idle or false-paper label is fabricated
+PASS copying an already-taken page does not become a new swallowing witness or move the original owner
+PASS institutional duty classifications do not alter body facts, health, mental state or control
+PASS actual public-table preparation/contact/finish invokes nurse-duty reading
+PASS actual read of this known false source enables exact original P805–808 once
+PASS public-table read remembers this completed copy without internal-folder punishment
+PASS public duty-table reading does not create chief internal-folder search offense
+PASS continued updates do not append same completed source again
+PASS same physical false source can be copied without a protagonist full-writing-witness knowledge flag
+PASS own actual refusal plus actual read of the matching already-taken copy permits original challenge without inventing a full-writing eyewitness
+PASS another real nurse task reserves the same identity and cannot be overwritten by duty movement
+PASS prior source is read only after actual travel to the existing office archive copy
+PASS global historical records alone cannot remotely fill the upstairs duty sheet
+PASS taking archived copy away before actual read completion cancels that unavailable source
+PASS restored real archive paper permits new actual read/check/upstairs-write/clip
+PASS prior source/attempt/null number survive copying without becoming nurse's ingestion eyewitness
+PASS old already-taken paper neither creates a new valid dose nor changes actual current medication
+PASS generic old false-medication knowledge without this visit's actual refusal cannot identify the historical copy as this known contradiction
+PASS two historical visits plus a generic old known flag cannot bind either wrong visit or non-refused current visit to a false-record challenge
+PASS multiple historical prescriptions bind medical-order reading to the exact inherited current visit, never first global record
+PASS nurse physically reads the actual pharmacist-held inherited order and writes/clips at upstairs station
+PASS completed current-order copy preserves exact inherited source B rather than unrelated older prescription A
+PASS nurse reading inherited valid command does not take its ownership, re-dispense or apply drug
+ASYLUM_NURSE_DUTY_CHECK 51 passed 0 failed

@@ -300,11 +300,15 @@ func tick(delta:float) -> Dictionary:
   if search_elapsed+0.000001>=search_duration and not settled.has(_search_id):
    search_active=false
    settled[_search_id]="completed"
+   # A companion can finish this point while a legal controlled search is
+   # already running. Finish the physical action but settle income only once.
+   var first_completion:bool=not _completed_targets.has(search_target)
    _completed_targets[search_target]=true
-   search_count+=1
-   neurons+=1
-   _record("search_completed",_search_id,{"target":search_target,"neurons":1})
-   result={"search_completed":true,"reaction_finished":result.reaction_finished,"target_id":search_target,"event_id":_search_id}
+   if first_completion:
+    search_count+=1
+    neurons+=1
+   _record("search_completed",_search_id,{"target":search_target,"neurons":1 if first_completion else 0,"already_completed":not first_completion})
+   result={"search_completed":true,"reaction_finished":result.reaction_finished,"target_id":search_target,"event_id":_search_id,"rewarded":first_completion}
  return result
 
 func commit_hit(event_id:String,distance:float,line_of_sight:bool,facing:bool,active:bool,source_id:String="cat",target_id:String="protagonist") -> bool:

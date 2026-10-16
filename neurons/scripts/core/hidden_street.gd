@@ -2,6 +2,11 @@ extends RefCounted
 ## Independent L1 hidden route. Parent advances NeuralRules once, then calls
 ## tick with the same running-world delta. data contains JSON primitives only.
 const Plaza=preload("res://scripts/world/hidden_layout.gd")
+# The marker is a threshold, not a proximity target. The short outer landing
+# remains inside the walkable plaza; there is no new room or gameplay gate.
+const EXIT_OUTWARD=Vector2.UP
+const EXIT_HALF_WIDTH:float=0.36
+const EXIT_LANDING:float=0.20
 var app
 var data:Dictionary={}
 var config:Dictionary={}
@@ -60,8 +65,9 @@ func tick(delta:float) -> void:
    data.status="dead"
    app.hero_route=PackedVector2Array();app.motion.clear()
    return
+  var previous:Vector2=app.hero_pos
   _advance_hero(step)
-  commit_exit()
+  commit_exit(previous)
  _safe_feedback()
 
 func _perceive() -> void:
@@ -221,7 +227,13 @@ func _advance_hero(delta:float) -> void:
   app.move_hero(delta)
   return
  data.route_left=maxf(0,float(data.route_left)-delta)
- var goal:Vector2=vector(config.layout.exit)
+ # Approach the aperture from its inner side. A shortest path directly to
+ # the outer landing can cross the threshold's infinite line beside the
+ # actual doorway, then stop outside without ever crossing its finite span.
+ var approach:Vector2=exit_approach()
+ if app.hero_pos.distance_to(approach)<=0.10:data.exit_aligned=true
+ if absf(app.hero_pos.x-approach.x)>EXIT_HALF_WIDTH or app.hero_pos.y>approach.y+0.25:data.exit_aligned=false
+ var goal:Vector2=exit_destination() if data.get("exit_aligned",false) else approach
  if data.hero_perceived:
   var threat:Vector2=vector(data.perceived_position)
   if float(app.rules.effects.get("FEAR",0))>0:
@@ -268,8 +280,29 @@ func kick_contact() -> void:
  data.hunter.left=float(config.rules.kick_stagger)
  app.rules._record("hunter_kicked",str(app.rules.action.id)+":hunter",{"hp":data.hunter.hp,"no_drop":true})
 
-func commit_exit() -> bool:
- if not active() or app.rules.hp<=0 or app.hero_pos.distance_to(vector(config.layout.exit))>float(config.test_parameters.exit_radius):return false
+func exit_destination() -> Vector2:
+ return vector(config.layout.exit)+EXIT_OUTWARD*EXIT_LANDING
+
+func exit_approach() -> Vector2:
+ return vector(config.layout.exit)-EXIT_OUTWARD*0.35
+
+func exit_segment() -> PackedVector2Array:
+ var center:Vector2=vector(config.layout.exit)
+ var side:=Vector2(-EXIT_OUTWARD.y,EXIT_OUTWARD.x)*EXIT_HALF_WIDTH
+ return PackedVector2Array([center-side,center+side])
+
+func crossed_exit(previous:Vector2,current:Vector2) -> bool:
+ if not previous.is_finite() or not current.is_finite():return false
+ var center:Vector2=vector(config.layout.exit)
+ var before:float=(previous-center).dot(EXIT_OUTWARD)
+ var after:float=(current-center).dot(EXIT_OUTWARD)
+ if before>=0 or after<0 or after<=before:return false
+ var contact:Vector2=previous.lerp(current,-before/(after-before))
+ var side:=Vector2(-EXIT_OUTWARD.y,EXIT_OUTWARD.x)
+ return absf((contact-center).dot(side))<=EXIT_HALF_WIDTH and app.layout.clear_segment(previous,current,app.layout.RADIUS)
+
+func commit_exit(previous:Vector2=Vector2(INF,INF)) -> bool:
+ if not active() or app.rules.hp<=0 or not crossed_exit(previous,app.hero_pos):return false
  var id:String=event_id("exit")
  if app.rules.settled.has(id):return false
  app.rules.settled[id]="E1"
@@ -277,7 +310,11 @@ func commit_exit() -> bool:
  app.rules.end_control();app.rules.cancel_search();app.rules.action.clear()
  app.rules.pending_neural.clear();app.rules.pending_skin.clear();app.rules.transitioning=true
  app.hero_route=PackedVector2Array();app.motion.clear()
- data.status="ending";data.hunter.route=[];data.pending_feedback=[]
+ data.status="ending";data.hunter.route=[]
+ # Winning never waits for dialogue. An event on the crossing frame remains
+ # readable in the ending record instead of being spoken as a new event.
+ data.ending_feedback=data.pending_feedback.duplicate()
+ data.pending_feedback=[]
  data.ending={"id":"E1","phase":"plaza","elapsed":0.0,"complete":false}
  data.pending_achievements=config.ending.global_keys.duplicate()
  return true
@@ -305,11 +342,34 @@ func queue_feedback(kind:String) -> void:
 
 func _safe_feedback() -> void:
  if not active() or app.rules.hp<=0 or data.pending_feedback.is_empty():return
- if data.hunter.phase!="dead" and (data.hunter.phase!="patrol" or data.hero_perceived):return
  if not app.dialogue_queue.is_empty() or app.rules.control_left>0:return
  var kind:String=str(data.pending_feedback.pop_front())
  data.feedback_receipts[kind]=true
- for line in config.feedback[kind]:app.add_dialogue(str(line.speaker),str(line.text))
+ for line in feedback_lines(kind):app.add_dialogue(str(line.speaker),str(line.text))
+
+func feedback_lines(kind:String) -> Array:
+ var lines:Array=config.feedback.get(kind,[]).duplicate(true)
+ # User correction 2026-10-16: the player opposes escape. Keep the historical
+ # S3 source intact; only these three incompatible assistance lines become
+ # the explicitly permitted silence, including the ending's encounter log.
+ for line in lines:
+  if str(line.get("speaker","")).begins_with("玩家") and str(line.get("text","")) in ["出口在后面。","继续走。","别停在这里。"]:
+   line.text="……"
+   line["override_source"]="user_20261016_player_opposes_escape"
+ return lines
+
+func encounter_record() -> Array:
+ var out:Array=[]
+ if data.is_empty():return out
+ var occurred:Array=data.get("feedback_receipts",{}).keys()
+ for kind in data.get("pending_feedback",[]):
+  if not kind in occurred:occurred.append(kind)
+ for kind in data.get("ending_feedback",[]):
+  if not kind in occurred:occurred.append(kind)
+ for kind in ["saw","evaded","hit"]:
+  if kind in occurred:
+   out.append({"event":kind,"deferred":kind in data.get("ending_feedback",[]),"lines":feedback_lines(kind)})
+ return out
 
 func actors() -> Array:
  if data.is_empty() or app.room_id!="hidden_street" or int(data.hunter.hp)<=0:return []

@@ -17,8 +17,8 @@ func save_snapshot(data:Dictionary) -> Dictionary:
  if not _read(temporary).ok:return {"ok":false,"error":"写入校验失败"}
  if FileAccess.file_exists(target) and _read(target).ok:
   var prior:Dictionary=_read(target).data
-  if int(prior.get("schema",0))==1 and int(data.get("schema",0))>1:
-   var legacy:String=folder.path_join("profile.schema1.json")
+  if int(prior.get("schema",0)) in [1,2] and int(data.get("schema",0))>int(prior.schema):
+   var legacy:String=folder.path_join("profile.schema%d.json"%int(prior.schema))
    if not FileAccess.file_exists(legacy):
     error=DirAccess.copy_absolute(target,legacy)
     if error!=OK:return {"ok":false,"error":"旧版存档保留失败"}
@@ -47,5 +47,5 @@ func _read(path:String) -> Dictionary:
  if payload.sha256_text()!=envelope.get("sha256",""):return {"ok":false}
  if parser.parse(payload)!=OK:return {"ok":false}
  var data=parser.data
- if not data is Dictionary or int(data.get("schema",0)) not in [1,2]:return {"ok":false}
+ if not data is Dictionary or int(data.get("schema",0)) not in [1,2,3]:return {"ok":false}
  return {"ok":true,"data":data}

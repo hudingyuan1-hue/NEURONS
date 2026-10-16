@@ -1,0 +1,91 @@
+{
+  "automatic": true,
+  "background_frozen": true,
+  "closing_left": 0.0,
+  "dialogue": [
+    {
+      "_display_duration": 2.2,
+      "_display_elapsed": 0.63331,
+      "_display_token": 5.0,
+      "_voice_started": true,
+      "speaker": "测试角色",
+      "text": "嗯。",
+      "voice_id": "TEST_DIALOGUE_VOICE"
+    }
+  ],
+  "failed": "paused JSON voice restores its playback cursor without replaying the line",
+  "manual_pause": true,
+  "playback": {
+    "playing": [],
+    "receipts": {
+      "TEST_DIALOGUE_ACTION:test_action": true,
+      "TEST_DIALOGUE_AMBIENCE:test_ambience": true,
+      "TEST_DIALOGUE_MUSIC:test_music": true,
+      "TEST_DIALOGUE_VOICE:dialogue:5": true
+    }
+  },
+  "players": {
+    "ambience": [
+      {
+        "cue": "TEST_DIALOGUE_AMBIENCE",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ],
+    "music": [
+      {
+        "cue": "TEST_DIALOGUE_MUSIC",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ],
+    "ui": [
+      {
+        "cue": "SFX_COLD",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ],
+    "voice": [
+      {
+        "cue": "TEST_DIALOGUE_VOICE",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ],
+    "world": [
+      {
+        "cue": "TEST_DIALOGUE_ACTION",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      },
+      {
+        "cue": "",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      },
+      {
+        "cue": "",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      },
+      {
+        "cue": "",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ]
+  },
+  "starts": [],
+  "voice_frozen": true,
+  "world_frozen": true,
+  "world_time": 0.0
+}

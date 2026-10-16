@@ -1,0 +1,149 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS supervisor sees actual material-drawer search and approaches before one visible windup
+PASS drawer preparation does not injure, finish search or establish grip early
+PASS checksummed JSON preserves a real mid-windup drawer without resetting remaining time
+PASS unwithdrawn hand is injured only by actual drawer closure
+PASS one actual clamp costs ten HP, no SP and no interrupted-search reward
+PASS drawer releases within original one-second cap and clears only its own holder
+PASS continued frames and completed clamp cannot duplicate injury
+PASS withdrawal case starts a new actual drawer windup
+PASS real unlocked WITHDRAW submission pays its original two-neuron cost once
+PASS withdrawal cancels unfinished search without granting instant injury or completion
+PASS timely actual hand retraction makes drawer close empty
+PASS a miss consumes this attempt without inventing a hit receipt
+PASS same point remains legally searchable after missed clamp
+PASS reopening same drawer cannot regenerate supervisor's used attempt
+PASS PORES case starts actual search and physical windup
+PASS real PORES feedback leaves searching hand in its actual position
+PASS successful unrelated PORES effect does not grant invented clamp immunity
+PASS other-holder case begins a genuine supervisor windup
+PASS true drawer collision may still hurt while an independent existing holder remains
+PASS drawer contact never replaces another real holder with a second grip
+PASS supervisor's release cannot release another actor's grip
+PASS labor patient really takes existing paper then walks to separate table two
+PASS partial folding has neither a label nor a finished product
+PASS JSON preserves exact partial folding and material locations
+PASS real take-fold-flatten-fetch-label-paste-place chain reaches completed product
+PASS one paper and one label form one real product with no refilling loop
+PASS NPC work creates no protagonist search reward, clusters or search-count use
+PASS finished material instance cannot endlessly duplicate boxes
+PASS protagonist can physically take still-present paper only at real rack contact
+PASS worker waits when actual paper was removed instead of inventing replacement material
+PASS saved paper ownership stays separate from unfinished NPC work
+PASS actual recorder starts before source original statement and oral stop
+PASS saying stop leaves recorder running and preserves genuinely heard original speech
+PASS oral instruction has ended but device has not yet physically stopped
+PASS director physically presses stop after oral instruction
+PASS stopping device alone does not erase the existing recorded segment
+PASS separate real deletion operation removes only corresponding segment
+PASS deletion cannot erase protagonist's previously heard original information
+PASS deleted recording does not pretend paper was delivered or statement already retracted
+PASS director actually walks from device to speaker before paper handoff
+PASS paper remains with director before contact completion
+PASS mid-handoff JSON cannot deliver paper early
+PASS actual handoff completion transfers one statement sheet to speaker
+PASS source retraction is actually spoken after receiving statement paper
+PASS delivery and original retraction sentence have separate once-only receipts and hearing
+PASS only heard-original plus seen-deletion branch asks source question
+PASS formal question does not remotely finish director's writing
+PASS director really returns to writing position and writes questioned deletion once
+PASS written question produces one paper record without invented injury or mental drain
+PASS continued frames do not duplicate question record
+PASS offscreen NPCs perform actual original statement and physical stop without protagonist hearing it
+PASS an absent protagonist does not receive original-statement knowledge
+PASS late observer genuinely sees deletion and later hears only the retraction
+PASS hearing withdrawal cannot substitute for missing original speech
+PASS without original hearing, deletion question and its record are not fabricated
+PASS real order checking, brake release, visible patient hand and return precede dropped wristband
+PASS wristband exists only at actual fall position without invented visible number
+PASS moving bed stops or routes safely and cannot cross hero occupying destination door
+PASS bed motion and obstruction never drag a dropped band along
+PASS JSON preserves actual bed progress and independent wristband fall location
+PASS blocking protagonist actually walks away along normal collision-checked route
+PASS same bed resumes through real quiet-room door and physically parks
+PASS one porter and one original live patient remain paired in delivered room
+PASS delivered bed leaves fallen wristband back at its original corridor location
+PASS mere delivery is neither isolation, treatment, death nor extra harm
+PASS ordinary transfer bed never climbs stairs or converts return passage into transport route
+PASS remote band pickup is rejected without changing floor ownership
+PASS protagonist physically walks to actual wristband fall point
+PASS half-finished reading is neither known detail nor item acquisition
+PASS actual completed reading leaves the wristband physically on floor
+PASS actual separate near-contact pickup transfers the same wristband once
+PASS repeated pickup cannot reward, duplicate or invent a readable patient number
+PASS initial transfer fixture has no pre-completed onsite nurse receipt or isolation sheet
+PASS same porter, bed and patient physically push to station while same free head nurse actually approaches
+PASS all three original entities are in actual station contact before the new handoff
+PASS original initially signed order does not itself become an onsite isolation authorization
+PASS head nurse does not receive original order before real handoff completion
+PASS mid-station-handoff JSON retains actual document holder and unfinished action
+PASS same original order really changes to head nurse at station handoff completion
+PASS received document, unwritten additional sheet and actual authorization remain distinct states
+PASS head nurse physically checks patient and attached wristband while bed remains beside station
+PASS onsite subject check invents no visible number and is not transport delivery
+PASS head nurse really writes independent additional isolation sheet after physical check
+PASS written but unsigned sheet does not prematurely authorize isolation
+PASS separate actual nurse signature finally creates additional isolation authorization
+PASS signed additional sheet still waits for original bed's real delivery before isolation handoff
+PASS porter receives original paper back and really completes the same bed's quiet-room path
+PASS original paper is physically returned rather than copied or remotely fetched from delivered patient
+PASS porter delivery never fabricates an ordinary-orderly report receipt or duplicate transport
+PASS ordinary orderly ignores porter-delivered patient's additional sheet and keeps its unique original entity
+PASS only actual onsite signing plus actual porter delivery exposes one separate pending isolation handoff
+PASS optional paperwork and patient transfer do not manufacture protagonist injury or mental damage
+PASS without head nurse original valid transport still really reaches quiet room
+PASS head nurse absence leaves only delivered transport, never an invented onsite check or isolation permission
+PASS late nurse cannot remotely receive an original order still held by porter in quiet room
+PASS staff-departure boundary first executes actual onsite original-order handoff
+PASS head nurse leaving before wrist verification does not block original transport's real delivery
+PASS unfinished onsite sheet remains honestly received but unverified/unsigned after real recipient leaves
+PASS departed nurse retains actual received paper without magical remote return or authorization
+PASS nearby medical/security observer prevents a supposedly private wound display
+PASS with nobody watching, source invitation is followed by actual lifting of clothes
+PASS private wound starts without retroactive informant witness or added mental damage
+PASS informer really enters during still-exposed wound and acquires its own actual witness
+PASS protagonist's actual wound observation is saved separately from informant's
+PASS informer really leaves activity room and reaches corridor to report
+PASS absent head nurse cannot receive report, issue permit or sign isolation authorization
+PASS JSON retains actual informant witness while report waits for its real recipient
+PASS protagonist actually makes space before a later patient escort
+PASS informer approaches head nurse, actually reports, waits for written report/signature and receives permit
+PASS head nurse receiving a report does not become a fabricated eyewitness
+PASS permission is really owned only by informer and never replaces protagonist's key
+PASS ordinary orderly already busy with another target is not duplicated or remotely assigned a second report
+PASS waiting report remains unaccepted while shared staff reservation stays busy
+PASS released orderly really traverses old floor/stairs, receives paper, finds target and closes its actual grasp
+PASS same original orderly crosses real first-floor rooms and stair connection instead of spawning upstairs
+PASS mid-patient-escort JSON keeps original two actors and same held target
+PASS actual paired path crosses activity/corridor/quiet doors and only then records delivery
+PASS delivered patient is really released and unique orderly becomes available
+PASS patient's escort does not invent protagonist damage, physical control or mental drain
+PASS only written, signed and actually delivered disposition becomes eligible for later isolation handoff
+PASS same removed patient does not return to original seat and replay wound event
+PASS standing at nurse station or looking at its public duty board without internal search cannot create a report
+PASS actual internal-folder search causes real chief approach/stop/write/sign and ordinary paper receipt before visible hero reach
+PASS chief's report, signature and ordinary visible reach do not themselves injure or grip hero
+PASS actual witnessed search, written report and independent isolation authorization retain separate receipts
+PASS same report queue binds internal-search report to hero and real head-nurse eyewitness
+PASS ordinary orderly actually closes in-range grip after original visible preparation
+PASS one actual ordinary wrist twist costs exactly original five HP and ten SP
+PASS real mid-hero-drag JSON keeps single holder and remaining game-time transport
+PASS real JOY restores mental state without automatically opening an established ordinary grip
+PASS ordinary really walks hero to nurse-station side and releases within original six-second transport cap
+PASS successful escort changes actual hero position and clears only own holder at real destination
+PASS drag/release do not repeat damage and only actual released delivery exposes later isolation handoff
+PASS same internal report and continued proximity cannot repeat ordinary punishment
+PASS released ordinary orderly really steps away instead of standing permanently over protagonist
+PASS withdrawal report case reaches real ordinary pre-grip window
+PASS paid actual WITHDRAW is accepted before ordinary hand closes
+PASS actual withdrawal closes original ordinary attempt as a miss
+PASS missed ordinary grip creates no injury, held body or snap to station side
+PASS signed paper survives missed ordinary attempt but cannot immediately authorize a second isolation chase
+PASS miss consumes this report disposition without immediate repeated ordinary grabbing
+PASS blocked-side case first establishes a genuine ordinary grip and damage
+PASS unreachable occupied destination makes timed ordinary transport expire rather than teleport through actor
+PASS expired actual drag releases hero at real current position and does not claim destination
+PASS timeout neither repeats wrist damage nor treats failed delivery as ready isolation handoff
+ASYLUM_WARD_CHECK 145 passed 0 failed

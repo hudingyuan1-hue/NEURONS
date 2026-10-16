@@ -1,0 +1,2706 @@
+{
+  "audit": "B3 finish source/reference audit",
+  "captured_at_utc": "2026-10-16T04:04:14.572644+00:00",
+  "scope": "Targeted source and runtime-text audit only. Reuses unchanged full-reading record; does not claim a new full read, page render, GPU execution, media observation or audio acceptance. Prior source audit baseline preserved.",
+  "baseline": {
+    "path": "docs/validation/b3_20261016/source_check_r2.json",
+    "sha256": "ea9382147447268fb4498518d2290b0e02d8385f63c3813d2e47323f8a3a540f"
+  },
+  "source_inventory": {
+    "docx_count": 12,
+    "zip_count": 18,
+    "decoded_explanatory_text_members": 122,
+    "decode_errors": [],
+    "method": "DOCX main-body P/T keyword scan and targeted contextual reading; ZIP TXT/MD notes/revisions scanned excluding repeated sources and code. No source/old model used to overwrite current requirements.",
+    "keywords": "拍摄|拍照|照相|相机|摄影|签字|代签|签署|签名",
+    "docx": [
+      {
+        "tag": "S1",
+        "path": "DOCX/AI整理后文档/NEURONS_第一阶段_空间物品人员_合并修订版.docx",
+        "sha256": "986cf8367f87d82df28583db45b745b1619afaab3533d291dcb92e0d632e307e",
+        "body_paragraphs": 514,
+        "body_tables": 23,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": [
+          {
+            "anchor": "P168",
+            "text": "附属物件：录音设备、统一陈述纸、签字记录；不新增搜寻点。"
+          },
+          {
+            "anchor": "P238",
+            "text": "线索：同编号的原始记录与修订记录并存，签字、姓名及伤情内容存在差异。"
+          },
+          {
+            "anchor": "P256",
+            "text": "用途区分：行动板记录指令与签署结果；路线板展示路径，不另做必须完成的机关。"
+          }
+        ]
+      },
+      {
+        "tag": "S3",
+        "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+        "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+        "body_paragraphs": 1962,
+        "body_tables": 60,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": [
+          {
+            "anchor": "T12R2",
+            "text": "号码凭条／挂号名单 | 看清背面后获得运输批次；拿到正面不自动知道背面内容。 | 编号、批次、家属栏及签字栏分别核对。"
+          },
+          {
+            "anchor": "T17R2",
+            "text": "药杯／处方夹 | 分别看清杯号、处方号、签字日期 | 可核对本次配药对象；读到预签日期及本次登记时间后，才发现先签后登记。"
+          },
+          {
+            "anchor": "T23R3",
+            "text": "角色本人的伤情照片 | 必须已有对应伤情及实际拍摄记录 | 不因角色受过伤就自动生成照片；缺少拍摄事实时不补造。"
+          },
+          {
+            "anchor": "T28R7",
+            "text": "主任中断或离场 | 本次留座要求结束；未完成的照读、签字、删录不补结算。"
+          },
+          {
+            "anchor": "T28R8",
+            "text": "角色只是搜寻座椅 | 不自动加入治疗，不自动坐下、签字或照读。"
+          },
+          {
+            "anchor": "P914",
+            "text": "统一陈述纸：查看纸张不等于认同、照读或签字；读到原句才获得内容。"
+          },
+          {
+            "anchor": "P915",
+            "text": "签字记录：亲手落笔后才形成真实签署；预填姓名、代签分别作为文书事实。"
+          },
+          {
+            "anchor": "P932",
+            "text": "关押从门实际关闭开始按游戏时间计时；菜单、正式对白暂停计时。结束不要求精神恢复、玩家使用技能、接受治疗或签字。每周目对角色只启动一次本事件，重返不重新计时。"
+          },
+          {
+            "anchor": "P1093",
+            "text": "原始记录与修订记录以同一事件、同一编号对应。只有实际看过相关字段，才能指出姓名、签字或伤情的差异。"
+          },
+          {
+            "anchor": "P1135",
+            "text": "资料终端显示记录，记录仪器保存已发生的动作；查看这些装置不等于角色签字或同意。"
+          },
+          {
+            "anchor": "P1136",
+            "text": "路线规划板只展示实际通路。阅读、签署、使用技能都不是后端出口的条件。"
+          },
+          {
+            "anchor": "P1244",
+            "text": "人物收手后立即恢复通行。释放不要求回答、签字或恢复精神；人物离场也须解除接触。"
+          },
+          {
+            "anchor": "T45R8",
+            "text": "资料柜 | 翻查资料间隙与柜底；读取申请记录不产生签署行为。 | “资料后面也找过了。”"
+          },
+          {
+            "anchor": "T48R3",
+            "text": "病历档案柜、资料终端、记录仪器 | 保留既有记录，不要求重新查阅、签署或操作。"
+          }
+        ]
+      },
+      {
+        "tag": "S2",
+        "path": "DOCX/AI整理后文档/NEURONS_第二阶段_角色玩家规则_合并修订版.docx",
+        "sha256": "d5d0b71bd14fe4605b081404e66b0d13cd2028f0c337969e7127dbc0a817e379",
+        "body_paragraphs": 120,
+        "body_tables": 22,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": []
+      },
+      {
+        "tag": "S4",
+        "path": "DOCX/AI整理后文档/NEURONS_第四阶段_数值与完整流程_合并修订版.docx",
+        "sha256": "c3f2e9ba7d0b23d7c0654b546b0fa0ce075a0e885f59f48066280dd0b33eee39",
+        "body_paragraphs": 312,
+        "body_tables": 28,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": [
+          {
+            "anchor": "P198",
+            "text": "隔离每实际尝试对角色一次；到期释放不检查精神、签字、技能或服药。"
+          },
+          {
+            "anchor": "T24R3",
+            "text": "第二关 医院 | 候诊区入口→候诊区／诊室／药房／办公室的12目标→持钥匙到原出口→楼梯。 | 挂号、检查、服药、登记、护士治疗、跨关病人均非开门前置。 | 次数耗尽或低精神无钥匙：回小病房指定床。事件处置到时释放，不要求先签字或服药。"
+          }
+        ]
+      },
+      {
+        "tag": "R1",
+        "path": "DOCX/AI整理后文档/NEURONS_规则增补与卧室样片规格_R1.docx",
+        "sha256": "201488a3befb6543343f4111fee42012b22b96e81472896974ba0a398677bf44",
+        "body_paragraphs": 66,
+        "body_tables": 9,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": []
+      },
+      {
+        "tag": "Doctor",
+        "path": "DOCX/早期文档/Doctor.docx",
+        "sha256": "48623aaef6de9197e5b076ca9809f4a0768ad21f296d3133690735774e37e492",
+        "body_paragraphs": 154,
+        "body_tables": 0,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": []
+      },
+      {
+        "tag": "GPT人物设计",
+        "path": "DOCX/早期文档/GPT人物设计.docx",
+        "sha256": "54cccc4b583fc4e7aba841aeb8ffd6d8636322904969d3f30e87c62f87a8220a",
+        "body_paragraphs": 224,
+        "body_tables": 0,
+        "authority": "old_AI_reference_only",
+        "keyword_hits": [
+          {
+            "anchor": "P23",
+            "text": "台内名单记录患者编号、接收签字；患者本人签字栏为空。"
+          },
+          {
+            "anchor": "P63",
+            "text": "处方上的签字早于患者登记时间。"
+          },
+          {
+            "anchor": "P82",
+            "text": "已销毁文件留下照片、腕带及姓名栏，金额与签字页完整保留。"
+          },
+          {
+            "anchor": "P146",
+            "text": "【场景 / 坐标】：第四关一层②记忆档案室。【客观环境/物品暗示】：同一编号分为“原始记录”“修订记录”；原件有血指印，修订件签字完整；碎纸中保留姓名。【人物与机制设定】：缝口人概率出现。角色翻开原件→人物开始撕页；角色仍握住纸页时可保留被握部分，搜寻被取消则松手，剩余页被撕毁。已获得线索不删除。【暗黑产业链/系统恶意映射】：伤害事实被删去，责任签署被替换；记录完整不代表真实。【跨关数据继承与伏笔】：只呈现实际发生过的父母冲突、转运、拒服事件；毁坏展示件不改写既有结果。"
+          },
+          {
+            "anchor": "P150",
+            "text": "【场景 / 坐标】：第四关一层④意象决策室。【客观环境/物品暗示】：行动指令板列有“接受、拒绝”；两栏均接入“已同意”记录槽；桌面留有被固定手腕的压痕。【人物与机制设定】：复述者概率出现。亲见玩家有效干预后的身体动作→模仿一次，在记录板写“自主行为”；被抵抗或未看见则不记录。模仿不复制伤害、奖励或技能效果。【暗黑产业链/系统恶意映射】：外部强制造成的行为被归责于受害者；拒绝也被改写为同意。【跨关数据继承与伏笔】：对应前关伪造签字、服药记录；记录中的动作必须来自本次实际干预。"
+          },
+          {
+            "anchor": "P161",
+            "text": "【场景 / 坐标】：第四关二层⑤核验出口。【客观环境/物品暗示】：门旁分别显示“本人申请”“代理确认”；前者没有输入位置，后者已盖章。【人物与机制设定】：贴面人概率出现，面部覆盖多张编号标签。角色开门时接近并按住其面部；实际接触→精神－5，开门中断一次；惊跳退出接触范围可避免。钥匙不丢失，重新开门可通过。【暗黑产业链/系统恶意映射】：代理签署取代本人意愿，离开仍被登记为服从安排。【跨关数据继承与伏笔】：取得钥匙并实际越过出口才完成第四关；第五关从异化后的第四关一层入口开始。"
+          }
+        ]
+      },
+      {
+        "tag": "人物",
+        "path": "DOCX/早期文档/人物.docx",
+        "sha256": "77bc60e16afd60c719dead04db32b10648a4a8806aa0d1e076648e2386de48db",
+        "body_paragraphs": 379,
+        "body_tables": 0,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": []
+      },
+      {
+        "tag": "关卡 周目 环境",
+        "path": "DOCX/早期文档/关卡 周目 环境.docx",
+        "sha256": "a25042016ddc4acd92a00c5df9fc5caf2070f354add48dd3df37597983493e79",
+        "body_paragraphs": 441,
+        "body_tables": 0,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": []
+      },
+      {
+        "tag": "场景物品与人物物品",
+        "path": "DOCX/早期文档/场景物品与人物物品.docx",
+        "sha256": "01bed3b1471a8f6f3c30bf3c4a5b1c925e5a1022c22b4a7ad9231adcc9fa9e8d",
+        "body_paragraphs": 19,
+        "body_tables": 0,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": []
+      },
+      {
+        "tag": "游玩体验 需求",
+        "path": "DOCX/早期文档/游玩体验 需求.docx",
+        "sha256": "9b0a0316fd7101ca519abd3386fe21778c8f41de3d3966014323e8a9b254982a",
+        "body_paragraphs": 464,
+        "body_tables": 0,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": []
+      },
+      {
+        "tag": "纠错",
+        "path": "DOCX/早期文档/纠错.docx",
+        "sha256": "9c1bb3762b94100017413db57628a2ba613e9433f511da3e3f5b324566d10fed",
+        "body_paragraphs": 136,
+        "body_tables": 0,
+        "authority": "canon_or_original_with_explicit_revision_precedence",
+        "keyword_hits": []
+      }
+    ],
+    "zip": [
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第10轮_第四关事件与通关联动测试.zip",
+        "sha256": "b1e7927152a8fb0540b761936c589e07c0f6cf16876da73c11f73a49ac70ce94",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 7,
+        "members": [
+          {
+            "member": "neurons_stage5_r10/README.txt",
+            "sha256": "7dbb4f4d9d030b12d40af92c7073612d9a4105a353c9dc6c2585a718e078bd4c"
+          },
+          {
+            "member": "neurons_stage5_r10/archive_notes.txt",
+            "sha256": "5e56e47add4b3bbe56d1907bdff94faebbc4d6575b31f7e1e10639e07c39241a"
+          },
+          {
+            "member": "neurons_stage5_r10/cortex_notes.txt",
+            "sha256": "99590bd910c76570cbd2efdb644f15b60cad3f90d7a5d07e8a17047e41b6d263"
+          },
+          {
+            "member": "neurons_stage5_r10/records_notes.txt",
+            "sha256": "6fa15b9f1165b2015287009871edf5d21668f2da770958deec3cf006eceac7f4"
+          },
+          {
+            "member": "neurons_stage5_r10/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r10/results/cortex_runner_note.txt",
+            "sha256": "066fdb11aa3bfc74a633e40d26ca0ada00875cbca5d44b73505b652f2309dda9"
+          },
+          {
+            "member": "neurons_stage5_r10/routes_notes.txt",
+            "sha256": "c85f4538d2d41b09dc67e96886e6b7ec0317654f75ef8c864dbfa54fc3b49d88"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第11轮_第五关第一层战斗联动测试.zip",
+        "sha256": "1184fa7934e3c02816dd07cb08e8a36041b7d04579436a4f89a9b3b1ba4ef4b5",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 6,
+        "members": [
+          {
+            "member": "neurons_stage5_r11/README.txt",
+            "sha256": "dae67390afd17eadcdd4f5bcf54333a6b5d7b3a991244a8e36ae00e2f86f4da9"
+          },
+          {
+            "member": "neurons_stage5_r11/attacks_notes.txt",
+            "sha256": "de9c2e4dabb53f6ae34c9eec54e66f820d0f7f1ee476f3ad48e6e640af1e4484"
+          },
+          {
+            "member": "neurons_stage5_r11/people_notes.txt",
+            "sha256": "31e8292089f3e6f7b81d0a21c5cd60a9cf8af0a43a91fa4ccd501cccdd032175"
+          },
+          {
+            "member": "neurons_stage5_r11/remaining_audit.txt",
+            "sha256": "4906b34524d351e146e5e60d992598c1f0af8a268006e94d67da2a64b0fa5442"
+          },
+          {
+            "member": "neurons_stage5_r11/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r11/support_notes.txt",
+            "sha256": "913f47583081480281ac8bccb2bc4a5d903133cd83486b088a84135e204bd822"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第12轮_第五关二三层联动测试.zip",
+        "sha256": "22a45604391d75c03633c3970c459d0c5c720f93489cea5543203294dcb3df64",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 8,
+        "members": [
+          {
+            "member": "neurons_stage5_r12/README.txt",
+            "sha256": "68a06aafc686144b7fa29a8d32c62ba812cef85120f237aeedfe87f898e87cf1"
+          },
+          {
+            "member": "neurons_stage5_r12/combat_notes.txt",
+            "sha256": "3fd1ea0d0d46e12a3e88c0858dc67c5284b6333247162f6b380c9b08b19bbed9"
+          },
+          {
+            "member": "neurons_stage5_r12/deep_notes.txt",
+            "sha256": "86e254162cbcba4b68672a2711c0825e029bedd0254fa4c7fe22d68c8b0924a4"
+          },
+          {
+            "member": "neurons_stage5_r12/environment_notes.txt",
+            "sha256": "4e6706b7bbc6f1f2fff16f5f1eb2d96eebcc01d05928dd23e1247e3362528ac5"
+          },
+          {
+            "member": "neurons_stage5_r12/personalities_notes.txt",
+            "sha256": "ee1f06d35b0b4e828a549216d2a79aa363d39a0317e63baf547e22bd05b95319"
+          },
+          {
+            "member": "neurons_stage5_r12/remaining_audit.txt",
+            "sha256": "ee41152ef90f0f092785200734f3a1fbe825ee93d428d4a2576a49e13e218274"
+          },
+          {
+            "member": "neurons_stage5_r12/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r12/session_notes.txt",
+            "sha256": "a9318464f34283e1df35abd8987d8ef50fb8eb8c1847b7e23bcce1d59421b69f"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第13轮续_技能链路测试.zip",
+        "sha256": "b6c116dd3f3789687c8e029c82f3881bd012c6979cf79c80b3997aa6541c9a1c",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 11,
+        "members": [
+          {
+            "member": "neurons_stage5_r13_skills/CONTINUE.txt",
+            "sha256": "174af5ce8b0666e1b0ac5e7c3b7dc0f082f3648e86dedd93f4777033550cdd3e"
+          },
+          {
+            "member": "neurons_stage5_r13_skills/README.txt",
+            "sha256": "784139a0df58b0d81ea552420005ff418db94db1f94d57f9974a77f937a520d3"
+          },
+          {
+            "member": "neurons_stage5_r13_skills/effects_notes.txt",
+            "sha256": "1a0491ed24562367dd5fa5807c192b7394aa07e04febdebf3e4da3b9b615de9a"
+          },
+          {
+            "member": "neurons_stage5_r13_skills/family_skill_notes.txt",
+            "sha256": "8d6984d2ad2d5e87dc77d8c836e988f8abf5d05e310a3dab108b7021843b7a81"
+          },
+          {
+            "member": "neurons_stage5_r13_skills/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r13_skills/session_notes.txt",
+            "sha256": "613ef7c396e05202bbd59804ccf3273394b7372ff258b7e4c9c557aa982b2129"
+          },
+          {
+            "member": "neurons_stage5_r13_skills/skills_notes.txt",
+            "sha256": "a8e7d5c1c1b726636ea41d8c2cb6132e6fc957ae915e86268e0d60b82921992c"
+          },
+          {
+            "member": "neurons_stage5_r13_skills/snapshots/effects_before_initial/SHA256SUMS.txt",
+            "sha256": "f6b528a0e2b9608b487c11587e085060c7eb8a5c8f339d836be8d6fb294e53ba"
+          },
+          {
+            "member": "neurons_stage5_r13_skills/snapshots/effects_before_initial/effects_notes.txt",
+            "sha256": "5ca83b9ba44a09fe0b8a8f4cf196498d114d369e46ac4a4b622296412678d05e"
+          },
+          {
+            "member": "neurons_stage5_r13_skills/snapshots/effects_before_source_fix/SHA256SUMS.txt",
+            "sha256": "a83d5fe3e1764d8f4c9462f07b52999499449e00c0273112d750a1f9b484f263"
+          },
+          {
+            "member": "neurons_stage5_r13_skills/snapshots/effects_before_source_fix/effects_notes.txt",
+            "sha256": "5be97951e6bbbae300906e85d2491456c7b39058681f8c98ef7bfcd00ad0d396"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第14轮_探索技能与交互测试.zip",
+        "sha256": "139dc400d3bc3cdcf6a7db37cedfa622cd32a9c72ce295df274d0406438666ed",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 10,
+        "members": [
+          {
+            "member": "neurons_stage5_r14/ADAPTER_CONTRACT.txt",
+            "sha256": "f62a6776b388e75e326954179e70a193fa1028fd59c9c32dc117ed69d10647da"
+          },
+          {
+            "member": "neurons_stage5_r14/CONTINUE.txt",
+            "sha256": "01876344e7bcaa5c1434da7305078e3bac15bbbd51e0526e16ffdd645a973ee0"
+          },
+          {
+            "member": "neurons_stage5_r14/README.txt",
+            "sha256": "74091afbabd45e2b3fc46aca7c09708609294ec1d92668dc08de3f649a196144"
+          },
+          {
+            "member": "neurons_stage5_r14/exploration_awareness_notes.txt",
+            "sha256": "8e7645744b24120b334f1dc5193cda0d41eb7450e8e62ed583d5c2e9c3e3db9b"
+          },
+          {
+            "member": "neurons_stage5_r14/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r14/results/collection.txt",
+            "sha256": "a8fc6904f8150882935d0dc9ed03c3b999d616e1d1b2126e3c9acea8be900bdf"
+          },
+          {
+            "member": "neurons_stage5_r14/results/s3_collection.txt",
+            "sha256": "cb46dca8d5103399f49d600726a05116bb7459af55e3052fa54010da60964556"
+          },
+          {
+            "member": "neurons_stage5_r14/s2_skill_notes.txt",
+            "sha256": "a9d315ec3b1bee8ee160daac9adcd8902cc674dd9d234298aecb5d78dc0cdfde"
+          },
+          {
+            "member": "neurons_stage5_r14/s3_skill_notes.txt",
+            "sha256": "79cacf41d5ec4a0b024defc9198c43535b7d6523e3821d9acae94fcd5369a58d"
+          },
+          {
+            "member": "neurons_stage5_r14/s4_skill_notes.txt",
+            "sha256": "a5154c3840f854c922612489234ba1f81c750a7ee65c00088105a8fadd1ca80a"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第15轮_操作抽样与人物概率测试.zip",
+        "sha256": "7b828713e13fa67a7ffeac8a294cd77b1b80cbc7569e519982856bafd3f2fde0",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 8,
+        "members": [
+          {
+            "member": "neurons_stage5_r15/CONTINUE.txt",
+            "sha256": "22d445e896af1029bfdee35b9d3090ee7be1223d2940bcb90dd28f42cf90a8c8"
+          },
+          {
+            "member": "neurons_stage5_r15/README.txt",
+            "sha256": "fe8a01561eed8d87615ead9f87e72192d61328f39b0f224854f536caa467d3a6"
+          },
+          {
+            "member": "neurons_stage5_r15/family_notes.txt",
+            "sha256": "fb70b79f1d668448fc4e084034f55fb636ce7fc72d7b7eeb4f482b818d42f07d"
+          },
+          {
+            "member": "neurons_stage5_r15/integration_notes.txt",
+            "sha256": "c2b2dacb9570baa2f1b5a78cadeeea487e8c065626b0dc6c3e8ad5f2bc741d0a"
+          },
+          {
+            "member": "neurons_stage5_r15/operations_notes.txt",
+            "sha256": "285d104fae57a12390e22f5d3c1d9b3a1c98a2f963174c1448245ee53d4bb465"
+          },
+          {
+            "member": "neurons_stage5_r15/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r15/sampling_notes.txt",
+            "sha256": "719bca022d3b7bf1fa006bf5e35754cee01c6f5c1f28023d4fb1e8d805321442"
+          },
+          {
+            "member": "neurons_stage5_r15/spawn_notes.txt",
+            "sha256": "2335f7d7690ad7316c29b27ec59ab642294aa89e5d9e682bea1dbddc3e62f9b8"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第16轮_人物概率与事件接入测试.zip",
+        "sha256": "4be1b4be2aa4b1616b3fbbec93c480f2862ba03677a06df2edfd374cf013fa61",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 10,
+        "members": [
+          {
+            "member": "neurons_stage5_r16/CONTINUE.txt",
+            "sha256": "93fd7c484f0b5ef08162f0ba50970bf4b6758fc5aaf79bd4f328298f8fe37002"
+          },
+          {
+            "member": "neurons_stage5_r16/README.txt",
+            "sha256": "d277363aa2f5179691ee1c543fb1ecaa527daecc58000a22b8a7ae22f701764b"
+          },
+          {
+            "member": "neurons_stage5_r16/family_notes.txt",
+            "sha256": "fb70b79f1d668448fc4e084034f55fb636ce7fc72d7b7eeb4f482b818d42f07d"
+          },
+          {
+            "member": "neurons_stage5_r16/integration_notes.txt",
+            "sha256": "c2b2dacb9570baa2f1b5a78cadeeea487e8c065626b0dc6c3e8ad5f2bc741d0a"
+          },
+          {
+            "member": "neurons_stage5_r16/operations_notes.txt",
+            "sha256": "285d104fae57a12390e22f5d3c1d9b3a1c98a2f963174c1448245ee53d4bb465"
+          },
+          {
+            "member": "neurons_stage5_r16/prior_round15/CONTINUE.txt",
+            "sha256": "22d445e896af1029bfdee35b9d3090ee7be1223d2940bcb90dd28f42cf90a8c8"
+          },
+          {
+            "member": "neurons_stage5_r16/prior_round15/README.txt",
+            "sha256": "fe8a01561eed8d87615ead9f87e72192d61328f39b0f224854f536caa467d3a6"
+          },
+          {
+            "member": "neurons_stage5_r16/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r16/sampling_notes.txt",
+            "sha256": "719bca022d3b7bf1fa006bf5e35754cee01c6f5c1f28023d4fb1e8d805321442"
+          },
+          {
+            "member": "neurons_stage5_r16/spawn_notes.txt",
+            "sha256": "2335f7d7690ad7316c29b27ec59ab642294aa89e5d9e682bea1dbddc3e62f9b8"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第17轮_存读档与跨关继承测试.zip",
+        "sha256": "67ab9aac40fb7ff5beed62e27952acecd8aae9fc36bf9b59dde68655f2126eff",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 13,
+        "members": [
+          {
+            "member": "neurons_stage5_r17/CONTINUE.txt",
+            "sha256": "6502c098bc8f91773aececfdecf37bd79956cb35b7ce8a54c3f3bb38567ab687"
+          },
+          {
+            "member": "neurons_stage5_r17/README.txt",
+            "sha256": "a054f56f6ed77e952afc1ef6f28fc73188a75178437f107d56560694ccb87981"
+          },
+          {
+            "member": "neurons_stage5_r17/prior_round16/CONTINUE.txt",
+            "sha256": "93fd7c484f0b5ef08162f0ba50970bf4b6758fc5aaf79bd4f328298f8fe37002"
+          },
+          {
+            "member": "neurons_stage5_r17/prior_round16/README.txt",
+            "sha256": "d277363aa2f5179691ee1c543fb1ecaa527daecc58000a22b8a7ae22f701764b"
+          },
+          {
+            "member": "neurons_stage5_r17/prior_round16/family_notes.txt",
+            "sha256": "fb70b79f1d668448fc4e084034f55fb636ce7fc72d7b7eeb4f482b818d42f07d"
+          },
+          {
+            "member": "neurons_stage5_r17/prior_round16/integration_notes.txt",
+            "sha256": "c2b2dacb9570baa2f1b5a78cadeeea487e8c065626b0dc6c3e8ad5f2bc741d0a"
+          },
+          {
+            "member": "neurons_stage5_r17/prior_round16/operations_notes.txt",
+            "sha256": "285d104fae57a12390e22f5d3c1d9b3a1c98a2f963174c1448245ee53d4bb465"
+          },
+          {
+            "member": "neurons_stage5_r17/prior_round16/prior_round15/CONTINUE.txt",
+            "sha256": "22d445e896af1029bfdee35b9d3090ee7be1223d2940bcb90dd28f42cf90a8c8"
+          },
+          {
+            "member": "neurons_stage5_r17/prior_round16/prior_round15/README.txt",
+            "sha256": "fe8a01561eed8d87615ead9f87e72192d61328f39b0f224854f536caa467d3a6"
+          },
+          {
+            "member": "neurons_stage5_r17/prior_round16/sampling_notes.txt",
+            "sha256": "719bca022d3b7bf1fa006bf5e35754cee01c6f5c1f28023d4fb1e8d805321442"
+          },
+          {
+            "member": "neurons_stage5_r17/prior_round16/spawn_notes.txt",
+            "sha256": "2335f7d7690ad7316c29b27ec59ab642294aa89e5d9e682bea1dbddc3e62f9b8"
+          },
+          {
+            "member": "neurons_stage5_r17/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r17/results/COLLECTION.txt",
+            "sha256": "b9aa8325c58b4f845d328f15f0ed8409b4dac92d1c535d4d0677f21dca407878"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第18轮_不利路线与结局测试.zip",
+        "sha256": "f303c85afdf6271f239b57038506372c2c1fb038f89ba986f513762ba10e15a0",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 15,
+        "members": [
+          {
+            "member": "stage5_r18/CONTINUE.txt",
+            "sha256": "01dc91c515aef7ba1b599bf6ccd60186a59a7b776103c822f2784589289b2a46"
+          },
+          {
+            "member": "stage5_r18/README.txt",
+            "sha256": "d65254bbe98b5f3a58de76785a6cc0192de99f9181e1731e07387beda2c315ac"
+          },
+          {
+            "member": "stage5_r18/prior_round17/CONTINUE.txt",
+            "sha256": "6502c098bc8f91773aececfdecf37bd79956cb35b7ce8a54c3f3bb38567ab687"
+          },
+          {
+            "member": "stage5_r18/prior_round17/README.txt",
+            "sha256": "a054f56f6ed77e952afc1ef6f28fc73188a75178437f107d56560694ccb87981"
+          },
+          {
+            "member": "stage5_r18/prior_round17/prior_round16/CONTINUE.txt",
+            "sha256": "93fd7c484f0b5ef08162f0ba50970bf4b6758fc5aaf79bd4f328298f8fe37002"
+          },
+          {
+            "member": "stage5_r18/prior_round17/prior_round16/README.txt",
+            "sha256": "d277363aa2f5179691ee1c543fb1ecaa527daecc58000a22b8a7ae22f701764b"
+          },
+          {
+            "member": "stage5_r18/prior_round17/prior_round16/family_notes.txt",
+            "sha256": "fb70b79f1d668448fc4e084034f55fb636ce7fc72d7b7eeb4f482b818d42f07d"
+          },
+          {
+            "member": "stage5_r18/prior_round17/prior_round16/integration_notes.txt",
+            "sha256": "c2b2dacb9570baa2f1b5a78cadeeea487e8c065626b0dc6c3e8ad5f2bc741d0a"
+          },
+          {
+            "member": "stage5_r18/prior_round17/prior_round16/operations_notes.txt",
+            "sha256": "285d104fae57a12390e22f5d3c1d9b3a1c98a2f963174c1448245ee53d4bb465"
+          },
+          {
+            "member": "stage5_r18/prior_round17/prior_round16/prior_round15/CONTINUE.txt",
+            "sha256": "22d445e896af1029bfdee35b9d3090ee7be1223d2940bcb90dd28f42cf90a8c8"
+          },
+          {
+            "member": "stage5_r18/prior_round17/prior_round16/prior_round15/README.txt",
+            "sha256": "fe8a01561eed8d87615ead9f87e72192d61328f39b0f224854f536caa467d3a6"
+          },
+          {
+            "member": "stage5_r18/prior_round17/prior_round16/sampling_notes.txt",
+            "sha256": "719bca022d3b7bf1fa006bf5e35754cee01c6f5c1f28023d4fb1e8d805321442"
+          },
+          {
+            "member": "stage5_r18/prior_round17/prior_round16/spawn_notes.txt",
+            "sha256": "2335f7d7690ad7316c29b27ec59ab642294aa89e5d9e682bea1dbddc3e62f9b8"
+          },
+          {
+            "member": "stage5_r18/prior_round17/results/COLLECTION.txt",
+            "sha256": "b9aa8325c58b4f845d328f15f0ed8409b4dac92d1c535d4d0677f21dca407878"
+          },
+          {
+            "member": "stage5_r18/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第1轮_规则模型与测试记录.zip",
+        "sha256": "c7201602b627b60554abe411fb5c9781b07e7515fa487934d12bb5ebda3fd630",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 2,
+        "members": [
+          {
+            "member": "NEURONS_第五阶段第1轮/README.txt",
+            "sha256": "acb4ec482879573c7b402f336653674c7deea84074d935c7e5b6ec71ccef1ed7"
+          },
+          {
+            "member": "NEURONS_第五阶段第1轮/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第2轮_第一关联动测试与修订 (1).zip",
+        "sha256": "97b35fc4fd3b57f8d6ca4b5dd97f9af391e7aa772dbfc60ea5b5c713f64ef0d1",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 2,
+        "members": [
+          {
+            "member": "NEURONS_第五阶段第2轮/README.txt",
+            "sha256": "d59b2b78d0bb0cbb01f9d1c035851588624d013ca85c9a5add778218205091df"
+          },
+          {
+            "member": "NEURONS_第五阶段第2轮/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第3轮_人物调度与医院测试.zip",
+        "sha256": "018c6cf1ba6ad21dc00657b79d11954ddca8fe9660a702576edf27a6846f3f2c",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 4,
+        "members": [
+          {
+            "member": "NEURONS_Stage5_R3/README.md",
+            "sha256": "383cf7ad5b0c06d7150432c10f692de190486b972c0416c298ae92c7eabde078"
+          },
+          {
+            "member": "NEURONS_Stage5_R3/hospital_notes.txt",
+            "sha256": "9b47557faf1fc18663232794c7fc034c0bbe8f1e2816d6a2c473f76811f3ec16"
+          },
+          {
+            "member": "NEURONS_Stage5_R3/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "NEURONS_Stage5_R3/正文补丁.md",
+            "sha256": "68def946240e84487494102452e4a64b57ccbc455b915b4f53171709a5bb4aa0"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第4轮_医院联动与转运测试.zip",
+        "sha256": "f3148ffccb430951c3649149537e2c9cf0c4f9adc104ca7f853d356f36611cec",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 4,
+        "members": [
+          {
+            "member": "NEURONS_Stage5_R4/README.md",
+            "sha256": "fbe2c580ce9490f915978f4ad27758c11de7b5b9cf10a167ffcd11eb9f83a745"
+          },
+          {
+            "member": "NEURONS_Stage5_R4/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "NEURONS_Stage5_R4/transfer_notes.txt",
+            "sha256": "b775c72f5fa88d2f74b8ee89de7f187e582ae86f35d6d4dccc30c34cf6201458"
+          },
+          {
+            "member": "NEURONS_Stage5_R4/规则接入与修订.md",
+            "sha256": "301b512d8508b5518c8fe52341634d43637223c41b1cb176b967e62a08c3431c"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第5轮_人物证据与第四面墙联动测试.zip",
+        "sha256": "546fefebfa19f355aaa511214803dbc4252e54cbbebd6aba1f663a1360597631",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 4,
+        "members": [
+          {
+            "member": "neurons_stage5_r5/README.txt",
+            "sha256": "0a5eb41a0244161efa744b84cdc6f8ae489446e82f46741ef9a5abedb3b1e6e1"
+          },
+          {
+            "member": "neurons_stage5_r5/awareness_notes.txt",
+            "sha256": "6022786a88f055f08a02b473f0c4b455f27ae5d5996db0ef25a5b184553d9491"
+          },
+          {
+            "member": "neurons_stage5_r5/people_notes.txt",
+            "sha256": "4f5be4442cd59f29f5f3047ce58817510083f94f748cd29d76b3525117aadaa1"
+          },
+          {
+            "member": "neurons_stage5_r5/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第6轮_第三关一层与跨层联动测试.zip",
+        "sha256": "daf229a86df0a1f473017a8ccad567ff47243fd13c196130488bd08e161a8c19",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 5,
+        "members": [
+          {
+            "member": "neurons_stage5_r6/README.txt",
+            "sha256": "d2371e264c451404d801270b0c9e4ff577097252cbd9d3eb9ec459b1a513d34b"
+          },
+          {
+            "member": "neurons_stage5_r6/medication_notes.txt",
+            "sha256": "3d2aadd23591f2ad706777d53ad82a36df03a5165443dd4afbb0ef494bc107cf"
+          },
+          {
+            "member": "neurons_stage5_r6/records_notes.txt",
+            "sha256": "2353acb0586641179028174483bd441feacafdbaee1fd0390ae323199711f29f"
+          },
+          {
+            "member": "neurons_stage5_r6/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r6/revisions/r5_requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第7轮_举报处置与隔离联动测试.zip",
+        "sha256": "f24cf7acf79ba834203537348dc74c0e944809a54d58206df3ed53d97b00d4c1",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 4,
+        "members": [
+          {
+            "member": "neurons_stage5_r7/reports_notes.txt",
+            "sha256": "902c5d8046c2c66ca2277b4f695668f88b90e15b9e772c2b7c66e9f7b33dd833"
+          },
+          {
+            "member": "neurons_stage5_r7/README.txt",
+            "sha256": "c186c1fa1c1c59462c838fb9b2bfa83cce621cac51bfcbc1cd310dc414fa638f"
+          },
+          {
+            "member": "neurons_stage5_r7/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r7/isolation_notes.txt",
+            "sha256": "40dae62759944a24cb99a2575d5d4b62bca8e0acdabf561345ef622536286ac3"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第8轮_录音转运与遗物联动测试.zip",
+        "sha256": "35b9f8a92378ad69c88bfa573c007da076327bee2caa2dbc6be58ca470fbabc2",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 4,
+        "members": [
+          {
+            "member": "neurons_stage5_r8/cleanup_notes.txt",
+            "sha256": "ab3c13fc1770f866618c1bcbbe72e6d0401e2869286416505a0359f42c74bdef"
+          },
+          {
+            "member": "neurons_stage5_r8/README.txt",
+            "sha256": "17a113e1aae08aafa6c12ed3c8d2db4de4bdf76237d528c7a8c7c00176a9b7ef"
+          },
+          {
+            "member": "neurons_stage5_r8/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r8/therapy_notes.txt",
+            "sha256": "eed687b35be6872ea85f8d062222fe0cdf8005d6dfd4d7c18550c3f66b28031f"
+          }
+        ]
+      },
+      {
+        "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第9轮_角落病友与作业康复联动测试.zip",
+        "sha256": "90ce5bb641e6a7de3839e0a755331652b9a3ba6992e37f5f6d9806bb01200caa",
+        "decoded_TXT_MD_members_excluding_repeated_sources": 5,
+        "members": [
+          {
+            "member": "neurons_stage5_r9/README.txt",
+            "sha256": "3af2261efc7a131b314aa73f6da77aa55a9d28ba39c8ed700e772a00dcf84a6c"
+          },
+          {
+            "member": "neurons_stage5_r9/corner_notes.txt",
+            "sha256": "4da1ff0a24cc6665efe539fb1db3a645640874e7bb520c8649079ad011d5254b"
+          },
+          {
+            "member": "neurons_stage5_r9/requirements.txt",
+            "sha256": "ee54b1a069817d978c098e3f125a36a51f43e8aec2d6b20face84084fdd08d14"
+          },
+          {
+            "member": "neurons_stage5_r9/source_boundary_audit.txt",
+            "sha256": "da2365a858c60339b567a144970dc7bc92dc52f9f4b2e80c3ee3cce533b15cda"
+          },
+          {
+            "member": "neurons_stage5_r9/workroom_notes.txt",
+            "sha256": "5ea65968badee96cd6e28f33c730c29eb21db20ae32ac7eee99a0d0ee109dad5"
+          }
+        ]
+      }
+    ],
+    "zip_keyword_hits": [
+      {
+        "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第6轮_第三关一层与跨层联动测试.zip",
+        "member": "neurons_stage5_r6/README.txt",
+        "line": 84,
+        "text": "   已持有文件不能被再次收走，合拢文件不删除已读信息；伤情照片还需实际拍摄事实。"
+      },
+      {
+        "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第6轮_第三关一层与跨层联动测试.zip",
+        "member": "neurons_stage5_r6/README.txt",
+        "line": 107,
+        "text": "实际接触、目击、签字完成、路径畅通与到达由调用方提供；模型未计算3D寻路、动画碰撞和真实视觉感知。"
+      },
+      {
+        "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第6轮_第三关一层与跨层联动测试.zip",
+        "member": "neurons_stage5_r6/medication_notes.txt",
+        "line": 27,
+        "text": "999/1000/1001ms边界；暂停/死亡无动作推进；双层共同cap；真实新尝试编号2/10/1000000；S2未执行/已吞服/拒服及假标签；患者/项目/签名/编号错误；缺席药师；中断续杯；重复药效回调；护士缺席/未目击/只见持杯/写字中断/离场；假记录不改变身体事实。"
+      },
+      {
+        "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第6轮_第三关一层与跨层联动测试.zip",
+        "member": "neurons_stage5_r6/records_notes.txt",
+        "line": 12,
+        "text": "6. 拿到文件不自动读懂；已持有文件不能再被收走，已读知识不因文件合拢消失。伤痕照片必须真实伤情+实际拍摄；照片与“无外伤”页需同人实际读清才允许质问。"
+      },
+      {
+        "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第7轮_举报处置与隔离联动测试.zip",
+        "member": "neurons_stage5_r7/isolation_notes.txt",
+        "line": 28,
+        "text": "13. 本次隔离本身生命/精神效果均为0，无强制服药、签字、技能或精神恢复门槛。"
+      },
+      {
+        "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第8轮_录音转运与遗物联动测试.zip",
+        "member": "neurons_stage5_r8/README.txt",
+        "line": 30,
+        "text": "4. 查看陈述纸不等于认同、照读或签字；预填、代签、真实签署不互相替代。"
+      },
+      {
+        "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第8轮_录音转运与遗物联动测试.zip",
+        "member": "neurons_stage5_r8/README.txt",
+        "line": 32,
+        "text": "6. 主任离场或事件中断，结束留座要求；未完成的删除、照读、签字不补结算。"
+      },
+      {
+        "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第8轮_录音转运与遗物联动测试.zip",
+        "member": "neurons_stage5_r8/therapy_notes.txt",
+        "line": 20,
+        "text": "预填笔录、代签、亲手签署分别记录；查看陈述纸／搜寻座椅不加入治疗、不自动签署或照读；"
+      },
+      {
+        "archive": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第8轮_录音转运与遗物联动测试.zip",
+        "member": "neurons_stage5_r8/therapy_notes.txt",
+        "line": 21,
+        "text": "主任中断或离场终止留座要求，不补完成删录／照读／签字；角色无需主任释放即可离开；"
+      }
+    ]
+  },
+  "source_anchors": {
+    "S3:P436": "患者抓门框时鞋子脱落，照片落入轮椅踏板；实际转运完成后，遗留鞋子才成为该事件的结果。第三关照片进入未认领物品袋。未发生转运，不提前生成其“自行离院”记录。",
+    "S3:T12R3": "家属照片 | 属于轮椅患者；看到照片不等于拿到照片。 | 实际转运后，第三关对应未认领物品袋。",
+    "S3:T20R5": "本次转运未发生 | 不生成对应离院单、鞋袋或照片袋；其他既往患者资料正常保留。",
+    "S3:P654": "叫号屏：实际显示过的编号才算看见；编号播报不证明对应患者已经离院。",
+    "S3:P656": "编号遗物袋：先看袋号，再辨认可见鞋子、照片；照片须确实随原轮椅患者转运并被收存，才进入该袋。",
+    "S3:P657": "离院记录：翻到对应页才读取；护士翻过、收回页面，不删除已经读到的信息。",
+    "S3:P659": "角色[凝重]：“照片是他一直拿着的。”",
+    "S3:P660": "玩家[认真]：“再对一下袋上的号。”",
+    "S3:T23R3": "角色本人的伤情照片 | 必须已有对应伤情及实际拍摄记录 | 不因角色受过伤就自动生成照片；缺少拍摄事实时不补造。",
+    "S3:P888": "治疗主任携带记录夹，操作录音设备；发言病友持统一陈述纸。两者均为独立身份，不与其他医生、病友合并。",
+    "S3:P894": "病友照读【原文】：“此前所述均不属实”。",
+    "S3:T28R7": "主任中断或离场 | 本次留座要求结束；未完成的照读、签字、删录不补结算。",
+    "S3:T28R8": "角色只是搜寻座椅 | 不自动加入治疗，不自动坐下、签字或照读。",
+    "S3:P914": "统一陈述纸：查看纸张不等于认同、照读或签字；读到原句才获得内容。",
+    "S3:P915": "签字记录：亲手落笔后才形成真实签署；预填姓名、代签分别作为文书事实。",
+    "S3:P916": "白板：读取已写内容；搜查范围是托槽与资料夹，不要求拆板。",
+    "S3:P1032": "外形：病服外套工作围裙，指尖留有胶带；动作：取纸料→折盒→压平→取标签→贴标→摆放成品。",
+    "S3:P1034": "使用现场已有纸料和标签；材料被角色实际移走时，病友等待或使用剩余材料，不凭空补出。",
+    "S3:P1035": "折盒、贴标、成品分别记录；工作中断保留半成品，不直接生成完成品。",
+    "S3:P1037": "角色只有看清标签，才能获得运输批次；以前看过第二关对应冷藏箱标签，才可进行跨关核对。",
+    "S3:P1038": "运输批次不等于患者编号；对应包装材料不直接证明每个箱子的具体内容。",
+    "S3:P1048": "患者制作的纸盒：折好、贴标后才有完整成品；半成品不提前带上尚未粘贴的标签。",
+    "S1:P108": "物品变化：原导诊台、叫号屏、自助机、宣传架、饮水机、候诊椅位置保留。叫号屏改播患者编号；家属联系栏封闭；遗留鞋子装入编号袋。",
+    "S1:P110": "修正：只为实际被转运的人物生成对应离院记录和遗留物。角色没有获知编号，就不自动提出针对该编号的质问。",
+    "S1:P127": "线索：既往患者的伤痕照片与“无外伤”记录并存；死亡与费用页编号对应。角色本人的照片只展示实际发生的伤情。",
+    "S1:P168": "附属物件：录音设备、统一陈述纸、签字记录；不新增搜寻点。"
+  },
+  "dialogue": {
+    "references": 135,
+    "baseline_references": 133,
+    "baseline_unchanged": 133,
+    "removed_or_changed": [],
+    "added_formal_references": [
+      {
+        "file": "neurons/data/asylum_intake.json",
+        "key": "PHOTO_RECOGNISE",
+        "speaker_display": "角色[凝重]",
+        "text": "照片是他一直拿着的。",
+        "source": "S3:P659",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P659"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_intake.json",
+        "key": "PHOTO_RECOGNISE",
+        "speaker_display": "玩家[认真]",
+        "text": "再对一下袋上的号。",
+        "source": "S3:P660",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P660"
+        ]
+      }
+    ],
+    "exact_text_matches": 135,
+    "entries": [
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST",
+        "speaker_display": "护工[平静]",
+        "text": "手伸出来，看一下号。",
+        "source": "S3:P627",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P627"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST",
+        "speaker_display": "角色[疑惑]",
+        "text": "床头不是写着吗？",
+        "source": "S3:P628",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P628"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST",
+        "speaker_display": "护工[平静]",
+        "text": "要对腕带。",
+        "source": "S3:P629",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P629"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST_HURT",
+        "speaker_display": "角色[疼痛]",
+        "text": "你看号码，拧我手干什么？",
+        "source": "S3:P631",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P631"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST_HURT",
+        "speaker_display": "护工[冷淡]",
+        "text": "别动。",
+        "source": "S3:P632",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P632"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST_HURT",
+        "speaker_display": "玩家[凝重]",
+        "text": "他已经抓住了。",
+        "source": "S3:P633",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P633"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_WITNESS",
+        "speaker_display": "登记护士[平静]",
+        "text": "这里写的是自行离院。",
+        "source": "S3:P642",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P642"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_WITNESS",
+        "speaker_display": "角色[质问]",
+        "text": "他抓着门框不肯走，我看见了。",
+        "source": "S3:P643",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P643"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_WITNESS",
+        "speaker_display": "登记护士[平静]",
+        "text": "我按记录答复。",
+        "source": "S3:P644",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P644"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_RECORD",
+        "speaker_display": "角色[疑惑]",
+        "text": "这张上面，谁签的字？",
+        "source": "S3:P646",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P646"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_RECORD",
+        "speaker_display": "登记护士[平静]",
+        "text": "手续已经办过了。",
+        "source": "S3:P647",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P647"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_FOLLOWUP",
+        "speaker_display": "角色[坚持]",
+        "text": "我问的是他去了哪。",
+        "source": "S3:P649",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P649"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_FOLLOWUP",
+        "speaker_display": "角色看清记录后[生气]",
+        "text": "你写的不是我问的。",
+        "source": "S3:P651",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P651"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_FOLLOWUP",
+        "speaker_display": "玩家[凝重]",
+        "text": "去向没写，追问倒记下了。",
+        "source": "S3:P652",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P652"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_CASE",
+        "speaker_display": "角色[认真]",
+        "text": "摘除记录和死亡记录，是同一个号。",
+        "source": "S3:P668",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P668"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_CASE",
+        "speaker_display": "医生[平静]",
+        "text": "你认为它们有关系。",
+        "source": "S3:P669",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P669"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_CASE",
+        "speaker_display": "角色[生气]",
+        "text": "不是我认为，纸上就这么写着。",
+        "source": "S3:P670",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P670"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_FALSE",
+        "speaker_display": "角色[质问]",
+        "text": "我没喝，他们写我喝了。",
+        "source": "S3:P673",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P673"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_FALSE",
+        "speaker_display": "医生[平静]",
+        "text": "你是在否认这份记录？",
+        "source": "S3:P674",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P674"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_FALSE",
+        "speaker_display": "角色[生气]",
+        "text": "我是在说它写错了。",
+        "source": "S3:P675",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P675"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_NONE",
+        "speaker_display": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "source": "S3:P677",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P677"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_NONE",
+        "speaker_display": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "source": "S3:P678",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P678"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_REACH",
+        "speaker_display": "助手[平静]",
+        "text": "手放这里。",
+        "source": "S3:P690",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P690"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_REACH",
+        "speaker_display": "角色[警惕]",
+        "text": "你先说要做什么。",
+        "source": "S3:P691",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P691"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_HOLD",
+        "speaker_display": "角色[生气]",
+        "text": "只是问话，为什么要扣住？",
+        "source": "S3:P693",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P693"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_HOLD",
+        "speaker_display": "助手[平静]",
+        "text": "先别动。",
+        "source": "S3:P694",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P694"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "PHARMACY",
+        "speaker_display": "治疗药师[平静]",
+        "text": "把医嘱给我。",
+        "source": "S3:P711",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P711"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "PHARMACY",
+        "speaker_display": "角色[疑惑]",
+        "text": "上面写的是什么药？",
+        "source": "S3:P712",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P712"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "PHARMACY",
+        "speaker_display": "治疗药师[平静]",
+        "text": "按这张配。",
+        "source": "S3:P713",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P713"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REFUSE",
+        "speaker_display": "角色[警惕]",
+        "text": "我先不喝。",
+        "source": "S3:P715",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P715"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "FALSE_MEDICINE",
+        "speaker_display": "角色[生气]",
+        "text": "杯子还满着。",
+        "source": "S3:P721",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P721"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "FALSE_MEDICINE",
+        "speaker_display": "给药护士[平静]",
+        "text": "记录在这里签。",
+        "source": "S3:P722",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P722"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "FALSE_MEDICINE",
+        "speaker_display": "玩家[凝重]",
+        "text": "她看见了，还是这样写。",
+        "source": "S3:P723",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P723"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_TRANSFER",
+        "speaker_display": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "source": "S3:P677",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P677"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_TRANSFER",
+        "speaker_display": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "source": "S3:P678",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P678"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_PARTIAL",
+        "speaker_display": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "source": "S3:P677",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P677"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_PARTIAL",
+        "speaker_display": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "source": "S3:P678",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P678"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "NOTICE",
+        "speaker_display": "隔离护工[平静]",
+        "text": "先到里面待一会儿。",
+        "source": "S3:P935",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P935"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "NOTICE",
+        "speaker_display": "角色[警惕]",
+        "text": "为什么是我？",
+        "source": "S3:P936",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P936"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "CLOSED",
+        "speaker_display": "角色[生气]",
+        "text": "门打开。",
+        "source": "S3:P939",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P939"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "CLOSED",
+        "speaker_display": "护工[平静]",
+        "text": "等这次观察结束。",
+        "source": "S3:P940",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P940"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "OPENED",
+        "speaker_display": "角色[凝重]",
+        "text": "可以走了？",
+        "source": "S3:P942",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P942"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP",
+        "speaker_display": "档案员[平静]",
+        "text": "病历不能这样翻。",
+        "source": "S3:P738",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P738"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP",
+        "speaker_display": "角色[疑惑]",
+        "text": "这一页为什么被盖住了？",
+        "source": "S3:P742",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P742"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP_MATCHED",
+        "speaker_display": "档案员[平静]",
+        "text": "病历不能这样翻。",
+        "source": "S3:P738",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P738"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP_MATCHED",
+        "speaker_display": "角色[疑惑]",
+        "text": "照片和这行字对不上。",
+        "source": "S3:P739",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P739"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "GUARD",
+        "speaker_display": "保安[严肃]",
+        "text": "先离开这张桌子。",
+        "source": "S3:P752",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P752"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "GUARD",
+        "speaker_display": "角色[警惕]",
+        "text": "我看完就走。",
+        "source": "S3:P753",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P753"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD",
+        "speaker_display": "角色[疼痛]",
+        "text": "你要把我带去哪？",
+        "source": "S3:P758",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P758"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD",
+        "speaker_display": "保安[平静]",
+        "text": "门口。",
+        "source": "S3:P756",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P756"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD_AGAIN",
+        "speaker_display": "角色[疼痛]",
+        "text": "你又要把我带去哪？",
+        "source": "S3:P755",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P755"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD_AGAIN",
+        "speaker_display": "保安[平静]",
+        "text": "门口。",
+        "source": "S3:P756",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P756"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_STOP",
+        "speaker_display": "病人[低声]",
+        "text": "有人来了。",
+        "source": "S3:P771",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P771"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_HELD",
+        "speaker_display": "病人[平静]",
+        "text": "我知道路。",
+        "source": "S3:P773",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P773"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_HELD",
+        "speaker_display": "保安[冷淡]",
+        "text": "走。",
+        "source": "S3:P774",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P774"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "speaker_display": "人物[认真]",
+        "text": "名字他们会换。看后面的数。",
+        "source": "S3:P762/P443",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P762",
+          "S3:P443"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "speaker_display": "角色[疑惑]",
+        "text": "你说哪个？",
+        "source": "S3:P444",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P444"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "speaker_display": "人物[认真]",
+        "text": "翻过来。",
+        "source": "S3:P445",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P445"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "speaker_display": "玩家[认真]",
+        "text": "他说的是背面。",
+        "source": "S3:P446",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P446"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_ANOMALY",
+        "speaker_display": "人物[认真]",
+        "text": "刚才不是你自己停下来的吧。",
+        "source": "S3:P763/P450",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P763",
+          "S3:P450"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_ANOMALY",
+        "speaker_display": "角色[迟疑]",
+        "text": "……你也看见了？",
+        "source": "S3:P452",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P452"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_ANOMALY",
+        "speaker_display": "玩家[警惕]",
+        "text": "他怎么会问这个？",
+        "source": "S3:P453",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P453"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_AWARE",
+        "speaker_display": "人物[认真]",
+        "text": "刚才不是你自己停下来的吧。",
+        "source": "S3:P763/P450",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P763",
+          "S3:P450"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_AWARE",
+        "speaker_display": "角色[冷淡]",
+        "text": "你还看见了什么？",
+        "source": "S3:P455",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P455"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_AWARE",
+        "speaker_display": "人物[平静]",
+        "text": "就刚才那一下。",
+        "source": "S3:P456",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P456"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "COVER",
+        "speaker_display": "保洁员[平静]",
+        "text": "让一下，这里还没收完。",
+        "source": "S3:P962",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P962"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORPSE_SEEN",
+        "speaker_display": "角色[震惊]",
+        "text": "里面有个人。",
+        "source": "S3:P964",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P964"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORPSE_SEEN",
+        "speaker_display": "保洁员[平静]",
+        "text": "先出去。",
+        "source": "S3:P965",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P965"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "RELIC_MATCH",
+        "speaker_display": "角色[凝重]",
+        "text": "这两处的号码对得上。",
+        "source": "S3:P967",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P967"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "RELIC_MATCH",
+        "speaker_display": "玩家[认真]",
+        "text": "记清楚，东西要被收走了。",
+        "source": "S3:P968",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P968"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "SAME_CAR",
+        "speaker_display": "跨关精神病人[低声]",
+        "text": "我们是同一辆车送来的。",
+        "source": "S3:P988",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P988"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORNER_SHOW",
+        "speaker_display": "角落病友[低声]",
+        "text": "这个号，我记得。",
+        "source": "S3:P990",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P990"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "BOTH_NOTES",
+        "speaker_display": "角色[认真]",
+        "text": "车次相同，你们的号码不同。",
+        "source": "S3:P992",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P992"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "BOTH_NOTES",
+        "speaker_display": "玩家[认真]",
+        "text": "再看看日期。",
+        "source": "S3:P993",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P993"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "ONE_NOTE",
+        "speaker_display": "角色[疑惑]",
+        "text": "另一份呢？",
+        "source": "S3:P995",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P995"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "ORDERLY",
+        "speaker_display": "护工[冷淡]",
+        "text": "收起来，跟我走。",
+        "source": "S3:P1007",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1007"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORNER_HELD",
+        "speaker_display": "角落病友[低声]",
+        "text": "别拿我的东西。",
+        "source": "S3:P1010",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1010"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "WITNESS_CORNER",
+        "speaker_display": "角色[生气]",
+        "text": "他只是给我看了一张纸。",
+        "source": "S3:P1012",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1012"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_NOTICE",
+        "speaker_display": "作业督导 · 严肃",
+        "text": "那边的材料不能翻。",
+        "source": "S3:P1022",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1022"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_NOTICE",
+        "speaker_display": "角色 · 警惕",
+        "text": "我看完就放回去。",
+        "source": "S3:P1023",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1023"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_HURT",
+        "speaker_display": "角色 · 疼痛",
+        "text": "手还在里面！",
+        "source": "S3:P1025",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1025"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_HURT",
+        "speaker_display": "玩家 · 凝重",
+        "text": "先把手收回来。",
+        "source": "S3:P1027",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1027"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_MISS",
+        "speaker_display": "角色 · 生气",
+        "text": "你没看见我的手吗？",
+        "source": "S3:P1029",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1029"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR",
+        "speaker_display": "劳动病友 · 专注",
+        "text": "那叠还没贴。",
+        "source": "S3:P1040",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1040"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR",
+        "speaker_display": "角色 · 疑惑",
+        "text": "这些盒子要送去哪？",
+        "source": "S3:P1041",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1041"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR",
+        "speaker_display": "劳动病友 · 平静",
+        "text": "我只做这个。",
+        "source": "S3:P1042",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1042"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR_MATCH",
+        "speaker_display": "角色 · 凝重",
+        "text": "冷藏箱上也有这个批次。",
+        "source": "S3:P1044",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1044"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR_MATCH",
+        "speaker_display": "玩家 · 认真",
+        "text": "字和号码都对上了。",
+        "source": "S3:P1045",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1045"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_ORIGINAL",
+        "speaker_display": "发言病友 · 紧张",
+        "text": "转运编号是【对应编号】，那天——",
+        "source": "S3:P897",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P897"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_STOP",
+        "speaker_display": "治疗主任 · 平静",
+        "text": "先停一下。",
+        "source": "S3:P898",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P898"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_READ",
+        "speaker_display": "治疗主任 · 平静",
+        "text": "照这张读。",
+        "source": "S3:P900",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P900"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_RETRACT",
+        "speaker_display": "发言病友",
+        "text": "此前所述均不属实",
+        "source": "S3:P894 原文",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P894"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_QUESTION",
+        "speaker_display": "角色 · 质问",
+        "text": "刚才那段为什么删了？",
+        "source": "S3:P908",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P908"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_QUESTION",
+        "speaker_display": "治疗主任 · 平静",
+        "text": "保留他确认过的。",
+        "source": "S3:P909",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P909"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_QUESTION",
+        "speaker_display": "角色 · 生气",
+        "text": "是你让他照着读的。",
+        "source": "S3:P910",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P910"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_HAND",
+        "speaker_display": "被转运患者 · 微弱",
+        "text": "等一下……",
+        "source": "S3:P835",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P835"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_HAND",
+        "speaker_display": "转运工 · 平静",
+        "text": "手放回去。",
+        "source": "S3:P836",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P836"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_ALIVE",
+        "speaker_display": "角色 · 警惕",
+        "text": "他还醒着。",
+        "source": "S3:P838",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P838"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_ALIVE",
+        "speaker_display": "玩家 · 凝重",
+        "text": "看见了。",
+        "source": "S3:P839",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P839"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_BAND",
+        "speaker_display": "角色 · 认真",
+        "text": "号码还在。",
+        "source": "S3:P841",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P841"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_BAND",
+        "speaker_display": "玩家 · 认真",
+        "text": "和单上的对一下。",
+        "source": "S3:P842",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P842"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_INVITE",
+        "speaker_display": "术后病友 · 低声",
+        "text": "你帮我看看，还在渗吗？",
+        "source": "S3:P853",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P853"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_INVITE",
+        "speaker_display": "角色 · 迟疑",
+        "text": "伤口在哪？",
+        "source": "S3:P858 无康复标签知情时",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P858"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_WOUND",
+        "speaker_display": "角色 · 凝重",
+        "text": "还没好。",
+        "source": "S3:P856",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P856"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_REPORT",
+        "speaker_display": "告密病友 · 低声",
+        "text": "他把伤口给别人看了。",
+        "source": "S3:P864",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P864"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_REPORT",
+        "speaker_display": "护士长 · 平静",
+        "text": "哪个人？",
+        "source": "S3:P865",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P865"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_PERMIT",
+        "speaker_display": "告密病友 · 急切",
+        "text": "那我能出去了吗？",
+        "source": "S3:P868",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P868"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_PERMIT",
+        "speaker_display": "护士长 · 平静",
+        "text": "拿着。",
+        "source": "S3:P869",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P869"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_REMOVE",
+        "speaker_display": "护工 · 平静",
+        "text": "把衣服放下，跟我来。",
+        "source": "S3:P879",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P879"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_REMOVE",
+        "speaker_display": "术后病友 · 抗拒",
+        "text": "我只是让他看一下。",
+        "source": "S3:P880",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P880"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_WITNESS",
+        "speaker_display": "角色 · 生气",
+        "text": "伤没好，为什么不先处理？",
+        "source": "S3:P883",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P883"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_WITNESS",
+        "speaker_display": "玩家 · 凝重",
+        "text": "先看他们把人带去哪。",
+        "source": "S3:P884",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P884"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CHIEF_INTERNAL",
+        "speaker_display": "护士长 · 严肃",
+        "text": "这份不是给你看的。",
+        "source": "S3:P793",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P793"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CHIEF_INTERNAL",
+        "speaker_display": "角色 · 警惕",
+        "text": "我在找东西。",
+        "source": "S3:P794",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P794"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CHIEF_REPORT",
+        "speaker_display": "护士长 · 平静",
+        "text": "刚才翻这份记录的人，去看一下。",
+        "source": "S3:P797",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P797"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HERO",
+        "speaker_display": "护工 · 平静",
+        "text": "先到这边来。",
+        "source": "S3:P819",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P819"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HERO",
+        "speaker_display": "角色 · 警惕",
+        "text": "有什么事就在这里说。",
+        "source": "S3:P820",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P820"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HURT",
+        "speaker_display": "角色 · 疼痛",
+        "text": "松一点！",
+        "source": "S3:P822",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P822"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HURT",
+        "speaker_display": "玩家 · 凝重",
+        "text": "已经抓住了。",
+        "source": "S3:P823",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P823"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "CARD",
+        "speaker_display": "角色",
+        "text": "下面还有字。",
+        "source": "S3:T19R2",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:T19R2"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "STRAPS",
+        "speaker_display": "角色",
+        "text": "带子是固定在床上的。",
+        "source": "S3:T19R3",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:T19R3"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "BADGE",
+        "speaker_display": "角色",
+        "text": "胸牌被拿掉了。",
+        "source": "S3:T19R4",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:T19R4"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "COAT_RECOGNISE",
+        "speaker_display": "角色[凝重]",
+        "text": "这个袖口……房间里那件也是这样。",
+        "source": "S3:P278",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P278"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "COAT_RECOGNISE",
+        "speaker_display": "玩家[疑惑]",
+        "text": "先看看里面有没有名字。",
+        "source": "S3:P279",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P279"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "LABEL_UNDER",
+        "speaker_display": "角色[凝重]",
+        "text": "新标签压着旧的。",
+        "source": "S3:P730",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P730"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "LABEL_UNDER",
+        "speaker_display": "玩家[认真]",
+        "text": "先看清下面那一层。",
+        "source": "S3:P731",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P731"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "RAIL",
+        "speaker_display": "角色[疑惑]",
+        "text": "这些痕迹是怎么磨出来的？",
+        "source": "S3:P787",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P787"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "PREFILLED",
+        "speaker_display": "角色[质问]",
+        "text": "我刚进来，这里已经写完了？",
+        "source": "S3:P947",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P947"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "PREFILLED",
+        "speaker_display": "玩家[凝重]",
+        "text": "连结果都填好了。",
+        "source": "S3:P948",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P948"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "ERASED_NAME",
+        "speaker_display": "角色[疑惑]",
+        "text": "名字擦过，床号还留着。",
+        "source": "S3:P997",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P997"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_nurse_duty.json",
+        "key": "COPIED_ERROR",
+        "speaker_display": "角色[质问]",
+        "text": "这件事不是这样发生的。",
+        "source": "S3:P806",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P806"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_nurse_duty.json",
+        "key": "COPIED_ERROR",
+        "speaker_display": "病区护士[平静]",
+        "text": "我收到的就是这份。",
+        "source": "S3:P807",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P807"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_nurse_duty.json",
+        "key": "COPIED_ERROR",
+        "speaker_display": "玩家[凝重]",
+        "text": "抄了一遍，还是错的。",
+        "source": "S3:P808",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P808"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_intake.json",
+        "key": "PHOTO_RECOGNISE",
+        "speaker_display": "角色[凝重]",
+        "text": "照片是他一直拿着的。",
+        "source": "S3:P659",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P659"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_intake.json",
+        "key": "PHOTO_RECOGNISE",
+        "speaker_display": "玩家[认真]",
+        "text": "再对一下袋上的号。",
+        "source": "S3:P660",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P660"
+        ]
+      }
+    ],
+    "statement_sheet": {
+      "path": "neurons/data/asylum_ward_events.json:evidence.statement_text",
+      "text": "此前所述均不属实",
+      "source": "S3:P894 (content); P914 (physical reading boundary)",
+      "exact_quoted_text_match": true,
+      "note": "Existing retraction sentence copied onto its existing physical statement sheet; no new spoken sentence or acknowledgement/signature."
+    }
+  },
+  "observations": {
+    "targets": 32,
+    "unique_ids": 32,
+    "ids": [
+      "asylum_bed_card_under",
+      "asylum_bed_straps",
+      "asylum_ward_coat_badge",
+      "asylum_laundry_bag_label",
+      "asylum_laundry_vacancy",
+      "asylum_family_contact_closed",
+      "asylum_diagnosis_page",
+      "asylum_clinic_coat_sleeve",
+      "asylum_waste_label_outer",
+      "asylum_waste_label_under",
+      "asylum_medicine_prefill",
+      "asylum_medicine_update",
+      "asylum_access_panel",
+      "asylum_stair_rail_wear",
+      "asylum_nurse_duty_table",
+      "asylum_recovery_photo",
+      "asylum_quiet_scratches",
+      "asylum_call_no_response",
+      "asylum_call_wire_broken",
+      "asylum_prefilled_isolation_record",
+      "asylum_bed1_erased_name",
+      "asylum_bed2_erased_name",
+      "asylum_display_label_back_seen",
+      "asylum_number_screen",
+      "asylum_relic_bag_number",
+      "asylum_relic_bag_photo",
+      "asylum_departure_page",
+      "asylum_self_injury_photo",
+      "asylum_statement_paper",
+      "asylum_signature_record",
+      "asylum_whiteboard_text",
+      "asylum_product_label"
+    ],
+    "prior_23_retained": true,
+    "new_ids": [
+      "asylum_number_screen",
+      "asylum_relic_bag_number",
+      "asylum_relic_bag_photo",
+      "asylum_departure_page",
+      "asylum_self_injury_photo",
+      "asylum_statement_paper",
+      "asylum_signature_record",
+      "asylum_whiteboard_text",
+      "asylum_product_label"
+    ],
+    "deferred": [],
+    "content_pending": [
+      {
+        "id": "asylum_number_screen",
+        "source": "S3:P654",
+        "missing": "具体编号字形，已接触检查不等于看清某个号码"
+      },
+      {
+        "id": "asylum_relic_bag_number",
+        "source": "S3:P656",
+        "missing": "袋号字形；不能由null相等核成同一患者"
+      },
+      {
+        "id": "asylum_self_injury_photo",
+        "source": "S3:T23R3",
+        "missing": "真实拍摄事件及原照片；现只可检查归档位，不擅自安排摄影人或新增摄影剧情"
+      },
+      {
+        "id": "asylum_signature_record",
+        "source": "S3:P915",
+        "missing": "实际签署原件与来源；附页可翻看但不自动生成签字/代签/同意"
+      },
+      {
+        "id": "asylum_whiteboard_text",
+        "source": "S3:P916",
+        "missing": "具体已写原文；检查表面不编造诊断文字"
+      }
+    ],
+    "note": "32 physical inspection definitions include conditional original-object reads and empty/unknown-content slots. They do not mean 32 authored clue texts or a real photography/signature event."
+  },
+  "search_and_identities": {
+    "search_points": 45,
+    "per_room": {
+      "ward": 0,
+      "lobby": 0,
+      "clinic": 0,
+      "pharmacy": 0,
+      "office": 0,
+      "stairs": 1,
+      "corridor": 4,
+      "activity": 8,
+      "group_therapy": 6,
+      "quiet": 4,
+      "bathroom": 7,
+      "double_ward": 7,
+      "workshop": 8
+    },
+    "no_new_search_points": true,
+    "map_and_layout_same_sha256_as_R2": true,
+    "identities": 21,
+    "groups": 14,
+    "members": [
+      "ordinary_orderly",
+      "registration_nurse",
+      "doctor",
+      "assistant",
+      "pharmacist",
+      "med_nurse",
+      "archivist",
+      "guard",
+      "patient",
+      "head_nurse",
+      "porter",
+      "transport_patient",
+      "postop_patient",
+      "informer",
+      "therapist",
+      "speaker",
+      "isolation_orderly",
+      "cleaner",
+      "corner_patient",
+      "supervisor",
+      "labor_patient"
+    ],
+    "exact_unique_partition": true,
+    "identity_data_same_sha256_as_R2": true
+  },
+  "unknown_content": {
+    "observations_glyphs": {
+      "old_bed_name": null,
+      "laundry_bag_number": null,
+      "family_closed_by": null,
+      "family_closed_at": null,
+      "under_transport_number": null,
+      "medicine_prefill_text": null,
+      "medicine_prefill_time": null,
+      "recovery_photo_number": null,
+      "isolation_prefill_time": null,
+      "bed1_erased_name": null,
+      "bed1_number": null,
+      "bed2_erased_name": null,
+      "bed2_number": null,
+      "workshop_batch": null,
+      "number_screen": null,
+      "whiteboard_text": null
+    },
+    "intake_bag_number": null,
+    "ward_unknown_fields": {
+      "transport_patient_number": null,
+      "speaker_transfer_number": null,
+      "workshop_batch": null
+    },
+    "signature_record": {
+      "supported": true,
+      "source": "S1:P168 / S3:P888/P915",
+      "actual_signature": null,
+      "prefilled_name": null,
+      "proxy_signature": null,
+      "reason": "S1明确现有附属签字记录，随主任的记录夹保留并可实际翻看；P915规定亲手落笔、预填与代签须分账，未指定签署人、姓名或签署节点，不凭空增加签字事件或通行条件。"
+    },
+    "whiteboard_written_text": null,
+    "explicit_content_pending": [
+      {
+        "id": "asylum_number_screen",
+        "source": "S3:P654",
+        "missing": "具体编号字形，已接触检查不等于看清某个号码"
+      },
+      {
+        "id": "asylum_relic_bag_number",
+        "source": "S3:P656",
+        "missing": "袋号字形；不能由null相等核成同一患者"
+      },
+      {
+        "id": "asylum_self_injury_photo",
+        "source": "S3:T23R3",
+        "missing": "真实拍摄事件及原照片；现只可检查归档位，不擅自安排摄影人或新增摄影剧情"
+      },
+      {
+        "id": "asylum_signature_record",
+        "source": "S3:P915",
+        "missing": "实际签署原件与来源；附页可翻看但不自动生成签字/代签/同意"
+      },
+      {
+        "id": "asylum_whiteboard_text",
+        "source": "S3:P916",
+        "missing": "具体已写原文；检查表面不编造诊断文字"
+      }
+    ]
+  },
+  "requirements_vs_implementation": [
+    {
+      "requirement": "S3:P436/T12R3/P656/T20R5: original photo/shoe require actual transfer and collection; no transfer means no corresponding bag.",
+      "technical_choice": "The same existing hospital porter collects the photo at the still-visible wheelchair footplate, finishes the original transport, returns by the real route to the dropped shoe, makes pickup contact, then carries the same container back to the existing exit. No additional NPC identity, witness knowledge or resource is created.",
+      "limits": "Assignment of these small collection gestures and their timings is a minimal implementation choice; the source does not independently specify a named packing worker. Player-held originals and missing old-gone anchors are not recovered or copied."
+    },
+    {
+      "requirement": "S1:P108–110/S3:P656: the institution stores corresponding unclaimed originals; bag inspection and prior photo recognition are separate.",
+      "technical_choice": "Existing registration nurse navigates to the actual incoming container, receives it at contact, carries it to the existing desk and places it. Arrival requires source transport/packing receipts, matching original ownership and actual outgoing bag departure.",
+      "limits": "Existing receiver/task assignment and exact entrance/desk stands are technical arrangements, not added story conditions; no stair/rest gate. Unknown bag glyph cannot confirm patient identity."
+    },
+    {
+      "requirement": "S3:T23R3: current protagonist injury photograph requires both real injury and actual capture.",
+      "technical_choice": "Inspect the actual archive slot with actual_photo_present=false and capture_record=null; do not turn injury into a photograph or substitute another patient photo.",
+      "limits": "No current source specifies photographer, capture time, camera or a mandatory photo-taking scene. Capture remains unimplemented content, not approved by this audit."
+    },
+    {
+      "requirement": "S1:P168/S3:P888/P915/T28R7–8: existing attached signature record; personal, prefilled and proxy facts remain separate.",
+      "technical_choice": "Inspect existing director-held attached record; concrete signature/name/proxy fields remain null.",
+      "limits": "No source prescribes the signer or signing moment for this episode. A page/read/minutes cannot prove a signature, consent or completed statement."
+    },
+    {
+      "requirement": "S3:P654/P916: observe only actually displayed/written content.",
+      "technical_choice": "Source-configured screen/whiteboard glyphs remain null and inspected fields preserve unknown content.",
+      "limits": "No made-up patient number, diagnosis or whiteboard passage; viewing cannot prove discharge. Existing whiteboard tray search remains unchanged."
+    }
+  ],
+  "inputs_sha256": {
+    "neurons/data/asylum.json": "3dd65eb0c421e653089663fadab4f74b368d101f1e13eaaabc596c6ff2fde055",
+    "neurons/data/asylum_isolation.json": "00e983a10a6b965cad147208c9a06830a2f698c2a3b0e8b1b124325e097d708a",
+    "neurons/data/asylum_records.json": "02adf1b6c19abc465500c08ea946f93b0fd6366a90bb168b897ff2d6cba8a9a6",
+    "neurons/data/asylum_trace_events.json": "303bab6cdcce01abc40889cc0dcb10ebe9a7dc33959e5988eeca21170b60d932",
+    "neurons/data/asylum_ward_events.json": "b8352ca8b3c5d86999cfbf5386cb50a148e71ac6b65aeb325a9f1f5909e49621",
+    "neurons/data/asylum_observations.json": "07a431c5ddef21e5e957d9a7914c077af758554b8c58153a0e2063f207ee3346",
+    "neurons/data/asylum_nurse_duty.json": "067fb2af686efa190e7d952074ce82c939b999c3eb7538f61744a62fe6e78b36",
+    "neurons/data/asylum_intake.json": "e32a1188a752229377199186d6bb2151f4ddfc3a31e336fb6ecc521cfb58620e",
+    "neurons/scripts/core/asylum_intake.gd": "9f7a2fa36b3d67c0c1ff5cda0aeeeb97ebc847a34ef55f26595e22d73286b338",
+    "neurons/scripts/core/asylum_observations.gd": "c38a2ecfffd4466cdfebade5ec3a1905cec9628df4990786041801a222e0471d",
+    "neurons/scripts/core/asylum_ward_events.gd": "33383098ce514b93b0b3931cb6eeaa5b15144e7f39bfcced32d4c756a19d4e5f",
+    "neurons/scripts/core/hospital_events.gd": "36358c8279075a67b127604fc10424c1e03d75176cee7e788a567e146548199d",
+    "neurons/scripts/core/asylum_events.gd": "d02ffe335851fbd993d849452660ffc22109e92f855dc508cc75581a84c6ee5c",
+    "neurons/scripts/core/asylum_map.gd": "8e66db89dec8ec5170ae09f2a90568cc0ae07b0b1533f5cb5baac129105ed8e2",
+    "neurons/scripts/world/asylum_layout.gd": "27765cca8709e25239dd9e68667ed37f2eaab01741d1a2200071555e6cbab9a2",
+    "neurons/scripts/campaign.gd": "20e28e04bf269c891551876345bea1fe6f09278a25900a9e94ee533bc60dc83c",
+    "neurons/scripts/world/campaign_view.gd": "d10c0d0fd0d50d8d1444442f13cee6aee0d61421f6b8b653c573e5bd1fbdd8af",
+    "neurons/scripts/ui/front_end.gd": "d76840fe3aa93f1831a4a3d80ad3f262b9da2c60057e4dba6713e635b6d457ba",
+    "neurons/tests/asylum_intake_check.gd": "12da3aca694b3a26b8709b5f7504c4726c5f6597f885e32ebb2da15d0b09c3b2",
+    "neurons/tests/hospital_relic_packing_check.gd": "67f1e41d76858689f3ed66e20ec79856f9faa7b02f4786b3e52d84324bc5ae2a",
+    "neurons/tests/asylum_details_check.gd": "ca240b206a1176de2a9220b242764cacdc2d3bc2929f5e335cd700f521881afd",
+    "neurons/tests/asylum_combinations_check.gd": "515552788513023e10a9b9ef750cb80b90f252a04ee4f8a1d43a6b2ba14b4251"
+  },
+  "excluded_claims": [
+    "No new full-canon reading or Word page-layout verification.",
+    "No GPU test execution/result collection in this audit; root records actual test results separately.",
+    "No formal art/voice/music acceptance.",
+    "Unknown text, actual personal capture/signature and normal-speed all-branch combinations are not made complete by a source audit."
+  ],
+  "audit_errors": [],
+  "all_checked_source_constraints_pass": true
+}

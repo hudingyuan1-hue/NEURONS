@@ -1,0 +1,74 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS title settings controls persist real master volume preference
+PASS default player name uses the same fixed ID as the created profile
+PASS profile name and stable invader ID created through real UI handlers
+PASS new profile receives initial resources once
+PASS saved master volume setting reaches actual audio channel mixer
+PASS ten sampled targets contain one fixed key
+PASS autonomous protagonist actually walks to and starts a search
+PASS menu and manual pause freeze world while UI closing advances
+PASS one skill submission paid once and remains pending during pause
+PASS actual JSON save written and checksum verified
+PASS actual JSON load restores a playable scene
+PASS save/load does not reroll target set key or RNG continuation
+PASS loading changes runtime generation without charging skill again
+PASS loaded pending reaction actually interrupts unfinished search after unpause
+PASS non-looping action starts at preparation and holds its final pose instead of replaying
+PASS replacement B loads actor atlas and moving furniture layers by stable ID
+PASS visual replacement does not change rules ownership positions action clocks or story facts
+PASS missing replacement is rejected and old valid presentation preserved
+PASS replacement furniture test actually walks to bedside contact
+PASS drawer actually opens after contact using unchanged action clock
+PASS active furniture replacement preserves measured hand contact point
+PASS mid-action actor and drawer replacement leaves action ownership and completion state unchanged
+PASS low-SP autonomy walks to bed and finishes a real rest
+PASS rest restores body and only tops neurons up to five
+PASS rest does not clear skill cooldown
+PASS bedroom door uses original unblocked doorway instead of bed footprint
+PASS autonomous search finds picks up key walks to door and unlocks hospital
+PASS hospital entrance is lobby and samples twelve of thirty-two targets
+PASS first hospital unlock awards exactly two clusters
+PASS hospital reachable lobby / 挂号导诊台
+PASS hospital reachable lobby / 叫号屏控制盒
+PASS hospital reachable lobby / 自助机出票槽
+PASS hospital reachable lobby / 绿植底托
+PASS hospital reachable lobby / 宣传架
+PASS hospital reachable lobby / 饮水机下柜
+PASS hospital reachable clinic / 医生桌抽屉
+PASS hospital reachable clinic / 储物柜
+PASS hospital reachable clinic / 洗手池下柜
+PASS hospital reachable clinic / 检查床床沿与床底
+PASS hospital reachable clinic / 器械柜
+PASS hospital reachable clinic / 壁架
+PASS hospital reachable clinic / 垃圾桶
+PASS hospital reachable clinic / 窗台
+PASS hospital reachable pharmacy / 取药柜台
+PASS hospital reachable pharmacy / 冷藏药柜开放层
+PASS hospital reachable pharmacy / 洗手池下柜
+PASS hospital reachable pharmacy / 储物柜
+PASS hospital reachable pharmacy / 药架
+PASS hospital reachable pharmacy / 处方配药台
+PASS hospital reachable pharmacy / 宣传架
+PASS hospital reachable office / 资料架
+PASS hospital reachable office / 窗台
+PASS hospital reachable office / 饮水机下柜
+PASS hospital reachable office / 垃圾桶
+PASS hospital reachable office / 小边柜
+PASS hospital reachable office / 文件柜
+PASS hospital reachable office / 办公桌①
+PASS hospital reachable office / 打印机出纸托盘
+PASS hospital reachable office / 洗手池下柜
+PASS hospital reachable office / 储物柜
+PASS hospital reachable office / 办公桌②
+PASS hospital room point counts are exactly 0 + 6 + 8 + 7 + 11
+PASS hospital AI travels actual spoke doors searches and opens the keyed stairs into L3
+PASS hospital departure grants the new L3 unlock once and samples the next fixed key
+PASS saved snapshot arrays and receipts never mutate while the live world advances
+PASS hospital can resume search from saved lobby
+PASS one actual search completion awards one neuron
+PASS loaded completed receipt cannot issue the previous reward again
+PASS in-flight load retains consumed search opportunity
+PASS corrupt primary restores previous verified backup
+CAMPAIGN_CHECK 70 passed 0 failed

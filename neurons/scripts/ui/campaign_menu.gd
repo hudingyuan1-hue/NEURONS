@@ -41,6 +41,14 @@ var inspect_clock:float=0.0
 var inspect_closing:float=0.0
 var ui_paused:bool=false
 var tree_action_filter:Callable
+var skill_labels:Dictionary={}
+
+func skill_name(id:String) -> String:
+ if rules!=null:return str(rules.spec(id).get("name",id))
+ if skill_labels.is_empty():
+  var source:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/skills.json"))
+  for entry in source.skills:skill_labels[str(entry.id)]=str(entry.name)
+ return str(skill_labels.get(id,id))
 
 func _build_ui() -> void:
  if _built:return
@@ -56,9 +64,9 @@ func _build_ui() -> void:
  veil.color=Color(0.025,0.045,0.045,0.94)
  veil.mouse_filter=Control.MOUSE_FILTER_STOP
  add_child(veil)
- title=_label(self,"NEURONS / 神经终端",Rect2(70,32,800,52),29,INK)
- _coin=_label(self,"",Rect2(850,45,250,34),20,ACCENT)
- _button(self,"CLOSE ×",Rect2(1110,39,110,42)).pressed.connect(func():close_requested.emit())
+ title=_label(self,"神经终端",Rect2(70,32,700,52),29,INK)
+ _coin=_label(self,"",Rect2(790,45,310,34),18,ACCENT)
+ _button(self,"关闭 ×",Rect2(1110,39,110,42)).pressed.connect(func():close_requested.emit())
  _status=_label(self,"",Rect2(72,651,1125,46),17,Color("d1bd8d"))
  for key in ["cast","tree","book"]:
   var page:=Control.new()
@@ -94,7 +102,8 @@ func build_cast() -> void:
   var id:String=ids[i]
   var p:=Vector2(110+(i%3)*180,190+(i/3)*87)
   positions[id]=p+Vector2(66,22)
-  var b:=_button(page,id,Rect2(p,Vector2(132,45)))
+  var b:=_button(page,skill_name(id),Rect2(p,Vector2(132,45)))
+  b.name="skill_"+id;b.tooltip_text=id
   nodes[id]=b
   b.mouse_entered.connect(func():describe(id))
   b.mouse_exited.connect(func():_description.text="";full_description="")
@@ -121,7 +130,7 @@ func build_tree() -> void:
  box(page,Rect2(70,115,430,480))
  box(page,Rect2(525,115,440,480))
  inspect_panel=box(page,Rect2(985,115,235,480))
- _label(page,"CRYO / 二维人体比例占位",Rect2(90,132,400,30),17,INK)
+ _label(page,"冰柜 / 二维人体比例占位",Rect2(90,132,400,30),17,INK)
  _label(page,"螺旋星环 · 连线为实际前置",Rect2(545,132,420,30),16,INK)
  _button(page,"↶ 人体",Rect2(95,531,160,43)).pressed.connect(func():body_angle=(body_angle+3)%4;queue_redraw())
  _button(page,"人体 ↷",Rect2(280,531,160,43)).pressed.connect(func():body_angle=(body_angle+1)%4;queue_redraw())
@@ -130,13 +139,14 @@ func build_tree() -> void:
  inspect=_label(inspect_panel,"选择节点检查",Rect2(15,22,200,205),16,INK)
  inspect.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
  _button(inspect_panel,"确认解锁",Rect2(15,245,200,40)).pressed.connect(func():tree_action("unlock"))
- _button(inspect_panel,"升级强度 · 1C",Rect2(15,295,200,40)).pressed.connect(func():tree_action("upgrade"))
+ _button(inspect_panel,"升级强度 · 1神经簇",Rect2(15,295,200,40)).pressed.connect(func():tree_action("upgrade"))
  inspect_return=_button(inspect_panel,"返回星环",Rect2(15,345,200,40))
  inspect_return.pressed.connect(return_to_tree)
- _button(page,"10N → 1C",Rect2(1000,535,200,40)).pressed.connect(func():tree_action("exchange"))
- _button(page,"应急重连 · 5N",Rect2(1000,585,200,40)).pressed.connect(func():tree_action("emergency"))
+ _button(page,"10神经元 → 1神经簇",Rect2(1000,535,200,40)).pressed.connect(func():tree_action("exchange"))
+ _button(page,"应急重连 · 5神经元",Rect2(1000,585,200,40)).pressed.connect(func():tree_action("emergency"))
  for id in positions:
-  var b:=_button(page,id,Rect2(Vector2.ZERO,Vector2(92,32)))
+  var b:=_button(page,skill_name(id),Rect2(Vector2.ZERO,Vector2(92,32)))
+  b.name="tree_"+id;b.tooltip_text=id
   b.z_index=2
   b.add_theme_font_size_override("font_size",12)
   b.size=Vector2(92,32) # Reapply after font change; old 18px minimum otherwise survives.
@@ -177,7 +187,7 @@ func build_book() -> void:
  for i in range(3):
   var category:String=["人物","物品","角色"][i]
   _button(page,category,Rect2(100+i*200,140,180,42)).pressed.connect(func():book_category=category;refresh_book())
- extension_button=_button(page,"参数明细 · 5C",Rect2(750,140,430,42))
+ extension_button=_button(page,"参数明细 · 5神经簇",Rect2(750,140,430,42))
  extension_button.pressed.connect(func():
   var result:Dictionary=rules.buy_book_extension(rules.book_extension_id(book_category))
   _status.text="参数明细已开启；基本观察始终免费" if result.ok else reason_text(str(result.reason))
@@ -201,7 +211,7 @@ func open_menu(neurons_value:int,can_cast:bool,resistance_test:bool=false) -> vo
  open_page("cast")
  _can_cast=can_cast
  _submitted=false
- _coin.text="COIN  %d N"%neurons_value
+ _coin.text="神经元 %d"%neurons_value
  _status.text="" if not resistance_test else "抵抗测试场次"
  _description.text="";full_description=""
 
@@ -213,7 +223,7 @@ func open_page(key:String) -> void:
  for id in pages:pages[id].visible=id==key
  visible=true
  _status.text=""
- title.text={"cast":"NEURONS / CRT 神经干预","tree":"NEURONS / CRYO 冰柜与星环","book":"NEURONS / 已见信息档案"}[key]
+ title.text={"cast":"神经干预 / CRT","tree":"冰柜与星环","book":"已见信息档案"}[key]
  if key=="tree":
   inspect_panel.hide()
   feedback_requested.emit("SFX_COLD")
@@ -223,7 +233,7 @@ func open_page(key:String) -> void:
 
 func refresh_state() -> void:
  if rules==null:return
- _coin.text="COIN  %d N    %d C"%[rules.neurons,rules.plexus]
+ _coin.text="神经元 %d   神经簇 %d"%[rules.neurons,rules.plexus]
  for id in nodes:
   var state:Dictionary=rules.skill_states[id]
   nodes[id].modulate=Color.WHITE if state.unlocked else Color("5a695e")
@@ -305,7 +315,9 @@ func describe_tree() -> void:
  var entry:Dictionary=rules.spec(selected_id)
  var state:Dictionary=rules.skill_states[selected_id]
  inspect_panel.show();inspect_panel.modulate.a=1.0;inspect_clock=0.0;inspect_closing=0.0
- inspect.text="%s · %s\n\n前置：%s\n%s\n解锁 %dC\n当前强度 %d"%[selected_id,entry.name," / ".join(entry.prerequisites),"任一满足" if entry.prerequisite_mode=="any" else "全部满足",entry.unlock_cost,state.power]
+ var prerequisites:Array[String]=[]
+ for id in entry.prerequisites:prerequisites.append(skill_name(str(id)))
+ inspect.text="%s\n\n前置: %s\n%s\n解锁: %d神经簇\n当前强度: %d"%[entry.name," / ".join(prerequisites) if not prerequisites.is_empty() else "无","初始开放" if prerequisites.is_empty() else "任一满足" if entry.prerequisite_mode=="any" else "全部满足",entry.unlock_cost,state.power]
 
 func return_to_tree() -> void:
  if inspect_closing>0:return
@@ -324,7 +336,7 @@ func tree_action(kind:String) -> void:
   "upgrade":result=rules.upgrade(selected_id)
   "exchange":result=rules.exchange()
   _:result=rules.emergency_reconnect()
- _status.text="已完成 · %s"%selected_id if result.ok else reason_text(str(result.reason))
+ _status.text="已完成 · %s"%skill_name(selected_id) if result.ok else reason_text(str(result.reason))
  if result.ok and kind in ["unlock","upgrade","emergency"]:refund_note="growth"
  if result.ok and kind in ["unlock","upgrade"]:
   inspect_closing=0.18
@@ -341,8 +353,11 @@ func refresh_book() -> void:
   if entry.category==book_category:lines.append("[%s] %s\n来源：%s\n"%[entry.kind,entry.text,entry.source])
  book_text.text="\n".join(lines) if not lines.is_empty() else "尚无已见记录。\n基本观察免费；未知信息不会预先写入。"
  var details:String=rules.book_details(book_category)
+ for id in nodes:details=details.replace(str(id),skill_name(str(id)))
+ var units:=RegEx.new();units.compile("([0-9]+)N")
+ details=units.sub(details,"$1神经元",true);units.compile("([0-9]+)C");details=units.sub(details,"$1神经簇",true)
  if not details.is_empty():book_text.text+="\n\n"+details
- extension_button.text="已开启参数明细" if rules.book_extensions.has(rules.book_extension_id(book_category)) else "解锁参数明细 · 5C（基本观察免费）"
+ extension_button.text="已开启参数明细" if rules.book_extensions.has(rules.book_extension_id(book_category)) else "解锁参数明细 · 5神经簇 (基本观察免费)"
 
 func _process(delta:float) -> void:
  if not visible or ui_paused:return
@@ -398,7 +413,7 @@ func draw_art(canvas:Node2D) -> void:
     if tree_positions.has(parent):canvas.draw_line(tree_positions[id],tree_positions[parent],Color("56745f"),1)
  BodyPreview.draw(canvas,body_angle,page_clock,preview_left,preview_id,reduced_effects)
  if preview_delay>0 or preview_left>0:
-  canvas.draw_string(theme.default_font,Vector2(95,184),"%s · 二维动作预览 / 不施放"%preview_id,HORIZONTAL_ALIGNMENT_LEFT,-1,15,INK)
+  canvas.draw_string(theme.default_font,Vector2(95,184),"%s · 二维动作预览 / 不施放"%skill_name(preview_id),HORIZONTAL_ALIGNMENT_LEFT,-1,15,INK)
  if inspect_closing>0:
   var hit:Vector2=inspect_panel.position+Vector2(-8,150)
   canvas.draw_line(hit+Vector2(-65,-40*inspect_closing/0.18),hit,Color("c7b79a"),5)

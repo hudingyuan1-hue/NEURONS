@@ -1,0 +1,18 @@
+{
+  "failures": [],
+  "passes": [
+    "transport chain begins with actual live patient/porter/head nurse, no written isolation result",
+    "original porter really receives order, checks patient, obtains nurse signature and delivers bed across real door",
+    "full onsite paper/contact/signature/return receipts arise from the one actual transfer",
+    "isolation worker actually fetches the original signed authorization after delivery and closes on that same patient",
+    "real porter exits before close while the original live target stays inside and observing hero remains outside",
+    "transport and isolation keep one stable report, target and live identity without an ordinary duplicate",
+    "full-chain mid-isolation JSON retains real closed-door time and paper receipt",
+    "pause freezes the full-chain isolation without resetting it",
+    "same patient's real closed-door eight-second observation opens and completes",
+    "NPC chain adds no hero injury, false treatment or permanent control",
+    "completed transfer/isolation does not respawn patient, duplicate paper or restart confinement"
+  ],
+  "rendered": true,
+  "scope": "Initial actor/position fixture only, then actual porter/head-nurse paper/verification/signature/delivery through real doors and isolation fetch/target/close/eight-second/open chain. No prewritten report or fabricated outcome; finite game-time automatic driver, not natural RNG/human play or formal audio/art acceptance."
+}

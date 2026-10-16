@@ -1,0 +1,62 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS all thirty-two physical observation IDs remain unique as dynamic papers and intake are added
+PASS physical target implementations remain separate from five explicit unknown-content conditions
+PASS distant old-card observation cannot start without actually approaching its stand
+PASS failed reach gives neither hidden text, income nor a search attempt
+PASS actual bed-card stand begins a finite lift-and-read gesture
+PASS contact phase is visible before any completed reading knowledge
+PASS real JSON saves and restores the partly lifted card and its remaining action clock
+PASS manual pause freezes the actual observation stage and world clock
+PASS cancelled reveal cannot complete later or award unread old text
+PASS cancelling the observation closes only its own public action and releases autonomy
+PASS a new actual lift and complete read reveals only the old card's supplied portion
+PASS undelivered old-name glyph stays null and does not manufacture an identity
+PASS only completed card reading queues its exact original line
+PASS same completed observation does not leave a new action waiting on an old receipt
+PASS one read creates one observation receipt without search income or consumed search capacity
+PASS completed physical-read knowledge survives ordinary saved-game restore
+PASS bed-strap inspection starts from the actual low stand
+PASS real damage interrupts unfinished strap inspection rather than granting late knowledge
+PASS nearby but physically occluded card cannot be read through an intervening obstacle
+PASS missing inherited bag outcome is not guessed as a returned bag or a proven vacant site
+PASS actual prior removal permits only inspection of the empty original site
+PASS vacant-site inspection never respawns a second garment or its unread label
+PASS real reception contact reads the closed family-contact field
+PASS seeing a closed field does not reveal who/when, file a harassment charge or create patient departure records
+PASS unwritten diagnosis cannot be read as if the doctor already filled it
+PASS doctor really listens, writes diagnosis and independently finishes the order handoff
+PASS paper exists after writing, but its content becomes known only through a separate actual reading
+PASS read diagnosis preserves this source record and cannot manufacture medication or injury
+PASS current sleeve can be examined without inventing an earlier bedroom encounter
+PASS without earlier cuff knowledge the before-seen original lines are not played
+PASS genuinely inherited cuff-detail fixture permits physical comparison of the same visual feature
+PASS conditional recognition keeps the exact source line without merging the doctors' identities
+PASS outer waste label alone gives no hidden lower number
+PASS actual close contact begins lifting the cover-label corner
+PASS real paid skin reaction interrupts the unfinished label reveal
+PASS interrupted reveal gives no lower-layer text or delayed exposure receipt
+PASS a fresh uninterrupted label action really reaches its reveal/finish node
+PASS physical layers are known while the unprovided number remains unknown
+PASS source reveal dialogue does not turn two unknown numbers into a cross-level match
+PASS quiet-room observation form is really approached and read as a pre-existing paper
+PASS only completed prefilled-form reading queues both exact original lines
+PASS reading a prefilled result neither isolates nor calms, heals or injures the protagonist
+PASS prefilled paper's missing timestamp remains unresolved rather than fabricated
+PASS actual button press with no response does not remotely diagnose a severed line
+PASS separate physical inspection of the visible wire establishes the actual break
+PASS actual first-bed erasure inspection preserves the exact original name/bed line
+PASS second bed and its own bedside-card are separately inspected
+PASS shared remark plays once while two unspecified bed glyphs stay distinct null fields
+PASS erased names do not merge two people or reward a non-search
+PASS public nurse-duty table is unreadable until actual writing and clip-back create at least one entry
+PASS real CRT mouse selection pays and starts the legal CONTROL window for bed inspection
+PASS actual controlled bed click requests its optional physical observation, not a nonexistent first-floor key search
+PASS ordinary process really walks to the bed and completes the original-card observation after mouse input
+PASS real mouse observation uses one CONTROL payment and grants no search income or invented action count
+PASS new live command-cancel case starts through the actual CRT again
+PASS real furniture mouse input reaches a genuine in-progress read
+PASS new valid controlled floor command cancels unfinished reading without late knowledge
+PASS cancelled mouse reading does not leave its public observe action or block autonomy
+ASYLUM_OBSERVATION_CHECK 58 passed 0 failed

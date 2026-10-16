@@ -11,6 +11,8 @@ func check(value:bool,label:String) -> void:
  f.store_string(JSON.stringify({"label":label,"snapshot":app.snapshot_data()},"  "));f.close()
 
 func fixture3(room:String="stairs",events:bool=false) -> void:
+ # Each declared fixture starts a new world; genuine rest uses restart_attempt.
+ app.asylum.data={}
  app.rules=Neural.new();app.menu.rules=app.rules
  app.session=Session.new();app.session.data.unlocked=[1,2,3];app.session.new_attempt(3,app.rng)
  app.rules.actual_attempt=1;app.rules.search_limit=14;app.rules.owners.key=app.session.data.key_owner
@@ -112,10 +114,10 @@ func _ready() -> void:
 
  fixture3("stairs");app.session.data.exploration_boundary=false
  neurons=app.rules.neurons;clusters=app.rules.plexus
- check(until3(func():return bool(app.session.data.exploration_boundary),300),"without any NPC, autonomy really searches, obtains the unique key and opens the existing L4 stair exit")
- check(app.room_id=="stairs" and app.has_key(),"third-level exit boundary requires actual key ownership at actual stair position")
- check(app.rules.plexus==clusters and app.rules.neurons>neurons,"search income occurs without duplicate level-unlock clusters")
+ check(until3(func():return int(app.session.data.level)==4,300),"without any NPC, autonomy really searches, obtains the unique key and opens the existing L4 stair exit")
+ check(app.room_id=="atrium" and not app.has_key(),"third-level keyed exit enters actual cortex with its own unique uncollected key")
+ check(app.rules.plexus==clusters+2 and app.rules.neurons>neurons,"search income and first L4 unlock grant their separate exact rewards")
  var stable:Dictionary=app.snapshot_data();step3(2)
- check(app.session.data.targets==stable.session.targets and app.rules.plexus==clusters,"development boundary does not replay rewards or pretend to finish fourth level")
- await capture("04_keyed_third_level_exit_boundary")
+ check(app.session.data.targets==stable.session.targets and app.rules.plexus==clusters+2,"new fourth-level process retains its sample and does not replay unlock rewards")
+ await capture("04_keyed_third_level_enters_cortex")
  finish3()

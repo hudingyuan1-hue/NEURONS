@@ -133,7 +133,7 @@ func _ready() -> void:
  check(app.vitality_panel.visible and app.vitality_panel.manual_open,"manual X remains available while automatic display is disabled")
  await click(button(app,"保存并回标题"));await frames(3)
  check(frontend.active==null,"status/preference test returns via real saved title path")
- await click(button(frontend,"CONTINUE"));app=frontend.active;await frames(3)
+ await click(button(frontend,"继续游戏"));app=frontend.active;await frames(3)
  check(not app.auto_status_enabled and app.vitality_panel.manual_open and app.vitality_panel.visible,"continue restores pinned display and disabled automatic preference")
  await capture("04_manual_after_continue")
  var output:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)

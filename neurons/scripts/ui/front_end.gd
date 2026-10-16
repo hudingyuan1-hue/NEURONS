@@ -9,10 +9,11 @@ var content:VBoxContainer
 var message:Label
 var name_field:LineEdit
 var overwrite_armed:bool=false
-var preferences:Dictionary={"master":0.8,"reduced":true,"auto_status":true,"channels":{"ui":0.7,"world":0.7,"ambience":0.5,"music":0.5,"voice":0.8}}
+var preferences:Dictionary={"master":0.8,"reduced":true,"auto_status":true,"auto_dialogue":true,"channels":{"ui":0.7,"world":0.7,"ambience":0.5,"music":0.5,"voice":0.8}}
 var volume_slider:HSlider
 var status_box:CheckBox
 var reduced_box:CheckBox
+var dialogue_box:CheckBox
 var pending_invader_id:int=0
 var title_audio
 var exiting:bool=false
@@ -33,6 +34,7 @@ func _ready() -> void:
   preferences.master=clampf(float(config.get_value("audio","master",0.8)),0,1)
   preferences.reduced=bool(config.get_value("visual","reduced",true))
   preferences.auto_status=bool(config.get_value("interface","auto_status",true))
+  preferences.auto_dialogue=bool(config.get_value("interface","auto_dialogue",true))
   for channel in preferences.channels:preferences.channels[channel]=clampf(float(config.get_value("audio",channel,preferences.channels[channel])),0,1)
  if "--visual-check" in OS.get_cmdline_user_args() or "--bedside-check" in OS.get_cmdline_user_args():
   call_deferred("open_legacy_check")
@@ -44,6 +46,26 @@ func _ready() -> void:
   startup_opening.completed.connect(func(_sequence,_skipped):startup_opening.queue_free();startup_opening=null)
   startup_opening.start("startup")
  var checks:Dictionary={
+  "--metric-bedroom-check":"metric_bedroom_check",
+  "--institution-space-check":"institution_space_check",
+  "--institution-events-check":"institution_events_check",
+  "--fresh-flow-check":"fresh_flow_check",
+  "--dialogue-playback-check":"dialogue_playback_check",
+  "--key-discovery-check":"key_discovery_check",
+  "--cortex-check":"cortex_check",
+  "--cortex-navigation-check":"cortex_navigation_check",
+  "--cortex-events-check":"cortex_events_check",
+  "--cortex-upper-check":"cortex_upper_check",
+  "--continue-cortex-check":"continue_cortex_check",
+  "--cortex-sequence-check":"cortex_sequence_check",
+  "--hospital-early-transfer-check":"hospital_early_transfer_check",
+  "--asylum-window-check":"asylum_window_check",
+  "--hospital-relic-retry-check":"hospital_relic_retry_check",
+  "--asylum-intake-chain-check":"asylum_intake_chain_check",
+  "--asylum-evidence-sequence-check":"asylum_evidence_sequence_check",
+  "--asylum-details-check":"asylum_details_check",
+  "--hospital-relic-packing-check":"hospital_relic_packing_check",
+  "--asylum-ward-evidence-check":"asylum_ward_evidence_check", "--asylum-combinations-check":"asylum_combinations_check", "--asylum-intake-check":"asylum_intake_check",
   "--asylum-registration-mouse-check":"asylum_registration_mouse_check", "--asylum-chain-check":"asylum_chain_check", "--asylum-observation-check":"asylum_observation_check", "--asylum-registration-check":"asylum_registration_check", "--asylum-nurse-duty-check":"asylum_nurse_duty_check",
   "--natural-asylum-check":"natural_asylum_check", "--asylum-trace-check":"asylum_trace_check", "--asylum-ward-check":"asylum_ward_check", "--asylum-isolation-check":"asylum_isolation_check", "--asylum-record-check":"asylum_record_check", "--asylum-records-check":"asylum_records_check", "--asylum-ui-check":"asylum_ui_check", "--continue-asylum-check":"continue_asylum_check", "--asylum-check":"asylum_check", "--asylum-events-check":"asylum_events_check", "--campaign-check":"campaign_check", "--b1-check":"b1_check", "--b1-acceptance-check":"b1_acceptance_check", "--hospital-observation-check":"hospital_observation_check", "--hospital-edges-check":"hospital_edges_check", "--hospital-check":"hospital_check", "--hidden-campaign-check":"hidden_campaign_check", "--opening-campaign-check":"opening_campaign_check",
   "--animals-check":"animals_check", "--family-check":"family_check",
@@ -97,10 +119,10 @@ func create_title() -> void:
  message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
  message.text="自主行动与神经干预\n当前开发批次：开场、首关、医院、精神病院两层与隐藏Street；画面使用标注占位，后续关卡继续制作。"
  content.add_child(message)
- add_button("CONTINUE / 继续",continue_game,not store.load_snapshot().ok)
- add_button("NEW GAME / 建立档案",show_profile)
- add_button("SETTING / 设置",show_settings)
- add_button("EXIT / 退出",request_exit)
+ add_button("继续游戏",continue_game,not store.load_snapshot().ok)
+ add_button("建立档案",show_profile)
+ add_button("设置",show_settings)
+ add_button("退出",request_exit)
 
 func request_exit(exit_code:int=0) -> void:
  if exiting:return
@@ -116,6 +138,7 @@ func request_exit(exit_code:int=0) -> void:
 
 func add_button(text:String,callback:Callable,disabled:bool=false) -> Button:
  var button:=Button.new()
+ button.name=callback.get_method()
  button.text=text
  button.custom_minimum_size=Vector2(560,43)
  button.disabled=disabled
@@ -169,8 +192,10 @@ func launch(profile:Dictionary,snapshot:Dictionary) -> void:
  active.loaded=snapshot
  active.reduced_effects=bool(preferences.reduced)
  active.auto_status_enabled=bool(preferences.auto_status)
+ active.auto_dialogue_enabled=bool(preferences.auto_dialogue)
  active.store.root=store.root
  active.return_to_title.connect(close_campaign)
+ active.new_game_requested.connect(func():close_campaign();show_profile())
  add_child(active)
  active.audio.set_level("master",float(preferences.master))
  for channel in preferences.channels:active.audio.set_level(channel,float(preferences.channels[channel]))
@@ -180,6 +205,7 @@ func launch(profile:Dictionary,snapshot:Dictionary) -> void:
   save_preferences()
  )
  active.status_preferences_changed.connect(func(value:bool):preferences.auto_status=value;save_preferences())
+ active.dialogue_preferences_changed.connect(func(value:bool):preferences.auto_dialogue=value;save_preferences())
  active.visual_preferences_changed.connect(func(value:bool):preferences.reduced=value;save_preferences())
  active.reduced_effects=bool(preferences.reduced)
  active.menu.reduced_effects=bool(preferences.reduced)
@@ -197,7 +223,7 @@ func show_settings() -> void:
   content.remove_child(child)
   child.queue_free()
  var heading:=Label.new()
- heading.text="SETTING / 设置\n主音量"
+ heading.text="设置\n主音量"
  content.add_child(heading)
  volume_slider=HSlider.new()
  volume_slider.min_value=0
@@ -213,6 +239,10 @@ func show_settings() -> void:
  status_box.text="受伤后自动显示角色状态（X可手动开关）"
  status_box.button_pressed=bool(preferences.auto_status)
  content.add_child(status_box)
+ dialogue_box=CheckBox.new()
+ dialogue_box.text="对白自动继续 (关闭后手动继续)"
+ dialogue_box.button_pressed=bool(preferences.auto_dialogue)
+ content.add_child(dialogue_box)
  message=Label.new()
  message.text="游戏内还可分别调整音乐、环境、世界反馈和对白。"
  message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
@@ -224,12 +254,14 @@ func apply_settings() -> void:
  preferences.master=volume_slider.value
  preferences.reduced=reduced_box.button_pressed
  preferences.auto_status=status_box.button_pressed
+ preferences.auto_dialogue=dialogue_box.button_pressed
  if is_instance_valid(title_audio):title_audio.set_level("master",float(preferences.master))
  AudioServer.set_bus_volume_db(0,0) # Per-channel master gain is applied once in FeedbackAudio.
  var config:=ConfigFile.new()
  config.set_value("audio","master",preferences.master)
  config.set_value("visual","reduced",preferences.reduced)
  config.set_value("interface","auto_status",preferences.auto_status)
+ config.set_value("interface","auto_dialogue",preferences.auto_dialogue)
  for channel in preferences.channels:config.set_value("audio",channel,preferences.channels[channel])
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(store.root))
  var result:int=config.save(store.root.path_join("preferences.cfg"))
@@ -240,6 +272,7 @@ func save_preferences() -> void:
  config.set_value("audio","master",preferences.master)
  config.set_value("visual","reduced",preferences.reduced)
  config.set_value("interface","auto_status",preferences.auto_status)
+ config.set_value("interface","auto_dialogue",preferences.auto_dialogue)
  for channel in preferences.channels:config.set_value("audio",channel,preferences.channels[channel])
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(store.root))
  config.save(store.root.path_join("preferences.cfg"))

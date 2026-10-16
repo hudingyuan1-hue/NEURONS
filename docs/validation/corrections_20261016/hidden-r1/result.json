@@ -1,0 +1,405 @@
+{
+  "failures": [
+    "manual pause freezes rendered hunter position and world clock",
+    "zero-resource autonomous escape advances normally before exit",
+    "half-route actual JSON restores hidden map and paused world clock",
+    "half-route JSON preserves both bodies, AI phase and pursuit state",
+    "zero-resource autonomous body escapes living hunter through actual E1 exit"
+  ],
+  "passes": [
+    "father actually approaches, winds up and establishes original grip/blood door",
+    "already-owned key cannot replace father blood-door route with hospital",
+    "father presentation reads the same actual held/turn state instead of a static idle pose",
+    "actual Escape key pauses established father grip",
+    "world pause freezes father pressure and drag before hidden transition",
+    "actual stabilizing and drag cross blood door and load independent hidden plaza",
+    "actual sight feedback starts during pursuit instead of waiting until the hunter returns to patrol",
+    "first-attempt player does not encourage escape in the current dialogue",
+    "actual Continue input finishes sight feedback before resuming the world",
+    "hidden entry ends father grip/half-rate/pressure and switches to combat",
+    "hidden entry preserves actual HP and SP already lost to father pressure",
+    "hidden entry preserves zero resources and unique owned candy",
+    "hidden route remains L1, grants no hospital/L6 unlock and does not create a key task",
+    "actual 2D layout contains solid, sight-blocking fountain",
+    "actual living hunter perceives and pursues after entry",
+    "production Save button creates checksummed JSON in independent test root",
+    "production Load button reconstructs rule instance from actual JSON",
+    "load neither duplicates owned item nor resets enemy HP/mode"
+  ],
+  "real_clock_frames": true,
+  "rendered": true,
+  "scope": "Actual campaign, fixed father presence/clear initial position/key and owned candy; actual approach/grab/drag, real inputs, real saved JSON, zero-resource autonomous live-hunter escape; separate fixed fatal-contact setup. Graybox art, silent movie, not human playthrough or complete B2 acceptance.",
+  "timeline": [
+    {
+      "C": 0,
+      "N": 0,
+      "hero": [
+        4.44999980926514,
+        0.649999976158142
+      ],
+      "hidden": {},
+      "hp": 74,
+      "label": "fixed_household_start",
+      "room": "bedroom",
+      "sp": 86,
+      "world_time": 0.0
+    },
+    {
+      "C": 0,
+      "N": 0,
+      "hero": [
+        0.7293661236763,
+        3.27063393592834
+      ],
+      "hidden": {
+        "duck_left": 0.0,
+        "ending": {},
+        "epoch": 1,
+        "exit_aligned": false,
+        "feedback_receipts": {
+          "saw": true
+        },
+        "hero_goal": [
+          5.11999988555908,
+          0.769999980926514
+        ],
+        "hero_perceived": true,
+        "hunter": {
+          "attack_had_target": false,
+          "attack_hit": false,
+          "attack_id": "",
+          "direction": [
+            0.0,
+            1.0
+          ],
+          "elapsed": 0.0,
+          "hp": 60,
+          "last_seen": [
+            0.718523800373077,
+            3.28147625923157
+          ],
+          "left": 0.0,
+          "locked": false,
+          "patrol_index": 0,
+          "phase": "chase",
+          "pos": [
+            3.56666684150696,
+            2.90000009536743
+          ],
+          "route": [
+            [
+              3.5,
+              2.90000009536743
+            ],
+            [
+              3.40000009536743,
+              2.90000009536743
+            ],
+            [
+              3.29999995231628,
+              2.90000009536743
+            ],
+            [
+              3.20000004768372,
+              2.90000009536743
+            ],
+            [
+              3.10000014305115,
+              2.90000009536743
+            ],
+            [
+              3.0,
+              2.90000009536743
+            ],
+            [
+              2.90000009536743,
+              2.90000009536743
+            ],
+            [
+              2.79999995231628,
+              2.90000009536743
+            ],
+            [
+              2.70000004768372,
+              2.90000009536743
+            ],
+            [
+              2.60000014305115,
+              2.90000009536743
+            ],
+            [
+              2.5,
+              2.90000009536743
+            ],
+            [
+              2.40000009536743,
+              2.90000009536743
+            ],
+            [
+              2.29999995231628,
+              2.90000009536743
+            ],
+            [
+              2.20000004768372,
+              2.90000009536743
+            ],
+            [
+              2.10000014305115,
+              2.90000009536743
+            ],
+            [
+              2.0,
+              2.90000009536743
+            ],
+            [
+              1.89999997615814,
+              2.90000009536743
+            ],
+            [
+              1.80000007152557,
+              2.90000009536743
+            ],
+            [
+              1.70000004768372,
+              2.90000009536743
+            ],
+            [
+              1.60000002384186,
+              2.90000009536743
+            ],
+            [
+              1.5,
+              2.90000009536743
+            ],
+            [
+              1.39999997615814,
+              3.0
+            ],
+            [
+              1.30000007152557,
+              3.0
+            ],
+            [
+              1.20000004768372,
+              3.10000014305115
+            ],
+            [
+              1.10000002384186,
+              3.10000014305115
+            ],
+            [
+              1.0,
+              3.20000004768372
+            ],
+            [
+              0.900000035762787,
+              3.20000004768372
+            ],
+            [
+              0.800000011920929,
+              3.29999995231628
+            ],
+            [
+              0.718523800373077,
+              3.28147625923157
+            ]
+          ]
+        },
+        "pending_achievements": [],
+        "pending_feedback": [],
+        "perceived_position": [
+          3.58000016212463,
+          2.90000009536743
+        ],
+        "route_left": 0.0366666666666666,
+        "seen_receipts": {},
+        "serial": 0,
+        "status": "active"
+      },
+      "hp": 74,
+      "label": "hidden_entry",
+      "room": "hidden_street",
+      "sp": 81,
+      "world_time": 5.56666666666665
+    },
+    {
+      "C": 0,
+      "N": 0,
+      "hero": [
+        1.39638078212738,
+        2.70526003837585
+      ],
+      "hidden": {
+        "duck_left": 0.0,
+        "ending": {},
+        "epoch": 1.0,
+        "exit_aligned": false,
+        "feedback_receipts": {
+          "saw": true
+        },
+        "hero_goal": [
+          5.11999988555908,
+          0.769999980926514
+        ],
+        "hero_perceived": true,
+        "hunter": {
+          "attack_had_target": false,
+          "attack_hit": false,
+          "attack_id": "",
+          "direction": [
+            0.0,
+            1.0
+          ],
+          "elapsed": 0.0,
+          "hp": 60.0,
+          "last_seen": [
+            1.38768923282623,
+            2.71789193153381
+          ],
+          "left": 0.0,
+          "locked": false,
+          "patrol_index": 0.0,
+          "phase": "chase",
+          "pos": [
+            2.76666760444641,
+            2.90000009536743
+          ],
+          "route": [
+            [
+              2.70000004768372,
+              2.90000009536743
+            ],
+            [
+              2.60000014305115,
+              2.90000009536743
+            ],
+            [
+              2.5,
+              2.90000009536743
+            ],
+            [
+              2.40000009536743,
+              2.90000009536743
+            ],
+            [
+              2.29999995231628,
+              2.90000009536743
+            ],
+            [
+              2.20000004768372,
+              2.90000009536743
+            ],
+            [
+              2.10000014305115,
+              2.90000009536743
+            ],
+            [
+              2.0,
+              2.90000009536743
+            ],
+            [
+              1.89999997615814,
+              2.90000009536743
+            ],
+            [
+              1.80000007152557,
+              2.90000009536743
+            ],
+            [
+              1.70000004768372,
+              2.79999995231628
+            ],
+            [
+              1.60000002384186,
+              2.79999995231628
+            ],
+            [
+              1.5,
+              2.70000004768372
+            ],
+            [
+              1.38768923282623,
+              2.71789193153381
+            ]
+          ]
+        },
+        "pending_achievements": [],
+        "pending_feedback": [],
+        "perceived_position": [
+          2.78000092506409,
+          2.90000009536743
+        ],
+        "route_left": 0.0700000000000003,
+        "seen_receipts": {},
+        "serial": 0.0,
+        "status": "active"
+      },
+      "hp": 74,
+      "label": "mid_route_json_restored",
+      "room": "hidden_street",
+      "sp": 81,
+      "world_time": 6.36666666666665
+    },
+    {
+      "C": 0,
+      "N": 0,
+      "hero": [
+        1.48120164871216,
+        2.66325497627258
+      ],
+      "hidden": {
+        "duck_left": 0.0,
+        "ending": {},
+        "epoch": 1.0,
+        "exit_aligned": false,
+        "feedback_receipts": {
+          "saw": true
+        },
+        "hero_goal": [
+          1.56659948825836,
+          2.10778141021729
+        ],
+        "hero_perceived": true,
+        "hunter": {
+          "attack_had_target": true,
+          "attack_hit": false,
+          "attack_id": "hidden:1:attack:1",
+          "direction": [
+            -0.983918964862823,
+            -0.178615257143974
+          ],
+          "elapsed": 0.0133333333333333,
+          "hp": 60.0,
+          "last_seen": [
+            1.47683370113373,
+            2.67795300483704
+          ],
+          "left": 0.0,
+          "locked": false,
+          "patrol_index": 0.0,
+          "phase": "windup",
+          "pos": [
+            2.70000100135803,
+            2.90000009536743
+          ],
+          "route": []
+        },
+        "pending_achievements": [],
+        "pending_feedback": [],
+        "perceived_position": [
+          2.70000100135803,
+          2.90000009536743
+        ],
+        "route_left": 0.136666666666667,
+        "seen_receipts": {},
+        "serial": 1,
+        "status": "active"
+      },
+      "hp": 74,
+      "label": "escape_failed",
+      "room": "hidden_street",
+      "sp": 81,
+      "world_time": 6.46666666666665
+    }
+  ]
+}

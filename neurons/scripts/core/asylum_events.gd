@@ -1,6 +1,12 @@
 extends RefCounted
 ## S3:P614–777, S4:T10/11/15/16. Shared identities; gameplay clock only.
 const Map=preload("res://scripts/core/asylum_map.gd")
+const WARD_WINDOW_ID="asylum_ward_door_window"
+# Reversible placeholder gesture timings; S1:P103 fixes side/access, not
+# duration. They never add a key-search point, reward or door-unlock gate.
+const WARD_WINDOW_PREPARE=0.2
+const WARD_WINDOW_CONTACT=0.2
+const WARD_WINDOW_FINISH=0.2
 var app
 var config:Dictionary={}
 var data:Dictionary={}
@@ -11,6 +17,7 @@ var trace_events
 var isolation
 var observations
 var nurse_duty
+var intake
 
 func _init(owner) -> void:
  app=owner
@@ -18,11 +25,28 @@ func _init(owner) -> void:
 
 func start_attempt(carry:Dictionary={}) -> void:
  var old_work:Dictionary=data.get("ward_events",{}).get("work",{}).duplicate(true)
+ var old_window:Dictionary=data.get("ward_window_state",{}).duplicate(true)
+ var old_intake:Dictionary=data.get("intake_state",{}).duplicate(true)
+ var old_receiver:Dictionary={}
+ var old_bag:String=str(old_intake.get("delivery",{}).get("bag_id",""))
+ if not old_bag.is_empty() and app.rules.owners.get(old_bag,"")=="registration_nurse" and present("registration_nurse"):
+  old_receiver=actor("registration_nurse").duplicate(true)
  data={"actors":{},"groups":{},"room_left":{},"batches":{},"clock":0.0,"receipts":{},"body":{},"holder":"","regrab_elapsed":0.8,"carry":carry.duplicate(true),"wrist_checked":false,"wrist_done":false,"registered":false,"diagnosed":false,"order_written":false,"order_delivered":false,"order_source":"","dispensed":false,"cup_full":false,"refused":false,"swallowed":false,"medicine_stop":0.0,"exam":{},"ward_events":{}}
  if not old_work.is_empty():data.ward_events.work=old_work
+ if not old_window.is_empty():
+  old_window.action={};data.ward_window_state=old_window
+ if not old_intake.is_empty():data.intake_state=old_intake
  for id in config.rooms:
-  data.actors[id]={"room":str(config.rooms[id]),"pos":[4.4,0.35],"route":[],"phase":"absent","elapsed":0.0,"left":0.0}
+  var room:String=str(config.rooms[id])
+  var idle:Vector2=Vector2(4.4,0.35)
+  if int(app.session.data.get("institution_geometry_version",1))>=2 and room in ["ward","lobby","clinic","pharmacy","office"]:
+   idle=portal_for(room,str(Map.doors(room)[0])).landing
+  data.actors[id]={"room":room,"pos":xy(idle),"route":[],"phase":"absent","elapsed":0.0,"left":0.0}
  for group in config.groups:data.groups[group]={"checks":0,"pending":false,"drawn":false}
+ if not old_receiver.is_empty():
+  data.actors.registration_nurse=old_receiver
+  for group in config.groups:
+   if "registration_nurse" in config.groups[group]:data.groups[group].drawn=true;data.groups[group].pending=false
  # Prior paper allegations are retained as paper only. An existing, genuinely
  # unexecuted prescription may transfer; prior completed medicine cannot replay.
  if app.rules.owners.get("hospital_prescription","")=="hero" and carry.get("prescribed",false) and not carry.get("dispensed",false) and not carry.get("swallowed",false) and not carry.get("refused",false) and carry.get("prescription_visit","")==carry.get("visit","") and not str(carry.get("visit","")).is_empty():
@@ -42,6 +66,10 @@ func present(id:String) -> bool:
  return enabled and not data.is_empty() and not actor(id).is_empty() and actor(id).phase not in ["absent","gone"]
 func layout_for(room:String):
  return app.layout if room==app.room_id else app.layout_for_room(room)
+func portal_for(room:String,toward:String) -> Dictionary:
+ if app.has_method("portal_for_room"):return app.portal_for_room(room,toward)
+ var at:Vector2=Map.doorway(room,toward)
+ return {"at":at,"threshold":at,"landing":at,"inward":Vector2.DOWN}
 func near(id:String,distance:float=1.2) -> bool:
  return present(id) and str(actor(id).room)==app.room_id and position(id).distance_to(app.hero_pos)<=distance and app.layout.clear_segment(position(id),app.hero_pos)
 func visible(id:String,at:Vector2,room:String,distance:float=2.0) -> bool:
@@ -64,10 +92,10 @@ func travel(id:String,room:String,delta:float) -> bool:
  var step:String=Map.next_room(str(a.room),room)
  if step.is_empty() or step=="cortex_exit":return false
  if isolation!=null and not isolation.can_exit(str(a.room),step):return false
- var doorway:Vector2=Map.doorway(str(a.room),step)
+ var doorway:Vector2=portal_for(str(a.room),step).threshold
  if move(id,doorway,delta):
   var previous:String=str(a.room)
-  a.room=step;a.pos=xy(Map.doorway(step,previous));a.route=[]
+  a.room=step;a.pos=xy(portal_for(step,previous).landing);a.route=[]
  return str(a.room)==room
 
 func claim(id:String,kind:String,details:Dictionary={}) -> bool:
@@ -96,6 +124,7 @@ func damage(id:String,hp:int,sp:int) -> bool:
  if records!=null:records.cancel_read("hurt")
  if trace_events!=null:trace_events.cancel_read()
  if observations!=null:observations.cancel()
+ cancel_ward_window("hurt")
  cancel_registration_followup("hurt")
  if app.has_method("cancel_asylum_read"):app.cancel_asylum_read()
  if not app.rules.pending_neural.is_empty():
@@ -108,6 +137,7 @@ func can_begin_grip() -> bool:
 func set_body(kind:String,id:String) -> void:
  if not data.body.is_empty():return
  if observations!=null:observations.cancel()
+ cancel_ward_window("other_contact")
  app.rules.cancel_search();app.hero_route=PackedVector2Array();app.target_index=-1
  app.action_phase="autonomy";app.hero_state="give"
  data.body={"kind":kind,"actor":id,"elapsed":0.0,"delay":0.0}
@@ -115,7 +145,7 @@ func clear_body() -> void:
  data.body={}
  if str(data.holder).is_empty():app.rules.gripped=false
 func blocks_hero() -> bool:
- return enabled and not data.is_empty() and (not data.body.is_empty() or not str(data.holder).is_empty() or float(data.medicine_stop)>0 or (records!=null and records.blocks_hero()) or (trace_events!=null and trace_events.blocks_hero()) or (isolation!=null and isolation.blocks_hero()) or (observations!=null and observations.blocks_hero()))
+ return enabled and not data.is_empty() and (not data.body.is_empty() or not str(data.holder).is_empty() or float(data.medicine_stop)>0 or not data.get("ward_window_state",{}).get("action",{}).is_empty() or (records!=null and records.blocks_hero()) or (trace_events!=null and trace_events.blocks_hero()) or (isolation!=null and isolation.blocks_hero()) or (observations!=null and observations.blocks_hero()))
 func eligible() -> bool:
  return not app.has_key() and app.rules.sp>=50 and not app.rules.search_active and app.action_phase=="autonomy" and not app.rules.body_busy() and not app.rules.gripped and app.rules.control_left<=0 and not blocks_hero()
 func approach_contact(id:String,delta:float) -> bool:
@@ -132,6 +162,7 @@ func on_enter(from:String,room:String) -> void:
   if records!=null:records.cancel_read("room_left")
   if trace_events!=null:trace_events.cancel_read()
   if observations!=null:observations.cancel()
+  cancel_ward_window("room_left")
   cancel_registration_followup("room_left")
   data.erase("read_route")
  if from!=room and not data.body.is_empty():
@@ -166,12 +197,15 @@ func spawn_pending() -> void:
   if (room!=app.room_id and group!="pharmacy") or float(data.clock)-float(data.batches.get(room,-100))<float(config.timing.spawn_batch):continue
   var doors:Array=Map.doors(room)
   if doors.is_empty():continue
-  var entry:Vector2=Map.doorway(room,"double_ward" if group=="transport" else str(doors[0]))
+  var incoming:Dictionary=portal_for(room,"double_ward" if group=="transport" else str(doors[0]))
+  var entry:Vector2=incoming.landing
+  var inward:Vector2=incoming.inward
+  var tangent:=Vector2(inward.y,-inward.x)
   var floor_layout=layout_for(room)
   if not floor_layout.walkable(entry):continue
   var slots:Array[Vector2]=[]
   for offset in [0.0,-0.5,0.5,-1.0,1.0]:
-   var at:Vector2=entry+Vector2(float(offset),0)
+   var at:Vector2=entry+tangent*float(offset)
    if not floor_layout.walkable(at) or (room==app.room_id and app.hero_pos.distance_to(at)<0.5):continue
    if at.distance_to(entry)>0.001 and floor_layout.path(entry,at).is_empty():continue
    var free:bool=true
@@ -189,7 +223,7 @@ func spawn_pending() -> void:
   state.pending=false;data.batches[room]=data.clock
 
 func tick(delta:float) -> void:
- if not enabled or app.session.data.level!=3:return
+ if not enabled or app.session.data.level!=3:cancel_ward_window("level_left");return
  if app.rules.hp<=0:release_all();return
  if data.is_empty():start_attempt()
  data.clock+=delta;spawn_pending()
@@ -218,8 +252,10 @@ func tick(delta:float) -> void:
  advance_false_record(delta)
  if not app.dialogue_queue.is_empty():return
  if nurse_duty!=null:nurse_duty.tick(delta)
+ if intake!=null:intake.tick(delta)
  if not app.dialogue_queue.is_empty():return
  advance_registration_reply()
+ advance_ward_window(delta)
  if observations!=null:observations.tick(delta)
  if not app.dialogue_queue.is_empty():return
  if eligible():
@@ -228,9 +264,9 @@ func tick(delta:float) -> void:
    data.body=suspended.duplicate(true);data.suspended_body={};return
   if app.room_id=="ward" and near("ordinary_orderly") and not data.wrist_done and not data.get("staff_targets",{}).has("ordinary_orderly") and not app.action_phase in ["resting","return_bed"]:
    set_body("wrist_check","ordinary_orderly");say("WRIST");return
-  if near("registration_nurse") and not data.registered:
+  if near("registration_nurse") and not data.registered and (intake==null or not intake.actor_reserved("registration_nurse")):
    set_body("registration","registration_nurse");return
-  if near("registration_nurse") and data.registered and not registration_state().auto_started:
+  if near("registration_nurse") and data.registered and not registration_state().auto_started and (intake==null or not intake.actor_reserved("registration_nurse")):
    if begin_registration_followup(false):return
   if near("doctor") and not data.diagnosed:
    set_body("diagnosis","doctor");data.diagnosis_basis=evidence_basis();say("DOCTOR_"+str(data.diagnosis_basis).to_upper())
@@ -249,6 +285,81 @@ func advance_pharmacy_stand(delta:float) -> void:
  var arrived:bool=ward_events.bed_move("pharmacist",at,delta,["pharmacist"]) if ward_events!=null else move("pharmacist",at,delta)
  if arrived:actor("pharmacist").work_stand_done=true
 
+func ward_window_state() -> Dictionary:
+ if not data.has("ward_window_state"):
+  data.ward_window_state={"open":false,"serial":0,"action":{},"last_cancel":""}
+ return data.ward_window_state
+
+func ward_window_position(room:String="") -> Vector2:
+ var side:String=app.room_id if room.is_empty() else room
+ return portal_for("lobby","ward").at if side=="lobby" else portal_for("ward","lobby").at if side=="ward" else Vector2.INF
+
+func ward_window_body_free(controlled:bool) -> bool:
+ var rules=app.rules
+ return enabled and app.session.data.level==3 and rules.hp>0 and not rules.loading and not rules.transitioning and not rules.absent and not rules.body_busy() and not rules.gripped and not rules.search_active and (rules.control_left>0 if controlled else rules.control_left<=0) and data.get("body",{}).is_empty() and str(data.get("holder","" )).is_empty() and float(data.get("medicine_stop",0.0))<=0 and data.get("records_state",{}).get("reading",{}).is_empty() and data.get("trace_events",{}).get("active",{}).is_empty() and data.get("observations_state",{}).get("active",{}).is_empty() and app.action_phase not in ["return_bed","resting"]
+
+func ward_window_contact() -> bool:
+ if app.room_id!="lobby":return false
+ var at:Vector2=ward_window_position("lobby")
+ var offset:Vector2=at-app.hero_pos
+ return offset.length()<=0.6 and app.layout.clear_segment(app.hero_pos,at) and (offset.length()<0.035 or offset.normalized().dot(app.hero_facing)>0.35)
+
+func ward_window_request(controlled:bool=true) -> Dictionary:
+ if data.is_empty() or app.room_id!="lobby" or not ward_window_body_free(controlled):return {}
+ var at:Vector2=ward_window_position("lobby")+portal_for("lobby","ward").inward*0.45
+ if not app.layout.walkable(at) or not app.layout.clear_segment(at,ward_window_position("lobby")):return {}
+ if app.hero_pos.distance_to(at)>0.035 and app.layout.path(app.hero_pos,at).is_empty():return {}
+ return {"id":WARD_WINDOW_ID,"kind":"ward_window","pos":xy(at),"controlled":controlled}
+
+func begin_ward_window(controlled:bool=true) -> bool:
+ if data.is_empty() or app.room_id!="lobby" or not ward_window_body_free(controlled) or not app.dialogue_queue.is_empty():return false
+ var value:Dictionary=ward_window_state()
+ if not value.action.is_empty():return false
+ var offset:Vector2=ward_window_position("lobby")-app.hero_pos
+ if offset.length()>0.6 or not app.layout.clear_segment(app.hero_pos,ward_window_position("lobby")):return false
+ if offset.length()>0.035:app.hero_facing=offset.normalized()
+ value.serial=int(value.serial)+1
+ value.action={"serial":int(value.serial),"elapsed":0.0,"phase":"prepare","controlled":controlled,"target_open":not bool(value.open),"contact_done":false}
+ app.hero_route=PackedVector2Array();app.target_index=-1;app.hero_state="give"
+ var origin:String="controlled" if controlled else "autonomous"
+ if not app.rules.public_action.is_empty():app.rules.finish_public_action(str(app.rules.public_action.get("origin",origin)))
+ app.rules.begin_public_action("interact",WARD_WINDOW_ID,origin,"lobby")
+ return true
+
+func cancel_ward_window(reason:String="interrupted") -> void:
+ if data.is_empty() or not data.has("ward_window_state"):return
+ var value:Dictionary=data.ward_window_state
+ if value.action.is_empty():return
+ var origin:String="controlled" if value.action.get("controlled",false) else "autonomous"
+ if app.rules.public_action.get("target","")==WARD_WINDOW_ID:app.rules.finish_public_action(origin)
+ value.last_cancel=reason;value.action={}
+ if app.action_phase=="asylum_reading":app.action_phase="autonomy";app.hero_state="idle"
+
+func advance_ward_window(delta:float) -> void:
+ if data.is_empty() or not data.has("ward_window_state") or data.ward_window_state.action.is_empty() or not is_finite(delta) or delta<=0:return
+ var value:Dictionary=data.ward_window_state;var action:Dictionary=value.action
+ if not ward_window_body_free(bool(action.controlled)) or not ward_window_contact():cancel_ward_window("lost_contact_or_control");return
+ if not app.dialogue_queue.is_empty():return
+ action.elapsed+=minf(delta,app.rules.control_left) if action.controlled else delta
+ var elapsed:float=float(action.elapsed)
+ action.phase="prepare" if elapsed<WARD_WINDOW_PREPARE else "contact" if elapsed<WARD_WINDOW_PREPARE+WARD_WINDOW_CONTACT else "finish"
+ app.hero_state="give"
+ if not action.contact_done and elapsed+0.000001>=WARD_WINDOW_PREPARE+WARD_WINDOW_CONTACT:
+  if claim("ward_window_contact:%d"%int(action.serial),"asylum_ward_window_changed",{"open":bool(action.target_open),"room":"ward","operated_from":"lobby"}):
+   value.open=bool(action.target_open)
+   if action.controlled:app.rules.controlled_execution("interact",WARD_WINDOW_ID)
+   app.status_note="观察窗已开启；室内内容仍需实际观察" if value.open else "观察窗已关闭；病房门通行条件不变"
+  action.contact_done=true
+ if elapsed+0.000001>=WARD_WINDOW_PREPARE+WARD_WINDOW_CONTACT+WARD_WINDOW_FINISH:cancel_ward_window("completed")
+
+func ward_window_markers() -> Array:
+ if not enabled or data.is_empty() or app.session.data.level!=3:return []
+ var value:Dictionary=ward_window_state();var result:Array=[]
+ for room in ["lobby","ward"]:
+  var at:Vector2=ward_window_position(room)
+  result.append({"id":WARD_WINDOW_ID,"kind":"ward_window","room":room,"pos":xy(at),"open":bool(value.open),"draw_offset":[0,-44],"label":"观察窗 · %s · %s"%["开" if value.open else "关","外侧操作" if room=="lobby" else "内侧不可开"]})
+ return result
+
 func registration_state() -> Dictionary:
  if not data.has("registration_state"):
   var prior_reply:bool=false
@@ -264,6 +375,7 @@ func advance_registration_reply() -> void:
   claim("registration_reply_received","asylum_registration_reply_received",{"actual_departure_copy":true})
 
 func registration_body_free(controlled:bool) -> bool:
+ if intake!=null and intake.actor_reserved("registration_nurse"):return false
  if not enabled or data.is_empty() or app.session.data.level!=3 or app.room_id!="lobby" or app.rules.hp<=0:return false
  if app.rules.loading or app.rules.transitioning or app.rules.absent or app.rules.body_busy() or app.rules.gripped or not str(data.holder).is_empty() or not data.body.is_empty() or app.rules.search_active or not app.dialogue_queue.is_empty():return false
  if controlled and app.rules.control_left<=0:return false
@@ -392,6 +504,7 @@ func advance_body(delta:float) -> void:
    var carry:Dictionary=data.carry
    if carry.get("wheelchair_gone",false):
     data.departure_page=true
+    app.rules.owners.asylum_departure_copy="registration_nurse"
     record("asylum_departure_copy:"+str(app.rules.actual_attempt),"前关对应患者离院单副本：自行离院。源为医院纸面记录；真实强制转运另账。")
     # Matching cannot be inferred from null glyphs or a generic witness flag.
     var matched:bool="wheelchair_identity_confirmed" in app.rules.known
@@ -483,6 +596,7 @@ func finish_exam() -> void:
 
 func release_all() -> void:
  cancel_registration_followup("death")
+ cancel_ward_window("death")
  data.holder="";app.rules.gripped=false;data.body={};data.exam={}
  if records!=null:records.cancel_read("death")
  if trace_events!=null:trace_events.cancel_read()

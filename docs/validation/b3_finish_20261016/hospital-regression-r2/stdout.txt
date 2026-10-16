@@ -1,0 +1,99 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS hospital has ten unique identities in six independent scheduling groups
+PASS first-attempt nurse roll above 50 percent remains absent
+PASS same actual roll succeeds at fifth-attempt 70 percent cap
+PASS return before twenty game seconds cannot add a scheduling roll
+PASS legal return uses half initial chance, not the initial fifty percent
+PASS a group cannot roll more than three times per actual attempt
+PASS pending arrival does not spawn against the protagonist at the doorway
+PASS pending nurse enters when the physical doorway is clear
+PASS required trio enters as one batch while next group remains pending
+PASS same doorway batch cannot repeat before ten game seconds
+PASS clear doorway accepts another group after ten game seconds
+PASS injured protagonist begins actual nurse approach/contact without immediate healing
+PASS partial bandaging accumulates real treatment time without early income
+PASS actual neural interruption keeps cumulative completed bandage time
+PASS nurse resumes and reaches exactly one three-second treatment
+PASS completed treatment heals ten HP once and owns its receipt
+PASS manual pause freezes hospital clock, treatment and actor routes
+PASS actual JSON preserves completed treatment and does not repay healing
+PASS nurse and later frames cannot heal a second time this attempt
+PASS full HP bypasses bandaging and proceeds to number verification
+PASS real nurse number-check completes without treatment requirement
+PASS nurse check delivers a laundry manifest without inventing guide registration or consuming healing
+PASS the existing nurse actually walks between rooms instead of being cloned
+PASS actual guide begins a separate registration contact
+PASS only completed guide registration delivers the hero ticket
+PASS guide ticket never substitutes for a nurse check or laundry order
+PASS doctor invites examination before actual needle contact
+PASS doctor physically approaches before visible grab preparation
+PASS unfinished needle/grab windup cannot pre-charge damage
+PASS needle actually enters and begins sampling
+PASS one actual needle contact costs five HP but is not yet a valid sample
+PASS sampling cannot complete before two full seconds after needle entry
+PASS two-second sampling creates one valid sample
+PASS successful sample releases grip and ends this encounter
+PASS prescription uses its own later actual transfer
+PASS passing the same doctor cannot repeat needle damage or sampling
+PASS four-second maximum ends unreachable examination without locking the world
+PASS no needle means no damage; independent prescription can still be handed over
+PASS real CRT knee reaches actual doctor contact and interrupts unfinished sample
+PASS interruption retains needle damage and charges one ordinary neural fee
+PASS actual doctor release permits independent prescription transfer
+PASS fatal needle contact wins over same-tick completed medical healing
+PASS no prescription cannot begin pharmacy dispensing or block searching
+PASS wrong-number prescription remains owned and cannot begin dispensing
+PASS DRYMOUTH adds two seconds only to unfinished prescription handoff
+PASS actual prescription receipt transfers once and pays configured neural fee
+PASS real mixing finishes before a separately owned cup handoff
+PASS unreceived cup cannot mean swallowed or drug damage
+PASS unfinished cup handoff retains drug and mental state through its own delay
+PASS actual cup reception begins a separate raise-to-mouth window
+PASS cup cannot swallow before one full second of raising
+PASS actual swallow commits fifteen SP loss and independent one-second bodily stop
+PASS medicine bodily stop consumes an existing control window without effective control milliseconds
+PASS JOY may improve SP but cannot clear the already-established medicine stop
+PASS control effective time excludes the final ten milliseconds of the actual medicine stop
+PASS medicine stop expires on world time without inventing HP loss
+PASS later frames cannot repeat drug damage or swallow receipt
+PASS actual pre-swallow GUT places the same cup down and commits refusal without drug damage
+PASS witnessing nurse prepares a sticker, without premature false-record knowledge
+PASS false medication record waits for real sticker duration
+PASS actual witnessed sticker preserves false institutional entry and true non-swallow separately
+PASS actual JSON retains refusal, same cup and completed false-label knowledge
+PASS actual nurse writing/contact supplies the required laundry order before porter task
+PASS unique porter physically reaches the actual dirty-clothes bag before lifting
+PASS unfinished bag lift cannot create a completed transfer record
+PASS completed lift moves the bag to the same porter identity
+PASS actual JSON retains held bag and original porter route
+PASS porter actually walks to exit before the bag is removed
+PASS bag removal owns one receipt but unread office stub remains unknown
+PASS wheelchair uses actual independent patient paperwork without protagonist registration / true
+PASS real paperwork/frame/fingers/exit transport completes / witnessed true
+PASS only complete actual witness loses ten SP and learns forced transport / true
+PASS actual patient's original footplate photo is contact-packed once while dropped shoe remains at actual floor location / true
+PASS original observer search finishes normally before walking out of actual shoe pickup space
+PASS same observing protagonist physically follows existing navigation out of porter pickup space
+PASS same porter physically returns for original shoe and carries one container to existing exit / true
+PASS one container holds both unique originals with separate real pickup receipts, no duplicated photograph or shoe / true
+PASS wheelchair uses actual independent patient paperwork without protagonist registration / false
+PASS real paperwork/frame/fingers/exit transport completes / witnessed false
+PASS only complete actual witness loses ten SP and learns forced transport / false
+PASS actual patient's original footplate photo is contact-packed once while dropped shoe remains at actual floor location / false
+PASS same porter physically returns for original shoe and carries one container to existing exit / false
+PASS one container holds both unique originals with separate real pickup receipts, no duplicated photograph or shoe / false
+PASS real office search, visible warning and continued action produce an archive report
+PASS absent guard causes actual navigation and deposition at office desk two
+PASS pending archive report neither summons guard nor confiscates key
+PASS actual JSON preserves report, removed document and last-seen target
+PASS actual archive/guard navigation and contact receive the persisted report
+PASS guard actually approaches, reaches and closes one grip
+PASS real guard grip commits exactly five HP and ten SP
+PASS actual JSON retains established guard grip without new damage
+PASS manual pause freezes actual drag, contact receipts and hospital clock
+PASS real guard releases at doorway or six-second maximum
+PASS later drag/reload cannot repay guard damage or open another disposition
+PASS completed record disposition does not lock key route or ordinary office exit
+HOSPITAL_CHECK 95 passed 0 failed

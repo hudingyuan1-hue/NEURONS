@@ -4,6 +4,7 @@ extends Control
 signal completed(sequence:String,skipped:bool)
 signal state_changed(state:Dictionary)
 const DATA_PATH="res://data/opening.json"
+const DialogueDisplay=preload("res://scripts/ui/dialogue_playback.gd")
 var data:Dictionary={}
 var sequence_key:String=""
 var context:Dictionary={}
@@ -65,7 +66,7 @@ func current_card() -> Dictionary:
  return cards()[index] if index>=0 and index<cards().size() else {}
 
 func current_text() -> String:
- return str(current_card().get("text","")).replace("{invader_id}",str(context.get("invader_id",""))).replace("{name}",str(context.get("name","")))
+ return DialogueDisplay.display_text(str(current_card().get("text","")).replace("{invader_id}",str(context.get("invader_id",""))).replace("{name}",str(context.get("name",""))))
 
 func start(sequence:String,values:Dictionary={},saved:Dictionary={}) -> bool:
  if not data.get("sequences",{}).has(sequence):return false
@@ -97,7 +98,7 @@ func refresh() -> void:
  if caption==null:return
  caption.text=current_text();caption.visible_characters=int(typed)
  caption.visible=str(current_card().get("visual",""))!="logo"
- speaker.text=str(current_card().get("speaker",""))
+ speaker.text=DialogueDisplay.display_text(str(current_card().get("speaker","")))
  progress.text="%d / %d"%[index+1,cards().size()] if not sequence_key.is_empty() else ""
  auto_button.text="自动：开" if auto_play else "自动：关"
  pause_button.text="继续演出" if paused else "暂停演出"

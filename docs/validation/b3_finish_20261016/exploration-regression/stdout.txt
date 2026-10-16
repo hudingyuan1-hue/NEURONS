@@ -1,0 +1,149 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS actual keyed hospital stair opening enters L3 without a development-stop button
+PASS third-level stairs retain down/up public routes without reception permission
+PASS first L3 unlock gives exact 3N/2C once and no new cycle
+PASS L3 samples fourteen targets and grants fourteen actual search opportunities
+PASS thirteen rooms preserve exactly forty-five second-floor candidates
+PASS all sampled points and the unique key are on the existing second floor
+PASS real accessible door ward -> lobby
+PASS reachable existing furniture ward / 床
+PASS reachable existing furniture ward / 床头柜
+PASS reachable existing furniture ward / 靠背椅
+PASS reachable existing furniture ward / 书桌
+PASS reachable existing furniture ward / 蓝凳与纸箱
+PASS reachable existing furniture ward / 杂物箱
+PASS reachable existing furniture ward / 衣帽架与白褂
+PASS reachable existing furniture ward / 衣柜
+PASS reachable existing furniture ward / 五层书架
+PASS reachable existing furniture ward / 储物柜与病服
+PASS reachable existing furniture ward / 立式风扇
+PASS first-floor ward has no additional key-search point
+PASS real accessible door lobby -> ward
+PASS real accessible door lobby -> clinic
+PASS real accessible door lobby -> pharmacy
+PASS real accessible door lobby -> office
+PASS real accessible door lobby -> stairs
+PASS reachable existing furniture lobby / 挂号导诊台
+PASS reachable existing furniture lobby / 叫号屏控制盒
+PASS reachable existing furniture lobby / 自助机出票槽
+PASS reachable existing furniture lobby / 绿植底托
+PASS reachable existing furniture lobby / 宣传架
+PASS reachable existing furniture lobby / 饮水机下柜
+PASS first-floor lobby has no additional key-search point
+PASS real accessible door clinic -> lobby
+PASS reachable existing furniture clinic / 医生桌抽屉
+PASS reachable existing furniture clinic / 储物柜
+PASS reachable existing furniture clinic / 洗手池下柜
+PASS reachable existing furniture clinic / 检查床床沿与床底
+PASS reachable existing furniture clinic / 器械柜
+PASS reachable existing furniture clinic / 壁架
+PASS reachable existing furniture clinic / 垃圾桶
+PASS reachable existing furniture clinic / 窗台
+PASS first-floor clinic has no additional key-search point
+PASS real accessible door pharmacy -> lobby
+PASS reachable existing furniture pharmacy / 取药柜台
+PASS reachable existing furniture pharmacy / 冷藏药柜开放层
+PASS reachable existing furniture pharmacy / 洗手池下柜
+PASS reachable existing furniture pharmacy / 储物柜
+PASS reachable existing furniture pharmacy / 药架
+PASS reachable existing furniture pharmacy / 处方配药台
+PASS reachable existing furniture pharmacy / 宣传架
+PASS first-floor pharmacy has no additional key-search point
+PASS real accessible door office -> lobby
+PASS reachable existing furniture office / 资料架
+PASS reachable existing furniture office / 窗台
+PASS reachable existing furniture office / 饮水机下柜
+PASS reachable existing furniture office / 垃圾桶
+PASS reachable existing furniture office / 小边柜
+PASS reachable existing furniture office / 文件柜
+PASS reachable existing furniture office / 办公桌①
+PASS reachable existing furniture office / 打印机出纸托盘
+PASS reachable existing furniture office / 洗手池下柜
+PASS reachable existing furniture office / 储物柜
+PASS reachable existing furniture office / 办公桌②
+PASS first-floor office has no additional key-search point
+PASS real accessible door stairs -> lobby
+PASS real accessible door stairs -> corridor
+PASS real accessible door stairs -> cortex_exit
+PASS reachable existing furniture stairs / 平台窗台
+PASS real accessible door corridor -> stairs
+PASS real accessible door corridor -> activity
+PASS real accessible door corridor -> group_therapy
+PASS real accessible door corridor -> quiet
+PASS real accessible door corridor -> bathroom
+PASS real accessible door corridor -> double_ward
+PASS real accessible door corridor -> workshop
+PASS reachable existing furniture corridor / 护士站办公桌
+PASS reachable existing furniture corridor / 花坛
+PASS reachable existing furniture corridor / 候诊椅组
+PASS reachable existing furniture corridor / 桌旁柜子
+PASS real accessible door activity -> corridor
+PASS reachable existing furniture activity / 电视柜
+PASS reachable existing furniture activity / 窗①
+PASS reachable existing furniture activity / 沙发组
+PASS reachable existing furniture activity / 茶几
+PASS reachable existing furniture activity / 活动桌
+PASS reachable existing furniture activity / 绿植
+PASS reachable existing furniture activity / 窗②
+PASS reachable existing furniture activity / 书架
+PASS real accessible door group_therapy -> corridor
+PASS reachable existing furniture group_therapy / 储物柜
+PASS reachable existing furniture group_therapy / 窗①
+PASS reachable existing furniture group_therapy / 团体座椅组
+PASS reachable existing furniture group_therapy / 绿植
+PASS reachable existing furniture group_therapy / 窗②
+PASS reachable existing furniture group_therapy / 白板
+PASS real accessible door quiet -> corridor
+PASS reachable existing furniture quiet / 固定储物柜
+PASS reachable existing furniture quiet / 普通储物柜
+PASS reachable existing furniture quiet / 软垫休息椅
+PASS reachable existing furniture quiet / 高窗
+PASS real accessible door bathroom -> corridor
+PASS reachable existing furniture bathroom / 洗手池①
+PASS reachable existing furniture bathroom / 洗手池②
+PASS reachable existing furniture bathroom / 公共地漏
+PASS reachable existing furniture bathroom / 淋浴间①
+PASS reachable existing furniture bathroom / 淋浴间②
+PASS reachable existing furniture bathroom / 高窗
+PASS reachable existing furniture bathroom / 马桶
+PASS real accessible door double_ward -> corridor
+PASS reachable existing furniture double_ward / 衣柜
+PASS reachable existing furniture double_ward / 储物柜
+PASS reachable existing furniture double_ward / 单人床①
+PASS reachable existing furniture double_ward / 单人床②
+PASS reachable existing furniture double_ward / 床头柜①
+PASS reachable existing furniture double_ward / 床头柜②
+PASS reachable existing furniture double_ward / 窗
+PASS real accessible door workshop -> corridor
+PASS reachable existing furniture workshop / 操作桌①
+PASS reachable existing furniture workshop / 操作桌②
+PASS reachable existing furniture workshop / 矮柜
+PASS reachable existing furniture workshop / 洗手池
+PASS reachable existing furniture workshop / 窗
+PASS reachable existing furniture workshop / 作品展示板
+PASS reachable existing furniture workshop / 材料柜
+PASS reachable existing furniture workshop / 材料架
+PASS actual L3 room and action snapshot is accepted by existing schema2 loader
+PASS all return-to-bed routes use corridor, stairs and reception without new edges
+PASS autonomy physically approaches a real workshop stand before search begins
+PASS first-attempt standard search lasts six seconds and consumes the opportunity at start
+PASS mid-search checksummed JSON keeps consumed attempt, six-second progress and target
+PASS manual pause freezes world and in-flight L3 search
+PASS same resumed six-second action genuinely finishes
+PASS one real completed target gives exactly one neuron
+PASS completed third-floor search can be saved and loaded
+PASS loaded completed target cannot grant another search reward
+PASS room navigation and JSON do not reroll the hidden key
+PASS low-SP third-level hero physically returns to designated bed and completes one rest
+PASS return route actually traverses both floors and original reception
+PASS third-level rest uses single ward bed, not a padded chair or treatment chair
+PASS new real attempt resets exactly fourteen searches and one new fixed sample
+PASS rest preserves skill cooldown instead of granting a reset
+PASS missing carried material stays absent rather than fabricating a patient identifier
+PASS without any NPC, autonomy really searches, obtains the unique key and opens the existing L4 stair exit
+PASS third-level exit boundary requires actual key ownership at actual stair position
+PASS search income occurs without duplicate level-unlock clusters
+PASS development boundary does not replay rewards or pretend to finish fourth level
+ASYLUM_CHECK 145 passed 0 failed

@@ -63,8 +63,8 @@ func sees_patient() -> bool:
  # The patient stays outside the office. An actual open doorway can be seen
  # from both sides; the guard still has to walk through it before reaching.
  if str(owner.actor("guard").room)!="office" or room!="lobby":return false
- var inside:Vector2=owner.app.door_point_for("office","lobby")
- var outside:Vector2=owner.app.door_point_for("lobby","office")
+ var inside:Vector2=owner.source_portal("office","lobby").threshold
+ var outside:Vector2=owner.source_portal("lobby","office").threshold
  return owner.position("guard").distance_to(inside)+owner.position("patient").distance_to(outside)<=parameter("notice_distance",1.2) and owner.layout_for("office").clear_segment(owner.position("guard"),inside) and owner.layout_for("lobby").clear_segment(outside,owner.position("patient"))
 
 func advance_patient(delta:float) -> void:
@@ -75,7 +75,8 @@ func advance_patient(delta:float) -> void:
  var walk:Dictionary=value.patient_walk
  walk.left=maxf(0,float(walk.left)-delta)
  if float(walk.left)>0:return
- var target:Vector2=Vector2(2.8,1.4) if walk.leg=="center" else owner.app.door_point_for("lobby","office")+Vector2(0,0.45)
+ var office_portal:Dictionary=owner.source_portal("lobby","office")
+ var target:Vector2=owner.source_anchor("lobby","patient_walk_center",Vector2(2.8,1.4)) if walk.leg=="center" else office_portal.at+office_portal.inward*0.45
  if owner.move("patient",target,delta):
   walk.leg="office" if walk.leg=="center" else "center"
   walk.left=parameter("patient_pause",3.0)
@@ -269,7 +270,7 @@ func advance_guard(delta:float) -> void:
  if event.phase=="drag":
   event.elapsed+=delta
   var room:String=str(owner.actor("guard").room)
-  var doorway:Vector2=owner.app.door_point_for(room,"lobby" if room!="lobby" else "ward")
+  var doorway:Vector2=owner.source_portal(room,"lobby" if room!="lobby" else "ward").threshold
   if hero:
    # Persisted established grip is not reset merely by room navigation.
    # Any unavailable path releases at the actual position; no wall teleport.

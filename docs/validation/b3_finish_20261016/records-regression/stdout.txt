@@ -1,0 +1,63 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS eight physical page identities begin unread rather than as automatic knowledge
+PASS far observer cannot start reading an office page
+PASS a report that has not really been written cannot be read
+PASS wall fixture places two legal in-range endpoints separated by a real blocker
+PASS even in range a physical occluder prevents reading through it
+PASS actual clear page contact starts prepare/contact/finish reading
+PASS partial page preparation has not prematurely granted knowledge
+PASS manual pause freezes both world and in-flight page reading
+PASS half-read page survives real JSON without premature completion
+PASS less than one full second still cannot give a completed page
+PASS resumed one-second physical page really completes
+PASS reading is not a key search and grants no search resources
+PASS explicit reread cannot duplicate knowledge entries or page settlement
+PASS actual one-second contact reads separate page asylum_scar_photo
+PASS actual one-second contact reads separate page asylum_no_external_injury
+PASS actual one-second contact reads separate page asylum_prior_copy
+PASS actual one-second contact reads separate page asylum_death_page
+PASS actual one-second contact reads separate page asylum_fee_page
+PASS two unknown patient numbers cannot connect a scar photo to a no-injury page
+PASS unknown death and fee identifiers stay unknown rather than borrowed from a living patient
+PASS public duty roster remains a real readable page while archivist is physically present
+PASS public roster does not trigger restricted-file confiscation or a report
+PASS seven independent existing pages complete without inventing the eighth report or income
+PASS report case first earns its retained directory knowledge by actual reading
+PASS second actual restricted-file reading is visible to a nearby archivist
+PASS archivist really sees, approaches and reaches a visible stop before confiscation
+PASS stop dialogue alone does not yet confiscate a file or finish a report
+PASS actual hand contact collects only the still-unowned physical file
+PASS confiscation preserves already-read information and the progression key
+PASS continued reading after real stop makes archivist walk, write and leave one actual report on desk II
+PASS written report waits for an absent guard rather than summoning or remotely executing him
+PASS being reported and paper collection create no invented bodily harm
+PASS only after actual writing can the eighth page be physically read from the desk
+PASS reading an institutional accusation does not manufacture a staff attack
+PASS waiting report location and actually-read allegation persist independently through JSON
+PASS guard physically reaches the actual desk report and completes its handoff
+PASS report receipt changes the unique paper owner before any bodily outcome
+PASS accepted report leads to confirmed target, real approach and visible reach
+PASS visible grab preparation is not already damage or an established holder
+PASS unfinished half-second reach leaves an intervention window
+PASS mid-reach JSON does not skip directly to gripping
+PASS actual closing contact establishes the single guard holder
+PASS actual guard grip costs exactly five HP and ten SP once
+PASS another physical holder cannot begin while the guard has established grip
+PASS complete control cannot bypass established grip or charge a rejected command
+PASS actual paired drag releases within original six-second ceiling
+PASS finished guard disposition clears the one holder and its finite event
+PASS guard actually delivers to existing office doorway rather than a locked or invented room
+PASS extra frames do not repeat grip injury, confiscate a key or immediately regrab
+PASS completed disposition and prior one-time injury survive JSON without replay
+PASS alternate existing-sheet fixture still earns actual guard receipt and reach
+PASS real paid withdrawal executes inside pre-contact guard window
+PASS pre-grip withdrawal makes one actual miss without damage or dragging
+PASS missed attempt is consumed and cannot immediately retry
+PASS upstairs avoidance case really opens original office door and reaches reception
+PASS protagonist really follows reception's existing stair route rather than a scene jump
+PASS guard closes the one report attempt after protagonist actually leaves the first floor
+PASS first-floor guard cannot grab upstairs or invent cross-floor damage
+PASS ordinary office disposition does not drag the guard through an unapproved upper-floor chase
+ASYLUM_RECORDS_CHECK 59 passed 0 failed

@@ -10,12 +10,15 @@ const CUES := {
 var enabled := true
 var world_frozen := false
 var voice_frozen := false
+var background_frozen := false
+var scene_playback_frozen := false
 var levels := {"master":0.8,"ui":0.7,"world":0.7,"ambience":0.5,"music":0.5,"voice":0.8}
 var assets:Dictionary={}
 var tones:Dictionary={}
 var channels:Dictionary={}
 var played_events:Dictionary={}
 var starts:Array[Dictionary]=[]
+var dialogue_bindings:Array=[]
 
 func _exit_tree() -> void:
  # Explicitly detach playback before the audio server shuts down. Ogg
@@ -37,6 +40,7 @@ func _ready() -> void:
 
  var bindings=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_bindings.json"))
  if bindings is Dictionary:
+  dialogue_bindings=bindings.get("dialogue",[]).duplicate(true)
   for entry in bindings.get("assets",[]):
    if entry.get("license","").is_empty() or not ResourceLoader.exists(str(entry.get("stream",""))):continue
    var stream=load(str(entry.stream))
@@ -68,12 +72,47 @@ func refresh_levels() -> void:
   for player in channels[channel]:
    player.volume_linear=float(levels.master)*float(levels[channel]) if enabled else 0.0
 
-func set_world_paused(value:bool, pause_voice:bool=false) -> void:
+func set_world_paused(value:bool, pause_voice:bool=false,pause_background:bool=true) -> void:
  world_frozen=value
  voice_frozen=pause_voice
+ background_frozen=value and pause_background
+ scene_playback_frozen=value and pause_background
  for channel in channels:
-  if channel=="ui":continue
-  for player in channels[channel]:player.stream_paused=pause_voice if channel=="voice" else value
+  for player in channels[channel]:
+   var frozen:bool=playback_frozen(str(channel))
+   if player.has_stream_playback() and player.stream_paused!=frozen:player.stream_paused=frozen
+
+func channel_frozen(channel:String) -> bool:
+ if channel=="ui":return false
+ if channel=="voice":return voice_frozen
+ if channel in ["music","ambience"]:return background_frozen
+ return world_frozen
+
+func playback_frozen(channel:String) -> bool:
+ # Dialogue freezes new gameplay sound triggers with world actions, but an
+ # already sounding contact/room tail remains audible. Manual/menu pause
+ # still suspends those playbacks. Sound never advances a gameplay clock.
+ if channel=="world":return scene_playback_frozen
+ return channel_frozen(channel)
+
+func dialogue_voice(speaker:String,text:String) -> String:
+ for binding in dialogue_bindings:
+  if str(binding.get("speaker",""))==speaker and str(binding.get("text",""))==text:return str(binding.get("asset",""))
+ return ""
+
+func has_dialogue_voice(id:String) -> bool:
+ return not id.is_empty() and assets.has(id) and assets[id].channel=="voice" and not assets[id].loop
+
+func voice_playing(id:String="") -> bool:
+ for player in channels.get("voice",[]):
+  # Godot's playing flag is false while paused. The retained playback is
+  # still an unfinished line and must survive saves and reserve its slot.
+  if player.has_stream_playback() and (id.is_empty() or str(player.get_meta("cue_id",""))==id):return true
+ return false
+
+func stop_dialogue_voice(id:String) -> void:
+ for player in channels.get("voice",[]):
+  if str(player.get_meta("cue_id",""))==id:player.stop()
 
 func reset_scene() -> void:
  for channel in channels:
@@ -91,7 +130,7 @@ func snapshot_playback() -> Dictionary:
  var playing:Array=[]
  for channel in channels:
   for player in channels[channel]:
-   if player.playing:
+   if player.has_stream_playback():
     playing.append({"id":str(player.get_meta("cue_id","")),"position":player.get_playback_position(),"channel":channel})
  return {"receipts":played_events.duplicate(true),"playing":playing}
 
@@ -107,11 +146,11 @@ func restore_playback(state:Dictionary) -> void:
   var position:float=float(entry.position)
   if position<0 or position>=spec.stream.get_length():continue
   for player in channels[channel]:
-   if player.playing:continue
+   if player.has_stream_playback():continue
    player.stream=spec.stream
    player.set_meta("cue_id",id)
    player.play(position)
-   player.stream_paused=voice_frozen if channel=="voice" else world_frozen if channel!="ui" else false
+   player.stream_paused=playback_frozen(channel)
    break
 
 func cue_ui(kind:String,event_id:String="") -> bool:
@@ -133,18 +172,18 @@ func cue(kind:String, event_id:String="",presentation_channel:String="") -> bool
  else:
   return false # Missing music/ambience/voice remains silent.
  if presentation_channel=="ui" and channel in ["ui","world"]:channel="ui"
- if not enabled or (voice_frozen and channel=="voice") or (world_frozen and channel not in ["ui","voice"]):return false
+ if not enabled or channel_frozen(channel):return false
  var key:=id+":"+event_id
  if not event_id.is_empty() and played_events.has(key):return false
  for current in channels[channel]:
-  if looping and current.playing and current.stream==sound:return false
+  if looping and current.has_stream_playback() and current.stream==sound:return false
  var player:AudioStreamPlayer=null
  for candidate in channels[channel]:
-  if not candidate.playing:
+  if not candidate.has_stream_playback():
    player=candidate
    break
  if player==null:
-  if channel=="world":return false # No delayed replay queue.
+  if channel in ["world","voice"]:return false # Never steal a still-speaking voice; no delayed world replay.
   player=channels[channel][0]
  player.stream=sound
  player.set_meta("cue_id",id)

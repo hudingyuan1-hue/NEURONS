@@ -1,0 +1,241 @@
+{
+  "cases": [
+    {
+      "current_attempt": 2,
+      "id": "ready_restart",
+      "manifest": {
+        "bag_departed": true,
+        "bag_id": "hospital_relic_container",
+        "exit_pos": [
+          1.25685775279999,
+          0.213715448975563
+        ],
+        "exit_room": "lobby",
+        "items": [
+          "family_photo",
+          "patient_shoe"
+        ],
+        "packed_receipts": {
+          "family_photo": "hospital:1:relic_packed:family_photo",
+          "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+        },
+        "ready": true,
+        "source_attempt": 1.0,
+        "source_owners": {
+          "family_photo": "wheelchair_footplate",
+          "patient_shoe": "lobby_floor"
+        },
+        "transport_receipt": "hospital:1:patient_transport",
+        "version": 1.0
+      },
+      "original_packing_count": 2,
+      "original_transport_count": 1
+    },
+    {
+      "id": "partial_photo_retry_then_actual_intake",
+      "intake": {
+        "delivery": {
+          "bag_departed": true,
+          "bag_id": "hospital_relic_container",
+          "bag_number": null,
+          "exit_pos": [
+            1.25685775279999,
+            0.213715448975563
+          ],
+          "exit_room": "lobby",
+          "items": [
+            "family_photo",
+            "patient_shoe"
+          ],
+          "packed_receipts": {
+            "family_photo": "hospital:1:relic_packed:family_photo",
+            "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+          },
+          "source_attempt": 1,
+          "source_owners": {
+            "family_photo": "wheelchair_footplate",
+            "patient_shoe": "lobby_floor"
+          },
+          "transport_receipt": "hospital:1:patient_transport",
+          "version": 1
+        },
+        "elapsed": 0.0,
+        "last_wait": "",
+        "phase": "stored",
+        "phase_progress": 0.0,
+        "pos": [
+          1.0,
+          0.849999964237213
+        ],
+        "read": {},
+        "room": "lobby"
+      },
+      "manifest": {
+        "bag_departed": true,
+        "bag_id": "hospital_relic_container",
+        "exit_pos": [
+          1.25685775279999,
+          0.213715448975563
+        ],
+        "exit_room": "lobby",
+        "items": [
+          "family_photo",
+          "patient_shoe"
+        ],
+        "packed_receipts": {
+          "family_photo": "hospital:1:relic_packed:family_photo",
+          "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+        },
+        "ready": true,
+        "source_attempt": 1,
+        "source_owners": {
+          "family_photo": "wheelchair_footplate",
+          "patient_shoe": "lobby_floor"
+        },
+        "transport_receipt": "hospital:1:patient_transport",
+        "version": 1
+      },
+      "photo_fact": {
+        "container": "hospital_relic_container",
+        "event_id": "hospital:1:relic_packed:family_photo",
+        "from": "wheelchair_footplate",
+        "item": "family_photo",
+        "kind": "hospital_relic_packed",
+        "occurrence_attempt": 2,
+        "occurrence_level": 2,
+        "pos": [
+          1.25,
+          0.217500001192093
+        ],
+        "room": "lobby",
+        "source_attempt": 1,
+        "source_level": 2,
+        "time": 6.25000000000002
+      },
+      "transport_fact": {
+        "event_id": "hospital:1:patient_transport",
+        "kind": "patient_transport_completed",
+        "occurrence_attempt": 2,
+        "occurrence_level": 2,
+        "source_attempt": 1,
+        "source_level": 2,
+        "time": 6.47500000000003
+      }
+    },
+    {
+      "id": "partial_shoe_retry_then_actual_intake",
+      "intake": {
+        "delivery": {
+          "bag_departed": true,
+          "bag_id": "hospital_relic_container",
+          "bag_number": null,
+          "exit_pos": [
+            1.25685775279999,
+            0.213715448975563
+          ],
+          "exit_room": "lobby",
+          "items": [
+            "family_photo",
+            "patient_shoe"
+          ],
+          "packed_receipts": {
+            "family_photo": "hospital:1:relic_packed:family_photo",
+            "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+          },
+          "source_attempt": 1,
+          "source_owners": {
+            "family_photo": "wheelchair_footplate",
+            "patient_shoe": "lobby_floor"
+          },
+          "transport_receipt": "hospital:1:patient_transport",
+          "version": 1
+        },
+        "elapsed": 0.0,
+        "last_wait": "",
+        "phase": "stored",
+        "phase_progress": 0.0,
+        "pos": [
+          1.0,
+          0.849999964237213
+        ],
+        "read": {},
+        "room": "lobby"
+      },
+      "manifest": {
+        "bag_departed": true,
+        "bag_id": "hospital_relic_container",
+        "exit_pos": [
+          1.25685775279999,
+          0.213715448975563
+        ],
+        "exit_room": "lobby",
+        "items": [
+          "family_photo",
+          "patient_shoe"
+        ],
+        "packed_receipts": {
+          "family_photo": "hospital:1:relic_packed:family_photo",
+          "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+        },
+        "ready": true,
+        "source_attempt": 1.0,
+        "source_owners": {
+          "family_photo": "wheelchair_footplate",
+          "patient_shoe": "lobby_floor"
+        },
+        "transport_receipt": "hospital:1:patient_transport",
+        "version": 1.0
+      },
+      "shoe_fact": {
+        "container": "hospital_relic_container",
+        "event_id": "hospital:1:relic_packed:patient_shoe",
+        "from": "lobby_floor",
+        "item": "patient_shoe",
+        "kind": "hospital_relic_packed",
+        "occurrence_attempt": 2,
+        "occurrence_level": 2,
+        "pos": [
+          1.28031873703003,
+          0.231914982199669
+        ],
+        "room": "lobby",
+        "source_attempt": 1,
+        "source_level": 2,
+        "time": 7.60000000000004
+      }
+    }
+  ],
+  "failures": [],
+  "fixtures": "Independent initial L2 trio/photo fixtures and isolated random groups. Restart is explicitly invoked through the same production restart_attempt handler; this is not a claim of naturally walking the full return-to-bed route. Each cross-chapter case declares only a held exit-key fixture and existing B3 nurse's initial desk presence. No completed transfer/packing/intake/read, source attempt alignment, concrete glyph or recognition is injected.",
+  "passes": [
+    "ready-container case first physically collects both originals and reaches real exit",
+    "genuine L2 restart increments current attempt and returns to bed without changing source trip attempt",
+    "ready long-term container and both unique originals survive restart unchanged",
+    "already appeared source trio retains actual locations/gone states rather than respawning another patient",
+    "retained ready manifest still references its actual original source receipts",
+    "checksummed JSON retains ready container after actual restart",
+    "ready retry does not repeat original collection, transfer or witness mental loss",
+    "first partial case reaches real original photograph contact before collection",
+    "unfinished photo contact has an existing physical footplate anchor but no packed manifest",
+    "retry preserves same uncompleted source photo contact while current attempt advances normally",
+    "partial retry preserves actual appeared actors and original photo on still-present chair",
+    "partial photo JSON preserves frozen source and unfinished contact without a forged pickup",
+    "continued original actors genuinely finish photo, original transfer, shoe and carry exit after retry",
+    "actual post-retry photo fact uses original source receipt and separately records current occurrence attempt",
+    "post-retry original transport finishes once under the same original source ID",
+    "partial offscreen retry yields exactly two original pickups and no replayed witness penalty",
+    "photo-contact retry crosses actual keyed doors and normal hook then genuinely receives/stores same source container in L3",
+    "L3 validates original-attempt receipt chain after real retry without duplicating arrival or intake",
+    "second partial case really finishes transfer and returns to shoe before its pickup contact",
+    "partially loaded original container and still-uncollected shoe remain separate before retry",
+    "return-shoe retry preserves real porter position, existing partial bag and remaining contact clock",
+    "post-retry partial bag JSON cannot swallow the original shoe or create its pickup receipt",
+    "same retained porter truly finishes shoe pickup and original exit after retry",
+    "continued shoe contact writes only its one original-source receipt and no second patient transfer",
+    "return-shoe retry also uses normal keyed transition and actual nurse storage rather than seeding L3 acceptance",
+    "second partial path preserves one actual arrival/container with both unique originals",
+    "old support strings without actual new anchors or manifest do not manufacture preserved packing history on retry"
+  ],
+  "rendered": true,
+  "scope": "S4:T27R3 actual restart handler preserves ready and incomplete original-object packing. Production source attempt remains distinct from current attempt; genuine pickup facts retain source receipt IDs and record actual occurrence attempt. Two partial cases then use normal keyed door/navigation/hook and real L3 nurse reception/storage."
+}

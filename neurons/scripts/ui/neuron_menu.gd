@@ -11,7 +11,7 @@ const PLAYER_PREVIEW_PATH := "" # v001 rejected by user; keep source, stop adopt
 const INK := Color("#c6d9be")
 const DIM := Color("#53635b")
 const ACCENT := Color("#b7d6a4")
-const SKIN_DESCRIPTION := "SKIN · 局部皮肤触觉\n{\n  // 消耗1神经元\n  // 我会让他感到皮肤不适\n  // 这有概率让他放弃本次行动\n  COST: 1N;  COOLDOWN: 2 秒;\n  INTENSITY: 1;\n  SUCCESS: 抓挠 0.5 秒;\n  INTERRUPT: 打断搜寻;\n  RESIST: 抵抗不退款;\n}"
+const SKIN_DESCRIPTION := "皮肤刺激 · SKIN\n{\n  // 消耗1神经元\n  // 我会让他感到皮肤不适\n  // 这有概率让他放弃本次行动\n  COST: 1神经元;  COOLDOWN: 2 秒;\n  INTENSITY: 1;\n  SUCCESS: 抓挠 0.5 秒;\n  INTERRUPT: 打断搜寻;\n  RESIST: 抵抗不退款;\n}"
 
 var _built: bool = false
 var _can_cast: bool = false
@@ -41,7 +41,7 @@ func open_menu(neurons_value: int, can_cast: bool, resistance_test: bool = false
 	_submitted = false
 	_hovered = false
 	_phase = 0.0
-	_coin.text = "COIN   %d N" % neurons_value
+	_coin.text = "神经元 %d" % neurons_value
 	_skin.disabled = not can_cast
 	_description.text = ""
 	_status.text = "抵抗测试场次" if resistance_test else ""
@@ -106,15 +106,15 @@ func _build_ui() -> void:
 		add_child(band)
 	_label(self, "NEURONS", Rect2(110, 53, 440, 48), 34, INK)
 	_label(self, "神经节点", Rect2(112, 107, 460, 30), 18, DIM)
-	_coin = _label(self, "COIN", Rect2(680, 90, 300, 34), 19, ACCENT)
+	_coin = _label(self, "神经元", Rect2(680, 90, 300, 34), 19, ACCENT)
 
-	var close := _button(self, "CLOSE  ×", Rect2(1045, 55, 125, 43))
+	var close := _button(self, "关闭 ×", Rect2(1045, 55, 125, 43))
 	close.pressed.connect(func() -> void: close_requested.emit())
 
 	var crt := _panel(Rect2(110, 150, 520, 390), Color("#182923"), Color("#64715c"))
 	var code := _panel(Rect2(680, 175, 475, 380), Color(0.055, 0.075, 0.065, 0.93), DIM)
-	_label(crt, "NEURAL / 01", Rect2(22, 14, 330, 30), 17, DIM)
-	_label(crt, "UNLOCKED  01", Rect2(22, 346, 400, 30), 16, DIM)
+	_label(crt, "神经节点 / 01", Rect2(22, 14, 330, 30), 17, DIM)
+	_label(crt, "已解锁 01", Rect2(22, 346, 400, 30), 16, DIM)
 
 	var points: Array[Vector2] = [
 		Vector2(78, 100), Vector2(203, 159), Vector2(327, 87),
@@ -133,9 +133,11 @@ func _build_ui() -> void:
 		crt.add_child(wire)
 	for i in range(points.size()):
 		var node_rect := Rect2(points[i] - Vector2(35, 20), Vector2(70, 40))
-		var node_button := _button(crt, "SKIN" if i == 1 else "···", node_rect)
+		var node_button := _button(crt, "皮肤刺激" if i == 1 else "...", node_rect)
 		if i == 1:
 			_skin = node_button
+			_skin.add_theme_font_size_override("font_size",14)
+			_skin.tooltip_text="SKIN"
 			_skin.add_theme_color_override("font_color", ACCENT)
 			_skin.mouse_entered.connect(_show_description)
 			_skin.mouse_exited.connect(_hide_description)

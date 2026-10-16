@@ -1,0 +1,5 @@
+SCRIPT ERROR: Invalid access to property or key 'asylum_relic_bag_number' on a base object of type 'Dictionary'.
+   at: _ready (res://tests/asylum_intake_check.gd:99)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/asylum_intake_check.gd:99)
+       [1] capture (res://tests/family_check.gd:50)

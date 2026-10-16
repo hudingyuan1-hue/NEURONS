@@ -39,14 +39,14 @@ func press(control:Button) -> void:
  await click(control.get_global_rect().get_center())
 
 func capture(name:String) -> void:
- await frames(2);await RenderingServer.frame_post_draw
+ await frames(2);RenderingServer.force_draw(false)
  root.get_texture().get_image().save_png(folder.path_join(name+".png"))
 
 func run_check() -> void:
  check(OS.has_feature("windows"),"package validation runs on target Windows platform")
  check(not FileAccess.file_exists("res://tests/test_rules.gd"),"test scripts are excluded from shipped pack")
  check(not DirAccess.dir_exists_absolute("res://DOCX"),"source documents are not shipped")
- for name in ["skills","home_rules","home_dialogue","tutorial_dialogue","search_actions","presentation","audio_bindings","hospital","hospital_observations","hidden_street","opening","asylum","asylum_records","asylum_ward_events","asylum_trace_events","asylum_isolation","asylum_observations","asylum_nurse_duty"]:
+ for name in ["skills","home_rules","home_dialogue","tutorial_dialogue","search_actions","presentation","audio_bindings","hospital","hospital_observations","hidden_street","opening","asylum","asylum_records","asylum_ward_events","asylum_trace_events","asylum_isolation","asylum_observations","asylum_nurse_duty","asylum_intake","cortex_events","cortex_upper_events","key_discovery","room_spaces"]:
   check(JSON.parse_string(FileAccess.get_file_as_string("res://data/%s.json"%name)) is Dictionary,"dynamic JSON is in PCK: "+name)
  var bindings=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_bindings.json"))
  for entry in bindings.assets:
@@ -70,7 +70,8 @@ func run_check() -> void:
  await press(button(app.tutorial_ui,"跳过练习"))
  while not app.dialogue_queue.is_empty():await press(button(app.dialogue_panel,"继续"))
  await frames(5)
- var at:Vector2=(app.world_viewport.get_canvas_transform()*(app.layout.project(app.hero_pos)+Vector2(0,-25)))*2.0
+ var body_height:float=65.0 if app.layout.geometry_version>=2 else 25.0
+ var at:Vector2=(app.world_viewport.get_canvas_transform()*(app.layout.project(app.hero_pos)+Vector2(0,-body_height)))*Vector2(1280,720)/Vector2(app.world_viewport.size)
  await click(at,MOUSE_BUTTON_RIGHT)
  check(app.menu.visible and app.menu.panel_mode=="tree","exported world body click opens actual freezer")
  await frames(15);await capture("03_windows_freezer")

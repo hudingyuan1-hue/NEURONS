@@ -9,6 +9,9 @@ func write_json(filename:String,data) -> bool:
  data.started_from_observed_save=true;data.source_snapshot=SOURCE;data.source_snapshot_text_sha256=source_hash
  data.asylum_entered=asylum_seen;data.asylum_entry_frame=asylum_entry_frame
  data.asylum_exit_reached=data.get("endpoint",{}).get("kind","")=="asylum_keyed_exit_development_boundary"
+ data.original_relic_delivery=app.hospital.data.get("relic_delivery",{}).duplicate(true)
+ data.asylum_relic_intake=app.asylum.data.get("intake_state",{}).duplicate(true)
+ data.relic_source_scope="Observed original transport/packing and intake are retained verbatim; reaching the exit alone does not prove their completion."
  if data.asylum_exit_reached:data.endpoint.reason="Actual L3 key and stair opening; L4 is still a development boundary, not an ending."
  var output:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join(filename),FileAccess.WRITE)
  if output==null:return false

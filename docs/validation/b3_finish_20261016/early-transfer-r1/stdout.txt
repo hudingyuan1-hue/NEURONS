@@ -1,0 +1,48 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS paperwork: original patient transport really reaches the declared departure-request phase
+PASS paperwork: real key route and door contact enter L3 without directly calling unlock
+PASS paperwork: original L2 attempt remains distinct from new L3 attempt
+PASS paperwork: manual pause freezes the actual departed source route and contacts
+PASS paperwork: actual disk JSON preserves exact unfinished source state
+PASS real L3 restart does not reset the earlier hospital trip or manufacture a completion
+PASS paperwork: original actors really reach source exit before one late chapter arrival
+PASS paperwork: ready manifest is backed by actual porter exit coordinates
+PASS paperwork: no old clinical body, spawn probability, medicine or hospital clock resumes
+PASS paperwork: offscreen transfer cannot create new harm or witnessed knowledge
+PASS paperwork: arrival waits for original nurse without spawning or faking handoff
+PASS paperwork: fact source level/attempt and actual occurrence level stay separate
+PASS paperwork: existing nurse actually approaches, receives, carries and places original bag
+PASS paperwork: exactly one arrival, handoff and placement
+PASS paperwork: both unique originals survive delayed transfer
+PASS paperwork: completed intake survives actual checksummed disk save
+PASS paperwork: later frames and reload do not replay any physical pickup or intake
+PASS photo_contact: original patient transport really reaches the declared departure-request phase
+PASS photo_contact: real key route and door contact enter L3 without directly calling unlock
+PASS photo_contact: original L2 attempt remains distinct from new L3 attempt
+PASS photo_contact: manual pause freezes the actual departed source route and contacts
+PASS photo_contact: actual disk JSON preserves exact unfinished source state
+PASS photo_contact: original actors really reach source exit before one late chapter arrival
+PASS photo_contact: ready manifest is backed by actual porter exit coordinates
+PASS photo_contact: no old clinical body, spawn probability, medicine or hospital clock resumes
+PASS photo_contact: offscreen transfer cannot create new harm or witnessed knowledge
+PASS photo_contact: arrival waits for original nurse without spawning or faking handoff
+PASS photo_contact: fact source level/attempt and actual occurrence level stay separate
+PASS photo_contact: existing nurse actually approaches, receives, carries and places original bag
+PASS photo_contact: exactly one arrival, handoff and placement
+PASS photo_contact: both unique originals survive delayed transfer
+PASS photo_contact: completed intake survives actual checksummed disk save
+PASS photo_contact: later frames and reload do not replay any physical pickup or intake
+PASS restore unchanged genuine observed L3-entry snapshot rather than seed a carry-exit result
+PASS observed source is genuinely short of its exit with both originals already in the carried bag
+FAIL same-name L3 lobby hero/blocker cannot freeze or replace the actual L2 route
+FAIL saved carry-exit actor physically traverses remaining original distance
+FAIL observed carry_exit: existing nurse actually approaches, receives, carries and places original bag
+FAIL observed carry_exit: exactly one arrival, handoff and placement
+FAIL observed carry_exit: both unique originals survive delayed transfer
+PASS observed carry_exit: completed intake survives actual checksummed disk save
+PASS observed carry_exit: later frames and reload do not replay any physical pickup or intake
+PASS present but unstarted old actors cannot create a new hospital trip after leaving
+PASS old gone/support history without actual original transport cannot create a bag or receipt
+HOSPITAL_EARLY_TRANSFER_CHECK 39 passed 5 failed

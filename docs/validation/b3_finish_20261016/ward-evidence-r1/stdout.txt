@@ -1,0 +1,42 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS unexposed director-held statement is not remotely readable
+PASS one real statement sheet initially remains with director
+PASS director really performs recorder events and approaches before presenting paper
+PASS unfinished paper contact gives no exposed document or delivery fact
+PASS mid-handoff JSON preserves exact document metadata and pending contact
+PASS real manual pause freezes pending handoff and evidence version
+PASS only actual handoff completion changes statement owner
+PASS exposed paper anchor follows its one actual speaker holder
+PASS one contact produces one version and one physical handover history
+PASS readable exact source sentence is separate from assent and unknown genuine signature
+PASS missing name and proxy-signature glyphs stay unknown
+PASS requesting an evidence descriptor never grants reading knowledge or new institutional records
+PASS paper moves with holder without inventing a new text revision
+PASS departed holder ends readability without teleporting sheet back to director
+PASS JSON preserves unobservable paper ownership without respawning another sheet
+PASS source-existing signature appendix stays with director without inventing genuine signing
+PASS unknown prefilled/proxy fields stay null and create no invented signing history
+PASS absent clipboard holder removes remote reading but preserves actual record ownership
+PASS material rack and absent box expose no finished product label
+PASS real folding contact creates only a folded intermediate
+PASS folded held paper is not a labelled table product
+PASS worker actually fetches existing label and returns to table two
+PASS loose label and unfinished paste cannot expose completed label content
+PASS mid-paste JSON preserves separate box and loose-label ownership
+PASS real paste contact attaches one existing label to folded box
+PASS label is physically attached to same table-held box at paste contact
+PASS unprovided batch and actual contents stay unknown while separate placement remains pending
+PASS making a labelled product does not remotely teach protagonist its contents
+PASS separate real placement finishes one product
+PASS six physical work contacts produce one finite product with persistent history
+PASS placed box stays on actual table when worker walks away
+PASS JSON preserves completed product version and actual owner
+PASS continued frames cannot duplicate product or paper-contact history
+PASS new real attempt keeps finite workshop product and attached label instead of refilling
+PASS legacy speaker-owned paper restores existing visibility without forging contact history
+PASS legacy paper ownership alone cannot invent new delivery receipt or spoken retraction
+PASS inconsistent old table marker without pasted label or completed product is not readable
+PASS legacy genuinely completed labelled box migrates without fabricating production history
+ASYLUM_WARD_EVIDENCE_CHECK 38 passed 0 failed

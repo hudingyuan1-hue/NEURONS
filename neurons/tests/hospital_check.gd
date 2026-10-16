@@ -299,13 +299,26 @@ func _ready() -> void:
 
  for witnessed in [true,false]:
   hospital_fixture("lobby");spawn_actor("guide",Vector2(2.4,1.4));spawn_actor("wheelchair",Vector2(2.8,1.4));spawn_actor("porter",Vector2(3.15,1.4))
+  # Formal spawn_pending establishes this one original photograph's owner;
+  # this finite actor fixture must preserve that same physical precondition.
+  app.rules.owners.family_photo="wheelchair"
   app.hero_pos=app.layout.furniture[0].at;app.target_index=0;app.rules.begin_search("lobby:0")
   check(hospital_until(func():return app.hospital.data.get("wheelchair_order",false),2.0) and not app.hospital.data.registered,"wheelchair uses actual independent patient paperwork without protagonist registration / "+str(witnessed))
   if not witnessed:app.enter_room("clinic");app.session.data.exploration_boundary=true
   var initial_sp:int=app.rules.sp
   check(hospital_until(func():return app.hospital.data.get("wheelchair_gone",false),35.0),"real paperwork/frame/fingers/exit transport completes / witnessed "+str(witnessed))
   check(("forced_transfer_seen" in app.rules.known)==witnessed and app.rules.sp==initial_sp-(10 if witnessed else 0),"only complete actual witness loses ten SP and learns forced transport / "+str(witnessed))
-  check(app.rules.owners.get("family_photo","")=="wheelchair_footplate" and app.rules.owners.get("patient_shoe","")=="lobby_floor","actual patient's photo and dropped shoe keep distinct owners / "+str(witnessed))
+  check(app.rules.owners.get("family_photo","")=="hospital_relic_container" and app.rules.owners.get("patient_shoe","")=="lobby_floor" and receipt("relic_packed:family_photo") and app.hospital.data.relic_delivery.source_owners.family_photo=="wheelchair_footplate","actual patient's original footplate photo is contact-packed once while dropped shoe remains at actual floor location / "+str(witnessed))
+  if witnessed:
+   # This original finite observation fixture stands at the desk, only
+   # 0.30m from the actual shoe pickup stand. Finish its real search, then
+   # walk clear instead of demanding that the porter pass through its body.
+   check(hospital_until(func():return not app.rules.search_active,6.0),"original observer search finishes normally before walking out of actual shoe pickup space")
+   var clear_spot:Vector2=Vector2(3.6,2.2)
+   app.hero_route=app.layout.path(app.hero_pos,clear_spot);app.motion={"speed":1.2}
+   check(not app.hero_route.is_empty() and hospital_until(func():return app.hero_pos.distance_to(clear_spot)<0.04,6.0),"same observing protagonist physically follows existing navigation out of porter pickup space")
+  check(hospital_until(func():return app.hospital.data.get("relic_delivery",{}).get("ready",false),15.0),"same porter physically returns for original shoe and carries one container to existing exit / "+str(witnessed))
+  check(app.rules.owners.get("family_photo","")=="hospital_relic_container" and app.rules.owners.get("patient_shoe","")=="hospital_relic_container" and receipt("relic_packed:patient_shoe") and app.hospital.data.relic_delivery.items.size()==2 and app.hospital.data.relic_delivery.bag_departed,"one container holds both unique originals with separate real pickup receipts, no duplicated photograph or shoe / "+str(witnessed))
   matrix.append({"wheelchair_complete_witness":witnessed,"hp":app.rules.hp,"sp":app.rules.sp,"receipt":receipt("patient_transport")})
 
  hospital_fixture("office");app.hero_pos=app.layout.furniture[5].at;spawn_actor("archivist",app.hero_pos+Vector2(-0.35,0))

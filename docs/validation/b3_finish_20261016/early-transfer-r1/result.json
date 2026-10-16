@@ -1,0 +1,1786 @@
+{
+  "cases": [
+    {
+      "final_source": {
+        "actors": {
+          "archivist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "assistant": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "doctor": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "guard": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "guide": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.62181615829468,
+              0.251008629798889
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                1.63031876087189,
+                0.231914982199669
+              ]
+            ]
+          },
+          "nurse": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "ward",
+            "route": []
+          },
+          "patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "pharmacist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "pharmacy",
+            "route": []
+          },
+          "porter": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.25685775279999,
+              0.213715448975563
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                1.25,
+                0.200000002980232
+              ]
+            ]
+          },
+          "wheelchair": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "gone",
+            "pos": [
+              1.25,
+              0.217500001192093
+            ],
+            "room": "lobby",
+            "route": []
+          }
+        },
+        "bag": "ward",
+        "bag_order": false,
+        "bandage": 0.0,
+        "batches": {},
+        "body": {},
+        "clock": 1.0,
+        "dispensed": false,
+        "exam_done": false,
+        "groups": {
+          "clinic": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          },
+          "lobby": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          },
+          "nurse": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          },
+          "office": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          },
+          "patient": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          },
+          "pharmacist": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          }
+        },
+        "healed": false,
+        "holder": "",
+        "hospital_attempt": 2.0,
+        "known_pages": [],
+        "medicine_stop": 0.0,
+        "nurse_checked": false,
+        "observation_state": {
+          "active": {},
+          "completed": {},
+          "links": {},
+          "read": {}
+        },
+        "prescribed": false,
+        "prescription_visit": "",
+        "receipts": {
+          "hospital:2:patient_order": "patient_transport_order",
+          "hospital:2:patient_relics_fell": "hospital_relics_fell",
+          "hospital:2:patient_transport": "patient_transport_completed",
+          "hospital:2:relic_packed:family_photo": "hospital_relic_packed",
+          "hospital:2:relic_packed:patient_shoe": "hospital_relic_packed"
+        },
+        "records_state": {
+          "archivist": {
+            "elapsed": 0.0,
+            "index": -1.0,
+            "phase": "idle"
+          },
+          "files": {
+            "archive_index": "office:0",
+            "case_death": "office:10",
+            "case_discharge": "office:10",
+            "case_fees": "office:10",
+            "case_removal": "office:5",
+            "complaint_original": "office:7",
+            "complaint_rewrite": "office:7",
+            "laundry_stub": "office:6"
+          },
+          "guard": {
+            "done": false,
+            "elapsed": 0.0,
+            "last_room": "",
+            "last_seen": [],
+            "phase": "idle",
+            "target": ""
+          },
+          "patient_gone": false,
+          "patient_silenced": false,
+          "read": [],
+          "report": {},
+          "stopped": {}
+        },
+        "refused": false,
+        "registered": false,
+        "regrab_elapsed": 1.8,
+        "relic_context": {
+          "source_attempt": 2.0
+        },
+        "relic_delivery": {
+          "bag_departed": true,
+          "bag_id": "hospital_relic_container",
+          "exit_pos": [
+            1.25685775279999,
+            0.213715448975563
+          ],
+          "exit_room": "lobby",
+          "items": [
+            "family_photo",
+            "patient_shoe"
+          ],
+          "packed_receipts": {
+            "family_photo": "hospital:2:relic_packed:family_photo",
+            "patient_shoe": "hospital:2:relic_packed:patient_shoe"
+          },
+          "ready": true,
+          "source_attempt": 2.0,
+          "source_owners": {
+            "family_photo": "wheelchair_footplate",
+            "patient_shoe": "lobby_floor"
+          },
+          "transport_receipt": "hospital:2:patient_transport",
+          "version": 1.0
+        },
+        "relic_late_wait": "",
+        "relic_packing": {
+          "actor": "porter",
+          "elapsed": 0.0,
+          "last_cancel": "",
+          "phase": "done",
+          "room": "lobby"
+        },
+        "relic_transit_elapsed": 7.37500000000004,
+        "room_left": {
+          "bedroom": 0.0
+        },
+        "sample": false,
+        "suspended_body": {},
+        "swallowed": false,
+        "transport": {},
+        "transport_relics": {
+          "family_photo": {
+            "accessible": false,
+            "pos": [
+              1.25,
+              0.217500001192093
+            ],
+            "room": "lobby",
+            "source_attempt": 2.0,
+            "support": "wheelchair_footplate"
+          },
+          "patient_shoe": {
+            "accessible": false,
+            "pos": [
+              1.28031873703003,
+              0.231914982199669
+            ],
+            "room": "lobby",
+            "source_attempt": 2.0,
+            "support": "lobby_floor"
+          }
+        },
+        "visit": "",
+        "wheelchair_gone": true,
+        "wheelchair_order": true
+      },
+      "intake": {
+        "delivery": {
+          "bag_departed": true,
+          "bag_id": "hospital_relic_container",
+          "bag_number": null,
+          "exit_pos": [
+            1.25685775279999,
+            0.213715448975563
+          ],
+          "exit_room": "lobby",
+          "items": [
+            "family_photo",
+            "patient_shoe"
+          ],
+          "packed_receipts": {
+            "family_photo": "hospital:2:relic_packed:family_photo",
+            "patient_shoe": "hospital:2:relic_packed:patient_shoe"
+          },
+          "source_attempt": 2.0,
+          "source_owners": {
+            "family_photo": "wheelchair_footplate",
+            "patient_shoe": "lobby_floor"
+          },
+          "transport_receipt": "hospital:2:patient_transport",
+          "version": 1.0
+        },
+        "elapsed": 0.0,
+        "last_wait": "",
+        "phase": "stored",
+        "phase_progress": 0.0,
+        "pos": [
+          1.0,
+          0.849999964237213
+        ],
+        "read": {},
+        "room": "lobby"
+      },
+      "offscreen_facts": [
+        {
+          "container": "hospital_relic_container",
+          "event_id": "hospital:2:relic_packed:family_photo",
+          "from": "wheelchair_footplate",
+          "item": "family_photo",
+          "kind": "hospital_relic_packed",
+          "occurrence_attempt": 2,
+          "occurrence_level": 3,
+          "pos": [
+            1.25,
+            0.217500001192093
+          ],
+          "room": "lobby",
+          "source_attempt": 2,
+          "source_level": 2,
+          "time": 6.22500000000002
+        },
+        {
+          "event_id": "hospital:2:patient_transport",
+          "kind": "patient_transport_completed",
+          "occurrence_attempt": 2,
+          "occurrence_level": 3,
+          "source_attempt": 2,
+          "source_level": 2,
+          "time": 6.45000000000002
+        },
+        {
+          "container": "hospital_relic_container",
+          "event_id": "hospital:2:relic_packed:patient_shoe",
+          "from": "lobby_floor",
+          "item": "patient_shoe",
+          "kind": "hospital_relic_packed",
+          "occurrence_attempt": 2,
+          "occurrence_level": 3,
+          "pos": [
+            1.28031873703003,
+            0.231914982199669
+          ],
+          "room": "lobby",
+          "source_attempt": 2,
+          "source_level": 2,
+          "time": 7.57500000000004
+        }
+      ],
+      "requested_at": "paperwork",
+      "source_at_actual_entry": {
+        "actors": {
+          "archivist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "assistant": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "doctor": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "guard": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "guide": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              2.40000009536743,
+              1.39999997615814
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "nurse": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "ward",
+            "route": []
+          },
+          "patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "pharmacist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "pharmacy",
+            "route": []
+          },
+          "porter": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              2.92499971389771,
+              1.39999997615814
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                2.79999995231628,
+                1.39999997615814
+              ]
+            ]
+          },
+          "wheelchair": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              2.79999995231628,
+              1.39999997615814
+            ],
+            "room": "lobby",
+            "route": []
+          }
+        },
+        "bag": "ward",
+        "bag_order": false,
+        "bandage": 0.0,
+        "batches": {},
+        "body": {},
+        "clock": 1.0,
+        "dispensed": false,
+        "exam_done": false,
+        "groups": {
+          "clinic": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "lobby": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "nurse": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "office": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "patient": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "pharmacist": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          }
+        },
+        "healed": false,
+        "holder": "",
+        "hospital_attempt": 2,
+        "known_pages": [],
+        "medicine_stop": 0.0,
+        "nurse_checked": false,
+        "observation_state": {
+          "active": {},
+          "completed": {},
+          "links": {},
+          "read": {}
+        },
+        "prescribed": false,
+        "prescription_visit": "",
+        "receipts": {
+          "hospital:2:patient_order": "patient_transport_order"
+        },
+        "records_state": {
+          "archivist": {
+            "elapsed": 0.0,
+            "index": -1,
+            "phase": "idle"
+          },
+          "files": {
+            "archive_index": "office:0",
+            "case_death": "office:10",
+            "case_discharge": "office:10",
+            "case_fees": "office:10",
+            "case_removal": "office:5",
+            "complaint_original": "office:7",
+            "complaint_rewrite": "office:7",
+            "laundry_stub": "office:6"
+          },
+          "guard": {
+            "done": false,
+            "elapsed": 0.0,
+            "last_room": "",
+            "last_seen": [],
+            "phase": "idle",
+            "target": ""
+          },
+          "patient_gone": false,
+          "patient_silenced": false,
+          "read": [],
+          "report": {},
+          "stopped": {}
+        },
+        "refused": false,
+        "registered": false,
+        "regrab_elapsed": 1.8,
+        "relic_context": {
+          "source_attempt": 2
+        },
+        "room_left": {
+          "bedroom": 0.0
+        },
+        "sample": false,
+        "suspended_body": {},
+        "swallowed": false,
+        "transport": {
+          "elapsed": 0.75,
+          "kind": "patient",
+          "phase": "push",
+          "source_attempt": 2,
+          "witness": []
+        },
+        "visit": "",
+        "wheelchair_order": true
+      },
+      "source_start": {
+        "actors": {
+          "archivist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "assistant": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "doctor": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "guard": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "guide": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              2.40000009536743,
+              1.39999997615814
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "nurse": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "ward",
+            "route": []
+          },
+          "patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "pharmacist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "pharmacy",
+            "route": []
+          },
+          "porter": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              3.12750005722046,
+              1.39999997615814
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                3.10000014305115,
+                1.39999997615814
+              ],
+              [
+                3.0,
+                1.39999997615814
+              ],
+              [
+                2.90000009536743,
+                1.39999997615814
+              ],
+              [
+                2.79999995231628,
+                1.39999997615814
+              ],
+              [
+                2.70000004768372,
+                1.39999997615814
+              ],
+              [
+                2.60000014305115,
+                1.39999997615814
+              ],
+              [
+                2.5,
+                1.39999997615814
+              ],
+              [
+                2.40000009536743,
+                1.39999997615814
+              ]
+            ]
+          },
+          "wheelchair": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              2.79999995231628,
+              1.39999997615814
+            ],
+            "room": "lobby",
+            "route": []
+          }
+        },
+        "bag": "ward",
+        "bag_order": false,
+        "bandage": 0.0,
+        "batches": {},
+        "body": {},
+        "clock": 0.025,
+        "dispensed": false,
+        "exam_done": false,
+        "groups": {
+          "clinic": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "lobby": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "nurse": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "office": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "patient": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "pharmacist": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          }
+        },
+        "healed": false,
+        "holder": "",
+        "hospital_attempt": 2,
+        "known_pages": [],
+        "medicine_stop": 0.0,
+        "nurse_checked": false,
+        "observation_state": {
+          "active": {},
+          "completed": {},
+          "links": {},
+          "read": {}
+        },
+        "prescribed": false,
+        "prescription_visit": "",
+        "receipts": {},
+        "records_state": {
+          "archivist": {
+            "elapsed": 0.0,
+            "index": -1,
+            "phase": "idle"
+          },
+          "files": {
+            "archive_index": "office:0",
+            "case_death": "office:10",
+            "case_discharge": "office:10",
+            "case_fees": "office:10",
+            "case_removal": "office:5",
+            "complaint_original": "office:7",
+            "complaint_rewrite": "office:7",
+            "laundry_stub": "office:6"
+          },
+          "guard": {
+            "done": false,
+            "elapsed": 0.0,
+            "last_room": "",
+            "last_seen": [],
+            "phase": "idle",
+            "target": ""
+          },
+          "patient_gone": false,
+          "patient_silenced": false,
+          "read": [],
+          "report": {},
+          "stopped": {}
+        },
+        "refused": false,
+        "registered": false,
+        "regrab_elapsed": 0.825,
+        "relic_context": {
+          "source_attempt": 2
+        },
+        "room_left": {
+          "bedroom": 0.0
+        },
+        "sample": false,
+        "suspended_body": {},
+        "swallowed": false,
+        "transport": {
+          "elapsed": 0.0,
+          "kind": "patient",
+          "phase": "paperwork",
+          "source_attempt": 2,
+          "witness": []
+        },
+        "visit": ""
+      }
+    },
+    {
+      "final_source": {
+        "actors": {
+          "archivist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "assistant": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "doctor": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "guard": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "guide": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.62181615829468,
+              0.251008629798889
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                1.63031876087189,
+                0.231914982199669
+              ]
+            ]
+          },
+          "nurse": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "ward",
+            "route": []
+          },
+          "patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "pharmacist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "pharmacy",
+            "route": []
+          },
+          "porter": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.25685775279999,
+              0.213715448975563
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                1.25,
+                0.200000002980232
+              ]
+            ]
+          },
+          "wheelchair": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "gone",
+            "pos": [
+              1.25,
+              0.217500001192093
+            ],
+            "room": "lobby",
+            "route": []
+          }
+        },
+        "bag": "ward",
+        "bag_order": false,
+        "bandage": 0.0,
+        "batches": {},
+        "body": {},
+        "clock": 6.87500000000003,
+        "dispensed": false,
+        "exam_done": false,
+        "groups": {
+          "clinic": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          },
+          "lobby": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          },
+          "nurse": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          },
+          "office": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          },
+          "patient": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          },
+          "pharmacist": {
+            "checks": 0.0,
+            "drawn": true,
+            "pending": false
+          }
+        },
+        "healed": false,
+        "holder": "",
+        "hospital_attempt": 2.0,
+        "known_pages": [],
+        "medicine_stop": 0.0,
+        "nurse_checked": false,
+        "observation_state": {
+          "active": {},
+          "completed": {},
+          "links": {},
+          "read": {}
+        },
+        "prescribed": false,
+        "prescription_visit": "",
+        "receipts": {
+          "hospital:2:patient_order": "patient_transport_order",
+          "hospital:2:patient_relics_fell": "hospital_relics_fell",
+          "hospital:2:patient_transport": "patient_transport_completed",
+          "hospital:2:relic_packed:family_photo": "hospital_relic_packed",
+          "hospital:2:relic_packed:patient_shoe": "hospital_relic_packed"
+        },
+        "records_state": {
+          "archivist": {
+            "elapsed": 0.0,
+            "index": -1.0,
+            "phase": "idle"
+          },
+          "files": {
+            "archive_index": "office:0",
+            "case_death": "office:10",
+            "case_discharge": "office:10",
+            "case_fees": "office:10",
+            "case_removal": "office:5",
+            "complaint_original": "office:7",
+            "complaint_rewrite": "office:7",
+            "laundry_stub": "office:6"
+          },
+          "guard": {
+            "done": false,
+            "elapsed": 0.0,
+            "last_room": "",
+            "last_seen": [],
+            "phase": "idle",
+            "target": ""
+          },
+          "patient_gone": false,
+          "patient_silenced": false,
+          "read": [],
+          "report": {},
+          "stopped": {}
+        },
+        "refused": false,
+        "registered": false,
+        "regrab_elapsed": 7.67500000000004,
+        "relic_context": {
+          "source_attempt": 2.0
+        },
+        "relic_delivery": {
+          "bag_departed": true,
+          "bag_id": "hospital_relic_container",
+          "exit_pos": [
+            1.25685775279999,
+            0.213715448975563
+          ],
+          "exit_room": "lobby",
+          "items": [
+            "family_photo",
+            "patient_shoe"
+          ],
+          "packed_receipts": {
+            "family_photo": "hospital:2:relic_packed:family_photo",
+            "patient_shoe": "hospital:2:relic_packed:patient_shoe"
+          },
+          "ready": true,
+          "source_attempt": 2.0,
+          "source_owners": {
+            "family_photo": "wheelchair_footplate",
+            "patient_shoe": "lobby_floor"
+          },
+          "transport_receipt": "hospital:2:patient_transport",
+          "version": 1.0
+        },
+        "relic_late_wait": "",
+        "relic_packing": {
+          "actor": "porter",
+          "elapsed": 0.0,
+          "last_cancel": "",
+          "phase": "done",
+          "room": "lobby"
+        },
+        "relic_transit_elapsed": 1.5,
+        "room_left": {
+          "ward": 0.0
+        },
+        "sample": false,
+        "suspended_body": {},
+        "swallowed": false,
+        "transport": {},
+        "transport_relics": {
+          "family_photo": {
+            "accessible": false,
+            "pos": [
+              1.25,
+              0.217500001192093
+            ],
+            "room": "lobby",
+            "source_attempt": 2.0,
+            "support": "wheelchair_footplate"
+          },
+          "patient_shoe": {
+            "accessible": false,
+            "pos": [
+              1.28031873703003,
+              0.231914982199669
+            ],
+            "room": "lobby",
+            "source_attempt": 2.0,
+            "support": "lobby_floor"
+          }
+        },
+        "visit": "",
+        "wheelchair_gone": true,
+        "wheelchair_order": true
+      },
+      "intake": {
+        "delivery": {
+          "bag_departed": true,
+          "bag_id": "hospital_relic_container",
+          "bag_number": null,
+          "exit_pos": [
+            1.25685775279999,
+            0.213715448975563
+          ],
+          "exit_room": "lobby",
+          "items": [
+            "family_photo",
+            "patient_shoe"
+          ],
+          "packed_receipts": {
+            "family_photo": "hospital:2:relic_packed:family_photo",
+            "patient_shoe": "hospital:2:relic_packed:patient_shoe"
+          },
+          "source_attempt": 2.0,
+          "source_owners": {
+            "family_photo": "wheelchair_footplate",
+            "patient_shoe": "lobby_floor"
+          },
+          "transport_receipt": "hospital:2:patient_transport",
+          "version": 1.0
+        },
+        "elapsed": 0.0,
+        "last_wait": "",
+        "phase": "stored",
+        "phase_progress": 0.0,
+        "pos": [
+          1.0,
+          0.849999964237213
+        ],
+        "read": {},
+        "room": "lobby"
+      },
+      "offscreen_facts": [
+        {
+          "container": "hospital_relic_container",
+          "event_id": "hospital:2:relic_packed:patient_shoe",
+          "from": "lobby_floor",
+          "item": "patient_shoe",
+          "kind": "hospital_relic_packed",
+          "occurrence_attempt": 1,
+          "occurrence_level": 3,
+          "pos": [
+            1.28031873703003,
+            0.231914982199669
+          ],
+          "room": "lobby",
+          "source_attempt": 2,
+          "source_level": 2,
+          "time": 7.57500000000004
+        }
+      ],
+      "requested_at": "photo_contact",
+      "source_at_actual_entry": {
+        "actors": {
+          "archivist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "assistant": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "doctor": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "guard": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "guide": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.62181615829468,
+              0.251008629798889
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                1.63031876087189,
+                0.231914982199669
+              ]
+            ]
+          },
+          "nurse": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "ward",
+            "route": []
+          },
+          "patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "pharmacist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "pharmacy",
+            "route": []
+          },
+          "porter": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.30000007152557,
+              0.563531041145325
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                1.30000007152557,
+                0.600000023841858
+              ],
+              [
+                1.28031873703003,
+                0.73191499710083
+              ]
+            ]
+          },
+          "wheelchair": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "gone",
+            "pos": [
+              1.25,
+              0.217500001192093
+            ],
+            "room": "lobby",
+            "route": []
+          }
+        },
+        "bag": "ward",
+        "bag_order": false,
+        "bandage": 0.0,
+        "batches": {},
+        "body": {},
+        "clock": 6.87500000000003,
+        "dispensed": false,
+        "exam_done": false,
+        "groups": {
+          "clinic": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "lobby": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "nurse": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "office": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "patient": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "pharmacist": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          }
+        },
+        "healed": false,
+        "holder": "",
+        "hospital_attempt": 2,
+        "known_pages": [],
+        "medicine_stop": 0.0,
+        "nurse_checked": false,
+        "observation_state": {
+          "active": {},
+          "completed": {},
+          "links": {},
+          "read": {}
+        },
+        "prescribed": false,
+        "prescription_visit": "",
+        "receipts": {
+          "hospital:2:patient_order": "patient_transport_order",
+          "hospital:2:patient_relics_fell": "hospital_relics_fell",
+          "hospital:2:patient_transport": "patient_transport_completed",
+          "hospital:2:relic_packed:family_photo": "hospital_relic_packed"
+        },
+        "records_state": {
+          "archivist": {
+            "elapsed": 0.0,
+            "index": -1,
+            "phase": "idle"
+          },
+          "files": {
+            "archive_index": "office:0",
+            "case_death": "office:10",
+            "case_discharge": "office:10",
+            "case_fees": "office:10",
+            "case_removal": "office:5",
+            "complaint_original": "office:7",
+            "complaint_rewrite": "office:7",
+            "laundry_stub": "office:6"
+          },
+          "guard": {
+            "done": false,
+            "elapsed": 0.0,
+            "last_room": "",
+            "last_seen": [],
+            "phase": "idle",
+            "target": ""
+          },
+          "patient_gone": false,
+          "patient_silenced": false,
+          "read": [],
+          "report": {},
+          "stopped": {}
+        },
+        "refused": false,
+        "registered": false,
+        "regrab_elapsed": 7.67500000000004,
+        "relic_context": {
+          "source_attempt": 2
+        },
+        "relic_delivery": {
+          "bag_id": "hospital_relic_container",
+          "items": [
+            "family_photo"
+          ],
+          "packed_receipts": {
+            "family_photo": "hospital:2:relic_packed:family_photo"
+          },
+          "ready": false,
+          "source_attempt": 2,
+          "source_owners": {
+            "family_photo": "wheelchair_footplate"
+          },
+          "transport_receipt": "hospital:2:patient_transport",
+          "version": 1
+        },
+        "relic_packing": {
+          "actor": "porter",
+          "elapsed": 0.0,
+          "last_cancel": "",
+          "phase": "shoe_route",
+          "room": "lobby"
+        },
+        "room_left": {
+          "ward": 0.0
+        },
+        "sample": false,
+        "suspended_body": {},
+        "swallowed": false,
+        "transport": {},
+        "transport_relics": {
+          "family_photo": {
+            "accessible": false,
+            "pos": [
+              1.25,
+              0.217500001192093
+            ],
+            "room": "lobby",
+            "source_attempt": 2,
+            "support": "wheelchair_footplate"
+          },
+          "patient_shoe": {
+            "accessible": true,
+            "pos": [
+              1.28031873703003,
+              0.231914982199669
+            ],
+            "room": "lobby",
+            "source_attempt": 2,
+            "support": "lobby_floor"
+          }
+        },
+        "visit": "",
+        "wheelchair_gone": true,
+        "wheelchair_order": true
+      },
+      "source_start": {
+        "actors": {
+          "archivist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "assistant": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "doctor": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "guard": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "guide": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.62181615829468,
+              0.251008629798889
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                1.63031876087189,
+                0.231914982199669
+              ]
+            ]
+          },
+          "nurse": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "ward",
+            "route": []
+          },
+          "patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "pharmacist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "pharmacy",
+            "route": []
+          },
+          "porter": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.25,
+              0.217500001192093
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                1.25,
+                0.200000002980232
+              ]
+            ]
+          },
+          "wheelchair": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.25,
+              0.217500001192093
+            ],
+            "room": "lobby",
+            "route": []
+          }
+        },
+        "bag": "ward",
+        "bag_order": false,
+        "bandage": 0.0,
+        "batches": {},
+        "body": {},
+        "clock": 5.90000000000002,
+        "dispensed": false,
+        "exam_done": false,
+        "groups": {
+          "clinic": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "lobby": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "nurse": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "office": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "patient": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          },
+          "pharmacist": {
+            "checks": 0,
+            "drawn": true,
+            "pending": false
+          }
+        },
+        "healed": false,
+        "holder": "",
+        "hospital_attempt": 2,
+        "known_pages": [],
+        "medicine_stop": 0.0,
+        "nurse_checked": false,
+        "observation_state": {
+          "active": {},
+          "completed": {},
+          "links": {},
+          "read": {}
+        },
+        "prescribed": false,
+        "prescription_visit": "",
+        "receipts": {
+          "hospital:2:patient_order": "patient_transport_order",
+          "hospital:2:patient_relics_fell": "hospital_relics_fell"
+        },
+        "records_state": {
+          "archivist": {
+            "elapsed": 0.0,
+            "index": -1,
+            "phase": "idle"
+          },
+          "files": {
+            "archive_index": "office:0",
+            "case_death": "office:10",
+            "case_discharge": "office:10",
+            "case_fees": "office:10",
+            "case_removal": "office:5",
+            "complaint_original": "office:7",
+            "complaint_rewrite": "office:7",
+            "laundry_stub": "office:6"
+          },
+          "guard": {
+            "done": false,
+            "elapsed": 0.0,
+            "last_room": "",
+            "last_seen": [],
+            "phase": "idle",
+            "target": ""
+          },
+          "patient_gone": false,
+          "patient_silenced": false,
+          "read": [],
+          "report": {},
+          "stopped": {}
+        },
+        "refused": false,
+        "registered": false,
+        "regrab_elapsed": 6.70000000000003,
+        "relic_context": {
+          "source_attempt": 2
+        },
+        "room_left": {
+          "ward": 0.0
+        },
+        "sample": false,
+        "suspended_body": {},
+        "swallowed": false,
+        "transport": {
+          "elapsed": 0.0,
+          "kind": "patient",
+          "phase": "photo_contact",
+          "source_attempt": 2,
+          "witness": []
+        },
+        "transport_relics": {
+          "family_photo": {
+            "accessible": true,
+            "pos": [
+              1.25,
+              0.217500001192093
+            ],
+            "room": "lobby",
+            "source_attempt": 2,
+            "support": "wheelchair_footplate"
+          },
+          "patient_shoe": {
+            "accessible": true,
+            "pos": [
+              1.28031873703003,
+              0.231914982199669
+            ],
+            "room": "lobby",
+            "source_attempt": 2,
+            "support": "lobby_floor"
+          }
+        },
+        "visit": "",
+        "wheelchair_order": true
+      }
+    }
+  ],
+  "failures": [
+    "same-name L3 lobby hero/blocker cannot freeze or replace the actual L2 route",
+    "saved carry-exit actor physically traverses remaining original distance",
+    "observed carry_exit: existing nurse actually approaches, receives, carries and places original bag",
+    "observed carry_exit: exactly one arrival, handoff and placement",
+    "observed carry_exit: both unique originals survive delayed transfer"
+  ],
+  "fixtures": "Two finite cases declare original L2 trio, source attempt 2, initial nearby walkable exit stand and held key. L3 random groups isolated; receiver presence is an explicit fixture after genuine late arrival. Carry-exit case uses the existing untouched continued-final/asylum_entry_snapshot.json, then isolates scheduling for observation. These are not all natural-RNG branches or human/audio/art acceptance.",
+  "passes": [
+    "paperwork: original patient transport really reaches the declared departure-request phase",
+    "paperwork: real key route and door contact enter L3 without directly calling unlock",
+    "paperwork: original L2 attempt remains distinct from new L3 attempt",
+    "paperwork: manual pause freezes the actual departed source route and contacts",
+    "paperwork: actual disk JSON preserves exact unfinished source state",
+    "real L3 restart does not reset the earlier hospital trip or manufacture a completion",
+    "paperwork: original actors really reach source exit before one late chapter arrival",
+    "paperwork: ready manifest is backed by actual porter exit coordinates",
+    "paperwork: no old clinical body, spawn probability, medicine or hospital clock resumes",
+    "paperwork: offscreen transfer cannot create new harm or witnessed knowledge",
+    "paperwork: arrival waits for original nurse without spawning or faking handoff",
+    "paperwork: fact source level/attempt and actual occurrence level stay separate",
+    "paperwork: existing nurse actually approaches, receives, carries and places original bag",
+    "paperwork: exactly one arrival, handoff and placement",
+    "paperwork: both unique originals survive delayed transfer",
+    "paperwork: completed intake survives actual checksummed disk save",
+    "paperwork: later frames and reload do not replay any physical pickup or intake",
+    "photo_contact: original patient transport really reaches the declared departure-request phase",
+    "photo_contact: real key route and door contact enter L3 without directly calling unlock",
+    "photo_contact: original L2 attempt remains distinct from new L3 attempt",
+    "photo_contact: manual pause freezes the actual departed source route and contacts",
+    "photo_contact: actual disk JSON preserves exact unfinished source state",
+    "photo_contact: original actors really reach source exit before one late chapter arrival",
+    "photo_contact: ready manifest is backed by actual porter exit coordinates",
+    "photo_contact: no old clinical body, spawn probability, medicine or hospital clock resumes",
+    "photo_contact: offscreen transfer cannot create new harm or witnessed knowledge",
+    "photo_contact: arrival waits for original nurse without spawning or faking handoff",
+    "photo_contact: fact source level/attempt and actual occurrence level stay separate",
+    "photo_contact: existing nurse actually approaches, receives, carries and places original bag",
+    "photo_contact: exactly one arrival, handoff and placement",
+    "photo_contact: both unique originals survive delayed transfer",
+    "photo_contact: completed intake survives actual checksummed disk save",
+    "photo_contact: later frames and reload do not replay any physical pickup or intake",
+    "restore unchanged genuine observed L3-entry snapshot rather than seed a carry-exit result",
+    "observed source is genuinely short of its exit with both originals already in the carried bag",
+    "observed carry_exit: completed intake survives actual checksummed disk save",
+    "observed carry_exit: later frames and reload do not replay any physical pickup or intake",
+    "present but unstarted old actors cannot create a new hospital trip after leaving",
+    "old gone/support history without actual original transport cannot create a bag or receipt"
+  ],
+  "rendered": true,
+  "scope": "Actual L2 keyed-door exit requested during original paperwork and photo contact; later source navigation/contact continues only for that started trip on the shared world clock. Pause, disk JSON and real L3 restart retain provenance. Also restore an unmodified observed natural L3-entry snapshot with a real carry-exit job, then receive the same originals with the existing nurse. Absent nurse is never spawned by intake; negative unstarted/gone cases never create a job."
+}

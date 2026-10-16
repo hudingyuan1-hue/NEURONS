@@ -1,0 +1,46 @@
+[
+  {
+    "path": "C:\\Users\\23623\\AppData\\Local\\Temp\\codex-clipboard-51a608e5-17e3-4ef0-a55f-6569d2eb7669.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1122,
+    "height": 1402,
+    "has_alpha_channel": false,
+    "alpha_range": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "transparent_ratio": 0.0,
+    "visible_bbox": [
+      0,
+      0,
+      1122,
+      1402
+    ],
+    "color_count": 30718,
+    "issues": []
+  },
+  {
+    "path": "C:\\Users\\23623\\AppData\\Local\\Temp\\codex-clipboard-61e83f8a-cc27-4f4c-8dcc-63fe6eac6a04.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1672,
+    "height": 941,
+    "has_alpha_channel": false,
+    "alpha_range": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "transparent_ratio": 0.0,
+    "visible_bbox": [
+      0,
+      0,
+      1672,
+      941
+    ],
+    "color_count": 53392,
+    "issues": []
+  }
+]

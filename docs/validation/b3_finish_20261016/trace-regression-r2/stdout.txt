@@ -1,0 +1,62 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS drain observer fixture stands on an actual walkable tile
+PASS actual visible drain bracelet starts a timed reading without taking it
+PASS unfinished reading gives no early knowledge
+PASS half-reading JSON preserves actual elapsed time and original location
+PASS same resumed read really reaches its completion node
+PASS reading a bracelet leaves the single physical bracelet on the floor
+PASS actual take begins a separate contact action
+PASS paid neural skin reaction really interrupts unfinished take
+PASS interrupted contact cannot grant the item later
+PASS new completed physical pickup changes the one existing item's owner
+PASS already-owned bracelet cannot be duplicated by another take request
+PASS uncovered corpse ankle tag can be actually read at its physical position
+PASS two null numbers cannot form a deceased-identity comparison
+PASS cleaner case first gains bracelet knowledge through real reading
+PASS cleaner case takes original bracelet before any collection
+PASS cleaner fixture begins on a real reachable tile
+PASS cleaner actually approaches and closes only the corresponding shower screen
+PASS closing a screen does not already move or load a corpse
+PASS unrelated protagonist gut reaction really executes
+PASS unrelated bodily reaction does not pause the cleaner's independent work
+PASS partial cover or board-loading work survives real checksummed JSON
+PASS covered corpse and its board physically reach and cross the actual bathroom door
+PASS moved corpse remains one independent deceased in the corridor
+PASS render state contains one corpse rather than a bathroom copy plus transported copy
+PASS cleaner parks board, returns through real door, picks remaining relic and begins a particular wash region
+PASS cleaner preserves acquired bracelet and actually collects only the remaining relic
+PASS half-cleaned region, prior cleaned regions, remaining relics and board location persist independently
+PASS resumed cleaner physically finishes the remaining finite regions
+PASS cleaning removes only three processed local traces and cannot erase already-read information
+PASS cleaning neither removes the real progression key nor duplicates an already-taken relic
+PASS completed cleanup and one corpse location survive reload without replay
+PASS cross-level patient is absent upstairs before any real guard delivery
+PASS alone corner patient really prepares and exposes only his own old note
+PASS an absent patient cannot manufacture his note or speak the two-person car statement
+PASS one exposed note is really read at contact
+PASS one-note branch asks for the other rather than claiming a two-note match
+PASS actual medical arrival at the real doorway stops private note display
+PASS interruption retains known note but cannot grant an absent or hidden second note
+PASS patient-delivery fixtures use real walkable initial office positions
+PASS guard really grips and delivers original patient before any two-person upstairs conversation
+PASS the same patient physically crosses reception, original stairs and corridor
+PASS guard physically leaves the delivered patient and returns downstairs before private talk
+PASS only the actual delivered patient plus actual corner patient expose two individually owned notes
+PASS source same-car line is retained as an actual statement rather than fabricated numerical proof
+PASS delivered patient's own note is physically read
+PASS one of two exposed notes survives JSON without marking the other as read
+PASS second owner's separate note is physically read
+PASS two read notes stay distinct while unknown dates, vehicle and personal numbers cannot compare as equal
+PASS showing and reading two notes never transfers either owner's document
+PASS corner-removal case first has a genuinely exposed old note
+PASS remote orderly cannot see a room's note or start a grab through walls
+PASS ordinary orderly actually enters via the existing corridor door rather than appearing beside corner patient
+PASS actual visible old note leads to a finite reach and real corner-patient grip
+PASS NPC-to-NPC grip does not freeze or grip the protagonist
+PASS paired original actors physically reach and leave the existing bedroom door then release at corridor waiting place
+PASS corner completion is recorded only at the real corridor destination
+PASS release clears single staff task while the unhanded note stays with its original owner
+PASS completed corner removal persists without respawning the bedroom conversation
+ASYLUM_TRACE_CHECK 58 passed 0 failed

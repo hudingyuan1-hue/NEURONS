@@ -1,0 +1,48 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS before real frame contact no dropped photograph or shoe is invented
+PASS actual paperwork and wheelchair motion reach original door-frame event
+PASS real frame contact leaves original shoe on floor and original photo on actual footplate
+PASS physical falling alone is neither completed transfer nor a packed bag
+PASS same porter finishes actual push and prepares to collect at still-visible chair
+PASS chair remains physically present until photograph contact; no distant departed-chair recovery
+PASS actual mid-contact JSON preserves original photo owner and remaining collection clock
+PASS real manual pause freezes photo contact and hospital clock
+PASS photo transfers only after actual preparation and contact
+PASS one original photograph is in the same container before ordinary transfer completion
+PASS manifest stores a real one-time physical packing receipt and original support
+PASS same transfer then completes and original patient really leaves
+PASS original departure receipt is distinct from photo packing and satisfies source contract
+PASS shoe remains at original floor location while porter still has to return
+PASS moving chair and porter never move original dropped shoe along with them
+PASS occupied pickup stand blocks actual return and cannot trigger a remote shoe collection
+PASS JSON preserves blocked packing route instead of finishing it during load
+PASS blocking observer physically walks away along existing collision navigation while each actual pickup phase is inspected
+PASS same porter reaches original shoe before a visible separate pickup contact
+PASS shoe preparation is not yet ownership or completed manifest
+PASS actual shoe pickup puts original item into porter's already-held container
+PASS real contact and final packing completion remain separate nodes
+PASS pickup finish starts actual carry-to-exit movement without remotely delivering container
+PASS actual same porter reaches original transfer exit before source container becomes ready
+PASS same original photograph and shoe share one actually carried source-attempt container
+PASS manifest preserves actual bag exit position without deleting porter needed by original laundry task
+PASS same observer continues the remaining actual route after contact observations
+PASS shoe manifest entry has its own actual contact receipt and original floor support
+PASS actual checksummed JSON preserves complete source contract and original-object ownership
+PASS continued frames never duplicate photograph, shoe or packing receipt
+PASS patient transfer still completes when protagonist already holds the photo
+PASS same porter may really collect remaining shoe without recovering protagonist's photo
+PASS protagonist-owned photo is neither overwritten, copied nor included as bag content
+PASS interrupted photo-contact case reaches genuine physical contact window
+PASS ownership lost before contact cancels unfinished packing without recovering hero item
+PASS shoe-owned boundary first executes genuine photograph packing and patient departure
+PASS container with actual photograph can finish departure without taking protagonist's shoe
+PASS source contract contains only actually packed photo and preserves independently held original shoe
+PASS departed-porter boundary begins with actual partial container
+PASS absent real carrier cannot remotely complete pending shoe pickup or leave a ready bag
+PASS JSON preserves partial container when its actual carrier has departed
+PASS old departed-chair snapshot loads through actual save pipeline
+PASS stale old ownership does not fabricate an accessible departed footplate or packed photo
+PASS old gone snapshot without real prop anchors cannot fabricate any new packing receipt
+HOSPITAL_RELIC_PACKING_CHECK 44 passed 0 failed

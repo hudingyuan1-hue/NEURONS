@@ -144,7 +144,7 @@ func _ready() -> void:
  await read_lesson()
  var lesson_history:Array=tutor.lesson_history.duplicate(true)
  check(lesson_history.size()==19,"all nineteen player tutorial lines were acknowledged before complete exit")
- await click_button(find_button(tutor.terminal,"CLOSE"))
+ await click_button(find_button(tutor.terminal,"关闭"))
  check(await wait_for(func():return app.tutorial_ui==null),"real CLOSE exits tutorial")
  check(app.dialogue_queue.size()>=2 and app.dialogue_queue[0].text=="似乎 身体有些变化???" and app.dialogue_queue[1].text=="不管了 继续想办法逃出去吧","full tutorial returns original two hero lines to formal dialogue in order")
  check(app.rules.neurons==5 and app.rules.plexus==3 and app.rules.control_ms==0 and app.rules.evidence.is_empty(),"preview and unlock never contaminate formal resources, control or cognition")
@@ -155,7 +155,7 @@ func _ready() -> void:
  var body:Vector2=(app.world_viewport.get_canvas_transform()*(app.layout.project(app.hero_pos)+Vector2(0,-25)))*2.0
  await click(body)
  check(app.menu.visible and app.menu.panel_mode=="cast","formal viewport left-body click reaches campaign handler")
- await click_button(find_button(app.menu,"CLOSE"));await frames(10)
+ await click_button(find_button(app.menu,"关闭"));await frames(10)
  body=(app.world_viewport.get_canvas_transform()*(app.layout.project(app.hero_pos)+Vector2(0,-25)))*2.0
  await click(body,MOUSE_BUTTON_RIGHT)
  check(app.menu.visible and app.menu.panel_mode=="tree","formal viewport right-body click opens freezer without debug handler")

@@ -1,0 +1,67 @@
+{
+  "cases": [
+    {
+      "case": "first_attempt_all_empty",
+      "cycle_after_rest": 2,
+      "public_target_count": 10
+    },
+    {
+      "case": "L4_all_candidates",
+      "completed": 62,
+      "key_target": "identity:0",
+      "search_attempts": 62,
+      "seed": "gpu-key:98"
+    }
+  ],
+  "failures": [],
+  "fixtures": "Fixed seed choices for actual success/miss/interference boundary; one target scheduling fixture; dog plus hero separate targets; NPC branches disabled; full L4 62-search no-random-hit seed forces the public fallback guarantee.",
+  "passes": [
+    "fresh attempt has no assigned key or owner",
+    "hero actually walks to selected clothes search and begins",
+    "pause cannot complete search or roll key",
+    "unsettled completion callback cannot roll key",
+    "real checksummed JSON accepts in-progress discovery state",
+    "continued real search discovers and physically picks up key",
+    "completed point gives exactly one N and only then a physical location",
+    "replayed completion cannot create or transfer another key",
+    "restore actual pre-completion snapshot",
+    "same saved search completes again without borrowing world RNG",
+    "same save and real actions preserve verdict and reward after unrelated random consumption",
+    "interference fixture begins actual search",
+    "successful paid SKIN really cancels unfinished search",
+    "cancellation records evidence but does not draw or discover",
+    "hero resumes and actually completes affected target",
+    "effective interference changes boundary outcome; cancelled plus completed attempts counted once each",
+    "completed empty result and receipt persist through actual JSON (decimal float tolerance)",
+    "dog actually walks and searches a different target before discovering key",
+    "newly found dog key has one physical holder before delivery",
+    "dog physically returns and commits actual transfer",
+    "hero and dog share completed-point verdicts and one key",
+    "ten actual empty searches return to bed and finish real rest",
+    "rest advances one actual attempt without preplacing next key",
+    "legacy preassigned-key snapshot accepted",
+    "legacy undiscovered location removed while completed empty point survives",
+    "migration seed and ledger saved by real JSON",
+    "L4 actual 16-target search continues through all remaining legal rooms to final guarantee",
+    "L4 supplements real unique completions beyond initial 16, not a debug grant",
+    "only final remaining legal completed point uses declared guarantee",
+    "supplement does not reroll public schedule or increment cycle",
+    "actual supplement route visited all eleven original rooms",
+    "newly discovered key follows real two-floor route and actual final doorway"
+  ],
+  "rendered": true,
+  "scope": "Actual campaign movement, search timing, paid skill cancellation, JSON pause/resume, single key/receipt, dog physical carry/transfer, failed first attempt rest, L4 sampled then supplemental route to keyed exit. Not human pacing, full NPC combinations, formal art/audio, or measured whole-level success rate.",
+  "visited_L4_rooms": [
+    "atrium",
+    "memory",
+    "visual",
+    "body",
+    "decision",
+    "bridge",
+    "index",
+    "rhythm",
+    "identity",
+    "verify",
+    "switch"
+  ]
+}

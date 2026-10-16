@@ -55,7 +55,7 @@ func _ready() -> void:
  var disk:Dictionary=app.store.load_snapshot()
  check(disk.ok and app.restore_snapshot(disk.data) and app.menu.visible and app.action_phase=="resting" and is_equal_approx(app.action_left,remaining),"load restores lying pose and freezer without premature rest completion")
  await capture("02_freezer_during_saved_rest")
- var close:Button=find_button(app.menu,"CLOSE")
+ var close:Button=find_button(app.menu,"关闭")
  await click_at(close.get_global_rect().get_center())
  var closed:bool=await await_live(func():return app.closing_left<=0 and not app.menu.visible)
  await body_click(MOUSE_BUTTON_LEFT)

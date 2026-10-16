@@ -1,0 +1,1873 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "scope": "all-room space/scale audit only",
+  "authority": "用户最新允许原平面建议尺寸和局部摆位调整；拓扑/必要物件/剧情因果保留。",
+  "performed": "只读代码/原S1段落与表/现行planning data交叉核对；未启动GPU或改运行脚本；所有尺寸均待实测技术建议。",
+  "source_manifest": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "b85c82757bc50a6b94c8c6d6a2f612432681f359dc30388e8469662e388bbd17"
+    },
+    {
+      "path": "docs/HANDOFF.md",
+      "sha256": "e31622044bd210865243bac9c8959a3127036d774512b2297229c82cc5b018f7"
+    },
+    {
+      "path": "docs/CORRECTIONS_20261016.md",
+      "sha256": "34cbb1765df4bae4a7330e955b72c28b5c51c51b97c3b974b35c26884fb4c6f4"
+    },
+    {
+      "path": "docs/PRODUCTION_PLAN.md",
+      "sha256": "9a8cc3d03332f8efd967b3945b01f3eaa9460fb7d0635ce41867d13cec5c9817"
+    },
+    {
+      "path": "deliverables/NEURONS_2D_资产需求_20261015/data/production_plan.json",
+      "sha256": "620a293b4ad7ee215c55d403dd2f9a618e4bce6b6f6ef1236473f86ec0a30b8e"
+    },
+    {
+      "path": "tmp/rules_read/NEURONS_第一阶段_空间物品人员_合并修订版.txt",
+      "sha256": "d4249b8c89e657fe02e369ef36c6317857c9b6b1f896ba4e328cd57f14ba1966"
+    },
+    {
+      "path": "neurons/scripts/world/room_layout.gd",
+      "sha256": "8ffe586e8535bfbe982a6a03487073fb1db1031d0cc0a05599c13de3ed0ec07a"
+    },
+    {
+      "path": "neurons/scripts/world/asylum_layout.gd",
+      "sha256": "27765cca8709e25239dd9e68667ed37f2eaab01741d1a2200071555e6cbab9a2"
+    },
+    {
+      "path": "neurons/scripts/world/cortex_layout.gd",
+      "sha256": "107caec38f514dabdbaa25317bd9c222e0b8ee15252a01aec3858864eb408c33"
+    },
+    {
+      "path": "neurons/scripts/world/hidden_layout.gd",
+      "sha256": "4efe5c1aa825c9f6b22f48a05ee1a1a1eef108fe4991dd774bd713036b6f9b82"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_map.gd",
+      "sha256": "8e66db89dec8ec5170ae09f2a90568cc0ae07b0b1533f5cb5baac129105ed8e2"
+    },
+    {
+      "path": "neurons/scripts/core/cortex_map.gd",
+      "sha256": "0dfaefab458921700c61a3c86bbb60a5c03389001ec32dcb7dc286be91e5ae17"
+    },
+    {
+      "path": "neurons/scripts/core/campaign_session.gd",
+      "sha256": "40831e0a16b83dd4feeb6bd1aebf60060d196289537cca6a060ca894facfbe71"
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "sha256": "94b55220c4962980926998af6540f732e320225b7a13c64c7b196d46cfeb7fd5"
+    },
+    {
+      "path": "neurons/scripts/world/campaign_view.gd",
+      "sha256": "9cc8dbb90110d9f7be6c1e19a51693938c113f343a9f560bc3995c3ac0e2a528"
+    },
+    {
+      "path": "neurons/scripts/core/hidden_street.gd",
+      "sha256": "ac22b74868ad4dc0a6941606daebe670322aaa8210e36b83de22eebccfb6b57e"
+    },
+    {
+      "path": "neurons/data/hidden_street.json",
+      "sha256": "6f4e2e014963a83254497f05fb37ef331434750fa9e007bd68a70709963d75af"
+    }
+  ],
+  "counts": {
+    "base_rooms": 39,
+    "regular_instances": 55,
+    "implemented_regular_instances": 30,
+    "unimplemented_regular_instances": 25,
+    "hidden_extra_instances": 1,
+    "tutorial_reuses": "L1_ROOM",
+    "per_level": {
+      "L1": 1,
+      "L2": 5,
+      "L3": 13,
+      "L4": 11,
+      "L5": 18,
+      "L6": 7
+    }
+  },
+  "findings": [
+    {
+      "id": "SCALE-01",
+      "severity": "high",
+      "evidence": [
+        "neurons/scripts/world/room_layout.gd:4",
+        "neurons/scripts/campaign.gd:347",
+        "neurons/scripts/world/asylum_layout.gd:1",
+        "neurons/scripts/world/cortex_layout.gd:1",
+        "neurons/scripts/world/hidden_layout.gd:1"
+      ],
+      "finding": "已实施30个常规实例和1个隐藏片段共用5.6×3.8米边界；后续25个常规实例尚未实施。房型有不同内部摆位，但大厅、走廊、病房和隐藏街区面积相同。",
+      "action": "按下表逐室白盒调整，保留同构共享；不放大既有位图充作逻辑修复。"
+    },
+    {
+      "id": "SCALE-02",
+      "severity": "high",
+      "evidence": [
+        "neurons/scripts/campaign.gd:347",
+        "S1:P35–36/P54/P64/P75"
+      ],
+      "finding": "病房直接复用卧室11项布局；L2其余四室及L3一层相应四室把全部搜寻物件做成0.5×0.35米的左右列抽屉盒。真实检查床/柜台/轮椅/两桌的完整占地不能由这些盒子的可达测试证明。",
+      "action": "保留稳定候选ID和事件，补真实家具足迹/活动扫掠/事件站位，先医院五室与L3同构一起验证。"
+    },
+    {
+      "id": "SCALE-03",
+      "severity": "high",
+      "evidence": [
+        "neurons/scripts/core/asylum_map.gd",
+        "neurons/scripts/campaign.gd:404",
+        "S1:P30–33/P96–99/P136–138"
+      ],
+      "finding": "候诊/接待五门均在y=.24，x=1.25/2.03/2.81/3.59/4.37；二层走廊七门均在y=.24，x=.55至4.75，间距.70。邻接数量正确，现有门距不足以直接给多名演员/推床及正式门幅使用。",
+      "action": "五门分布到可读墙面或转角，右侧第5门仍stairs；二层七门分侧布置并设入口落点/法线/退让区。相对方向为技术设计，原图不是不可改尺寸。"
+    },
+    {
+      "id": "SCALE-04",
+      "severity": "high",
+      "evidence": [
+        "neurons/scripts/world/room_layout.gd:25",
+        "neurons/scripts/world/room_layout.gd:34",
+        "neurons/scripts/world/campaign_view.gd:9"
+      ],
+      "finding": "网格57×39与循环固定，投影(45+80x+28y,132+46y)，地面四角仍含硬编码5.6/3.8。只改房间SIZE或背景会导致边界、点击与画面错位。",
+      "action": "房间尺寸、grid bounds、投影/相机、地面绘制、出入口坐标/人物锚点/物件点一起迁移；技能逻辑米数和动作时间不按图幅缩放。"
+    },
+    {
+      "id": "SCALE-05",
+      "severity": "high",
+      "evidence": [
+        "neurons/scripts/world/hidden_layout.gd",
+        "neurons/data/hidden_street.json",
+        "neurons/scripts/core/hidden_street.gd:208",
+        "docs/CORRECTIONS_20261016.md:11",
+        "S1:P24–26"
+      ],
+      "finding": "隐藏Street仍5.6×3.8；入口(.6,3.35)、出口(5.12,.42)，起点直线仅5.39米，1.15米/秒参考速度的直线下界约4.69秒（不含绕障/反应/正式暂停）。5.67秒来自既有纠偏记录，本审计未重跑。正式有向越界修复并不能单独解决遭遇可读时间。",
+      "action": "建议18×12米片段起测，喷泉两侧绕行、猎手发现/接近空间、出口前明显地面阈值。由真实运行测自主逃离与干预窗口，不新增击杀/等待对白/看够秒数门槛。"
+    },
+    {
+      "id": "SCALE-06",
+      "severity": "medium",
+      "evidence": [
+        "S1:P327/P423–424/P476–477",
+        "deliverables/NEURONS_2D_资产需求_20261015/data/production_plan.json"
+      ],
+      "finding": "深部是丘脑连接其余六室，六室已经包含海马，不能多算第8室。Street两条单口支道在段间交界，不能因跨段描述给支道添双门。",
+      "action": "39基础与55实例逐项映射；侧室/维护的交界门由单个现有段承载（建议广场、街道），最终布局保存归属字段。"
+    }
+  ],
+  "standards": {
+    "status": "implementation_suggestions_not_source_dimensions_not_implemented",
+    "logical_unit": "m; artwork pixels remain presentation only",
+    "main_clear_width_m": [
+      1.5,
+      1.8
+    ],
+    "local_search_access_width_m": 0.9,
+    "pair_or_wheelchair_main_width_m": 1.8,
+    "pair_turning_clear_square_m": [
+      2.2,
+      2.2
+    ],
+    "ordinary_door_clear_width_m": [
+      0.9,
+      1.0
+    ],
+    "wheelchair_grip_door_clear_width_m": [
+      1.2,
+      1.5
+    ],
+    "combat_through_width_m": 2.4,
+    "door_landing_depth_m": 1.8,
+    "interaction_zone_note": "一般物件前建议1.2×1.0米起测；两人对向接触/医疗/交付至少2.0×1.6米起测，按原动作距离与站姿实际求占地；不扩大技能距离。门扇、抽屉、持物和推床扫掠计入可用空间。",
+    "current_collision_note": "主角地面半径0.14米，导航CELL=0.1；B4 NPC中心分离阈值0.32米、抽动者0.42米。它们是现有逻辑参数，不是人肩宽或成人/门的美术尺寸证明；不能为穿门缩小人物或放大技能。",
+    "camera_note": "固定斜俯视，1280×720观察画面候选；投影(96x+30z,56z−78h)，源约2倍统一密度；成人1.75m只作尺，显示身高约110—135px候选。大房扩画布与镜头平移，0.8—1.3缩放不改规则。旧运行尚未迁移。",
+    "production_note": "先确定平面尺寸、真实物件足迹、门口、行动路径与演员站位，再投影画底图；底图/遮挡/活动门与活动件分别交付。此审计不冻结画风或像素母稿尺寸。",
+    "door_height_m": [
+      2.1,
+      2.2
+    ],
+    "wall_thickness_m": [
+      0.12,
+      0.2
+    ],
+    "parameter_note": "2026-10-16统一起测值，非建筑规范；病床门净宽须用真实床宽/门扇扫掠/双人同行实跑，不能凭数值声明可通行。"
+  },
+  "rooms": [
+    {
+      "id": "L1_ROOM",
+      "name": "卧室",
+      "source": "S1:P15–23",
+      "instance_ids": [
+        "L1_ROOM"
+      ],
+      "runtime_room_id": "bedroom",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "小型生活房",
+        "floor_bounding_m": [
+          6.4,
+          4.8
+        ],
+        "connections": "1个普通房门；同门的父亲血门为条件分支；窗仅猫退场",
+        "clearance_and_elements": "11点、床侧床尾、柜前、父母猫狗接近与递物；不放大成空大厅"
+      }
+    },
+    {
+      "id": "L2_WARD",
+      "name": "医院小病房 / 精神病院单人病房",
+      "source": "S1:P34–42",
+      "instance_ids": [
+        "L2_WARD",
+        "L3_WARD"
+      ],
+      "runtime_room_id": "ward",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "小型生活房",
+        "floor_bounding_m": [
+          6.4,
+          4.8
+        ],
+        "connections": "1门→候诊/接待",
+        "clearance_and_elements": "原8类家具、床下束带/污衣袋、床侧核腕治疗、搬袋离场；与L3单人病房同尺寸门位"
+      }
+    },
+    {
+      "id": "L2_LOBBY",
+      "name": "医院候诊区 / 精神病院接待区",
+      "source": "S1:P43–52",
+      "instance_ids": [
+        "L2_LOBBY",
+        "L3_LOBBY"
+      ],
+      "runtime_room_id": "lobby",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多门公共大厅",
+        "floor_bounding_m": [
+          12,
+          8
+        ],
+        "connections": "5门→病房/诊室/药房/办公室/楼梯",
+        "clearance_and_elements": "6点+候诊椅/轮椅停靠/遗留鞋；主角、护士、患者、转运工与游走病人错身；轮椅抓门框动作避开通行带"
+      }
+    },
+    {
+      "id": "L2_CLINIC",
+      "name": "医院诊室 / 精神科接诊室",
+      "source": "S1:P53–62",
+      "instance_ids": [
+        "L2_CLINIC",
+        "L3_CLINIC"
+      ],
+      "runtime_room_id": "clinic",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双人接触房",
+        "floor_bounding_m": [
+          8,
+          6
+        ],
+        "connections": "1门→候诊/接待",
+        "clearance_and_elements": "8点；完整检查床、医生桌、隔帘和柜；医生/助手/主角可在床侧准备接触退出"
+      }
+    },
+    {
+      "id": "L2_PHARMACY",
+      "name": "药房 / 配药治疗室",
+      "source": "S1:P63–73",
+      "instance_ids": [
+        "L2_PHARMACY",
+        "L3_PHARMACY"
+      ],
+      "runtime_room_id": "pharmacy",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双人接触房",
+        "floor_bounding_m": [
+          8,
+          6
+        ],
+        "connections": "1门→候诊/接待",
+        "clearance_and_elements": "7点；柜台侧通路、药架冷藏柜配药台；L3新增治疗椅/车的停靠区，递杯不挡门"
+      }
+    },
+    {
+      "id": "L2_OFFICE",
+      "name": "医护办公室 / 护士站",
+      "source": "S1:P74–84",
+      "instance_ids": [
+        "L2_OFFICE",
+        "L3_OFFICE"
+      ],
+      "runtime_room_id": "office",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双人接触房",
+        "floor_bounding_m": [
+          9,
+          6
+        ],
+        "connections": "1门→候诊/接待",
+        "clearance_and_elements": "11点、两张用途不同办公桌；报告递交、保安拖拽与病人回避；柜门打开不夹死通路"
+      }
+    },
+    {
+      "id": "L3_STAIRS",
+      "name": "病区楼梯",
+      "source": "S1:P134–146",
+      "instance_ids": [
+        "L3_STAIRS"
+      ],
+      "runtime_room_id": "stairs",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "短连接平台",
+        "floor_bounding_m": [
+          7,
+          5
+        ],
+        "connections": "3路线→接待/二层走廊/L4出口",
+        "clearance_and_elements": "1点；上下分支清楚；可返床与持钥出口分开；无第三医院楼层，不推普通病床上台阶"
+      }
+    },
+    {
+      "id": "L3_CORRIDOR",
+      "name": "病区走廊护士站",
+      "source": "S1:P147–154",
+      "instance_ids": [
+        "L3_CORRIDOR"
+      ],
+      "runtime_room_id": "corridor",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多门公共大厅",
+        "floor_bounding_m": [
+          16,
+          5
+        ],
+        "connections": "7门→楼梯/活动/团体/安静/卫生间/双人/作业",
+        "clearance_and_elements": "4点+沿侧护士站/床交接位；五身份活动与主角；不把七门挤一条5.6米墙"
+      }
+    },
+    {
+      "id": "L3_ACTIVITY",
+      "name": "公共活动室",
+      "source": "S1:P155–164",
+      "instance_ids": [
+        "L3_ACTIVITY"
+      ],
+      "runtime_room_id": "activity",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多人活动房",
+        "floor_bounding_m": [
+          10,
+          8
+        ],
+        "connections": "1门→走廊",
+        "clearance_and_elements": "8点；沙发茶几一侧、活动桌另一侧；告密离室与护工带离可错身"
+      }
+    },
+    {
+      "id": "L3_GROUP",
+      "name": "团体治疗室",
+      "source": "S1:P165–174",
+      "instance_ids": [
+        "L3_GROUP"
+      ],
+      "runtime_room_id": "group_therapy",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多人活动房",
+        "floor_bounding_m": [
+          9,
+          8
+        ],
+        "connections": "1门→走廊",
+        "clearance_and_elements": "6点；环座朝门缺口、外圈通路；录音设备真实接触位与病友发言位分开"
+      }
+    },
+    {
+      "id": "L3_QUIET",
+      "name": "安静室",
+      "source": "S1:P175–184",
+      "instance_ids": [
+        "L3_QUIET"
+      ],
+      "runtime_room_id": "quiet",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "小型生活房",
+        "floor_bounding_m": [
+          6,
+          5
+        ],
+        "connections": "1门→走廊（仅已成立隔离可暂闭）",
+        "clearance_and_elements": "4点；固定柜可开格、软椅不挡门；护工接手/角色/患者站位和开门回避；无休息功能"
+      }
+    },
+    {
+      "id": "L3_BATH",
+      "name": "卫生间淋浴区",
+      "source": "S1:P185–196",
+      "instance_ids": [
+        "L3_BATH"
+      ],
+      "runtime_room_id": "bathroom",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多人活动房",
+        "floor_bounding_m": [
+          8,
+          7
+        ],
+        "connections": "1门→走廊",
+        "clearance_and_elements": "7点；双池/双淋浴/马桶；隔门开启余量、尸体搬运路线、清洁车沿墙停靠"
+      }
+    },
+    {
+      "id": "L3_DOUBLE",
+      "name": "双人病房",
+      "source": "S1:P197–206",
+      "instance_ids": [
+        "L3_DOUBLE"
+      ],
+      "runtime_room_id": "double_ward",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双人接触房",
+        "floor_bounding_m": [
+          8,
+          6
+        ],
+        "connections": "1门→走廊",
+        "clearance_and_elements": "7点；两床与对应床头柜；病友柜侧留搜寻位，护工带离不挤床间唯一通路"
+      }
+    },
+    {
+      "id": "L3_WORK",
+      "name": "作业康复室",
+      "source": "S1:P207–216",
+      "instance_ids": [
+        "L3_WORK"
+      ],
+      "runtime_room_id": "workshop",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多人活动房",
+        "floor_bounding_m": [
+          10,
+          7
+        ],
+        "connections": "1门→走廊",
+        "clearance_and_elements": "8点；两桌之间及四周可通行；材料柜双人夹手操作位、劳动病友工作位、作品展示面"
+      }
+    },
+    {
+      "id": "L4_ATRIUM",
+      "name": "皮层褶皱中庭",
+      "source": "S1:P225–233",
+      "instance_ids": [
+        "L4_ATRIUM",
+        "L5_ATRIUM"
+      ],
+      "runtime_room_id": "atrium",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "环形公共空间",
+        "floor_bounding_m": [
+          12,
+          10
+        ],
+        "connections": "4门→记忆/视觉/决策/身体",
+        "clearance_and_elements": "3点、核心周围一圈通路；复活与背身人分离；为L5父亲/大黄实际相遇与两侧绕行留余量"
+      }
+    },
+    {
+      "id": "L4_MEMORY",
+      "name": "记忆档案室",
+      "source": "S1:P234–243",
+      "instance_ids": [
+        "L4_MEMORY",
+        "L5_MEMORY"
+      ],
+      "runtime_room_id": "memory",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双向事件房",
+        "floor_bounding_m": [
+          10,
+          8
+        ],
+        "connections": "2门→中庭/视觉",
+        "clearance_and_elements": "7点；柜沿墙、查阅桌两侧通行；撕纸双人接触/撤手位；L5包扎与扑抓不封双门"
+      }
+    },
+    {
+      "id": "L4_VISUAL",
+      "name": "视觉影像室",
+      "source": "S1:P244–252",
+      "instance_ids": [
+        "L4_VISUAL",
+        "L5_VISUAL"
+      ],
+      "runtime_room_id": "visual",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双向事件房",
+        "floor_bounding_m": [
+          10,
+          8
+        ],
+        "connections": "2门→中庭/记忆",
+        "clearance_and_elements": "6点；座椅中央缺口+侧通道；控制台与画面观察位；L5挥带攻击需可辨方向与绕行"
+      }
+    },
+    {
+      "id": "L4_DECISION",
+      "name": "意象决策室",
+      "source": "S1:P253–262",
+      "instance_ids": [
+        "L4_DECISION",
+        "L5_DECISION"
+      ],
+      "runtime_room_id": "decision",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双向事件房",
+        "floor_bounding_m": [
+          11,
+          8
+        ],
+        "connections": "2门→中庭/胼胝桥",
+        "clearance_and_elements": "7点；短会议桌、两侧板与入口后端贯通；L5父母猫交叉攻击仍留一条通道"
+      }
+    },
+    {
+      "id": "L4_BODY",
+      "name": "身体感知室",
+      "source": "S1:P263–272",
+      "instance_ids": [
+        "L4_BODY",
+        "L5_BODY"
+      ],
+      "runtime_room_id": "body",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双人接触房",
+        "floor_bounding_m": [
+          11,
+          8
+        ],
+        "connections": "1门→中庭",
+        "clearance_and_elements": "8点；中央映射空地、两台分侧、夹具/手/身体接触面分离；L5冲床蓄势与墙后停顿空间"
+      }
+    },
+    {
+      "id": "L4_BRIDGE",
+      "name": "胼胝桥",
+      "source": "S1:P283–287",
+      "instance_ids": [
+        "L4_BRIDGE",
+        "L5_BRIDGE"
+      ],
+      "runtime_room_id": "bridge",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多门公共大厅",
+        "floor_bounding_m": [
+          12,
+          7
+        ],
+        "connections": "4路线→决策/索引/节律/分岔",
+        "clearance_and_elements": "4点；短桥端、控制台双侧可绕、人物位于端部宽区；不增加下桥路线"
+      }
+    },
+    {
+      "id": "L4_RHYTHM",
+      "name": "节律支路",
+      "source": "S1:P288–293",
+      "instance_ids": [
+        "L4_RHYTHM",
+        "L5_RHYTHM"
+      ],
+      "runtime_room_id": "rhythm",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "弯折通路",
+        "floor_bounding_m": [
+          12,
+          8
+        ],
+        "connections": "2路线→胼胝桥/身份",
+        "clearance_and_elements": "4点；一次主要弯折，横穿点旁旁路/避让凹位；L5冲撞有起手段和撞墙后的绕行段"
+      }
+    },
+    {
+      "id": "L4_INDEX",
+      "name": "索引档案室",
+      "source": "S1:P294–299",
+      "instance_ids": [
+        "L4_INDEX",
+        "L5_INDEX"
+      ],
+      "runtime_room_id": "index",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双向事件房",
+        "floor_bounding_m": [
+          10,
+          8
+        ],
+        "connections": "2门→胼胝桥/分岔",
+        "clearance_and_elements": "6点；柜沿墙、推车靠边、中央终端四周通行；即使L5空面未推车也能过"
+      }
+    },
+    {
+      "id": "L4_SWITCH",
+      "name": "切换分岔路",
+      "source": "S1:P300–305",
+      "instance_ids": [
+        "L4_SWITCH",
+        "L5_SWITCH"
+      ],
+      "runtime_room_id": "switch",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多门公共大厅",
+        "floor_bounding_m": [
+          10,
+          7
+        ],
+        "connections": "3路线→索引/胼胝桥/核验",
+        "clearance_and_elements": "3点；三路标志与落点可辨；固定回环；无新增实体约束床"
+      }
+    },
+    {
+      "id": "L4_VERIFY",
+      "name": "核验出口",
+      "source": "S1:P306–312",
+      "instance_ids": [
+        "L4_VERIFY",
+        "L5_VERIFY"
+      ],
+      "runtime_room_id": "verify",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多门公共大厅",
+        "floor_bounding_m": [
+          11,
+          8
+        ],
+        "connections": "3门→分岔/身份/关卡出口",
+        "clearance_and_elements": "7点；两操作位、外侧门禁、开门与贴面接触位；L5横扫后两侧可绕不加通关手续"
+      }
+    },
+    {
+      "id": "L4_IDENTITY",
+      "name": "身份核查室",
+      "source": "S1:P313–319",
+      "instance_ids": [
+        "L4_IDENTITY",
+        "L5_IDENTITY"
+      ],
+      "runtime_room_id": "identity",
+      "current": {
+        "implemented_geometry": true,
+        "floor_m": [
+          5.6,
+          3.8
+        ],
+        "scale_acceptance": "not_accepted",
+        "note": "同一占位外边界；不能视为正式尺寸"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双向事件房",
+        "floor_bounding_m": [
+          10,
+          8
+        ],
+        "connections": "2门→节律/核验",
+        "clearance_and_elements": "7点；两台两柜两终端+镜，镜台间绕行；不恢复第三核验台"
+      }
+    },
+    {
+      "id": "L5_HIPPOCAMPUS",
+      "name": "海马回廊",
+      "source": "S1:P432–437",
+      "instance_ids": [
+        "L5_HIPPOCAMPUS"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "追逐陈列房",
+        "floor_bounding_m": [
+          14,
+          8
+        ],
+        "connections": "2路线→白质核验/丘脑",
+        "clearance_and_elements": "7类陈列；中央双侧绕行、衣架碰撞音源；入口回退不凭空增加前关回路"
+      }
+    },
+    {
+      "id": "L5_THALAMUS",
+      "name": "丘脑中继厅",
+      "source": "S1:P438–443",
+      "instance_ids": [
+        "L5_THALAMUS"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "六向追逐大厅",
+        "floor_bounding_m": [
+          16,
+          14
+        ],
+        "connections": "6门→海马/小脑/下丘脑/基底核/杏仁核/脑干",
+        "clearance_and_elements": "6类设施；核心外围连续环路、人物初始在核心侧方；六门出口视认与落点避袭"
+      }
+    },
+    {
+      "id": "L5_CEREBELLUM",
+      "name": "小脑折列室",
+      "source": "S1:P444–449",
+      "instance_ids": [
+        "L5_CEREBELLUM"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "追逐转角房",
+        "floor_bounding_m": [
+          12,
+          10
+        ],
+        "connections": "2门→丘脑/杏仁核",
+        "clearance_and_elements": "7类设施；短折线阵列外缘可绕，真实拐角遮视线；不人为每拐强制停顿"
+      }
+    },
+    {
+      "id": "L5_HYPOTHALAMUS",
+      "name": "下丘脑温控室",
+      "source": "S1:P450–455",
+      "instance_ids": [
+        "L5_HYPOTHALAMUS"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "追逐转角房",
+        "floor_bounding_m": [
+          12,
+          9
+        ],
+        "connections": "2门→丘脑/基底核",
+        "clearance_and_elements": "8类设施；冷热两侧中路；遮视线；局部冷区影响双方且不是通关锁"
+      }
+    },
+    {
+      "id": "L5_BASAL",
+      "name": "基底核选动环",
+      "source": "S1:P456–461",
+      "instance_ids": [
+        "L5_BASAL"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "环形追逐空间",
+        "floor_bounding_m": [
+          14,
+          12
+        ],
+        "connections": "2门→丘脑/下丘脑",
+        "clearance_and_elements": "7类设施；内外环可换向，隔墙遮视线；保留实际追逐路径"
+      }
+    },
+    {
+      "id": "L5_AMYGDALA",
+      "name": "杏仁核双室",
+      "source": "S1:P462–467",
+      "instance_ids": [
+        "L5_AMYGDALA"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "双内室空间",
+        "floor_bounding_m": [
+          16,
+          10
+        ],
+        "connections": "2外门→丘脑/小脑；内部通道连接两室",
+        "clearance_and_elements": "8类设施；警戒/安抚各自可绕行+实体内通道；仍1场景；无通关出口/自动治疗"
+      }
+    },
+    {
+      "id": "L5_BRAINSTEM",
+      "name": "脑干脉冲井",
+      "source": "S1:P468–473",
+      "instance_ids": [
+        "L5_BRAINSTEM"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "环形追逐空间",
+        "floor_bounding_m": [
+          14,
+          12
+        ],
+        "connections": "2路线→丘脑/L6",
+        "clearance_and_elements": "5类设施；有护栏连续平台、分段脉冲和安全避让区；不能同刻封整圈及出口"
+      }
+    },
+    {
+      "id": "L6_SQUARE",
+      "name": "初始广场",
+      "source": "S1:P480–484",
+      "instance_ids": [
+        "L6_SQUARE"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多人街区",
+        "floor_bounding_m": [
+          22,
+          18
+        ],
+        "connections": "主路→窄道；交界单口→侧室（建议归本段）",
+        "clearance_and_elements": "喷泉/长椅/路灯；6身份分区，入场缓冲、可绕核心；不靠新门槛延长游戏"
+      }
+    },
+    {
+      "id": "L6_SIDE",
+      "name": "侧室",
+      "source": "S1:P485–486",
+      "instance_ids": [
+        "L6_SIDE"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "单口支道",
+        "floor_bounding_m": [
+          12,
+          9
+        ],
+        "connections": "1门→广场/窄道交界",
+        "clearance_and_elements": "5身份沿侧分布；尽端转向、唯一口可错身；大体型敌人不堵门"
+      }
+    },
+    {
+      "id": "L6_NARROW",
+      "name": "狭窄通道",
+      "source": "S1:P487–488",
+      "instance_ids": [
+        "L6_NARROW"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "窄路与避让湾",
+        "floor_bounding_m": [
+          18,
+          6
+        ],
+        "connections": "2主路口→广场/街道",
+        "clearance_and_elements": "5身份按前后距离错开；有效行走带约3米及侧湾；不是同时塞五名敌人"
+      }
+    },
+    {
+      "id": "L6_TWIST",
+      "name": "扭曲街道",
+      "source": "S1:P489–490",
+      "instance_ids": [
+        "L6_TWIST"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多人街区",
+        "floor_bounding_m": [
+          26,
+          12
+        ],
+        "connections": "主路2口→窄道/节点；交界单口→维护（建议归本段）",
+        "clearance_and_elements": "9身份分前中后活动区；真实转角遮视线；店面不新增可入内房间"
+      }
+    },
+    {
+      "id": "L6_MAINT",
+      "name": "维护通道",
+      "source": "S1:P491–492",
+      "instance_ids": [
+        "L6_MAINT"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "单口支道",
+        "floor_bounding_m": [
+          16,
+          7
+        ],
+        "connections": "1门→街道/节点交界",
+        "clearance_and_elements": "6身份，设备退让湾与尽端转向；可带追兵进出但不堵唯一出口"
+      }
+    },
+    {
+      "id": "L6_MUTATION",
+      "name": "异化节点",
+      "source": "S1:P493–494",
+      "instance_ids": [
+        "L6_MUTATION"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多人街区",
+        "floor_bounding_m": [
+          22,
+          16
+        ],
+        "connections": "2主路口→街道/出口段",
+        "clearance_and_elements": "8身份分区；宽处夹击仍留一侧绕行；推床/遗留物不可永久断路"
+      }
+    },
+    {
+      "id": "L6_EXIT",
+      "name": "出口收束段",
+      "source": "S1:P495–497",
+      "instance_ids": [
+        "L6_EXIT"
+      ],
+      "runtime_room_id": null,
+      "current": {
+        "implemented_geometry": false,
+        "floor_m": null,
+        "scale_acceptance": "not_accepted",
+        "note": "后关未实施，不伪称已有碰撞/导航"
+      },
+      "suggestion": {
+        "status": "technical_proposal_not_implemented_not_art_approved",
+        "tier": "多人街区",
+        "floor_bounding_m": [
+          20,
+          12
+        ],
+        "connections": "1回路口→节点；1最终出口",
+        "clearance_and_elements": "6身份与终点门框分开；出口不依赖杀敌/全员相遇/友方死亡/对白结束"
+      }
+    }
+  ],
+  "instances": [
+    {
+      "id": "L1_ROOM",
+      "base_room_id": "L1_ROOM",
+      "level": 1,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        6.4,
+        4.8
+      ]
+    },
+    {
+      "id": "L2_WARD",
+      "base_room_id": "L2_WARD",
+      "level": 2,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        6.4,
+        4.8
+      ]
+    },
+    {
+      "id": "L3_WARD",
+      "base_room_id": "L2_WARD",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        6.4,
+        4.8
+      ]
+    },
+    {
+      "id": "L2_LOBBY",
+      "base_room_id": "L2_LOBBY",
+      "level": 2,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        12,
+        8
+      ]
+    },
+    {
+      "id": "L3_LOBBY",
+      "base_room_id": "L2_LOBBY",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        12,
+        8
+      ]
+    },
+    {
+      "id": "L2_CLINIC",
+      "base_room_id": "L2_CLINIC",
+      "level": 2,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        8,
+        6
+      ]
+    },
+    {
+      "id": "L3_CLINIC",
+      "base_room_id": "L2_CLINIC",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        8,
+        6
+      ]
+    },
+    {
+      "id": "L2_PHARMACY",
+      "base_room_id": "L2_PHARMACY",
+      "level": 2,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        8,
+        6
+      ]
+    },
+    {
+      "id": "L3_PHARMACY",
+      "base_room_id": "L2_PHARMACY",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        8,
+        6
+      ]
+    },
+    {
+      "id": "L2_OFFICE",
+      "base_room_id": "L2_OFFICE",
+      "level": 2,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        9,
+        6
+      ]
+    },
+    {
+      "id": "L3_OFFICE",
+      "base_room_id": "L2_OFFICE",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        9,
+        6
+      ]
+    },
+    {
+      "id": "L3_STAIRS",
+      "base_room_id": "L3_STAIRS",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        7,
+        5
+      ]
+    },
+    {
+      "id": "L3_CORRIDOR",
+      "base_room_id": "L3_CORRIDOR",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        16,
+        5
+      ]
+    },
+    {
+      "id": "L3_ACTIVITY",
+      "base_room_id": "L3_ACTIVITY",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "L3_GROUP",
+      "base_room_id": "L3_GROUP",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        9,
+        8
+      ]
+    },
+    {
+      "id": "L3_QUIET",
+      "base_room_id": "L3_QUIET",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        6,
+        5
+      ]
+    },
+    {
+      "id": "L3_BATH",
+      "base_room_id": "L3_BATH",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        8,
+        7
+      ]
+    },
+    {
+      "id": "L3_DOUBLE",
+      "base_room_id": "L3_DOUBLE",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        8,
+        6
+      ]
+    },
+    {
+      "id": "L3_WORK",
+      "base_room_id": "L3_WORK",
+      "level": 3,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        10,
+        7
+      ]
+    },
+    {
+      "id": "L4_ATRIUM",
+      "base_room_id": "L4_ATRIUM",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        12,
+        10
+      ]
+    },
+    {
+      "id": "L5_ATRIUM",
+      "base_room_id": "L4_ATRIUM",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        12,
+        10
+      ]
+    },
+    {
+      "id": "L4_MEMORY",
+      "base_room_id": "L4_MEMORY",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "L5_MEMORY",
+      "base_room_id": "L4_MEMORY",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "L4_VISUAL",
+      "base_room_id": "L4_VISUAL",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "L5_VISUAL",
+      "base_room_id": "L4_VISUAL",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "L4_DECISION",
+      "base_room_id": "L4_DECISION",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        11,
+        8
+      ]
+    },
+    {
+      "id": "L5_DECISION",
+      "base_room_id": "L4_DECISION",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        11,
+        8
+      ]
+    },
+    {
+      "id": "L4_BODY",
+      "base_room_id": "L4_BODY",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        11,
+        8
+      ]
+    },
+    {
+      "id": "L5_BODY",
+      "base_room_id": "L4_BODY",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        11,
+        8
+      ]
+    },
+    {
+      "id": "L4_BRIDGE",
+      "base_room_id": "L4_BRIDGE",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        12,
+        7
+      ]
+    },
+    {
+      "id": "L5_BRIDGE",
+      "base_room_id": "L4_BRIDGE",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        12,
+        7
+      ]
+    },
+    {
+      "id": "L4_RHYTHM",
+      "base_room_id": "L4_RHYTHM",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        12,
+        8
+      ]
+    },
+    {
+      "id": "L5_RHYTHM",
+      "base_room_id": "L4_RHYTHM",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        12,
+        8
+      ]
+    },
+    {
+      "id": "L4_INDEX",
+      "base_room_id": "L4_INDEX",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "L5_INDEX",
+      "base_room_id": "L4_INDEX",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "L4_SWITCH",
+      "base_room_id": "L4_SWITCH",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        10,
+        7
+      ]
+    },
+    {
+      "id": "L5_SWITCH",
+      "base_room_id": "L4_SWITCH",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        10,
+        7
+      ]
+    },
+    {
+      "id": "L4_VERIFY",
+      "base_room_id": "L4_VERIFY",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        11,
+        8
+      ]
+    },
+    {
+      "id": "L5_VERIFY",
+      "base_room_id": "L4_VERIFY",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        11,
+        8
+      ]
+    },
+    {
+      "id": "L4_IDENTITY",
+      "base_room_id": "L4_IDENTITY",
+      "level": 4,
+      "geometry_implemented": true,
+      "suggested_shared_floor_m": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "L5_IDENTITY",
+      "base_room_id": "L4_IDENTITY",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "L5_HIPPOCAMPUS",
+      "base_room_id": "L5_HIPPOCAMPUS",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        14,
+        8
+      ]
+    },
+    {
+      "id": "L5_THALAMUS",
+      "base_room_id": "L5_THALAMUS",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        16,
+        14
+      ]
+    },
+    {
+      "id": "L5_CEREBELLUM",
+      "base_room_id": "L5_CEREBELLUM",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        12,
+        10
+      ]
+    },
+    {
+      "id": "L5_HYPOTHALAMUS",
+      "base_room_id": "L5_HYPOTHALAMUS",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "L5_BASAL",
+      "base_room_id": "L5_BASAL",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        14,
+        12
+      ]
+    },
+    {
+      "id": "L5_AMYGDALA",
+      "base_room_id": "L5_AMYGDALA",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        16,
+        10
+      ]
+    },
+    {
+      "id": "L5_BRAINSTEM",
+      "base_room_id": "L5_BRAINSTEM",
+      "level": 5,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        14,
+        12
+      ]
+    },
+    {
+      "id": "L6_SQUARE",
+      "base_room_id": "L6_SQUARE",
+      "level": 6,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        22,
+        18
+      ]
+    },
+    {
+      "id": "L6_SIDE",
+      "base_room_id": "L6_SIDE",
+      "level": 6,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "L6_NARROW",
+      "base_room_id": "L6_NARROW",
+      "level": 6,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        18,
+        6
+      ]
+    },
+    {
+      "id": "L6_TWIST",
+      "base_room_id": "L6_TWIST",
+      "level": 6,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        26,
+        12
+      ]
+    },
+    {
+      "id": "L6_MAINT",
+      "base_room_id": "L6_MAINT",
+      "level": 6,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        16,
+        7
+      ]
+    },
+    {
+      "id": "L6_MUTATION",
+      "base_room_id": "L6_MUTATION",
+      "level": 6,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "L6_EXIT",
+      "base_room_id": "L6_EXIT",
+      "level": 6,
+      "geometry_implemented": false,
+      "suggested_shared_floor_m": [
+        20,
+        12
+      ]
+    }
+  ],
+  "hidden_fragment": {
+    "id": "L1_HIDDEN_STREET",
+    "source": "S1:P24–26",
+    "counted_in_39_base": false,
+    "counted_in_55_instances": false,
+    "current_floor_m": [
+      5.6,
+      3.8
+    ],
+    "suggested_floor_m": [
+      18,
+      12
+    ],
+    "suggestion_status": "not_implemented",
+    "connections": [
+      "L1 bedroom father blood-door entry",
+      "independent E1 exit"
+    ],
+    "necessary_elements": [
+      "fountain",
+      "benches",
+      "streetlights",
+      "hunter"
+    ],
+    "forbidden_new_gates": [
+      "kill hunter",
+      "force dialogue completion",
+      "minimum stay time",
+      "L6 seven-segment/45-identity rules"
+    ],
+    "validation": "真实从父亲抓握带到入口后，观察发现/起手/绕行/干预/出口穿越全段；分别记录游戏时间与含对白/菜单的现实时间；未测不写通过。"
+  },
+  "acceptance": [
+    "逐房核对原物件、候选ID、门数、邻接、楼层/返回条件；39基础与55实例一一落表，隐藏片段另计。",
+    "每扇门两端入口落点、外法线、开门站位与真实阈值独立配置；主角、NPC、配对抓握/轮椅在既有邻接中连续移动；不瞬移对齐、不多开门。",
+    "所有合法点从各入口实走可达；关闭/打开柜门、隔帘、推床停靠、角色抓握、尸体/掉落物的当前状态都重查；窄处有临时等候与释放，不永久堵路。",
+    "原动作距离、视线、朝向、准备接触结束与取消窗口保留；尺度调整不能修改技能射程、固定拖行时限、搜寻时长或敌人伤害来迁就。",
+    "L2五房与L3一层同构逐一叠图对位；必要陈设/身份事件变化仍在，不能仅做旧。L3返回病房、隔离开门、推床平层交接真实运行。",
+    "L4六十二点及上下层各路线实走；节律原横穿点旁能够等候/绕行；L5同构战斗形态尚未实现，不能以L4搜索通过替代其验收。",
+    "L5不攻击、不治疗、不收集、未遭遇所有人物仍可逃离；中央核心/桌/柜至少保留源要求双侧或外围路线；跨房同一追兵不复制、不贴脸刷新。",
+    "L6七段45身份分批真实站位；两单口支道可转身/错身原路返；大型敌人不能堵唯一口；未杀敌/未全员见面可实际越过终点。",
+    "隐藏Street从父亲真实带出开始连续观察，不以入口与结局两张截图冒充中间遭遇。测无人干预、有效干预、受击、猎手死亡、菜单暂停/存读档/出口边界。",
+    "默认视图和0.8/1.3缩放查看人物脚底、门框遮挡、近远动作、UI清晰、鼠标映射；正式底图与逻辑底面一致；保存真实运行截图/录像。",
+    "尺寸迁移检查旧存档坐标/未完成路线/接触动作。稳定ID保留；用版本化坐标映射或明确兼容处理，不能读档到墙里或重算已发生接触。"
+  ],
+  "implementation_order": [
+    "隐藏Street遭遇与真实出口节奏；与用户当前纠偏同步",
+    "医院五室+L3同构一层；候诊第5楼梯门与轮椅/报告/床旁空间",
+    "L3二层八室；七门走廊、推床、隔离和返床",
+    "L4十一室；拓扑保留，为L5战斗复用预留源要求绕行",
+    "后续L5深部七室和L6七段按原开发依赖实现，不声称已经落地"
+  ],
+  "branch_proposal_note": "L6侧室单口建议归广场的出窄道转角；维护单口建议归街道的出节点转角。只是交界锚点归属建议，未改拓扑/增加场景。"
+}

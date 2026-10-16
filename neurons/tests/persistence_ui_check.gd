@@ -68,7 +68,7 @@ func _ready() -> void:
  check(saved.ok and is_equal_approx(float(saved.data.rules.world_time),clock),"title is reached only after an actual verified save")
  check(FileAccess.file_exists(ProjectSettings.globalize_path(root).path_join("profile.json.bak")),"previous valid save backup remains available")
  await capture("02_returned_to_title")
- await click(button(frontend,"CONTINUE"));await frames(4);app=frontend.active
+ await click(button(frontend,"继续游戏"));await frames(4);app=frontend.active
  check(app!=null and app.tutorial_ui==null,"real continue reloads completed tutorial without issuing another practice")
  check(app.rules.neurons==neurons and app.rules.hp==hp and str(app.session.data.key_owner)==owner,"continue preserves resource balance, health and unique key ownership")
  check(app.hero_pos==position and app.hero_route==route and str(app.rng.state)==rng_state,"continue preserves actual position, active route and RNG")

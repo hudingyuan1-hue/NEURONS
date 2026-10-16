@@ -1,0 +1,74 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS unsigned ordinary delivery is not an isolation warrant and starts no grip
+PASS an unsigned page causes no damage, recovery or invented closed door
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS another actual attempt's signed report cannot punish this attempt
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS missing isolation staff leave paper waiting without spawning a substitute or remotely grabbing
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS staff actually take the order, walk to the report's old room and end a failed local search
+PASS unseen target's current activity-room position never becomes a global pursuit waypoint
+PASS not finding a target creates neither grip nor false contact attempt
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS isolation worker really reaches the station and receives this signed paper
+PASS a real continuous wall blocks the staff's approach instead of allowing through-wall target contact
+PASS wall-separated target is neither absorbed to staff nor assigned an isolation outcome
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS order reading and target confirmation lead to a visible pre-contact grab window
+PASS grab preparation is not already restraint or damage
+PASS real paid WITHDRAW executes before isolation contact
+PASS pre-contact withdrawal makes this one grab attempt end
+PASS a missed grab causes no damage, delivery, closure or lingering holder
+PASS same signed handoff cannot immediately re-grab after its failed attempt
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS staff physically approach and establish the sole actual isolation holder
+PASS actual isolation contact pauses the original action without adding HP or SP loss
+PASS hero's paired drag releases by the original six-second cap
+PASS capped or delivered drag leaves the hero at a real walkable position
+PASS delivery before the six-second cap really reaches the existing quiet room
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS non-target observer inside quiet room prevents NPC grabbing and door closure
+PASS waiting for the observer does not freeze, relocate or silently isolate either original person
+PASS the observer can physically walk to the normal door and leave during pending isolation
+PASS only after non-target observer actually exits can staff grab, position and close on the NPC target
+PASS NPC confinement retains the original patient and leaves the protagonist outside
+PASS a closed NPC isolation door blocks entry while the outside hero stays free
+PASS processing an internally bound subject never invents unprovided visible number glyphs
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS hero already inside is moved to the real observation position and the staff actually close the existing door
+PASS door closure releases the grip and does not freeze the room's resident
+PASS closed-door restriction applies to the actual quiet-room doorway rather than all navigation
+PASS completed isolation adds no arbitrary injury or healing
+PASS while the door is closed, autonomous protagonist still really walks to a cabinet and starts searching
+PASS indoor movement and normal six-second search remain executable during isolation
+PASS real checksummed JSON restores closed-door remaining time together with the ongoing indoor search
+PASS manual pause freezes isolation observation, indoor action and world clock
+PASS real CRT menu frames freeze observation and world while its UI remains active
+PASS JOY still performs its original independent SP recovery inside the room
+PASS JOY neither opens the actual door nor restarts or erases elapsed isolation time
+PASS normal game clock resumes toward the original eight-second observation end
+PASS door remains physically closed before the complete eight game seconds
+PASS only a full eight seconds after actual closure starts the opening action
+PASS opening preparation is not already an open exit
+PASS JSON resumes a partly opening door without replaying eight seconds or starting over
+PASS actual opening completes within the original one-second limit and releases the exit
+PASS one source handoff has exactly one actual closure, opening and isolation outcome
+PASS completed isolation state is accepted by the normal saved-game schema
+PASS load and continued play cannot reclose the door or repeat this signed event
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS early-release case first reaches a genuine closed-door observation
+PASS staff standing just outside the real door still count as observing
+PASS staff actually leaving starts and completes early opening without waiting eight seconds
+PASS interrupted observation leaves no lock, holder, injury or recovery
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS dynamic-exit case genuinely reaches door-closing preparation
+PASS a pre-closure exit command may begin along a real indoor path
+PASS door closing after route start cancels stale departure and cannot bypass actual eight-second confinement
+PASS cancelled departure leaves indoor agency without silently changing the isolation timer
+PASS isolation initial protagonist and staff stand on real walkable floor
+PASS death cleanup case begins from real prior closure
+PASS actual zero HP immediately clears old isolation restrictions before revival rather than retaining a dead holder or locked door
+ASYLUM_ISOLATION_CHECK 70 passed 0 failed

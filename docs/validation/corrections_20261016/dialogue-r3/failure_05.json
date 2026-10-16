@@ -1,0 +1,107 @@
+{
+  "automatic": true,
+  "background_frozen": false,
+  "closing_left": 0.0,
+  "dialogue": [],
+  "failed": "automatic mode waits for voice even after short subtitle reading time has elapsed",
+  "manual_pause": false,
+  "playback": {
+    "playing": [
+      {
+        "channel": "ambience",
+        "id": "AMB_FAN",
+        "position": 0.280000001192093
+      },
+      {
+        "channel": "music",
+        "id": "MUS_ROOM",
+        "position": 0.280000001192093
+      }
+    ],
+    "receipts": {
+      "AMB_FAN:fan:1": true,
+      "MUS_ROOM:music:1:1": true,
+      "TEST_DIALOGUE_ACTION:test_action": true,
+      "TEST_DIALOGUE_AMBIENCE:test_ambience": true,
+      "TEST_DIALOGUE_MUSIC:test_music": true,
+      "TEST_DIALOGUE_VOICE:dialogue:5": true
+    }
+  },
+  "players": {
+    "ambience": [
+      {
+        "cue": "AMB_FAN",
+        "paused": false,
+        "playing": true,
+        "position": 0.280000001192093
+      }
+    ],
+    "music": [
+      {
+        "cue": "MUS_ROOM",
+        "paused": false,
+        "playing": true,
+        "position": 0.280000001192093
+      }
+    ],
+    "ui": [
+      {
+        "cue": "SFX_COLD",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ],
+    "voice": [
+      {
+        "cue": "TEST_DIALOGUE_VOICE",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ],
+    "world": [
+      {
+        "cue": "TEST_DIALOGUE_ACTION",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      },
+      {
+        "cue": "",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      },
+      {
+        "cue": "",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      },
+      {
+        "cue": "",
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ]
+  },
+  "starts": [
+    {
+      "channel": "music",
+      "event": "music:1:1",
+      "id": "MUS_ROOM",
+      "provisional": false
+    },
+    {
+      "channel": "ambience",
+      "event": "fan:1",
+      "id": "AMB_FAN",
+      "provisional": false
+    }
+  ],
+  "voice_frozen": false,
+  "world_frozen": false,
+  "world_time": 0.333319666666667
+}

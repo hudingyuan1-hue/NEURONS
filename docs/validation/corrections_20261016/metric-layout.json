@@ -1,0 +1,8 @@
+{
+  "checks": 1699,
+  "engine": "4.7.2-stable (official)",
+  "failed": 0,
+  "failures": [],
+  "passed": 1699,
+  "scope": "Headless real geometry/navigation/move_path; all new L1 targets before and after furniture moves; legacy layouts remain v1. No GPU, NPC pairing, artwork or normal-play acceptance."
+}

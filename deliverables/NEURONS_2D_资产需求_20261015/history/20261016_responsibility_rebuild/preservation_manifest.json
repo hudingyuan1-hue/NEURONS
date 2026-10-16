@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-16",
+  "scope": "重建前原版；不修改桌面NEW或人工progress",
+  "files": [
+    {
+      "path": "01_全游戏提示词表单.html",
+      "sha256": "d105651acfcb9d61ffbdefd3421ec17b16da1ccdabd47de72f34ffe6e3c1a056"
+    },
+    {
+      "path": "01_音频需求表.html",
+      "sha256": "636bd6c7a794ae878382422731c5c375d9d8f894a62f1ec8acf282421b7d8a3a"
+    },
+    {
+      "path": "data/art_requirements.json",
+      "sha256": "ee012d6311d547bbe8d19764c336da58785d2678cc89c26680695c31501288b1"
+    },
+    {
+      "path": "data/audio_requirements.json",
+      "sha256": "d29006dd7f5820027f8287624c458c6517cac76f2e9b80a0498cb5efb1452a19"
+    },
+    {
+      "path": "data/progress.json",
+      "sha256": "f77fa8fd69205e9c09773c2c5971e2856087dcc97ab3eb84f01c51580741bf58"
+    },
+    {
+      "path": "00_发给Image2的简短说明.txt",
+      "sha256": "58381f66ef56fd4219f76ba2bf73de2e4677b4c9966327eb4ac23a3d686ebab8"
+    }
+  ]
+}

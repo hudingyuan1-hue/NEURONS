@@ -1,0 +1,223 @@
+{
+  "actual_intake": {
+    "delivery": {
+      "bag_departed": true,
+      "bag_id": "hospital_relic_container",
+      "bag_number": null,
+      "exit_pos": [
+        1.25685775279999,
+        0.213715448975563
+      ],
+      "exit_room": "lobby",
+      "items": [
+        "family_photo",
+        "patient_shoe"
+      ],
+      "packed_receipts": {
+        "family_photo": "hospital:1:relic_packed:family_photo",
+        "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+      },
+      "source_attempt": 1.0,
+      "source_owners": {
+        "family_photo": "wheelchair_footplate",
+        "patient_shoe": "lobby_floor"
+      },
+      "transport_receipt": "hospital:1:patient_transport",
+      "version": 1.0
+    },
+    "elapsed": 0.0,
+    "last_wait": "",
+    "phase": "stored",
+    "phase_progress": 0.0,
+    "pos": [
+      1.0,
+      0.849999964237213
+    ],
+    "read": {
+      "asylum_relic_bag_number": {
+        "bag": "hospital_relic_container",
+        "bag_number": null,
+        "source": "S3:P656",
+        "source_attempt": 1.0,
+        "transport_receipt": "hospital:1:patient_transport"
+      },
+      "asylum_relic_bag_photo": {
+        "bag": "hospital_relic_container",
+        "bag_number": null,
+        "identity_confirmed": false,
+        "photo_recognised": false,
+        "photo_visible": true,
+        "shoe_visible": true,
+        "source": "S3:P656",
+        "source_attempt": 1.0,
+        "transport_receipt": "hospital:1:patient_transport",
+        "visible_items": [
+          "family_photo",
+          "patient_shoe"
+        ]
+      }
+    },
+    "room": "lobby"
+  },
+  "checkpoints": [
+    {
+      "actual_packing_count": 0,
+      "actual_transport_count": 0,
+      "arrival_count": 0,
+      "container_owner": "",
+      "hero_pos": [
+        3.5,
+        2.20000004768372
+      ],
+      "id": "initial_actors_and_key_only",
+      "level": 2,
+      "photo_owner": "wheelchair",
+      "receive_count": 0,
+      "room": "lobby",
+      "shoe_owner": "",
+      "stored_count": 0,
+      "world_time": 0.0
+    },
+    {
+      "actual_packing_count": 2,
+      "actual_transport_count": 1,
+      "arrival_count": 0,
+      "container_owner": "hospital_relic_carry",
+      "hero_pos": [
+        3.5,
+        2.20000004768372
+      ],
+      "id": "actual_l2_packing_departed",
+      "level": 2,
+      "photo_owner": "hospital_relic_container",
+      "receive_count": 0,
+      "room": "lobby",
+      "shoe_owner": "hospital_relic_container",
+      "stored_count": 0,
+      "world_time": 8.40000000000005
+    },
+    {
+      "actual_packing_count": 2,
+      "actual_transport_count": 1,
+      "arrival_count": 1,
+      "container_owner": "asylum_intake_delivery",
+      "hero_pos": [
+        1.25,
+        0.239999994635582
+      ],
+      "id": "normal_door_hook_arrived_once",
+      "level": 3,
+      "photo_owner": "hospital_relic_container",
+      "receive_count": 0,
+      "room": "stairs",
+      "shoe_owner": "hospital_relic_container",
+      "stored_count": 0,
+      "world_time": 11.0250000000001
+    },
+    {
+      "actual_packing_count": 2,
+      "actual_transport_count": 1,
+      "arrival_count": 1,
+      "container_owner": "asylum_registration_desk",
+      "hero_pos": [
+        1.25,
+        0.239999994635582
+      ],
+      "id": "actual_nurse_stored_unread",
+      "level": 3,
+      "photo_owner": "hospital_relic_container",
+      "receive_count": 1,
+      "room": "stairs",
+      "shoe_owner": "hospital_relic_container",
+      "stored_count": 1,
+      "world_time": 21.1499999999999
+    },
+    {
+      "actual_packing_count": 2,
+      "actual_transport_count": 1,
+      "arrival_count": 1,
+      "container_owner": "asylum_registration_desk",
+      "hero_pos": [
+        1.0,
+        0.849999964237213
+      ],
+      "id": "actual_route_label_and_contents_read",
+      "level": 3,
+      "photo_owner": "hospital_relic_container",
+      "receive_count": 1,
+      "room": "lobby",
+      "shoe_owner": "hospital_relic_container",
+      "stored_count": 1,
+      "world_time": 29.6416666666667
+    }
+  ],
+  "failures": [],
+  "fixtures": "Initial L2 guide/wheelchair/porter positions and original photograph owner, initially held L2 key, initially unlocked CONTROL/50N and isolated scheduled groups; L3 existing registration nurse's initial desk presence. CONTROL is submitted through actual CRT and its ordinary fee is paid. No completed receipt, delivered/stored container, reading/recognition result or concrete number glyph is injected. Fixed game-time driver and screenshots are not a natural new-profile full playthrough, all random combinations or formal art/audio acceptance.",
+  "passes": [
+    "chain starts with physical trio/key fixtures and no completed transport or packing history",
+    "same original photograph starts with patient before any real footplate drop",
+    "actual paperwork/push/frame/fingers reaches visible original photograph collection contact",
+    "contact window retains live original chair and uncompleted transfer",
+    "same actual porter contact-packs photograph, returns for original shoe and carries container to source exit",
+    "ready manifest has exactly two real original-object pickup receipts and one genuine patient transfer",
+    "one source container retains both original objects before crossing chapters",
+    "initial key uses real L2 navigation and stair-door opening without calling a chapter unlock directly",
+    "protagonist physically reaches actual keyed door before chapter transition",
+    "unfinished normal door animation cannot create early L3 arrival",
+    "real mid-door JSON restores unfinished chapter transition without replaying source packing",
+    "mid-door restore preserves actual source manifest and both original packing receipts",
+    "remaining actual door time invokes normal L2-to-L3 transition and arrival hook",
+    "chapter transition delivers one original container at actual L3 entrance, not already received or stored",
+    "arrival changes only container ownership and grants no read information",
+    "normal transition passes unchanged actual L2 source manifest and receipts",
+    "existing nurse actually walks from original desk to the container delivered by transition hook",
+    "real nurse preparation/contact is visible before transfer of container ownership",
+    "mid-receive JSON preserves partial contact without repeating chapter arrival",
+    "cross-chapter restore cannot replay original hospital object collection",
+    "same nurse genuinely receives, carries and places original container at desk",
+    "one actual receipt per handoff and placement preserves both originals inside one stored bag",
+    "offscreen actual storage alone cannot teach bag contents or recognition",
+    "protagonist actually uses existing stair/lobby doorway to approach stored evidence",
+    "contents remain unavailable before a separate actual bag-number inspection",
+    "real CRT mouse submits initially unlocked CONTROL and starts ordinary paid intervention window",
+    "cross-chapter CONTROL uses exactly original five-neuron submission cost, without refilling earned resources",
+    "first actual viewport mouse click targets original container's visible tabletop marker",
+    "normal process really approaches and reads bag label after tabletop mouse click through prepare/contact/finish",
+    "actual label read records unprovided number as unknown and does not fabricate matching digits",
+    "second actual tabletop-container mouse click requests separately unread contents",
+    "ordinary process second click completes physical reading of actually received original photograph and shoe",
+    "real contents read sees two original objects without converting null bag number to a confirmed patient match",
+    "no prior photo reading or recognition flag was seeded to manufacture conditional dialogue",
+    "two actual evidence mouse inspections add no search attempt, income or extra intervention charge",
+    "actual final JSON retains both distinct completed physical reads",
+    "later frames and restored read history cannot repeat packing, arrival, handoff or storage",
+    "same two original objects and one actual container retain unique final physical owners"
+  ],
+  "rendered": true,
+  "scope": "Actual same-original L2 transfer, footplate photograph contact, porter's return for dropped shoe and physical container exit; normal keyed route/opening triggers L3 transition hook; actual nurse approach/receive/carry/store and separate real tabletop-bag mouse label/content reading. Mid-door and mid-receive checksummed JSON prove no repeated packing or scene arrival. Normal process/CRT mouse/Enter only during final CONTROL reading segment.",
+  "source_manifest": {
+    "bag_departed": true,
+    "bag_id": "hospital_relic_container",
+    "exit_pos": [
+      1.25685775279999,
+      0.213715448975563
+    ],
+    "exit_room": "lobby",
+    "items": [
+      "family_photo",
+      "patient_shoe"
+    ],
+    "packed_receipts": {
+      "family_photo": "hospital:1:relic_packed:family_photo",
+      "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+    },
+    "ready": true,
+    "source_attempt": 1.0,
+    "source_owners": {
+      "family_photo": "wheelchair_footplate",
+      "patient_shoe": "lobby_floor"
+    },
+    "transport_receipt": "hospital:1:patient_transport",
+    "version": 1.0
+  }
+}

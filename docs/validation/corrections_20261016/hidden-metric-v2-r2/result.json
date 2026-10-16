@@ -1,0 +1,55 @@
+{
+  "failures": [
+    "actual stabilizing and drag cross blood door and load independent hidden plaza"
+  ],
+  "passes": [
+    "father fixture starts at a reachable station in the active geometry",
+    "father actually approaches, winds up and establishes original grip/blood door",
+    "actual grabbing bodies remain distinct at arm reach rather than walking into one point",
+    "already-owned key cannot replace father blood-door route with hospital",
+    "father presentation reads the same actual held/turn state instead of a static idle pose",
+    "actual Escape key pauses established father grip",
+    "world pause freezes father pressure and drag before hidden transition"
+  ],
+  "real_clock_frames": true,
+  "rendered": true,
+  "scope": "Actual campaign, fixed father presence/clear initial position/key and owned candy; actual approach/grab/drag, real inputs, real saved JSON, zero-resource autonomous live-hunter escape; separate fixed fatal-contact setup. Graybox art, silent movie, not human playthrough or complete B2 acceptance.",
+  "timeline": [
+    {
+      "C": 0,
+      "N": 0,
+      "dialogue_count": 1,
+      "hero": [
+        2.92499995231628,
+        1.25
+      ],
+      "hidden": {},
+      "hp": 74,
+      "input_lock_frames": 3,
+      "label": "fixed_household_start",
+      "paused_manual": true,
+      "room": "bedroom",
+      "sp": 86,
+      "world_paused": true,
+      "world_time": 0.0
+    },
+    {
+      "C": 0,
+      "N": 0,
+      "dialogue_count": 0,
+      "hero": [
+        4.70786714553833,
+        1.20000004768372
+      ],
+      "hidden": {},
+      "hp": 74,
+      "input_lock_frames": 0,
+      "label": "entry_failed",
+      "paused_manual": false,
+      "room": "bedroom",
+      "sp": 75,
+      "world_paused": false,
+      "world_time": 11.3000000000001
+    }
+  ]
+}

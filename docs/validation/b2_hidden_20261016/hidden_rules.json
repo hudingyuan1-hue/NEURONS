@@ -1,6 +1,6 @@
 {
-  "checks": 57,
-  "failed": 0,
+  "checks": 69,
+  "failed": 1,
   "results": [
     {
       "label": "entry changes mode without restoring body values",
@@ -135,6 +135,26 @@
       "ok": true
     },
     {
+      "label": "standing near an exit marker is not a crossing",
+      "ok": true
+    },
+    {
+      "label": "legacy proximity callback without a movement segment cannot award E1",
+      "ok": true
+    },
+    {
+      "label": "only an inside-to-outside threshold crossing has valid direction",
+      "ok": true
+    },
+    {
+      "label": "crossing beside the finite doorway cannot award E1",
+      "ok": true
+    },
+    {
+      "label": "outer landing is reachable by ordinary collision-aware movement",
+      "ok": true
+    },
+    {
       "label": "fatal contact at actual exit wins over E1",
       "ok": true
     },
@@ -143,11 +163,19 @@
       "ok": true
     },
     {
-      "label": "nonfatal same-node contact deducts before valid E1 exit",
+      "label": "nonfatal hit beside threshold does not itself complete E1",
+      "ok": true
+    },
+    {
+      "label": "valid crossing commits only after nonfatal damage has been applied",
       "ok": true
     },
     {
       "label": "E1 requests the two original global achievement keys",
+      "ok": true
+    },
+    {
+      "label": "feedback due at crossing survives into the ending record without blocking E1",
       "ok": true
     },
     {
@@ -179,11 +207,31 @@
       "ok": true
     },
     {
-      "label": "zero-resource autonomous body evades a live hunter to the real exit",
+      "label": "first actual sight is presented during the encounter rather than waiting for patrol",
       "ok": true
     },
     {
+      "label": "latest player-opposition instruction suppresses only the contradictory assistance quote",
+      "ok": true
+    },
+    {
+      "label": "restoring an already-presented sight receipt does not repeat its dialogue",
+      "ok": true
+    },
+    {
+      "label": "historical source dialogue remains intact while the explicit user override controls playback",
+      "ok": true
+    },
+    {
+      "label": "zero-resource autonomous body evades a live hunter to the real exit",
+      "ok": false
+    },
+    {
       "label": "natural autonomous escape does not require attacks, resource purchase or mental damage",
+      "ok": true
+    },
+    {
+      "label": "natural pursuit presents both actual sight and real evade feedback",
       "ok": true
     },
     {

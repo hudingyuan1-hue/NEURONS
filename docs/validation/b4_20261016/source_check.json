@@ -1,0 +1,653 @@
+{
+  "scope": "B4 targeted complete sections; unchanged prior full-document readings reused. No claim of reading all stage5 code or running old tests. No media in these merged DOCX per reused source inventory.",
+  "sources": [
+    {
+      "tag": "S1",
+      "path": "DOCX/AI整理后文档/NEURONS_第一阶段_空间物品人员_合并修订版.docx",
+      "sha256": "986cf8367f87d82df28583db45b745b1619afaab3533d291dcb92e0d632e307e",
+      "text": "tmp/rules_read/NEURONS_第一阶段_空间物品人员_合并修订版.txt",
+      "read": "P217–323, tables room configurations"
+    },
+    {
+      "tag": "S3",
+      "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+      "text": "tmp/rules_read/NEURONS_第三阶段_人物物品_合并修订版.txt",
+      "read": "P1060–1284 and T35–46 complete B4 paragraphs/tables"
+    },
+    {
+      "tag": "S4",
+      "path": "DOCX/AI整理后文档/NEURONS_第四阶段_数值与完整流程_合并修订版.docx",
+      "sha256": "c3f2e9ba7d0b23d7c0654b546b0fa0ce075a0e885f59f48066280dd0b33eee39",
+      "text": "tmp/rules_read/NEURONS_第四阶段_数值与完整流程_合并修订版.txt",
+      "read": "P49–93, P94–120, T17, T24–28 and P275"
+    }
+  ],
+  "stage5": [
+    "R10 README, archive_notes, records_notes, routes_notes complete",
+    "R15–R18 sampling/spawn/integration relevant context; no explicit replacement of S3/S4 authored rules found"
+  ],
+  "spaces": {
+    "rooms": 11,
+    "floors": [
+      5,
+      6
+    ],
+    "points": [
+      31,
+      31
+    ],
+    "targets": [
+      8,
+      8
+    ],
+    "search_seconds": 7,
+    "key_count": 1,
+    "rest": false
+  },
+  "identities": [
+    "backward",
+    "stitched",
+    "blindfold",
+    "repeater",
+    "misaligned",
+    "dual_head",
+    "twitch",
+    "faceless",
+    "reverse",
+    "face_press",
+    "double_face"
+  ],
+  "probability": {
+    "first": 0.45,
+    "increment": 0.05,
+    "cap": 0.65,
+    "max_checks": 3,
+    "reentry_seconds": 20,
+    "reentry_ratio": 0.5,
+    "spawn_batch_spacing": 10
+  },
+  "upper_rules": {
+    "bridge": "Same real subject/event + genuine false record. Both statements fully heard => SP−10 once per save per source event. Never fabricate death/refusal.",
+    "rhythm": "Crossing1.2/gap1.5; real body obstacle, side path always open; wait ends current crossing and preserves search target.",
+    "index": "Original opened and actually witnessed => approach/pinch/1second extract; ownership/terminal changes at contact completion only.",
+    "switch": "Seen direction and route unknown => actual switch→bridge→index→switch; landmark recognition then persistent route memory; interruption never fills missing steps.",
+    "verify": "Actual key door opening + visible => approach/0.8raise/contact−15SP/1.2release; opportunity spent at approach; preserve key/unlocked/open state.",
+    "identity": "Two independent original documents and results plus both actual faces required; SP−10 once per save conflict; no fabricated ID/scars/identity revelation."
+  },
+  "stage5_lessons": [
+    "NPC actions continue in their original actual room after hero leaves; witness never remote.",
+    "Hearing actual dialogue does not require free body; new playback resets playback progress only.",
+    "Actual release clears body holder synchronously.",
+    "Source material identity bound to real source event; no global reused synthetic death material.",
+    "Initial16 exhausted/cancelled or temporarily blocked allows supplemental targets without reroll or deleted originals."
+  ],
+  "unknowns": [
+    "Specific authored number/label/identity field glyphs remain null unless genuine prior source provides values.",
+    "No guaranteed genuine death plus corresponding false-departure pair. Genuine L3 same-attempt refusal/actual false-medication written receipts can supply bridge; patient glyph stays null, two canonical statements available, same-number feedback deferred until number actually known.",
+    "Destroyed/unheld paper replenishment after death not specified: preserve physical instance as conservative prior-model behavior, not new authored canon."
+  ],
+  "verbatim_check": {
+    "dialogue_references": 41,
+    "search_actions_and_failure_lines": 62,
+    "all_match": true,
+    "checks": [
+      {
+        "asset": "cortex_events",
+        "id": "BACK_FACE",
+        "source": "S3:P1071",
+        "text": "转过来了……还是没有脸。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "BACK_NUMBER",
+        "source": "S3:P1072",
+        "text": "前后都是同一个号。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "BACK_KNOWN",
+        "source": "S3:P1073",
+        "text": "这个编号，我见过。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "TEAR_START",
+        "source": "S3:P1088",
+        "text": "等一下，我还没看完。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "TEAR_KEEP",
+        "source": "S3:P1089",
+        "text": "只留下这一角。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "TEAR_LOST",
+        "source": "S3:P1090",
+        "text": "字没看清，纸先没了。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "TEAR_DIFF",
+        "source": "S3:P1091",
+        "text": "被改过的那一处，就在原件上。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "MASK",
+        "source": "S3:P1108",
+        "text": "他一动，脸就被挡住了。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "MASK",
+        "source": "S3:P1109",
+        "text": "被拖走的人还看得见。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "OVERLAY",
+        "source": "S3:P1110",
+        "text": "刚才那张脸……像我。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "OVERLAY",
+        "source": "S3:P1111",
+        "text": "再看清楚。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "MIMIC",
+        "source": "S3:P1129",
+        "text": "他在照着我做。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "MIMIC_WRITE",
+        "source": "S3:P1128",
+        "text": "自主行为。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "MIMIC_READ",
+        "source": "S3:P1130",
+        "text": "连刚才那一下，也算我自己选的。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "CONSENT",
+        "source": "S3:P1137",
+        "text": "拒绝，也被放进了‘已同意’。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "CLAMP_START",
+        "source": "S3:P1150",
+        "text": "等一下，手还在里面。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "CLAMP_MISS",
+        "source": "S3:P1151",
+        "text": "差一点。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "CLAMP_HURT",
+        "source": "S3:P1152",
+        "text": "手都夹伤了。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "CLAMP_RECORD",
+        "source": "S3:P1153",
+        "text": "它还写着‘无异常’。"
+      },
+      {
+        "asset": "cortex_events",
+        "id": "CLAMP_RECORD",
+        "source": "S3:P1154",
+        "text": "灯亮着，记录却没变。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "BRIDGE_COMPLETE",
+        "source": "S3:P1178",
+        "text": "同一个编号，同一件事，两种结果。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "BRIDGE_COMPLETE",
+        "source": "S3:P1179",
+        "text": "两边都把话说完了。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "RHYTHM_PULL",
+        "source": "S3:P1193",
+        "text": "脚停了，身体还在往前。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "RHYTHM_PULL",
+        "source": "S3:P1194",
+        "text": "是支架在拖他。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "RHYTHM_BYPASS",
+        "source": "S3:P1195",
+        "text": "从旁边能过去。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "INDEX_REMOVED",
+        "source": "S3:P1210",
+        "text": "名字刚被拿走，就查不到了。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "INDEX_ORIGINAL",
+        "source": "S3:P1211",
+        "text": "编号还在，原件也还在。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "INDEX_BILLING",
+        "source": "S3:P1212",
+        "text": "费用倒是一项没少。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "ROUTE_POINT",
+        "source": "S3:P1228",
+        "text": "这边。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "ROUTE_RETURN",
+        "source": "S3:P1229",
+        "text": "又是这个门框……绕回来了。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "ROUTE_RETURN",
+        "source": "S3:P1230",
+        "text": "指的是回来的路。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "ROUTE_KNOWN",
+        "source": "S3:P1231",
+        "text": "这条路走过了。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "FACE_RELEASE",
+        "source": "S3:P1251",
+        "text": "别碰我的脸。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "FACE_RELEASE",
+        "source": "S3:P1252",
+        "text": "钥匙还在。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "FACE_RELEASE",
+        "source": "S3:P1253",
+        "text": "还没出去。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "EXIT_APPLICATION",
+        "source": "S3:P1254",
+        "text": "‘本人申请’……连能填写的地方都没有。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "EXIT_PROXY",
+        "source": "S3:P1255",
+        "text": "另一边已经盖好了。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "IDENTITY_RECORDS",
+        "source": "S3:P1273",
+        "text": "一边注销，一边还在使用。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "IDENTITY_RECORDS",
+        "source": "S3:P1274",
+        "text": "两边都通过了。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "IDENTITY_FACES",
+        "source": "S3:P1275",
+        "text": "脸一样，伤不一样。"
+      },
+      {
+        "asset": "cortex_upper_events",
+        "id": "IDENTITY_COMPLETE",
+        "source": "S3:P1270",
+        "text": "都对得上。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T35R2",
+        "text": "裂隙里没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T35R3",
+        "text": "这里也没有藏东西。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T35R4",
+        "text": "只剩这些碎片。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T36R2",
+        "text": "夹层里没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T36R3",
+        "text": "桌边和下面都找过了。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T36R4",
+        "text": "毯子下面是空的。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T36R5",
+        "text": "背后没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T36R6",
+        "text": "机座下面也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T36R7",
+        "text": "照片后面没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T36R8",
+        "text": "柜底也找过了。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T37R2",
+        "text": "电视后面没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T37R3",
+        "text": "这里没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T37R4",
+        "text": "这一格也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T37R5",
+        "text": "基座里面是空的。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T37R6",
+        "text": "座位下面也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T37R7",
+        "text": "底下只剩杂物。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T38R2",
+        "text": "文件后面没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T38R3",
+        "text": "下面也找过了。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T38R4",
+        "text": "槽里没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T38R5",
+        "text": "桌底是空的。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T38R6",
+        "text": "花盆后面也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T38R7",
+        "text": "板后没有东西。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T38R8",
+        "text": "这里也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T39R2",
+        "text": "底座里没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T39R3",
+        "text": "镜框后面也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T39R4",
+        "text": "这里没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T39R5",
+        "text": "支座下面是空的。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T39R6",
+        "text": "检查台下面也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T39R7",
+        "text": "现在找完了，没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T39R8",
+        "text": "器械之间也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T39R9",
+        "text": "凹槽里没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T41R2",
+        "text": "控制台下面没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T41R3",
+        "text": "这一侧没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T41R4",
+        "text": "这里也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T41R5",
+        "text": "设备后面找过了。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T42R2",
+        "text": "仪器下面没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T42R3",
+        "text": "接头里没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T42R4",
+        "text": "这个节点也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T42R5",
+        "text": "线盘后面是空的。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T43R2",
+        "text": "车架下面没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T43R3",
+        "text": "工作台上没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T43R4",
+        "text": "这些柜格都找过了。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T43R5",
+        "text": "机座里也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T43R6",
+        "text": "储物柜里没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T43R7",
+        "text": "底座下面是空的。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T44R2",
+        "text": "控制台里没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T44R3",
+        "text": "底座里面没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T44R4",
+        "text": "这只柜子也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T45R2",
+        "text": "终端下面没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T45R3",
+        "text": "控制台里也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T45R4",
+        "text": "椅子下面是空的。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T45R5",
+        "text": "面板边上没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T45R6",
+        "text": "这里没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T45R7",
+        "text": "底座里没有东西。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T45R8",
+        "text": "资料后面也找过了。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T46R2",
+        "text": "左边终端没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T46R3",
+        "text": "台子下面是空的。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T46R4",
+        "text": "镜框里没有钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T46R5",
+        "text": "右边也没有。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T46R6",
+        "text": "这只柜子找过了。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T46R7",
+        "text": "这里也没藏钥匙。"
+      },
+      {
+        "kind": "search_action_and_failure",
+        "source": "S3:T46R8",
+        "text": "终端后面没有。"
+      }
+    ]
+  }
+}

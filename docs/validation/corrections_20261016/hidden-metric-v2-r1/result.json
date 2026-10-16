@@ -1,0 +1,32 @@
+{
+  "failures": [
+    "father actually approaches, winds up and establishes original grip/blood door"
+  ],
+  "passes": [
+    "actual grabbing bodies remain distinct at arm reach rather than walking into one point",
+    "already-owned key cannot replace father blood-door route with hospital"
+  ],
+  "real_clock_frames": true,
+  "rendered": true,
+  "scope": "Actual campaign, fixed father presence/clear initial position/key and owned candy; actual approach/grab/drag, real inputs, real saved JSON, zero-resource autonomous live-hunter escape; separate fixed fatal-contact setup. Graybox art, silent movie, not human playthrough or complete B2 acceptance.",
+  "timeline": [
+    {
+      "C": 0,
+      "N": 0,
+      "dialogue_count": 1,
+      "hero": [
+        4.44999980926514,
+        0.649999976158142
+      ],
+      "hidden": {},
+      "hp": 74,
+      "input_lock_frames": 3,
+      "label": "fixed_household_start",
+      "paused_manual": true,
+      "room": "bedroom",
+      "sp": 86,
+      "world_paused": true,
+      "world_time": 0.0
+    }
+  ]
+}

@@ -5,6 +5,8 @@ const Layout=preload("res://scripts/world/room_layout.gd")
 const RoomView=preload("res://scripts/world/room_view.gd")
 const Menu=preload("res://scripts/ui/neuron_menu.gd")
 const Feedback=preload("res://scripts/ui/feedback_audio.gd")
+const DialoguePlayback=preload("res://scripts/ui/dialogue_playback.gd")
+signal dialogue_preferences_changed(value:bool)
 var rules
 var layout:RoomLayout
 var view:Node2D
@@ -33,6 +35,9 @@ var closing_left:=0.0
 var dialogue_queue:Array[Dictionary]=[]
 var dialogue_panel:PanelContainer
 var dialogue_text:Label
+var dialogue_playback
+var auto_dialogue_enabled:bool=true
+var auto_dialogue_box:CheckBox
 var event_label:Label
 var status_label:Label
 var state_label:Label
@@ -230,7 +235,7 @@ func create_ui() -> void:
  column.add_child(dialogue_text)
  var next:=Button.new()
  next.text="继续  /  Enter"
- next.pressed.connect(advance_dialogue)
+ next.pressed.connect(request_dialogue_advance)
  column.add_child(next)
  dialogue_panel.hide()
 
@@ -241,8 +246,8 @@ func reset_sample(index:int) -> void:
  scenario=index
  rules=Rules.new()
  rules.skin_resistance=1 if test_resistance else 0
- hero_pos=layout.BED_STOP
- npc_pos=layout.DOOR
+ hero_pos=layout.bed_position()
+ npc_pos=layout.door_position()
  hero_route=PackedVector2Array()
  npc_route=PackedVector2Array()
  hero_state="idle"
@@ -317,7 +322,8 @@ func start_bedside_sample() -> void:
 
 func sync_audio_pause() -> void:
  # Spoken dialogue may continue while the world is frozen by that dialogue.
- audio.set_world_paused(world_paused(),paused_manual or menu.visible or closing_left>0 or audio_panel.visible)
+ var hard_pause:bool=paused_manual or menu.visible or closing_left>0 or audio_panel.visible
+ audio.set_world_paused(world_paused(),hard_pause,hard_pause)
 
 func _process(delta:float) -> void:
  input_lock_frames=maxi(0,input_lock_frames-1)
@@ -380,7 +386,7 @@ func advance_autonomy(delta:float) -> void:
  if rules.search_attempts>=rules.search_limit or rules.sp<50:
   if scene_phase!="return_bed":
    scene_phase="return_bed"
-   hero_route=layout.path(hero_pos,layout.BED_STOP)
+   hero_route=layout.path(hero_pos,layout.bed_position())
    target_index=-1
   move_hero(delta)
   if hero_route.is_empty():
@@ -508,7 +514,7 @@ func advance_father(delta:float) -> void:
  elif scene_phase=="father_drag":
   var moved:=layout.move_path(npc_pos,npc_route,delta)
   var partner:Vector2=moved.position+pair_offset
-  if layout.walkable(partner) and layout.clear_segment(hero_pos,partner,layout.RADIUS):
+  if layout.walkable(partner) and layout.clear_segment(hero_pos,partner,layout.body_radius):
    npc_pos=moved.position
    npc_route=moved.route
    hero_pos=partner
@@ -554,7 +560,7 @@ func cast_startle() -> void:
  var endpoint:=hero_pos+away*0.4
  # Distance is a presentation-only safe separation for this fixture, not
  # an invented universal exploration-skill displacement.
- if not layout.walkable(endpoint) or not layout.clear_segment(hero_pos,endpoint,layout.RADIUS):
+ if not layout.walkable(endpoint) or not layout.clear_segment(hero_pos,endpoint,layout.body_radius):
   note("后撤路径受阻；技能已提交，没有伪造成功脱离或精神奖励。")
   return
  hero_route=layout.path(hero_pos,endpoint)
@@ -632,11 +638,26 @@ func add_dialogue(speaker:String,text:String) -> void:
  show_dialogue()
 
 func show_dialogue() -> void:
+ if dialogue_playback==null:
+  dialogue_playback=DialoguePlayback.new(self);add_child(dialogue_playback)
+ dialogue_playback.bind_current()
  if dialogue_queue.is_empty():
   dialogue_panel.hide()
  else:
-  dialogue_text.text=dialogue_queue[0].speaker+"\n\n"+dialogue_queue[0].text
+  dialogue_text.text=DialoguePlayback.display_text(str(dialogue_queue[0].speaker)+"\n\n"+str(dialogue_queue[0].text))
   dialogue_panel.show()
+
+func dialogue_timing_paused() -> bool:
+ return paused_manual or (menu!=null and menu.visible) or closing_left>0 or (audio_panel!=null and audio_panel.visible) or get("tutorial_ui")!=null or get("opening_ui")!=null
+
+func request_dialogue_advance() -> void:
+ if dialogue_playback!=null and not dialogue_playback.can_advance():return
+ advance_dialogue()
+
+func set_auto_dialogue(value:bool) -> void:
+ auto_dialogue_enabled=value
+ if auto_dialogue_box!=null:auto_dialogue_box.set_pressed_no_signal(value)
+ dialogue_preferences_changed.emit(value)
 
 func advance_dialogue() -> void:
  if not dialogue_queue.is_empty():dialogue_queue.pop_front()
@@ -663,7 +684,7 @@ func _unhandled_input(event:InputEvent) -> void:
  if input_lock_frames>0:return
  if event is InputEventKey and event.pressed and not event.echo:
   if event.keycode==KEY_ENTER and not dialogue_queue.is_empty():
-   advance_dialogue()
+   request_dialogue_advance()
   elif event.keycode==KEY_ESCAPE and menu.visible:close_neuron_menu()
   elif event.keycode==KEY_SPACE and not menu.visible and dialogue_queue.is_empty():paused_manual=not paused_manual
   elif event.keycode==KEY_X and first_damage:status_visible=not status_visible
@@ -675,7 +696,7 @@ func _unhandled_input(event:InputEvent) -> void:
    zoom_index=clampi(zoom_index+(1 if event.button_index==MOUSE_BUTTON_WHEEL_UP else -1),0,3)
    camera.zoom=Vector2.ONE*BASE_ZOOM*ZOOM_STEPS[zoom_index]
   elif event.button_index==MOUSE_BUTTON_LEFT:
-   var world_mouse:Vector2=world_viewport.get_canvas_transform().affine_inverse()*(event.position/2.0)
+   var world_mouse:Vector2=world_viewport.get_canvas_transform().affine_inverse()*(event.position*Vector2(world_viewport.size)/Vector2(1280,720))
    var actor_screen:=layout.project(hero_pos)
    if Rect2(actor_screen+Vector2(-16,-62),Vector2(32,65)).has_point(world_mouse):open_neuron_menu()
 
@@ -709,6 +730,12 @@ func create_audio_controls() -> void:
  title.text="音量 · 当前音效为待替换测试音"
  title.add_theme_font_size_override("font_size",16)
  column.add_child(title)
+ auto_dialogue_box=CheckBox.new()
+ auto_dialogue_box.text="对白自动继续 (关闭后手动继续)"
+ auto_dialogue_box.button_pressed=auto_dialogue_enabled
+ auto_dialogue_box.add_theme_font_size_override("font_size",16)
+ auto_dialogue_box.toggled.connect(set_auto_dialogue)
+ column.add_child(auto_dialogue_box)
  for channel in ["master","ui","world","ambience","music","voice"]:
   var row:=HBoxContainer.new()
   column.add_child(row)

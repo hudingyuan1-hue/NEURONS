@@ -46,7 +46,11 @@ func fixture(dog:bool=false,cat:bool=false) -> void:
  app.paused_manual=true;clear_lines();app.menu.close_menu();app.closing_left=0
 
 func capture(name:String) -> void:
- await frames();await RenderingServer.frame_post_draw
+ # Windows can suspend presentation of an occluded test window. Produce an
+ # actual viewport frame instead of waiting indefinitely for presentation.
+ await frames(2)
+ if app!=null and app.get("view")!=null:app.view.queue_redraw()
+ RenderingServer.force_draw(false)
  get_viewport().get_texture().get_image().save_png(ProjectSettings.globalize_path(folder).path_join(name+".png"))
 
 func give_skill(id:String) -> void:

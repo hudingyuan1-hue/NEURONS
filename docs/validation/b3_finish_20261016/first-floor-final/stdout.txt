@@ -1,0 +1,42 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS B3 keeps twenty-one identities and fourteen linked scheduling groups
+PASS orderly actually approaches and finishes the normal wrist-card check
+PASS normal wrist check creates no injury or lingering holder
+PASS real paid withdrawal refuses an unfinished wrist check
+PASS refusal starts visible reach before any wrist injury
+PASS actual wrist contact establishes the sole holder
+PASS one real wrist twist costs exactly five HP and five SP
+PASS real JSON retains the mid-hold remaining clock
+PASS wrist hold releases within original two-second cap
+PASS continued frames cannot duplicate wrist injury
+PASS doctor writes diagnosis, independently signs and hands over order; pharmacist really receives, mixes and gives cup
+PASS diagnosis, signed order and physical handovers retain separate receipts
+PASS holding full cup is not ingestion
+PASS half-raised-cup JSON preserves the visible swallowing window
+PASS full one-second raise commits exactly original twenty-SP medicine effect
+PASS swallow leaves one empty owned cup plus independent body stop
+PASS original medicine stop expires under world clock
+PASS cross-floor revisit cannot refill cup or repeat medication
+PASS refusal case receives an actual cup while nurse is present
+PASS real GUT before swallowing performs refusal
+PASS refusal closes course without invented medicine injury
+PASS same cup is placed while separate nurse writing is still pending
+PASS nurse physically approaches cup and completes false record
+PASS full witness reveals paper falsification without changing real ingestion
+PASS JSON preserves refusal and forged paper independently
+PASS remote writing case receives same actual full cup
+PASS nurse can physically finish offscreen after protagonist leaves
+PASS offscreen record gives no fabricated full-view evidence or ingestion
+PASS assistant receives instruction and physically reaches before closing cuff
+PASS assistant reach is not already a grip or injury
+PASS effective pre-contact withdrawal prevents cuff injury
+PASS real cuff contact creates its own receipt
+PASS real cuff tightening costs only original five HP
+PASS assistant releases at record finish or three-second cap
+PASS new medical invitation cannot steal low-SP return-to-bed priority
+PASS low-SP hero really starts the existing clinic-to-ward return path
+PASS older L2 JSON without B3 state genuinely loads through the existing save pipeline
+PASS loading an older save cannot inherit workshop materials or products from the abandoned future runtime
+ASYLUM_CHECK 38 passed 0 failed

@@ -1,0 +1,31 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS ready-container case first physically collects both originals and reaches real exit
+PASS genuine L2 restart increments current attempt and returns to bed without changing source trip attempt
+PASS ready long-term container and both unique originals survive restart unchanged
+PASS already appeared source trio retains actual locations/gone states rather than respawning another patient
+PASS retained ready manifest still references its actual original source receipts
+PASS checksummed JSON retains ready container after actual restart
+PASS ready retry does not repeat original collection, transfer or witness mental loss
+PASS first partial case reaches real original photograph contact before collection
+PASS unfinished photo contact has an existing physical footplate anchor but no packed manifest
+PASS retry preserves same uncompleted source photo contact while current attempt advances normally
+PASS partial retry preserves actual appeared actors and original photo on still-present chair
+PASS partial photo JSON preserves frozen source and unfinished contact without a forged pickup
+PASS continued original actors genuinely finish photo, original transfer, shoe and carry exit after retry
+PASS actual post-retry photo fact uses original source receipt and separately records current occurrence attempt
+PASS post-retry original transport finishes once under the same original source ID
+PASS partial offscreen retry yields exactly two original pickups and no replayed witness penalty
+PASS photo-contact retry crosses actual keyed doors and normal hook then genuinely receives/stores same source container in L3
+PASS L3 validates original-attempt receipt chain after real retry without duplicating arrival or intake
+PASS second partial case really finishes transfer and returns to shoe before its pickup contact
+PASS partially loaded original container and still-uncollected shoe remain separate before retry
+PASS return-shoe retry preserves real porter position, existing partial bag and remaining contact clock
+PASS post-retry partial bag JSON cannot swallow the original shoe or create its pickup receipt
+PASS same retained porter truly finishes shoe pickup and original exit after retry
+PASS continued shoe contact writes only its one original-source receipt and no second patient transfer
+PASS return-shoe retry also uses normal keyed transition and actual nurse storage rather than seeding L3 acceptance
+PASS second partial path preserves one actual arrival/container with both unique originals
+PASS old support strings without actual new anchors or manifest do not manufacture preserved packing history on retry
+HOSPITAL_RELIC_RETRY_CHECK 27 passed 0 failed

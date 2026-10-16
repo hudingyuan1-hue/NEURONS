@@ -67,8 +67,8 @@ func safe_travel(id:String,room:String,delta:float,ignore:Array=[]) -> bool:
  var next:String=Map.next_room(str(a.room),room)
  if next.is_empty() or next=="cortex_exit":return false
  if owner.isolation!=null and not owner.isolation.can_exit(str(a.room),next):return false
- if not safe_move(id,Map.doorway(str(a.room),next),delta,ignore):return false
- var entry:Vector2=Map.doorway(next,str(a.room))
+ if not safe_move(id,owner.portal_for(str(a.room),next).threshold,delta,ignore):return false
+ var entry:Vector2=owner.portal_for(next,str(a.room)).landing
  if not actors_clear(id,entry,entry,next,ignore):return false
  a.room=next;a.pos=owner.xy(entry);a.route=[]
  return str(a.room)==room

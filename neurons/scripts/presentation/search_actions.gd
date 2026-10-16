@@ -20,7 +20,15 @@ func state(id:String) -> Dictionary:
 
 func enter_room() -> void:
  base_rects.clear()
- for f in app.layout.furniture:base_rects[f.id]=f.rect
+ for f in app.layout.furniture:
+  base_rects[f.id]=f.rect
+  var props:Dictionary=state(f.id)
+  # Only at a real new-attempt boundary can legacy positions adopt the new
+  # furniture contract. Keep whether the object moved, not its old metres.
+  if int(app.layout.geometry_version)>=2 and int(props.get("geometry_version",1))<2:
+   for field in ["shift","upper_shift"]:
+    if props.has(field) and f.get("action_offsets",{}).has(field):props[field]=f.action_offsets[field].duplicate()
+   props.geometry_version=2
  apply_geometry(false)
 
 func point(id:String) -> Dictionary:
@@ -47,8 +55,8 @@ func tick(completed_this_tick:bool=false) -> void:
    "移开书本":props.book_shift=[9.0,-1.0]
    "查看闹钟后方":props.clock_shift=[0.0,-4.0]
    "拉开抽屉":props.drawer_started=true
-   "挪开椅子":props.shift=config.test_parameters.chair_shift.duplicate();apply_geometry()
-   "移开上层箱":props.upper_shift=config.test_parameters.box_shift.duplicate();apply_geometry()
+   "挪开椅子":props.shift=f.get("action_offsets",{}).get("shift",config.test_parameters.chair_shift).duplicate();apply_geometry()
+   "移开上层箱":props.upper_shift=f.get("action_offsets",{}).get("upper_shift",config.test_parameters.box_shift).duplicate();apply_geometry()
    "翻动第一叠书":props.desk_shift=1
    "翻动第二叠书":props.desk_shift=2
    "拨开文具纸张":props.desk_shift=3
@@ -74,7 +82,6 @@ func on_complete(index:int,has_key:bool) -> void:
  var f:Dictionary=app.layout.furniture[index]
  if has_key:
   app.add_dialogue("角色 · 得意","哈！找到了！")
-  app.add_dialogue("玩家 · 无语","可算找着了。")
   return
  var entry:Dictionary=point(f.id)
  if entry.is_empty():return
@@ -108,7 +115,7 @@ func apply_geometry(invalidate_routes:bool=true) -> void:
   if f.id=="box" and props.has("upper_shift"):
    var shift:Array=props.upper_shift
    app.layout.movable_blockers.append(Rect2(base.position+Vector2(float(shift[0]),float(shift[1])),base.size))
- app.layout._init()
+ app.layout.rebuild_grid()
  if not invalidate_routes:return # Rebuild saved geometry without erasing saved motion.
  if app.home!=null and not app.home.data.is_empty():
   app.home.data.dog.route=[];app.home.data.cat.route=[]

@@ -1,0 +1,5293 @@
+{
+  "action_left": -0.0333333333333332,
+  "action_phase": "autonomy",
+  "asylum_state": {
+    "actors": {
+      "archivist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "office",
+        "route": []
+      },
+      "assistant": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "cleaner": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "bathroom",
+        "route": []
+      },
+      "corner_patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "double_ward",
+        "route": []
+      },
+      "doctor": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "guard": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "office",
+        "route": []
+      },
+      "head_nurse": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "corridor",
+        "route": []
+      },
+      "informer": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "activity",
+        "route": []
+      },
+      "isolation_orderly": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "quiet",
+        "route": []
+      },
+      "labor_patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "workshop",
+        "route": []
+      },
+      "med_nurse": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "idle",
+        "pos": [
+          1.29999995231628,
+          2.67996573448181
+        ],
+        "room": "corridor",
+        "route": [
+          [
+            1.29999995231628,
+            2.70000004768372
+          ]
+        ]
+      },
+      "ordinary_orderly": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "ward",
+        "route": []
+      },
+      "patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "office",
+        "route": []
+      },
+      "pharmacist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "idle",
+        "pos": [
+          1.02034723758698,
+          0.83982640504837
+        ],
+        "room": "pharmacy",
+        "route": [
+          [
+            1.0,
+            0.849999964237213
+          ]
+        ],
+        "work_stand_done": true
+      },
+      "porter": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "corridor",
+        "route": []
+      },
+      "postop_patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "activity",
+        "route": []
+      },
+      "registration_nurse": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "speaker": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "group_therapy",
+        "route": []
+      },
+      "supervisor": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "workshop",
+        "route": []
+      },
+      "therapist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "group_therapy",
+        "route": []
+      },
+      "transport_patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "corridor",
+        "route": []
+      }
+    },
+    "batches": {
+      "pharmacy": 12.7333333333333
+    },
+    "body": {},
+    "carry": {
+      "actors": {
+        "archivist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            1.25,
+            0.239999994635582
+          ],
+          "room": "office",
+          "route": []
+        },
+        "assistant": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "clinic",
+          "route": []
+        },
+        "doctor": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "clinic",
+          "route": []
+        },
+        "guard": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            0.75,
+            0.239999994635582
+          ],
+          "room": "office",
+          "route": []
+        },
+        "guide": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            1.57020127773285,
+            0.22570213675499
+          ],
+          "room": "lobby",
+          "route": [
+            [
+              1.59219169616699,
+              0.233753338456154
+            ]
+          ]
+        },
+        "nurse": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "ward",
+          "route": []
+        },
+        "patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "lobby",
+          "route": []
+        },
+        "pharmacist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            1.25,
+            0.239999994635582
+          ],
+          "room": "pharmacy",
+          "route": []
+        },
+        "porter": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            1.23446941375732,
+            0.231061279773712
+          ],
+          "room": "lobby",
+          "route": [
+            [
+              1.25,
+              0.200000002980232
+            ]
+          ]
+        },
+        "wheelchair": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "gone",
+          "pos": [
+            1.24219167232513,
+            0.233753338456154
+          ],
+          "room": "lobby",
+          "route": []
+        }
+      },
+      "bag": "ward",
+      "bag_order": false,
+      "bandage": 0.0,
+      "batches": {
+        "lobby": 68.9666666666653,
+        "office": 26.2000000000005,
+        "pharmacy": 9.13333333333331
+      },
+      "body": {},
+      "clock": 104.53333333333,
+      "dispensed": false,
+      "exam_done": false,
+      "groups": {
+        "clinic": {
+          "checks": 1.0,
+          "drawn": false,
+          "pending": false
+        },
+        "lobby": {
+          "checks": 2.0,
+          "drawn": true,
+          "pending": false
+        },
+        "nurse": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "office": {
+          "checks": 1.0,
+          "drawn": true,
+          "pending": false
+        },
+        "patient": {
+          "checks": 3.0,
+          "drawn": true,
+          "pending": true
+        },
+        "pharmacist": {
+          "checks": 1.0,
+          "drawn": true,
+          "pending": false
+        }
+      },
+      "healed": false,
+      "holder": "",
+      "known_pages": [
+        "laundry_stub",
+        "case_death",
+        "case_fees",
+        "case_discharge",
+        "complaint_original",
+        "complaint_rewrite",
+        "case_removal",
+        "donor_screening"
+      ],
+      "medicine_stop": 0.0,
+      "nurse_checked": false,
+      "observation_state": {
+        "active": {},
+        "completed": {
+          "case_death": "hospital-observations-1",
+          "case_discharge": "hospital-observations-1",
+          "case_fees": "hospital-observations-1",
+          "case_removal": "hospital-observations-1",
+          "donor_screening": "hospital-observations-1",
+          "laundry_stub": "hospital-observations-1/pending"
+        },
+        "links": {},
+        "read": {
+          "case_death": {
+            "fields": {
+              "case_number": null
+            },
+            "revision": "hospital-observations-1",
+            "room": "office",
+            "source": "S3:T17R4",
+            "visit_reference": ""
+          },
+          "case_discharge": {
+            "fields": {
+              "case_number": null
+            },
+            "revision": "hospital-observations-1",
+            "room": "office",
+            "source": "S3:T17R4",
+            "visit_reference": ""
+          },
+          "case_fees": {
+            "fields": {
+              "amount": null,
+              "case_number": null
+            },
+            "revision": "hospital-observations-1",
+            "room": "office",
+            "source": "S3:T17R4",
+            "visit_reference": ""
+          },
+          "case_removal": {
+            "fields": {
+              "case_number": null
+            },
+            "revision": "hospital-observations-1",
+            "room": "office",
+            "source": "S3:T17R4",
+            "visit_reference": ""
+          },
+          "donor_screening": {
+            "fields": {
+              "case_number": null
+            },
+            "revision": "hospital-observations-1",
+            "room": "clinic",
+            "source": "S3:P469/T12R4",
+            "visit_reference": ""
+          },
+          "laundry_stub": {
+            "fields": {
+              "bag_number": null,
+              "recipient": null
+            },
+            "revision": "hospital-observations-1/pending",
+            "room": "office",
+            "source": "S3:P392/T17R3",
+            "visit_reference": ""
+          }
+        }
+      },
+      "prescribed": false,
+      "prescription_visit": "",
+      "receipts": {
+        "hospital:1:no_key:clinic:0": "hospital_search_feedback",
+        "hospital:1:no_key:clinic:1": "hospital_search_feedback",
+        "hospital:1:no_key:clinic:5": "hospital_search_feedback",
+        "hospital:1:no_key:lobby:1": "hospital_search_feedback",
+        "hospital:1:no_key:office:1": "hospital_search_feedback",
+        "hospital:1:no_key:office:10": "hospital_search_feedback",
+        "hospital:1:no_key:office:2": "hospital_search_feedback",
+        "hospital:1:no_key:office:6": "hospital_search_feedback",
+        "hospital:1:no_key:office:7": "hospital_search_feedback",
+        "hospital:1:no_key:pharmacy:2": "hospital_search_feedback",
+        "hospital:1:no_key:pharmacy:6": "hospital_search_feedback",
+        "hospital:1:observe:case_death:hospital-observations-1": "hospital_observation",
+        "hospital:1:observe:case_discharge:hospital-observations-1": "hospital_observation",
+        "hospital:1:observe:case_fees:hospital-observations-1": "hospital_observation",
+        "hospital:1:observe:case_removal:hospital-observations-1": "hospital_observation",
+        "hospital:1:observe:donor_screening:hospital-observations-1": "hospital_observation",
+        "hospital:1:observe:laundry_stub:hospital-observations-1/pending": "hospital_observation",
+        "hospital:1:patient_order": "patient_transport_order",
+        "hospital:1:patient_relics_fell": "hospital_relics_fell",
+        "hospital:1:patient_transport": "patient_transport_completed",
+        "hospital:1:relic_packed:family_photo": "hospital_relic_packed",
+        "hospital:1:relic_packed:patient_shoe": "hospital_relic_packed"
+      },
+      "records_state": {
+        "archivist": {
+          "elapsed": 0.0,
+          "index": -1.0,
+          "phase": "idle"
+        },
+        "files": {
+          "archive_index": "office:0",
+          "case_death": "office:10",
+          "case_discharge": "office:10",
+          "case_fees": "office:10",
+          "case_removal": "office:5",
+          "complaint_original": "office:7",
+          "complaint_rewrite": "office:7",
+          "laundry_stub": "office:6"
+        },
+        "guard": {
+          "done": false,
+          "elapsed": 0.0,
+          "last_room": "",
+          "last_seen": [],
+          "phase": "idle",
+          "target": ""
+        },
+        "patient_gone": false,
+        "patient_silenced": false,
+        "read": [
+          "case_death",
+          "case_fees",
+          "case_discharge",
+          "laundry_stub",
+          "complaint_original",
+          "complaint_rewrite"
+        ],
+        "report": {},
+        "stopped": {}
+      },
+      "refused": false,
+      "registered": false,
+      "regrab_elapsed": 105.33333333333,
+      "relic_context": {
+        "source_attempt": 1.0
+      },
+      "relic_delivery": {
+        "bag_departed": true,
+        "bag_id": "hospital_relic_container",
+        "exit_pos": [
+          1.23446941375732,
+          0.231061279773712
+        ],
+        "exit_room": "lobby",
+        "items": [
+          "family_photo",
+          "patient_shoe"
+        ],
+        "packed_receipts": {
+          "family_photo": "hospital:1:relic_packed:family_photo",
+          "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+        },
+        "ready": true,
+        "source_attempt": 1.0,
+        "source_owners": {
+          "family_photo": "wheelchair_footplate",
+          "patient_shoe": "lobby_floor"
+        },
+        "transport_receipt": "hospital:1:patient_transport",
+        "version": 1.0
+      },
+      "relic_packing": {
+        "actor": "porter",
+        "elapsed": 0.0,
+        "last_cancel": "",
+        "phase": "done",
+        "room": "lobby"
+      },
+      "room_left": {
+        "bedroom": 0.0,
+        "clinic": 102.066666666663,
+        "lobby": 70.8999999999985,
+        "office": 68.933333333332,
+        "pharmacy": 24.2000000000004
+      },
+      "sample": false,
+      "suspended_body": {},
+      "swallowed": false,
+      "transport": {},
+      "transport_relics": {
+        "family_photo": {
+          "accessible": false,
+          "pos": [
+            1.24219167232513,
+            0.233753338456154
+          ],
+          "room": "lobby",
+          "source_attempt": 1.0,
+          "support": "wheelchair_footplate"
+        },
+        "patient_shoe": {
+          "accessible": false,
+          "pos": [
+            1.24219167232513,
+            0.233753338456154
+          ],
+          "room": "lobby",
+          "source_attempt": 1.0,
+          "support": "lobby_floor"
+        }
+      },
+      "visit": "",
+      "wheelchair_gone": true,
+      "wheelchair_order": true
+    },
+    "clock": 60.9666666666658,
+    "cup_full": false,
+    "diagnosed": false,
+    "dispensed": false,
+    "exam": {},
+    "groups": {
+      "chief": {
+        "checks": 2.0,
+        "drawn": false,
+        "last_check_clock": 43.7666666666667,
+        "pending": false
+      },
+      "cleaner": {
+        "checks": 1.0,
+        "drawn": false,
+        "last_check_clock": 45.0333333333333,
+        "pending": false
+      },
+      "clinic": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "corner": {
+        "checks": 1.0,
+        "drawn": false,
+        "last_check_clock": 16.4,
+        "pending": false
+      },
+      "isolation": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "office": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "orderly": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "patient": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "pharmacy": {
+        "checks": 1.0,
+        "drawn": true,
+        "last_check_clock": 12.7,
+        "pending": false
+      },
+      "postop": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "registration": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "therapy": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "transport": {
+        "checks": 2.0,
+        "drawn": false,
+        "last_check_clock": 43.7666666666667,
+        "pending": false
+      },
+      "work": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      }
+    },
+    "holder": "",
+    "intake_state": {
+      "delivery": {
+        "bag_departed": true,
+        "bag_id": "hospital_relic_container",
+        "bag_number": null,
+        "exit_pos": [
+          1.23446941375732,
+          0.231061279773712
+        ],
+        "exit_room": "lobby",
+        "items": [
+          "family_photo",
+          "patient_shoe"
+        ],
+        "packed_receipts": {
+          "family_photo": "hospital:1:relic_packed:family_photo",
+          "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+        },
+        "source_attempt": 1.0,
+        "source_owners": {
+          "family_photo": "wheelchair_footplate",
+          "patient_shoe": "lobby_floor"
+        },
+        "transport_receipt": "hospital:1:patient_transport",
+        "version": 1.0
+      },
+      "elapsed": 0.0,
+      "last_wait": "receiver_absent_or_busy",
+      "phase": "approach",
+      "phase_progress": 0.0,
+      "pos": [
+        4.36999988555908,
+        0.239999994635582
+      ],
+      "read": {},
+      "room": "lobby"
+    },
+    "isolation_state": {
+      "closed_elapsed": 0.0,
+      "door_closed": false,
+      "door_progress": 0.0,
+      "elapsed": 0.0,
+      "evaded": false,
+      "grab_invalidated": false,
+      "handled": {},
+      "hero_attempted": false,
+      "hero_held": false,
+      "last_pos": [],
+      "last_room": "",
+      "open_from": 0.0,
+      "order": {},
+      "outcome": "",
+      "phase": "idle",
+      "target": "",
+      "waiting": "",
+      "was_closed": false
+    },
+    "medicine_stop": 0.0,
+    "nurse_duty_state": {
+      "completed": {
+        "prior_copy:patient_departure:1": "asylum_duty:1:prior_copy:patient_departure:1",
+        "prior_copy:wheelchair_order:1": "asylum_duty:1:prior_copy:wheelchair_order:1"
+      },
+      "dialogue_sources": [],
+      "duty_wait_seconds": null,
+      "entries": [
+        {
+          "category": null,
+          "clipped": true,
+          "copied_by": "med_nurse",
+          "copy_attempt": 1.0,
+          "eyewitness_origin": false,
+          "id": "asylum_duty:1:prior_copy:wheelchair_order:1",
+          "number": null,
+          "number_checked": true,
+          "number_match": null,
+          "original_owner_changed": false,
+          "own_swallow_witness": false,
+          "physical_id": "asylum_prior_copy",
+          "physical_owner": "office:6",
+          "pos": [
+            1.0,
+            2.38000011444092
+          ],
+          "read_completed": true,
+          "room": "office",
+          "source_actor": "医院记录",
+          "source_attempt": 1.0,
+          "source_id": "wheelchair_order",
+          "source_kind": "prior_copy",
+          "source_snapshot": {
+            "attempt": 1.0,
+            "id": "wheelchair_order",
+            "source": "医院记录",
+            "text": "导诊护士实际完成轮椅患者自己的转运手续；不使用角色核号表替代。"
+          },
+          "source_text": "导诊护士实际完成轮椅患者自己的转运手续；不使用角色核号表替代。",
+          "subject_identity": "",
+          "written": true
+        },
+        {
+          "category": null,
+          "clipped": true,
+          "copied_by": "med_nurse",
+          "copy_attempt": 1.0,
+          "eyewitness_origin": false,
+          "id": "asylum_duty:1:prior_copy:patient_departure:1",
+          "number": null,
+          "number_checked": true,
+          "number_match": null,
+          "original_owner_changed": false,
+          "own_swallow_witness": false,
+          "physical_id": "asylum_prior_copy",
+          "physical_owner": "office:6",
+          "pos": [
+            1.0,
+            2.38000011444092
+          ],
+          "read_completed": true,
+          "room": "office",
+          "source_actor": "医院记录",
+          "source_attempt": 1.0,
+          "source_id": "patient_departure",
+          "source_kind": "prior_copy",
+          "source_snapshot": {
+            "attempt": 1.0,
+            "id": "patient_departure",
+            "source": "医院记录",
+            "text": "轮椅患者：自行离院（机构记载，与真实强制转运分账）。"
+          },
+          "source_text": "轮椅患者：自行离院（机构记载，与真实强制转运分账）。",
+          "subject_identity": "",
+          "written": true
+        }
+      ],
+      "job": {},
+      "posted": true,
+      "read_entries": [],
+      "swallow_pending": {},
+      "swallow_written": false
+    },
+    "observations_state": {
+      "active": {},
+      "completed": {
+        "asylum_bed2_erased_name": "asylum-observations-2:0105cca0b4e4175e",
+        "asylum_stair_rail_wear": "asylum-observations-2:0105cca0b4e4175e"
+      },
+      "last_cancel": "",
+      "links": {},
+      "read": {
+        "asylum_bed2_erased_name": {
+          "attempt": 1.0,
+          "fields": {
+            "bed_number": null,
+            "erased_name": null
+          },
+          "operation": "static",
+          "revision": "asylum-observations-2:0105cca0b4e4175e",
+          "room": "double_ward",
+          "source": "S3:P973/P996–998"
+        },
+        "asylum_stair_rail_wear": {
+          "attempt": 1.0,
+          "fields": {},
+          "operation": "static",
+          "revision": "asylum-observations-2:0105cca0b4e4175e",
+          "room": "stairs",
+          "source": "S3:P786–787"
+        }
+      }
+    },
+    "order_delivered": false,
+    "order_source": "",
+    "order_written": false,
+    "receipts": {
+      "asylum:1:nurse_door:corridor:stairs": "asylum_nurse_crossed_door",
+      "asylum:1:nurse_door:lobby:office": "asylum_nurse_crossed_door",
+      "asylum:1:nurse_door:lobby:stairs": "asylum_nurse_crossed_door",
+      "asylum:1:nurse_door:office:lobby": "asylum_nurse_crossed_door",
+      "asylum:1:nurse_door:pharmacy:lobby": "asylum_nurse_crossed_door",
+      "asylum:1:nurse_door:stairs:corridor": "asylum_nurse_crossed_door",
+      "asylum:1:nurse_door:stairs:lobby": "asylum_nurse_crossed_door",
+      "asylum:1:nurse_duty_clipped:prior_copy:patient_departure:1": "asylum_nurse_duty_clipped",
+      "asylum:1:nurse_duty_clipped:prior_copy:wheelchair_order:1": "asylum_nurse_duty_clipped",
+      "asylum:1:nurse_source_read:prior_copy:patient_departure:1": "asylum_nurse_source_read",
+      "asylum:1:nurse_source_read:prior_copy:wheelchair_order:1": "asylum_nurse_source_read",
+      "asylum:1:observe:asylum_bed2_erased_name:asylum-observations-2:0105cca0b4e4175e": "asylum_observation",
+      "asylum:1:observe:asylum_stair_rail_wear:asylum-observations-2:0105cca0b4e4175e": "asylum_observation",
+      "asylum:1:relic_arrival:hospital_relic_container": "asylum_relic_delivery_arrived",
+      "asylum:1:search_comment:double_ward:3": "asylum_search_feedback",
+      "asylum:1:search_comment:double_ward:5": "asylum_search_feedback",
+      "asylum:1:search_comment:double_ward:6": "asylum_search_feedback",
+      "asylum:1:search_comment:stairs:0": "asylum_search_feedback"
+    },
+    "records_state": {
+      "archivist": {
+        "elapsed": 0.0,
+        "phase": "idle"
+      },
+      "files": {
+        "asylum_archive_index": "office:0",
+        "asylum_current_report": "office:10",
+        "asylum_death_page": "office:10",
+        "asylum_duty_roster": "office:6",
+        "asylum_fee_page": "office:10",
+        "asylum_no_external_injury": "office:5",
+        "asylum_prior_copy": "office:6",
+        "asylum_scar_photo": "office:5"
+      },
+      "guard": {
+        "done": false,
+        "elapsed": 0.0,
+        "last_room": "",
+        "last_seen": [],
+        "phase": "idle",
+        "target": ""
+      },
+      "inherited_patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "inherited_patient_records": {
+        "archivist": {
+          "elapsed": 0.0,
+          "index": -1.0,
+          "phase": "idle"
+        },
+        "files": {
+          "archive_index": "office:0",
+          "case_death": "office:10",
+          "case_discharge": "office:10",
+          "case_fees": "office:10",
+          "case_removal": "office:5",
+          "complaint_original": "office:7",
+          "complaint_rewrite": "office:7",
+          "laundry_stub": "office:6"
+        },
+        "guard": {
+          "done": false,
+          "elapsed": 0.0,
+          "last_room": "",
+          "last_seen": [],
+          "phase": "idle",
+          "target": ""
+        },
+        "patient_gone": false,
+        "patient_silenced": false,
+        "read": [
+          "case_death",
+          "case_fees",
+          "case_discharge",
+          "laundry_stub",
+          "complaint_original",
+          "complaint_rewrite"
+        ],
+        "report": {},
+        "stopped": {}
+      },
+      "patient_anomaly_seen": false,
+      "patient_delivered": false,
+      "patient_silenced": false,
+      "read": [],
+      "reading": {},
+      "report": {},
+      "serial": 0.0,
+      "stopped": {}
+    },
+    "refused": false,
+    "registered": false,
+    "registration_state": {
+      "asked": false,
+      "auto_started": false,
+      "last_interrupt": "",
+      "phase": "idle",
+      "read": false,
+      "reply_pending": false,
+      "reply_received": false,
+      "written": false
+    },
+    "regrab_elapsed": 61.7666666666658,
+    "room_left": {
+      "bathroom": 55.1333333333328,
+      "corridor": 58.2333333333326,
+      "double_ward": 43.7666666666667,
+      "lobby": 0.0,
+      "stairs": 12.7
+    },
+    "staff_targets": {},
+    "swallowed": false,
+    "trace_events": {
+      "active": {},
+      "cleaner": {
+        "elapsed": 0.0,
+        "phase": "idle",
+        "relic_index": 0.0,
+        "wash_index": 0.0
+      },
+      "conversation": {
+        "complete": false,
+        "elapsed": 0.0,
+        "phase": "idle",
+        "shown": {},
+        "stopped": false
+      },
+      "corner": {
+        "done": false,
+        "elapsed": 0.0,
+        "phase": "idle",
+        "witness": false
+      },
+      "corpse": {
+        "covered": false,
+        "identity": "independent_deceased",
+        "moved_out": false,
+        "on_board": false,
+        "pos": [
+          4.2,
+          1.1
+        ],
+        "room": "bathroom"
+      },
+      "read": {},
+      "screen_closed": false,
+      "washed": []
+    },
+    "ward_events": {
+      "chief_internal": {
+        "elapsed": 0.0,
+        "last_pos": [],
+        "last_room": "corridor",
+        "phase": "idle",
+        "report_id": ""
+      },
+      "clamp": {
+        "attempted": false,
+        "elapsed": 0.0,
+        "hand_out": false,
+        "hold_invalidated": false,
+        "phase": "idle",
+        "retract_left": 0.0
+      },
+      "ordinary_job": {
+        "elapsed": 0.0,
+        "full_witness": false,
+        "holding": false,
+        "phase": "idle",
+        "report_id": "",
+        "target": ""
+      },
+      "postop": {
+        "elapsed": 0.0,
+        "hero_saw_wound": false,
+        "informer_elapsed": 0.0,
+        "informer_phase": "privacy_walk",
+        "informer_saw_wound": false,
+        "last_pos": [],
+        "last_room": "activity",
+        "phase": "idle",
+        "report_elapsed": 0.0,
+        "report_id": "",
+        "report_phase": "idle",
+        "wound_visible": false
+      },
+      "reports": [],
+      "therapy": {
+        "elapsed": 0.0,
+        "heard_original": false,
+        "heard_retraction": false,
+        "original_spoken": false,
+        "paper": "therapist",
+        "phase": "idle",
+        "recording": false,
+        "retraction_spoken": false,
+        "saw_deletion": false,
+        "seat_required": false,
+        "segment_exists": false,
+        "signature_asset": {
+          "history": [],
+          "holder": "therapist",
+          "id": "asylum_signature_record",
+          "version": 1.0
+        },
+        "speaker_number": null,
+        "statement_asset": {
+          "exposed": false,
+          "history": [],
+          "holder": "therapist",
+          "id": "asylum_statement_paper",
+          "version": 1.0
+        }
+      },
+      "transfer": {
+        "band_drop": {},
+        "bed_pos": [],
+        "bed_room": "corridor",
+        "brake": true,
+        "delivered": false,
+        "elapsed": 0.0,
+        "hand_done": false,
+        "isolation_authorized": false,
+        "order": "porter",
+        "patient_number": null,
+        "phase": "idle",
+        "seen": []
+      },
+      "work": {
+        "batch": null,
+        "box": "none",
+        "box_asset": {
+          "history": [],
+          "id": "asylum_work_box",
+          "version": 1.0
+        },
+        "elapsed": 0.0,
+        "label": "rack",
+        "paper": "rack",
+        "phase": "take_paper",
+        "products": 0.0,
+        "table": "workshop:1"
+      }
+    },
+    "ward_window_state": {
+      "action": {},
+      "last_cancel": "",
+      "open": false,
+      "serial": 0.0
+    },
+    "wrist_checked": false,
+    "wrist_done": false
+  },
+  "audio_state": {
+    "playing": [
+      {
+        "channel": "world",
+        "id": "SFX_DOOR_OPEN",
+        "position": 0.560000002384186
+      },
+      {
+        "channel": "music",
+        "id": "MUS_ROOM",
+        "position": 0.00266666663810611
+      }
+    ],
+    "receipts": {
+      "AMB_FAN:fan:1": true,
+      "MUS_ROOM:music:1:1": true,
+      "MUS_ROOM:music:2:1": true,
+      "MUS_ROOM:music:3:1": true,
+      "MUS_ROOM:music:4:1": true,
+      "SFX_DOOR_OPEN:door:1:bathroom:corridor": true,
+      "SFX_DOOR_OPEN:door:1:bedroom:lobby": true,
+      "SFX_DOOR_OPEN:door:1:clinic:lobby": true,
+      "SFX_DOOR_OPEN:door:1:corridor:bathroom": true,
+      "SFX_DOOR_OPEN:door:1:corridor:double_ward": true,
+      "SFX_DOOR_OPEN:door:1:corridor:stairs": true,
+      "SFX_DOOR_OPEN:door:1:double_ward:corridor": true,
+      "SFX_DOOR_OPEN:door:1:office:lobby": true,
+      "SFX_DOOR_OPEN:door:1:stairs:corridor": true,
+      "SFX_DOOR_OPEN:door:1:stairs:cortex_exit": true,
+      "SFX_DRAWER:drawer:1:bathroom:bathroom:3": true,
+      "SFX_DRAWER:drawer:1:bedroom:bed": true,
+      "SFX_DRAWER:drawer:1:bedroom:storage": true,
+      "SFX_DRAWER:drawer:1:clinic:clinic:0": true,
+      "SFX_DRAWER:drawer:1:clinic:clinic:1": true,
+      "SFX_DRAWER:drawer:1:clinic:clinic:5": true,
+      "SFX_DRAWER:drawer:1:clinic:clinic:6": true,
+      "SFX_DRAWER:drawer:1:double_ward:double_ward:3": true,
+      "SFX_DRAWER:drawer:1:double_ward:double_ward:5": true,
+      "SFX_DRAWER:drawer:1:double_ward:double_ward:6": true,
+      "SFX_DRAWER:drawer:1:office:office:1": true,
+      "SFX_DRAWER:drawer:1:office:office:10": true,
+      "SFX_DRAWER:drawer:1:office:office:2": true,
+      "SFX_DRAWER:drawer:1:office:office:6": true,
+      "SFX_DRAWER:drawer:1:office:office:7": true,
+      "SFX_DRAWER:drawer:1:pharmacy:pharmacy:6": true,
+      "SFX_DRAWER:drawer:1:stairs:stairs:0": true,
+      "SFX_FOOTSTEP:foot:1": true,
+      "SFX_FOOTSTEP:foot:100": true,
+      "SFX_FOOTSTEP:foot:101": true,
+      "SFX_FOOTSTEP:foot:102": true,
+      "SFX_FOOTSTEP:foot:103": true,
+      "SFX_FOOTSTEP:foot:104": true,
+      "SFX_FOOTSTEP:foot:105": true,
+      "SFX_FOOTSTEP:foot:106": true,
+      "SFX_FOOTSTEP:foot:107": true,
+      "SFX_FOOTSTEP:foot:108": true,
+      "SFX_FOOTSTEP:foot:109": true,
+      "SFX_FOOTSTEP:foot:11": true,
+      "SFX_FOOTSTEP:foot:110": true,
+      "SFX_FOOTSTEP:foot:111": true,
+      "SFX_FOOTSTEP:foot:112": true,
+      "SFX_FOOTSTEP:foot:113": true,
+      "SFX_FOOTSTEP:foot:114": true,
+      "SFX_FOOTSTEP:foot:115": true,
+      "SFX_FOOTSTEP:foot:116": true,
+      "SFX_FOOTSTEP:foot:117": true,
+      "SFX_FOOTSTEP:foot:118": true,
+      "SFX_FOOTSTEP:foot:119": true,
+      "SFX_FOOTSTEP:foot:12": true,
+      "SFX_FOOTSTEP:foot:120": true,
+      "SFX_FOOTSTEP:foot:121": true,
+      "SFX_FOOTSTEP:foot:122": true,
+      "SFX_FOOTSTEP:foot:123": true,
+      "SFX_FOOTSTEP:foot:124": true,
+      "SFX_FOOTSTEP:foot:125": true,
+      "SFX_FOOTSTEP:foot:126": true,
+      "SFX_FOOTSTEP:foot:127": true,
+      "SFX_FOOTSTEP:foot:13": true,
+      "SFX_FOOTSTEP:foot:15": true,
+      "SFX_FOOTSTEP:foot:16": true,
+      "SFX_FOOTSTEP:foot:17": true,
+      "SFX_FOOTSTEP:foot:18": true,
+      "SFX_FOOTSTEP:foot:19": true,
+      "SFX_FOOTSTEP:foot:2": true,
+      "SFX_FOOTSTEP:foot:20": true,
+      "SFX_FOOTSTEP:foot:21": true,
+      "SFX_FOOTSTEP:foot:22": true,
+      "SFX_FOOTSTEP:foot:23": true,
+      "SFX_FOOTSTEP:foot:27": true,
+      "SFX_FOOTSTEP:foot:28": true,
+      "SFX_FOOTSTEP:foot:29": true,
+      "SFX_FOOTSTEP:foot:3": true,
+      "SFX_FOOTSTEP:foot:30": true,
+      "SFX_FOOTSTEP:foot:31": true,
+      "SFX_FOOTSTEP:foot:32": true,
+      "SFX_FOOTSTEP:foot:33": true,
+      "SFX_FOOTSTEP:foot:34": true,
+      "SFX_FOOTSTEP:foot:35": true,
+      "SFX_FOOTSTEP:foot:36": true,
+      "SFX_FOOTSTEP:foot:37": true,
+      "SFX_FOOTSTEP:foot:38": true,
+      "SFX_FOOTSTEP:foot:39": true,
+      "SFX_FOOTSTEP:foot:4": true,
+      "SFX_FOOTSTEP:foot:42": true,
+      "SFX_FOOTSTEP:foot:43": true,
+      "SFX_FOOTSTEP:foot:44": true,
+      "SFX_FOOTSTEP:foot:45": true,
+      "SFX_FOOTSTEP:foot:46": true,
+      "SFX_FOOTSTEP:foot:47": true,
+      "SFX_FOOTSTEP:foot:48": true,
+      "SFX_FOOTSTEP:foot:5": true,
+      "SFX_FOOTSTEP:foot:52": true,
+      "SFX_FOOTSTEP:foot:53": true,
+      "SFX_FOOTSTEP:foot:54": true,
+      "SFX_FOOTSTEP:foot:56": true,
+      "SFX_FOOTSTEP:foot:57": true,
+      "SFX_FOOTSTEP:foot:58": true,
+      "SFX_FOOTSTEP:foot:59": true,
+      "SFX_FOOTSTEP:foot:6": true,
+      "SFX_FOOTSTEP:foot:60": true,
+      "SFX_FOOTSTEP:foot:61": true,
+      "SFX_FOOTSTEP:foot:62": true,
+      "SFX_FOOTSTEP:foot:63": true,
+      "SFX_FOOTSTEP:foot:64": true,
+      "SFX_FOOTSTEP:foot:65": true,
+      "SFX_FOOTSTEP:foot:66": true,
+      "SFX_FOOTSTEP:foot:67": true,
+      "SFX_FOOTSTEP:foot:68": true,
+      "SFX_FOOTSTEP:foot:69": true,
+      "SFX_FOOTSTEP:foot:7": true,
+      "SFX_FOOTSTEP:foot:70": true,
+      "SFX_FOOTSTEP:foot:71": true,
+      "SFX_FOOTSTEP:foot:72": true,
+      "SFX_FOOTSTEP:foot:73": true,
+      "SFX_FOOTSTEP:foot:74": true,
+      "SFX_FOOTSTEP:foot:75": true,
+      "SFX_FOOTSTEP:foot:76": true,
+      "SFX_FOOTSTEP:foot:77": true,
+      "SFX_FOOTSTEP:foot:78": true,
+      "SFX_FOOTSTEP:foot:79": true,
+      "SFX_FOOTSTEP:foot:8": true,
+      "SFX_FOOTSTEP:foot:80": true,
+      "SFX_FOOTSTEP:foot:81": true,
+      "SFX_FOOTSTEP:foot:82": true,
+      "SFX_FOOTSTEP:foot:83": true,
+      "SFX_FOOTSTEP:foot:84": true,
+      "SFX_FOOTSTEP:foot:85": true,
+      "SFX_FOOTSTEP:foot:86": true,
+      "SFX_FOOTSTEP:foot:87": true,
+      "SFX_FOOTSTEP:foot:88": true,
+      "SFX_FOOTSTEP:foot:89": true,
+      "SFX_FOOTSTEP:foot:9": true,
+      "SFX_FOOTSTEP:foot:90": true,
+      "SFX_FOOTSTEP:foot:91": true,
+      "SFX_FOOTSTEP:foot:92": true,
+      "SFX_FOOTSTEP:foot:93": true,
+      "SFX_FOOTSTEP:foot:94": true,
+      "SFX_FOOTSTEP:foot:95": true,
+      "SFX_FOOTSTEP:foot:96": true,
+      "SFX_FOOTSTEP:foot:97": true,
+      "SFX_FOOTSTEP:foot:98": true,
+      "SFX_FOOTSTEP:foot:99": true,
+      "SFX_SEARCH_PAPER:asylum_observe:1:asylum_bed2_erased_name:asylum-observations-2:0105cca0b4e4175e": true,
+      "SFX_SEARCH_PAPER:asylum_observe:1:asylum_stair_rail_wear:asylum-observations-2:0105cca0b4e4175e": true
+    }
+  },
+  "closing_left": 0.0,
+  "completed": [],
+  "controlled_route": false,
+  "cortex_state": {
+    "actors": {
+      "backward": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "atrium",
+        "route": [],
+        "stand_done": false
+      },
+      "blindfold": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "visual",
+        "route": [],
+        "stand_done": false
+      },
+      "double_face": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "identity",
+        "route": [],
+        "stand_done": false
+      },
+      "dual_head": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "bridge",
+        "route": [],
+        "stand_done": false
+      },
+      "face_press": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "verify",
+        "route": [],
+        "stand_done": false
+      },
+      "faceless": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "index",
+        "route": [],
+        "stand_done": false
+      },
+      "misaligned": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "body",
+        "route": [],
+        "stand_done": false
+      },
+      "repeater": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "decision",
+        "route": [],
+        "stand_done": false
+      },
+      "reverse": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "switch",
+        "route": [],
+        "stand_done": false
+      },
+      "stitched": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "memory",
+        "route": [],
+        "stand_done": false
+      },
+      "twitch": {
+        "elapsed": 0.0,
+        "facing": [
+          0,
+          -1
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "rhythm",
+        "route": [],
+        "stand_done": false
+      }
+    },
+    "back": {
+      "back_seen": false,
+      "elapsed": 0.0,
+      "front_seen": false,
+      "phase": "idle"
+    },
+    "batches": {},
+    "body": {},
+    "carry": {
+      "asylum": {
+        "actors": {
+          "archivist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "assistant": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "cleaner": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "bathroom",
+            "route": []
+          },
+          "corner_patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "double_ward",
+            "route": []
+          },
+          "doctor": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "guard": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "head_nurse": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "corridor",
+            "route": []
+          },
+          "informer": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "activity",
+            "route": []
+          },
+          "isolation_orderly": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "quiet",
+            "route": []
+          },
+          "labor_patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "workshop",
+            "route": []
+          },
+          "med_nurse": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.29999995231628,
+              2.67996573448181
+            ],
+            "room": "corridor",
+            "route": [
+              [
+                1.29999995231628,
+                2.70000004768372
+              ]
+            ]
+          },
+          "ordinary_orderly": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "ward",
+            "route": []
+          },
+          "patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "office",
+            "route": []
+          },
+          "pharmacist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.02034723758698,
+              0.83982640504837
+            ],
+            "room": "pharmacy",
+            "route": [
+              [
+                1.0,
+                0.849999964237213
+              ]
+            ],
+            "work_stand_done": true
+          },
+          "porter": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "corridor",
+            "route": []
+          },
+          "postop_patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "activity",
+            "route": []
+          },
+          "registration_nurse": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "speaker": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "group_therapy",
+            "route": []
+          },
+          "supervisor": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "workshop",
+            "route": []
+          },
+          "therapist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "group_therapy",
+            "route": []
+          },
+          "transport_patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "corridor",
+            "route": []
+          }
+        },
+        "batches": {
+          "pharmacy": 12.7333333333333
+        },
+        "body": {},
+        "carry": {
+          "actors": {
+            "archivist": {
+              "elapsed": 0.0,
+              "left": 0.0,
+              "phase": "idle",
+              "pos": [
+                1.25,
+                0.239999994635582
+              ],
+              "room": "office",
+              "route": []
+            },
+            "assistant": {
+              "elapsed": 0.0,
+              "left": 0.0,
+              "phase": "absent",
+              "pos": [
+                4.4,
+                0.35
+              ],
+              "room": "clinic",
+              "route": []
+            },
+            "doctor": {
+              "elapsed": 0.0,
+              "left": 0.0,
+              "phase": "absent",
+              "pos": [
+                4.4,
+                0.35
+              ],
+              "room": "clinic",
+              "route": []
+            },
+            "guard": {
+              "elapsed": 0.0,
+              "left": 0.0,
+              "phase": "idle",
+              "pos": [
+                0.75,
+                0.239999994635582
+              ],
+              "room": "office",
+              "route": []
+            },
+            "guide": {
+              "elapsed": 0.0,
+              "left": 0.0,
+              "phase": "idle",
+              "pos": [
+                1.57020127773285,
+                0.22570213675499
+              ],
+              "room": "lobby",
+              "route": [
+                [
+                  1.59219169616699,
+                  0.233753338456154
+                ]
+              ]
+            },
+            "nurse": {
+              "elapsed": 0.0,
+              "left": 0.0,
+              "phase": "absent",
+              "pos": [
+                4.4,
+                0.35
+              ],
+              "room": "ward",
+              "route": []
+            },
+            "patient": {
+              "elapsed": 0.0,
+              "left": 0.0,
+              "phase": "absent",
+              "pos": [
+                4.4,
+                0.35
+              ],
+              "room": "lobby",
+              "route": []
+            },
+            "pharmacist": {
+              "elapsed": 0.0,
+              "left": 0.0,
+              "phase": "idle",
+              "pos": [
+                1.25,
+                0.239999994635582
+              ],
+              "room": "pharmacy",
+              "route": []
+            },
+            "porter": {
+              "elapsed": 0.0,
+              "left": 0.0,
+              "phase": "idle",
+              "pos": [
+                1.23446941375732,
+                0.231061279773712
+              ],
+              "room": "lobby",
+              "route": [
+                [
+                  1.25,
+                  0.200000002980232
+                ]
+              ]
+            },
+            "wheelchair": {
+              "elapsed": 0.0,
+              "left": 0.0,
+              "phase": "gone",
+              "pos": [
+                1.24219167232513,
+                0.233753338456154
+              ],
+              "room": "lobby",
+              "route": []
+            }
+          },
+          "bag": "ward",
+          "bag_order": false,
+          "bandage": 0.0,
+          "batches": {
+            "lobby": 68.9666666666653,
+            "office": 26.2000000000005,
+            "pharmacy": 9.13333333333331
+          },
+          "body": {},
+          "clock": 104.53333333333,
+          "dispensed": false,
+          "exam_done": false,
+          "groups": {
+            "clinic": {
+              "checks": 1.0,
+              "drawn": false,
+              "pending": false
+            },
+            "lobby": {
+              "checks": 2.0,
+              "drawn": true,
+              "pending": false
+            },
+            "nurse": {
+              "checks": 0.0,
+              "drawn": false,
+              "pending": false
+            },
+            "office": {
+              "checks": 1.0,
+              "drawn": true,
+              "pending": false
+            },
+            "patient": {
+              "checks": 3.0,
+              "drawn": true,
+              "pending": true
+            },
+            "pharmacist": {
+              "checks": 1.0,
+              "drawn": true,
+              "pending": false
+            }
+          },
+          "healed": false,
+          "holder": "",
+          "known_pages": [
+            "laundry_stub",
+            "case_death",
+            "case_fees",
+            "case_discharge",
+            "complaint_original",
+            "complaint_rewrite",
+            "case_removal",
+            "donor_screening"
+          ],
+          "medicine_stop": 0.0,
+          "nurse_checked": false,
+          "observation_state": {
+            "active": {},
+            "completed": {
+              "case_death": "hospital-observations-1",
+              "case_discharge": "hospital-observations-1",
+              "case_fees": "hospital-observations-1",
+              "case_removal": "hospital-observations-1",
+              "donor_screening": "hospital-observations-1",
+              "laundry_stub": "hospital-observations-1/pending"
+            },
+            "links": {},
+            "read": {
+              "case_death": {
+                "fields": {
+                  "case_number": null
+                },
+                "revision": "hospital-observations-1",
+                "room": "office",
+                "source": "S3:T17R4",
+                "visit_reference": ""
+              },
+              "case_discharge": {
+                "fields": {
+                  "case_number": null
+                },
+                "revision": "hospital-observations-1",
+                "room": "office",
+                "source": "S3:T17R4",
+                "visit_reference": ""
+              },
+              "case_fees": {
+                "fields": {
+                  "amount": null,
+                  "case_number": null
+                },
+                "revision": "hospital-observations-1",
+                "room": "office",
+                "source": "S3:T17R4",
+                "visit_reference": ""
+              },
+              "case_removal": {
+                "fields": {
+                  "case_number": null
+                },
+                "revision": "hospital-observations-1",
+                "room": "office",
+                "source": "S3:T17R4",
+                "visit_reference": ""
+              },
+              "donor_screening": {
+                "fields": {
+                  "case_number": null
+                },
+                "revision": "hospital-observations-1",
+                "room": "clinic",
+                "source": "S3:P469/T12R4",
+                "visit_reference": ""
+              },
+              "laundry_stub": {
+                "fields": {
+                  "bag_number": null,
+                  "recipient": null
+                },
+                "revision": "hospital-observations-1/pending",
+                "room": "office",
+                "source": "S3:P392/T17R3",
+                "visit_reference": ""
+              }
+            }
+          },
+          "prescribed": false,
+          "prescription_visit": "",
+          "receipts": {
+            "hospital:1:no_key:clinic:0": "hospital_search_feedback",
+            "hospital:1:no_key:clinic:1": "hospital_search_feedback",
+            "hospital:1:no_key:clinic:5": "hospital_search_feedback",
+            "hospital:1:no_key:lobby:1": "hospital_search_feedback",
+            "hospital:1:no_key:office:1": "hospital_search_feedback",
+            "hospital:1:no_key:office:10": "hospital_search_feedback",
+            "hospital:1:no_key:office:2": "hospital_search_feedback",
+            "hospital:1:no_key:office:6": "hospital_search_feedback",
+            "hospital:1:no_key:office:7": "hospital_search_feedback",
+            "hospital:1:no_key:pharmacy:2": "hospital_search_feedback",
+            "hospital:1:no_key:pharmacy:6": "hospital_search_feedback",
+            "hospital:1:observe:case_death:hospital-observations-1": "hospital_observation",
+            "hospital:1:observe:case_discharge:hospital-observations-1": "hospital_observation",
+            "hospital:1:observe:case_fees:hospital-observations-1": "hospital_observation",
+            "hospital:1:observe:case_removal:hospital-observations-1": "hospital_observation",
+            "hospital:1:observe:donor_screening:hospital-observations-1": "hospital_observation",
+            "hospital:1:observe:laundry_stub:hospital-observations-1/pending": "hospital_observation",
+            "hospital:1:patient_order": "patient_transport_order",
+            "hospital:1:patient_relics_fell": "hospital_relics_fell",
+            "hospital:1:patient_transport": "patient_transport_completed",
+            "hospital:1:relic_packed:family_photo": "hospital_relic_packed",
+            "hospital:1:relic_packed:patient_shoe": "hospital_relic_packed"
+          },
+          "records_state": {
+            "archivist": {
+              "elapsed": 0.0,
+              "index": -1.0,
+              "phase": "idle"
+            },
+            "files": {
+              "archive_index": "office:0",
+              "case_death": "office:10",
+              "case_discharge": "office:10",
+              "case_fees": "office:10",
+              "case_removal": "office:5",
+              "complaint_original": "office:7",
+              "complaint_rewrite": "office:7",
+              "laundry_stub": "office:6"
+            },
+            "guard": {
+              "done": false,
+              "elapsed": 0.0,
+              "last_room": "",
+              "last_seen": [],
+              "phase": "idle",
+              "target": ""
+            },
+            "patient_gone": false,
+            "patient_silenced": false,
+            "read": [
+              "case_death",
+              "case_fees",
+              "case_discharge",
+              "laundry_stub",
+              "complaint_original",
+              "complaint_rewrite"
+            ],
+            "report": {},
+            "stopped": {}
+          },
+          "refused": false,
+          "registered": false,
+          "regrab_elapsed": 105.33333333333,
+          "relic_context": {
+            "source_attempt": 1.0
+          },
+          "relic_delivery": {
+            "bag_departed": true,
+            "bag_id": "hospital_relic_container",
+            "exit_pos": [
+              1.23446941375732,
+              0.231061279773712
+            ],
+            "exit_room": "lobby",
+            "items": [
+              "family_photo",
+              "patient_shoe"
+            ],
+            "packed_receipts": {
+              "family_photo": "hospital:1:relic_packed:family_photo",
+              "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+            },
+            "ready": true,
+            "source_attempt": 1.0,
+            "source_owners": {
+              "family_photo": "wheelchair_footplate",
+              "patient_shoe": "lobby_floor"
+            },
+            "transport_receipt": "hospital:1:patient_transport",
+            "version": 1.0
+          },
+          "relic_packing": {
+            "actor": "porter",
+            "elapsed": 0.0,
+            "last_cancel": "",
+            "phase": "done",
+            "room": "lobby"
+          },
+          "room_left": {
+            "bedroom": 0.0,
+            "clinic": 102.066666666663,
+            "lobby": 70.8999999999985,
+            "office": 68.933333333332,
+            "pharmacy": 24.2000000000004
+          },
+          "sample": false,
+          "suspended_body": {},
+          "swallowed": false,
+          "transport": {},
+          "transport_relics": {
+            "family_photo": {
+              "accessible": false,
+              "pos": [
+                1.24219167232513,
+                0.233753338456154
+              ],
+              "room": "lobby",
+              "source_attempt": 1.0,
+              "support": "wheelchair_footplate"
+            },
+            "patient_shoe": {
+              "accessible": false,
+              "pos": [
+                1.24219167232513,
+                0.233753338456154
+              ],
+              "room": "lobby",
+              "source_attempt": 1.0,
+              "support": "lobby_floor"
+            }
+          },
+          "visit": "",
+          "wheelchair_gone": true,
+          "wheelchair_order": true
+        },
+        "clock": 60.9666666666658,
+        "cup_full": false,
+        "diagnosed": false,
+        "dispensed": false,
+        "exam": {},
+        "groups": {
+          "chief": {
+            "checks": 2.0,
+            "drawn": false,
+            "last_check_clock": 43.7666666666667,
+            "pending": false
+          },
+          "cleaner": {
+            "checks": 1.0,
+            "drawn": false,
+            "last_check_clock": 45.0333333333333,
+            "pending": false
+          },
+          "clinic": {
+            "checks": 0.0,
+            "drawn": false,
+            "pending": false
+          },
+          "corner": {
+            "checks": 1.0,
+            "drawn": false,
+            "last_check_clock": 16.4,
+            "pending": false
+          },
+          "isolation": {
+            "checks": 0.0,
+            "drawn": false,
+            "pending": false
+          },
+          "office": {
+            "checks": 0.0,
+            "drawn": false,
+            "pending": false
+          },
+          "orderly": {
+            "checks": 0.0,
+            "drawn": false,
+            "pending": false
+          },
+          "patient": {
+            "checks": 0.0,
+            "drawn": false,
+            "pending": false
+          },
+          "pharmacy": {
+            "checks": 1.0,
+            "drawn": true,
+            "last_check_clock": 12.7,
+            "pending": false
+          },
+          "postop": {
+            "checks": 0.0,
+            "drawn": false,
+            "pending": false
+          },
+          "registration": {
+            "checks": 0.0,
+            "drawn": false,
+            "pending": false
+          },
+          "therapy": {
+            "checks": 0.0,
+            "drawn": false,
+            "pending": false
+          },
+          "transport": {
+            "checks": 2.0,
+            "drawn": false,
+            "last_check_clock": 43.7666666666667,
+            "pending": false
+          },
+          "work": {
+            "checks": 0.0,
+            "drawn": false,
+            "pending": false
+          }
+        },
+        "holder": "",
+        "intake_state": {
+          "delivery": {
+            "bag_departed": true,
+            "bag_id": "hospital_relic_container",
+            "bag_number": null,
+            "exit_pos": [
+              1.23446941375732,
+              0.231061279773712
+            ],
+            "exit_room": "lobby",
+            "items": [
+              "family_photo",
+              "patient_shoe"
+            ],
+            "packed_receipts": {
+              "family_photo": "hospital:1:relic_packed:family_photo",
+              "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+            },
+            "source_attempt": 1.0,
+            "source_owners": {
+              "family_photo": "wheelchair_footplate",
+              "patient_shoe": "lobby_floor"
+            },
+            "transport_receipt": "hospital:1:patient_transport",
+            "version": 1.0
+          },
+          "elapsed": 0.0,
+          "last_wait": "receiver_absent_or_busy",
+          "phase": "approach",
+          "phase_progress": 0.0,
+          "pos": [
+            4.36999988555908,
+            0.239999994635582
+          ],
+          "read": {},
+          "room": "lobby"
+        },
+        "isolation_state": {
+          "closed_elapsed": 0.0,
+          "door_closed": false,
+          "door_progress": 0.0,
+          "elapsed": 0.0,
+          "evaded": false,
+          "grab_invalidated": false,
+          "handled": {},
+          "hero_attempted": false,
+          "hero_held": false,
+          "last_pos": [],
+          "last_room": "",
+          "open_from": 0.0,
+          "order": {},
+          "outcome": "",
+          "phase": "idle",
+          "target": "",
+          "waiting": "",
+          "was_closed": false
+        },
+        "medicine_stop": 0.0,
+        "nurse_duty_state": {
+          "completed": {
+            "prior_copy:patient_departure:1": "asylum_duty:1:prior_copy:patient_departure:1",
+            "prior_copy:wheelchair_order:1": "asylum_duty:1:prior_copy:wheelchair_order:1"
+          },
+          "dialogue_sources": [],
+          "duty_wait_seconds": null,
+          "entries": [
+            {
+              "category": null,
+              "clipped": true,
+              "copied_by": "med_nurse",
+              "copy_attempt": 1.0,
+              "eyewitness_origin": false,
+              "id": "asylum_duty:1:prior_copy:wheelchair_order:1",
+              "number": null,
+              "number_checked": true,
+              "number_match": null,
+              "original_owner_changed": false,
+              "own_swallow_witness": false,
+              "physical_id": "asylum_prior_copy",
+              "physical_owner": "office:6",
+              "pos": [
+                1.0,
+                2.38000011444092
+              ],
+              "read_completed": true,
+              "room": "office",
+              "source_actor": "医院记录",
+              "source_attempt": 1.0,
+              "source_id": "wheelchair_order",
+              "source_kind": "prior_copy",
+              "source_snapshot": {
+                "attempt": 1.0,
+                "id": "wheelchair_order",
+                "source": "医院记录",
+                "text": "导诊护士实际完成轮椅患者自己的转运手续；不使用角色核号表替代。"
+              },
+              "source_text": "导诊护士实际完成轮椅患者自己的转运手续；不使用角色核号表替代。",
+              "subject_identity": "",
+              "written": true
+            },
+            {
+              "category": null,
+              "clipped": true,
+              "copied_by": "med_nurse",
+              "copy_attempt": 1.0,
+              "eyewitness_origin": false,
+              "id": "asylum_duty:1:prior_copy:patient_departure:1",
+              "number": null,
+              "number_checked": true,
+              "number_match": null,
+              "original_owner_changed": false,
+              "own_swallow_witness": false,
+              "physical_id": "asylum_prior_copy",
+              "physical_owner": "office:6",
+              "pos": [
+                1.0,
+                2.38000011444092
+              ],
+              "read_completed": true,
+              "room": "office",
+              "source_actor": "医院记录",
+              "source_attempt": 1.0,
+              "source_id": "patient_departure",
+              "source_kind": "prior_copy",
+              "source_snapshot": {
+                "attempt": 1.0,
+                "id": "patient_departure",
+                "source": "医院记录",
+                "text": "轮椅患者：自行离院（机构记载，与真实强制转运分账）。"
+              },
+              "source_text": "轮椅患者：自行离院（机构记载，与真实强制转运分账）。",
+              "subject_identity": "",
+              "written": true
+            }
+          ],
+          "job": {},
+          "posted": true,
+          "read_entries": [],
+          "swallow_pending": {},
+          "swallow_written": false
+        },
+        "observations_state": {
+          "active": {},
+          "completed": {
+            "asylum_bed2_erased_name": "asylum-observations-2:0105cca0b4e4175e",
+            "asylum_stair_rail_wear": "asylum-observations-2:0105cca0b4e4175e"
+          },
+          "last_cancel": "",
+          "links": {},
+          "read": {
+            "asylum_bed2_erased_name": {
+              "attempt": 1.0,
+              "fields": {
+                "bed_number": null,
+                "erased_name": null
+              },
+              "operation": "static",
+              "revision": "asylum-observations-2:0105cca0b4e4175e",
+              "room": "double_ward",
+              "source": "S3:P973/P996–998"
+            },
+            "asylum_stair_rail_wear": {
+              "attempt": 1.0,
+              "fields": {},
+              "operation": "static",
+              "revision": "asylum-observations-2:0105cca0b4e4175e",
+              "room": "stairs",
+              "source": "S3:P786–787"
+            }
+          }
+        },
+        "order_delivered": false,
+        "order_source": "",
+        "order_written": false,
+        "receipts": {
+          "asylum:1:nurse_door:corridor:stairs": "asylum_nurse_crossed_door",
+          "asylum:1:nurse_door:lobby:office": "asylum_nurse_crossed_door",
+          "asylum:1:nurse_door:lobby:stairs": "asylum_nurse_crossed_door",
+          "asylum:1:nurse_door:office:lobby": "asylum_nurse_crossed_door",
+          "asylum:1:nurse_door:pharmacy:lobby": "asylum_nurse_crossed_door",
+          "asylum:1:nurse_door:stairs:corridor": "asylum_nurse_crossed_door",
+          "asylum:1:nurse_door:stairs:lobby": "asylum_nurse_crossed_door",
+          "asylum:1:nurse_duty_clipped:prior_copy:patient_departure:1": "asylum_nurse_duty_clipped",
+          "asylum:1:nurse_duty_clipped:prior_copy:wheelchair_order:1": "asylum_nurse_duty_clipped",
+          "asylum:1:nurse_source_read:prior_copy:patient_departure:1": "asylum_nurse_source_read",
+          "asylum:1:nurse_source_read:prior_copy:wheelchair_order:1": "asylum_nurse_source_read",
+          "asylum:1:observe:asylum_bed2_erased_name:asylum-observations-2:0105cca0b4e4175e": "asylum_observation",
+          "asylum:1:observe:asylum_stair_rail_wear:asylum-observations-2:0105cca0b4e4175e": "asylum_observation",
+          "asylum:1:relic_arrival:hospital_relic_container": "asylum_relic_delivery_arrived",
+          "asylum:1:search_comment:double_ward:3": "asylum_search_feedback",
+          "asylum:1:search_comment:double_ward:5": "asylum_search_feedback",
+          "asylum:1:search_comment:double_ward:6": "asylum_search_feedback",
+          "asylum:1:search_comment:stairs:0": "asylum_search_feedback"
+        },
+        "records_state": {
+          "archivist": {
+            "elapsed": 0.0,
+            "phase": "idle"
+          },
+          "files": {
+            "asylum_archive_index": "office:0",
+            "asylum_current_report": "office:10",
+            "asylum_death_page": "office:10",
+            "asylum_duty_roster": "office:6",
+            "asylum_fee_page": "office:10",
+            "asylum_no_external_injury": "office:5",
+            "asylum_prior_copy": "office:6",
+            "asylum_scar_photo": "office:5"
+          },
+          "guard": {
+            "done": false,
+            "elapsed": 0.0,
+            "last_room": "",
+            "last_seen": [],
+            "phase": "idle",
+            "target": ""
+          },
+          "inherited_patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "inherited_patient_records": {
+            "archivist": {
+              "elapsed": 0.0,
+              "index": -1.0,
+              "phase": "idle"
+            },
+            "files": {
+              "archive_index": "office:0",
+              "case_death": "office:10",
+              "case_discharge": "office:10",
+              "case_fees": "office:10",
+              "case_removal": "office:5",
+              "complaint_original": "office:7",
+              "complaint_rewrite": "office:7",
+              "laundry_stub": "office:6"
+            },
+            "guard": {
+              "done": false,
+              "elapsed": 0.0,
+              "last_room": "",
+              "last_seen": [],
+              "phase": "idle",
+              "target": ""
+            },
+            "patient_gone": false,
+            "patient_silenced": false,
+            "read": [
+              "case_death",
+              "case_fees",
+              "case_discharge",
+              "laundry_stub",
+              "complaint_original",
+              "complaint_rewrite"
+            ],
+            "report": {},
+            "stopped": {}
+          },
+          "patient_anomaly_seen": false,
+          "patient_delivered": false,
+          "patient_silenced": false,
+          "read": [],
+          "reading": {},
+          "report": {},
+          "serial": 0.0,
+          "stopped": {}
+        },
+        "refused": false,
+        "registered": false,
+        "registration_state": {
+          "asked": false,
+          "auto_started": false,
+          "last_interrupt": "",
+          "phase": "idle",
+          "read": false,
+          "reply_pending": false,
+          "reply_received": false,
+          "written": false
+        },
+        "regrab_elapsed": 61.7666666666658,
+        "room_left": {
+          "bathroom": 55.1333333333328,
+          "corridor": 58.2333333333326,
+          "double_ward": 43.7666666666667,
+          "lobby": 0.0,
+          "stairs": 12.7
+        },
+        "staff_targets": {},
+        "swallowed": false,
+        "trace_events": {
+          "active": {},
+          "cleaner": {
+            "elapsed": 0.0,
+            "phase": "idle",
+            "relic_index": 0.0,
+            "wash_index": 0.0
+          },
+          "conversation": {
+            "complete": false,
+            "elapsed": 0.0,
+            "phase": "idle",
+            "shown": {},
+            "stopped": false
+          },
+          "corner": {
+            "done": false,
+            "elapsed": 0.0,
+            "phase": "idle",
+            "witness": false
+          },
+          "corpse": {
+            "covered": false,
+            "identity": "independent_deceased",
+            "moved_out": false,
+            "on_board": false,
+            "pos": [
+              4.2,
+              1.1
+            ],
+            "room": "bathroom"
+          },
+          "read": {},
+          "screen_closed": false,
+          "washed": []
+        },
+        "ward_events": {
+          "chief_internal": {
+            "elapsed": 0.0,
+            "last_pos": [],
+            "last_room": "corridor",
+            "phase": "idle",
+            "report_id": ""
+          },
+          "clamp": {
+            "attempted": false,
+            "elapsed": 0.0,
+            "hand_out": false,
+            "hold_invalidated": false,
+            "phase": "idle",
+            "retract_left": 0.0
+          },
+          "ordinary_job": {
+            "elapsed": 0.0,
+            "full_witness": false,
+            "holding": false,
+            "phase": "idle",
+            "report_id": "",
+            "target": ""
+          },
+          "postop": {
+            "elapsed": 0.0,
+            "hero_saw_wound": false,
+            "informer_elapsed": 0.0,
+            "informer_phase": "privacy_walk",
+            "informer_saw_wound": false,
+            "last_pos": [],
+            "last_room": "activity",
+            "phase": "idle",
+            "report_elapsed": 0.0,
+            "report_id": "",
+            "report_phase": "idle",
+            "wound_visible": false
+          },
+          "reports": [],
+          "therapy": {
+            "elapsed": 0.0,
+            "heard_original": false,
+            "heard_retraction": false,
+            "original_spoken": false,
+            "paper": "therapist",
+            "phase": "idle",
+            "recording": false,
+            "retraction_spoken": false,
+            "saw_deletion": false,
+            "seat_required": false,
+            "segment_exists": false,
+            "signature_asset": {
+              "history": [],
+              "holder": "therapist",
+              "id": "asylum_signature_record",
+              "version": 1.0
+            },
+            "speaker_number": null,
+            "statement_asset": {
+              "exposed": false,
+              "history": [],
+              "holder": "therapist",
+              "id": "asylum_statement_paper",
+              "version": 1.0
+            }
+          },
+          "transfer": {
+            "band_drop": {},
+            "bed_pos": [],
+            "bed_room": "corridor",
+            "brake": true,
+            "delivered": false,
+            "elapsed": 0.0,
+            "hand_done": false,
+            "isolation_authorized": false,
+            "order": "porter",
+            "patient_number": null,
+            "phase": "idle",
+            "seen": []
+          },
+          "work": {
+            "batch": null,
+            "box": "none",
+            "box_asset": {
+              "history": [],
+              "id": "asylum_work_box",
+              "version": 1.0
+            },
+            "elapsed": 0.0,
+            "label": "rack",
+            "paper": "rack",
+            "phase": "take_paper",
+            "products": 0.0,
+            "table": "workshop:1"
+          }
+        },
+        "ward_window_state": {
+          "action": {},
+          "last_cancel": "",
+          "open": false,
+          "serial": 0.0
+        },
+        "wrist_checked": false,
+        "wrist_done": false
+      },
+      "hospital": {
+        "actors": {
+          "archivist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.25,
+              0.239999994635582
+            ],
+            "room": "office",
+            "route": []
+          },
+          "assistant": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "doctor": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "clinic",
+            "route": []
+          },
+          "guard": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              0.75,
+              0.239999994635582
+            ],
+            "room": "office",
+            "route": []
+          },
+          "guide": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.57020127773285,
+              0.22570213675499
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                1.59219169616699,
+                0.233753338456154
+              ]
+            ]
+          },
+          "nurse": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "ward",
+            "route": []
+          },
+          "patient": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "absent",
+            "pos": [
+              4.4,
+              0.35
+            ],
+            "room": "lobby",
+            "route": []
+          },
+          "pharmacist": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.25,
+              0.239999994635582
+            ],
+            "room": "pharmacy",
+            "route": []
+          },
+          "porter": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "idle",
+            "pos": [
+              1.23446941375732,
+              0.231061279773712
+            ],
+            "room": "lobby",
+            "route": [
+              [
+                1.25,
+                0.200000002980232
+              ]
+            ]
+          },
+          "wheelchair": {
+            "elapsed": 0.0,
+            "left": 0.0,
+            "phase": "gone",
+            "pos": [
+              1.24219167232513,
+              0.233753338456154
+            ],
+            "room": "lobby",
+            "route": []
+          }
+        },
+        "bag": "ward",
+        "bag_order": false,
+        "bandage": 0.0,
+        "batches": {
+          "lobby": 68.9666666666653,
+          "office": 26.2000000000005,
+          "pharmacy": 9.13333333333331
+        },
+        "body": {},
+        "clock": 104.53333333333,
+        "dispensed": false,
+        "exam_done": false,
+        "groups": {
+          "clinic": {
+            "checks": 1.0,
+            "drawn": false,
+            "pending": false
+          },
+          "lobby": {
+            "checks": 2.0,
+            "drawn": true,
+            "pending": false
+          },
+          "nurse": {
+            "checks": 0.0,
+            "drawn": false,
+            "pending": false
+          },
+          "office": {
+            "checks": 1.0,
+            "drawn": true,
+            "pending": false
+          },
+          "patient": {
+            "checks": 3.0,
+            "drawn": true,
+            "pending": true
+          },
+          "pharmacist": {
+            "checks": 1.0,
+            "drawn": true,
+            "pending": false
+          }
+        },
+        "healed": false,
+        "holder": "",
+        "known_pages": [
+          "laundry_stub",
+          "case_death",
+          "case_fees",
+          "case_discharge",
+          "complaint_original",
+          "complaint_rewrite",
+          "case_removal",
+          "donor_screening"
+        ],
+        "medicine_stop": 0.0,
+        "nurse_checked": false,
+        "observation_state": {
+          "active": {},
+          "completed": {
+            "case_death": "hospital-observations-1",
+            "case_discharge": "hospital-observations-1",
+            "case_fees": "hospital-observations-1",
+            "case_removal": "hospital-observations-1",
+            "donor_screening": "hospital-observations-1",
+            "laundry_stub": "hospital-observations-1/pending"
+          },
+          "links": {},
+          "read": {
+            "case_death": {
+              "fields": {
+                "case_number": null
+              },
+              "revision": "hospital-observations-1",
+              "room": "office",
+              "source": "S3:T17R4",
+              "visit_reference": ""
+            },
+            "case_discharge": {
+              "fields": {
+                "case_number": null
+              },
+              "revision": "hospital-observations-1",
+              "room": "office",
+              "source": "S3:T17R4",
+              "visit_reference": ""
+            },
+            "case_fees": {
+              "fields": {
+                "amount": null,
+                "case_number": null
+              },
+              "revision": "hospital-observations-1",
+              "room": "office",
+              "source": "S3:T17R4",
+              "visit_reference": ""
+            },
+            "case_removal": {
+              "fields": {
+                "case_number": null
+              },
+              "revision": "hospital-observations-1",
+              "room": "office",
+              "source": "S3:T17R4",
+              "visit_reference": ""
+            },
+            "donor_screening": {
+              "fields": {
+                "case_number": null
+              },
+              "revision": "hospital-observations-1",
+              "room": "clinic",
+              "source": "S3:P469/T12R4",
+              "visit_reference": ""
+            },
+            "laundry_stub": {
+              "fields": {
+                "bag_number": null,
+                "recipient": null
+              },
+              "revision": "hospital-observations-1/pending",
+              "room": "office",
+              "source": "S3:P392/T17R3",
+              "visit_reference": ""
+            }
+          }
+        },
+        "prescribed": false,
+        "prescription_visit": "",
+        "receipts": {
+          "hospital:1:no_key:clinic:0": "hospital_search_feedback",
+          "hospital:1:no_key:clinic:1": "hospital_search_feedback",
+          "hospital:1:no_key:clinic:5": "hospital_search_feedback",
+          "hospital:1:no_key:lobby:1": "hospital_search_feedback",
+          "hospital:1:no_key:office:1": "hospital_search_feedback",
+          "hospital:1:no_key:office:10": "hospital_search_feedback",
+          "hospital:1:no_key:office:2": "hospital_search_feedback",
+          "hospital:1:no_key:office:6": "hospital_search_feedback",
+          "hospital:1:no_key:office:7": "hospital_search_feedback",
+          "hospital:1:no_key:pharmacy:2": "hospital_search_feedback",
+          "hospital:1:no_key:pharmacy:6": "hospital_search_feedback",
+          "hospital:1:observe:case_death:hospital-observations-1": "hospital_observation",
+          "hospital:1:observe:case_discharge:hospital-observations-1": "hospital_observation",
+          "hospital:1:observe:case_fees:hospital-observations-1": "hospital_observation",
+          "hospital:1:observe:case_removal:hospital-observations-1": "hospital_observation",
+          "hospital:1:observe:donor_screening:hospital-observations-1": "hospital_observation",
+          "hospital:1:observe:laundry_stub:hospital-observations-1/pending": "hospital_observation",
+          "hospital:1:patient_order": "patient_transport_order",
+          "hospital:1:patient_relics_fell": "hospital_relics_fell",
+          "hospital:1:patient_transport": "patient_transport_completed",
+          "hospital:1:relic_packed:family_photo": "hospital_relic_packed",
+          "hospital:1:relic_packed:patient_shoe": "hospital_relic_packed"
+        },
+        "records_state": {
+          "archivist": {
+            "elapsed": 0.0,
+            "index": -1.0,
+            "phase": "idle"
+          },
+          "files": {
+            "archive_index": "office:0",
+            "case_death": "office:10",
+            "case_discharge": "office:10",
+            "case_fees": "office:10",
+            "case_removal": "office:5",
+            "complaint_original": "office:7",
+            "complaint_rewrite": "office:7",
+            "laundry_stub": "office:6"
+          },
+          "guard": {
+            "done": false,
+            "elapsed": 0.0,
+            "last_room": "",
+            "last_seen": [],
+            "phase": "idle",
+            "target": ""
+          },
+          "patient_gone": false,
+          "patient_silenced": false,
+          "read": [
+            "case_death",
+            "case_fees",
+            "case_discharge",
+            "laundry_stub",
+            "complaint_original",
+            "complaint_rewrite"
+          ],
+          "report": {},
+          "stopped": {}
+        },
+        "refused": false,
+        "registered": false,
+        "regrab_elapsed": 105.33333333333,
+        "relic_context": {
+          "source_attempt": 1.0
+        },
+        "relic_delivery": {
+          "bag_departed": true,
+          "bag_id": "hospital_relic_container",
+          "exit_pos": [
+            1.23446941375732,
+            0.231061279773712
+          ],
+          "exit_room": "lobby",
+          "items": [
+            "family_photo",
+            "patient_shoe"
+          ],
+          "packed_receipts": {
+            "family_photo": "hospital:1:relic_packed:family_photo",
+            "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+          },
+          "ready": true,
+          "source_attempt": 1.0,
+          "source_owners": {
+            "family_photo": "wheelchair_footplate",
+            "patient_shoe": "lobby_floor"
+          },
+          "transport_receipt": "hospital:1:patient_transport",
+          "version": 1.0
+        },
+        "relic_packing": {
+          "actor": "porter",
+          "elapsed": 0.0,
+          "last_cancel": "",
+          "phase": "done",
+          "room": "lobby"
+        },
+        "room_left": {
+          "bedroom": 0.0,
+          "clinic": 102.066666666663,
+          "lobby": 70.8999999999985,
+          "office": 68.933333333332,
+          "pharmacy": 24.2000000000004
+        },
+        "sample": false,
+        "suspended_body": {},
+        "swallowed": false,
+        "transport": {},
+        "transport_relics": {
+          "family_photo": {
+            "accessible": false,
+            "pos": [
+              1.24219167232513,
+              0.233753338456154
+            ],
+            "room": "lobby",
+            "source_attempt": 1.0,
+            "support": "wheelchair_footplate"
+          },
+          "patient_shoe": {
+            "accessible": false,
+            "pos": [
+              1.24219167232513,
+              0.233753338456154
+            ],
+            "room": "lobby",
+            "source_attempt": 1.0,
+            "support": "lobby_floor"
+          }
+        },
+        "visit": "",
+        "wheelchair_gone": true,
+        "wheelchair_order": true
+      }
+    },
+    "clamp": {
+      "attempted": false,
+      "elapsed": 0.0,
+      "hand_out": false,
+      "hurt": false,
+      "pain_light": false,
+      "phase": "idle",
+      "retract_left": 0.0
+    },
+    "clock": 0.0,
+    "completed_observations": {},
+    "groups": {
+      "backward": {
+        "checks": 1,
+        "drawn": true,
+        "pending": true
+      },
+      "blindfold": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "double_face": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "dual_head": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "face_press": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "faceless": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "misaligned": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "repeater": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "reverse": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "stitched": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "twitch": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      }
+    },
+    "holder": "",
+    "mimic": {
+      "attempted": false,
+      "elapsed": 0.0,
+      "phase": "idle",
+      "source": {},
+      "witnessed": false,
+      "written": false
+    },
+    "observation": {},
+    "observed_fields": {},
+    "paper": {
+      "attempted": false,
+      "elapsed": 0.0,
+      "gripped": false,
+      "original": {
+        "injury": null,
+        "name": null,
+        "number": null,
+        "signature": null,
+        "source_event": {}
+      },
+      "phase": "idle",
+      "progress": 0.0,
+      "read": false,
+      "read_fields": {},
+      "remaining": "whole",
+      "revised": {
+        "actual_records": [
+          {
+            "attempt": 1.0,
+            "id": "wheelchair_order",
+            "source": "医院记录",
+            "text": "导诊护士实际完成轮椅患者自己的转运手续；不使用角色核号表替代。"
+          },
+          {
+            "attempt": 1.0,
+            "id": "patient_departure",
+            "source": "医院记录",
+            "text": "轮椅患者：自行离院（机构记载，与真实强制转运分账）。"
+          },
+          {
+            "attempt": 1.0,
+            "id": "asylum_duty:1:prior_copy:wheelchair_order:1",
+            "source": "精神病院记录",
+            "text": "病区护士值班表转抄；来源：wheelchair_order。原记录：导诊护士实际完成轮椅患者自己的转运手续；不使用角色核号表替代。。分类：未定。"
+          },
+          {
+            "attempt": 1.0,
+            "id": "asylum_duty:1:prior_copy:patient_departure:1",
+            "source": "精神病院记录",
+            "text": "病区护士值班表转抄；来源：patient_departure。原记录：轮椅患者：自行离院（机构记载，与真实强制转运分账）。。分类：未定。"
+          }
+        ],
+        "injury": null,
+        "name": null,
+        "number": null,
+        "signature": null,
+        "source_event_id": null
+      },
+      "source": {},
+      "taken": false
+    },
+    "receipts": {},
+    "regrab_elapsed": 0.8,
+    "room_left": {},
+    "upper_state": {
+      "bridge": {
+        "elapsed": 0.0,
+        "heard": [],
+        "phase": "idle",
+        "playback": 0,
+        "source": {},
+        "spoken": []
+      },
+      "face": {
+        "attempted": false,
+        "contact": false,
+        "elapsed": 0.0,
+        "had_body": false,
+        "phase": "idle"
+      },
+      "identity": {
+        "back": false,
+        "elapsed": 0.0,
+        "front": false,
+        "left_result": false,
+        "phase": "idle",
+        "right_result": false,
+        "turn_started": false
+      },
+      "index": {
+        "attempted": false,
+        "elapsed": 0.0,
+        "open": false,
+        "phase": "idle",
+        "seen_removed": false,
+        "seen_start": false
+      },
+      "rhythm": {
+        "bypass": false,
+        "count": 0,
+        "direction": 1,
+        "elapsed": 0.0,
+        "from": [],
+        "phase": "gap",
+        "to": [],
+        "wait_cycle": -1,
+        "waiting": false
+      },
+      "switch": {
+        "attempted": false,
+        "await_landmark": false,
+        "elapsed": 0.0,
+        "phase": "idle",
+        "route": [],
+        "steps": []
+      }
+    },
+    "video": {
+      "elapsed": 0.0,
+      "mask_count": 0,
+      "overlay": false,
+      "overlay_seen": false,
+      "phase": "idle",
+      "playback": 0.0,
+      "playing": false,
+      "source": {}
+    }
+  },
+  "death_left": 0.0,
+  "deferred_targets": {},
+  "destination": "cortex_exit",
+  "dialogue": [],
+  "drawer_open": {},
+  "family_state": {
+    "actions": 20.0,
+    "auto_food_used": false,
+    "blood_door": false,
+    "checks": {
+      "ordinary:search:1:2": true
+    },
+    "collapse": {},
+    "dialogue_choices": {},
+    "eating": {},
+    "eating_serial": 0.0,
+    "extra_checked": false,
+    "fact_cursor": 94.0,
+    "father": {
+      "branch": "",
+      "elapsed": 0.0,
+      "phase": "absent",
+      "pos": [
+        4.6,
+        0.22
+      ],
+      "present": false,
+      "route": [],
+      "used": false
+    },
+    "food_types": {},
+    "gift": [],
+    "gift_pick": 0.0,
+    "gift_roll": -1.0,
+    "gift_wait": 0.0,
+    "hidden_pending": false,
+    "inventory": [],
+    "mother": {
+      "branch": "",
+      "elapsed": 0.0,
+      "phase": "absent",
+      "pos": [
+        4.6,
+        0.22
+      ],
+      "present": false,
+      "route": [],
+      "used": false
+    },
+    "mother_rest": false,
+    "picking_gift": false,
+    "pressure": 0.0,
+    "queued": [],
+    "rescued": false,
+    "spawn_order": [],
+    "startle": {},
+    "system_prompts": {}
+  },
+  "first_damage": false,
+  "first_damage_pending": false,
+  "footstep_left": 0.45,
+  "footstep_serial": 127,
+  "hero_facing": [
+    0.868240475654602,
+    0.49614354968071
+  ],
+  "hero_pos": [
+    0.949999988079071,
+    2.90000009536743
+  ],
+  "hero_state": "idle",
+  "hidden_state": {},
+  "home_state": {
+    "blocked_left": 0.0,
+    "blocked_search": "",
+    "cat": {
+      "left": 0.0,
+      "phase": "occupy",
+      "point": 4.0,
+      "pos": [
+        2.5,
+        2.72000002861023
+      ],
+      "present": false,
+      "rounds": 0.0,
+      "route": []
+    },
+    "counted": {
+      "search:1:1": true,
+      "search:1:2": true,
+      "search:1:3": true
+    },
+    "dialogue_choices": {
+      "S1_START:attempt": 8.0
+    },
+    "dialogue_played": {
+      "S1_START:attempt": true
+    },
+    "dog": {
+      "alive": true,
+      "left": 0.0,
+      "phase": "idle",
+      "pos": [
+        3.1,
+        1.6
+      ],
+      "present": false,
+      "remaining": 3.0,
+      "route": [],
+      "target": -1.0
+    },
+    "dog_serial": 0.0,
+    "fighting": false,
+    "key_drop": [],
+    "tracked_search": "search:1:3"
+  },
+  "hospital_state": {
+    "actors": {
+      "archivist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "idle",
+        "pos": [
+          1.25,
+          0.239999994635582
+        ],
+        "room": "office",
+        "route": []
+      },
+      "assistant": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "doctor": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "guard": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "idle",
+        "pos": [
+          0.75,
+          0.239999994635582
+        ],
+        "room": "office",
+        "route": []
+      },
+      "guide": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "idle",
+        "pos": [
+          1.57020127773285,
+          0.22570213675499
+        ],
+        "room": "lobby",
+        "route": [
+          [
+            1.59219169616699,
+            0.233753338456154
+          ]
+        ]
+      },
+      "nurse": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "ward",
+        "route": []
+      },
+      "patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.4,
+          0.35
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "pharmacist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "idle",
+        "pos": [
+          1.25,
+          0.239999994635582
+        ],
+        "room": "pharmacy",
+        "route": []
+      },
+      "porter": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "idle",
+        "pos": [
+          1.23446941375732,
+          0.231061279773712
+        ],
+        "room": "lobby",
+        "route": [
+          [
+            1.25,
+            0.200000002980232
+          ]
+        ]
+      },
+      "wheelchair": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "gone",
+        "pos": [
+          1.24219167232513,
+          0.233753338456154
+        ],
+        "room": "lobby",
+        "route": []
+      }
+    },
+    "bag": "ward",
+    "bag_order": false,
+    "bandage": 0.0,
+    "batches": {
+      "lobby": 68.9666666666653,
+      "office": 26.2000000000005,
+      "pharmacy": 9.13333333333331
+    },
+    "body": {},
+    "clock": 104.53333333333,
+    "dispensed": false,
+    "exam_done": false,
+    "groups": {
+      "clinic": {
+        "checks": 1.0,
+        "drawn": false,
+        "pending": false
+      },
+      "lobby": {
+        "checks": 2.0,
+        "drawn": true,
+        "pending": false
+      },
+      "nurse": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "office": {
+        "checks": 1.0,
+        "drawn": true,
+        "pending": false
+      },
+      "patient": {
+        "checks": 3.0,
+        "drawn": true,
+        "pending": true
+      },
+      "pharmacist": {
+        "checks": 1.0,
+        "drawn": true,
+        "pending": false
+      }
+    },
+    "healed": false,
+    "holder": "",
+    "known_pages": [
+      "laundry_stub",
+      "case_death",
+      "case_fees",
+      "case_discharge",
+      "complaint_original",
+      "complaint_rewrite",
+      "case_removal",
+      "donor_screening"
+    ],
+    "medicine_stop": 0.0,
+    "nurse_checked": false,
+    "observation_state": {
+      "active": {},
+      "completed": {
+        "case_death": "hospital-observations-1",
+        "case_discharge": "hospital-observations-1",
+        "case_fees": "hospital-observations-1",
+        "case_removal": "hospital-observations-1",
+        "donor_screening": "hospital-observations-1",
+        "laundry_stub": "hospital-observations-1/pending"
+      },
+      "links": {},
+      "read": {
+        "case_death": {
+          "fields": {
+            "case_number": null
+          },
+          "revision": "hospital-observations-1",
+          "room": "office",
+          "source": "S3:T17R4",
+          "visit_reference": ""
+        },
+        "case_discharge": {
+          "fields": {
+            "case_number": null
+          },
+          "revision": "hospital-observations-1",
+          "room": "office",
+          "source": "S3:T17R4",
+          "visit_reference": ""
+        },
+        "case_fees": {
+          "fields": {
+            "amount": null,
+            "case_number": null
+          },
+          "revision": "hospital-observations-1",
+          "room": "office",
+          "source": "S3:T17R4",
+          "visit_reference": ""
+        },
+        "case_removal": {
+          "fields": {
+            "case_number": null
+          },
+          "revision": "hospital-observations-1",
+          "room": "office",
+          "source": "S3:T17R4",
+          "visit_reference": ""
+        },
+        "donor_screening": {
+          "fields": {
+            "case_number": null
+          },
+          "revision": "hospital-observations-1",
+          "room": "clinic",
+          "source": "S3:P469/T12R4",
+          "visit_reference": ""
+        },
+        "laundry_stub": {
+          "fields": {
+            "bag_number": null,
+            "recipient": null
+          },
+          "revision": "hospital-observations-1/pending",
+          "room": "office",
+          "source": "S3:P392/T17R3",
+          "visit_reference": ""
+        }
+      }
+    },
+    "prescribed": false,
+    "prescription_visit": "",
+    "receipts": {
+      "hospital:1:no_key:clinic:0": "hospital_search_feedback",
+      "hospital:1:no_key:clinic:1": "hospital_search_feedback",
+      "hospital:1:no_key:clinic:5": "hospital_search_feedback",
+      "hospital:1:no_key:lobby:1": "hospital_search_feedback",
+      "hospital:1:no_key:office:1": "hospital_search_feedback",
+      "hospital:1:no_key:office:10": "hospital_search_feedback",
+      "hospital:1:no_key:office:2": "hospital_search_feedback",
+      "hospital:1:no_key:office:6": "hospital_search_feedback",
+      "hospital:1:no_key:office:7": "hospital_search_feedback",
+      "hospital:1:no_key:pharmacy:2": "hospital_search_feedback",
+      "hospital:1:no_key:pharmacy:6": "hospital_search_feedback",
+      "hospital:1:observe:case_death:hospital-observations-1": "hospital_observation",
+      "hospital:1:observe:case_discharge:hospital-observations-1": "hospital_observation",
+      "hospital:1:observe:case_fees:hospital-observations-1": "hospital_observation",
+      "hospital:1:observe:case_removal:hospital-observations-1": "hospital_observation",
+      "hospital:1:observe:donor_screening:hospital-observations-1": "hospital_observation",
+      "hospital:1:observe:laundry_stub:hospital-observations-1/pending": "hospital_observation",
+      "hospital:1:patient_order": "patient_transport_order",
+      "hospital:1:patient_relics_fell": "hospital_relics_fell",
+      "hospital:1:patient_transport": "patient_transport_completed",
+      "hospital:1:relic_packed:family_photo": "hospital_relic_packed",
+      "hospital:1:relic_packed:patient_shoe": "hospital_relic_packed"
+    },
+    "records_state": {
+      "archivist": {
+        "elapsed": 0.0,
+        "index": -1.0,
+        "phase": "idle"
+      },
+      "files": {
+        "archive_index": "office:0",
+        "case_death": "office:10",
+        "case_discharge": "office:10",
+        "case_fees": "office:10",
+        "case_removal": "office:5",
+        "complaint_original": "office:7",
+        "complaint_rewrite": "office:7",
+        "laundry_stub": "office:6"
+      },
+      "guard": {
+        "done": false,
+        "elapsed": 0.0,
+        "last_room": "",
+        "last_seen": [],
+        "phase": "idle",
+        "target": ""
+      },
+      "patient_gone": false,
+      "patient_silenced": false,
+      "read": [
+        "case_death",
+        "case_fees",
+        "case_discharge",
+        "laundry_stub",
+        "complaint_original",
+        "complaint_rewrite"
+      ],
+      "report": {},
+      "stopped": {}
+    },
+    "refused": false,
+    "registered": false,
+    "regrab_elapsed": 105.33333333333,
+    "relic_context": {
+      "source_attempt": 1.0
+    },
+    "relic_delivery": {
+      "bag_departed": true,
+      "bag_id": "hospital_relic_container",
+      "exit_pos": [
+        1.23446941375732,
+        0.231061279773712
+      ],
+      "exit_room": "lobby",
+      "items": [
+        "family_photo",
+        "patient_shoe"
+      ],
+      "packed_receipts": {
+        "family_photo": "hospital:1:relic_packed:family_photo",
+        "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+      },
+      "ready": true,
+      "source_attempt": 1.0,
+      "source_owners": {
+        "family_photo": "wheelchair_footplate",
+        "patient_shoe": "lobby_floor"
+      },
+      "transport_receipt": "hospital:1:patient_transport",
+      "version": 1.0
+    },
+    "relic_packing": {
+      "actor": "porter",
+      "elapsed": 0.0,
+      "last_cancel": "",
+      "phase": "done",
+      "room": "lobby"
+    },
+    "room_left": {
+      "bedroom": 0.0,
+      "clinic": 102.066666666663,
+      "lobby": 70.8999999999985,
+      "office": 68.933333333332,
+      "pharmacy": 24.2000000000004
+    },
+    "sample": false,
+    "suspended_body": {},
+    "swallowed": false,
+    "transport": {},
+    "transport_relics": {
+      "family_photo": {
+        "accessible": false,
+        "pos": [
+          1.24219167232513,
+          0.233753338456154
+        ],
+        "room": "lobby",
+        "source_attempt": 1.0,
+        "support": "wheelchair_footplate"
+      },
+      "patient_shoe": {
+        "accessible": false,
+        "pos": [
+          1.24219167232513,
+          0.233753338456154
+        ],
+        "room": "lobby",
+        "source_attempt": 1.0,
+        "support": "lobby_floor"
+      }
+    },
+    "visit": "",
+    "wheelchair_gone": true,
+    "wheelchair_order": true
+  },
+  "menu_open": false,
+  "menu_page": "cast",
+  "motion": {},
+  "observing_index": -1,
+  "opening_state": {},
+  "paused_manual": false,
+  "presentation_id": "a",
+  "profile": {
+    "invader_id": 6382.0,
+    "name": "张6382",
+    "opening_completed": true,
+    "tutorial_completed": true
+  },
+  "prop_receipts": {
+    "comment:1:bed": true,
+    "comment:1:fan": true,
+    "search:1:1:掀被角": true,
+    "search:1:1:查看床底": true,
+    "search:1:1:检查床沿": true,
+    "search:1:2:查看地面接缝": true,
+    "search:1:2:查看外露底座": true,
+    "search:1:2:检查底座后侧": true,
+    "search:1:3:取出展开病服": true,
+    "search:1:3:放回病服": true,
+    "search:1:3:看见露角血迹": true,
+    "search:1:3:翻查旧衣杂物": true,
+    "search:1:3:翻看磨损领标": true
+  },
+  "rng_state": "2133749569933380545",
+  "room_id": "atrium",
+  "route": [],
+  "route_action_origin": "autonomous",
+  "rules": {
+    "_cast_serial": 0,
+    "_completed_targets": {},
+    "_search_id": "search:1:20",
+    "_search_serial": 20,
+    "_sp_depleted": false,
+    "absent": false,
+    "action": {},
+    "action_serial": 0,
+    "actual_attempt": 1,
+    "allow_supplemental_search": true,
+    "awakening_receipts": {},
+    "awareness_feedback": [],
+    "awareness_stage": 0,
+    "body_feedback": [],
+    "book_extensions": {},
+    "combat_regen": 0.0,
+    "config": {
+      "book_extensions": {
+        "book_item_parameters": {
+          "category": "物品",
+          "cost": 5.0,
+          "name": "已见物品参数",
+          "source": "体验:P428；R1:P39–42；S4:T4"
+        },
+        "book_person_parameters": {
+          "category": "人物",
+          "cost": 5.0,
+          "name": "已见人物行为参数",
+          "source": "体验:P429；R1:P39–42；S3/S4第一关规则"
+        },
+        "book_role_resistance": {
+          "category": "角色",
+          "cost": 5.0,
+          "name": "抗性明细",
+          "source": "体验:P427；R1:P39–42"
+        }
+      },
+      "schema": 1.0,
+      "skills": [
+        {
+          "combat_description": "消耗1神经元。侧挪：向选定方向短移一步；无无敌效果，不能穿过障碍。。角色表现：侧挪。",
+          "combat_dialogue": [
+            "[警惕]“不能站在这里。”",
+            "[紧张]“对，别停在那儿。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式取消未完成搜寻，战斗模式向选择方向短移。角色分别表现为收手抓挠、侧挪。",
+          "exploration_description": "消耗1神经元。抓挠，取消尚未完成的搜寻。角色表现：收手抓挠。",
+          "exploration_dialogue": [
+            "收手抓挠",
+            "[烦躁]“哪来的蚊子……”"
+          ],
+          "id": "SKIN",
+          "name": "皮肤刺激",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 0.0
+        },
+        {
+          "combat_description": "消耗1神经元。俯身：短暂降低上身受击范围；不能避开低位、地面及覆盖全身的攻击。。角色表现：俯身。",
+          "combat_dialogue": [
+            "[难受]“偏偏这时候……”",
+            "[紧张]“先低着头，别急着起来。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式中断搜寻或本次劝休，战斗模式俯身降低上身受击范围。角色捂腹弯腰。",
+          "exploration_description": "消耗1神经元。腹痛，取消搜寻；可中断本次劝休。角色表现：捂腹弯腰。",
+          "exploration_dialogue": [
+            "捂腹弯腰",
+            "[难受]“偏偏这个时候……”"
+          ],
+          "id": "GUT",
+          "name": "肠胃蠕动",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。警觉转身：转向已经感知的最近威胁，中止无关动作；不透视发现敌人。。角色表现：警觉转身。",
+          "combat_dialogue": [
+            "[警惕]“在那边。”",
+            "[认真]“……看到了。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式产生旁人可以察觉的皮肤异常、搜寻继续，战斗模式转向已感知的威胁。角色分别表现为查看手臂、转身警戒。",
+          "exploration_description": "消耗1神经元。出现可见异常，可引起附近人物注意；搜寻继续。角色表现：查看手臂。",
+          "exploration_dialogue": [
+            "查看手臂",
+            "[疑惑]“怎么起鸡皮疙瘩了？”"
+          ],
+          "id": "PORES",
+          "name": "毛孔变化",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。短时提速：加快移动，结束后恢复；不叠加，不附带免伤。。角色表现：短时提速。",
+          "combat_dialogue": [
+            "[凝重]“先离开这里。”",
+            "[着急]“快快快，别停。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式短暂减慢移动与搜寻，战斗模式短暂提高移动速度。角色分别表现为打颤、加快步频。",
+          "exploration_description": "消耗1神经元。颤抖，延缓当前移动或搜寻。角色表现：打颤、搓手。",
+          "exploration_dialogue": [
+            "打颤、搓手",
+            "[抱怨]“这地方空调不要钱啊？”"
+          ],
+          "id": "TEMP",
+          "name": "冷热感",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。止步：停止当前前进，短暂停顿后重新判断路线；不取消敌人攻击。。角色表现：止步。",
+          "combat_dialogue": [
+            "[警惕]“等一下……看看别的路。”",
+            "[紧张]“先别往前冲。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式短暂停顿后继续行动，战斗模式停止移动并重新判断路线。角色侧头停步，耳鸣不产生外界声源。",
+          "exploration_description": "消耗1神经元。短暂停步，随后继续；声音仅角色听见。角色表现：停步侧头。",
+          "exploration_dialogue": [
+            "停步侧头",
+            "[疑惑]“谁在响？……我耳朵？”"
+          ],
+          "id": "TINNITUS",
+          "name": "耳鸣",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。抑制出声：暂时压低惊叫、求助等声音；脚步和碰撞声仍存在，仅影响具有听觉判定的人物。。角色表现：抑制出声。",
+          "combat_dialogue": [
+            "[克制]“……先别出声。”",
+            "[紧张]“别喊，我看着呢。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式延缓未完成的物品交接，战斗模式暂时抑制角色出声。角色抿嘴吞咽，脚步与碰撞声仍存在。",
+          "exploration_description": "消耗1神经元。延缓尚未完成的物品交接，不撤销已获物品。角色表现：抿嘴吞咽，递出的手稍停。",
+          "exploration_dialogue": [
+            "抿嘴吞咽，递出的手稍停",
+            "[尴尬]“等一下……嗓子有点干。”"
+          ],
+          "id": "DRYMOUTH",
+          "name": "口腔干涩",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗2神经元。踢击：近距离向前攻击；命中才结算伤害，能否击退按目标规则处理。。角色表现：踢击。",
+          "combat_dialogue": [
+            "[警惕]“别靠过来。”",
+            "[紧张]“踢完就走，别耗着。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并向前踢击，实际命中才结算伤害与对应击退。角色突然向前弹腿。",
+          "exploration_description": "消耗2神经元。取消搜寻，向前弹腿；实际命中才伤害。角色表现：突然向前弹腿。",
+          "exploration_dialogue": [
+            "突然向前弹腿",
+            "[震惊]“不是……我腿怎么了？”"
+          ],
+          "id": "KNEE",
+          "name": "膝跳反射",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "GUT"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗2神经元。收臂：及时撤回手臂；不能解除已经锁紧的束缚，也不能防御全身攻击。。角色表现：收臂。",
+          "combat_dialogue": [
+            "[凝重]“手……又自己动了。”",
+            "[认真]“收回来了，接着走。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并收回手臂，可避开尚未命中的手部抓握、不能解除已经成立的控制。角色迅速收手。",
+          "exploration_description": "消耗2神经元。取消搜寻，避开尚未成立的手臂抓握。角色表现：猛地收手。",
+          "exploration_dialogue": [
+            "猛地收手",
+            "[警惕]“别碰我！”"
+          ],
+          "id": "WITHDRAW",
+          "name": "缩手反射",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗2神经元。后撤：距离大于皮肤刺激的侧挪；依靠实际位移避开攻击，无无敌效果，后方受阻则不能完整撤出。。角色表现：后撤。",
+          "combat_dialogue": [
+            "[警惕]“退开点。”",
+            "[紧张]“后面也得看着点。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并尝试向后移动，实际退开才可能避过攻击。角色后撤，遇到障碍不能穿过。",
+          "exploration_description": "消耗2神经元。取消搜寻，向后短移。角色表现：惊跳，后方可走时退步。",
+          "exploration_dialogue": [
+            "惊跳，后方可走时退步",
+            "[惊疑]“什么东西？！”"
+          ],
+          "id": "STARTLE",
+          "name": "惊跳反应",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "TEMP"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗3神经元。撤离倾向：停止主动进攻，远离已感知威胁；仍降低精神，不自动找到出口。。角色表现：撤离倾向。",
+          "combat_dialogue": [
+            "[不安]“不行……离它远点。”",
+            "[凝重]“先退，别硬撑。”"
+          ],
+          "cooldown": 8.0,
+          "cost": 3.0,
+          "description": "消耗3神经元。降低精神，探索模式取消搜寻并延后当前目标，战斗模式停止进攻并远离已感知威胁。角色收手、警戒并尝试退离。",
+          "exploration_description": "消耗3神经元。降低精神，取消搜寻，将当前目标延后。角色表现：缩手，盯住目标。",
+          "exploration_dialogue": [
+            "缩手，盯住目标",
+            "[不安]“这个……先不看了。”"
+          ],
+          "id": "FEAR",
+          "name": "恐惧",
+          "power": 3.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "TINNITUS",
+            "STARTLE"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 3.0,
+          "unlock_cost": 3.0
+        },
+        {
+          "combat_description": "消耗3神经元。稳定状态：恢复精神，解除自身情绪造成的犹豫；不回血、不解除物理束缚、不取消敌人威胁。。角色表现：稳定状态。",
+          "combat_dialogue": [
+            "[克制]“别慌……先看清楚。”",
+            "[认真]“还没出去呢。”"
+          ],
+          "cooldown": 8.0,
+          "cost": 3.0,
+          "description": "消耗3神经元。恢复精神并缓解角色自身恐惧，不恢复生命、不解除抓握。角色紧绷动作减轻、呼吸趋稳。",
+          "exploration_description": "消耗3神经元。恢复精神，缓解角色自身恐慌、犹豫；搜寻继续。角色表现：肩膀放松，轻笑后继续。",
+          "exploration_dialogue": [
+            "肩膀放松，轻笑后继续",
+            "[轻松]“算了，再找找。”"
+          ],
+          "id": "JOY",
+          "name": "开心",
+          "power": 3.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "PORES",
+            "WITHDRAW"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 3.0,
+          "unlock_cost": 3.0
+        },
+        {
+          "combat_description": "消耗5神经元。直接控制：接管移动、朝向及角色已经具备的攻击、互动；不自动获得其他技能，不保证命中或逃脱。。角色表现：直接控制。",
+          "combat_dialogue": [
+            "未识破：[惊疑]“我没想这么走……”；已识破：[冷漠]“看路。别停。”",
+            "[紧张]“先离开这里。”"
+          ],
+          "cooldown": 20.0,
+          "cost": 5.0,
+          "description": "消耗5神经元。接管移动、朝向与互动6秒，战斗模式可调用已解锁的踢击。角色响应输入，仍正常承受攻击与控制。",
+          "exploration_description": "消耗5神经元。接管移动与互动。角色表现：动作短暂停顿，随后响应操作。",
+          "exploration_dialogue": [
+            "动作短暂停顿，随后响应操作",
+            "[冷漠]“这一步，是你选的。”"
+          ],
+          "id": "CONTROL",
+          "name": "完全掌控",
+          "power": 4.0,
+          "prerequisite_mode": "any",
+          "prerequisites": [
+            "FEAR",
+            "JOY"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 4.0,
+          "unlock_cost": 5.0
+        }
+      ],
+      "test_parameters": {
+        "exploration_startle_distance": 0.4,
+        "note": "探索后撤距离为集中测试表现参数；完成判定按真实位移，不套战斗0.35秒。膝跳分段已按S4:P170定值。"
+      },
+      "timing": {
+        "combat_skin_distance": 0.8,
+        "combat_skin_duration": 0.25,
+        "combat_startle_distance": 1.4,
+        "combat_startle_duration": 0.35,
+        "control": 6.0,
+        "drymouth_combat": 6.0,
+        "drymouth_transfer_delay": 2.0,
+        "fear_combat": 3.0,
+        "fear_retry": 6.0,
+        "gut_reaction": 1.2,
+        "kick_attack": 0.15,
+        "kick_damage": 15.0,
+        "kick_prepare": 0.15,
+        "kick_push": 0.8,
+        "kick_range": 1.0,
+        "kick_recover": 0.35,
+        "kick_source": "S4:P170",
+        "kick_stun": 0.8,
+        "pores": 3.0,
+        "skin_reaction": 0.5,
+        "temp": 3.0,
+        "temp_combat_rate": 1.25,
+        "temp_exploration_rate": 0.75,
+        "tinnitus_combat": 0.3,
+        "tinnitus_exploration": 1.0,
+        "withdraw": 0.3
+      }
+    },
+    "control_context": {},
+    "control_event": "",
+    "control_evidence_receipts": {},
+    "control_feedback": [],
+    "control_fraction_ms": 0.0,
+    "control_left": 0.0,
+    "control_ms": 0,
+    "control_stage": 0,
+    "control_stage_receipts": {},
+    "cooldown_until": 0.0,
+    "effects": {
+      "MEDICINE": 0.0
+    },
+    "evidence": [],
+    "facts": [
+      {
+        "duration": 4.0,
+        "event_id": "search:1:1",
+        "kind": "search_started",
+        "target": "bedroom:0",
+        "time": 0.0333333333333333
+      },
+      {
+        "action": "掀被角",
+        "event_id": "search:1:1:掀被角",
+        "kind": "prop_action",
+        "point": "bed",
+        "time": 0.633333333333333
+      },
+      {
+        "action": "检查床沿",
+        "event_id": "search:1:1:检查床沿",
+        "kind": "prop_action",
+        "point": "bed",
+        "time": 1.63333333333334
+      },
+      {
+        "action": "查看床底",
+        "event_id": "search:1:1:查看床底",
+        "kind": "prop_action",
+        "point": "bed",
+        "time": 2.63333333333333
+      },
+      {
+        "event_id": "search:1:1",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "bedroom:0",
+        "time": 4.03333333333333
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:2",
+        "kind": "search_started",
+        "target": "bedroom:10",
+        "time": 5.13333333333332
+      },
+      {
+        "action": "查看外露底座",
+        "event_id": "search:1:2:查看外露底座",
+        "kind": "prop_action",
+        "point": "fan",
+        "time": 5.86666666666666
+      },
+      {
+        "action": "检查底座后侧",
+        "event_id": "search:1:2:检查底座后侧",
+        "kind": "prop_action",
+        "point": "fan",
+        "time": 6.93333333333332
+      },
+      {
+        "action": "查看地面接缝",
+        "event_id": "search:1:2:查看地面接缝",
+        "kind": "prop_action",
+        "point": "fan",
+        "time": 7.93333333333331
+      },
+      {
+        "event_id": "search:1:2",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "bedroom:10",
+        "time": 9.13333333333331
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:3",
+        "kind": "search_started",
+        "target": "bedroom:9",
+        "time": 9.89999999999998
+      },
+      {
+        "action": "翻查旧衣杂物",
+        "event_id": "search:1:3:翻查旧衣杂物",
+        "kind": "prop_action",
+        "point": "storage",
+        "time": 10.6333333333333
+      },
+      {
+        "action": "看见露角血迹",
+        "event_id": "search:1:3:看见露角血迹",
+        "kind": "prop_action",
+        "point": "storage",
+        "time": 11.3
+      },
+      {
+        "action": "取出展开病服",
+        "event_id": "search:1:3:取出展开病服",
+        "kind": "prop_action",
+        "point": "storage",
+        "time": 11.9
+      },
+      {
+        "action": "翻看磨损领标",
+        "event_id": "search:1:3:翻看磨损领标",
+        "kind": "prop_action",
+        "point": "storage",
+        "time": 12.9333333333333
+      },
+      {
+        "action": "放回病服",
+        "event_id": "search:1:3:放回病服",
+        "kind": "prop_action",
+        "point": "storage",
+        "time": 13.6333333333333
+      },
+      {
+        "event_id": "search:1:3",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "bedroom:9",
+        "time": 13.9
+      },
+      {
+        "event_id": "key:1:1",
+        "from": "bedroom:9",
+        "item": "key",
+        "kind": "transfer",
+        "time": 14.3333333333333,
+        "to": "hero"
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:4",
+        "kind": "search_started",
+        "target": "lobby:1",
+        "time": 17.5000000000001
+      },
+      {
+        "event_id": "search:1:4",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "lobby:1",
+        "time": 22.5000000000003
+      },
+      {
+        "event_id": "hospital:1:no_key:lobby:1",
+        "kind": "hospital_search_feedback",
+        "time": 22.5000000000003
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:5",
+        "kind": "search_started",
+        "target": "pharmacy:2",
+        "time": 26.4666666666672
+      },
+      {
+        "event_id": "search:1:5",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "pharmacy:2",
+        "time": 31.4666666666674
+      },
+      {
+        "event_id": "hospital:1:no_key:pharmacy:2",
+        "kind": "hospital_search_feedback",
+        "time": 31.4666666666674
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:6",
+        "kind": "search_started",
+        "target": "pharmacy:6",
+        "time": 32.3666666666674
+      },
+      {
+        "event_id": "search:1:6",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "pharmacy:6",
+        "time": 37.3666666666672
+      },
+      {
+        "event_id": "hospital:1:no_key:pharmacy:6",
+        "kind": "hospital_search_feedback",
+        "time": 37.3666666666672
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:7",
+        "kind": "search_started",
+        "target": "office:2",
+        "time": 43.5333333333335
+      },
+      {
+        "event_id": "search:1:7",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "office:2",
+        "time": 48.5333333333332
+      },
+      {
+        "event_id": "hospital:1:no_key:office:2",
+        "kind": "hospital_search_feedback",
+        "time": 48.5333333333332
+      },
+      {
+        "event_id": "hospital:1:observe:laundry_stub:hospital-observations-1/pending",
+        "kind": "hospital_observation",
+        "source": "S3:P392/T17R3",
+        "target": "laundry_stub",
+        "time": 50.4333333333331
+      },
+      {
+        "event_id": "hospital:1:observe:case_death:hospital-observations-1",
+        "kind": "hospital_observation",
+        "source": "S3:T17R4",
+        "target": "case_death",
+        "time": 52.3666666666663
+      },
+      {
+        "event_id": "hospital:1:observe:case_fees:hospital-observations-1",
+        "kind": "hospital_observation",
+        "source": "S3:T17R4",
+        "target": "case_fees",
+        "time": 53.4333333333329
+      },
+      {
+        "event_id": "hospital:1:observe:case_discharge:hospital-observations-1",
+        "kind": "hospital_observation",
+        "source": "S3:T17R4",
+        "target": "case_discharge",
+        "time": 54.4999999999995
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:8",
+        "kind": "search_started",
+        "target": "office:10",
+        "time": 54.5333333333328
+      },
+      {
+        "event_id": "search:1:8",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "office:10",
+        "time": 59.5333333333326
+      },
+      {
+        "event_id": "hospital:1:no_key:office:10",
+        "kind": "hospital_search_feedback",
+        "time": 59.5333333333326
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:9",
+        "kind": "search_started",
+        "target": "office:6",
+        "time": 60.3999999999992
+      },
+      {
+        "event_id": "search:1:9",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "office:6",
+        "time": 65.3999999999989
+      },
+      {
+        "event_id": "hospital:1:no_key:office:6",
+        "kind": "hospital_search_feedback",
+        "time": 65.3999999999989
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:10",
+        "kind": "search_started",
+        "target": "office:7",
+        "time": 68.4999999999987
+      },
+      {
+        "event_id": "search:1:10",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "office:7",
+        "time": 73.4999999999984
+      },
+      {
+        "event_id": "hospital:1:no_key:office:7",
+        "kind": "hospital_search_feedback",
+        "time": 73.4999999999984
+      },
+      {
+        "event_id": "hospital:1:observe:case_removal:hospital-observations-1",
+        "kind": "hospital_observation",
+        "source": "S3:T17R4",
+        "target": "case_removal",
+        "time": 75.0333333333317
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:11",
+        "kind": "search_started",
+        "target": "office:1",
+        "time": 75.9333333333316
+      },
+      {
+        "event_id": "search:1:11",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "office:1",
+        "time": 80.9333333333313
+      },
+      {
+        "event_id": "hospital:1:no_key:office:1",
+        "kind": "hospital_search_feedback",
+        "time": 80.9333333333313
+      },
+      {
+        "event_id": "hospital:1:patient_order",
+        "kind": "patient_transport_order",
+        "occurrence_attempt": 1.0,
+        "occurrence_level": 2.0,
+        "patient": "wheelchair",
+        "source_attempt": 1.0,
+        "source_level": 2.0,
+        "time": 85.4666666666644
+      },
+      {
+        "event_id": "hospital:1:patient_relics_fell",
+        "items": [
+          "family_photo",
+          "patient_shoe"
+        ],
+        "kind": "hospital_relics_fell",
+        "occurrence_attempt": 1.0,
+        "occurrence_level": 2.0,
+        "source_attempt": 1.0,
+        "source_level": 2.0,
+        "time": 87.0999999999977
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:12",
+        "kind": "search_started",
+        "target": "clinic:5",
+        "time": 88.3999999999976
+      },
+      {
+        "container": "hospital_relic_container",
+        "event_id": "hospital:1:relic_packed:family_photo",
+        "from": "wheelchair_footplate",
+        "item": "family_photo",
+        "kind": "hospital_relic_packed",
+        "occurrence_attempt": 1.0,
+        "occurrence_level": 2.0,
+        "pos": [
+          1.24219167232513,
+          0.233753338456154
+        ],
+        "room": "lobby",
+        "source_attempt": 1.0,
+        "source_level": 2.0,
+        "time": 88.6333333333309
+      },
+      {
+        "event_id": "hospital:1:patient_transport",
+        "kind": "patient_transport_completed",
+        "occurrence_attempt": 1.0,
+        "occurrence_level": 2.0,
+        "source_attempt": 1.0,
+        "source_level": 2.0,
+        "time": 88.8666666666642
+      },
+      {
+        "container": "hospital_relic_container",
+        "event_id": "hospital:1:relic_packed:patient_shoe",
+        "from": "lobby_floor",
+        "item": "patient_shoe",
+        "kind": "hospital_relic_packed",
+        "occurrence_attempt": 1.0,
+        "occurrence_level": 2.0,
+        "pos": [
+          1.24219167232513,
+          0.233753338456154
+        ],
+        "room": "lobby",
+        "source_attempt": 1.0,
+        "source_level": 2.0,
+        "time": 89.9999999999975
+      },
+      {
+        "event_id": "search:1:12",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "clinic:5",
+        "time": 93.3999999999973
+      },
+      {
+        "event_id": "hospital:1:no_key:clinic:5",
+        "kind": "hospital_search_feedback",
+        "time": 93.3999999999973
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:13",
+        "kind": "search_started",
+        "target": "clinic:1",
+        "time": 94.3333333333306
+      },
+      {
+        "event_id": "search:1:13",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "clinic:1",
+        "time": 99.3333333333303
+      },
+      {
+        "event_id": "hospital:1:no_key:clinic:1",
+        "kind": "hospital_search_feedback",
+        "time": 99.3333333333303
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:14",
+        "kind": "search_started",
+        "target": "clinic:0",
+        "time": 102.466666666663
+      },
+      {
+        "event_id": "search:1:14",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "clinic:0",
+        "time": 107.466666666663
+      },
+      {
+        "event_id": "hospital:1:no_key:clinic:0",
+        "kind": "hospital_search_feedback",
+        "time": 107.466666666663
+      },
+      {
+        "event_id": "hospital:1:observe:donor_screening:hospital-observations-1",
+        "kind": "hospital_observation",
+        "source": "S3:P469/T12R4",
+        "target": "donor_screening",
+        "time": 108.53333333333
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:15",
+        "kind": "search_started",
+        "target": "clinic:6",
+        "time": 109.83333333333
+      },
+      {
+        "event_id": "search:1:15",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "clinic:6",
+        "time": 114.833333333329
+      },
+      {
+        "event_id": "key:2:1",
+        "from": "clinic:6",
+        "item": "key",
+        "kind": "transfer",
+        "time": 115.266666666663,
+        "to": "hero"
+      },
+      {
+        "bag": "hospital_relic_container",
+        "event_id": "asylum:1:relic_arrival:hospital_relic_container",
+        "items": [
+          "family_photo",
+          "patient_shoe"
+        ],
+        "kind": "asylum_relic_delivery_arrived",
+        "source": "S3:P436/P656",
+        "source_attempt": 1.0,
+        "time": 120.333333333329
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:16",
+        "kind": "search_started",
+        "target": "stairs:0",
+        "time": 122.533333333329
+      },
+      {
+        "event_id": "search:1:16",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "stairs:0",
+        "time": 128.533333333329
+      },
+      {
+        "event_id": "asylum:1:search_comment:stairs:0",
+        "kind": "asylum_search_feedback",
+        "time": 128.533333333329
+      },
+      {
+        "event_id": "asylum:1:observe:asylum_stair_rail_wear:asylum-observations-2:0105cca0b4e4175e",
+        "kind": "asylum_observation",
+        "source": "S3:P786–787",
+        "target": "asylum_stair_rail_wear",
+        "time": 129.599999999995
+      },
+      {
+        "event_id": "asylum:1:nurse_door:pharmacy:lobby",
+        "from": "pharmacy",
+        "kind": "asylum_nurse_crossed_door",
+        "time": 134.366666666662,
+        "to": "lobby"
+      },
+      {
+        "event_id": "asylum:1:nurse_door:lobby:office",
+        "from": "lobby",
+        "kind": "asylum_nurse_crossed_door",
+        "time": 135.233333333328,
+        "to": "office"
+      },
+      {
+        "event_id": "asylum:1:nurse_source_read:prior_copy:wheelchair_order:1",
+        "kind": "asylum_nurse_source_read",
+        "number": null,
+        "source_attempt": 1.0,
+        "source_id": "wheelchair_order",
+        "time": 137.866666666661
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:17",
+        "kind": "search_started",
+        "target": "double_ward:3",
+        "time": 138.599999999995
+      },
+      {
+        "event_id": "asylum:1:nurse_door:office:lobby",
+        "from": "office",
+        "kind": "asylum_nurse_crossed_door",
+        "time": 139.599999999995,
+        "to": "lobby"
+      },
+      {
+        "event_id": "asylum:1:nurse_door:lobby:stairs",
+        "from": "lobby",
+        "kind": "asylum_nurse_crossed_door",
+        "time": 140.466666666661,
+        "to": "stairs"
+      },
+      {
+        "event_id": "asylum:1:nurse_door:stairs:corridor",
+        "from": "stairs",
+        "kind": "asylum_nurse_crossed_door",
+        "time": 142.166666666661,
+        "to": "corridor"
+      },
+      {
+        "event_id": "search:1:17",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "double_ward:3",
+        "time": 144.599999999994
+      },
+      {
+        "event_id": "asylum:1:search_comment:double_ward:3",
+        "kind": "asylum_search_feedback",
+        "time": 144.599999999994
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:18",
+        "kind": "search_started",
+        "target": "double_ward:6",
+        "time": 145.266666666661
+      },
+      {
+        "actual_body_effect": false,
+        "category": null,
+        "event_id": "asylum:1:nurse_duty_clipped:prior_copy:wheelchair_order:1",
+        "kind": "asylum_nurse_duty_clipped",
+        "number": null,
+        "source_attempt": 1.0,
+        "source_id": "wheelchair_order",
+        "time": 146.799999999994
+      },
+      {
+        "event_id": "asylum:1:nurse_door:corridor:stairs",
+        "from": "corridor",
+        "kind": "asylum_nurse_crossed_door",
+        "time": 150.366666666661,
+        "to": "stairs"
+      },
+      {
+        "event_id": "search:1:18",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "double_ward:6",
+        "time": 151.266666666661
+      },
+      {
+        "event_id": "asylum:1:search_comment:double_ward:6",
+        "kind": "asylum_search_feedback",
+        "time": 151.266666666661
+      },
+      {
+        "event_id": "asylum:1:nurse_door:stairs:lobby",
+        "from": "stairs",
+        "kind": "asylum_nurse_crossed_door",
+        "time": 152.066666666661,
+        "to": "lobby"
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:19",
+        "kind": "search_started",
+        "target": "double_ward:5",
+        "time": 152.799999999994
+      },
+      {
+        "event_id": "asylum:1:nurse_source_read:prior_copy:patient_departure:1",
+        "kind": "asylum_nurse_source_read",
+        "number": null,
+        "source_attempt": 1.0,
+        "source_id": "patient_departure",
+        "time": 155.56666666666
+      },
+      {
+        "event_id": "search:1:19",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "double_ward:5",
+        "time": 158.799999999994
+      },
+      {
+        "event_id": "asylum:1:search_comment:double_ward:5",
+        "kind": "asylum_search_feedback",
+        "time": 158.799999999994
+      },
+      {
+        "event_id": "asylum:1:observe:asylum_bed2_erased_name:asylum-observations-2:0105cca0b4e4175e",
+        "kind": "asylum_observation",
+        "source": "S3:P973/P996–998",
+        "target": "asylum_bed2_erased_name",
+        "time": 159.86666666666
+      },
+      {
+        "actual_body_effect": false,
+        "category": null,
+        "event_id": "asylum:1:nurse_duty_clipped:prior_copy:patient_departure:1",
+        "kind": "asylum_nurse_duty_clipped",
+        "number": null,
+        "source_attempt": 1.0,
+        "source_id": "patient_departure",
+        "time": 164.499999999993
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:20",
+        "kind": "search_started",
+        "target": "bathroom:3",
+        "time": 166.86666666666
+      },
+      {
+        "event_id": "search:1:20",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "bathroom:3",
+        "time": 172.866666666659
+      },
+      {
+        "event_id": "key:3:1",
+        "from": "bathroom:3",
+        "item": "key",
+        "kind": "transfer",
+        "time": 173.299999999993,
+        "to": "hero"
+      }
+    ],
+    "global_resistance": 0,
+    "gripped": false,
+    "hp": 100,
+    "hurt_left": 0.0,
+    "institutional_records": [
+      {
+        "attempt": 1.0,
+        "id": "wheelchair_order",
+        "source": "医院记录",
+        "text": "导诊护士实际完成轮椅患者自己的转运手续；不使用角色核号表替代。"
+      },
+      {
+        "attempt": 1.0,
+        "id": "patient_departure",
+        "source": "医院记录",
+        "text": "轮椅患者：自行离院（机构记载，与真实强制转运分账）。"
+      },
+      {
+        "attempt": 1.0,
+        "id": "asylum_duty:1:prior_copy:wheelchair_order:1",
+        "source": "精神病院记录",
+        "text": "病区护士值班表转抄；来源：wheelchair_order。原记录：导诊护士实际完成轮椅患者自己的转运手续；不使用角色核号表替代。。分类：未定。"
+      },
+      {
+        "attempt": 1.0,
+        "id": "asylum_duty:1:prior_copy:patient_departure:1",
+        "source": "精神病院记录",
+        "text": "病区护士值班表转抄；来源：patient_departure。原记录：轮椅患者：自行离院（机构记载，与真实强制转运分账）。。分类：未定。"
+      }
+    ],
+    "intervention_lock": false,
+    "kick_until": 0.0,
+    "known": [
+      "uniform_blood",
+      "uniform_seen",
+      "uniform_damaged_label",
+      "bedroom:9",
+      "laundry_stub",
+      "case_death",
+      "case_fees",
+      "case_discharge",
+      "complaint_original",
+      "complaint_rewrite",
+      "complaint_changed",
+      "case_removal",
+      "removal_record",
+      "donor_screening",
+      "clinic:6",
+      "asylum_stair_rail_wear",
+      "asylum_bed2_erased_name",
+      "bathroom:3"
+    ],
+    "loading": false,
+    "lock_after_serial": 0,
+    "mode": "exploration",
+    "neurons": 34,
+    "observations": [
+      {
+        "category": "物品",
+        "id": "uniform_blood",
+        "kind": "亲历事实",
+        "source": "卧室实际检查",
+        "text": "实际看见储物柜病服露角上的血迹。"
+      },
+      {
+        "category": "物品",
+        "id": "uniform_seen",
+        "kind": "亲历事实",
+        "source": "卧室实际检查",
+        "text": "实际展开并认出了病服；未推定其主人。"
+      },
+      {
+        "category": "物品",
+        "id": "uniform_damaged_label",
+        "kind": "亲历事实",
+        "source": "卧室实际检查",
+        "text": "看清了领口有磨损标签，具体字形仍待素材核验。"
+      },
+      {
+        "category": "物品",
+        "id": "laundry_stub",
+        "kind": "亲历事实",
+        "source": "医院实际观察",
+        "text": "实际读到污衣袋号、交接对象与完成栏；搬运未完成时不当成已完成交接，病服领标另行核对。"
+      },
+      {
+        "category": "物品",
+        "id": "case_death",
+        "kind": "亲历事实",
+        "source": "医院实际观察",
+        "text": "实际读到一份既往病例死亡页；与摘除、费用及离院页逐页保留，未读页面仍未知。"
+      },
+      {
+        "category": "物品",
+        "id": "case_fees",
+        "kind": "亲历事实",
+        "source": "医院实际观察",
+        "text": "实际读到一份既往病例费用页；金额与编号字形待核，不据费用标签补造身体事件。"
+      },
+      {
+        "category": "物品",
+        "id": "case_discharge",
+        "kind": "亲历事实",
+        "source": "医院实际观察",
+        "text": "实际读到一份既往病例离院页；离院记载与死亡、摘除页分别保存，不把该死者当成在场病友。"
+      },
+      {
+        "category": "物品",
+        "id": "complaint_original",
+        "kind": "亲历事实",
+        "source": "医院实际观察",
+        "text": "实际读到原投诉文件。"
+      },
+      {
+        "category": "物品",
+        "id": "complaint_rewrite",
+        "kind": "亲历事实",
+        "source": "医院实际观察",
+        "text": "实际读到同一人的异常报告；机构标签与投诉内容分开保留。"
+      },
+      {
+        "category": "物品",
+        "id": "complaint_changed",
+        "kind": "亲历事实",
+        "source": "医院实际观察",
+        "text": "已分别读到同一人的投诉和异常报告，发现投诉被改写；机构表述不替代事实。"
+      },
+      {
+        "category": "物品",
+        "id": "case_removal",
+        "kind": "亲历事实",
+        "source": "医院实际观察",
+        "text": "实际读到一份既往病例的摘除记录；编号字形待核，不自动绑定给角色、病友或其他活着的人。"
+      },
+      {
+        "category": "物品",
+        "id": "removal_record",
+        "kind": "亲历事实",
+        "source": "医院实际观察",
+        "text": "实际读到一份既往病例的摘除记录；编号字形待核，不自动绑定给角色、病友或其他活着的人。"
+      },
+      {
+        "category": "物品",
+        "id": "donor_screening",
+        "kind": "亲历事实",
+        "source": "医院实际观察",
+        "text": "实际翻看检查单上的供体筛查项目与空白主诉栏；只获得这张表的信息，不自动了解全部黑幕。"
+      },
+      {
+        "category": "物品",
+        "id": "asylum_stair_rail_wear",
+        "kind": "亲历事实",
+        "source": "精神病院实际观察",
+        "text": "实际查看扶手上的反复摩擦痕迹；不据磨痕补造推床上下楼、受伤或死亡事件。"
+      },
+      {
+        "category": "物品",
+        "id": "asylum_bed2_erased_name",
+        "kind": "亲历事实",
+        "source": "精神病院实际观察",
+        "text": "实际看清床②姓名被反复擦改、床号仍留存；床②及床头柜②绑定角落病友，不把他合并为其他患者。"
+      }
+    ],
+    "owners": {
+      "archive_index": "office:0",
+      "asylum_archive_index": "office:0",
+      "asylum_corner_transfer_note": "corner_patient",
+      "asylum_corpse_wristband": "bathroom:drain",
+      "asylum_current_report": "office:10",
+      "asylum_death_page": "office:10",
+      "asylum_duty_roster": "office:6",
+      "asylum_fee_page": "office:10",
+      "asylum_meal_list": "bathroom:relics",
+      "asylum_no_external_injury": "office:5",
+      "asylum_patient_transfer_note": "patient",
+      "asylum_prior_copy": "office:6",
+      "asylum_scar_photo": "office:5",
+      "asylum_signature_record": "therapist",
+      "asylum_statement_paper": "therapist",
+      "asylum_work_label": "workshop_material_rack",
+      "asylum_work_paper": "workshop_material_rack",
+      "case_death": "office:10",
+      "case_discharge": "office:10",
+      "case_fees": "office:10",
+      "case_removal": "office:5",
+      "complaint_original": "office:7",
+      "complaint_rewrite": "office:7",
+      "cortex_original_page": "memory_table",
+      "cortex_page_fragment": "none",
+      "family_photo": "hospital_relic_container",
+      "hospital_relic_container": "asylum_intake_delivery",
+      "key": "identity:6",
+      "laundry_stub": "office:6",
+      "patient_shoe": "hospital_relic_container",
+      "porridge": "mother"
+    },
+    "pending_global_growth": 0,
+    "pending_neural": {},
+    "pending_skin": {},
+    "plexus": 9,
+    "public_action": {},
+    "public_serial": 54,
+    "reaction_left": 0.0,
+    "reaction_skill": "",
+    "search_active": false,
+    "search_attempts": 0,
+    "search_count": 20,
+    "search_duration": 6.0,
+    "search_elapsed": 5.99999999999999,
+    "search_limit": 16,
+    "search_target": "bathroom:3",
+    "settled": {
+      "asylum_observation_line:ERASED_NAME": "heard",
+      "asylum_observation_line:RAIL": "heard",
+      "key:1:1": "transfer",
+      "key:2:1": "transfer",
+      "key:3:1": "transfer",
+      "search:1:1": "completed",
+      "search:1:10": "completed",
+      "search:1:11": "completed",
+      "search:1:12": "completed",
+      "search:1:13": "completed",
+      "search:1:14": "completed",
+      "search:1:15": "completed",
+      "search:1:16": "completed",
+      "search:1:17": "completed",
+      "search:1:18": "completed",
+      "search:1:19": "completed",
+      "search:1:2": "completed",
+      "search:1:20": "completed",
+      "search:1:3": "completed",
+      "search:1:4": "completed",
+      "search:1:5": "completed",
+      "search:1:6": "completed",
+      "search:1:7": "completed",
+      "search:1:8": "completed",
+      "search:1:9": "completed"
+    },
+    "skill_states": {
+      "CONTROL": {
+        "growth": false,
+        "power": 4.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "DRYMOUTH": {
+        "growth": false,
+        "power": 1.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "FEAR": {
+        "growth": false,
+        "power": 3.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "GUT": {
+        "growth": false,
+        "power": 1.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "JOY": {
+        "growth": false,
+        "power": 3.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "KNEE": {
+        "growth": false,
+        "power": 2.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "PORES": {
+        "growth": false,
+        "power": 1.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "SKIN": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": true,
+        "until": 0.0
+      },
+      "STARTLE": {
+        "growth": false,
+        "power": 2.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "TEMP": {
+        "growth": false,
+        "power": 1.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "TINNITUS": {
+        "growth": false,
+        "power": 1.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "WITHDRAW": {
+        "growth": false,
+        "power": 2.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      }
+    },
+    "skin_pending_resistance": false,
+    "skin_power": 1,
+    "skin_reactions": 0,
+    "skin_resistance": 0,
+    "sp": 100,
+    "stun_left": 0.0,
+    "transitioning": false,
+    "trial": {},
+    "trial_attempt": 0,
+    "trial_evidence_count": 0,
+    "tutorial_demo": false,
+    "world_time": 181.299999999992
+  },
+  "schema": 2,
+  "search_action_origin": "autonomous",
+  "search_props": {
+    "bedroom:bed": {
+      "bedding_lifted": true
+    },
+    "bedroom:bedside": {},
+    "bedroom:books": {},
+    "bedroom:box": {},
+    "bedroom:chair": {},
+    "bedroom:desk": {},
+    "bedroom:fan": {},
+    "bedroom:rack": {},
+    "bedroom:stool": {},
+    "bedroom:storage": {
+      "label_viewed": true,
+      "uniform_out": false
+    },
+    "bedroom:wardrobe": {}
+  },
+  "session": {
+    "attempts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1
+    },
+    "cortex_upper_persistent": {
+      "bridge_heard": {},
+      "fields": {},
+      "identity_read": {},
+      "index_holder": "index_slot",
+      "index_removed": false,
+      "losses": {},
+      "route_known": false
+    },
+    "cycle": 1,
+    "exploration_boundary": false,
+    "key_owner": "identity:6",
+    "key_seen": false,
+    "key_target": "identity:6",
+    "level": 4,
+    "profile": {
+      "invader_id": 6382.0,
+      "name": "张6382",
+      "opening_completed": true,
+      "tutorial_completed": false
+    },
+    "receipts": {},
+    "rooms": {},
+    "targets": [
+      "visual:3",
+      "decision:2",
+      "visual:4",
+      "atrium:1",
+      "body:7",
+      "visual:2",
+      "decision:1",
+      "decision:4",
+      "verify:0",
+      "switch:2",
+      "index:2",
+      "identity:3",
+      "identity:6",
+      "switch:0",
+      "index:5",
+      "index:3"
+    ],
+    "unlocked": [
+      1.0,
+      2.0,
+      3.0,
+      4
+    ]
+  },
+  "status_visible": false,
+  "target_index": -1,
+  "vitality_display": {
+    "automatic": false,
+    "hint_acknowledged": false,
+    "hint_demo_seen": false,
+    "last_action": "search:search:1:20",
+    "manual": false,
+    "pending": false
+  },
+  "world_visual_time": 181.299999999992,
+  "zoom_index": 1
+}

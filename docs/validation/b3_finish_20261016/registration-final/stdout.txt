@@ -1,0 +1,49 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS registration nurse fixture begins at an actual walkable lobby position
+PASS ordinary nurse contact can finish registration without a fabricated departed patient
+PASS absent prior transport cannot create that patient's departure page or answer
+PASS passing or ordinary registration alone cannot generate a repeated-question accusation
+PASS real registration contact exposes the genuinely carried departure-copy branch
+PASS queued first answer is not yet a completed reply or repeated question
+PASS no second interaction starts while the formal first answer remains open
+PASS unknown number identity cannot turn a paper-only question into a full-witness assertion
+PASS autonomous protagonist really receives answer then asks the original follow-up without unlocking CONTROL
+PASS reply and actual question have separate receipts while CONTROL stays locked
+PASS original follow-up speech alone cannot create a completed written accusation
+PASS after original P649 dialogue the nurse begins actual interruptible writing
+PASS manual pause freezes actual writing rather than finishing paper in real time
+PASS partial writing JSON preserves elapsed time without issuing a label
+PASS nurse completes the configured actual writing before institutional label exists
+PASS one finished sheet has one institutional entry and one physical owner
+PASS written record is not automatically protagonist knowledge
+PASS less than the actual one-second viewing window cannot reveal the written allegation
+PASS actual post-writing read completes before original P651 and P652 reactions
+PASS source feedback is queued only after protagonist really sees the finished record
+PASS question, paper allegation and reading create no extra injury or resources
+PASS completed one-time interaction cannot continually reask or rewrite
+PASS finished accusation and actually-known reaction survive JSON without a second settlement
+PASS interruption fixture earns real first reply and actual follow-up writing
+PASS paid protagonist skin reaction really interrupts unfinished follow-up writing
+PASS interrupted writing cannot later issue paper while unrelated world time runs
+PASS actual prior question stays true while unfinished accusation and unseen text remain absent
+PASS requesting a controlled interaction without active lawful control is rejected
+PASS legal paid CONTROL enables optional physical continuation rather than debug completion
+PASS same-room physically near nurse can resume the already-asked unfinished interaction
+PASS continued writing actually finishes one original sheet
+PASS new valid command interrupts viewing while preserving already-written paper
+PASS written-but-unread JSON retains paper while withholding character knowledge
+PASS later actual contact can view the same finished allegation without rewriting
+PASS optional repeat contact reads one sheet and never duplicates the institutional accusation
+PASS question, writing and seeing remain three independent one-time facts
+PASS hurt fixture earns the actual written record before receiving an independent hit
+PASS shared real damage handler executes a finite independent injury
+PASS injury cancels unfinished read but cannot erase the already-written accusation
+PASS the allegation itself causes no second injury or SP loss
+PASS room-leave fixture starts a real unfinished writing phase
+PASS leaving the interaction room cancels unfinished writing instead of settling it remotely
+PASS nurse in another actual room cannot be questioned or read through walls
+PASS low-SP autonomous character does not accept a new registration invitation before returning to bed
+PASS explicit held-key fixture keeps exit priority over a new optional registration exchange
+ASYLUM_REGISTRATION_CHECK 45 passed 0 failed

@@ -1,0 +1,28 @@
+{
+  "passed": 2043,
+  "failed": 0,
+  "groups": 99,
+  "items": 572,
+  "reference_files": 36,
+  "checks": [
+    "actual HTML script evaluated with DOM stubs",
+    "572 full-copy strings",
+    "reference files exist",
+    "stable IDs filenames source mappings",
+    "simple and legacy JSON import/export and unknown ID preservation",
+    "repository art/audio carry retained on old empty import"
+  ],
+  "scope": "Static JS/JSON and filesystem verification only. No browser visual, engine runtime or new art verification. Test progress kept in memory, not saved to production progress.json.",
+  "form_sha256": "d105651acfcb9d61ffbdefd3421ec17b16da1ccdabd47de72f34ffe6e3c1a056",
+  "preservation": {
+    "date": "2026-10-16",
+    "desktop_original_sha256": "c3df22351784ddd23e09d4d8f9c47ae92d6c208681c7c39ed2d931bf056214ad",
+    "desktop_original_unchanged": true,
+    "source_rows_and_dialogue_cues_preserved": true,
+    "group_child_id_mapping_preserved": true,
+    "audio_common_specs_unchanged": true,
+    "progress_json_sha256": "f77fa8fd69205e9c09773c2c5971e2856087dcc97ab3eb84f01c51580741bf58",
+    "note": "History HTML snapshots are exact archival copies; use the current parent-directory form for live relative links. Desktop NEW is unchanged. Progress exports remain user files and must be synced/imported explicitly."
+  },
+  "proportion_guide_exists": true
+}

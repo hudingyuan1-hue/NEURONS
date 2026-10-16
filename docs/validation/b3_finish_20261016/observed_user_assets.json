@@ -1,0 +1,91 @@
+{
+  "scope": "Read-only inventory of artwork appearing/changing during this B3 turn; root/agents did not generate, alter, approve, import or use these source PNGs. Preserve user changes; not build inputs.",
+  "files": [
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L1_ROOM_BASE_v001.png",
+      "bytes": 1548817,
+      "mtime": 1792124738.369376,
+      "sha256": "4c19f3c82c3f01ced00b2e535ee8fbd1188a7473ab1c880bd82de864d0f1d6d6"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L1_ROOM_WORN_v001.png",
+      "bytes": 1735427,
+      "mtime": 1792124747.2273512,
+      "sha256": "831f24a87b79f0205f6f251892e36002f7047b8c9331bf3c25eb19b43e97d2dc"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L2_CLINIC_ASYLUM_v001.png",
+      "bytes": 1888591,
+      "mtime": 1792124811.8175423,
+      "sha256": "94b831fd6e8b4fc9f1685ef167750fdd2d21faa899f02ccdaced177d1a4fac5f"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L2_CLINIC_BASE_v001.png",
+      "bytes": 1739738,
+      "mtime": 1792124803.2467687,
+      "sha256": "59cd03705ec1531676da892ecc3d10d311d2408a295b0a78859a69373c583ef3"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L2_LOBBY_ASYLUM_v001.png",
+      "bytes": 1874387,
+      "mtime": 1792124794.2339892,
+      "sha256": "f397fb96bbb85906571673244926a681ccc5786d6a906e6d7dc3d7b6a3b977a9"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L2_LOBBY_BASE_v001.png",
+      "bytes": 1736155,
+      "mtime": 1792124784.2688334,
+      "sha256": "a869667a4dbd46d04aa439534152c59c6de518bedcb6d19443bdf2c84d94a034"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L2_OFFICE_ASYLUM_v001.png",
+      "bytes": 1957246,
+      "mtime": 1792125308.6710134,
+      "sha256": "85b88a90260b60147dd7de72fd6cc9bbd68f8fbb9a11b6cb58d3ae0426f2c7de"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L2_OFFICE_BASE_v001.png",
+      "bytes": 1799405,
+      "mtime": 1792125149.8818433,
+      "sha256": "50d63cecf5aa7f28693da455faa075c266e8d17a908abc5bda628926eaac2619"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L2_PHARMACY_ASYLUM_v001.png",
+      "bytes": 2033194,
+      "mtime": 1792124970.8197868,
+      "sha256": "c7376699a17b2a082f7bc14c75064e11d5ec1b40a126bd90bc4b5ee3ff0bfa66"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L2_PHARMACY_BASE_v001.png",
+      "bytes": 1935202,
+      "mtime": 1792124826.0737963,
+      "sha256": "35c1a960fd7f0bf72ac3b494d4123f7551a0b602104b3effebfc57e86bf1c229"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L2_WARD_ASYLUM_v001.png",
+      "bytes": 1867443,
+      "mtime": 1792124767.8129916,
+      "sha256": "2dd7df242b0e9baa8c22cb0ed029efb45d2763bdab98b727e4166625c7e5965b"
+    },
+    {
+      "path": "DOCX/新建文件夹/ENV_ROOM_L2_WARD_BASE_v001.png",
+      "bytes": 1648197,
+      "mtime": 1792124758.4759798,
+      "sha256": "4cc14801c0b970415b9e1b97221640967af364dd78752e79557ee1d50113cc3d"
+    }
+  ],
+  "tracked_status": [
+    " M DOCX/新建文件夹/ENV_ROOM_L1_ROOM_BASE_v001.png",
+    " M DOCX/新建文件夹/ENV_ROOM_L1_ROOM_WORN_v001.png",
+    " M DOCX/新建文件夹/ENV_ROOM_L2_WARD_ASYLUM_v001.png",
+    " M DOCX/新建文件夹/ENV_ROOM_L2_WARD_BASE_v001.png",
+    "?? DOCX/新建文件夹/ENV_ROOM_L2_CLINIC_ASYLUM_v001.png",
+    "?? DOCX/新建文件夹/ENV_ROOM_L2_CLINIC_BASE_v001.png",
+    "?? DOCX/新建文件夹/ENV_ROOM_L2_LOBBY_ASYLUM_v001.png",
+    "?? DOCX/新建文件夹/ENV_ROOM_L2_LOBBY_BASE_v001.png",
+    "?? DOCX/新建文件夹/ENV_ROOM_L2_OFFICE_ASYLUM_v001.png",
+    "?? DOCX/新建文件夹/ENV_ROOM_L2_OFFICE_BASE_v001.png",
+    "?? DOCX/新建文件夹/ENV_ROOM_L2_PHARMACY_ASYLUM_v001.png",
+    "?? DOCX/新建文件夹/ENV_ROOM_L2_PHARMACY_BASE_v001.png"
+  ]
+}

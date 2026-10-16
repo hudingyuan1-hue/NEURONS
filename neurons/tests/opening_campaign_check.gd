@@ -101,7 +101,7 @@ func _ready() -> void:
  app.request_title_return()
  check(await wait_for(func():return frontend.active==null),"existing save-and-title handler checkpoints covered intro successfully")
  app=null;flow=null
- await click(button(frontend,"CONTINUE"));await frames();app=frontend.active;flow=app.opening_ui
+ await click(button(frontend,"继续游戏"));await frames();app=frontend.active;flow=app.opening_ui
  check(flow!=null and flow.paused and flow.index==card and is_equal_approx(flow.typed,typed),"real CONTINUE restores middle subtitle through JSON without replaying from start")
  if flow==null:await finish_check();return
  check(app.tutorial_ui==null and gameplay()==unchanged,"restore freezes original world and does not prematurely issue tutorial")
@@ -132,7 +132,7 @@ func _ready() -> void:
  var balance:int=app.rules.neurons
  check(app.store.save_snapshot(old).ok,"legacy-profile fixture is stored through real checksum save")
  frontend.close_campaign();app=null;await frames()
- await click(button(frontend,"CONTINUE"));await frames();app=frontend.active
+ await click(button(frontend,"继续游戏"));await frames();app=frontend.active
  check(app.opening_ui==null and app.tutorial_ui==null,"old profile without opening flag continues without retroactively inserting intro")
  check(app.rules.neurons==balance and app.invader_id==id_value,"legacy continuation neither reissues resources nor rerolls identity")
  await capture("05_legacy_continue")

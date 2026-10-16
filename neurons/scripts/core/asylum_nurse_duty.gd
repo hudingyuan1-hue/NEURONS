@@ -16,7 +16,37 @@ func state() -> Dictionary:
  if not owner.data.has("nurse_duty_state"):
   owner.data.nurse_duty_state={"entries":[],"completed":{},"job":{},"swallow_pending":{},"swallow_written":false,"read_entries":[],"dialogue_sources":[],"duty_wait_seconds":null,"posted":false}
  if not owner.data.has("staff_targets"):owner.data.staff_targets={}
+ normalize_completed_sources(owner.data.nurse_duty_state)
  return owner.data.nurse_duty_state
+
+func normalize_completed_sources(value:Dictionary) -> void:
+ # A written/clipped entry is the authoritative completed source. JSON may
+ # have changed its numeric attempt from 1 to 1.0 while an old string key
+ # still ends in :1. Keep the physical entry and its original ID/provenance;
+ # only rebuild the receipt index from those explicit fields.
+ var first_by_source:Dictionary={};var written_ids:Dictionary={}
+ for entry in value.entries:
+  if str(entry.get("id","")).is_empty() or str(entry.get("source_id","")).is_empty() or str(entry.get("source_kind","")).is_empty():continue
+  var key:String=source_key(entry);var id:String=str(entry.id)
+  written_ids[id]=true
+  if first_by_source.has(key):
+   # Historical versions could already have physically written two copies.
+   # Do not erase either event or institutional record. Mark their common
+   # source so loading that history cannot schedule a third new copy.
+   entry.duplicate_source=true;entry.duplicate_of=str(first_by_source[key]);entry.duplicate_source_key=key
+  else:first_by_source[key]=id
+ var completed:Dictionary=value.completed
+ for key in completed.keys():
+  if written_ids.has(str(completed[key])):completed.erase(key)
+ for key in first_by_source:completed[key]=first_by_source[key]
+ var pending:Dictionary=value.get("job",{})
+ if not pending.is_empty() and not pending.get("source",{}).is_empty() and first_by_source.has(source_key(pending.source)):
+  # An old :1.0 job can already be in progress beside a completed :1 copy.
+  # Keep even its partial-writing history, but do not let that stale job
+  # finish a third copy after migration.
+  if not value.has("duplicate_jobs"):value.duplicate_jobs=[]
+  value.duplicate_jobs.append({"reason":"source_already_completed","source_key":source_key(pending.source),"existing_entry":str(first_by_source[source_key(pending.source)]),"job":pending.duplicate(true)})
+  value.job={};unreserve()
 
 func point(value:Array) -> Vector2:return Vector2(float(value[0]),float(value[1]))
 func xy(value:Vector2) -> Array:return [value.x,value.y]
@@ -77,7 +107,16 @@ func travel_nurse(room:String,delta:float) -> bool:
  return next==room
 
 func source_key(source:Dictionary) -> String:
- return "%s:%s:%s"%[source.get("source_kind",""),source.get("source_id",""),source.get("source_attempt",0)]
+ var attempt=source.get("source_attempt",null)
+ var attempt_key:String="null"
+ if attempt!=null:
+  # Unknown is distinct from a supplied zero. Invalid/fractional legacy
+  # values also remain distinguishable rather than silently becoming zero.
+  var text:String=str(attempt)
+  if text.is_valid_float() and is_finite(float(text)) and is_equal_approx(float(text),float(int(float(text)))):
+   attempt_key=str(int(float(text)))
+  else:attempt_key="unresolved:"+var_to_str(attempt)
+ return "%s:%s:%s"%[source.get("source_kind",""),source.get("source_id",""),attempt_key]
 
 func paper_source(entry:Dictionary,kind:String,room:String,at:Vector2,category=null) -> Dictionary:
  return {"source_id":str(entry.get("id","")),"source_attempt":entry.get("attempt",null),"source_text":str(entry.get("text","")),"source_kind":kind,"source_actor":str(entry.get("source","")),"source_snapshot":entry.duplicate(true),"room":room,"pos":xy(at),"number":null,"number_match":null,"subject_identity":"","category":category,"eyewitness_origin":false}

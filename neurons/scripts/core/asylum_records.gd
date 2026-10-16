@@ -126,7 +126,7 @@ func sees_hero() -> bool:
  if not owner.present("guard"):return false
  var room:String=str(owner.actor("guard").room)
  if not room in FIRST_FLOOR or not owner.app.room_id in Map.doors(room):return false
- var a:Vector2=Map.doorway(room,owner.app.room_id);var b:Vector2=Map.doorway(owner.app.room_id,room)
+ var a:Vector2=owner.portal_for(room,owner.app.room_id).threshold;var b:Vector2=owner.portal_for(owner.app.room_id,room).threshold
  return owner.position("guard").distance_to(a)+owner.app.hero_pos.distance_to(b)<=parameter("notice_distance") and owner.layout_for(room).clear_segment(owner.position("guard"),a) and owner.app.layout.clear_segment(b,owner.app.hero_pos)
 
 func say(key:String) -> void:
@@ -315,7 +315,7 @@ func advance_pair(to:Vector2,hero:bool,delta:float) -> bool:
  return leader_arrived and follower.distance_to(to)<0.05
 
 func change_pair_room(room:String,hero:bool) -> void:
- var previous:String=str(owner.actor("guard").room);var entry:Vector2=Map.doorway(room,previous)
+ var previous:String=str(owner.actor("guard").room);var entry:Vector2=owner.portal_for(room,previous).landing
  owner.actor("guard").room=room;owner.actor("guard").pos=xy(entry);owner.actor("guard").route=[]
  if hero:
   var body:Dictionary=owner.data.body.duplicate(true)
@@ -328,7 +328,7 @@ func drag_hero(delta:float) -> void:
  if room!=owner.app.room_id or not room in FIRST_FLOOR:finish_guard(false);return
  if float(event.elapsed)>=timing("guard_max"):finish_guard(false);return
  var next:String="office" if room=="office" else Map.next_room(room,"office")
- var to:Vector2=Map.doorway("office","lobby") if room=="office" else Map.doorway(room,next)
+ var to:Vector2=owner.portal_for("office","lobby").at if room=="office" else owner.portal_for(room,next).threshold
  if owner.layout_for(room).path(owner.position("guard"),to).is_empty() and owner.position("guard").distance_to(to)>0.05:finish_guard(false);return
  if not advance_pair(to,true,delta):return
  if room=="office":finish_guard(true)
@@ -342,7 +342,7 @@ func drag_patient(delta:float) -> void:
  if room!=destination:
   var next:String=Map.next_room(room,destination)
   if next.is_empty() or next=="cortex_exit":finish_guard(false);return
-  if advance_pair(Map.doorway(room,next),false,delta):change_pair_room(next,false)
+  if advance_pair(owner.portal_for(room,next).threshold,false,delta):change_pair_room(next,false)
   return
  var at:Vector2=owner.layout_for("double_ward").furniture[2].at
  if not advance_pair(at,false,delta):return

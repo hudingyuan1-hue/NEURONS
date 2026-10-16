@@ -1,0 +1,47 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS observation window uses the existing ward/lobby door and adds no room, exit or key-search candidate
+PASS new missing-state ward shutter starts closed with a genuine walkable exterior contact stand
+PASS exterior click without a legal CONTROL window cannot start a body operation
+PASS rejected operation gives no state change, payment, reward or search use
+PASS finite contact checks first pay the real CONTROL fee
+PASS distant exterior protagonist cannot remotely open the shutter
+PASS LOS fixture has a walkable near stand separated from the actual shutter by one real obstruction
+PASS in-range contact cannot operate through that blocker
+PASS interior-side rejection also uses a genuinely paid CONTROL window
+PASS standing inside the ward cannot start an exterior-only shutter operation
+PASS pause/interruption fixture obtains real legal body control
+PASS near clear exterior contact starts visible reach toward the existing shutter
+PASS unfinished preparation cannot open the aperture or settle contact
+PASS partly reaching hand and closed state survive real checksummed JSON
+PASS manual pause freezes window gesture and world time together
+PASS actual CRT menu freezes the in-flight operation while interface processing continues
+PASS giving back control before contact cancels the reach without a delayed opening
+PASS cancelled-action JSON grants no hidden room knowledge, resources or extra search
+PASS post-contact interruption fixture again pays real CONTROL
+PASS second real exterior operation begins from the unchanged doorway
+PASS actual prepared contact opens the shutter once before the hand finishes retracting
+PASS mid-retraction disk restore retains already-completed contact instead of replaying it
+PASS post-contact interruption keeps the real open state without a second settlement
+PASS opening reveals no unobserved content, grants no reward and leaves the actual ward doorway usable
+PASS second control period follows its existing world-clock cooldown
+PASS open shutter can be closed only by another actual exterior hand action
+PASS completed close gesture changes only the shutter and has exactly one separate contact
+PASS closed-state reload cannot repeat either previous open or close contact
+PASS real CRT mouse submits paid CONTROL for the exterior marker
+PASS actual exterior window click requests the existing physical route/action interface
+PASS ordinary process moves to the outside handle and really opens after mouse input
+PASS mouse opening physically approaches without traversing the door or switching rooms
+PASS first actual mouse gesture retracts normally instead of waiting on a texture frame
+PASS original first-action feedback is actually continued through Enter before the second world click
+PASS second real marker click closes the same shutter under the same paid control window
+PASS two physical window gestures consume one original CONTROL fee and no search/reward
+PASS new-command interruption starts through genuine CRT input
+PASS real marker click begins a genuine unfinished reach
+PASS actual new floor command walks away through the existing controlled movement path
+PASS pre-contact floor command cancels window reach without delayed opening or touch receipt
+PASS final real-input case pays CONTROL while actually inside the ward
+PASS inside-side actual marker click cannot open the shutter or fall through into a door transition
+PASS inside rejection is explained by the exterior-side restriction
+ASYLUM_WINDOW_CHECK 43 passed 0 failed

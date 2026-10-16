@@ -1,0 +1,219 @@
+[
+  {
+    "awareness_feedback": [],
+    "control_left": 5.73333333333333,
+    "dialogue": [],
+    "hero": [
+      2.90000009536743,
+      1.39999997615814
+    ],
+    "input_lock_frames": 0,
+    "label": "before_first_marker_click",
+    "phase": "autonomy",
+    "public_action": {},
+    "room": "lobby",
+    "route": [],
+    "window": {
+      "action": {},
+      "last_cancel": "",
+      "open": false,
+      "serial": 0
+    },
+    "world_paused": false
+  },
+  {
+    "awareness_feedback": [],
+    "control_left": 5.53333333333334,
+    "dialogue": [],
+    "hero": [
+      2.78939342498779,
+      1.38939332962036
+    ],
+    "input_lock_frames": 0,
+    "label": "after_first_marker_click",
+    "phase": "asylum_read_route",
+    "public_action": {
+      "kind": "navigation",
+      "origin": "controlled",
+      "room": "lobby",
+      "serial": 1,
+      "target": "asylum_ward_door_window"
+    },
+    "room": "lobby",
+    "route": [
+      [
+        2.70000004768372,
+        1.30000007152557
+      ],
+      [
+        2.60000014305115,
+        1.30000007152557
+      ],
+      [
+        2.5,
+        1.30000007152557
+      ],
+      [
+        2.40000009536743,
+        1.30000007152557
+      ],
+      [
+        2.29999995231628,
+        1.30000007152557
+      ],
+      [
+        2.20000004768372,
+        1.30000007152557
+      ],
+      [
+        2.10000014305115,
+        1.30000007152557
+      ],
+      [
+        2.0,
+        1.20000004768372
+      ],
+      [
+        1.89999997615814,
+        1.10000002384186
+      ],
+      [
+        1.80000007152557,
+        1.0
+      ],
+      [
+        1.70000004768372,
+        0.900000035762787
+      ],
+      [
+        1.60000002384186,
+        0.800000011920929
+      ],
+      [
+        1.5,
+        0.800000011920929
+      ],
+      [
+        1.39999997615814,
+        0.699999988079071
+      ],
+      [
+        1.25,
+        0.689999997615814
+      ]
+    ],
+    "window": {
+      "action": {},
+      "last_cancel": "",
+      "open": false,
+      "serial": 0
+    },
+    "world_paused": false
+  },
+  {
+    "awareness_feedback": [],
+    "control_left": 3.36666666666668,
+    "dialogue": [
+      {
+        "speaker": "角色 · 疑惑",
+        "text": "刚才怎么回事……"
+      }
+    ],
+    "hero": [
+      1.27356159687042,
+      0.69157075881958
+    ],
+    "input_lock_frames": 0,
+    "label": "first_retraction_done_before_existing_feedback",
+    "phase": "autonomy",
+    "public_action": {},
+    "room": "lobby",
+    "route": [],
+    "window": {
+      "action": {},
+      "last_cancel": "completed",
+      "open": true,
+      "serial": 1
+    },
+    "world_paused": true
+  },
+  {
+    "awareness_feedback": [],
+    "control_left": 3.26666666666668,
+    "dialogue": [],
+    "hero": [
+      1.27356159687042,
+      0.69157075881958
+    ],
+    "input_lock_frames": 0,
+    "label": "before_second_marker_click_world_input_ready",
+    "phase": "autonomy",
+    "public_action": {},
+    "room": "lobby",
+    "route": [],
+    "window": {
+      "action": {},
+      "last_cancel": "completed",
+      "open": true,
+      "serial": 1
+    },
+    "world_paused": false
+  },
+  {
+    "awareness_feedback": [],
+    "control_left": 3.06666666666668,
+    "dialogue": [],
+    "hero": [
+      1.25,
+      0.689999997615814
+    ],
+    "input_lock_frames": 0,
+    "label": "after_second_marker_click",
+    "phase": "asylum_reading",
+    "public_action": {
+      "kind": "interact",
+      "origin": "controlled",
+      "room": "lobby",
+      "serial": 4,
+      "target": "asylum_ward_door_window"
+    },
+    "room": "lobby",
+    "route": [],
+    "window": {
+      "action": {
+        "contact_done": false,
+        "controlled": true,
+        "elapsed": 0.0666666666666667,
+        "phase": "prepare",
+        "serial": 2,
+        "target_open": false
+      },
+      "last_cancel": "completed",
+      "open": true,
+      "serial": 2
+    },
+    "world_paused": false
+  },
+  {
+    "awareness_feedback": [],
+    "control_left": 2.53333333333335,
+    "dialogue": [],
+    "hero": [
+      1.25,
+      0.689999997615814
+    ],
+    "input_lock_frames": 0,
+    "label": "after_second_close_wait",
+    "phase": "autonomy",
+    "public_action": {},
+    "room": "lobby",
+    "route": [],
+    "window": {
+      "action": {},
+      "last_cancel": "completed",
+      "open": false,
+      "serial": 2
+    },
+    "world_paused": false
+  }
+]

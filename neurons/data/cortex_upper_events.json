@@ -1,0 +1,259 @@
+{
+  "schema": 1,
+  "sources": [
+    "S1:P273–323",
+    "S3:P1166–1284 / T40–46",
+    "S4:T17",
+    "S5 R10 records/routes repairs"
+  ],
+  "presentation": {
+    "prepare_seconds": 0.25,
+    "finish_seconds": 0.25,
+    "turn_seconds": 0.45,
+    "point_seconds": 0.35,
+    "note": "局部占位表现参数；不替代原定0.8/1.0/1.2/1.5秒规则窗口"
+  },
+  "observations": [
+    {
+      "id": "cortex_bridge_listen",
+      "room": "bridge",
+      "label": "听两头陈述",
+      "kind": "observation",
+      "actor": "dual_head"
+    },
+    {
+      "id": "cortex_bridge_left",
+      "room": "bridge",
+      "label": "左侧原记录",
+      "kind": "observation",
+      "furniture_index": 1
+    },
+    {
+      "id": "cortex_bridge_right",
+      "room": "bridge",
+      "label": "右侧机构记录",
+      "kind": "observation",
+      "furniture_index": 2
+    },
+    {
+      "id": "cortex_rhythm_counter",
+      "room": "rhythm",
+      "label": "动作计数",
+      "kind": "observation",
+      "furniture_index": 0
+    },
+    {
+      "id": "cortex_index_original",
+      "room": "index",
+      "label": "翻开查询原件",
+      "kind": "observation",
+      "furniture_index": 1
+    },
+    {
+      "id": "cortex_index_number",
+      "room": "index",
+      "label": "原件身体编号",
+      "kind": "observation",
+      "furniture_index": 5
+    },
+    {
+      "id": "cortex_index_query",
+      "room": "index",
+      "label": "姓名索引查询",
+      "kind": "observation",
+      "furniture_index": 3
+    },
+    {
+      "id": "cortex_index_billing",
+      "room": "index",
+      "label": "费用记录",
+      "kind": "observation",
+      "furniture_index": 2
+    },
+    {
+      "id": "cortex_switch_landmark",
+      "room": "switch",
+      "label": "辨认门框与地纹",
+      "kind": "observation",
+      "furniture_index": 1
+    },
+    {
+      "id": "cortex_exit_application",
+      "room": "verify",
+      "label": "本人申请区",
+      "kind": "observation",
+      "furniture_index": 0
+    },
+    {
+      "id": "cortex_exit_proxy",
+      "room": "verify",
+      "label": "代理确认印章",
+      "kind": "observation",
+      "furniture_index": 1
+    },
+    {
+      "id": "cortex_identity_left",
+      "room": "identity",
+      "label": "左侧档案与核验",
+      "kind": "observation",
+      "furniture_index": 1
+    },
+    {
+      "id": "cortex_identity_right",
+      "room": "identity",
+      "label": "右侧档案与核验",
+      "kind": "observation",
+      "furniture_index": 3
+    },
+    {
+      "id": "cortex_identity_faces",
+      "room": "identity",
+      "label": "查看两面旧伤",
+      "kind": "observation",
+      "actor": "double_face"
+    }
+  ],
+  "dialogue": {
+    "BRIDGE_COMPLETE": [
+      {
+        "speaker": "角色 · 凝神",
+        "text": "同一个编号，同一件事，两种结果。",
+        "source": "S3:P1178"
+      },
+      {
+        "speaker": "玩家 · 低声",
+        "text": "两边都把话说完了。",
+        "source": "S3:P1179"
+      }
+    ],
+    "RHYTHM_PULL": [
+      {
+        "speaker": "角色 · 戒备",
+        "text": "脚停了，身体还在往前。",
+        "source": "S3:P1193"
+      },
+      {
+        "speaker": "玩家 · 观察",
+        "text": "是支架在拖他。",
+        "source": "S3:P1194"
+      }
+    ],
+    "RHYTHM_BYPASS": [
+      {
+        "speaker": "角色 · 低声",
+        "text": "从旁边能过去。",
+        "source": "S3:P1195"
+      }
+    ],
+    "INDEX_REMOVED": [
+      {
+        "speaker": "角色 · 盯住屏幕",
+        "text": "名字刚被拿走，就查不到了。",
+        "source": "S3:P1210"
+      }
+    ],
+    "INDEX_ORIGINAL": [
+      {
+        "speaker": "角色 · 低声",
+        "text": "编号还在，原件也还在。",
+        "source": "S3:P1211"
+      }
+    ],
+    "INDEX_BILLING": [
+      {
+        "speaker": "玩家 · 凝神",
+        "text": "费用倒是一项没少。",
+        "source": "S3:P1212"
+      }
+    ],
+    "ROUTE_POINT": [
+      {
+        "speaker": "反身人 · 平直",
+        "text": "这边。",
+        "source": "S3:P1228"
+      }
+    ],
+    "ROUTE_RETURN": [
+      {
+        "speaker": "角色 · 辨认",
+        "text": "又是这个门框……绕回来了。",
+        "source": "S3:P1229"
+      },
+      {
+        "speaker": "玩家 · 凝神",
+        "text": "指的是回来的路。",
+        "source": "S3:P1230"
+      }
+    ],
+    "ROUTE_KNOWN": [
+      {
+        "speaker": "角色 · 冷淡",
+        "text": "这条路走过了。",
+        "source": "S3:P1231"
+      }
+    ],
+    "FACE_RELEASE": [
+      {
+        "speaker": "角色 · 抗拒",
+        "text": "别碰我的脸。",
+        "source": "S3:P1251"
+      },
+      {
+        "speaker": "角色 · 低声",
+        "text": "钥匙还在。",
+        "source": "S3:P1252"
+      },
+      {
+        "speaker": "玩家 · 凝神",
+        "text": "还没出去。",
+        "source": "S3:P1253"
+      }
+    ],
+    "EXIT_APPLICATION": [
+      {
+        "speaker": "角色 · 辨认",
+        "text": "‘本人申请’……连能填写的地方都没有。",
+        "source": "S3:P1254"
+      }
+    ],
+    "EXIT_PROXY": [
+      {
+        "speaker": "玩家 · 观察",
+        "text": "另一边已经盖好了。",
+        "source": "S3:P1255"
+      }
+    ],
+    "IDENTITY_RECORDS": [
+      {
+        "speaker": "角色 · 戒备",
+        "text": "一边注销，一边还在使用。",
+        "source": "S3:P1273"
+      },
+      {
+        "speaker": "玩家 · 凝神",
+        "text": "两边都通过了。",
+        "source": "S3:P1274"
+      }
+    ],
+    "IDENTITY_FACES": [
+      {
+        "speaker": "角色 · 辨认",
+        "text": "脸一样，伤不一样。",
+        "source": "S3:P1275"
+      }
+    ],
+    "IDENTITY_COMPLETE": [
+      {
+        "speaker": "双面人",
+        "text": "都对得上。",
+        "source": "S3:P1270"
+      }
+    ]
+  },
+  "pending_fields": [
+    "实际患者编号字形",
+    "姓名与费用编号字形",
+    "身份原档两编号及具体伤形"
+  ],
+  "source_policy": "No generated death/refusal or identity merger; bridge requires real same-source event and actual written record; unknown glyphs stay null."
+}

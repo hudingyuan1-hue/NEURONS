@@ -1,0 +1,48 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS actual approach and finite screen inspection completes without a supplied number
+PASS screen check cannot turn an undelivered number into a seen identity or departure fact
+PASS new physical inspections give neither search income nor another key attempt
+PASS actual whiteboard surface inspection leaves the existing tray-search mechanics separate
+PASS missing original whiteboard wording remains null instead of new diagnosis or dialogue
+PASS a genuinely hurt protagonist can inspect the existing self-photo filing position
+PASS actual injury alone creates no photograph, camera operator or capture receipt
+PASS no departure source page is invented before actual nurse paperwork
+PASS legacy wheelchair departure and registration flags alone cannot create a readable page or missing owner
+PASS even a legacy page flag and actual nurse without its real source record cannot fabricate paper ownership
+PASS existing registration action actually finishes before its source copy becomes readable
+PASS presented copy has a real holder and is not already independently read
+PASS legacy integer-attempt source ID recovers its already-present original paper holder
+PASS unknown source attempt string cannot recover a paper owner
+PASS fractional source attempt cannot be rounded into a matching original copy
+PASS real source record alone without presented-page state cannot restore a missing owner
+PASS legacy original page with departed nurse remains unavailable rather than recreating its carrier
+PASS explicit existing alternate ownership is never overwritten by legacy compatibility
+PASS explicit existing empty owner is retained rather than interpreted as a missing legacy field
+PASS older-style real departure page without newly introduced ownership key survives normal checksummed JSON
+PASS actual legacy page/source record/present original nurse conservatively recover only missing holder metadata
+PASS legacy holder recovery creates no factual event, institutional copy, signature or completed read
+PASS actual nearby holder permits separate page-turn preparation
+PASS unfinished contact does not prematurely record the departure page
+PASS normal disk JSON retains the independent partly turned page
+PASS cancelled page turning does not finish after reload
+PASS a fresh actual page turn reads the existing nurse-held copy
+PASS reading institutional self-departure wording is not identity confirmation or a new transfer witness
+PASS existing clinician clipboard has an independently reachable signature attachment
+PASS holder leaving the room interrupts unfinished signature-page reading
+PASS actual attachment can be inspected when its original holder returns
+PASS inspecting a signature sheet never manufactures signing, proxy signing or a prefilled name
+PASS a sheet not handed over is not exposed to the reader
+PASS original recording and real handover expose the one statement sheet
+PASS original handed-over statement has its own completed read
+PASS only the exact supplied sentence is acquired, without manufacturing assent or signature
+PASS reading leaves the original statement owned by its actual recipient
+PASS loose material cannot be read as a completed labelled box
+PASS worker really takes paper, folds, flattens, fetches label, pastes and places product
+PASS physically finished label permits separate completed read
+PASS real product states are known while unknown batch and box contents remain unknown
+PASS normal CRT submits the paid CONTROL before mouse-reading an attached paper
+PASS real held-paper marker is rendered and selectable at its holder
+PASS actual world mouse selects the paper and completes normal approach/contact/read rather than a debug grant
+ASYLUM_DETAILS_CHECK 44 passed 0 failed

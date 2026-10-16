@@ -26,6 +26,7 @@ var search_duration: float = 4.0
 var search_attempts: int = 0
 var search_count: int = 0
 var search_limit: int = 10
+var allow_supplemental_search: bool = false
 var reaction_left: float = 0.0
 var facts: Array[Dictionary] = []
 var known: Array = []
@@ -53,7 +54,7 @@ func begin_search(target_id: String, complexity: float = 1.0) -> bool:
 	# action entry retains the <20 duration factor for future legal control.
 	if hp <= 0 or search_active or body_busy():
 		return false
-	if target_id.is_empty() or search_attempts >= search_limit:
+	if target_id.is_empty() or (search_attempts >= search_limit and not allow_supplemental_search):
 		return false
 	if _completed_targets.has(target_id) or not is_finite(complexity) or complexity <= 0.0:
 		return false

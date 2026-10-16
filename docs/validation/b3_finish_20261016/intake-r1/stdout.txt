@@ -1,0 +1,28 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS wheelchair_gone alone creates neither a relic bag nor readable evidence
+PASS even an explicit manifest cannot replace the missing real transport receipt
+PASS receipt from another attempt cannot certify this source delivery
+PASS unpacked floor shoe and unreceipted photo are never pulled into L3
+PASS player-held originals cannot be copied into an otherwise valid saved manifest
+PASS real packed shoe can arrive independently without duplicating the player's photo
+PASS arrival moves only the actual container, preserving each original's sole owner
+PASS arrival is idempotent and the actual receiver is reserved during intake
+FAIL validated serialized L2 container arrives only through the explicit transition hook
+PASS arriving container is not already stored or automatically read
+FAIL same registration nurse actually navigates from the desk to the entrance container
+FAIL nurse reaches genuine contact rather than collecting the bag across the room
+FAIL visible receive preparation/contact precedes ownership transfer
+PASS checksummed JSON retains the partial receive clock and original container
+PASS manual pause freezes receiving and the world clock together
+FAIL receiver losing actual contact cannot finish the pending handoff remotely
+FAIL receiver reapproaches and completes one genuine container handoff
+FAIL carrying bag follows its nurse while the photo stays inside the same container
+FAIL saved carrying stage restores physical ownership rather than redoing arrival
+FAIL nurse actually walks back to the desk and completes a distinct placement action
+FAIL placement alone stores bag and releases nurse for ordinary registration
+FAIL receive and desk storage have separate one-time actual-event receipts
+PASS offscreen storage gives no protagonist photo recognition or read bag number
+PASS bag contents require a separate earlier actual inspection of the bag label
+FAIL actual preparation/contact/finish reads bag label before its contents
