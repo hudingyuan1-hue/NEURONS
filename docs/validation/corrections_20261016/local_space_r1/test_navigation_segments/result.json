@@ -1,0 +1,67 @@
+{
+  "checks": 15,
+  "failed": 0,
+  "results": [
+    {
+      "label": "full crossing",
+      "ok": true
+    },
+    {
+      "label": "collinear edge contact is blocked",
+      "ok": true
+    },
+    {
+      "label": "far edge uses the same closed boundary",
+      "ok": true
+    },
+    {
+      "label": "single corner touch is blocked",
+      "ok": true
+    },
+    {
+      "label": "parallel clear line stays clear",
+      "ok": true
+    },
+    {
+      "label": "stationary point inside",
+      "ok": true
+    },
+    {
+      "label": "stationary point outside",
+      "ok": true
+    },
+    {
+      "label": "sub-sample corner crossing cannot be skipped",
+      "ok": true
+    },
+    {
+      "label": "v2 point boundary agrees with continuous collision",
+      "ok": true
+    },
+    {
+      "label": "v1 retains original Rect2 boundary semantics",
+      "ok": true
+    },
+    {
+      "label": "fresh chapter adopts metric geometry",
+      "ok": true
+    },
+    {
+      "label": "old hospital rest retains original chapter geometry",
+      "ok": true
+    },
+    {
+      "label": "new asylum chapter can adopt metric geometry independently",
+      "ok": true
+    },
+    {
+      "label": "old asylum rest also retains its chapter geometry",
+      "ok": true
+    },
+    {
+      "label": "institution uses the shared continuous intersection",
+      "ok": true
+    }
+  ],
+  "scope": "headless segment collision and geometry version selection; no normal-play claim"
+}

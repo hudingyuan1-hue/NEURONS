@@ -1,0 +1,175 @@
+{
+  "cases": [
+    {
+      "intake": {
+        "delivery": {
+          "bag_departed": true,
+          "bag_id": "hospital_relic_container",
+          "bag_number": null,
+          "exit_pos": [
+            0.283773422241211,
+            3.64991736412048
+          ],
+          "exit_room": "lobby",
+          "items": [
+            "family_photo",
+            "patient_shoe"
+          ],
+          "packed_receipts": {
+            "family_photo": "hospital:1:relic_packed:family_photo",
+            "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+          },
+          "source_attempt": 1.0,
+          "source_owners": {
+            "family_photo": "wheelchair_footplate",
+            "patient_shoe": "lobby_floor"
+          },
+          "transport_receipt": "hospital:1:patient_transport",
+          "version": 1.0
+        },
+        "elapsed": 0.0,
+        "last_wait": "",
+        "phase": "stored",
+        "phase_progress": 0.0,
+        "pos": [
+          1.79999995231628,
+          1.79999995231628
+        ],
+        "read": {},
+        "room": "lobby"
+      },
+      "source": {
+        "bag_departed": true,
+        "bag_id": "hospital_relic_container",
+        "exit_pos": [
+          0.283773422241211,
+          3.64991736412048
+        ],
+        "exit_room": "lobby",
+        "items": [
+          "family_photo",
+          "patient_shoe"
+        ],
+        "packed_receipts": {
+          "family_photo": "hospital:1:relic_packed:family_photo",
+          "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+        },
+        "ready": true,
+        "source_attempt": 1,
+        "source_owners": {
+          "family_photo": "wheelchair_footplate",
+          "patient_shoe": "lobby_floor"
+        },
+        "transport_receipt": "hospital:1:patient_transport",
+        "version": 1
+      },
+      "source_geometry": 2
+    },
+    {
+      "intake": {
+        "delivery": {
+          "bag_departed": true,
+          "bag_id": "hospital_relic_container",
+          "bag_number": null,
+          "exit_pos": [
+            1.25685775279999,
+            0.213715448975563
+          ],
+          "exit_room": "lobby",
+          "items": [
+            "family_photo",
+            "patient_shoe"
+          ],
+          "packed_receipts": {
+            "family_photo": "hospital:1:relic_packed:family_photo",
+            "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+          },
+          "source_attempt": 1.0,
+          "source_owners": {
+            "family_photo": "wheelchair_footplate",
+            "patient_shoe": "lobby_floor"
+          },
+          "transport_receipt": "hospital:1:patient_transport",
+          "version": 1.0
+        },
+        "elapsed": 0.0,
+        "last_wait": "",
+        "phase": "stored",
+        "phase_progress": 0.0,
+        "pos": [
+          1.79999995231628,
+          1.79999995231628
+        ],
+        "read": {},
+        "room": "lobby"
+      },
+      "source": {
+        "bag_departed": true,
+        "bag_id": "hospital_relic_container",
+        "exit_pos": [
+          1.25685775279999,
+          0.213715448975563
+        ],
+        "exit_room": "lobby",
+        "items": [
+          "family_photo",
+          "patient_shoe"
+        ],
+        "packed_receipts": {
+          "family_photo": "hospital:1:relic_packed:family_photo",
+          "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+        },
+        "ready": true,
+        "source_attempt": 1,
+        "source_owners": {
+          "family_photo": "wheelchair_footplate",
+          "patient_shoe": "lobby_floor"
+        },
+        "transport_receipt": "hospital:1:patient_transport",
+        "version": 1
+      },
+      "source_geometry": 1
+    }
+  ],
+  "failures": [
+    "v1 real chapter hook passes unchanged source container once"
+  ],
+  "passes": [
+    "metric doctor really reaches exam point, prepares grab and contacts needle",
+    "actual needle costs five HP without premature sample completion",
+    "mid-sample disk save preserves holder and prior one-time needle injury",
+    "two real sampling seconds finish one valid sample",
+    "independent prescription reaches real handover in metric clinic",
+    "v2 actual trio reaches original photograph contact",
+    "v2 contact save keeps original photograph on visible support",
+    "v2 same porter actually packs both originals and exits",
+    "v2 two actual pickups preserve unique original owners",
+    "v2 actual key route/opening/threshold enters next chapter",
+    "v2 same-floor transformation adopts new space without moving hospital provenance",
+    "v2 real chapter hook passes unchanged source container once",
+    "v2 existing nurse physically reaches incoming container",
+    "v2 mid-receive disk save preserves source geometry",
+    "v2 nurse contact/carry/place completes actual intake",
+    "v2 later clocks retain two originals without repeating handoff",
+    "v1 actual trio reaches original photograph contact",
+    "v1 contact save keeps original photograph on visible support",
+    "old chapter restart retains in-flight original coordinates and source attempt",
+    "v1 same porter actually packs both originals and exits",
+    "v1 two actual pickups preserve unique original owners",
+    "v1 actual key route/opening/threshold enters next chapter",
+    "v1 same-floor transformation adopts new space without moving hospital provenance",
+    "v1 existing nurse physically reaches incoming container",
+    "v1 mid-receive disk save preserves source geometry",
+    "v1 nurse contact/carry/place completes actual intake",
+    "v1 later clocks retain two originals without repeating handoff",
+    "guard test starts with two legal bodies near existing office portal",
+    "guard closes real reach and establishes actual single holder",
+    "guard damage settles once at actual grip",
+    "paired drag survives actual disk save before doorway crossing",
+    "guard and held protagonist physically cross existing office threshold",
+    "existing office landing completes disposition and releases holder",
+    "both bodies finish on legal destination floor without repeated damage"
+  ],
+  "rendered": true,
+  "scope": "Production metric clinic contacts, v2 original-object transport and legacy v1 in-flight rest-to-new-L3 source provenance, actual intake and paired guard threshold. Explicit initial actors/key/accepted report. Fixed world ticks, not normal-speed natural full playthrough or art/audio acceptance."
+}

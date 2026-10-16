@@ -46,8 +46,21 @@ func run_check() -> void:
  check(OS.has_feature("windows"),"package validation runs on target Windows platform")
  check(not FileAccess.file_exists("res://tests/test_rules.gd"),"test scripts are excluded from shipped pack")
  check(not DirAccess.dir_exists_absolute("res://DOCX"),"source documents are not shipped")
- for name in ["skills","home_rules","home_dialogue","tutorial_dialogue","search_actions","presentation","audio_bindings","hospital","hospital_observations","hidden_street","opening","asylum","asylum_records","asylum_ward_events","asylum_trace_events","asylum_isolation","asylum_observations","asylum_nurse_duty","asylum_intake","cortex_events","cortex_upper_events","key_discovery","room_spaces"]:
+ for name in ["skills","home_rules","home_dialogue","tutorial_dialogue","search_actions","presentation","audio_bindings","hospital","hospital_observations","hidden_street","opening","asylum","asylum_records","asylum_ward_events","asylum_trace_events","asylum_isolation","asylum_observations","asylum_nurse_duty","asylum_intake","cortex_events","cortex_upper_events","key_discovery","room_spaces","institution_spaces"]:
   check(JSON.parse_string(FileAccess.get_file_as_string("res://data/%s.json"%name)) is Dictionary,"dynamic JSON is in PCK: "+name)
+ var corridor_layout=load("res://scripts/world/institution_layout.gd").new("corridor",3)
+ var activity_layout=load("res://scripts/world/institution_layout.gd").new("activity",3)
+ check(corridor_layout.world_size()==Vector2(16,5) and corridor_layout.furniture.size()==4 and corridor_layout.portals.size()==7,"exported corridor resolves new dimensions, original four searches and seven portals")
+ check(activity_layout.world_size()==Vector2(10,8) and activity_layout.furniture.size()==8 and activity_layout.portals.size()==1,"exported activity room resolves new dimensions and eight original search descriptors")
+ for spec:Array in [["group_therapy",Vector2(9,8),6],["quiet",Vector2(6,5),4],["bathroom",Vector2(8,7),7],["double_ward",Vector2(8,6),7],["workshop",Vector2(10,7),8]]:
+  var trial_layout=load("res://scripts/world/institution_layout.gd").new(str(spec[0]),3)
+  check(trial_layout.world_size()==spec[1] and trial_layout.furniture.size()==int(spec[2]) and trial_layout.candidate_count()==int(spec[2]) and trial_layout.portals.size()==1,"exported upper room resolves original indices/actions and configured geometry: "+str(spec[0]))
+ var package_session=load("res://scripts/core/campaign_session.gd").new();var package_rng:=RandomNumberGenerator.new()
+ package_session.new_attempt(3,package_rng)
+ var versions_ok:bool=package_session.data.asylum_space_versions.size()==7
+ for room in package_session.ASYLUM_METRIC_ROOMS:versions_ok=versions_ok and int(package_session.data.asylum_space_versions.get(room,0))==2
+ check(versions_ok,"exported fresh L3 activates exactly seven intended versioned upper rooms; stairs uses existing base version")
+ corridor_layout=null;activity_layout=null;package_session=null
  var bindings=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_bindings.json"))
  for entry in bindings.assets:
   check(load(str(entry.stream)) is AudioStream,"audio stream loads from PCK: "+str(entry.id))

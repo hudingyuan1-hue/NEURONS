@@ -1,0 +1,21 @@
+{
+  "failures": [
+    "continuous paid withdrawal retains original two-neuron cost, no injury or holder",
+    "one retry reward settles only at completion and never repeats consumed supervisor attempt"
+  ],
+  "passes": [
+    "continuous autonomous search reaches actual supervisor drawer preparation",
+    "actual CRT mouse withdrawal makes drawer close empty and releases original attempt",
+    "ordinary autonomous retry completes same six-second search after real interruption"
+  ],
+  "recording": {
+    "final_room": "workshop",
+    "fps": 30,
+    "frames": 298,
+    "initial_fixtures": "new workshop geometry, clear actual drawer contact, one original supervisor at named stand, 50N and unlocked WITHDRAW; no clamp/completion/result injected",
+    "method": "ordinary campaign process after setup, actual Enter/CRT mouse; no manual world ticks"
+  },
+  "rendered": true,
+  "routes": [],
+  "scope": "Versioned L3 upper-room trials, original seven corridor links and 44 original search contacts; source-bound NPC/report/nurse/bed/therapy/work cases use declared initial actor/key/scheduling fixtures, production clocks and disk JSON. Optional continuous recording uses ordinary process and actual keyboard/mouse after declared actors/skill fixture. Not natural full playthrough, formal art or audio acceptance."
+}

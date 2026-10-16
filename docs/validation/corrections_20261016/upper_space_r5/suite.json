@@ -1,0 +1,39 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 1,
+    "seconds": 10.33,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 71,
+    "failed": [
+      "original eight-second observation and real opening finish without changing source duration"
+    ]
+  },
+  {
+    "case": "asylum-ward",
+    "returncode": 1,
+    "seconds": 15.59,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 138,
+    "failed": [
+      "released orderly really traverses old floor/stairs, receives paper, finds target and closes its actual grasp",
+      "same original orderly crosses real first-floor rooms and stair connection instead of spawning upstairs",
+      "mid-patient-escort JSON keeps original two actors and same held target",
+      "actual paired path crosses activity/corridor/quiet doors and only then records delivery",
+      "delivered patient is really released and unique orderly becomes available",
+      "only written, signed and actually delivered disposition becomes eligible for later isolation handoff",
+      "same removed patient does not return to original seat and replay wound event"
+    ]
+  },
+  {
+    "case": "asylum-isolation",
+    "returncode": 0,
+    "seconds": 19.69,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 70,
+    "failed": []
+  }
+]

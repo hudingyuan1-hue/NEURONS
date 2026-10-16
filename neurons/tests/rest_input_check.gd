@@ -10,7 +10,7 @@ func click_at(point:Vector2,which:int=MOUSE_BUTTON_LEFT) -> void:
   Input.parse_input_event(event);await frames(2)
 
 func body_click(which:int) -> void:
- var point:Vector2=(app.world_viewport.get_canvas_transform()*app.view.hero_body_rect().get_center())*2.0
+ var point:Vector2=(app.world_viewport.get_canvas_transform()*app.view.hero_body_rect().get_center())*Vector2(1280,720)/Vector2(app.world_viewport.size)
  await click_at(point,which)
 
 func await_live(predicate:Callable,timeout_seconds:float=3.0) -> bool:

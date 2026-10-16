@@ -1,0 +1,211 @@
+{
+  "checks": 50,
+  "failed": 0,
+  "results": [
+    {
+      "label": "art: all stable items, original text, prompts, IDs and source paths preserved",
+      "ok": true
+    },
+    {
+      "label": "art: inline scripts execute without DOM exceptions",
+      "ok": true
+    },
+    {
+      "label": "art: no external resources requested",
+      "ok": true
+    },
+    {
+      "label": "art: no script/style/CDN/fetch dependency",
+      "ok": true
+    },
+    {
+      "label": "art: default view shows human responsibilities",
+      "ok": true
+    },
+    {
+      "label": "art: code work and uncommissioned voices remain collapsed",
+      "ok": true
+    },
+    {
+      "label": "art: search narrows to stable ID",
+      "ok": true
+    },
+    {
+      "label": "art: group expand control works",
+      "ok": true
+    },
+    {
+      "label": "art: full prompt is selectable DOM text",
+      "ok": true
+    },
+    {
+      "label": "art: blocked clipboard falls back to selectable manual copy",
+      "ok": true
+    },
+    {
+      "label": "art: actual form events update current entry",
+      "ok": true
+    },
+    {
+      "label": "art: unknown IDs in both forms are retained",
+      "ok": true
+    },
+    {
+      "label": "art: conflict requires an explicit choice",
+      "ok": true
+    },
+    {
+      "label": "art: cancel is atomic",
+      "ok": true
+    },
+    {
+      "label": "art: keep-current preserves both existing values and new extension fields",
+      "ok": true
+    },
+    {
+      "label": "art: use-imported choice is honored",
+      "ok": true
+    },
+    {
+      "label": "art: invalid final row cannot partly overwrite progress",
+      "ok": true
+    },
+    {
+      "label": "art: old simplified protocol imports without deleting unknown IDs",
+      "ok": true
+    },
+    {
+      "label": "art: JSON download contains both tables and current edits",
+      "ok": true
+    },
+    {
+      "label": "art: detached generated HTML starts without exceptions/external requests",
+      "ok": true
+    },
+    {
+      "label": "art: close/reopen generated HTML restores filled values, including script-like text",
+      "ok": true
+    },
+    {
+      "label": "art: detached HTML retains other-table and legacy unknown IDs",
+      "ok": true
+    },
+    {
+      "label": "art: every embedded reference is byte-identical to its recorded original",
+      "ok": true
+    },
+    {
+      "label": "art: source-record paths are not broken cross-computer hyperlinks",
+      "ok": true
+    },
+    {
+      "label": "art: narrow-layout rules and long text wrapping exist (not a device render test)",
+      "ok": true
+    },
+    {
+      "label": "audio: all stable items, original text, prompts, IDs and source paths preserved",
+      "ok": true
+    },
+    {
+      "label": "audio: inline scripts execute without DOM exceptions",
+      "ok": true
+    },
+    {
+      "label": "audio: no external resources requested",
+      "ok": true
+    },
+    {
+      "label": "audio: no script/style/CDN/fetch dependency",
+      "ok": true
+    },
+    {
+      "label": "audio: default view shows human responsibilities",
+      "ok": true
+    },
+    {
+      "label": "audio: code work and uncommissioned voices remain collapsed",
+      "ok": true
+    },
+    {
+      "label": "audio: search narrows to stable ID",
+      "ok": true
+    },
+    {
+      "label": "audio: group expand control works",
+      "ok": true
+    },
+    {
+      "label": "audio: full prompt is selectable DOM text",
+      "ok": true
+    },
+    {
+      "label": "audio: blocked clipboard falls back to selectable manual copy",
+      "ok": true
+    },
+    {
+      "label": "audio: actual form events update current entry",
+      "ok": true
+    },
+    {
+      "label": "audio: unknown IDs in both forms are retained",
+      "ok": true
+    },
+    {
+      "label": "audio: conflict requires an explicit choice",
+      "ok": true
+    },
+    {
+      "label": "audio: cancel is atomic",
+      "ok": true
+    },
+    {
+      "label": "audio: keep-current preserves both existing values and new extension fields",
+      "ok": true
+    },
+    {
+      "label": "audio: use-imported choice is honored",
+      "ok": true
+    },
+    {
+      "label": "audio: invalid final row cannot partly overwrite progress",
+      "ok": true
+    },
+    {
+      "label": "audio: old simplified protocol imports without deleting unknown IDs",
+      "ok": true
+    },
+    {
+      "label": "audio: JSON download contains both tables and current edits",
+      "ok": true
+    },
+    {
+      "label": "audio: detached generated HTML starts without exceptions/external requests",
+      "ok": true
+    },
+    {
+      "label": "audio: close/reopen generated HTML restores filled values, including script-like text",
+      "ok": true
+    },
+    {
+      "label": "audio: detached HTML retains other-table and legacy unknown IDs",
+      "ok": true
+    },
+    {
+      "label": "audio: every embedded reference is byte-identical to its recorded original",
+      "ok": true
+    },
+    {
+      "label": "audio: source-record paths are not broken cross-computer hyperlinks",
+      "ok": true
+    },
+    {
+      "label": "audio: narrow-layout rules and long text wrapping exist (not a device render test)",
+      "ok": true
+    }
+  ],
+  "artifacts": [
+    "C:\\Users\\莫蕊源\\Documents\\GitHub\\NEURONS\\tmp\\offline-share-detached\\NEURONS_美术_已填写.html",
+    "C:\\Users\\莫蕊源\\Documents\\GitHub\\NEURONS\\tmp\\offline-share-detached\\NEURONS_音频_已填写.html"
+  ],
+  "scope": "Node/jsdom isolated DOM and serialization contracts. No real browser launched. file:// browser tool was policy-blocked; no browser download, responsive rendering, clipboard OS integration or second device claim."
+}

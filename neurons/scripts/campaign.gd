@@ -292,6 +292,7 @@ func _process(delta:float) -> void:
    if death_left<=0:restart_attempt(3,true)
   update_ui();view.queue_redraw();return
  super._process(delta)
+ if not world_paused():keep_metric_actor_visible()
  if not world_paused():
   audio.cue("MUS_ROOM","music:%d:%d"%[session.data.level,rules.actual_attempt])
   if room_id=="bedroom":audio.cue("AMB_FAN","fan:%d"%rules.actual_attempt)
@@ -379,6 +380,7 @@ func layout_for_room(id:String):
  return floor_layout
 
 func metric_institution_room(id:String) -> bool:
+ if int(session.data.level)==3 and id in Session.ASYLUM_METRIC_ROOMS:return int(session.data.get("asylum_space_versions",{}).get(id,1))>=2
  return int(session.data.level) in [2,3] and int(session.data.get("institution_geometry_version",1))>=2 and id in ["ward","lobby","clinic","pharmacy","office","stairs"]
 
 func enter_room(id:String) -> void:
@@ -392,7 +394,7 @@ func enter_room(id:String) -> void:
  if int(session.data.level)==3 and not restoring and previous in AsylumMap.GRAPH.get(id,[]):hero_pos=AsylumMap.doorway(id,previous)
  if metric_institution_room(id):
   var arrival:Dictionary=layout.portal(previous)
-  hero_pos=arrival.landing if not restoring and not arrival.is_empty() else layout.get_anchor("hero_entry")
+  hero_pos=arrival.landing if not restoring and not arrival.is_empty() else layout.get_anchor("spawn")
  if int(session.data.level)==4:
   hero_pos=CortexMap.doorway(id,previous) if not restoring and previous in CortexMap.GRAPH.get(id,[]) else CortexMap.SPAWN
  hero_route=PackedVector2Array()
@@ -411,6 +413,7 @@ func enter_room(id:String) -> void:
  if hospital!=null and not restoring:hospital.on_enter(previous,id)
  if asylum!=null and not restoring:asylum.on_enter(previous,id)
  if cortex!=null and not restoring:cortex.on_enter(previous,id)
+ keep_metric_actor_visible()
 
 func configure_room_viewport() -> void:
  # New metric rooms use a native world viewport, never a smaller actor to
@@ -423,6 +426,20 @@ func configure_room_viewport() -> void:
  camera.position=layout.project(layout.world_size()*0.5)+Vector2(0,-84) if metric else Vector2(320,196)
  camera.reset_smoothing()
  camera.force_update_scroll()
+
+func keep_metric_actor_visible() -> void:
+ # A long corridor pans at unchanged actor scale. No new gameplay clock.
+ if layout==null or not metric_institution_room(room_id) or not layout.config.get("camera_track",false):return
+ var screen:Vector2=world_viewport.get_canvas_transform()*layout.project(hero_pos)
+ var safe:=Rect2(200,270,880,270)
+ var wanted:Vector2=screen.clamp(safe.position,safe.end)
+ if wanted.distance_squared_to(screen)>.001:
+  camera.position+=(screen-wanted)/camera.zoom
+  camera.force_update_scroll()
+
+func reset_zoom() -> void:
+ super.reset_zoom()
+ keep_metric_actor_visible()
 
 func enter_hidden_street() -> void:
  family.data.hidden_pending=false;family.data.pressure=0;family.data.blood_door=false
@@ -839,13 +856,18 @@ func advance_cortex_observation_route(delta:float) -> void:
  if spec.is_empty() or not cortex.available(spec) or str(spec.room)!=room_id or (request.get("controlled",false) and rules.control_left<=0):cancel_cortex_observation();return
  var at:Vector2=cortex.approach_position(spec)
  if not at.is_finite():cancel_cortex_observation();return
- if hero_pos.distance_to(at)>0.035:
+ # Existing observation contact rules permit a clear, facing stand within
+ # 0.65m; do not insist on occupying the same exact point as a waiting NPC.
+ var target:Vector2=cortex.target_position(spec)
+ var offset:Vector2=target-hero_pos
+ var contact:bool=offset.length()<=0.65 and layout.clear_segment(hero_pos,target) and cortex_segment_clear(hero_pos,hero_pos)
+ if contact and offset.length()>0.001:hero_facing=offset.normalized()
+ if not contact and hero_pos.distance_to(at)>0.035:
   if hero_route.is_empty() or hero_route[-1].distance_to(at)>0.08:hero_route=layout.path(hero_pos,at)
   if hero_route.is_empty():cancel_cortex_observation();return
   move_hero(delta)
- if hero_pos.distance_to(at)<=0.035:
+ if contact or hero_pos.distance_to(at)<=0.035:
   hero_route=PackedVector2Array()
-  var target:Vector2=cortex.target_position(spec)
   if hero_pos.distance_to(target)>0.001:hero_facing=(target-hero_pos).normalized()
   action_phase="cortex_observing" if cortex.begin_observation(str(spec.id),bool(request.get("controlled",false))) else "autonomy"
   cortex.data.erase("observation_route")
@@ -1047,7 +1069,6 @@ func unlock_asylum() -> void:
  session.new_attempt(3,rng);rules.actual_attempt=int(session.data.attempts["3"])
  rules.owners.key=session.data.key_owner
  asylum.start_attempt(hospital.data.duplicate(true))
- asylum.intake.arrive_from_hospital()
  # The first floor changes in place before the already-open staircase is
  # traversed. This transition is not a direct teleport to the upper floor.
  if metric_institution_room("lobby"):
@@ -1055,6 +1076,9 @@ func unlock_asylum() -> void:
   hero_pos=portal_for_room("lobby","stairs").threshold
   route_to_door("stairs")
  else:enter_room("stairs")
+ # Validate arrival against the destination floor, after its layout exists.
+ # A restored v1 hospital can still be the current same-name lobby above.
+ asylum.intake.arrive_from_hospital()
 
 func unlock_cortex() -> void:
  # S4:T24R5: one real keyed departure, one first-unlock reward; no cycle.
@@ -1127,7 +1151,10 @@ func apply_cast() -> void:
  if session.data.level==3:asylum.on_skill(result)
  if session.data.level==4:cortex.on_skill(result)
  if room_id=="hidden_street":hidden_route.on_skill(result)
- var interrupted:bool=result.search_cancelled or id in ["CONTROL","STARTLE","FEAR"]
+ # A doorway is not a search. Successful bodily interruptions must also
+ # cancel its pending approach/opening/threshold route, before room arrival.
+ var door_interrupted:bool=action_phase in ["door","opening","crossing"] and id in ["SKIN","GUT","KNEE","WITHDRAW","STARTLE","FEAR","CONTROL"]
+ var interrupted:bool=result.search_cancelled or id in ["CONTROL","STARTLE","FEAR"] or door_interrupted
  if action_phase=="observe_cuff" and id in ["SKIN","GUT","KNEE","WITHDRAW","STARTLE","FEAR","CONTROL"]:
   action_phase="autonomy";search_actions.observing_index=-1
  if interrupted:
@@ -1231,29 +1258,11 @@ func move_hero(delta:float) -> void:
   rules.finish_public_action(route_action_origin)
 
 func cortex_detour(target:Vector2,body:Vector2,radius:float=0.42) -> PackedVector2Array:
- # Temporary occupied grid cells; actual walls and actor spacing stay intact.
- var changed:Array=[]
  var obstacles:Array=[{"pos":body,"radius":radius}]
  for id in cortex.data.get("actors",{}):
   if not cortex.present(str(id)) or str(cortex.actor(str(id)).room)!=room_id:continue
   obstacles.append({"pos":cortex.position(str(id)),"radius":0.42 if id=="twitch" else 0.32})
- var start:Vector2i=Vector2i((hero_pos/layout.CELL).round())
- for y in range(39):
-  for x in range(57):
-   var cell:=Vector2i(x,y)
-   if cell==start or layout.grid.is_point_solid(cell):continue
-   for obstacle in obstacles:
-    if (Vector2(cell)*layout.CELL).distance_to(obstacle.pos)<float(obstacle.radius)+0.04:
-     changed.append(cell);layout.grid.set_point_solid(cell,true);break
- var route:PackedVector2Array=layout.path(hero_pos,target)
- for cell in changed:layout.grid.set_point_solid(cell,false)
- var previous:Vector2=hero_pos
- for step in route:
-  for obstacle in obstacles:
-   if Geometry2D.get_closest_point_to_segment(obstacle.pos,previous,step).distance_to(obstacle.pos)<float(obstacle.radius):return PackedVector2Array()
-  if not layout.clear_segment(previous,step,layout.body_radius):return PackedVector2Array()
-  previous=step
- return route
+ return layout.path_around_bodies(hero_pos,target,obstacles)
 
 func cortex_segment_clear(from:Vector2,to:Vector2) -> bool:
  if cortex==null or not cortex.enabled:return true
@@ -1310,7 +1319,9 @@ func _unhandled_input(event:InputEvent) -> void:
     hero_facing=(point-hero_pos).normalized();return
    if event.button_index==MOUSE_BUTTON_LEFT and (item_click or not view.hero_body_rect().has_point(pixel)):
     for door in visible_doors:
-     if view.door_hit(door,pixel):
+     # Elevated shutters/items can be drawn inside a metric door face.
+     # Their visible click target must win over the underlying doorway.
+     if not item_click and view.door_hit(door,pixel):
       if (room_id=="bedroom" and door=="lobby") or (session.data.level==2 and door=="stairs") or door in ["cortex_exit","combat_exit"]:
        if not has_key():status_note="门尚未具备开锁条件";return
       cancel_cortex_observation();cancel_hospital_observation();cancel_asylum_read();rules.cancel_search();route_to_door(door);controlled_route=false;return
@@ -1443,6 +1454,7 @@ func restore_snapshot(data:Dictionary) -> bool:
  # real rest/revival constructs the new room; no saved contact is teleported.
  if not session.data.has("room_geometry_version"):session.data.room_geometry_version=1
  if not session.data.has("institution_geometry_version"):session.data.institution_geometry_version=1
+ if not session.data.has("asylum_space_versions"):session.data.asylum_space_versions={}
  session.normalize_restored_numbers()
  home.data=data.get("home_state",{}).duplicate(true)
  search_actions.states=data.get("search_props",{}).duplicate(true)
@@ -1510,6 +1522,7 @@ func restore_snapshot(data:Dictionary) -> bool:
  sync_audio_pause()
  audio.restore_playback(data.get("audio_state",{}))
  restoring=false
+ keep_metric_actor_visible()
  if not bool(profile.get("opening_completed",true)):open_parasite(data.get("opening_state",{}))
  if int(data.schema)==1:status_note="已载入旧版存档；下次保存升级，原有效档单独保留为profile.schema1.json"
  return true

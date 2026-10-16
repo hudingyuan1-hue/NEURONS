@@ -1,0 +1,12 @@
+{
+  "cases": [],
+  "failures": [],
+  "passes": [
+    "continuous normal-process doctor/CRT/rescue/prescription segment reaches real completion",
+    "continuous segment retains real needle injury and records actual interrupted sample",
+    "continuous mouse CRT pays once and frees only after actual knee contact",
+    "continuous segment receives the independent prescription at contact"
+  ],
+  "rendered": true,
+  "scope": "Production metric clinic contacts, v2 original-object transport and legacy v1 in-flight rest-to-new-L3 source provenance, actual intake and paired guard threshold. Explicit initial actors/key/accepted report. Fixed world ticks, not normal-speed natural full playthrough or art/audio acceptance."
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 1,
+    "seconds": 4.32,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 41,
+    "failed": [
+      "real autonomous walk reaches activity:1"
+    ]
+  },
+  {
+    "case": "test_institution_layout",
+    "returncode": 1,
+    "seconds": 3.44,
+    "stderr_bytes": 107,
+    "stderr": "FAIL: activity L3 legal target furniture:1\nFAIL: activity L3 wide route door_to_sofa_side radius-safe path",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\n{\"failed\":[\"activity L3 legal target furniture:1\",\"activity L3 wide route door_to_sofa_side radius-safe path\"],\"passed\":3259,\"routes_checked\":1102,\"scope\":\"headless geometry only; actual play and visual acceptance remain separate\"}\n"
+  }
+]

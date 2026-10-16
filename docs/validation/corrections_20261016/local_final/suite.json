@@ -1,0 +1,58 @@
+[
+  {
+    "case": "institution-events",
+    "returncode": 0,
+    "seconds": 4.93,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 35,
+    "failed": []
+  },
+  {
+    "case": "institution-space",
+    "returncode": 0,
+    "seconds": 9.04,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 140,
+    "failed": []
+  },
+  {
+    "case": "cortex-events",
+    "returncode": 1,
+    "seconds": 4.61,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 88,
+    "failed": [
+      "JSON retains exact in-progress clip instead of restarting original event"
+    ]
+  },
+  {
+    "case": "cortex-upper",
+    "returncode": 1,
+    "seconds": 4.44,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 64,
+    "failed": [
+      "seen pointing creates only existing three-leg loop",
+      "dry mouth without an actual handover does not cancel existing walking guidance",
+      "misdirection physically walks all three actual doors before returning",
+      "returned hero really examines original doorway landmark",
+      "only completed physical loop plus landmark grants persistent route recognition",
+      "recognized route persists through actual JSON"
+    ]
+  },
+  {
+    "case": "cortex-sequence",
+    "returncode": 1,
+    "seconds": 5.8,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 15,
+    "failed": [
+      "handle preparation and actual empty closure each play one existing world material cue; no listening claim"
+    ]
+  }
+]

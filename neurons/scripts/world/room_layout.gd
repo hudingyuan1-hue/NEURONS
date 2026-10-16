@@ -67,14 +67,47 @@ func walkable(p:Vector2, radius:float=-1.0) -> bool:
  if not Rect2(Vector2(radius,radius),world_size()-Vector2.ONE*radius*2).has_point(p):
   return false
  for f in furniture:
-  if (f.rect as Rect2).grow(radius).has_point(p):
+  if footprint_contains((f.rect as Rect2).grow(radius),p):
    return false
  for rect in movable_blockers:
-  if rect.grow(radius).has_point(p):return false
+  if footprint_contains(rect.grow(radius),p):return false
+ return true
+
+func footprint_contains(rect:Rect2,point:Vector2) -> bool:
+ if geometry_version<2:return rect.has_point(point)
+ # Geometry v2 uses the same closed boundary for points and segments.
+ # Rect2.has_point excludes its far edges, allowing one endpoint onto a wall.
+ return point.x>=rect.position.x and point.x<=rect.end.x and point.y>=rect.position.y and point.y<=rect.end.y
+
+func segment_hits_rect(a:Vector2,b:Vector2,rect:Rect2) -> bool:
+ # Continuous slab intersection, including tangencies, parallel edges and
+ # zero-length segments. No spacing-dependent sampling can miss a corner.
+ var direction:Vector2=b-a
+ var enter:float=0.0
+ var leave:float=1.0
+ for axis:int in range(2):
+  var delta:float=direction[axis]
+  if absf(delta)<0.000000000001:
+   if a[axis]<rect.position[axis] or a[axis]>rect.end[axis]:return false
+   continue
+  var first:float=(rect.position[axis]-a[axis])/delta
+  var last:float=(rect.end[axis]-a[axis])/delta
+  if first>last:
+   var saved:float=first;first=last;last=saved
+  enter=maxf(enter,first);leave=minf(leave,last)
+  if enter>leave:return false
  return true
 
 func clear_segment(a:Vector2,b:Vector2,radius:float=0.0) -> bool:
  if radius<0.0:radius=body_radius
+ if not a.is_finite() or not b.is_finite():return false
+ if geometry_version>=2:
+  if not walkable(a,radius) or not walkable(b,radius):return false
+  for item:Dictionary in furniture:
+   if segment_hits_rect(a,b,(item.rect as Rect2).grow(radius)):return false
+  for rect:Rect2 in movable_blockers:
+   if segment_hits_rect(a,b,rect.grow(radius)):return false
+  return true
  var steps := maxi(2,ceili(a.distance_to(b)/0.03))
  for i in range(steps+1):
   var p := a.lerp(b,float(i)/steps)
@@ -167,4 +200,42 @@ func move_path(p:Vector2, route:PackedVector2Array, distance:float) -> Dictionar
     current=candidate
    break
  return {"position":current,"route":remaining}
+
+func segment_avoids_bodies(a:Vector2,b:Vector2,bodies:Array) -> bool:
+ for body:Dictionary in bodies:
+  var at:Vector2=body.pos;var radius:float=float(body.radius)
+  if a.distance_to(at)<radius and b.distance_to(at)>a.distance_to(at):continue
+  if Geometry2D.get_closest_point_to_segment(at,a,b).distance_to(at)<radius:return false
+ return true
+
+func path_around_bodies(a:Vector2,b:Vector2,bodies:Array) -> PackedVector2Array:
+ # Temporary circular occupation participates in endpoints and every segment.
+ # Keep grid waypoints: static-only smoothing would cut through an actor.
+ if not walkable(a) or not walkable(b):return PackedVector2Array()
+ if clear_segment(a,b,body_radius) and segment_avoids_bodies(a,b,bodies):return PackedVector2Array([a,b])
+ var changed:Array[Vector2i]=[]
+ for y in range(grid.region.position.y,grid.region.end.y):
+  for x in range(grid.region.position.x,grid.region.end.x):
+   var cell:=Vector2i(x,y)
+   if grid.is_point_solid(cell):continue
+   for body:Dictionary in bodies:
+    if (Vector2(cell)*CELL).distance_to(body.pos)<float(body.radius)+.02:
+     changed.append(cell);grid.set_point_solid(cell,true);break
+ var starts:Array[Vector2i]=_grid_candidates(a)
+ var ends:Array[Vector2i]=_grid_candidates(b)
+ var result:=PackedVector2Array()
+ for start in starts:
+  if not segment_avoids_bodies(a,Vector2(start)*CELL,bodies):continue
+  for finish in ends:
+   if not segment_avoids_bodies(Vector2(finish)*CELL,b,bodies):continue
+   var middle:PackedVector2Array=grid.get_point_path(start,finish)
+   if middle.is_empty():continue
+   var proposed:=PackedVector2Array([a]);proposed.append_array(middle);proposed.append(b)
+   var valid:bool=true
+   for i in range(1,proposed.size()):
+    if not clear_segment(proposed[i-1],proposed[i],body_radius) or not segment_avoids_bodies(proposed[i-1],proposed[i],bodies):valid=false;break
+   if valid:result=proposed;break
+  if not result.is_empty():break
+ for cell in changed:grid.set_point_solid(cell,false)
+ return result
 

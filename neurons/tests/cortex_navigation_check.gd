@@ -150,4 +150,19 @@ func _ready() -> void:
  app.target_index=-1;app.action_phase="autonomy";app.hero_route=PackedVector2Array();clear_lines()
  check(until3(func():return "index:3" in app.completed,15),"the same vacated terminal still supports genuine seven-second key search")
  await capture("04_terminal_access_after_real_retreat")
+ # Unmodified snapshot observed in the new-profile run, not a convenient
+ # repositioned actor fixture: hero and default blindfold approach conflicted.
+ var observed=JSON.parse_string(FileAccess.get_file_as_string("res://../docs/validation/corrections_20261016/local_more/natural-hospital/final_snapshot.json"))
+ check(observed is Dictionary and app.restore_snapshot(observed),"restore unchanged observed natural visual-room contention")
+ app.paused_manual=true
+ var observed_id:String=str(app.cortex.data.get("observation_route",{}).get("id",""))
+ check(not observed_id.is_empty() and until3(func():return app.cortex.data.completed_observations.has(observed_id),20),"original unmodified observation route clears natural NPC contention and really completes")
+ navigation_samples.append({"natural_contention_id":observed_id,"hero":app.hero_pos,"actor":app.cortex.actor("blindfold").duplicate(true),"request":app.cortex.data.get("observation_route",{}).duplicate(true)})
+ await capture("05_observed_contention_resumed")
+ observed=JSON.parse_string(FileAccess.get_file_as_string("res://../docs/validation/corrections_20261016/local_navigation_r1/natural-hospital/final_snapshot.json"))
+ check(observed is Dictionary and app.restore_snapshot(observed),"restore unchanged natural original-page/NPC approach snapshot")
+ app.paused_manual=true
+ check(until3(func():return app.cortex.data.observation.is_empty() and app.cortex.data.paper.phase!="approach",25),"real paper actor routes around held-page observer instead of locking the unfinished read")
+ navigation_samples.append({"natural_paper_phase":app.cortex.data.paper.phase,"actor":app.cortex.actor("stitched").duplicate(true),"observation":app.cortex.data.observation.duplicate(true)})
+ await capture("06_observed_paper_resumed")
  finish_navigation()

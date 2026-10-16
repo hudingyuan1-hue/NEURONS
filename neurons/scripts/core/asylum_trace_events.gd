@@ -13,7 +13,7 @@ func _init(events) -> void:
 
 func state() -> Dictionary:
  if not owner.data.has("trace_events"):
-  owner.data.trace_events={"corpse":{"identity":"independent_deceased","room":"bathroom","pos":[4.2,1.1],"covered":false,"on_board":false,"moved_out":false},"cleaner":{"phase":"idle","elapsed":0.0,"relic_index":0,"wash_index":0},"screen_closed":false,"washed":[],"read":{},"active":{},"conversation":{"phase":"idle","elapsed":0.0,"shown":{},"complete":false,"stopped":false},"corner":{"phase":"idle","elapsed":0.0,"done":false,"witness":false}}
+  owner.data.trace_events={"corpse":{"identity":"independent_deceased","room":"bathroom","pos":owner.xy(owner.space_point("bathroom","corpse_origin",Vector2(4.2,1.1))),"covered":false,"on_board":false,"moved_out":false},"cleaner":{"phase":"idle","elapsed":0.0,"relic_index":0,"wash_index":0},"screen_closed":false,"washed":[],"read":{},"active":{},"conversation":{"phase":"idle","elapsed":0.0,"shown":{},"complete":false,"stopped":false},"corner":{"phase":"idle","elapsed":0.0,"done":false,"witness":false}}
  var result:Dictionary=owner.data.trace_events
  for id in ["asylum_corpse_wristband","asylum_meal_list"]:
   if not owner.app.rules.owners.has(id):owner.app.rules.owners[id]=str(config.relics[id].owner)
@@ -23,6 +23,8 @@ func state() -> Dictionary:
  return result
 
 func vector(value:Array) -> Vector2:return Vector2(float(value[0]),float(value[1]))
+func relic_point(id:String) -> Vector2:return owner.space_point("bathroom","relic_"+id,vector(config.relics[id].pos))
+func wash_point(region:Dictionary) -> Vector2:return owner.space_point("bathroom","wash_"+str(region.id),vector(region.pos))
 func say(key:String) -> void:
  if not owner.claim("trace_line:"+key,"asylum_trace_dialogue"):return
  for line in config.dialogue.get(key,[]):owner.app.add_dialogue(str(line.speaker),str(line.text))
@@ -103,17 +105,17 @@ func advance_cleaner(delta:float) -> void:
   return
  if event.phase=="exit":
   if str(owner.actor("cleaner").room)!="bathroom":return
-  var exit:Vector2=Map.doorway("bathroom","corridor")
+  var exit:Vector2=owner.portal_for("bathroom","corridor").threshold
   var reached:bool=safe_move("cleaner",exit,delta)
   corpse.pos=owner.xy(owner.position("cleaner"))
   if not reached:return
-  var entry:Vector2=Map.doorway("corridor","bathroom")
+  var entry:Vector2=owner.portal_for("corridor","bathroom").landing
   if not actors_clear("cleaner",entry,entry,"corridor"):return
   owner.actor("cleaner").room="corridor";owner.actor("cleaner").pos=owner.xy(entry);owner.actor("cleaner").route=[]
   corpse.room="corridor";corpse.pos=owner.xy(entry);corpse.moved_out=true;event.phase="park"
   owner.claim("corpse_exit","asylum_corpse_moved_out",{"identity":"independent_deceased","to":"corridor"});return
  if event.phase=="park":
-  if safe_move("cleaner",vector(config.corridor_parking),delta):event.phase="return"
+  if safe_move("cleaner",owner.space_point("corridor","corridor_parking",vector(config.corridor_parking)),delta):event.phase="return"
   corpse.pos=owner.xy(owner.position("cleaner"));return
  if event.phase=="return":
   if safe_travel("cleaner","bathroom",delta):event.phase="relic";event.elapsed=0.0
@@ -125,7 +127,7 @@ func advance_cleaner(delta:float) -> void:
   var id:String=str(ids[int(event.relic_index)])
   var item:Dictionary=config.relics[id]
   if owner.app.rules.owners.get(id,"")!=str(item.owner):event.relic_index+=1;event.elapsed=0.0;return
-  if not safe_move("cleaner",vector(item.pos),delta):return
+  if not safe_move("cleaner",relic_point(id),delta):return
   event.elapsed+=delta
   if float(event.elapsed)<float(config.parameters.contact_seconds):return
   # No collection can reclaim the protagonist's already-owned item.
@@ -138,7 +140,7 @@ func advance_cleaner(delta:float) -> void:
   var regions:Array=config.wash_regions
   if int(event.wash_index)>=regions.size():event.phase="done";return
   var region:Dictionary=regions[int(event.wash_index)]
-  if not safe_move("cleaner",vector(region.pos),delta):return
+  if not safe_move("cleaner",wash_point(region),delta):return
   event.elapsed+=delta
   if float(event.elapsed)<float(config.parameters.wash_seconds):return
   if not str(region.id) in value.washed:value.washed.append(str(region.id))
@@ -150,7 +152,7 @@ func medical_listener() -> bool:
   if not owner.present(str(id)):continue
   var room:String=str(owner.actor(str(id)).room)
   if room=="double_ward":return true
-  if room=="corridor" and owner.position(str(id)).distance_to(Map.doorway("corridor","double_ward"))<=float(config.parameters.door_notice):return true
+  if room=="corridor" and owner.position(str(id)).distance_to(owner.portal_for("corridor","double_ward").at)<=float(config.parameters.door_notice):return true
  return false
 func double_actor_here(id:String) -> bool:
  return owner.present(id) and str(owner.actor(id).room)=="double_ward"
@@ -159,8 +161,8 @@ func orderly_sees_corner() -> bool:
  var target:Vector2=owner.position("corner_patient")
  if owner.visible("ordinary_orderly",target,"double_ward",float(config.parameters.notice_distance)):return true
  if str(owner.actor("ordinary_orderly").room)!="corridor":return false
- var outside:Vector2=Map.doorway("corridor","double_ward")
- var inside:Vector2=Map.doorway("double_ward","corridor")
+ var outside:Vector2=owner.portal_for("corridor","double_ward").at
+ var inside:Vector2=owner.portal_for("double_ward","corridor").at
  var distance:float=owner.position("ordinary_orderly").distance_to(outside)
  return distance<=float(config.parameters.door_notice) and distance+inside.distance_to(target)<=float(config.parameters.notice_distance) and owner.layout_for("corridor").clear_segment(owner.position("ordinary_orderly"),outside) and owner.layout_for("double_ward").clear_segment(inside,target)
 func advance_conversation(delta:float) -> void:
@@ -232,7 +234,7 @@ func advance_corner(delta:float) -> void:
   return
  if event.phase=="drag":
   event.witness=bool(event.witness) and owner.near("corner_patient",2.0)
-  var destination:Vector2=Map.doorway("double_ward","corridor") if room=="double_ward" else vector(config.corner_waiting)
+  var destination:Vector2=owner.portal_for("double_ward","corridor").threshold if room=="double_ward" else owner.space_point("corridor","corner_waiting",vector(config.corner_waiting))
   var arrived:bool=owner.position("ordinary_orderly").distance_to(destination)<0.035
   if owner.position("ordinary_orderly").distance_to(owner.position("corner_patient"))<=0.6:arrived=safe_move("ordinary_orderly",destination,delta,["corner_patient"])
   var leader:Vector2=owner.position("ordinary_orderly")
@@ -244,7 +246,7 @@ func advance_corner(delta:float) -> void:
   safe_move("corner_patient",follow_target,delta,["ordinary_orderly"])
   if owner.position("corner_patient").distance_to(destination)>(0.05 if room=="double_ward" else 0.55):return
   if room=="double_ward":
-   var entry:Vector2=Map.doorway("corridor","double_ward")
+   var entry:Vector2=owner.portal_for("corridor","double_ward").landing
    if not actors_clear("ordinary_orderly",entry,entry,"corridor",["corner_patient"]):return
    for id in ["ordinary_orderly","corner_patient"]:
     owner.actor(id).room="corridor";owner.actor(id).pos=owner.xy(entry);owner.actor(id).route=[]
@@ -266,7 +268,7 @@ func relic_location(id:String) -> Dictionary:
   var item:Dictionary=config.relics[id];var holder:String=str(owner.app.rules.owners.get(id,""))
   if holder=="hero":return {"room":owner.app.room_id,"pos":owner.xy(owner.app.hero_pos),"visible":true}
   if holder=="asylum_cleaner_bucket" and owner.present("cleaner"):return {"room":owner.actor("cleaner").room,"pos":owner.xy(owner.position("cleaner")),"visible":true}
-  return {"room":"bathroom","pos":item.pos,"visible":holder==str(item.owner) and not str(item.region) in value.washed}
+  return {"room":"bathroom","pos":owner.xy(relic_point(id)),"visible":holder==str(item.owner) and not str(item.region) in value.washed}
  if config.notes.has(id):
   var who:String=str(config.notes[id].actor)
   if str(owner.app.rules.owners.get(id,""))=="hero":return {"room":owner.app.room_id,"pos":owner.xy(owner.app.hero_pos),"visible":true}
@@ -357,7 +359,7 @@ func render_state() -> Array:
   var location:Dictionary=relic_location(str(id))
   if location.visible and owner.app.rules.owners.get(id,"")!="hero":result.append({"id":id,"room":location.room,"pos":location.pos.duplicate(),"kind":"relic","holder":owner.app.rules.owners.get(id,"")})
  for region in config.wash_regions:
-  if not str(region.id) in value.washed:result.append({"id":"trace_"+str(region.id),"room":"bathroom","pos":region.pos.duplicate(),"kind":"trace"})
+  if not str(region.id) in value.washed:result.append({"id":"trace_"+str(region.id),"room":"bathroom","pos":owner.xy(wash_point(region)),"kind":"trace"})
  for id in value.conversation.shown:
   if value.conversation.shown[id]:
    var location:Dictionary=relic_location(str(id))

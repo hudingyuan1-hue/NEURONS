@@ -1,0 +1,22 @@
+[
+  {
+    "case": "institution-events",
+    "returncode": 1,
+    "seconds": 6.51,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 34,
+    "failed": [
+      "v1 real chapter hook passes unchanged source container once"
+    ]
+  },
+  {
+    "case": "dialogue-playback",
+    "returncode": 0,
+    "seconds": 15.92,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 23,
+    "failed": []
+  }
+]

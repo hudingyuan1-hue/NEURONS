@@ -1,0 +1,35 @@
+{
+  "failures": [],
+  "passes": [
+    "continuous normal process reaches real hand return and corridor band fall",
+    "actual Space input freezes moving bed and world in continuous recording",
+    "actual Space resume permits paired bed doorway and parking without a snap",
+    "actual CRT mouse pays for CONTROL before panned-room click",
+    "actual panned metric door mouse remains aligned and crosses into legacy quiet room",
+    "continuous segment retains original floor band and one five-neuron CONTROL fee without injury"
+  ],
+  "recording": {
+    "band_drop": {
+      "number": null,
+      "pos": [
+        11.0,
+        2.59999990463257
+      ],
+      "read": false,
+      "read_elapsed": 0.0,
+      "room": "corridor"
+    },
+    "door_screen": [
+      907.619995117188,
+      241.127471923828
+    ],
+    "final_room": "quiet",
+    "fps": 30,
+    "frames": 422,
+    "initial_fixtures": "new metric corridor; original bed patient/porter at declared clear initial positions, 50N and unlocked CONTROL; no hand/brake/band/grip/delivery receipts injected",
+    "method": "ordinary campaign process, actual Space/Enter/CRT mouse and panned door mouse, no manual world ticks"
+  },
+  "rendered": true,
+  "routes": [],
+  "scope": "Metric corridor/activity trial, seven existing links to metric/legacy neighbours, twelve real search contacts; source-bound NPC/report/nurse/bed cases use declared initial actor/key/scheduling fixtures, production clocks and disk JSON. Optional continuous recording uses ordinary process and actual keyboard/mouse after declared actors/skill fixture. Not natural full playthrough, formal art or audio acceptance."
+}

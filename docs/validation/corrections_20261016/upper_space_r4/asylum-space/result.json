@@ -1,0 +1,201 @@
+{
+  "failures": [],
+  "passes": [
+    "new corridor has real 16x5 floor and original seven connections",
+    "actual approach/opening/threshold/landing corridor -> stairs",
+    "explicit migrated/legacy boundary: stairs",
+    "actual approach/opening/threshold/landing stairs -> corridor",
+    "actual approach/opening/threshold/landing corridor -> activity",
+    "explicit migrated/legacy boundary: activity",
+    "actual approach/opening/threshold/landing activity -> corridor",
+    "actual approach/opening/threshold/landing corridor -> group_therapy",
+    "explicit migrated/legacy boundary: group_therapy",
+    "actual approach/opening/threshold/landing group_therapy -> corridor",
+    "actual approach/opening/threshold/landing corridor -> quiet",
+    "explicit migrated/legacy boundary: quiet",
+    "actual approach/opening/threshold/landing quiet -> corridor",
+    "actual approach/opening/threshold/landing corridor -> bathroom",
+    "explicit migrated/legacy boundary: bathroom",
+    "actual approach/opening/threshold/landing bathroom -> corridor",
+    "actual approach/opening/threshold/landing corridor -> double_ward",
+    "explicit migrated/legacy boundary: double_ward",
+    "actual approach/opening/threshold/landing double_ward -> corridor",
+    "actual approach/opening/threshold/landing corridor -> workshop",
+    "explicit migrated/legacy boundary: workshop",
+    "actual approach/opening/threshold/landing workshop -> corridor",
+    "real autonomous walk reaches corridor:0",
+    "original six-second search retained: corridor:0",
+    "mid-search JSON keeps exact new-room contact: corridor",
+    "manual pause freezes contact: corridor",
+    "actual completion earns one original reward: corridor:0",
+    "real autonomous walk reaches corridor:1",
+    "original six-second search retained: corridor:1",
+    "actual completion earns one original reward: corridor:1",
+    "real autonomous walk reaches corridor:2",
+    "original six-second search retained: corridor:2",
+    "actual completion earns one original reward: corridor:2",
+    "real autonomous walk reaches corridor:3",
+    "original six-second search retained: corridor:3",
+    "actual completion earns one original reward: corridor:3",
+    "real autonomous walk reaches activity:0",
+    "original six-second search retained: activity:0",
+    "mid-search JSON keeps exact new-room contact: activity",
+    "manual pause freezes contact: activity",
+    "actual completion earns one original reward: activity:0",
+    "real autonomous walk reaches activity:1",
+    "original six-second search retained: activity:1",
+    "actual completion earns one original reward: activity:1",
+    "real autonomous walk reaches activity:2",
+    "original six-second search retained: activity:2",
+    "actual completion earns one original reward: activity:2",
+    "real autonomous walk reaches activity:3",
+    "original six-second search retained: activity:3",
+    "actual completion earns one original reward: activity:3",
+    "real autonomous walk reaches activity:4",
+    "original six-second search retained: activity:4",
+    "actual completion earns one original reward: activity:4",
+    "real autonomous walk reaches activity:5",
+    "original six-second search retained: activity:5",
+    "actual completion earns one original reward: activity:5",
+    "real autonomous walk reaches activity:6",
+    "original six-second search retained: activity:6",
+    "actual completion earns one original reward: activity:6",
+    "real autonomous walk reaches activity:7",
+    "original six-second search retained: activity:7",
+    "actual completion earns one original reward: activity:7",
+    "informer really leaves and returns during actual wound exposure",
+    "existing informant physically reports, receives permission and reaches original waiting chairs",
+    "report/signature exist only after real contacts at new station",
+    "paper allegation does not itself injure or delete living patient"
+  ],
+  "rendered": true,
+  "routes": [
+    {
+      "actual": "stairs",
+      "from": "corridor",
+      "hero": [
+        5.75,
+        1.29999995231628
+      ],
+      "to": "stairs"
+    },
+    {
+      "actual": "corridor",
+      "from": "stairs",
+      "hero": [
+        1.25,
+        2.5
+      ],
+      "to": "corridor"
+    },
+    {
+      "actual": "activity",
+      "from": "corridor",
+      "hero": [
+        5.0,
+        1.25
+      ],
+      "to": "activity"
+    },
+    {
+      "actual": "corridor",
+      "from": "activity",
+      "hero": [
+        3.5,
+        1.25
+      ],
+      "to": "corridor"
+    },
+    {
+      "actual": "group_therapy",
+      "from": "corridor",
+      "hero": [
+        2.79999995231628,
+        0.239999994635582
+      ],
+      "to": "group_therapy"
+    },
+    {
+      "actual": "corridor",
+      "from": "group_therapy",
+      "hero": [
+        7.5,
+        1.25
+      ],
+      "to": "corridor"
+    },
+    {
+      "actual": "quiet",
+      "from": "corridor",
+      "hero": [
+        2.79999995231628,
+        0.239999994635582
+      ],
+      "to": "quiet"
+    },
+    {
+      "actual": "corridor",
+      "from": "quiet",
+      "hero": [
+        12.0,
+        1.25
+      ],
+      "to": "corridor"
+    },
+    {
+      "actual": "bathroom",
+      "from": "corridor",
+      "hero": [
+        2.79999995231628,
+        0.239999994635582
+      ],
+      "to": "bathroom"
+    },
+    {
+      "actual": "corridor",
+      "from": "bathroom",
+      "hero": [
+        13.5,
+        3.75
+      ],
+      "to": "corridor"
+    },
+    {
+      "actual": "double_ward",
+      "from": "corridor",
+      "hero": [
+        2.79999995231628,
+        0.239999994635582
+      ],
+      "to": "double_ward"
+    },
+    {
+      "actual": "corridor",
+      "from": "double_ward",
+      "hero": [
+        9.5,
+        3.75
+      ],
+      "to": "corridor"
+    },
+    {
+      "actual": "workshop",
+      "from": "corridor",
+      "hero": [
+        2.79999995231628,
+        0.239999994635582
+      ],
+      "to": "workshop"
+    },
+    {
+      "actual": "corridor",
+      "from": "workshop",
+      "hero": [
+        5.5,
+        3.75
+      ],
+      "to": "corridor"
+    }
+  ],
+  "scope": "Metric corridor/activity trial, seven existing links to metric/legacy neighbours, twelve real search contacts; source-bound NPC/report/nurse/bed cases use declared initial actor/key/scheduling fixtures, production clocks and disk JSON. Not natural full playthrough, formal art or audio acceptance."
+}

@@ -80,7 +80,7 @@ func _ready() -> void:
  check(app.rules.owners.key=="identity:6" and app.session.data.key_owner=="identity:6","interruption and recovery do not move or reroll the unique hidden key")
  var material_cues:Array=[]
  for cue in app.audio.starts:
-  if str(cue.event) in ["cortex:1:clamp_handle_started","cortex:1:clamp_missed"]:material_cues.append(cue)
+  if str(cue.event) in ["cortex:1:clamp_handle","cortex:1:clamp_missed"]:material_cues.append(cue)
  check(material_cues.size()==2 and material_cues.all(func(cue):return cue.id=="SFX_DRAWER" and cue.channel=="world" and not cue.provisional),"handle preparation and actual empty closure each play one existing world material cue; no listening claim")
  var file:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
  file.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":DisplayServer.get_name()!="headless",

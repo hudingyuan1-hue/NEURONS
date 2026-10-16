@@ -16894,7 +16894,7 @@
     "C": "实际已有文件，待筛选／验收",
     "D": "明确运行占位，待替换"
   },
-  "validation_boundary": "本次表单重建与静态核对；没有新生成、听验、游戏运行或美术验收。",
+  "validation_boundary": "本机已完成50项DOM/序列化契约检查；它不是浏览器渲染、真实下载、手机或异机测试。file://浏览器工具被安全策略拒绝，实际离线双击与跨设备验收仍待；游戏有限运行证据见HANDOFF，不等于美术/听验通过。",
   "source_records": [
     {
       "id": "MUS_OPEN",
@@ -38833,5 +38833,13 @@
       "basis_type": "原文台本候选，录制另按已有约定",
       "evidence": []
     }
-  ]
+  ],
+  "sharing": {
+    "version": 1,
+    "single_html": true,
+    "embedded_references": true,
+    "progress_schema": 4,
+    "browser_acceptance": "pending: browser tool refuses file scheme; DOM contract tests recorded separately"
+  },
+  "previous_validation_boundary": "本次表单重建与静态核对；没有新生成、听验、游戏运行或美术验收。"
 }

@@ -1,0 +1,14 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 1,
+    "seconds": 10.21,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 228,
+    "failed": [
+      "same original orderly physically enters double ward, grips patient and returns to corridor waiting anchor",
+      "corner release uses new corridor position while note owner and protagonist body remain independent"
+    ]
+  }
+]

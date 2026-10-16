@@ -56,8 +56,11 @@ static func hero_body_rect(owner,room_layout) -> Rect2:
 
 static func item_pixel(owner,room_layout,item:Dictionary) -> Vector2:
  var at:Vector2=room_layout.project(_v(item.pos))
+ if room_layout.room_id=="workshop" and str(item.id) in ["asylum_work_box","asylum_product_label"] and owner.asylum.data.get("ward_events",{}).get("work",{}).get("box","")=="table2":
+  return room_layout.project_at_height(room_layout.get_object_anchor("product_surface"),float(room_layout.config.object_anchors.product_surface.height_m))-Vector2(0,8)
  if str(item.get("kind",""))=="ward_window":
-  return at-Vector2(0,float(room_layout.config.get("ward_window_height_m",1.35))*HEIGHT)
+  var portal:Dictionary=room_layout.portal("ward" if room_layout.room_id=="lobby" else "lobby")
+  return room_layout.project(portal.wall_point)-Vector2(0,float(room_layout.config.get("ward_window_height_m",1.35))*HEIGHT)
  var offset:Vector2=_v(item.get("draw_offset",[0,0]))*(HUMAN/57.0)
  if item.get("held",false) and offset==Vector2.ZERO:offset=Vector2(31,-HUMAN*.48)
  if str(owner.rules.owners.get(str(item.get("id","")),""))=="hero" and offset==Vector2.ZERO:offset=Vector2(31,-HUMAN*.48)
@@ -77,7 +80,14 @@ static func door_at_pixel(room_layout,pixel:Vector2) -> String:
  return ""
 
 static func _faces(room_layout,f:Dictionary) -> Array:
+ if f.has("collision_rects"):
+  var result:Array=[]
+  for rect:Rect2 in f.collision_rects:
+   var part:Dictionary=f.duplicate();part.erase("collision_rects");part.rect=rect
+   result.append_array(_faces(room_layout,part))
+  return result
  var r:Rect2=f.rect;var height:float=_h(f);var kind:String=str(f.get("kind","cabinet"))
+ if kind=="window" and f.has("wall_mount"):return [_window_face(room_layout,f)]
  if kind=="rack":
   var proxy:Dictionary=f.duplicate();proxy.id="rack"
   return Metric._furniture_faces(room_layout,proxy)
@@ -93,6 +103,18 @@ static func _faces(room_layout,f:Dictionary) -> Array:
    faces.append(PackedVector2Array([a,b,b+Vector2(0,20),a+Vector2(0,20)]))
   return faces
  return Metric._prism_faces(room_layout,r,height)
+
+static func _window_face(room_layout,f:Dictionary) -> PackedVector2Array:
+ var r:Rect2=f.rect;var h:float=_h(f)
+ var center:Vector2=r.get_center()
+ var side:String=str(f.wall_mount);var axis:Vector2
+ if side in ["west","east"]:
+  center.x=0 if side=="west" else room_layout.world_size().x;axis=Vector2(0,r.size.y*.5)
+ else:
+  center.y=0 if side=="north" else room_layout.world_size().y;axis=Vector2(r.size.x*.5,0)
+ var a:Vector2=room_layout.project(center-axis)-Vector2(0,h)
+ var b:Vector2=room_layout.project(center+axis)-Vector2(0,h)
+ return PackedVector2Array([a,b,b-Vector2(0,65),a-Vector2(0,65)])
 
 static func furniture_at_pixel(room_layout,pixel:Vector2) -> int:
  var ordered:Array=[]
@@ -162,6 +184,9 @@ func _surfaces() -> void:
  _prism(Rect2(Vector2.ZERO,size),12,Color("778a87"),-12)
  var base:=Color("a1b1a7") if int(layout.phase_level)==2 else Color("85928c")
  _poly(Metric._projected_face(layout,Rect2(Vector2.ZERO,size),0),base)
+ # Stall floors belong below people/props, not to the depth-sorted walls.
+ for item:Dictionary in layout.furniture:
+  if str(item.get("kind",""))=="shower":_poly(Metric._projected_face(layout,item.rect,0),Color("9aa99e"))
  for x in range(1,ceili(size.x)):
   canvas.draw_line(layout.project(Vector2(x,0)),layout.project(Vector2(x,size.y)),Color(.22,.32,.31,.16),1)
  for z in range(1,ceili(size.y)):
@@ -201,6 +226,9 @@ func _walls(front:bool) -> void:
 func _portal(portal:Dictionary,front:bool) -> void:
  var face:PackedVector2Array=_portal_face(layout,portal)
  if not front:_poly(face,Color("3c514f"))
+ if int(app.session.data.level)==3 and app.room_id=="corridor" and str(portal.toward)=="quiet":
+  var progress:float=float(app.asylum.data.get("isolation_state",{}).get("door_progress",0))
+  if progress>0:_poly(face,Color(.34,.40,.38,progress))
  # Full-height fine frame identifies the real opening; foreground wall stays
  # cut below shins so neither feet nor a grasp are concealed by a fake facade.
  var color:=Color(.69,.78,.71,.45) if front else Color("d0d6c2")
@@ -235,9 +263,25 @@ func _stairs() -> void:
 func _furniture(f:Dictionary) -> void:
  var rect:Rect2=f.rect;var h:float=_h(f);var tone:Color=f.get("color",Color("839b95"))
  var kind:String=str(f.get("kind","cabinet"));var at:Vector2=layout.project(rect.get_center())
+ if f.has("collision_rects"):
+  for piece:Rect2 in f.collision_rects:
+   if kind=="shower":
+    var glass:Color=tone;glass.a=.26;_prism(piece,h,glass)
+   else:
+    var part:Dictionary=f.duplicate();part.erase("collision_rects");part.rect=piece;part.name="";_furniture(part)
+  if kind=="shower" and f.get("screen_target",false) and app.asylum.data.get("trace_events",{}).get("screen_closed",false):
+   var a:Vector2=layout.project(rect.position+Vector2(0,rect.size.y));var b:Vector2=layout.project(rect.end)
+   _poly([a,b,b-Vector2(0,h),a-Vector2(0,h)],Color("667e76"))
+  _label(at-Vector2(0,h+8),str(f.get("name","")),Color("e1e3cf"),11)
+  return
  var bounds:=Rect2(layout.project(rect.position)-Vector2(0,h),Vector2(96*rect.size.x+30*rect.size.y,h+56*rect.size.y))
  if h>110 and layout.project(rect.end).y>layout.project(app.hero_pos).y and bounds.intersects(hero_body_rect(app,layout)):tone.a=.38
  match kind:
+  "window":
+   if f.has("wall_mount"):
+    var face:PackedVector2Array=_window_face(layout,f);_poly(face,Color("a1b8ad"))
+    var edge:PackedVector2Array=face.duplicate();edge.append(face[0]);canvas.draw_polyline(edge,Color("c4cdbb"),5)
+   else:_prism(rect,h,tone)
   "bed","exam_bed":
    _prism(rect,maxf(5,h-12),tone.darkened(.2));_prism(rect.grow(-.04),12,Color("c3cbb8"),maxf(0,h-12))
    var pillow:=Rect2(rect.position+Vector2(.07,.06),Vector2(minf(.42,rect.size.x-.14),rect.size.y-.12))
@@ -262,6 +306,23 @@ func _furniture(f:Dictionary) -> void:
    canvas.draw_line(at-Vector2(19,0),at+Vector2(19,0),Color("6e827f"),5)
    canvas.draw_line(at+Vector2(-27,-h+12),at+Vector2(27,-h+12),Color("a0b3aa"),6)
    _poly([at+Vector2(-19,-h+13),at+Vector2(21,-h+13),at+Vector2(30,-h+44),at+Vector2(18,-h+49),at+Vector2(16,-18),at+Vector2(-15,-18),at+Vector2(-19,-h+47),at+Vector2(-30,-h+42)],Color("cdd3c4"))
+  "material_rack":
+   for corner:Vector2 in [rect.position,rect.end,rect.position+Vector2(rect.size.x,0),rect.position+Vector2(0,rect.size.y)]:
+    var foot:Vector2=layout.project(corner);canvas.draw_line(foot,foot-Vector2(0,h),tone.darkened(.2),4)
+   for level in [.3,.8,1.3]:_prism(rect,4,tone,level*HEIGHT)
+   var materials:Dictionary=app.asylum.data.get("ward_events",{}).get("work",{})
+   if materials.get("paper","rack")=="rack":
+    var stack:Vector2=at-Vector2(18,.8*HEIGHT+5)
+    for sheet in range(3):canvas.draw_rect(Rect2(stack+Vector2(sheet*2,-sheet*3),Vector2(27,6)),Color("d2cebc"))
+   if materials.get("label","rack")=="rack":canvas.draw_circle(at+Vector2(25,-1.3*HEIGHT-7),7,Color("c1b694"))
+  "board":
+   for end:Vector2 in [rect.position,rect.position+Vector2(rect.size.x,0)]:
+    var foot:Vector2=layout.project(end);canvas.draw_line(foot,foot-Vector2(0,h),tone.darkened(.25),4)
+   _prism(rect,HEIGHT,Color("c5cbbb"),maxf(0,h-HEIGHT))
+   if layout.room_id=="group_therapy":
+    var device:Vector2=at-Vector2(0,h-HEIGHT*.85)
+    canvas.draw_rect(Rect2(device-Vector2(17,6),Vector2(34,12)),INK)
+    if app.asylum.data.get("ward_events",{}).get("therapy",{}).get("recording",false):canvas.draw_circle(device+Vector2(10,0),3,Color("b16e5e"))
   "curtain":
    tone.a=.35
    _prism(rect,h,tone)
@@ -290,10 +351,29 @@ func _furniture(f:Dictionary) -> void:
     for portion in [.33,.66]:
      canvas.draw_line(face[0].lerp(face[3],portion),face[1].lerp(face[2],portion),tone.darkened(.24),2)
     var open:float=float(app.drawer_open.get(str(f.id),0))
-    if open>0:
+    if f.get("locked_upper",false):
+     open=material_drawer_open(f)
+     var front:=Rect2(rect.position.x,rect.end.y+.02+open*.12,rect.size.x,.035)
+     _prism(front,.35*HEIGHT,tone.lightened(.08),.8*HEIGHT)
+     var handle:Vector2=material_handle(f)
+     canvas.draw_line(handle-Vector2(11,0),handle+Vector2(11,0),Color("d5d5bb"),4)
+     var lock:Vector2=layout.project(Vector2(rect.get_center().x,rect.end.y))-Vector2(0,1.38*HEIGHT)
+     canvas.draw_arc(lock-Vector2(0,5),5,PI,TAU,12,INK,2);canvas.draw_rect(Rect2(lock-Vector2(6,4),Vector2(12,10)),INK)
+    elif open>0:
      var center:Vector2=at-Vector2(0,h*.55)+Vector2(0,open*10)
      canvas.draw_line(center-Vector2(13,0),center+Vector2(13,0),Color("d2d3bb"),4)
- _label(at-Vector2(0,h+8),str(f.get("name","")),Color("e1e3cf"),11)
+ if not str(f.get("name","")).is_empty():_label(at-Vector2(0,h+8),str(f.name),Color("e1e3cf"),11)
+
+func material_drawer_open(f:Dictionary) -> float:
+ var event:Dictionary=app.asylum.data.get("ward_events",{}).get("clamp",{})
+ if event.get("phase","")=="windup":return 1.0-clampf(float(event.get("elapsed",0))/float(app.asylum.ward_events.config.presentation_timing.drawer_windup),0,1)
+ if event.get("phase","")=="release":return 0
+ if event.get("phase","")=="done":return clampf(float(app.rules.search_elapsed)/.3,0,1) if app.rules.search_active and app.target_index==6 else 0
+ return float(app.drawer_open.get(str(f.id),0))
+
+func material_handle(f:Dictionary) -> Vector2:
+ var rect:Rect2=f.rect
+ return layout.project(Vector2(rect.get_center().x,rect.end.y+.02+material_drawer_open(f)*.12))-Vector2(0,float(f.contact_height_m)*HEIGHT)
 
 func _phase_label(value:String) -> String:
  return str(PHASES.get(value,value if value.to_lower()==value.to_upper() else "事件进行中"))
@@ -309,6 +389,9 @@ func _actor(who:String) -> void:
  if group==null:return
  var id:String=who.trim_prefix("hospital_").trim_prefix("asylum_")
  if not group.data.get("actors",{}).has(id):return
+ # The living patient is already rendered on the moving-bed marker. Never
+ # duplicate that person as a standing/walking body through the mattress.
+ if group==app.asylum and id=="transport_patient":return
  var state:Dictionary=group.actor(id);var position:Vector2=group.position(id);var at:Vector2=layout.project(position)
  var phase:String=str(state.get("phase","idle"));var label:String=str(group.config.get("names",{}).get(id,id))
  var body:Dictionary=group.data.get("body",{})
@@ -408,6 +491,7 @@ func _hero() -> void:
   var f:Dictionary=layout.furniture[app.target_index];var rect:Rect2=f.rect
   var touch:=Vector2(clampf(app.hero_pos.x,rect.position.x,rect.end.x),clampf(app.hero_pos.y,rect.position.y,rect.end.y))
   var hand:Vector2=layout.project(touch)-Vector2(0,minf(_h(f),HUMAN*.65) if crouch==1 else .24*HEIGHT)
+  if f.get("locked_upper",false):hand=material_handle(f)
   _arm(at,HUMAN*crouch,hand,clampf(float(app.rules.search_elapsed)/.25,0,1),Color("91b3c1"))
  elif not holder.is_empty() and group.data.get("actors",{}).has(holder):
   var contact_info:Dictionary=_paired_contact(group,holder,group.actor(holder))
@@ -425,7 +509,7 @@ func _hero() -> void:
   if not window_action.is_empty():
    var elapsed:float=float(window_action.elapsed)
    var reach:float=clampf(elapsed/group.WARD_WINDOW_PREPARE,0,1) if window_action.phase=="prepare" else clampf((group.WARD_WINDOW_PREPARE+group.WARD_WINDOW_CONTACT+group.WARD_WINDOW_FINISH-elapsed)/group.WARD_WINDOW_FINISH,0,1) if window_action.phase=="finish" else 1.0
-   var hand:Vector2=layout.project(group.ward_window_position())-Vector2(0,float(layout.config.get("ward_window_height_m",1.35))*HEIGHT)
+   var hand:Vector2=item_pixel(app,layout,{"kind":"ward_window","pos":group.xy(group.ward_window_position())})
    _arm(at,HUMAN,hand,reach,Color("a9bdc0"))
  var cup:String="hospital_cup" if int(app.session.data.level)==2 else "asylum_cup"
  if app.rules.owners.get(cup,"")=="hero":
@@ -449,17 +533,39 @@ func _item(item:Dictionary) -> void:
    canvas.draw_rect(Rect2(at+Vector2(-12,-22),Vector2(24,22)),Color("bcae85"));canvas.draw_arc(at+Vector2(0,-22),7,PI,TAU,12,Color("d7cba4"),3)
   "shoe":_poly([at+Vector2(-11,-8),at+Vector2(3,-9),at+Vector2(15,-2),at+Vector2(13,4),at+Vector2(-11,2)],Color("635d52"))
   "ward_window":
-   canvas.draw_rect(Rect2(at+Vector2(-24,-19),Vector2(48,30)),Color("253c3e"))
-   canvas.draw_rect(Rect2(at+Vector2(-24,-19),Vector2(48,30)),Color("b9c7b8"),false,3)
-   if not item.get("open",false):canvas.draw_rect(Rect2(at+Vector2(-20,-15),Vector2(40,22)),Color("788f86"))
+   var portal:Dictionary=layout.portal("ward" if app.room_id=="lobby" else "lobby")
+   var axis:=Vector2(1,0) if str(portal.wall) in ["north","south"] else Vector2(0,1)
+   var half:Vector2=(layout.project(portal.wall_point+axis*.26)-layout.project(portal.wall_point))
+   var up:=Vector2(0,.16*HEIGHT)
+   var frame:=PackedVector2Array([at-half-up,at+half-up,at+half+up,at-half+up])
+   _poly(frame,Color("253c3e") if item.get("open",false) else Color("788f86"))
+   var outline:PackedVector2Array=frame.duplicate();outline.append(frame[0]);canvas.draw_polyline(outline,Color("b9c7b8"),3)
    _label(at-Vector2(0,25),str(item.get("label","观察窗")),Color("e2e3cc"),11)
   "transport_bed","corpse":
    var p:Vector2=_v(item.pos);var rect:=Rect2(p-Vector2(1,.4),Vector2(2,.8))
+   if kind=="corpse" and not item.get("on_board",false):
+    _poly([at+Vector2(-62,-12),at+Vector2(55,-10),at+Vector2(63,12),at+Vector2(-59,14)],Color("8b9c91") if item.get("covered",false) else Color("9b8078"))
+    if not item.get("covered",false):canvas.draw_circle(at+Vector2(-61,-3),12,Color("b39d8d"))
+    return # A covered floor body is not yet a loaded transport board.
    _prism(rect,.6*HEIGHT,Color("718b85"));_prism(rect.grow(-.05),9,Color("b8c5b4"),.6*HEIGHT)
+   if kind=="transport_bed":
+    var top:Vector2=at-Vector2(0,.6*HEIGHT+12)
+    var head:Vector2=top+Vector2(-59,-5)
+    canvas.draw_circle(head,12,Color("c4c9b6"))
+    canvas.draw_circle(head+Vector2(4,-2),2,INK)
+    _poly([top+Vector2(-43,-15),top+Vector2(58,-12),top+Vector2(65,10),top+Vector2(-42,14)],Color("a4b7ae"))
+    var exposed:bool=str(app.asylum.data.get("ward_events",{}).get("transfer",{}).get("phase",""))=="hand_grab"
+    var shoulder:Vector2=top+Vector2(-32,6)
+    var hand:Vector2=top+Vector2(-13,25) if exposed else top+Vector2(1,9)
+    canvas.draw_line(shoulder,hand,Color("c4c9b6"),6)
+    canvas.draw_circle(hand,4,Color("c4c9b6"))
+    if exposed:canvas.draw_arc(hand,6,0,PI,10,Color("d1bd9a"),2)
+    _label(head-Vector2(0,19),"被转运患者 · 活人卧姿占位",Color("e1e3cf"),11)
    if kind=="corpse" and not item.get("covered",false):canvas.draw_circle(at+Vector2(-55,-.6*HEIGHT),12,Color("b39d8d"))
   "trace":
    canvas.draw_set_transform(at,0,Vector2(1,.28));canvas.draw_circle(Vector2.ZERO,22,Color(.35,.06,.08,.55));canvas.draw_set_transform(Vector2.ZERO)
   "band":canvas.draw_arc(at,9,-.4,PI+.4,16,Color("d5d7bc"),4)
+  "isolation_door":pass # The actual metric portal renders closing progress.
   "box":canvas.draw_rect(Rect2(at+Vector2(-14,-20),Vector2(28,20)),Color("b6a982"))
   _:_paper(at)
 

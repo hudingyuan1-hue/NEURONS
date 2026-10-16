@@ -1,0 +1,11 @@
+[
+  {
+    "case": "natural-hospital",
+    "returncode": 0,
+    "seconds": 85.62,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 3,
+    "failed": []
+  }
+]

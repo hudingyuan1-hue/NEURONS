@@ -1,0 +1,41 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 1,
+    "seconds": 10.48,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 85,
+    "failed": [
+      "new-space chapter completes actual rest through production clock",
+      "legacy upper chapter also completes actual rest"
+    ]
+  },
+  {
+    "case": "institution-space",
+    "returncode": 0,
+    "seconds": 6.62,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 140,
+    "failed": []
+  },
+  {
+    "case": "institution-events",
+    "returncode": 0,
+    "seconds": 5.98,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 44,
+    "failed": []
+  },
+  {
+    "case": "natural-hospital",
+    "returncode": 0,
+    "seconds": 82.73,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 3,
+    "failed": []
+  }
+]

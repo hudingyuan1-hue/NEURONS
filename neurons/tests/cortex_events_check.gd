@@ -164,7 +164,12 @@ func _ready() -> void:
  check(replay_time>0 and replay_time<3.5 and not app.cortex.data.completed_observations.has("cortex_memory_replay"),"clip has real elapsed playback before any completed viewing knowledge")
  await frames(12)
  check(app.cortex.data.playbacks.cortex_memory_replay.elapsed==replay_time,"manual pause freezes source clip playback clock")
- check(roundtrip() and app.cortex.data.playbacks.cortex_memory_replay.elapsed==replay_time,"JSON retains exact in-progress clip instead of restarting original event")
+ var replay_before:Dictionary=app.cortex.data.playbacks.cortex_memory_replay.duplicate(true)
+ var saved_replay:bool=roundtrip()
+ var replay_after:Dictionary=app.cortex.data.playbacks.cortex_memory_replay
+ var same_source:bool=JSON.stringify(JSON.parse_string(JSON.stringify(replay_before.source)),"",true)==JSON.stringify(JSON.parse_string(JSON.stringify(replay_after.source)),"",true)
+ check(saved_replay and is_equal_approx(float(replay_after.elapsed),replay_time) and replay_after.phase=="playing" and same_source,"JSON retains in-progress clip time, playing phase and original source instead of restarting the event")
+ if not saved_replay or not is_equal_approx(float(replay_after.elapsed),replay_time) or replay_after.phase!="playing" or not same_source:print("REPLAY_DIAGNOSTIC ",JSON.stringify({"saved":saved_replay,"before":replay_before,"after":replay_after,"same_source":same_source}))
  check(marker4("cortex_memory_replay").progress>0 and not marker4("cortex_memory_replay").voice_available,"screen exposes real source frame progression and explicitly lacks formal voice")
  await capture("02c_existing_event_playback_in_progress")
  check(until4(func():return app.cortex.data.completed_observations.has("cortex_memory_replay"),5),"television must finish actual source playback before completion")

@@ -1,0 +1,55 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 0,
+    "seconds": 14.51,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 253,
+    "failed": []
+  },
+  {
+    "case": "test_institution_layout",
+    "returncode": 0,
+    "seconds": 6.37,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\n{\"failed\":[],\"passed\":3767,\"routes_checked\":1212,\"scope\":\"headless geometry only; actual play and visual acceptance remain separate\"}\n"
+  },
+  {
+    "case": "asylum-ward",
+    "returncode": 0,
+    "seconds": 18.81,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 145,
+    "failed": []
+  },
+  {
+    "case": "asylum-isolation",
+    "returncode": 0,
+    "seconds": 19.68,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 70,
+    "failed": []
+  },
+  {
+    "case": "asylum-trace",
+    "returncode": 0,
+    "seconds": 12.35,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 58,
+    "failed": []
+  },
+  {
+    "case": "asylum-combinations",
+    "returncode": 0,
+    "seconds": 24.54,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 85,
+    "failed": []
+  }
+]

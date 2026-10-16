@@ -1,0 +1,55 @@
+[
+  {
+    "case": "test_navigation_segments",
+    "returncode": 0,
+    "seconds": 0.61,
+    "stderr": "",
+    "passes": 0,
+    "failed": 0
+  },
+  {
+    "case": "test_bedroom_layout",
+    "returncode": 0,
+    "seconds": 2.12,
+    "stderr": "",
+    "passes": 1700,
+    "failed": 0
+  },
+  {
+    "case": "test_institution_layout",
+    "returncode": 0,
+    "seconds": 3.11,
+    "stderr": "",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\n{\"failed\":[],\"passed\":2442,\"routes_checked\":782,\"scope\":\"headless geometry only; actual play and visual acceptance remain separate\"}\n"
+  },
+  {
+    "case": "metric-bedroom",
+    "returncode": "timeout",
+    "seconds": 180.08,
+    "stderr": "SCRIPT ERROR: Parse Error: Too many arguments for \"door_at_pixel()\" call. Expected at most 2 but received 3.\n   at: GDScript::reload (res://scripts/world/campaign_view.gd:64)\nSCRIPT ERROR: Parse Error: Invalid argument for \"door_at_pixel()\" function: argument 2 should be \"Vector2\" but is \"RoomLayout\".\n   at: GDScript::reload (res://scripts/world/campaign_view.gd:64)\nSCRIPT ERROR: Compile Error: Failed to compile depended scripts.\n   at: GDScript::reload (res://scripts/campaign.gd:0)\nSCRIPT ERROR: Compile Error: Failed to compile depended scripts.\n   at: GDScript::reload (res://scripts/ui/front_end.gd:0)\nERROR: Failed to load script \"res://scripts/ui/front_end.gd\" with error \"Compilation failed\".\n   at: load (modules/gdscript/gdscript_resource_format.cpp:46)\nSCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.\n   at: create_world (res://scripts/campaign.gd:98)\n   GDScript backtrace (most recent call first):\n       [0] create_world (res://scripts/campaign.gd:98)\n       [1] _ready (res://scripts/bedroom_sample.gd:88)\n       [2] _ready (res://scripts/campaign.gd:178)\n       [3] launch (res://scripts/ui/front_end.gd:199)\n       [4] new_game (res://scripts/ui/front_end.gd:176)\n       [5] _ready (res://tests/metric_bedroom_check.gd:187)\n       [6] frames (res://tests/family_check.gd:14)\nSCRIPT ERROR: Invalid call. Nonexistent function 'rest_pose' in base 'Node2D (room_view.gd)'.\n   at: update_ui (res://scripts/campaign.gd:1398)\n   GDScript backtrace (most recent call first):\n       [0] update_ui (res://scripts/campaign.gd:1398)\n       [1] _process (res://scripts/bedroom_sample.gd:336)\n       [2] _process (res://scripts/campaign.gd:294)\nSCRIPT ERROR: Invalid call. Nonexistent function 'rest_pose' in base 'Node2D (room_view.gd)'.\n   at: update_ui (res://scripts/campaign.gd:1398)\n   GDScript backtrace (most recent call first):\n       [0] update_ui (res://scripts/campaign.gd:1398)\n       [1] _process (res://scripts/bedroom_sample.gd:336)\n       [2] _process (res://scripts/campaign.gd:294)\nSCRIPT ERROR: Invalid call. Nonexistent function 'rest_pose' in base 'Node2D (room_view.gd)'.\n   at: update_ui (res://scripts/campaign.gd:1398)\n   GDScript backtrace (most recent call first):\n       [0] update_ui (res://scripts/campaign.gd:1398)\n       [1] _process (res://scripts/bedroom_sample.gd:336)\n       [2] _process (res://scripts/campaign.gd:294)\nSCRIPT ERROR: Invalid call. Nonexistent function 'rest_pose' in base 'Node2D (room_view.gd)'.\n   at: update_ui (res://scripts/campaign.gd:1398)\n   GDScript backtrace (most recent call first):\n       [0] update_ui (res://scripts/campaign.gd:1398)\n       [1] _process (res://scripts/bedroom_sample.gd:336)\n       [2] _process (res://scripts/campaign.gd:294)\nSCRIPT ERROR: Invalid call. Nonexistent function 'rest_pose' in base 'Node2D (room_view.gd)'.\n   at: update_ui (res://scripts/campaign.gd:1398)\n   GDScript backtrace (most recent call first):\n       [0] update_ui (res://scripts/campaign.gd:1398)\n       ",
+    "stdout_tail": "point 5 moves its independent prop\nPASS point 5 moved geometry preserves access to bed\nPASS point 5 moved geometry preserves access to bedside\nPASS point 5 moved geometry preserves access to chair\nPASS point 5 moved geometry preserves access to desk\nPASS point 5 moved geometry preserves access to stool\nPASS point 5 moved geometry preserves access to box\nPASS point 5 moved geometry preserves access to rack\nPASS point 5 moved geometry preserves access to wardrobe\nPASS point 5 moved geometry preserves access to books\nPASS point 5 moved geometry preserves access to storage\nPASS point 5 moved geometry preserves access to fan\nPASS real approach and facing reach search point 6\nPASS point 6 reached through physical route\nPASS point 6 saves incomplete physical action\nFAIL point 6 JSON restores contact without reposition or reward\nPASS point 6 manual pause holds action and settlement\nPASS point 6 completes real search\nPASS point 6 grants one physical completion receipt\nPASS real approach and facing reach search point 7\nPASS point 7 reached through physical route\nPASS point 7 saves incomplete physical action\nFAIL point 7 JSON restores contact without reposition or reward\nPASS point 7 manual pause holds action and settlement\nPASS point 7 completes real search\nPASS point 7 grants one physical completion receipt\nPASS real approach and facing reach search point 8\nPASS point 8 reached through physical route\nPASS point 8 saves incomplete physical action\nFAIL point 8 JSON restores contact without reposition or reward\nPASS point 8 manual pause holds action and settlement\nPASS point 8 completes real search\nPASS point 8 grants one physical completion receipt\nPASS real approach and facing reach search point 9\nPASS point 9 reached through physical route\nPASS point 9 saves incomplete physical action\nFAIL point 9 JSON restores contact without reposition or reward\nPASS point 9 manual pause holds action and settlement\nPASS point 9 completes real search\nPASS point 9 grants one physical completion receipt\nPASS real approach and facing reach search point 10\nPASS point 10 reached through physical route\nPASS point 10 saves incomplete physical action\nFAIL point 10 JSON restores contact without reposition or reward\nPASS point 10 manual pause holds action and settlement\nPASS point 10 completes real search\nPASS point 10 grants one physical completion receipt\nPASS zoom 0 preserves world click coordinate\nPASS zoom 1 preserves world click coordinate\nPASS zoom 3 preserves world click coordinate\n",
+    "stderr_bytes": 7488814,
+    "stderr_sha256": "b3751c944ce61c3f930805bbb924557fcd382e6f525955ef154885132df7f898",
+    "stderr_truncated": true
+  },
+  {
+    "case": "institution-space",
+    "returncode": 1,
+    "seconds": 7.1,
+    "stderr": "SCRIPT ERROR: Parse Error: Too many arguments for \"door_at_pixel()\" call. Expected at most 2 but received 3.\n   at: GDScript::reload (res://scripts/world/campaign_view.gd:64)\nSCRIPT ERROR: Parse Error: Invalid argument for \"door_at_pixel()\" function: argument 2 should be \"Vector2\" but is \"RoomLayout\".\n   at: GDScript::reload (res://scripts/world/campaign_view.gd:64)\nSCRIPT ERROR: Compile Error: Failed to compile depended scripts.\n   at: GDScript::reload (res://scripts/campaign.gd:0)\nSCRIPT ERROR: Compile Error: Failed to compile depended scripts.\n   at: GDScript::reload (res://scripts/ui/front_end.gd:0)\nERROR: Failed to load script \"res://scripts/ui/front_end.gd\" with error \"Compilation failed\".\n   at: load (modules/gdscript/gdscript_resource_format.cpp:46)\nSCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.\n   at: create_world (res://scripts/campaign.gd:98)\n   GDScript backtrace (most recent call first):\n       [0] create_world (res://scripts/campaign.gd:98)\n       [1] _ready (res://scripts/bedroom_sample.gd:88)\n       [2] _ready (res://scripts/campaign.gd:178)\n       [3] launch (res://scripts/ui/front_end.gd:199)\n       [4] new_game (res://scripts/ui/front_end.gd:176)\n       [5] _ready (res://tests/institution_space_check.gd:49)\n       [6] frames (res://tests/family_check.gd:14)\nSCRIPT ERROR: Invalid call. Nonexistent function 'rest_pose' in base 'Node2D (room_view.gd)'.\n   at: update_ui (res://scripts/campaign.gd:1398)\n   GDScript backtrace (most recent call first):\n       [0] update_ui (res://scripts/campaign.gd:1398)\n       [1] _process (res://scripts/bedroom_sample.gd:336)\n       [2] _process (res://scripts/campaign.gd:294)\nSCRIPT ERROR: Invalid call. Nonexistent function 'rest_pose' in base 'Node2D (room_view.gd)'.\n   at: update_ui (res://scripts/campaign.gd:1398)\n   GDScript backtrace (most recent call first):\n       [0] update_ui (res://scripts/campaign.gd:1398)\n       [1] _process (res://scripts/bedroom_sample.gd:336)\n       [2] _process (res://scripts/campaign.gd:294)\nSCRIPT ERROR: Invalid call. Nonexistent function 'rest_pose' in base 'Node2D (room_view.gd)'.\n   at: update_ui (res://scripts/campaign.gd:1398)\n   GDScript backtrace (most recent call first):\n       [0] update_ui (res://scripts/campaign.gd:1398)\n       [1] _process (res://scripts/bedroom_sample.gd:336)\n       [2] _process (res://scripts/campaign.gd:294)\nSCRIPT ERROR: Invalid access to property or key 'catalog' on a base object of type 'Node2D (room_view.gd)'.\n   at: restore_snapshot (res://scripts/campaign.gd:1507)\n   GDScript backtrace (most recent call first):\n       [0] restore_snapshot (res://scripts/campaign.gd:1507)\n       [1] reset2 (res://tests/institution_space_check.gd:14)\n       [2] _ready (res://tests/institution_space_check.gd:53)\n       [3] frames (res://tests/family_check.gd:14)\nSCRIPT ERROR: Invalid call. Nonexistent function 'rest_pose' in base 'Node2D (room_view.gd)'.\n   at: update_ui (res://scripts/campaign.gd:1398)\n   GDScript ba",
+    "passes": 132,
+    "failed": [
+      "half-contact JSON preserves position and time in lobby",
+      "half-contact JSON preserves position and time in clinic",
+      "half-contact JSON preserves position and time in pharmacy",
+      "half-contact JSON preserves position and time in office",
+      "crossing snapshot retains active route without teleport",
+      "paid intervention cancels doorway crossing before room change",
+      "lower-floor transition survives JSON without repeat unlock",
+      "old institutional save retains original geometry and in-flight resting position"
+    ],
+    "stderr_bytes": 43065,
+    "stderr_sha256": "e4d5cd723a8f0a46796c1f97f0f4cb93fce9f4dbd020f892a02930f04ee43f25",
+    "stderr_truncated": true
+  }
+]

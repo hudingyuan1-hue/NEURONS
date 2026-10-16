@@ -1,0 +1,65 @@
+{
+  "cases": [],
+  "failures": [],
+  "matrix": [
+    {
+      "audio": "not subjectively auditioned",
+      "frames": 250,
+      "initial_fixtures": "bedside clinic geometry, two existing placeholder actors, unlocked KNEE and 50N; ordinary campaign process afterwards; real Enter/CRT mouse events, no manual world ticks",
+      "observations": [
+        {
+          "doctor_phase": "idle",
+          "frame": 0,
+          "holder": "",
+          "hp": 100,
+          "neurons": 50,
+          "world_time": 0.0
+        },
+        {
+          "doctor_phase": "approach",
+          "frame": 1,
+          "holder": "",
+          "hp": 100,
+          "neurons": 50,
+          "world_time": 0.0333333333333333
+        },
+        {
+          "doctor_phase": "grab",
+          "frame": 61,
+          "holder": "",
+          "hp": 100,
+          "neurons": 50,
+          "world_time": 0.133333333333333
+        },
+        {
+          "doctor_phase": "sample",
+          "frame": 75,
+          "holder": "doctor",
+          "hp": 95,
+          "neurons": 50,
+          "world_time": 0.6
+        },
+        {
+          "doctor_phase": "idle",
+          "frame": 134,
+          "holder": "",
+          "hp": 95,
+          "neurons": 48,
+          "world_time": 1.2
+        }
+      ],
+      "recording": true,
+      "start_frame": 8,
+      "world_seconds": 2.96666666666667
+    }
+  ],
+  "passes": [
+    "continuous normal-process doctor/CRT/rescue/prescription segment reaches real completion",
+    "continuous segment retains real needle injury and records actual interrupted sample",
+    "continuous mouse CRT pays once and frees only after actual knee contact",
+    "continuous segment receives the independent prescription at contact"
+  ],
+  "recording": true,
+  "rendered": true,
+  "scope": "One declared metric clinic doctor/assistant, initial 50N/unlocked KNEE fixture. Afterwards ordinary process, real Enter/CRT mouse, actual needle/contact, interruption and prescription. Continuous 30FPS MovieMaker; not a natural-RNG full playthrough, human pacing or listening/art acceptance."
+}

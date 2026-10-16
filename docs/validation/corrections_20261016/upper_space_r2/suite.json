@@ -1,0 +1,15 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 1,
+    "seconds": 4.49,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 63,
+    "failed": [
+      "informer really leaves and returns during actual wound exposure",
+      "existing informant physically reports, receives permission and reaches original waiting chairs",
+      "report/signature exist only after real contacts at new station"
+    ]
+  }
+]

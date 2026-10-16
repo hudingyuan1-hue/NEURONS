@@ -61,7 +61,7 @@ func hero_body_rect() -> Rect2:
  return Rect2(pose.center-extent,extent*2)
 
 func door_hit(toward:String,pixel:Vector2) -> bool:
- if app.metric_institution_room(app.room_id):return MetricInstitution.door_at_pixel(app,layout,pixel)==toward
+ if app.metric_institution_room(app.room_id):return MetricInstitution.door_at_pixel(layout,pixel)==toward
  if layout.geometry_version>=2:return MetricBedroom.door_hit(layout,pixel)
  return pixel.distance_to(layout.project(app.door_point(toward)))<18
 
@@ -221,6 +221,10 @@ func draw_actor(who:String) -> void:
      draw_rect(Rect2(at+Vector2(-22,-18),Vector2(44,15)),Color("5c6a65"))
      draw_rect(Rect2(at+Vector2(-20,-21),Vector2(40,12)),Color("bbc1b1"))
      for x in [-15,15]:draw_circle(at+Vector2(x,0),3,Color("303e40"))
+     draw_circle(at+Vector2(-14,-20),5,Color("b9c6b4"))
+     draw_rect(Rect2(at+Vector2(-8,-24),Vector2(25,9)),Color("9dafaa"))
+     var hand_out:bool=str(app.asylum.data.get("ward_events",{}).get("transfer",{}).get("phase",""))=="hand_grab"
+     draw_line(at+Vector2(-5,-18),at+Vector2(0,-9 if hand_out else -18),Color("c4c9b6"),3)
     "corpse":
      draw_ellipse_blood(at)
      draw_rect(Rect2(at+Vector2(-20,-12),Vector2(39,9)),Color("8e9e96") if item.covered else Color("8a635e"))
@@ -259,6 +263,7 @@ func draw_actor(who:String) -> void:
   return
  if who.begins_with("asylum_"):
   var id:String=who.trim_prefix("asylum_")
+  if id=="transport_patient":return # Same living body is on the bed marker.
   var actor:Dictionary=app.asylum.actor(id)
   var at:Vector2=layout.project(app.asylum.position(id))
   var color:=Color("899a95") if id not in ["patient","transport_patient","postop_patient","speaker","corner_patient","labor_patient"] else Color("829aa7")

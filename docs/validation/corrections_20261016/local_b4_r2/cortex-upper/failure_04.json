@@ -1,0 +1,2006 @@
+{
+  "label": "returned hero really examines original doorway landmark",
+  "snapshot": {
+    "action_left": -0.000000000000000270616862252382,
+    "action_phase": "autonomy",
+    "asylum_state": {
+      "actors": {
+        "archivist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "office",
+          "route": []
+        },
+        "assistant": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "clinic",
+          "route": []
+        },
+        "cleaner": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "bathroom",
+          "route": []
+        },
+        "corner_patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "double_ward",
+          "route": []
+        },
+        "doctor": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "clinic",
+          "route": []
+        },
+        "guard": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "office",
+          "route": []
+        },
+        "head_nurse": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "corridor",
+          "route": []
+        },
+        "informer": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "activity",
+          "route": []
+        },
+        "isolation_orderly": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "quiet",
+          "route": []
+        },
+        "labor_patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "workshop",
+          "route": []
+        },
+        "med_nurse": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "pharmacy",
+          "route": []
+        },
+        "ordinary_orderly": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "ward",
+          "route": []
+        },
+        "patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "office",
+          "route": []
+        },
+        "pharmacist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "pharmacy",
+          "route": []
+        },
+        "porter": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "corridor",
+          "route": []
+        },
+        "postop_patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "activity",
+          "route": []
+        },
+        "registration_nurse": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "lobby",
+          "route": []
+        },
+        "speaker": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "group_therapy",
+          "route": []
+        },
+        "supervisor": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "workshop",
+          "route": []
+        },
+        "therapist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "group_therapy",
+          "route": []
+        },
+        "transport_patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "corridor",
+          "route": []
+        }
+      },
+      "batches": {},
+      "body": {},
+      "carry": {},
+      "clock": 0.0,
+      "cup_full": false,
+      "diagnosed": false,
+      "dispensed": false,
+      "exam": {},
+      "groups": {
+        "chief": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "cleaner": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "clinic": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "corner": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "isolation": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "office": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "orderly": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "patient": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "pharmacy": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "postop": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "registration": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "therapy": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "transport": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "work": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        }
+      },
+      "holder": "",
+      "medicine_stop": 0.0,
+      "order_delivered": false,
+      "order_source": "",
+      "order_written": false,
+      "receipts": {},
+      "refused": false,
+      "registered": false,
+      "regrab_elapsed": 0.8,
+      "room_left": {},
+      "swallowed": false,
+      "ward_events": {},
+      "wrist_checked": false,
+      "wrist_done": false
+    },
+    "audio_state": {
+      "playing": [],
+      "receipts": {}
+    },
+    "closing_left": 0.0,
+    "completed": [
+      "switch:0",
+      "switch:1",
+      "switch:2",
+      "bridge:1",
+      "bridge:0",
+      "bridge:2"
+    ],
+    "controlled_route": false,
+    "cortex_state": {
+      "actors": {
+        "backward": {
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "absent",
+          "pos": [
+            0.0,
+            0.0
+          ],
+          "room": "atrium",
+          "route": [],
+          "stand_done": false
+        },
+        "blindfold": {
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "absent",
+          "pos": [
+            0.0,
+            0.0
+          ],
+          "room": "visual",
+          "route": [],
+          "stand_done": false
+        },
+        "double_face": {
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "absent",
+          "pos": [
+            0.0,
+            0.0
+          ],
+          "room": "identity",
+          "route": [],
+          "stand_done": false
+        },
+        "dual_head": {
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "absent",
+          "pos": [
+            0.0,
+            0.0
+          ],
+          "room": "bridge",
+          "route": [],
+          "stand_done": false
+        },
+        "face_press": {
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "absent",
+          "pos": [
+            0.0,
+            0.0
+          ],
+          "room": "verify",
+          "route": [],
+          "stand_done": false
+        },
+        "faceless": {
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "absent",
+          "pos": [
+            0.0,
+            0.0
+          ],
+          "room": "index",
+          "route": [],
+          "stand_done": false
+        },
+        "misaligned": {
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "absent",
+          "pos": [
+            0.0,
+            0.0
+          ],
+          "room": "body",
+          "route": [],
+          "stand_done": false
+        },
+        "repeater": {
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "absent",
+          "pos": [
+            0.0,
+            0.0
+          ],
+          "room": "decision",
+          "route": [],
+          "stand_done": false
+        },
+        "reverse": {
+          "action": "point_to_bridge",
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "idle",
+          "pos": [
+            3.29999995231628,
+            2.5
+          ],
+          "room": "switch",
+          "route": [],
+          "stand_done": true
+        },
+        "stitched": {
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "absent",
+          "pos": [
+            0.0,
+            0.0
+          ],
+          "room": "memory",
+          "route": [],
+          "stand_done": false
+        },
+        "twitch": {
+          "elapsed": 0.0,
+          "facing": [
+            0,
+            -1
+          ],
+          "phase": "absent",
+          "pos": [
+            0.0,
+            0.0
+          ],
+          "room": "rhythm",
+          "route": [],
+          "stand_done": false
+        }
+      },
+      "back": {
+        "back_seen": false,
+        "elapsed": 0.0,
+        "front_seen": false,
+        "phase": "idle"
+      },
+      "batches": {},
+      "body": {},
+      "carry": {},
+      "clamp": {
+        "attempted": false,
+        "elapsed": 0.0,
+        "hand_out": false,
+        "hurt": false,
+        "pain_light": false,
+        "phase": "idle",
+        "retract_left": 0.0
+      },
+      "clock": 65.4999999999978,
+      "completed_observations": {
+        "cortex_bridge_left": "unavailable",
+        "cortex_bridge_right": "unavailable"
+      },
+      "groups": {
+        "backward": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        },
+        "blindfold": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        },
+        "double_face": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        },
+        "dual_head": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        },
+        "face_press": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        },
+        "faceless": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        },
+        "misaligned": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        },
+        "repeater": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        },
+        "reverse": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        },
+        "stitched": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        },
+        "twitch": {
+          "checks": 0,
+          "drawn": true,
+          "pending": false
+        }
+      },
+      "holder": "",
+      "last_observation_cancel": "completed",
+      "mimic": {
+        "attempted": false,
+        "elapsed": 0.0,
+        "phase": "idle",
+        "source": {},
+        "witnessed": false,
+        "written": false
+      },
+      "observation": {},
+      "observed_fields": {
+        "cortex_bridge_left": {
+          "origin": "autonomous",
+          "room": "bridge"
+        },
+        "cortex_bridge_right": {
+          "origin": "autonomous",
+          "room": "bridge"
+        }
+      },
+      "paper": {
+        "attempted": false,
+        "collected": false,
+        "elapsed": 0.0,
+        "gripped": false,
+        "original": {
+          "injury": null,
+          "name": null,
+          "number": null,
+          "signature": null,
+          "source_event": {}
+        },
+        "phase": "idle",
+        "progress": 0.0,
+        "read": false,
+        "read_fields": {},
+        "remaining": "whole",
+        "revised": {
+          "actual_records": [],
+          "injury": null,
+          "name": null,
+          "number": null,
+          "signature": null,
+          "source_event_id": null
+        },
+        "source": {},
+        "taken": false
+      },
+      "playbacks": {},
+      "receipts": {
+        "cortex:1:observation:cortex_bridge_left:unavailable": "cortex_observation_completed",
+        "cortex:1:observation:cortex_bridge_right:unavailable": "cortex_observation_completed",
+        "cortex:1:observation_contact:cortex_bridge_left": "cortex_observation_contact",
+        "cortex:1:observation_contact:cortex_bridge_right": "cortex_observation_contact"
+      },
+      "regrab_elapsed": 66.299999999998,
+      "room_left": {
+        "switch": 29.8499999999994
+      },
+      "upper_state": {
+        "bridge": {
+          "elapsed": 0.0,
+          "heard": [],
+          "phase": "idle",
+          "playback": 0,
+          "source": {},
+          "spoken": []
+        },
+        "face": {
+          "attempted": false,
+          "contact": false,
+          "elapsed": 0.0,
+          "had_body": false,
+          "phase": "idle"
+        },
+        "identity": {
+          "back": false,
+          "elapsed": 0.0,
+          "front": false,
+          "left_result": false,
+          "phase": "idle",
+          "right_result": false,
+          "turn_started": false
+        },
+        "index": {
+          "attempted": false,
+          "elapsed": 0.0,
+          "open": false,
+          "phase": "idle",
+          "seen_removed": false,
+          "seen_start": false
+        },
+        "rhythm": {
+          "bypass": false,
+          "count": 0,
+          "direction": 1,
+          "elapsed": 0.0,
+          "from": [],
+          "phase": "gap",
+          "to": [],
+          "wait_cycle": -1,
+          "waiting": false
+        },
+        "switch": {
+          "attempted": true,
+          "await_landmark": false,
+          "elapsed": 0.0,
+          "phase": "done",
+          "route": [],
+          "steps": []
+        }
+      },
+      "video": {
+        "elapsed": 0.0,
+        "mask_count": 0,
+        "mask_targets": [],
+        "overlay": false,
+        "overlay_seen": false,
+        "phase": "done",
+        "playback": 0.0,
+        "playing": false,
+        "source": {}
+      },
+      "visible_reaction": {}
+    },
+    "death_left": 0.0,
+    "deferred_targets": {},
+    "destination": "bridge",
+    "dialogue": [],
+    "drawer_open": {
+      "bridge:0": 1.0,
+      "bridge:1": 1.0,
+      "bridge:2": 1.0,
+      "bridge:3": 1.0
+    },
+    "family_state": {
+      "actions": 0.0,
+      "auto_food_used": false,
+      "blood_door": false,
+      "checks": {},
+      "collapse": {},
+      "dialogue_choices": {},
+      "eating": {},
+      "eating_serial": 0.0,
+      "extra_checked": false,
+      "fact_cursor": 0.0,
+      "father": {
+        "branch": "",
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          4.6,
+          0.22
+        ],
+        "present": false,
+        "release_left": 0.0,
+        "route": [],
+        "used": false
+      },
+      "food_types": {},
+      "gift": [],
+      "gift_pick": 0.0,
+      "gift_roll": -1.0,
+      "gift_wait": 0.0,
+      "hidden_pending": false,
+      "inventory": [],
+      "mother": {
+        "branch": "",
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          4.6,
+          0.22
+        ],
+        "present": false,
+        "release_left": 0.0,
+        "route": [],
+        "used": false
+      },
+      "mother_rest": false,
+      "picking_gift": false,
+      "pressure": 0.0,
+      "queued": [],
+      "rescued": false,
+      "spawn_order": [],
+      "startle": {},
+      "system_prompts": {}
+    },
+    "first_damage": true,
+    "first_damage_pending": false,
+    "footstep_left": 0.425,
+    "footstep_serial": 33,
+    "hero_facing": [
+      0.0,
+      -1.0
+    ],
+    "hero_pos": [
+      1.5,
+      3.09999990463257
+    ],
+    "hero_state": "search",
+    "hidden_state": {},
+    "home_state": {
+      "blocked_left": 0.0,
+      "blocked_search": "",
+      "cat": {
+        "left": 0.0,
+        "phase": "occupy",
+        "point": 5.0,
+        "pos": [
+          3.40000009536743,
+          3.54999995231628
+        ],
+        "present": false,
+        "rounds": 0.0,
+        "route": []
+      },
+      "counted": {},
+      "dialogue_choices": {
+        "S1_START:attempt": 8.0
+      },
+      "dialogue_played": {
+        "S1_START:attempt": true
+      },
+      "dog": {
+        "alive": true,
+        "left": 0.0,
+        "phase": "idle",
+        "pos": [
+          3.1,
+          1.6
+        ],
+        "present": false,
+        "remaining": 3.0,
+        "route": [],
+        "target": -1.0
+      },
+      "dog_serial": 0.0,
+      "fighting": false,
+      "key_drop": [],
+      "tracked_search": ""
+    },
+    "hospital_state": {
+      "actors": {
+        "archivist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "office",
+          "route": []
+        },
+        "assistant": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "clinic",
+          "route": []
+        },
+        "doctor": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "clinic",
+          "route": []
+        },
+        "guard": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "office",
+          "route": []
+        },
+        "guide": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "lobby",
+          "route": []
+        },
+        "nurse": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "ward",
+          "route": []
+        },
+        "patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "lobby",
+          "route": []
+        },
+        "pharmacist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "pharmacy",
+          "route": []
+        },
+        "porter": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "lobby",
+          "route": []
+        },
+        "wheelchair": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.40000009536743,
+            0.349999994039536
+          ],
+          "room": "lobby",
+          "route": []
+        }
+      },
+      "bag": "ward",
+      "bag_order": false,
+      "bandage": 0.0,
+      "batches": {},
+      "body": {},
+      "clock": 0.0,
+      "dispensed": false,
+      "exam_done": false,
+      "geometry_version": 1.0,
+      "groups": {
+        "clinic": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "lobby": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "nurse": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "office": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "patient": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "pharmacist": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        }
+      },
+      "healed": false,
+      "holder": "",
+      "hospital_attempt": 1.0,
+      "known_pages": [],
+      "medicine_stop": 0.0,
+      "nurse_checked": false,
+      "prescribed": false,
+      "prescription_visit": "",
+      "receipts": {},
+      "refused": false,
+      "registered": false,
+      "regrab_elapsed": 0.8,
+      "room_left": {},
+      "sample": false,
+      "suspended_body": {},
+      "swallowed": false,
+      "transport": {},
+      "visit": ""
+    },
+    "menu_open": false,
+    "menu_page": "cast",
+    "motion": {},
+    "observing_index": -1,
+    "opening_state": {},
+    "paused_manual": true,
+    "presentation_id": "a",
+    "profile": {
+      "invader_id": 4895.0,
+      "name": "白质事件验证",
+      "opening_completed": true,
+      "tutorial_completed": true
+    },
+    "prop_receipts": {},
+    "rng_state": "6437640158532879029",
+    "room_id": "bridge",
+    "route": [],
+    "route_action_origin": "autonomous",
+    "rules": {
+      "_cast_serial": 0,
+      "_completed_targets": {
+        "bridge:0": true,
+        "bridge:1": true,
+        "bridge:2": true,
+        "switch:0": true,
+        "switch:1": true,
+        "switch:2": true
+      },
+      "_search_id": "search:1:7",
+      "_search_serial": 7,
+      "_sp_depleted": false,
+      "absent": false,
+      "action": {},
+      "action_serial": 0,
+      "actual_attempt": 1,
+      "allow_supplemental_search": false,
+      "awakening_receipts": {},
+      "awareness_feedback": [],
+      "awareness_stage": 0,
+      "body_feedback": [],
+      "book_extensions": {},
+      "combat_regen": 0.0,
+      "config": {
+        "book_extensions": {
+          "book_item_parameters": {
+            "category": "物品",
+            "cost": 5.0,
+            "name": "已见物品参数",
+            "source": "体验:P428；R1:P39–42；S4:T4"
+          },
+          "book_person_parameters": {
+            "category": "人物",
+            "cost": 5.0,
+            "name": "已见人物行为参数",
+            "source": "体验:P429；R1:P39–42；S3/S4第一关规则"
+          },
+          "book_role_resistance": {
+            "category": "角色",
+            "cost": 5.0,
+            "name": "抗性明细",
+            "source": "体验:P427；R1:P39–42"
+          }
+        },
+        "schema": 1.0,
+        "skills": [
+          {
+            "combat_description": "消耗1神经元。侧挪：向选定方向短移一步；无无敌效果，不能穿过障碍。。角色表现：侧挪。",
+            "combat_dialogue": [
+              "[警惕]“不能站在这里。”",
+              "[紧张]“对，别停在那儿。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式取消未完成搜寻，战斗模式向选择方向短移。角色分别表现为收手抓挠、侧挪。",
+            "exploration_description": "消耗1神经元。抓挠，取消尚未完成的搜寻。角色表现：收手抓挠。",
+            "exploration_dialogue": [
+              "收手抓挠",
+              "[烦躁]“哪来的蚊子……”"
+            ],
+            "id": "SKIN",
+            "name": "皮肤刺激",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 0.0
+          },
+          {
+            "combat_description": "消耗1神经元。俯身：短暂降低上身受击范围；不能避开低位、地面及覆盖全身的攻击。。角色表现：俯身。",
+            "combat_dialogue": [
+              "[难受]“偏偏这时候……”",
+              "[紧张]“先低着头，别急着起来。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式中断搜寻或本次劝休，战斗模式俯身降低上身受击范围。角色捂腹弯腰。",
+            "exploration_description": "消耗1神经元。腹痛，取消搜寻；可中断本次劝休。角色表现：捂腹弯腰。",
+            "exploration_dialogue": [
+              "捂腹弯腰",
+              "[难受]“偏偏这个时候……”"
+            ],
+            "id": "GUT",
+            "name": "肠胃蠕动",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 1.0
+          },
+          {
+            "combat_description": "消耗1神经元。警觉转身：转向已经感知的最近威胁，中止无关动作；不透视发现敌人。。角色表现：警觉转身。",
+            "combat_dialogue": [
+              "[警惕]“在那边。”",
+              "[认真]“……看到了。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式产生旁人可以察觉的皮肤异常、搜寻继续，战斗模式转向已感知的威胁。角色分别表现为查看手臂、转身警戒。",
+            "exploration_description": "消耗1神经元。出现可见异常，可引起附近人物注意；搜寻继续。角色表现：查看手臂。",
+            "exploration_dialogue": [
+              "查看手臂",
+              "[疑惑]“怎么起鸡皮疙瘩了？”"
+            ],
+            "id": "PORES",
+            "name": "毛孔变化",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 1.0
+          },
+          {
+            "combat_description": "消耗1神经元。短时提速：加快移动，结束后恢复；不叠加，不附带免伤。。角色表现：短时提速。",
+            "combat_dialogue": [
+              "[凝重]“先离开这里。”",
+              "[着急]“快快快，别停。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式短暂减慢移动与搜寻，战斗模式短暂提高移动速度。角色分别表现为打颤、加快步频。",
+            "exploration_description": "消耗1神经元。颤抖，延缓当前移动或搜寻。角色表现：打颤、搓手。",
+            "exploration_dialogue": [
+              "打颤、搓手",
+              "[抱怨]“这地方空调不要钱啊？”"
+            ],
+            "id": "TEMP",
+            "name": "冷热感",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 1.0
+          },
+          {
+            "combat_description": "消耗1神经元。止步：停止当前前进，短暂停顿后重新判断路线；不取消敌人攻击。。角色表现：止步。",
+            "combat_dialogue": [
+              "[警惕]“等一下……看看别的路。”",
+              "[紧张]“先别往前冲。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式短暂停顿后继续行动，战斗模式停止移动并重新判断路线。角色侧头停步，耳鸣不产生外界声源。",
+            "exploration_description": "消耗1神经元。短暂停步，随后继续；声音仅角色听见。角色表现：停步侧头。",
+            "exploration_dialogue": [
+              "停步侧头",
+              "[疑惑]“谁在响？……我耳朵？”"
+            ],
+            "id": "TINNITUS",
+            "name": "耳鸣",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 1.0
+          },
+          {
+            "combat_description": "消耗1神经元。抑制出声：暂时压低惊叫、求助等声音；脚步和碰撞声仍存在，仅影响具有听觉判定的人物。。角色表现：抑制出声。",
+            "combat_dialogue": [
+              "[克制]“……先别出声。”",
+              "[紧张]“别喊，我看着呢。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式延缓未完成的物品交接，战斗模式暂时抑制角色出声。角色抿嘴吞咽，脚步与碰撞声仍存在。",
+            "exploration_description": "消耗1神经元。延缓尚未完成的物品交接，不撤销已获物品。角色表现：抿嘴吞咽，递出的手稍停。",
+            "exploration_dialogue": [
+              "抿嘴吞咽，递出的手稍停",
+              "[尴尬]“等一下……嗓子有点干。”"
+            ],
+            "id": "DRYMOUTH",
+            "name": "口腔干涩",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 1.0
+          },
+          {
+            "combat_description": "消耗2神经元。踢击：近距离向前攻击；命中才结算伤害，能否击退按目标规则处理。。角色表现：踢击。",
+            "combat_dialogue": [
+              "[警惕]“别靠过来。”",
+              "[紧张]“踢完就走，别耗着。”"
+            ],
+            "cooldown": 4.0,
+            "cost": 2.0,
+            "description": "消耗2神经元。中断未完成搜寻并向前踢击，实际命中才结算伤害与对应击退。角色突然向前弹腿。",
+            "exploration_description": "消耗2神经元。取消搜寻，向前弹腿；实际命中才伤害。角色表现：突然向前弹腿。",
+            "exploration_dialogue": [
+              "突然向前弹腿",
+              "[震惊]“不是……我腿怎么了？”"
+            ],
+            "id": "KNEE",
+            "name": "膝跳反射",
+            "power": 2.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "GUT"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 2.0,
+            "unlock_cost": 2.0
+          },
+          {
+            "combat_description": "消耗2神经元。收臂：及时撤回手臂；不能解除已经锁紧的束缚，也不能防御全身攻击。。角色表现：收臂。",
+            "combat_dialogue": [
+              "[凝重]“手……又自己动了。”",
+              "[认真]“收回来了，接着走。”"
+            ],
+            "cooldown": 4.0,
+            "cost": 2.0,
+            "description": "消耗2神经元。中断未完成搜寻并收回手臂，可避开尚未命中的手部抓握、不能解除已经成立的控制。角色迅速收手。",
+            "exploration_description": "消耗2神经元。取消搜寻，避开尚未成立的手臂抓握。角色表现：猛地收手。",
+            "exploration_dialogue": [
+              "猛地收手",
+              "[警惕]“别碰我！”"
+            ],
+            "id": "WITHDRAW",
+            "name": "缩手反射",
+            "power": 2.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 2.0,
+            "unlock_cost": 2.0
+          },
+          {
+            "combat_description": "消耗2神经元。后撤：距离大于皮肤刺激的侧挪；依靠实际位移避开攻击，无无敌效果，后方受阻则不能完整撤出。。角色表现：后撤。",
+            "combat_dialogue": [
+              "[警惕]“退开点。”",
+              "[紧张]“后面也得看着点。”"
+            ],
+            "cooldown": 4.0,
+            "cost": 2.0,
+            "description": "消耗2神经元。中断未完成搜寻并尝试向后移动，实际退开才可能避过攻击。角色后撤，遇到障碍不能穿过。",
+            "exploration_description": "消耗2神经元。取消搜寻，向后短移。角色表现：惊跳，后方可走时退步。",
+            "exploration_dialogue": [
+              "惊跳，后方可走时退步",
+              "[惊疑]“什么东西？！”"
+            ],
+            "id": "STARTLE",
+            "name": "惊跳反应",
+            "power": 2.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "TEMP"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 2.0,
+            "unlock_cost": 2.0
+          },
+          {
+            "combat_description": "消耗3神经元。撤离倾向：停止主动进攻，远离已感知威胁；仍降低精神，不自动找到出口。。角色表现：撤离倾向。",
+            "combat_dialogue": [
+              "[不安]“不行……离它远点。”",
+              "[凝重]“先退，别硬撑。”"
+            ],
+            "cooldown": 8.0,
+            "cost": 3.0,
+            "description": "消耗3神经元。降低精神，探索模式取消搜寻并延后当前目标，战斗模式停止进攻并远离已感知威胁。角色收手、警戒并尝试退离。",
+            "exploration_description": "消耗3神经元。降低精神，取消搜寻，将当前目标延后。角色表现：缩手，盯住目标。",
+            "exploration_dialogue": [
+              "缩手，盯住目标",
+              "[不安]“这个……先不看了。”"
+            ],
+            "id": "FEAR",
+            "name": "恐惧",
+            "power": 3.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "TINNITUS",
+              "STARTLE"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 3.0,
+            "unlock_cost": 3.0
+          },
+          {
+            "combat_description": "消耗3神经元。稳定状态：恢复精神，解除自身情绪造成的犹豫；不回血、不解除物理束缚、不取消敌人威胁。。角色表现：稳定状态。",
+            "combat_dialogue": [
+              "[克制]“别慌……先看清楚。”",
+              "[认真]“还没出去呢。”"
+            ],
+            "cooldown": 8.0,
+            "cost": 3.0,
+            "description": "消耗3神经元。恢复精神并缓解角色自身恐惧，不恢复生命、不解除抓握。角色紧绷动作减轻、呼吸趋稳。",
+            "exploration_description": "消耗3神经元。恢复精神，缓解角色自身恐慌、犹豫；搜寻继续。角色表现：肩膀放松，轻笑后继续。",
+            "exploration_dialogue": [
+              "肩膀放松，轻笑后继续",
+              "[轻松]“算了，再找找。”"
+            ],
+            "id": "JOY",
+            "name": "开心",
+            "power": 3.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "PORES",
+              "WITHDRAW"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 3.0,
+            "unlock_cost": 3.0
+          },
+          {
+            "combat_description": "消耗5神经元。直接控制：接管移动、朝向及角色已经具备的攻击、互动；不自动获得其他技能，不保证命中或逃脱。。角色表现：直接控制。",
+            "combat_dialogue": [
+              "未识破：[惊疑]“我没想这么走……”；已识破：[冷漠]“看路。别停。”",
+              "[紧张]“先离开这里。”"
+            ],
+            "cooldown": 20.0,
+            "cost": 5.0,
+            "description": "消耗5神经元。接管移动、朝向与互动6秒，战斗模式可调用已解锁的踢击。角色响应输入，仍正常承受攻击与控制。",
+            "exploration_description": "消耗5神经元。接管移动与互动。角色表现：动作短暂停顿，随后响应操作。",
+            "exploration_dialogue": [
+              "动作短暂停顿，随后响应操作",
+              "[冷漠]“这一步，是你选的。”"
+            ],
+            "id": "CONTROL",
+            "name": "完全掌控",
+            "power": 4.0,
+            "prerequisite_mode": "any",
+            "prerequisites": [
+              "FEAR",
+              "JOY"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 4.0,
+            "unlock_cost": 5.0
+          }
+        ],
+        "test_parameters": {
+          "exploration_startle_distance": 0.4,
+          "note": "探索后撤距离为集中测试表现参数；完成判定按真实位移，不套战斗0.35秒。膝跳分段已按S4:P170定值。"
+        },
+        "timing": {
+          "combat_skin_distance": 0.8,
+          "combat_skin_duration": 0.25,
+          "combat_startle_distance": 1.4,
+          "combat_startle_duration": 0.35,
+          "control": 6.0,
+          "drymouth_combat": 6.0,
+          "drymouth_transfer_delay": 2.0,
+          "fear_combat": 3.0,
+          "fear_retry": 6.0,
+          "gut_reaction": 1.2,
+          "kick_attack": 0.15,
+          "kick_damage": 15.0,
+          "kick_prepare": 0.15,
+          "kick_push": 0.8,
+          "kick_range": 1.0,
+          "kick_recover": 0.35,
+          "kick_source": "S4:P170",
+          "kick_stun": 0.8,
+          "pores": 3.0,
+          "skin_reaction": 0.5,
+          "temp": 3.0,
+          "temp_combat_rate": 1.25,
+          "temp_exploration_rate": 0.75,
+          "tinnitus_combat": 0.3,
+          "tinnitus_exploration": 1.0,
+          "withdraw": 0.3
+        }
+      },
+      "control_context": {},
+      "control_event": "",
+      "control_evidence_receipts": {},
+      "control_feedback": [],
+      "control_fraction_ms": 0.0,
+      "control_left": 0.0,
+      "control_ms": 0,
+      "control_stage": 0,
+      "control_stage_receipts": {},
+      "cooldown_until": 0.0,
+      "effects": {},
+      "evidence": [],
+      "facts": [
+        {
+          "duration": 4.0,
+          "event_id": "search:1:1",
+          "kind": "search_started",
+          "target": "switch:0",
+          "time": 0.075
+        },
+        {
+          "already_completed": false,
+          "event_id": "search:1:1",
+          "kind": "search_completed",
+          "neurons": 1,
+          "target": "switch:0",
+          "time": 7.07500000000003
+        },
+        {
+          "duration": 4.0,
+          "event_id": "search:1:2",
+          "kind": "search_started",
+          "target": "switch:1",
+          "time": 8.47500000000005
+        },
+        {
+          "already_completed": false,
+          "event_id": "search:1:2",
+          "kind": "search_completed",
+          "neurons": 1,
+          "target": "switch:1",
+          "time": 15.4750000000002
+        },
+        {
+          "duration": 4.0,
+          "event_id": "search:1:3",
+          "kind": "search_started",
+          "target": "switch:2",
+          "time": 20.1249999999999
+        },
+        {
+          "already_completed": false,
+          "event_id": "search:1:3",
+          "kind": "search_completed",
+          "neurons": 1,
+          "target": "switch:2",
+          "time": 27.1249999999995
+        },
+        {
+          "duration": 4.0,
+          "event_id": "search:1:4",
+          "kind": "search_started",
+          "target": "bridge:1",
+          "time": 31.5999999999993
+        },
+        {
+          "already_completed": false,
+          "event_id": "search:1:4",
+          "kind": "search_completed",
+          "neurons": 1,
+          "target": "bridge:1",
+          "time": 38.5999999999989
+        },
+        {
+          "attempt": 1,
+          "event_id": "cortex:1:observation_contact:cortex_bridge_left",
+          "kind": "cortex_observation_contact",
+          "level": 4,
+          "origin": "autonomous",
+          "target": "cortex_bridge_left",
+          "time": 38.8499999999989
+        },
+        {
+          "attempt": 1,
+          "event_id": "cortex:1:observation:cortex_bridge_left:unavailable",
+          "kind": "cortex_observation_completed",
+          "level": 4,
+          "origin": "autonomous",
+          "target": "cortex_bridge_left",
+          "time": 39.6249999999988
+        },
+        {
+          "duration": 4.0,
+          "event_id": "search:1:5",
+          "kind": "search_started",
+          "target": "bridge:0",
+          "time": 41.0749999999987
+        },
+        {
+          "already_completed": false,
+          "event_id": "search:1:5",
+          "kind": "search_completed",
+          "neurons": 1,
+          "target": "bridge:0",
+          "time": 48.0749999999983
+        },
+        {
+          "duration": 4.0,
+          "event_id": "search:1:6",
+          "kind": "search_started",
+          "target": "bridge:2",
+          "time": 49.5999999999983
+        },
+        {
+          "already_completed": false,
+          "event_id": "search:1:6",
+          "kind": "search_completed",
+          "neurons": 1,
+          "target": "bridge:2",
+          "time": 56.5999999999979
+        },
+        {
+          "attempt": 1,
+          "event_id": "cortex:1:observation_contact:cortex_bridge_right",
+          "kind": "cortex_observation_contact",
+          "level": 4,
+          "origin": "autonomous",
+          "target": "cortex_bridge_right",
+          "time": 56.8499999999978
+        },
+        {
+          "attempt": 1,
+          "event_id": "cortex:1:observation:cortex_bridge_right:unavailable",
+          "kind": "cortex_observation_completed",
+          "level": 4,
+          "origin": "autonomous",
+          "target": "cortex_bridge_right",
+          "time": 57.6249999999978
+        },
+        {
+          "duration": 4.0,
+          "event_id": "search:1:7",
+          "kind": "search_started",
+          "target": "bridge:3",
+          "time": 59.1249999999977
+        }
+      ],
+      "global_resistance": 0,
+      "gripped": false,
+      "hp": 100,
+      "hurt_left": 0.0,
+      "institutional_records": [],
+      "intervention_lock": false,
+      "kick_until": 0.0,
+      "known": [
+        "cortex_bridge_left",
+        "cortex_bridge_right"
+      ],
+      "loading": false,
+      "lock_after_serial": 0,
+      "mode": "exploration",
+      "neurons": 11,
+      "observations": [
+        {
+          "category": "物品",
+          "id": "cortex_bridge_left",
+          "kind": "亲历事实",
+          "source": "皮层与白质实际观察",
+          "text": "{\"heard\":false,\"material\":{},\"side\":\"true\"}"
+        },
+        {
+          "category": "物品",
+          "id": "cortex_bridge_right",
+          "kind": "亲历事实",
+          "source": "皮层与白质实际观察",
+          "text": "{\"heard\":false,\"material\":{},\"side\":\"institutional\"}"
+        }
+      ],
+      "owners": {
+        "cortex_name_label": "index_slot",
+        "cortex_original_page": "memory_table",
+        "cortex_page_fragment": "none",
+        "cortex_page_scraps": "none",
+        "key": "",
+        "porridge": "mother"
+      },
+      "pending_global_growth": 0,
+      "pending_neural": {},
+      "pending_skin": {},
+      "plexus": 3,
+      "public_action": {
+        "kind": "search",
+        "origin": "autonomous",
+        "room": "bridge",
+        "serial": 18,
+        "target": "bridge:3"
+      },
+      "public_serial": 18,
+      "reaction_left": 0.0,
+      "reaction_skill": "",
+      "search_active": true,
+      "search_attempts": 7,
+      "search_count": 6,
+      "search_duration": 7.0,
+      "search_elapsed": 6.37500000000002,
+      "search_limit": 16,
+      "search_target": "bridge:3",
+      "settled": {
+        "search:1:1": "completed",
+        "search:1:2": "completed",
+        "search:1:3": "completed",
+        "search:1:4": "completed",
+        "search:1:5": "completed",
+        "search:1:6": "completed"
+      },
+      "skill_states": {
+        "CONTROL": {
+          "growth": false,
+          "power": 4,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "DRYMOUTH": {
+          "growth": false,
+          "power": 1,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "FEAR": {
+          "growth": false,
+          "power": 3,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "GUT": {
+          "growth": false,
+          "power": 1,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "JOY": {
+          "growth": false,
+          "power": 3,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "KNEE": {
+          "growth": false,
+          "power": 2,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "PORES": {
+          "growth": false,
+          "power": 1,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "SKIN": {
+          "growth": false,
+          "power": 1,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": true,
+          "until": 0.0
+        },
+        "STARTLE": {
+          "growth": false,
+          "power": 2,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "TEMP": {
+          "growth": false,
+          "power": 1,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "TINNITUS": {
+          "growth": false,
+          "power": 1,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "WITHDRAW": {
+          "growth": false,
+          "power": 2,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": false,
+          "until": 0.0
+        }
+      },
+      "skin_pending_resistance": false,
+      "skin_power": 1,
+      "skin_reactions": 0,
+      "skin_resistance": 0,
+      "sp": 100,
+      "stun_left": 0.0,
+      "transitioning": false,
+      "trial": {},
+      "trial_attempt": 0,
+      "trial_evidence_count": 0,
+      "tutorial_demo": false,
+      "world_time": 65.4999999999978
+    },
+    "schema": 3,
+    "search_action_origin": "autonomous",
+    "search_props": {
+      "bedroom:bed": {
+        "geometry_version": 2.0
+      },
+      "bedroom:bedside": {
+        "geometry_version": 2.0
+      },
+      "bedroom:books": {
+        "geometry_version": 2.0
+      },
+      "bedroom:box": {
+        "geometry_version": 2.0
+      },
+      "bedroom:chair": {
+        "geometry_version": 2.0
+      },
+      "bedroom:desk": {
+        "geometry_version": 2.0
+      },
+      "bedroom:fan": {
+        "geometry_version": 2.0
+      },
+      "bedroom:rack": {
+        "geometry_version": 2.0
+      },
+      "bedroom:stool": {
+        "geometry_version": 2.0
+      },
+      "bedroom:storage": {
+        "geometry_version": 2.0
+      },
+      "bedroom:wardrobe": {
+        "geometry_version": 2.0
+      },
+      "bridge:bridge:0": {},
+      "bridge:bridge:1": {},
+      "bridge:bridge:2": {},
+      "bridge:bridge:3": {},
+      "identity:identity:0": {},
+      "identity:identity:1": {},
+      "identity:identity:2": {},
+      "identity:identity:3": {},
+      "identity:identity:4": {},
+      "identity:identity:5": {},
+      "identity:identity:6": {},
+      "index:index:0": {},
+      "index:index:1": {},
+      "index:index:2": {},
+      "index:index:3": {},
+      "index:index:4": {},
+      "index:index:5": {},
+      "rhythm:rhythm:0": {},
+      "rhythm:rhythm:1": {},
+      "rhythm:rhythm:2": {},
+      "rhythm:rhythm:3": {},
+      "switch:switch:0": {},
+      "switch:switch:1": {},
+      "switch:switch:2": {},
+      "verify:verify:0": {},
+      "verify:verify:1": {},
+      "verify:verify:2": {},
+      "verify:verify:3": {},
+      "verify:verify:4": {},
+      "verify:verify:5": {},
+      "verify:verify:6": {}
+    },
+    "session": {
+      "attempts": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      },
+      "cortex_exit_crossed": false,
+      "cortex_lower_persistent": {
+        "paper": {
+          "attempted": false,
+          "collected": false,
+          "fragment_owner": "none",
+          "original_owner": "memory_table",
+          "progress": 0.0,
+          "read": false,
+          "read_fields": {},
+          "remaining": "whole",
+          "scraps_owner": "none",
+          "source": {},
+          "taken": false
+        },
+        "video": {
+          "mask_count": 0,
+          "overlay_seen": false,
+          "source": {}
+        }
+      },
+      "cortex_upper_persistent": {
+        "bridge_heard": {},
+        "fields": {
+          "cortex_bridge_left": {
+            "heard": false,
+            "material": {},
+            "side": "true"
+          },
+          "cortex_bridge_right": {
+            "heard": false,
+            "material": {},
+            "side": "institutional"
+          }
+        },
+        "identity_read": {},
+        "index_holder": "index_slot",
+        "index_removed": false,
+        "losses": {},
+        "route_known": false
+      },
+      "cycle": 1,
+      "exploration_boundary": true,
+      "key_discovery": {
+        "attempt": 1,
+        "completed": {
+          "bridge:0": {
+            "draw": -1.0,
+            "eligible": false,
+            "evidence": [],
+            "finder": "hero",
+            "found": false,
+            "guaranteed": false,
+            "probability": 0.0,
+            "receipt": "search:1:5"
+          },
+          "bridge:1": {
+            "draw": -1.0,
+            "eligible": false,
+            "evidence": [],
+            "finder": "hero",
+            "found": false,
+            "guaranteed": false,
+            "probability": 0.0,
+            "receipt": "search:1:4"
+          },
+          "bridge:2": {
+            "draw": -1.0,
+            "eligible": false,
+            "evidence": [],
+            "finder": "hero",
+            "found": false,
+            "guaranteed": false,
+            "probability": 0.0,
+            "receipt": "search:1:6"
+          },
+          "switch:0": {
+            "draw": -1.0,
+            "eligible": false,
+            "evidence": [],
+            "finder": "hero",
+            "found": false,
+            "guaranteed": false,
+            "probability": 0.0,
+            "receipt": "search:1:1"
+          },
+          "switch:1": {
+            "draw": -1.0,
+            "eligible": false,
+            "evidence": [],
+            "finder": "hero",
+            "found": false,
+            "guaranteed": false,
+            "probability": 0.0,
+            "receipt": "search:1:2"
+          },
+          "switch:2": {
+            "draw": 0.984076942990213,
+            "eligible": true,
+            "evidence": [],
+            "finder": "hero",
+            "found": false,
+            "guaranteed": false,
+            "probability": 0.0625,
+            "receipt": "search:1:3"
+          }
+        },
+        "completion_receipts": {
+          "search:1:1": "switch:0",
+          "search:1:2": "switch:1",
+          "search:1:3": "switch:2",
+          "search:1:4": "bridge:1",
+          "search:1:5": "bridge:0",
+          "search:1:6": "bridge:2"
+        },
+        "configuration_version": 2,
+        "diagnostic": "",
+        "discovered": "",
+        "eligible_targets": [
+          "body:4",
+          "memory:3",
+          "atrium:1",
+          "visual:3",
+          "visual:0",
+          "body:5",
+          "atrium:0",
+          "decision:0",
+          "switch:2",
+          "identity:2",
+          "verify:1",
+          "verify:0",
+          "index:2",
+          "index:1",
+          "identity:6",
+          "index:4"
+        ],
+        "evidence": {},
+        "interference": {},
+        "level": 4,
+        "seed": "7d396e72d7a2e8eb3bff7f2840852f4be7d3dc63f3b1264da21bbb2ebfcc434c",
+        "version": 2
+      },
+      "key_owner": "",
+      "key_seed_root": "7d396e72d7a2e8eb3bff7f2840852f4be7d3dc63f3b1264da21bbb2ebfcc434c",
+      "key_seen": false,
+      "key_target": "",
+      "level": 4,
+      "profile": {},
+      "receipts": {},
+      "rooms": {
+        "switch": {
+          "drawer": {
+            "switch:0": 1.0,
+            "switch:1": 1.0,
+            "switch:2": 1.0
+          }
+        }
+      },
+      "search_route_watch": {
+        "stalled": 0.0,
+        "target": "bridge:3"
+      },
+      "targets": [],
+      "unlocked": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "status_visible": true,
+    "target_index": 3,
+    "vitality_display": {
+      "automatic": false,
+      "hint_acknowledged": false,
+      "hint_demo_seen": true,
+      "last_action": "search:search:1:6",
+      "manual": false,
+      "pending": false
+    },
+    "world_visual_time": 90.2250000000033,
+    "zoom_index": 1
+  }
+}

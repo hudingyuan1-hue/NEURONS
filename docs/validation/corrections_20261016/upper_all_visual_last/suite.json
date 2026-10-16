@@ -1,0 +1,11 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 0,
+    "seconds": 14.29,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 255,
+    "failed": []
+  }
+]

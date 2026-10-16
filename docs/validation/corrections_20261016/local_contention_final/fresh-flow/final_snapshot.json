@@ -1,0 +1,1461 @@
+{
+  "action_left": -0.0333333333333332,
+  "action_phase": "autonomy",
+  "asylum_state": {},
+  "audio_state": {
+    "playing": [
+      {
+        "channel": "world",
+        "id": "SFX_DOOR_OPEN",
+        "position": 0.333333343267441
+      },
+      {
+        "channel": "music",
+        "id": "MUS_ROOM",
+        "position": 0.0133333336561918
+      }
+    ],
+    "receipts": {
+      "AMB_FAN:fan:1": true,
+      "MUS_ROOM:music:1:1": true,
+      "MUS_ROOM:music:2:1": true,
+      "SFX_DOOR_OPEN:door:1:bedroom:lobby": true,
+      "SFX_DRAWER:drawer:1:bedroom:bed": true,
+      "SFX_DRAWER:drawer:1:bedroom:bedside": true,
+      "SFX_DRAWER:drawer:1:bedroom:books": true,
+      "SFX_DRAWER:drawer:1:bedroom:rack": true,
+      "SFX_DRAWER:drawer:1:bedroom:storage": true,
+      "SFX_DRAWER:drawer:1:bedroom:wardrobe": true,
+      "SFX_FOOTSTEP:foot:1": true,
+      "SFX_FOOTSTEP:foot:10": true,
+      "SFX_FOOTSTEP:foot:11": true,
+      "SFX_FOOTSTEP:foot:12": true,
+      "SFX_FOOTSTEP:foot:13": true,
+      "SFX_FOOTSTEP:foot:14": true,
+      "SFX_FOOTSTEP:foot:15": true,
+      "SFX_FOOTSTEP:foot:16": true,
+      "SFX_FOOTSTEP:foot:17": true,
+      "SFX_FOOTSTEP:foot:18": true,
+      "SFX_FOOTSTEP:foot:2": true,
+      "SFX_FOOTSTEP:foot:3": true,
+      "SFX_FOOTSTEP:foot:4": true,
+      "SFX_FOOTSTEP:foot:5": true,
+      "SFX_FOOTSTEP:foot:6": true,
+      "SFX_FOOTSTEP:foot:7": true,
+      "SFX_FOOTSTEP:foot:8": true,
+      "SFX_FOOTSTEP:foot:9": true
+    }
+  },
+  "closing_left": 0.0,
+  "completed": [],
+  "controlled_route": false,
+  "cortex_state": {},
+  "death_left": 0.0,
+  "deferred_targets": {},
+  "destination": "lobby",
+  "dialogue": [],
+  "drawer_open": {},
+  "family_state": {
+    "actions": 6,
+    "auto_food_used": false,
+    "blood_door": false,
+    "checks": {
+      "ordinary:search:1:2": true,
+      "ordinary:search:1:4": true,
+      "ordinary:search:1:6": true
+    },
+    "collapse": {},
+    "dialogue_choices": {},
+    "eating": {},
+    "eating_serial": 0,
+    "extra_checked": false,
+    "fact_cursor": 39,
+    "father": {
+      "branch": "",
+      "elapsed": 0.0,
+      "facing": [
+        0.0,
+        1.0
+      ],
+      "phase": "absent",
+      "pos": [
+        4.6,
+        0.22
+      ],
+      "present": false,
+      "release_left": 0.0,
+      "route": [],
+      "used": false
+    },
+    "food_types": {},
+    "gift": [],
+    "gift_pick": 0.0,
+    "gift_roll": -1.0,
+    "gift_wait": 0.0,
+    "hidden_pending": false,
+    "inventory": [],
+    "mother": {
+      "branch": "",
+      "elapsed": 0.0,
+      "facing": [
+        0.0,
+        1.0
+      ],
+      "phase": "absent",
+      "pos": [
+        4.6,
+        0.22
+      ],
+      "present": false,
+      "release_left": 0.0,
+      "route": [],
+      "used": false
+    },
+    "mother_rest": false,
+    "picking_gift": false,
+    "pressure": 0.0,
+    "queued": [],
+    "rescued": false,
+    "spawn_order": [],
+    "startle": {},
+    "system_prompts": {}
+  },
+  "first_damage": false,
+  "first_damage_pending": false,
+  "footstep_left": 0.116666666666667,
+  "footstep_serial": 18,
+  "hero_facing": [
+    0.447214543819427,
+    -0.894426763057709
+  ],
+  "hero_pos": [
+    5.34999990463257,
+    1.25
+  ],
+  "hero_state": "idle",
+  "hidden_state": {},
+  "home_state": {
+    "blocked_left": 0.0,
+    "blocked_search": "",
+    "cat": {
+      "left": 0.0,
+      "phase": "occupy",
+      "point": 3,
+      "pos": [
+        1.89999997615814,
+        3.54999995231628
+      ],
+      "present": false,
+      "rounds": 0,
+      "route": []
+    },
+    "counted": {
+      "search:1:1": true,
+      "search:1:2": true,
+      "search:1:3": true,
+      "search:1:4": true,
+      "search:1:5": true,
+      "search:1:6": true
+    },
+    "dialogue_choices": {
+      "DOG_HELP:request": 1,
+      "DOG_OPEN:arrival": 2,
+      "DOG_THANK:initial": 0,
+      "S1_START:attempt": 5
+    },
+    "dialogue_played": {
+      "DOG_HELP:request": true,
+      "DOG_OPEN:arrival": true,
+      "DOG_THANK:initial": true,
+      "S1_START:attempt": true
+    },
+    "dog": {
+      "alive": true,
+      "left": -0.0333333333333291,
+      "phase": "idle",
+      "pos": [
+        1.92399930953979,
+        3.16800117492676
+      ],
+      "present": true,
+      "remaining": 2,
+      "route": [],
+      "target": 2
+    },
+    "dog_serial": 0,
+    "fighting": false,
+    "key_drop": [],
+    "tracked_search": "search:1:6"
+  },
+  "hospital_state": {
+    "actors": {
+      "archivist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "office",
+        "route": []
+      },
+      "assistant": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          2.40000009536743,
+          4.75
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "doctor": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          2.40000009536743,
+          4.75
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "guard": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "office",
+        "route": []
+      },
+      "guide": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "nurse": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.44999980926514,
+          1.25
+        ],
+        "room": "ward",
+        "route": []
+      },
+      "patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "pharmacist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          5.0
+        ],
+        "room": "pharmacy",
+        "route": []
+      },
+      "porter": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "wheelchair": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "lobby",
+        "route": []
+      }
+    },
+    "bag": "ward",
+    "bag_order": false,
+    "bandage": 0.0,
+    "batches": {},
+    "body": {},
+    "clock": 0.0,
+    "dispensed": false,
+    "exam_done": false,
+    "geometry_version": 2,
+    "groups": {
+      "clinic": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "lobby": {
+        "checks": 1,
+        "drawn": false,
+        "pending": false
+      },
+      "nurse": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "office": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "patient": {
+        "checks": 1,
+        "drawn": true,
+        "pending": true
+      },
+      "pharmacist": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      }
+    },
+    "healed": false,
+    "holder": "",
+    "hospital_attempt": 1,
+    "known_pages": [],
+    "medicine_stop": 0.0,
+    "nurse_checked": false,
+    "prescribed": false,
+    "prescription_visit": "",
+    "receipts": {},
+    "refused": false,
+    "registered": false,
+    "regrab_elapsed": 0.8,
+    "room_left": {
+      "bedroom": 0.0
+    },
+    "sample": false,
+    "suspended_body": {},
+    "swallowed": false,
+    "transport": {},
+    "visit": ""
+  },
+  "menu_open": false,
+  "menu_page": "cast",
+  "motion": {},
+  "observing_index": -1,
+  "opening_state": {},
+  "paused_manual": false,
+  "presentation_id": "a",
+  "profile": {
+    "invader_id": 8777,
+    "name": "自然流程观察",
+    "opening_completed": true,
+    "tutorial_completed": true
+  },
+  "prop_receipts": {
+    "comment:1:bed": true,
+    "comment:1:bedside": true,
+    "comment:1:books": true,
+    "comment:1:rack": true,
+    "comment:1:storage": true,
+    "search:1:1:掀被角": true,
+    "search:1:1:查看床底": true,
+    "search:1:1:检查床沿": true,
+    "search:1:2:拉开抽屉": true,
+    "search:1:2:查看闹钟后方": true,
+    "search:1:2:移开书本": true,
+    "search:1:2:翻找抽屉": true,
+    "search:1:3:扶住白大褂": true,
+    "search:1:3:检查另一侧衣袋": true,
+    "search:1:3:检查第一侧衣袋": true,
+    "search:1:4:取出展开病服": true,
+    "search:1:4:放回病服": true,
+    "search:1:4:看见露角血迹": true,
+    "search:1:4:翻查旧衣杂物": true,
+    "search:1:4:翻看磨损领标": true,
+    "search:1:5:检查第一层": true,
+    "search:1:5:检查第三层": true,
+    "search:1:5:检查第二层": true,
+    "search:1:5:检查第五层": true,
+    "search:1:5:检查第四层": true,
+    "search:1:6:查看柜底": true,
+    "search:1:6:检查另一侧": true,
+    "search:1:6:检查打开的一侧": true,
+    "search:1:6:翻查衣物": true
+  },
+  "rng_state": "-6881953134559513680",
+  "room_id": "lobby",
+  "route": [],
+  "route_action_origin": "autonomous",
+  "rules": {
+    "_cast_serial": 0,
+    "_completed_targets": {
+      "bedroom:0": true,
+      "bedroom:1": true,
+      "bedroom:2": true,
+      "bedroom:6": true,
+      "bedroom:7": true,
+      "bedroom:8": true,
+      "bedroom:9": true
+    },
+    "_search_id": "search:1:6",
+    "_search_serial": 6,
+    "_sp_depleted": false,
+    "absent": false,
+    "action": {},
+    "action_serial": 0,
+    "actual_attempt": 1,
+    "allow_supplemental_search": false,
+    "awakening_receipts": {},
+    "awareness_feedback": [],
+    "awareness_stage": 0,
+    "body_feedback": [],
+    "book_extensions": {},
+    "combat_regen": 0.0,
+    "config": {
+      "book_extensions": {
+        "book_item_parameters": {
+          "category": "物品",
+          "cost": 5.0,
+          "name": "已见物品参数",
+          "source": "体验:P428；R1:P39–42；S4:T4"
+        },
+        "book_person_parameters": {
+          "category": "人物",
+          "cost": 5.0,
+          "name": "已见人物行为参数",
+          "source": "体验:P429；R1:P39–42；S3/S4第一关规则"
+        },
+        "book_role_resistance": {
+          "category": "角色",
+          "cost": 5.0,
+          "name": "抗性明细",
+          "source": "体验:P427；R1:P39–42"
+        }
+      },
+      "schema": 1.0,
+      "skills": [
+        {
+          "combat_description": "消耗1神经元。侧挪：向选定方向短移一步；无无敌效果，不能穿过障碍。。角色表现：侧挪。",
+          "combat_dialogue": [
+            "[警惕]“不能站在这里。”",
+            "[紧张]“对，别停在那儿。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式取消未完成搜寻，战斗模式向选择方向短移。角色分别表现为收手抓挠、侧挪。",
+          "exploration_description": "消耗1神经元。抓挠，取消尚未完成的搜寻。角色表现：收手抓挠。",
+          "exploration_dialogue": [
+            "收手抓挠",
+            "[烦躁]“哪来的蚊子……”"
+          ],
+          "id": "SKIN",
+          "name": "皮肤刺激",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 0.0
+        },
+        {
+          "combat_description": "消耗1神经元。俯身：短暂降低上身受击范围；不能避开低位、地面及覆盖全身的攻击。。角色表现：俯身。",
+          "combat_dialogue": [
+            "[难受]“偏偏这时候……”",
+            "[紧张]“先低着头，别急着起来。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式中断搜寻或本次劝休，战斗模式俯身降低上身受击范围。角色捂腹弯腰。",
+          "exploration_description": "消耗1神经元。腹痛，取消搜寻；可中断本次劝休。角色表现：捂腹弯腰。",
+          "exploration_dialogue": [
+            "捂腹弯腰",
+            "[难受]“偏偏这个时候……”"
+          ],
+          "id": "GUT",
+          "name": "肠胃蠕动",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。警觉转身：转向已经感知的最近威胁，中止无关动作；不透视发现敌人。。角色表现：警觉转身。",
+          "combat_dialogue": [
+            "[警惕]“在那边。”",
+            "[认真]“……看到了。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式产生旁人可以察觉的皮肤异常、搜寻继续，战斗模式转向已感知的威胁。角色分别表现为查看手臂、转身警戒。",
+          "exploration_description": "消耗1神经元。出现可见异常，可引起附近人物注意；搜寻继续。角色表现：查看手臂。",
+          "exploration_dialogue": [
+            "查看手臂",
+            "[疑惑]“怎么起鸡皮疙瘩了？”"
+          ],
+          "id": "PORES",
+          "name": "毛孔变化",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。短时提速：加快移动，结束后恢复；不叠加，不附带免伤。。角色表现：短时提速。",
+          "combat_dialogue": [
+            "[凝重]“先离开这里。”",
+            "[着急]“快快快，别停。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式短暂减慢移动与搜寻，战斗模式短暂提高移动速度。角色分别表现为打颤、加快步频。",
+          "exploration_description": "消耗1神经元。颤抖，延缓当前移动或搜寻。角色表现：打颤、搓手。",
+          "exploration_dialogue": [
+            "打颤、搓手",
+            "[抱怨]“这地方空调不要钱啊？”"
+          ],
+          "id": "TEMP",
+          "name": "冷热感",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。止步：停止当前前进，短暂停顿后重新判断路线；不取消敌人攻击。。角色表现：止步。",
+          "combat_dialogue": [
+            "[警惕]“等一下……看看别的路。”",
+            "[紧张]“先别往前冲。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式短暂停顿后继续行动，战斗模式停止移动并重新判断路线。角色侧头停步，耳鸣不产生外界声源。",
+          "exploration_description": "消耗1神经元。短暂停步，随后继续；声音仅角色听见。角色表现：停步侧头。",
+          "exploration_dialogue": [
+            "停步侧头",
+            "[疑惑]“谁在响？……我耳朵？”"
+          ],
+          "id": "TINNITUS",
+          "name": "耳鸣",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。抑制出声：暂时压低惊叫、求助等声音；脚步和碰撞声仍存在，仅影响具有听觉判定的人物。。角色表现：抑制出声。",
+          "combat_dialogue": [
+            "[克制]“……先别出声。”",
+            "[紧张]“别喊，我看着呢。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式延缓未完成的物品交接，战斗模式暂时抑制角色出声。角色抿嘴吞咽，脚步与碰撞声仍存在。",
+          "exploration_description": "消耗1神经元。延缓尚未完成的物品交接，不撤销已获物品。角色表现：抿嘴吞咽，递出的手稍停。",
+          "exploration_dialogue": [
+            "抿嘴吞咽，递出的手稍停",
+            "[尴尬]“等一下……嗓子有点干。”"
+          ],
+          "id": "DRYMOUTH",
+          "name": "口腔干涩",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗2神经元。踢击：近距离向前攻击；命中才结算伤害，能否击退按目标规则处理。。角色表现：踢击。",
+          "combat_dialogue": [
+            "[警惕]“别靠过来。”",
+            "[紧张]“踢完就走，别耗着。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并向前踢击，实际命中才结算伤害与对应击退。角色突然向前弹腿。",
+          "exploration_description": "消耗2神经元。取消搜寻，向前弹腿；实际命中才伤害。角色表现：突然向前弹腿。",
+          "exploration_dialogue": [
+            "突然向前弹腿",
+            "[震惊]“不是……我腿怎么了？”"
+          ],
+          "id": "KNEE",
+          "name": "膝跳反射",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "GUT"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗2神经元。收臂：及时撤回手臂；不能解除已经锁紧的束缚，也不能防御全身攻击。。角色表现：收臂。",
+          "combat_dialogue": [
+            "[凝重]“手……又自己动了。”",
+            "[认真]“收回来了，接着走。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并收回手臂，可避开尚未命中的手部抓握、不能解除已经成立的控制。角色迅速收手。",
+          "exploration_description": "消耗2神经元。取消搜寻，避开尚未成立的手臂抓握。角色表现：猛地收手。",
+          "exploration_dialogue": [
+            "猛地收手",
+            "[警惕]“别碰我！”"
+          ],
+          "id": "WITHDRAW",
+          "name": "缩手反射",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗2神经元。后撤：距离大于皮肤刺激的侧挪；依靠实际位移避开攻击，无无敌效果，后方受阻则不能完整撤出。。角色表现：后撤。",
+          "combat_dialogue": [
+            "[警惕]“退开点。”",
+            "[紧张]“后面也得看着点。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并尝试向后移动，实际退开才可能避过攻击。角色后撤，遇到障碍不能穿过。",
+          "exploration_description": "消耗2神经元。取消搜寻，向后短移。角色表现：惊跳，后方可走时退步。",
+          "exploration_dialogue": [
+            "惊跳，后方可走时退步",
+            "[惊疑]“什么东西？！”"
+          ],
+          "id": "STARTLE",
+          "name": "惊跳反应",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "TEMP"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗3神经元。撤离倾向：停止主动进攻，远离已感知威胁；仍降低精神，不自动找到出口。。角色表现：撤离倾向。",
+          "combat_dialogue": [
+            "[不安]“不行……离它远点。”",
+            "[凝重]“先退，别硬撑。”"
+          ],
+          "cooldown": 8.0,
+          "cost": 3.0,
+          "description": "消耗3神经元。降低精神，探索模式取消搜寻并延后当前目标，战斗模式停止进攻并远离已感知威胁。角色收手、警戒并尝试退离。",
+          "exploration_description": "消耗3神经元。降低精神，取消搜寻，将当前目标延后。角色表现：缩手，盯住目标。",
+          "exploration_dialogue": [
+            "缩手，盯住目标",
+            "[不安]“这个……先不看了。”"
+          ],
+          "id": "FEAR",
+          "name": "恐惧",
+          "power": 3.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "TINNITUS",
+            "STARTLE"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 3.0,
+          "unlock_cost": 3.0
+        },
+        {
+          "combat_description": "消耗3神经元。稳定状态：恢复精神，解除自身情绪造成的犹豫；不回血、不解除物理束缚、不取消敌人威胁。。角色表现：稳定状态。",
+          "combat_dialogue": [
+            "[克制]“别慌……先看清楚。”",
+            "[认真]“还没出去呢。”"
+          ],
+          "cooldown": 8.0,
+          "cost": 3.0,
+          "description": "消耗3神经元。恢复精神并缓解角色自身恐惧，不恢复生命、不解除抓握。角色紧绷动作减轻、呼吸趋稳。",
+          "exploration_description": "消耗3神经元。恢复精神，缓解角色自身恐慌、犹豫；搜寻继续。角色表现：肩膀放松，轻笑后继续。",
+          "exploration_dialogue": [
+            "肩膀放松，轻笑后继续",
+            "[轻松]“算了，再找找。”"
+          ],
+          "id": "JOY",
+          "name": "开心",
+          "power": 3.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "PORES",
+            "WITHDRAW"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 3.0,
+          "unlock_cost": 3.0
+        },
+        {
+          "combat_description": "消耗5神经元。直接控制：接管移动、朝向及角色已经具备的攻击、互动；不自动获得其他技能，不保证命中或逃脱。。角色表现：直接控制。",
+          "combat_dialogue": [
+            "未识破：[惊疑]“我没想这么走……”；已识破：[冷漠]“看路。别停。”",
+            "[紧张]“先离开这里。”"
+          ],
+          "cooldown": 20.0,
+          "cost": 5.0,
+          "description": "消耗5神经元。接管移动、朝向与互动6秒，战斗模式可调用已解锁的踢击。角色响应输入，仍正常承受攻击与控制。",
+          "exploration_description": "消耗5神经元。接管移动与互动。角色表现：动作短暂停顿，随后响应操作。",
+          "exploration_dialogue": [
+            "动作短暂停顿，随后响应操作",
+            "[冷漠]“这一步，是你选的。”"
+          ],
+          "id": "CONTROL",
+          "name": "完全掌控",
+          "power": 4.0,
+          "prerequisite_mode": "any",
+          "prerequisites": [
+            "FEAR",
+            "JOY"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 4.0,
+          "unlock_cost": 5.0
+        }
+      ],
+      "test_parameters": {
+        "exploration_startle_distance": 0.4,
+        "note": "探索后撤距离为集中测试表现参数；完成判定按真实位移，不套战斗0.35秒。膝跳分段已按S4:P170定值。"
+      },
+      "timing": {
+        "combat_skin_distance": 0.8,
+        "combat_skin_duration": 0.25,
+        "combat_startle_distance": 1.4,
+        "combat_startle_duration": 0.35,
+        "control": 6.0,
+        "drymouth_combat": 6.0,
+        "drymouth_transfer_delay": 2.0,
+        "fear_combat": 3.0,
+        "fear_retry": 6.0,
+        "gut_reaction": 1.2,
+        "kick_attack": 0.15,
+        "kick_damage": 15.0,
+        "kick_prepare": 0.15,
+        "kick_push": 0.8,
+        "kick_range": 1.0,
+        "kick_recover": 0.35,
+        "kick_source": "S4:P170",
+        "kick_stun": 0.8,
+        "pores": 3.0,
+        "skin_reaction": 0.5,
+        "temp": 3.0,
+        "temp_combat_rate": 1.25,
+        "temp_exploration_rate": 0.75,
+        "tinnitus_combat": 0.3,
+        "tinnitus_exploration": 1.0,
+        "withdraw": 0.3
+      }
+    },
+    "control_context": {},
+    "control_event": "",
+    "control_evidence_receipts": {},
+    "control_feedback": [],
+    "control_fraction_ms": 0.0,
+    "control_left": 0.0,
+    "control_ms": 0,
+    "control_stage": 0,
+    "control_stage_receipts": {},
+    "cooldown_until": 0.0,
+    "effects": {},
+    "evidence": [],
+    "facts": [
+      {
+        "duration": 4.0,
+        "event_id": "search:1:1",
+        "kind": "search_started",
+        "target": "bedroom:0",
+        "time": 0.0333333333333333
+      },
+      {
+        "action": "掀被角",
+        "event_id": "search:1:1:掀被角",
+        "kind": "prop_action",
+        "point": "bed",
+        "time": 0.633333333333333
+      },
+      {
+        "action": "检查床沿",
+        "event_id": "search:1:1:检查床沿",
+        "kind": "prop_action",
+        "point": "bed",
+        "time": 1.63333333333334
+      },
+      {
+        "action": "查看床底",
+        "event_id": "search:1:1:查看床底",
+        "kind": "prop_action",
+        "point": "bed",
+        "time": 2.63333333333333
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:1",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bedroom:0",
+        "time": 4.03333333333333
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:2",
+        "kind": "search_started",
+        "target": "bedroom:1",
+        "time": 5.26666666666666
+      },
+      {
+        "event_id": "dog_search:1:bedroom:2",
+        "kind": "dog_search_completed",
+        "neurons": 1,
+        "target": "bedroom:2",
+        "time": 5.63333333333332
+      },
+      {
+        "action": "移开书本",
+        "event_id": "search:1:2:移开书本",
+        "kind": "prop_action",
+        "point": "bedside",
+        "time": 5.86666666666666
+      },
+      {
+        "action": "查看闹钟后方",
+        "event_id": "search:1:2:查看闹钟后方",
+        "kind": "prop_action",
+        "point": "bedside",
+        "time": 6.56666666666665
+      },
+      {
+        "action": "拉开抽屉",
+        "event_id": "search:1:2:拉开抽屉",
+        "kind": "prop_action",
+        "point": "bedside",
+        "time": 7.46666666666665
+      },
+      {
+        "action": "翻找抽屉",
+        "event_id": "search:1:2:翻找抽屉",
+        "kind": "prop_action",
+        "point": "bedside",
+        "time": 8.29999999999998
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:2",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bedroom:1",
+        "time": 9.26666666666664
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:3",
+        "kind": "search_started",
+        "target": "bedroom:6",
+        "time": 10.6
+      },
+      {
+        "action": "扶住白大褂",
+        "event_id": "search:1:3:扶住白大褂",
+        "kind": "prop_action",
+        "point": "rack",
+        "time": 11.4333333333333
+      },
+      {
+        "action": "检查第一侧衣袋",
+        "event_id": "search:1:3:检查第一侧衣袋",
+        "kind": "prop_action",
+        "point": "rack",
+        "time": 12.2
+      },
+      {
+        "action": "检查另一侧衣袋",
+        "event_id": "search:1:3:检查另一侧衣袋",
+        "kind": "prop_action",
+        "point": "rack",
+        "time": 13.4
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:3",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bedroom:6",
+        "time": 14.6
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:4",
+        "kind": "search_started",
+        "target": "bedroom:9",
+        "time": 16.4
+      },
+      {
+        "action": "翻查旧衣杂物",
+        "event_id": "search:1:4:翻查旧衣杂物",
+        "kind": "prop_action",
+        "point": "storage",
+        "time": 17.1333333333333
+      },
+      {
+        "action": "看见露角血迹",
+        "event_id": "search:1:4:看见露角血迹",
+        "kind": "prop_action",
+        "point": "storage",
+        "time": 17.8
+      },
+      {
+        "action": "取出展开病服",
+        "event_id": "search:1:4:取出展开病服",
+        "kind": "prop_action",
+        "point": "storage",
+        "time": 18.4000000000001
+      },
+      {
+        "action": "翻看磨损领标",
+        "event_id": "search:1:4:翻看磨损领标",
+        "kind": "prop_action",
+        "point": "storage",
+        "time": 19.4333333333335
+      },
+      {
+        "action": "放回病服",
+        "event_id": "search:1:4:放回病服",
+        "kind": "prop_action",
+        "point": "storage",
+        "time": 20.1333333333335
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:4",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bedroom:9",
+        "time": 20.4000000000002
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:5",
+        "kind": "search_started",
+        "target": "bedroom:8",
+        "time": 21.3333333333336
+      },
+      {
+        "action": "检查第一层",
+        "event_id": "search:1:5:检查第一层",
+        "kind": "prop_action",
+        "point": "books",
+        "time": 22.0000000000003
+      },
+      {
+        "action": "检查第二层",
+        "event_id": "search:1:5:检查第二层",
+        "kind": "prop_action",
+        "point": "books",
+        "time": 22.6333333333336
+      },
+      {
+        "action": "检查第三层",
+        "event_id": "search:1:5:检查第三层",
+        "kind": "prop_action",
+        "point": "books",
+        "time": 23.266666666667
+      },
+      {
+        "action": "检查第四层",
+        "event_id": "search:1:5:检查第四层",
+        "kind": "prop_action",
+        "point": "books",
+        "time": 23.9000000000003
+      },
+      {
+        "action": "检查第五层",
+        "event_id": "search:1:5:检查第五层",
+        "kind": "prop_action",
+        "point": "books",
+        "time": 24.566666666667
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:5",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bedroom:8",
+        "time": 25.3333333333338
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:6",
+        "kind": "search_started",
+        "target": "bedroom:7",
+        "time": 26.5333333333338
+      },
+      {
+        "action": "检查打开的一侧",
+        "event_id": "search:1:6:检查打开的一侧",
+        "kind": "prop_action",
+        "point": "wardrobe",
+        "time": 27.2666666666672
+      },
+      {
+        "action": "翻查衣物",
+        "event_id": "search:1:6:翻查衣物",
+        "kind": "prop_action",
+        "point": "wardrobe",
+        "time": 28.1333333333339
+      },
+      {
+        "action": "检查另一侧",
+        "event_id": "search:1:6:检查另一侧",
+        "kind": "prop_action",
+        "point": "wardrobe",
+        "time": 29.1333333333339
+      },
+      {
+        "action": "查看柜底",
+        "event_id": "search:1:6:查看柜底",
+        "kind": "prop_action",
+        "point": "wardrobe",
+        "time": 29.9666666666673
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:6",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bedroom:7",
+        "time": 30.533333333334
+      },
+      {
+        "event_id": "key_discovery:1:1",
+        "finder": "hero",
+        "kind": "key_discovered",
+        "search_receipt": "search:1:6",
+        "target": "bedroom:7",
+        "time": 30.533333333334
+      },
+      {
+        "event_id": "key:1:1",
+        "from": "bedroom:7",
+        "item": "key",
+        "kind": "transfer",
+        "time": 30.9666666666674,
+        "to": "hero"
+      }
+    ],
+    "global_resistance": 0,
+    "gripped": false,
+    "hp": 100,
+    "hurt_left": 0.0,
+    "institutional_records": [],
+    "intervention_lock": false,
+    "kick_until": 0.0,
+    "known": [
+      "coat_seen",
+      "cuff_seam",
+      "uniform_blood",
+      "uniform_seen",
+      "uniform_damaged_label",
+      "bedroom:7"
+    ],
+    "loading": false,
+    "lock_after_serial": 0,
+    "mode": "exploration",
+    "neurons": 15,
+    "observations": [
+      {
+        "category": "人物",
+        "id": "dog",
+        "kind": "亲历事实",
+        "source": "现场观察",
+        "text": "大黄，戴着红项圈；本周目实际见到。"
+      },
+      {
+        "category": "物品",
+        "id": "coat_seen",
+        "kind": "亲历事实",
+        "source": "卧室实际检查",
+        "text": "实际看见卧室衣帽架上的白色医生大褂；尚未确认主人或袖口细节。"
+      },
+      {
+        "category": "物品",
+        "id": "cuff_seam",
+        "kind": "亲历事实",
+        "source": "卧室实际检查",
+        "text": "实际翻起袖口并看清破损后的缝补线迹。"
+      },
+      {
+        "category": "物品",
+        "id": "uniform_blood",
+        "kind": "亲历事实",
+        "source": "卧室实际检查",
+        "text": "实际看见储物柜病服露角上的血迹。"
+      },
+      {
+        "category": "物品",
+        "id": "uniform_seen",
+        "kind": "亲历事实",
+        "source": "卧室实际检查",
+        "text": "实际展开并认出了病服；未推定其主人。"
+      },
+      {
+        "category": "物品",
+        "id": "uniform_damaged_label",
+        "kind": "亲历事实",
+        "source": "卧室实际检查",
+        "text": "看清了领口有磨损标签，具体字形仍待素材核验。"
+      }
+    ],
+    "owners": {
+      "key": "",
+      "porridge": "mother"
+    },
+    "pending_global_growth": 0,
+    "pending_neural": {},
+    "pending_skin": {},
+    "plexus": 5,
+    "public_action": {},
+    "public_serial": 11,
+    "reaction_left": 0.0,
+    "reaction_skill": "",
+    "search_active": false,
+    "search_attempts": 0,
+    "search_count": 6,
+    "search_duration": 4.0,
+    "search_elapsed": 4.0,
+    "search_limit": 12,
+    "search_target": "bedroom:7",
+    "settled": {
+      "dog_search:1:bedroom:2": "completed",
+      "key:1:1": "transfer",
+      "search:1:1": "completed",
+      "search:1:2": "completed",
+      "search:1:3": "completed",
+      "search:1:4": "completed",
+      "search:1:5": "completed",
+      "search:1:6": "completed"
+    },
+    "skill_states": {
+      "CONTROL": {
+        "growth": false,
+        "power": 4,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "DRYMOUTH": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "FEAR": {
+        "growth": false,
+        "power": 3,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "GUT": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "JOY": {
+        "growth": false,
+        "power": 3,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "KNEE": {
+        "growth": false,
+        "power": 2,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "PORES": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "SKIN": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": true,
+        "until": 0.0
+      },
+      "STARTLE": {
+        "growth": false,
+        "power": 2,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "TEMP": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "TINNITUS": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "WITHDRAW": {
+        "growth": false,
+        "power": 2,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      }
+    },
+    "skin_pending_resistance": false,
+    "skin_power": 1,
+    "skin_reactions": 0,
+    "skin_resistance": 0,
+    "sp": 100,
+    "stun_left": 0.0,
+    "transitioning": false,
+    "trial": {},
+    "trial_attempt": 0,
+    "trial_evidence_count": 0,
+    "tutorial_demo": false,
+    "world_time": 34.6333333333339
+  },
+  "schema": 3,
+  "search_action_origin": "autonomous",
+  "search_props": {
+    "bedroom:bed": {
+      "bedding_lifted": true,
+      "geometry_version": 2
+    },
+    "bedroom:bedside": {
+      "book_shift": [
+        9.0,
+        -1.0
+      ],
+      "clock_shift": [
+        0.0,
+        -4.0
+      ],
+      "drawer_started": true,
+      "geometry_version": 2
+    },
+    "bedroom:books": {
+      "geometry_version": 2
+    },
+    "bedroom:box": {
+      "geometry_version": 2
+    },
+    "bedroom:chair": {
+      "geometry_version": 2
+    },
+    "bedroom:desk": {
+      "geometry_version": 2
+    },
+    "bedroom:fan": {
+      "geometry_version": 2
+    },
+    "bedroom:rack": {
+      "geometry_version": 2
+    },
+    "bedroom:stool": {
+      "geometry_version": 2
+    },
+    "bedroom:storage": {
+      "geometry_version": 2,
+      "label_viewed": true,
+      "uniform_out": false
+    },
+    "bedroom:wardrobe": {
+      "geometry_version": 2
+    },
+    "lobby:lobby:0": {
+      "geometry_version": 2
+    },
+    "lobby:lobby:1": {
+      "geometry_version": 2
+    },
+    "lobby:lobby:2": {
+      "geometry_version": 2
+    },
+    "lobby:lobby:3": {
+      "geometry_version": 2
+    },
+    "lobby:lobby:4": {
+      "geometry_version": 2
+    },
+    "lobby:lobby:5": {
+      "geometry_version": 2
+    }
+  },
+  "session": {
+    "attempts": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    },
+    "cortex_exit_crossed": false,
+    "cycle": 1,
+    "exploration_boundary": false,
+    "institution_geometry_version": 2,
+    "key_discovery": {
+      "attempt": 1,
+      "completed": {},
+      "completion_receipts": {},
+      "configuration_version": 2,
+      "diagnostic": "",
+      "discovered": "",
+      "eligible_targets": [
+        "lobby:5",
+        "office:3",
+        "clinic:3",
+        "lobby:2",
+        "office:8",
+        "office:2",
+        "pharmacy:4",
+        "clinic:7",
+        "pharmacy:1",
+        "pharmacy:5",
+        "pharmacy:3",
+        "clinic:0"
+      ],
+      "evidence": {},
+      "interference": {},
+      "level": 2,
+      "seed": "0665c117d63a9a8493cad906f2679fb2efc4c39d3be67e7bce8198732fdf3e32",
+      "version": 2
+    },
+    "key_discovery_history": [
+      {
+        "attempt": 1,
+        "level": 1,
+        "target": "bedroom:7"
+      }
+    ],
+    "key_owner": "",
+    "key_seed_root": "0665c117d63a9a8493cad906f2679fb2efc4c39d3be67e7bce8198732fdf3e32",
+    "key_seen": false,
+    "key_target": "",
+    "level": 2,
+    "profile": {
+      "invader_id": 8777,
+      "name": "自然流程观察",
+      "opening_completed": true,
+      "tutorial_completed": false
+    },
+    "receipts": {},
+    "room_geometry_version": 2,
+    "rooms": {
+      "bedroom": {
+        "drawer": {
+          "bed": 1.0,
+          "bedside": 1.0,
+          "books": 1.0,
+          "rack": 1.0,
+          "storage": 1.0,
+          "wardrobe": 1.0
+        }
+      }
+    },
+    "targets": [
+      "lobby:5",
+      "office:3",
+      "clinic:3",
+      "lobby:2",
+      "office:8",
+      "office:2",
+      "pharmacy:4",
+      "clinic:7",
+      "pharmacy:1",
+      "pharmacy:5",
+      "pharmacy:3",
+      "clinic:0"
+    ],
+    "unlocked": [
+      1,
+      2
+    ]
+  },
+  "status_visible": false,
+  "target_index": -1,
+  "vitality_display": {
+    "automatic": false,
+    "hint_acknowledged": false,
+    "hint_demo_seen": false,
+    "last_action": "search:search:1:6",
+    "manual": false,
+    "pending": false
+  },
+  "world_visual_time": 34.6333333333339,
+  "zoom_index": 1
+}

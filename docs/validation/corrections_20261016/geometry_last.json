@@ -1,0 +1,6 @@
+{
+  "failed": [],
+  "passed": 2442,
+  "routes_checked": 782,
+  "scope": "headless geometry only; actual play and visual acceptance remain separate"
+}

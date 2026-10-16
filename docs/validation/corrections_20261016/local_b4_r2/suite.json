@@ -1,0 +1,38 @@
+[
+  {
+    "case": "cortex-events",
+    "returncode": 1,
+    "seconds": 4.85,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 88,
+    "failed": [
+      "JSON retains in-progress clip time, playing phase and original source instead of restarting the event"
+    ]
+  },
+  {
+    "case": "cortex-upper",
+    "returncode": 1,
+    "seconds": 4.43,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 64,
+    "failed": [
+      "seen pointing creates only existing three-leg loop",
+      "dry mouth without an actual handover does not cancel existing walking guidance",
+      "misdirection physically walks all three actual doors before returning",
+      "returned hero really examines original doorway landmark",
+      "only completed physical loop plus landmark grants persistent route recognition",
+      "recognized route persists through actual JSON"
+    ]
+  },
+  {
+    "case": "cortex-sequence",
+    "returncode": 0,
+    "seconds": 6.53,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 16,
+    "failed": []
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "automatic": true,
+  "background_frozen": false,
+  "closing_left": 0.0,
+  "dialogue": [
+    {
+      "_display_duration": 4.90909090909091,
+      "_display_elapsed": 0.766659,
+      "_display_elapsed_usec": 766659,
+      "_display_token": 3,
+      "speaker": "角色",
+      "text": "“测试”，继续……？！ (●'◡'●) 䵴䵰䶷"
+    }
+  ],
+  "failed": "dialogue freezes gameplay but lets already playing scene sound continue",
+  "manual_pause": false,
+  "playback": {
+    "playing": [
+      {
+        "channel": "ui",
+        "id": "SFX_COLD",
+        "position": 0.365333318710327
+      },
+      {
+        "channel": "world",
+        "id": "TEST_DIALOGUE_ACTION",
+        "position": 0.203174605965614
+      },
+      {
+        "channel": "ambience",
+        "id": "TEST_DIALOGUE_AMBIENCE",
+        "position": 0.203174605965614
+      },
+      {
+        "channel": "music",
+        "id": "TEST_DIALOGUE_MUSIC",
+        "position": 0.203174605965614
+      }
+    ],
+    "receipts": {
+      "TEST_DIALOGUE_ACTION:test_action": true,
+      "TEST_DIALOGUE_AMBIENCE:test_ambience": true,
+      "TEST_DIALOGUE_MUSIC:test_music": true
+    }
+  },
+  "players": {
+    "ambience": [
+      {
+        "cue": "TEST_DIALOGUE_AMBIENCE",
+        "has_playback": true,
+        "paused": false,
+        "playing": true,
+        "position": 0.203174605965614
+      }
+    ],
+    "music": [
+      {
+        "cue": "TEST_DIALOGUE_MUSIC",
+        "has_playback": true,
+        "paused": false,
+        "playing": true,
+        "position": 0.203174605965614
+      }
+    ],
+    "ui": [
+      {
+        "cue": "SFX_COLD",
+        "has_playback": true,
+        "paused": false,
+        "playing": true,
+        "position": 0.365333318710327
+      }
+    ],
+    "voice": [
+      {
+        "cue": "",
+        "has_playback": false,
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ],
+    "world": [
+      {
+        "cue": "TEST_DIALOGUE_ACTION",
+        "has_playback": true,
+        "paused": false,
+        "playing": true,
+        "position": 0.203174605965614
+      },
+      {
+        "cue": "",
+        "has_playback": false,
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      },
+      {
+        "cue": "",
+        "has_playback": false,
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      },
+      {
+        "cue": "",
+        "has_playback": false,
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ]
+  },
+  "starts": [
+    {
+      "channel": "ui",
+      "event": "",
+      "id": "SFX_COLD",
+      "provisional": false
+    },
+    {
+      "channel": "music",
+      "event": "test_music",
+      "id": "TEST_DIALOGUE_MUSIC",
+      "provisional": false
+    },
+    {
+      "channel": "ambience",
+      "event": "test_ambience",
+      "id": "TEST_DIALOGUE_AMBIENCE",
+      "provisional": false
+    },
+    {
+      "channel": "world",
+      "event": "test_action",
+      "id": "TEST_DIALOGUE_ACTION",
+      "provisional": false
+    }
+  ],
+  "voice_frozen": false,
+  "world_frozen": true,
+  "world_time": 0.0
+}

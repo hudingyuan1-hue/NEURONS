@@ -49,6 +49,7 @@ func normalize_completed_sources(value:Dictionary) -> void:
   value.job={};unreserve()
 
 func point(value:Array) -> Vector2:return Vector2(float(value[0]),float(value[1]))
+func station_position() -> Vector2:return owner.space_point("corridor","station_write_pos",point(config.implementation_parameters.station_write_pos))
 func xy(value:Vector2) -> Array:return [value.x,value.y]
 func timing(key:String) -> float:return float(config.presentation_timing[key])
 func stage(job:Dictionary,phase:String) -> void:job.phase=phase;job.elapsed=0.0
@@ -99,8 +100,8 @@ func travel_nurse(room:String,delta:float) -> bool:
  var next:String=Map.next_room(str(a.room),room)
  if next.is_empty() or next=="cortex_exit":return false
  if owner.isolation!=null and not owner.isolation.can_exit(str(a.room),next):return false
- if not move_nurse(Map.doorway(str(a.room),next),delta):return false
- var previous:String=str(a.room);var at:Vector2=Map.doorway(next,previous)
+ if not move_nurse(owner.portal_for(str(a.room),next).threshold,delta):return false
+ var previous:String=str(a.room);var at:Vector2=owner.portal_for(next,previous).landing
  if not arrival_free(next,at):return false
  a.room=next;a.pos=xy(at);a.route=[]
  owner.claim("nurse_door:%s:%s"%[previous,next],"asylum_nurse_crossed_door",{"from":previous,"to":next})
@@ -219,7 +220,7 @@ func advance_posting(delta:float) -> void:
  var value:Dictionary=state()
  reserve();owner.actor("med_nurse").phase="nurse_duty_to_station"
  if not travel_nurse("corridor",delta):return
- if not move_nurse(point(config.implementation_parameters.station_write_pos),delta):return
+ if not move_nurse(station_position(),delta):return
  value.posted=true
  owner.claim("nurse_duty_posted","asylum_nurse_reached_duty_station",{"actor":"med_nurse","actual_doors":true,"source":"S1:T10R3/S4:P109","new_paper":false})
  unreserve()
@@ -255,7 +256,7 @@ func tick(delta:float) -> void:
   owner.claim("nurse_source_read:"+source_key(source),"asylum_nurse_source_read",{"source_id":source.source_id,"number":source.number,"source_attempt":source.source_attempt})
   stage(job,"to_station");return
  if not travel_nurse("corridor",delta):return
- var station:Vector2=point(config.implementation_parameters.station_write_pos)
+ var station:Vector2=station_position()
  if not move_nurse(station,delta):return
  if job.phase=="to_station":stage(job,"write");return
  if job.phase=="write":

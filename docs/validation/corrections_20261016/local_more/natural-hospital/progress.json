@@ -1,0 +1,21 @@
+{
+  "body": {},
+  "frame": 4500,
+  "guard": {
+    "done": false,
+    "elapsed": 0.0,
+    "last_room": "",
+    "last_seen": [],
+    "phase": "idle",
+    "target": ""
+  },
+  "hero": [
+    2.85330319404602,
+    1.17665159702301
+  ],
+  "hospital_reading": {},
+  "phase": "cortex_observation_route",
+  "room": "visual",
+  "transport": {},
+  "world_time": 145.899999999994
+}

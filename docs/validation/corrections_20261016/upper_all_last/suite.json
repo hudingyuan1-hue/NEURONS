@@ -1,0 +1,19 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 0,
+    "seconds": 14.24,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 253,
+    "failed": []
+  },
+  {
+    "case": "test_institution_layout",
+    "returncode": 0,
+    "seconds": 4.36,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\n{\"failed\":[],\"passed\":3767,\"routes_checked\":1212,\"scope\":\"headless geometry only; actual play and visual acceptance remain separate\"}\n"
+  }
+]

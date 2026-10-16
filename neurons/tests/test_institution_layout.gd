@@ -2,8 +2,8 @@ extends SceneTree
 const Institution=preload("res://scripts/world/institution_layout.gd")
 const Legacy=preload("res://scripts/world/room_layout.gd")
 const Map=preload("res://scripts/core/asylum_map.gd")
-const EXPECTED={"ward":Vector2(6.4,4.8),"lobby":Vector2(12,8),"clinic":Vector2(8,6),"pharmacy":Vector2(8,6),"office":Vector2(9,6),"stairs":Vector2(7,5)}
-const COUNTS={"ward":0,"lobby":6,"clinic":8,"pharmacy":7,"office":11,"stairs":1}
+const EXPECTED={"ward":Vector2(6.4,4.8),"lobby":Vector2(12,8),"clinic":Vector2(8,6),"pharmacy":Vector2(8,6),"office":Vector2(9,6),"stairs":Vector2(7,5),"corridor":Vector2(16,5),"activity":Vector2(10,8),"group_therapy":Vector2(9,8),"quiet":Vector2(6,5),"bathroom":Vector2(8,7),"double_ward":Vector2(8,6),"workshop":Vector2(10,7)}
+const COUNTS={"ward":0,"lobby":6,"clinic":8,"pharmacy":7,"office":11,"stairs":1,"corridor":4,"activity":8,"group_therapy":6,"quiet":4,"bathroom":7,"double_ward":7,"workshop":8}
 var passed:int=0
 var failed:Array[String]=[]
 var routes_checked:int=0
@@ -14,7 +14,7 @@ func _initialize() -> void:
 func run() -> void:
  var layouts:Dictionary={}
  for room:String in EXPECTED:
-  for phase:int in ([3] if room=="stairs" else [2,3]):
+  for phase:int in ([3] if room in Map.UPPER_ROOMS else [2,3]):
    var layout=Institution.new(room,phase)
    layouts["%s:%d"%[room,phase]]=layout
    verify_room(layout)
@@ -40,7 +40,7 @@ func verify_room(layout) -> void:
  var label:String="%s L%d"%[layout.room_id,layout.phase_level]
  check(layout.geometry_version==2 and layout.world_size().is_equal_approx(EXPECTED[layout.room_id]),label+" actual configured metre dimensions")
  check(is_equal_approx(layout.body_radius,0.21),label+" adult body radius is 0.21m")
- var expected:int=COUNTS[layout.room_id] if layout.phase_level==2 or layout.room_id=="stairs" else 0
+ var expected:int=COUNTS[layout.room_id] if layout.phase_level==2 or layout.room_id in Map.UPPER_ROOMS else 0
  check(layout.candidate_count()==expected,label+" preserves source search count")
  check(layout.furniture.size()==(8 if layout.room_id=="ward" else COUNTS[layout.room_id]),label+" keeps furniture indices independent of decor")
  check(layout.get_anchor("spawn").is_finite(),label+" spawn configured")
@@ -58,6 +58,12 @@ func verify_room(layout) -> void:
   check(Rect2(Vector2.ZERO,layout.world_size()).encloses(item.rect),label+" decor inside net room "+str(item.id))
   if item.has("approach_m"):targets["decor:"+str(item.id)]=item.at
  for name:String in layout.config.anchors:targets["anchor:"+name]=layout.get_anchor(name)
+ for name:String in layout.config.get("object_anchors",{}):
+  var descriptor:Dictionary=layout.config.object_anchors[name];var object_at:Vector2=layout.get_object_anchor(name)
+  var support_index:int=int(str(descriptor.support).get_slice(":",1))
+  check(layout.furniture[support_index].rect.has_point(object_at) and not layout.walkable(object_at),label+" object is on its real support, never a walkable stand: "+name)
+  for stand:String in descriptor.contact_anchors:
+   check(layout.get_anchor(stand).distance_to(object_at)<=float(descriptor.reach_m),label+" separate legal contact reaches supported object: "+stand)
  var destinations:Array=[]
  for portal:Dictionary in layout.portals:
   destinations.append(str(portal.toward))

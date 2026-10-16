@@ -47,6 +47,7 @@ func state() -> Dictionary:
 func timing(key:String) -> float:return float(config.presentation_timing[key])
 func xy(point:Vector2) -> Array:return [point.x,point.y]
 func point(value:Array) -> Vector2:return Vector2(float(value[0]),float(value[1]))
+func corridor_rule_point(key:String) -> Vector2:return owner.space_point("corridor",key,point(config.rules[key]))
 
 func stage(event:Dictionary,phase:String) -> void:
  event.phase=phase;event.elapsed=0.0
@@ -234,8 +235,8 @@ func advance_work(delta:float) -> void:
  if owner.near("labor_patient",1.2) and not owner.app.has_key() and owner.app.rules.control_left<=0 and not owner.app.rules.body_busy():
   if local_say("LABOR",["labor_patient"]):return
  if event.phase in ["done","waiting_materials"]:return
- var target:Vector2=target_point("workshop",int(config.workshop.table_index))
- if event.phase in ["take_paper","take_label"]:target=target_point("workshop",int(config.workshop.material_rack_index))
+ var target:Vector2=owner.space_point("workshop","worker_table",target_point("workshop",int(config.workshop.table_index)))
+ if event.phase in ["take_paper","take_label"]:target=owner.space_point("workshop","worker_rack",target_point("workshop",int(config.workshop.material_rack_index)))
  if not owner.move("labor_patient",target,delta):return
  match str(event.phase):
   "take_paper":
@@ -360,7 +361,7 @@ func advance_therapy(delta:float) -> void:
     owner.claim("minutes_written","asylum_minutes_written",{"retraction_spoken":event.retraction_spoken})
     stage(event,"stand_up")
   "stand_up":
-   if owner.move("speaker",Vector2(2.8,0.9),delta):
+   if owner.move("speaker",owner.space_point("group_therapy","speaker_release",Vector2(2.8,0.9)),delta):
     event.seat_required=false;stage(event,"done")
     owner.claim("speaker_released","asylum_speaker_left_seat")
     if event.heard_original and event.saw_deletion and owner.near("therapist",2.4):
@@ -433,7 +434,7 @@ func advance_transfer(delta:float) -> void:
     owner.observe("asylum_transport_alive_seen","实际看见第三关推床患者在床单下伸手抓床沿；此人仍活着，不套用第二关轮椅患者身份。")
     local_say("TRANSFER_ALIVE",["transport_patient"])
  elif event.phase=="park":
-  var at:Vector2=Vector2(3.0,2.1)
+  var at:Vector2=owner.space_point("quiet","transport_bed_park",Vector2(3.0,2.1))
   if not pair_move(at,delta):return
   if elapsed(event,delta,timing("park_bed")):
    event.brake=true;event.delivered=true;stage(event,"done")
@@ -481,8 +482,8 @@ func advance_transfer_station(delta:float) -> void:
  if str(owner.actor("porter").room)!="corridor" or str(owner.actor("transport_patient").room)!="corridor":finish_transfer_station("pair_left_station");return
  if float(event.station_elapsed)>timing("optional_station_detour_limit"):finish_transfer_station("detour_timeout");return
  if event.phase=="station_route":
-  var bed_ready:bool=pair_move(point(config.rules.transfer_station_bed),delta)
-  var nurse_ready:bool=bed_move("head_nurse",point(config.rules.transfer_station_nurse),delta,["head_nurse"])
+  var bed_ready:bool=pair_move(corridor_rule_point("transfer_station_bed"),delta)
+  var nurse_ready:bool=bed_move("head_nurse",corridor_rule_point("transfer_station_nurse"),delta,["head_nurse"])
   if bed_ready and nurse_ready and transfer_station_contact():
    var resume:String=str(event.get("station_resume_phase","station_handoff"))
    event.erase("station_resume_phase");stage(event,resume)
@@ -570,6 +571,15 @@ func bed_move(id:String,to:Vector2,delta:float,exempt:Array=["porter","transport
  var amount:float=float(owner.config.test_parameters.walk_speed)*delta
  var proposed:Dictionary=floor_layout.move_path(from,route,amount)
  if blocked_bed_step(from,proposed.position,obstacles):
+  if floor_layout.geometry_version>=2:
+   var bodies:Array=[]
+   for obstacle in obstacles:bodies.append({"pos":obstacle,"radius":.42})
+   route=floor_layout.path_around_bodies(from,to,bodies)
+   if route.is_empty():return false
+   proposed=floor_layout.move_path(from,route,amount)
+   if blocked_bed_step(from,proposed.position,obstacles):return false
+   owner.actor(id).route=Array(route).map(func(p):return xy(p))
+   return owner.move(id,to,delta)
   # Temporarily mark occupied grid cells for this route computation only.
   # Restore every previous cell immediately; the room's furniture, graph and
   # other actors' paths are not changed, and no actor is teleported aside.
@@ -600,9 +610,9 @@ func pair_travel(to:String,delta:float) -> bool:
  var next:String=owner.app.session.next_room(room,to)
  if next.is_empty() or next in ["stairs","lobby"]:return false
  if owner.isolation!=null and not owner.isolation.can_exit(room,next):return false
- var doorway:Vector2=owner.app.door_point_for(room,next)
+ var doorway:Vector2=owner.portal_for(room,next).threshold
  if not pair_move(doorway,delta):return false
- var arrival:Vector2=owner.app.door_point_for(next,room)
+ var arrival:Vector2=owner.portal_for(next,room).landing
  for id in ["porter","transport_patient"]:
   owner.actor(id).room=next;owner.actor(id).pos=xy(arrival);owner.actor(id).route=[]
  owner.claim("bed_room:"+next,"asylum_bed_crossed_door",{"from":room,"to":next})
@@ -719,10 +729,10 @@ func advance_chief_internal(delta:float) -> void:
   stage(event,"return_station");local_say("CHIEF_INTERNAL",["head_nurse"])
   return
  if event.phase=="return_station":
-  if bed_move("head_nurse",point(config.rules.chief_station_side),delta,["head_nurse"]):stage(event,"write")
+  if bed_move("head_nurse",corridor_rule_point("chief_station_side"),delta,["head_nurse"]):stage(event,"write")
  elif event.phase=="write":
   if str(owner.actor("head_nurse").room)!="corridor":return
-  if not bed_move("head_nurse",point(config.rules.chief_station_side),delta,["head_nurse"]):return
+  if not bed_move("head_nurse",corridor_rule_point("chief_station_side"),delta,["head_nurse"]):return
   if not elapsed(event,delta,timing("report_write")):return
   event.report_id="hero-internal-report:%d"%owner.app.rules.actual_attempt
   var report:Dictionary={"id":event.report_id,"event":"hero_internal_search","source":"chief_internal_witness","target":"hero","attempt":owner.app.rules.actual_attempt,"written":true,"received":true,"permit_given":false,"ordinary_taken":false,"ordinary_outcome":"","isolation_order":"","isolation_signed":false,"isolation_taken":false,"last_room":event.last_room,"last_pos":event.last_pos.duplicate(),"station_pos":xy(target_point("corridor",0)),"head_nurse_witnessed":true}
@@ -731,7 +741,7 @@ func advance_chief_internal(delta:float) -> void:
   owner.claim("chief_internal_report_written","asylum_report_written",{"report":report.id,"target":"hero","actual_search":true})
   stage(event,"sign")
  elif event.phase=="sign":
-  if str(owner.actor("head_nurse").room)!="corridor" or not bed_move("head_nurse",point(config.rules.chief_station_side),delta,["head_nurse"]):return
+  if str(owner.actor("head_nurse").room)!="corridor" or not bed_move("head_nurse",corridor_rule_point("chief_station_side"),delta,["head_nurse"]):return
   if not elapsed(event,delta,timing("isolation_sign")):return
   var report:Dictionary=report_for_id(str(event.report_id))
   if report.is_empty():return
@@ -891,12 +901,12 @@ func advance_ordinary_report(delta:float) -> void:
    job.drag_elapsed=float(job.get("drag_elapsed",0))+delta
    if str(owner.data.holder)!="ordinary_orderly" or str(owner.actor("ordinary_orderly").room)!=owner.app.room_id:finish_ordinary("cancelled");return
    if float(job.drag_elapsed)>=float(config.rules.ordinary_hero_drag_max):finish_ordinary("timeout");return
-   if hero_pair_move(point(config.rules.station_side),delta):finish_ordinary("delivered")
+   if hero_pair_move(corridor_rule_point("station_side"),delta):finish_ordinary("delivered")
    return
   if job.full_witness and (not hero_sees("ordinary_orderly",2.4) or not hero_sees(target,2.4)):job.full_witness=false
   if npc_pair_travel("ordinary_orderly",target,"quiet",delta):stage(job,"park")
  elif job.phase=="park":
-  if npc_pair_move("ordinary_orderly",target,Vector2(2.8,1.6),delta):
+  if npc_pair_move("ordinary_orderly",target,owner.space_point("quiet","ordinary_patient_stop",Vector2(2.8,1.6)),delta):
    var witnessed:bool=job.full_witness
    finish_ordinary("delivered")
    if witnessed and hero_sees(target,2.4):local_say("POSTOP_WITNESS",[target])
@@ -930,8 +940,8 @@ func npc_pair_travel(staff:String,target:String,to:String,delta:float) -> bool:
  var next:String=owner.app.session.next_room(room,to)
  if next.is_empty() or next=="cortex_exit":return false
  if owner.isolation!=null and not owner.isolation.can_exit(room,next):return false
- if not npc_pair_move(staff,target,owner.app.door_point_for(room,next),delta):return false
- var arrival:Vector2=owner.app.door_point_for(next,room)
+ if not npc_pair_move(staff,target,owner.portal_for(room,next).threshold,delta):return false
+ var arrival:Vector2=owner.portal_for(next,room).landing
  for id in [staff,target]:
   owner.actor(id).room=next;owner.actor(id).pos=xy(arrival);owner.actor(id).route=[]
  return next==to
@@ -948,7 +958,7 @@ func finish_ordinary(outcome:String) -> void:
   if str(owner.data.get("holder",""))=="ordinary_orderly":owner.data.holder="";owner.app.rules.gripped=false;owner.data.regrab_elapsed=0.0
   if owner.data.get("body",{}).get("kind","")=="ward_ordinary_hero_drag":owner.clear_body()
   if job.holding:
-   var retreat:Vector2=point(config.rules.station_side)+Vector2(0.55,0)
+   var retreat:Vector2=corridor_rule_point("station_side")+Vector2(0.55,0)
    if owner.layout_for(str(owner.actor("ordinary_orderly").room)).walkable(retreat):job.retreat_pos=xy(retreat);job.retreat_room=str(owner.actor("ordinary_orderly").room)
  job.holding=false;stage(job,"idle");job.report_id="";job.target=""
  owner.data.staff_targets.erase("ordinary_orderly")

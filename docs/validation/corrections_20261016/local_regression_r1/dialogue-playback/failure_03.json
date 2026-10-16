@@ -1,0 +1,121 @@
+{
+  "automatic": true,
+  "background_frozen": false,
+  "closing_left": 0.0,
+  "dialogue": [
+    {
+      "_display_duration": 2.2,
+      "_display_elapsed": 6.633267,
+      "_display_elapsed_usec": 6633267,
+      "_display_token": 5.0,
+      "_voice_started": true,
+      "speaker": "测试角色",
+      "text": "嗯。",
+      "voice_id": "TEST_DIALOGUE_VOICE"
+    }
+  ],
+  "failed": "automatic mode advances after actual voice playback finishes",
+  "manual_pause": false,
+  "playback": {
+    "playing": [
+      {
+        "channel": "world",
+        "id": "TEST_DIALOGUE_ACTION",
+        "position": 3.63392281532288
+      },
+      {
+        "channel": "ambience",
+        "id": "TEST_DIALOGUE_AMBIENCE",
+        "position": 3.63392281532288
+      },
+      {
+        "channel": "music",
+        "id": "TEST_DIALOGUE_MUSIC",
+        "position": 3.63392281532288
+      },
+      {
+        "channel": "voice",
+        "id": "TEST_DIALOGUE_VOICE",
+        "position": 1.74730157852173
+      }
+    ],
+    "receipts": {
+      "TEST_DIALOGUE_ACTION:test_action": true,
+      "TEST_DIALOGUE_AMBIENCE:test_ambience": true,
+      "TEST_DIALOGUE_MUSIC:test_music": true,
+      "TEST_DIALOGUE_VOICE:dialogue:5": true
+    }
+  },
+  "players": {
+    "ambience": [
+      {
+        "cue": "TEST_DIALOGUE_AMBIENCE",
+        "has_playback": true,
+        "paused": false,
+        "playing": true,
+        "position": 3.63392281532288
+      }
+    ],
+    "music": [
+      {
+        "cue": "TEST_DIALOGUE_MUSIC",
+        "has_playback": true,
+        "paused": false,
+        "playing": true,
+        "position": 3.63392281532288
+      }
+    ],
+    "ui": [
+      {
+        "cue": "SFX_COLD",
+        "has_playback": false,
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ],
+    "voice": [
+      {
+        "cue": "TEST_DIALOGUE_VOICE",
+        "has_playback": true,
+        "paused": false,
+        "playing": true,
+        "position": 1.74730157852173
+      }
+    ],
+    "world": [
+      {
+        "cue": "TEST_DIALOGUE_ACTION",
+        "has_playback": true,
+        "paused": false,
+        "playing": true,
+        "position": 3.63392281532288
+      },
+      {
+        "cue": "",
+        "has_playback": false,
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      },
+      {
+        "cue": "",
+        "has_playback": false,
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      },
+      {
+        "cue": "",
+        "has_playback": false,
+        "paused": false,
+        "playing": false,
+        "position": 0.0
+      }
+    ]
+  },
+  "starts": [],
+  "voice_frozen": false,
+  "world_frozen": true,
+  "world_time": 0.0
+}

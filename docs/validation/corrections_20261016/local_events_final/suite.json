@@ -1,0 +1,14 @@
+[
+  {
+    "case": "institution-events",
+    "returncode": 1,
+    "seconds": 9.94,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 39,
+    "failed": [
+      "metric mouse request really approaches and opens the exterior shutter at contact",
+      "same actual exterior marker closes the shutter with normal process"
+    ]
+  }
+]

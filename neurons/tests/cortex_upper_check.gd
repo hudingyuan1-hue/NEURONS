@@ -176,9 +176,13 @@ func _ready() -> void:
  check(app.rules.hp==100 and app.rules.search_attempts==count and app.rules.neurons==money,"ordinary avoidance gives no damage, search expense or reward")
  await capture("05_rhythm_actual_position")
 
- fixture4("switch");app.session.data.exploration_boundary=false;app.session.data.targets=[]
+ # Isolate the initial visible pointing, before releasing ordinary walking.
+ # Otherwise empty public targets trigger supplemental travel and turn the
+ # hero away before the genuine pointing completes (a valid missed branch).
+ fixture4("switch");app.session.data.targets=[]
  app.hero_pos=Vector2(2.8,2.5);actor4("reverse",Vector2(3.3,2.5));app.hero_facing=Vector2.RIGHT
  check(until3(func():return upper().state().switch.phase=="route",3),"seen pointing creates only existing three-leg loop")
+ app.session.data.exploration_boundary=false
  upper().on_skill({"id":"DRYMOUTH","success":true})
  check(upper().state().switch.phase=="route","dry mouth without an actual handover does not cancel existing walking guidance")
  actual_route=[app.room_id]

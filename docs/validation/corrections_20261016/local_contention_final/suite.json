@@ -1,0 +1,31 @@
+[
+  {
+    "case": "cortex-navigation",
+    "returncode": 0,
+    "seconds": 4.2,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 29,
+    "failed": []
+  },
+  {
+    "case": "fresh-flow",
+    "returncode": 0,
+    "seconds": 33.68,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 3,
+    "failed": []
+  },
+  {
+    "case": "natural-hospital",
+    "returncode": 1,
+    "seconds": 111.0,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 2,
+    "failed": [
+      "No real first-attempt endpoint before the finite 12000-frame limit"
+    ]
+  }
+]

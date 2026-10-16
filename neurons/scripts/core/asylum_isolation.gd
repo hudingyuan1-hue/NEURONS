@@ -23,7 +23,8 @@ func timing(key:String) -> float:return float(config.presentation_timing[key])
 func parameter(key:String) -> float:return float(config.parameters[key])
 func xy(at:Vector2) -> Array:return [at.x,at.y]
 func point(value:Array) -> Vector2:return Vector2(float(value[0]),float(value[1]))
-func observation_point() -> Vector2:return point(config.parameters.observation_pos)
+func observation_point() -> Vector2:return owner.space_point("quiet","isolation_observation",point(config.parameters.observation_pos))
+func staff_side() -> Vector2:return owner.space_point("corridor","isolation_staff_side",point(config.parameters.staff_side_pos))
 func stage(phase:String) -> void:state().phase=phase;state().elapsed=0.0;state().waiting=""
 func order_id() -> String:return str(state().order.get("id",""))
 func hero_target() -> bool:return str(state().target)=="hero"
@@ -60,7 +61,7 @@ func tick(delta:float) -> void:
  if value.phase in ["clearing","closing","observing"] and target_room()!="quiet":abort("target_left");return
  match str(value.phase):
   "retreat":
-   if str(owner.actor(STAFF).room)=="corridor" and owner.move(STAFF,point(config.parameters.staff_side_pos),delta):stage("idle")
+   if str(owner.actor(STAFF).room)=="corridor" and owner.move(STAFF,staff_side(),delta):stage("idle")
   "fetch":advance_fetch(delta)
   "receive":advance_receive(delta)
   "locate":advance_locate(delta)
@@ -166,7 +167,7 @@ func npc_held_elsewhere() -> bool:
  return false
 
 func room_has_space() -> bool:
- var layout=owner.layout_for("quiet");var at:Vector2=observation_point();var door:Vector2=Map.doorway("quiet","corridor")
+ var layout=owner.layout_for("quiet");var at:Vector2=observation_point();var door:Vector2=owner.portal_for("quiet","corridor").threshold
  return layout.walkable(at) and layout.walkable(door) and not layout.path(door,at).is_empty() and not layout.path(at,door).is_empty()
 
 func non_target_inside() -> bool:
@@ -195,9 +196,9 @@ func room_ready(delta:float) -> bool:
   if str(id)=="porter" and str(value.target)!="transport_patient" and owner.present("transport_patient") and str(owner.actor("transport_patient").room)=="quiet":continue
   # A bystander can leave by the actual existing door; the protagonist is
   # never commanded or teleported out to make an NPC isolation possible.
-  var door:Vector2=Map.doorway("quiet","corridor")
+  var door:Vector2=owner.portal_for("quiet","corridor").threshold
   if owner.move(str(id),door,delta):
-   a.room="corridor";a.pos=xy(Map.doorway("corridor","quiet"));a.route=[]
+   a.room="corridor";a.pos=xy(owner.portal_for("corridor","quiet").landing);a.route=[]
  if waiting:
   if value.waiting.is_empty():value.waiting="等待非目标人员沿门口退出"
   return false
@@ -221,12 +222,12 @@ func pair_travel(to:String,delta:float) -> bool:
  if room==to:return true
  var next:String=Map.next_room(room,to)
  if next.is_empty() or not next in UPPER:return false
- var door:Vector2=Map.doorway(room,next)
+ var door:Vector2=owner.portal_for(room,next).threshold
  if owner.layout_for(room).path(owner.position(STAFF),door).is_empty() and owner.position(STAFF).distance_to(door)>0.05:
   if hero_target():abort("no_drag_path")
   return false
  if not pair_move(door,delta):return false
- var entry:Vector2=Map.doorway(next,room)
+ var entry:Vector2=owner.portal_for(next,room).landing
  owner.actor(STAFF).room=next;owner.actor(STAFF).pos=xy(entry);owner.actor(STAFF).route=[]
  if hero_target():
   var body:Dictionary=owner.data.body.duplicate(true)
@@ -251,15 +252,15 @@ func advance_drag(delta:float) -> void:
 func move_staff_to_outer_door(delta:float) -> bool:
  var room:String=str(owner.actor(STAFF).room)
  if room=="quiet":
-  if not owner.move(STAFF,Map.doorway("quiet","corridor"),delta):return false
-  owner.actor(STAFF).room="corridor";owner.actor(STAFF).pos=xy(Map.doorway("corridor","quiet"));owner.actor(STAFF).route=[]
+  if not owner.move(STAFF,owner.portal_for("quiet","corridor").threshold,delta):return false
+  owner.actor(STAFF).room="corridor";owner.actor(STAFF).pos=xy(owner.portal_for("corridor","quiet").landing);owner.actor(STAFF).route=[]
   return true
  if room!="corridor":return false
- return owner.move(STAFF,Map.doorway("corridor","quiet"),delta)
+ return owner.move(STAFF,owner.portal_for("corridor","quiet").at,delta)
 
 func staff_observing_at_door() -> bool:
  if not owner.present(STAFF) or str(owner.actor(STAFF).room)!="corridor":return false
- var door:Vector2=Map.doorway("corridor","quiet")
+ var door:Vector2=owner.portal_for("corridor","quiet").at
  return owner.position(STAFF).distance_to(door)<=parameter("door_observe_distance") and owner.layout_for("corridor").clear_segment(owner.position(STAFF),door)
 
 func advance_clearing(delta:float) -> void:
@@ -373,5 +374,5 @@ func markers() -> Array:
  var label:String="隔离处置 · "+str(value.phase)
  if not str(value.waiting).is_empty():label=str(value.waiting)
  if value.phase=="observing":label="隔离门已关 · 剩余 %.1f 秒"%maxf(0,float(config.rules.closed_observation)-float(value.closed_elapsed))
- return [{"id":"asylum_isolation_door","room":"quiet","pos":xy(Map.doorway("quiet","corridor")),"kind":"isolation_door","label":label,"closed":bool(value.door_closed),"progress":float(value.door_progress),"target":str(value.target)},
-  {"id":"asylum_isolation_outer_door","room":"corridor","pos":xy(Map.doorway("corridor","quiet")),"kind":"isolation_door","label":label,"closed":bool(value.door_closed),"progress":float(value.door_progress),"target":str(value.target)}]
+ return [{"id":"asylum_isolation_door","room":"quiet","pos":xy(owner.portal_for("quiet","corridor").at),"kind":"isolation_door","label":label,"closed":bool(value.door_closed),"progress":float(value.door_progress),"target":str(value.target)},
+  {"id":"asylum_isolation_outer_door","room":"corridor","pos":xy(owner.portal_for("corridor","quiet").at),"kind":"isolation_door","label":label,"closed":bool(value.door_closed),"progress":float(value.door_progress),"target":str(value.target)}]

@@ -1,0 +1,53 @@
+{
+  "carry": {
+    "bag_departed": true,
+    "bag_id": "hospital_relic_container",
+    "exit_pos": [
+      1.25685775279999,
+      0.213715448975563
+    ],
+    "exit_room": "lobby",
+    "items": [
+      "family_photo",
+      "patient_shoe"
+    ],
+    "packed_receipts": {
+      "family_photo": "hospital:1:relic_packed:family_photo",
+      "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+    },
+    "ready": true,
+    "source_attempt": 1,
+    "source_owners": {
+      "family_photo": "wheelchair_footplate",
+      "patient_shoe": "lobby_floor"
+    },
+    "transport_receipt": "hospital:1:patient_transport",
+    "version": 1
+  },
+  "phase": "approach",
+  "source": {
+    "bag_departed": true,
+    "bag_id": "hospital_relic_container",
+    "exit_pos": [
+      1.25685775279999,
+      0.213715448975563
+    ],
+    "exit_room": "lobby",
+    "items": [
+      "family_photo",
+      "patient_shoe"
+    ],
+    "packed_receipts": {
+      "family_photo": "hospital:1:relic_packed:family_photo",
+      "patient_shoe": "hospital:1:relic_packed:patient_shoe"
+    },
+    "ready": true,
+    "source_attempt": 1,
+    "source_owners": {
+      "family_photo": "wheelchair_footplate",
+      "patient_shoe": "lobby_floor"
+    },
+    "transport_receipt": "hospital:1:patient_transport",
+    "version": 1
+  }
+}

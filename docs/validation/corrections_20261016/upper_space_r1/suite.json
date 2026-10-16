@@ -1,0 +1,13 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 1,
+    "seconds": 3.77,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 22,
+    "failed": [
+      "real autonomous walk reaches corridor:0"
+    ]
+  }
+]

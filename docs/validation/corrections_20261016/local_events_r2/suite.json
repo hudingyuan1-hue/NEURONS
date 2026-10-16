@@ -1,0 +1,22 @@
+[
+  {
+    "case": "institution-events",
+    "returncode": 1,
+    "seconds": 6.47,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 34,
+    "failed": [
+      "v1 real chapter hook passes unchanged source container once"
+    ]
+  },
+  {
+    "case": "fresh-flow",
+    "returncode": 0,
+    "seconds": 6.76,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 3,
+    "failed": []
+  }
+]

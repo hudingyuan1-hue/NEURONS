@@ -1,0 +1,40 @@
+[
+  {
+    "case": "cortex-navigation",
+    "returncode": 0,
+    "seconds": 5.37,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 25,
+    "failed": []
+  },
+  {
+    "case": "rest-input",
+    "returncode": 0,
+    "seconds": 4.1,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 10,
+    "failed": []
+  },
+  {
+    "case": "family-sequence",
+    "returncode": 0,
+    "seconds": 6.25,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 54,
+    "failed": []
+  },
+  {
+    "case": "natural-hospital",
+    "returncode": 1,
+    "seconds": 102.96,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 2,
+    "failed": [
+      "No meaningful action, movement, contact, timer or dialogue progress for 900 process frames"
+    ]
+  }
+]

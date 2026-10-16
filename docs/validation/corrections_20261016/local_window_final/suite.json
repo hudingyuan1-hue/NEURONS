@@ -1,0 +1,20 @@
+[
+  {
+    "case": "institution-events",
+    "returncode": 0,
+    "seconds": 8.33,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 44,
+    "failed": []
+  },
+  {
+    "case": "institution-space",
+    "returncode": 0,
+    "seconds": 9.04,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 140,
+    "failed": []
+  }
+]

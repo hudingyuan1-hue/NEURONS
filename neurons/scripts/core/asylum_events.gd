@@ -39,7 +39,7 @@ func start_attempt(carry:Dictionary={}) -> void:
  for id in config.rooms:
   var room:String=str(config.rooms[id])
   var idle:Vector2=Vector2(4.4,0.35)
-  if int(app.session.data.get("institution_geometry_version",1))>=2 and room in ["ward","lobby","clinic","pharmacy","office"]:
+  if app.metric_institution_room(room):
    idle=portal_for(room,str(Map.doors(room)[0])).landing
   data.actors[id]={"room":room,"pos":xy(idle),"route":[],"phase":"absent","elapsed":0.0,"left":0.0}
  for group in config.groups:data.groups[group]={"checks":0,"pending":false,"drawn":false}
@@ -70,6 +70,12 @@ func portal_for(room:String,toward:String) -> Dictionary:
  if app.has_method("portal_for_room"):return app.portal_for_room(room,toward)
  var at:Vector2=Map.doorway(room,toward)
  return {"at":at,"threshold":at,"landing":at,"inward":Vector2.DOWN}
+
+func space_point(room:String,id:String,legacy:Vector2) -> Vector2:
+ if not app.metric_institution_room(room):return legacy
+ var at:Vector2=layout_for(room).get_anchor(id)
+ assert(at.is_finite(),"Missing metric event anchor: %s/%s"%[room,id])
+ return at
 func near(id:String,distance:float=1.2) -> bool:
  return present(id) and str(actor(id).room)==app.room_id and position(id).distance_to(app.hero_pos)<=distance and app.layout.clear_segment(position(id),app.hero_pos)
 func visible(id:String,at:Vector2,room:String,distance:float=2.0) -> bool:
@@ -227,6 +233,7 @@ func tick(delta:float) -> void:
  if app.rules.hp<=0:release_all();return
  if data.is_empty():start_attempt()
  data.clock+=delta;spawn_pending()
+ advance_metric_stands(delta)
  advance_pharmacy_stand(delta)
  data.regrab_elapsed=0.0 if app.rules.body_busy() or app.rules.gripped else float(data.regrab_elapsed)+delta
  var medicine_before:float=float(data.medicine_stop)
@@ -285,6 +292,17 @@ func advance_pharmacy_stand(delta:float) -> void:
  var arrived:bool=ward_events.bed_move("pharmacist",at,delta,["pharmacist"]) if ward_events!=null else move("pharmacist",at,delta)
  if arrived:actor("pharmacist").work_stand_done=true
 
+func advance_metric_stands(delta:float) -> void:
+ for id in ["head_nurse","postop_patient","corner_patient"]:
+  if not present(id) or actor(id).get("stand_done",false):continue
+  var room:String=str(actor(id).room)
+  if room not in ["corridor","activity","double_ward"] or not app.metric_institution_room(room):continue
+  if data.get("staff_targets",{}).has(id) or data.body.get("actor","")==id or data.holder==id:continue
+  if id=="postop_patient" and ward_events.state().postop.phase!="idle":continue
+  if id=="corner_patient" and trace_events.state().corner.phase!="idle":continue
+  var at:Vector2=space_point(room,id+"_wait",position(id))
+  if ward_events.bed_move(id,at,delta,[id]):actor(id).stand_done=true
+
 func ward_window_state() -> Dictionary:
  if not data.has("ward_window_state"):
   data.ward_window_state={"open":false,"serial":0,"action":{},"last_cancel":""}
@@ -292,7 +310,9 @@ func ward_window_state() -> Dictionary:
 
 func ward_window_position(room:String="") -> Vector2:
  var side:String=app.room_id if room.is_empty() else room
- return portal_for("lobby","ward").at if side=="lobby" else portal_for("ward","lobby").at if side=="ward" else Vector2.INF
+ if side not in ["lobby","ward"]:return Vector2.INF
+ var portal:Dictionary=portal_for(side,"ward" if side=="lobby" else "lobby")
+ return portal.threshold if app.metric_institution_room(side) else portal.at
 
 func ward_window_body_free(controlled:bool) -> bool:
  var rules=app.rules

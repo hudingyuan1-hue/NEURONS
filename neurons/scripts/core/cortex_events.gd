@@ -84,6 +84,7 @@ func point(room:String,index:int) -> Vector2:
 func beside(room:String,at:Vector2,prefer:Vector2=Vector2(0.5,0)) -> Vector2:
  var layout=layout_for(room)
  for offset in [prefer,-prefer,Vector2(0,0.5),Vector2(0,-0.5),Vector2(0.5,0.5),Vector2(-0.5,0.5)]:
+  if room==app.room_id and (at+offset).distance_to(app.hero_pos)<.32:continue
   if layout.walkable(at+offset) and layout.clear_segment(at,at+offset):return at+offset
  return at
 
@@ -96,6 +97,14 @@ func move(id:String,to:Vector2,delta:float) -> bool:
  if path.is_empty() or path[-1].distance_to(to)>0.08:path=floor_layout.path(position(id),to)
  var moved:Dictionary=floor_layout.move_path(position(id),path,float(config.presentation.walk_speed)*delta)
  var next:Vector2=moved.position
+ var bodies:Array=[]
+ if str(a.room)==app.room_id:bodies.append({"pos":app.hero_pos,"radius":.32})
+ for other in data.actors:
+  if other!=id and present(str(other)) and str(actor(str(other)).room)==str(a.room):bodies.append({"pos":position(str(other)),"radius":.3})
+ if not floor_layout.segment_avoids_bodies(position(id),next,bodies):
+  path=floor_layout.path_around_bodies(position(id),to,bodies)
+  if path.is_empty():return false
+  moved=floor_layout.move_path(position(id),path,float(config.presentation.walk_speed)*delta);next=moved.position
  # Actors cannot walk through the protagonist or one another. Navigation
  # may wait for a genuine obstruction; no remote snap to the contact point.
  if str(a.room)==app.room_id and next.distance_to(app.hero_pos)<0.32 and position(id).distance_to(app.hero_pos)>=0.32:return false

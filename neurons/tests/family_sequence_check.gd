@@ -103,7 +103,7 @@ func _ready() -> void:
  check(said("妈妈给你熬了粥 喝了休息吧"),"post-handoff original porridge line is retained")
  check(until(func():return app.action_phase=="resting" and app.family.data.mother.get("bed_line_shown",false)),"mother route reaches bed and lies down before good-child closing line")
  check(app.session.data.level==1 and not app.dialogue_queue.is_empty() and app.dialogue_queue[0].text=="乖孩子...","good-child original line precedes actual rest/unlock completion")
- check(app.hero_pos.distance_to(app.layout.BED_STOP)<0.035 and float(app.view.rest_pose().t)>0.99,"lying presentation attaches only after actual bed approach")
+ check(app.hero_pos.distance_to(app.layout.bed_position())<0.035 and float(app.view.rest_pose().t)>0.99,"lying presentation attaches only after actual bed approach")
  check(app.view.hero_body_rect().get_center().distance_to(app.layout.project(app.hero_pos))>30,"bed pose has matching separate body click region")
  await capture("02_bed_closing_line")
  check(until(func():return app.session.data.level==2),"rest completes and unlocks hospital after its original closing line")

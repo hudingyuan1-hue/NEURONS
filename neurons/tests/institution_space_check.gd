@@ -21,7 +21,7 @@ func reset2(room:String="lobby") -> void:
  app.hospital.data.clear();app.hospital.start_attempt()
  app.completed.clear();app.deferred_targets.clear();app.motion.clear()
  app.room_id="";app.enter_room(room)
- app.hero_pos=app.layout.get_anchor("hero_entry");app.hero_route=PackedVector2Array()
+ app.hero_pos=app.layout.get_anchor("spawn");app.hero_route=PackedVector2Array()
  app.paused_manual=true;app.menu.close_menu();clear_lines();app.closing_left=0
 
 func walk_door(toward:String) -> bool:
@@ -101,7 +101,7 @@ func _ready() -> void:
  check(Vector2i(app.rules.neurons,app.rules.plexus)==reward,"stair arrival never repeats first-unlock reward")
  await capture("03_actual_staircase")
  if not walk_door("corridor"):await finish_check();return
- check(app.layout.geometry_version==1,"unmigrated upper corridor remains explicitly legacy geometry")
+ check(app.layout.geometry_version==2,"new chapter uses the explicitly migrated upper corridor")
  if not walk_door("stairs"):await finish_check();return
  if not walk_door("lobby"):await finish_check();return
  if not walk_door("ward"):await finish_check();return
@@ -109,7 +109,7 @@ func _ready() -> void:
  var attempt:int=app.rules.actual_attempt
  check(until(func():return app.rules.actual_attempt>attempt,2400),"low-SP asylum path physically reaches the designated bed and rests")
  check(app.room_id=="ward" and app.layout.geometry_version==2,"rest keeps proper new ward geometry")
- # Explicit old-schema coordinates continue untouched, then migrate at rest.
+ # Explicit old-schema coordinates and source transports stay v1 this chapter.
  reset2("ward")
  var saved:Dictionary=app.snapshot_data()
  saved.schema=2;saved.session.erase("institution_geometry_version")
@@ -118,6 +118,6 @@ func _ready() -> void:
  check(app.restore_snapshot(saved) and app.layout.geometry_version==1 and app.hero_pos==Vector2(2.55,1.2),"old institutional save retains original geometry and in-flight resting position")
  attempt=app.rules.actual_attempt
  check(until(func():return app.rules.actual_attempt>attempt,100),"old saved rest completes through production clock")
- check(app.layout.geometry_version==2 and app.layout.walkable(app.hero_pos),"new actual attempt adopts new ward at its bed anchor")
+ check(app.layout.geometry_version==1 and app.hospital.source_geometry_version()==1 and app.layout.walkable(app.hero_pos),"old chapter rest retains legacy geometry and hospital source provenance")
  await capture("04_legacy_after_actual_rest")
  await finish_check()

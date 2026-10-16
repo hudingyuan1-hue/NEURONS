@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "kind": "progress",
+  "updated": "2026-10-16",
+  "art": [
+    {
+      "id": "ART_CODE_UI",
+      "status": "B3功能分项通过，正式美术/全排列待验",
+      "file": "neurons/scripts/ui/campaign_menu.gd",
+      "notes": "B3真实CRT/鼠标读纸/袋/外侧观察窗；32目标接触与读纸反馈、原护士手持/台面容器，16.07秒连续无声操作已保存；新PCK43/0/EXE入口通过。代码占位不代表正式图像批准，无新增人工UI任务。",
+      "owner": "Codex"
+    },
+    {
+      "id": "ART_CODE_DERIVED",
+      "status": "B3无阻塞范围已实施，5项内容待核，后关继续",
+      "file": "neurons/scripts/core/neural_rules.gd",
+      "notes": "原照片/鞋实际装袋出场→正常跨关→护士实走收存，ready/两类接触中段跨真实重试与JSON续接；独立原纸/真正成品阅读、外侧观察窗。旧数字键/同源转抄已修。未知编号/摄影/签署/白板不造内容，B4按原计划继续。",
+      "owner": "Codex"
+    }
+  ],
+  "audio": [
+    {
+      "id": "AUD_CODE_UI",
+      "status": "开发链路已接，未听验",
+      "file": "neurons/data/audio_bindings.json",
+      "notes": "冷气等既有材质可走UI通道，世界暂停不误停UI声；正常退出异步Ogg清理已修，最终相关检查stderr空。只加载/播放状态验证，未主观听验。"
+    },
+    {
+      "id": "AUD_CODE_MOVE",
+      "status": "开发链路已接，未听验",
+      "file": "neurons/data/audio_bindings.json",
+      "notes": "现有衣料声复用食用准备；每次合法尝试独立音效ID，跨JSON与新尝试不吞重试提示。保留既有脚步材质，未主观听验。"
+    },
+    {
+      "id": "AUD_CODE_BODY",
+      "status": "开发链路已接，未听验",
+      "file": "neurons/data/audio_bindings.json",
+      "notes": "离线抓挠/腹部候选按事件接入；未听验。"
+    },
+    {
+      "id": "AUD_MUSIC_ROOM",
+      "status": "开发链路已接，未听验",
+      "file": "neurons/data/audio_bindings.json",
+      "notes": "用户本地MUS_MENU/ROOM转换开发副本已播放，保留母版；不循环，循环与情绪未听验。"
+    }
+  ]
+}

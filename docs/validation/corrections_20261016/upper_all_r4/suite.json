@@ -1,0 +1,19 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 0,
+    "seconds": 14.82,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 253,
+    "failed": []
+  },
+  {
+    "case": "test_institution_layout",
+    "returncode": 1,
+    "seconds": 4.85,
+    "stderr_bytes": 54,
+    "stderr": "FAIL: workshop L3 legal target anchor:product_surface",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\n{\"failed\":[\"workshop L3 legal target anchor:product_surface\"],\"passed\":3760,\"routes_checked\":1211,\"scope\":\"headless geometry only; actual play and visual acceptance remain separate\"}\n"
+  }
+]

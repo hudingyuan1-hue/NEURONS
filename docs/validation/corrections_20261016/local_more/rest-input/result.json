@@ -1,0 +1,18 @@
+{
+  "failures": [
+    "right-click actual lying body opens freezer before rest completes",
+    "menu freezes remaining rest and presentation instead of finishing unlock behind UI",
+    "load restores lying pose and freezer without premature rest completion",
+    "left-click lying body opens CRT at mapped body position",
+    "real GUT click interrupts unfinished rest and current persuasion",
+    "interrupt pays configured skill once and cannot award rest/unlock early",
+    "already-delivered porridge survives interruption; presentation offset never teleports logical position"
+  ],
+  "passes": [
+    "normal mother route reaches lying/body-caption phase",
+    "actual rendered bedroom dims only after lying down",
+    "lying body/menu writes actual JSON save"
+  ],
+  "rendered": true,
+  "scope": "fixed mother setup, actual lying-body viewport keys/buttons, normal paused world, JSON restore, actual GUT interruption; no full B1 acceptance"
+}

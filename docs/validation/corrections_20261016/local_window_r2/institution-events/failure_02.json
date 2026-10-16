@@ -1,0 +1,193 @@
+{
+  "actors": {},
+  "body": {},
+  "control_left": 0.0,
+  "control_ms": 6000,
+  "effects": {
+    "MEDICINE": 0.0
+  },
+  "failed": "same actual exterior marker closes the shutter with normal process",
+  "hero_action": "autonomy",
+  "hero_position": [
+    1.09999990463257,
+    3.65000009536743
+  ],
+  "hero_room": "lobby",
+  "hero_walkable": true,
+  "hospital": {
+    "actors": {
+      "archivist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "office",
+        "route": []
+      },
+      "assistant": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          2.40000009536743,
+          4.75
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "doctor": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          2.40000009536743,
+          4.75
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "guard": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "office",
+        "route": []
+      },
+      "guide": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "nurse": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.44999980926514,
+          1.25
+        ],
+        "room": "ward",
+        "route": []
+      },
+      "patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "pharmacist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          5.0
+        ],
+        "room": "pharmacy",
+        "route": []
+      },
+      "porter": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "wheelchair": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          1.25,
+          3.65000009536743
+        ],
+        "room": "lobby",
+        "route": []
+      }
+    },
+    "bag": "ward",
+    "bag_order": false,
+    "bandage": 0.0,
+    "batches": {},
+    "body": {},
+    "clock": 0.0,
+    "dispensed": false,
+    "exam_done": false,
+    "geometry_version": 2,
+    "groups": {
+      "clinic": {
+        "checks": 0,
+        "drawn": true,
+        "pending": false
+      },
+      "lobby": {
+        "checks": 0,
+        "drawn": true,
+        "pending": false
+      },
+      "nurse": {
+        "checks": 0,
+        "drawn": true,
+        "pending": false
+      },
+      "office": {
+        "checks": 0,
+        "drawn": true,
+        "pending": false
+      },
+      "patient": {
+        "checks": 0,
+        "drawn": true,
+        "pending": false
+      },
+      "pharmacist": {
+        "checks": 0,
+        "drawn": true,
+        "pending": false
+      }
+    },
+    "healed": false,
+    "holder": "",
+    "hospital_attempt": 1,
+    "known_pages": [],
+    "medicine_stop": 0.0,
+    "nurse_checked": false,
+    "prescribed": false,
+    "prescription_visit": "",
+    "receipts": {},
+    "refused": false,
+    "registered": false,
+    "regrab_elapsed": 0.8,
+    "room_left": {},
+    "sample": false,
+    "suspended_body": {},
+    "swallowed": false,
+    "transport": {},
+    "visit": ""
+  },
+  "hp": 100,
+  "medicine_stop": 0.0,
+  "sp": 100
+}

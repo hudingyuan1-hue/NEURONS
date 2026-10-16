@@ -49,6 +49,7 @@ func _ready() -> void:
   "--metric-bedroom-check":"metric_bedroom_check",
   "--institution-space-check":"institution_space_check",
   "--institution-events-check":"institution_events_check",
+  "--asylum-space-check":"asylum_space_check",
   "--fresh-flow-check":"fresh_flow_check",
   "--dialogue-playback-check":"dialogue_playback_check",
   "--key-discovery-check":"key_discovery_check",

@@ -15,6 +15,10 @@ func fixture3(room:String="stairs",events:bool=false) -> void:
  app.asylum.data={}
  app.rules=Neural.new();app.menu.rules=app.rules
  app.session=Session.new();app.session.data.unlocked=[1,2,3];app.session.new_attempt(3,app.rng)
+ # These historical finite fixtures use original positions. New metric
+ # rooms have their own real spatial driver; do not silently relabel v1 tests.
+ app.session.data.asylum_space_versions={}
+ app.session.data.institution_geometry_version=1
  app.rules.actual_attempt=1;app.rules.search_limit=14;app.rules.owners.key=app.session.data.key_owner
  app.home.enabled=false;app.family.enabled=false;app.hospital.enabled=false;app.asylum.enabled=events
  app.asylum.start_attempt()

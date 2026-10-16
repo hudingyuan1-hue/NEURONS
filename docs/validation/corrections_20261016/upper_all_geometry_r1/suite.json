@@ -1,0 +1,10 @@
+[
+  {
+    "case": "test_institution_layout",
+    "returncode": 0,
+    "seconds": 6.38,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\n{\"failed\":[],\"passed\":3751,\"routes_checked\":1208,\"scope\":\"headless geometry only; actual play and visual acceptance remain separate\"}\n"
+  }
+]

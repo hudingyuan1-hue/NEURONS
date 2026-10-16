@@ -1,0 +1,30 @@
+{
+  "baseline": "730bd37",
+  "files": [
+    {
+      "path": "01_全游戏提示词表单.html",
+      "sha256": "2e7612e82af98f531816b558309e54a1a22444c55c0ec1494e53eb2a1c4a5632",
+      "bytes": 3938399
+    },
+    {
+      "path": "01_音频需求表.html",
+      "sha256": "d03f1b2053131c1bddcaf4e24d7fed93df7c92cbad6d0608c0a0672c43000701",
+      "bytes": 2032661
+    },
+    {
+      "path": "data/art_form.json",
+      "sha256": "13e6cddc58d5de1eb695e32dad28a0280d15ba8b6da19d3efce6a34d908a1b46",
+      "bytes": 4555735
+    },
+    {
+      "path": "data/audio_form.json",
+      "sha256": "d5f91d2072c0e52bad62c5d561f5beee3975c47a8c1f64e948d4f864b5f6534f",
+      "bytes": 2413085
+    },
+    {
+      "path": "data/progress.json",
+      "sha256": "f77fa8fd69205e9c09773c2c5971e2856087dcc97ab3eb84f01c51580741bf58",
+      "bytes": 2249
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "case": "metric-bedroom",
+    "returncode": 0,
+    "seconds": 5.29,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 182,
+    "failed": []
+  },
+  {
+    "case": "institution-space",
+    "returncode": 1,
+    "seconds": 6.71,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 139,
+    "failed": [
+      "paid intervention cancels doorway crossing before room change"
+    ]
+  }
+]

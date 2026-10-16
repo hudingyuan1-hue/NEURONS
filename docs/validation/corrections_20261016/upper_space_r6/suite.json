@@ -1,0 +1,56 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 0,
+    "seconds": 10.41,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 81,
+    "failed": []
+  },
+  {
+    "case": "asylum-ward",
+    "returncode": 0,
+    "seconds": 21.3,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 145,
+    "failed": []
+  },
+  {
+    "case": "asylum-isolation",
+    "returncode": 0,
+    "seconds": 19.44,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 70,
+    "failed": []
+  },
+  {
+    "case": "asylum-nurse-duty",
+    "returncode": 0,
+    "seconds": 33.55,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 51,
+    "failed": []
+  },
+  {
+    "case": "asylum-trace",
+    "returncode": 0,
+    "seconds": 11.97,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 58,
+    "failed": []
+  },
+  {
+    "case": "asylum-combinations",
+    "returncode": 0,
+    "seconds": 24.42,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 85,
+    "failed": []
+  }
+]

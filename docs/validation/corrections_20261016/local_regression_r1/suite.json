@@ -1,0 +1,42 @@
+[
+  {
+    "case": "institution-space",
+    "returncode": 0,
+    "seconds": 9.11,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 140,
+    "failed": []
+  },
+  {
+    "case": "hidden-campaign",
+    "returncode": 0,
+    "seconds": 12.73,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 57,
+    "failed": []
+  },
+  {
+    "case": "key-discovery",
+    "returncode": 0,
+    "seconds": 3.88,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 64,
+    "failed": []
+  },
+  {
+    "case": "dialogue-playback",
+    "returncode": 1,
+    "seconds": 6.45,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 20,
+    "failed": [
+      "dialogue freezes gameplay but lets already playing scene sound continue",
+      "already playing music and ambience continue across dialogue",
+      "automatic mode advances after actual voice playback finishes"
+    ]
+  }
+]

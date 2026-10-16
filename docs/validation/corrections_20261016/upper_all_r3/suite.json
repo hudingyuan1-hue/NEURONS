@@ -1,0 +1,21 @@
+[
+  {
+    "case": "asylum-space",
+    "returncode": 1,
+    "seconds": 14.37,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 252,
+    "failed": [
+      "same-chapter rest preserves precisely prior two-room revision, never force-upgrading five in-flight spaces"
+    ]
+  },
+  {
+    "case": "test_institution_layout",
+    "returncode": 0,
+    "seconds": 5.4,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "stdout_tail": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\n{\"failed\":[],\"passed\":3754,\"routes_checked\":1209,\"scope\":\"headless geometry only; actual play and visual acceptance remain separate\"}\n"
+  }
+]

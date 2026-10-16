@@ -1,0 +1,13 @@
+[
+  {
+    "case": "cortex-navigation",
+    "returncode": 1,
+    "seconds": 13.58,
+    "stderr_bytes": 0,
+    "stderr": "",
+    "passes": 26,
+    "failed": [
+      "original unmodified observation route clears natural NPC contention and really completes"
+    ]
+  }
+]
