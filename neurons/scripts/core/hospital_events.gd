@@ -7,6 +7,7 @@ var config:Dictionary={}
 var data:Dictionary={}
 var enabled:bool=true
 var records
+var observations
 
 func _init(owner) -> void:
  app=owner
@@ -22,7 +23,10 @@ func start_attempt() -> void:
 
 func restore(saved:Dictionary) -> void:
  if saved.is_empty():start_attempt()
- else:data=saved.duplicate(true)
+ else:
+  data=saved.duplicate(true)
+  if app.rules.owners.get("hospital_cup","")=="empty_cup":
+   app.rules.owners.hospital_cup="hero";data.cup_full=false
 
 func actor(id:String) -> Dictionary:
  return data.actors[id]
@@ -43,6 +47,11 @@ func xy(p:Vector2) -> Array:return [p.x,p.y]
 func near(id:String,distance:float=-1) -> bool:
  if not present(id) or actor(id).room!=app.room_id:return false
  return position(id).distance_to(app.hero_pos)<=(float(config.test_parameters.notice_distance) if distance<0 else distance) and app.layout.clear_segment(position(id),app.hero_pos)
+
+func medical_listener() -> bool:
+ for id in ["nurse","guide","doctor","assistant","pharmacist"]:
+  if near(id,2.0):return true
+ return false
 
 func move(id:String,to:Vector2,delta:float) -> bool:
  var a:Dictionary=actor(id)
@@ -77,6 +86,15 @@ func say(key:String) -> void:
  if not claim("line:"+key,"hospital_dialogue"):return
  for line in config.dialogue.get(key,[]):app.add_dialogue(str(line.speaker),str(line.text))
 
+func say_local(key:String,participants:Array) -> bool:
+ # A remote event may finish without giving the protagonist its conversation.
+ # Do not claim an unheard line, or replay it later after its contact node.
+ for id in participants:
+  if not near(str(id),2.0):return false
+ var queued:int=app.dialogue_queue.size()
+ say(key)
+ return app.dialogue_queue.size()>queued
+
 func observe(id:String,text:String) -> void:
  if not id in app.rules.known:app.rules.known.append(id)
  app.rules.observe("物品",id,text,"亲历事实","医院实际观察")
@@ -91,6 +109,7 @@ func damage(id:String,hp:int,sp:int) -> bool:
  app.rules.hp=maxi(0,app.rules.hp-hp);app.rules.change_sp(-sp)
  if hp>0:app.rules.vitality_lost.emit()
  app.rules.cancel_search();app.family.data.eating.clear()
+ if observations!=null:app.cancel_hospital_observation()
  if not app.rules.pending_neural.is_empty():
   app.rules.settled[app.rules.pending_neural.event_id]="interrupted"
   app.rules.pending_neural.clear();app.rules.pending_skin.clear()
@@ -115,12 +134,13 @@ func can_begin_grip() -> bool:
  return str(data.holder).is_empty() and not app.rules.body_busy() and float(data.get("regrab_elapsed",0))>=0.8
 
 func blocks_hero() -> bool:
- return enabled and not data.is_empty() and (not data.body.is_empty() or not str(data.holder).is_empty() or float(data.medicine_stop)>0)
+ return enabled and not data.is_empty() and (not data.body.is_empty() or not str(data.holder).is_empty() or float(data.medicine_stop)>0 or (observations!=null and observations.blocks_hero()))
 
 func eligible() -> bool:
  return not app.has_key() and not app.rules.search_active and app.action_phase=="autonomy" and not app.rules.body_busy() and not app.rules.gripped and app.rules.control_left<=0 and data.body.is_empty()
 
 func on_enter(from:String,room:String) -> void:
+ if observations!=null and from!=room:observations.cancel();data.erase("observation_route")
  if not enabled or app.session.data.level!=2:return
  if data.is_empty():start_attempt()
  if not from.is_empty():data.room_left[from]=float(data.clock)
@@ -141,15 +161,30 @@ func spawn_pending() -> void:
   if not state.pending:continue
   var room:String=str(config.rooms[config.groups[group][0]])
   if room!=app.room_id or float(data.clock)-float(data.batches.get(room,-100))<float(config.timing.spawn_batch):continue
-  var entry:=Vector2(4.4,0.35)
-  if app.hero_pos.distance_to(entry)<0.7:continue
+  var entry:Vector2=app.door_point_for(room,"ward" if room=="lobby" else "lobby")
+  var floor_layout=layout_for(room)
+  if not floor_layout.walkable(entry) or app.hero_pos.distance_to(entry)<0.7:continue
   var occupied:bool=false
   for id in data.actors:
    if present(id) and actor(id).room==room and position(id).distance_to(entry)<0.5:occupied=true
   if occupied:continue
+  # Keep one batch at the actual doorway. Choose only reachable 0.5m-spaced
+  # positions; if the batch cannot fit, retain the pending draw and wait.
+  var slots:Array[Vector2]=[]
+  for offset in [0.0,-0.5,0.5,-1.0,1.0]:
+   var at:Vector2=entry+Vector2(float(offset),0)
+   if not floor_layout.walkable(at) or app.hero_pos.distance_to(at)<0.5:continue
+   if at.distance_to(entry)>0.001 and floor_layout.path(entry,at).is_empty():continue
+   var free:bool=true
+   for id in data.actors:
+    if present(id) and actor(id).room==room and position(id).distance_to(at)<0.5:free=false
+   if not free:continue
+   slots.append(at)
+   if slots.size()==config.groups[group].size():break
+  if slots.size()<config.groups[group].size():continue
   for index in range(config.groups[group].size()):
    var id:String=config.groups[group][index];var a:Dictionary=actor(id)
-   a.phase="idle";a.room=config.rooms[id];a.pos=[4.4-index*0.5,0.35];a.route=[]
+   a.phase="idle";a.room=config.rooms[id];a.pos=xy(slots[index]);a.route=[]
    if id=="wheelchair":app.rules.owners.family_photo="wheelchair"
   state.pending=false;data.batches[room]=data.clock
 
@@ -168,6 +203,7 @@ func tick(delta:float) -> void:
  advance_doctor(delta)
  if app.rules.hp<=0:return
  if not app.dialogue_queue.is_empty():return
+ if observations!=null:observations.tick(delta)
  advance_body(delta)
  if not app.dialogue_queue.is_empty():return
  advance_transport(delta)
@@ -184,7 +220,7 @@ func tick(delta:float) -> void:
    set_body("exam","doctor");actor("doctor").phase="approach";actor("doctor").elapsed=0;say("DOCTOR");return
   if near("pharmacist") and app.rules.owners.get("hospital_prescription","")=="hero" and data.get("prescription_visit","")==current_visit() and not data.dispensed:
    set_body("prescription_transfer","pharmacist");say("PHARMACY");return
-  if near("patient") and not near("guard",2.0) and not data.get("records_state",{}).get("patient_silenced",false):say("PATIENT")
+  if near("patient") and not medical_listener() and not near("guard",2.0) and not data.get("records_state",{}).get("patient_silenced",false):say("PATIENT")
   if near("wheelchair"):say("WHEELCHAIR")
  # The same nurse can walk to the pharmacy; no second actor is manufactured.
  if present("nurse") and data.get("nurse_checked",false) and data.body.get("actor","")!="nurse":
@@ -218,9 +254,14 @@ func advance_body(delta:float) -> void:
     record("patient_check:"+visit,"腕带本次就诊号 "+visit+"；旧号字形未交付，未自动认作病服主人。")
     data.bag_order=true;app.rules.owners.hospital_laundry_manifest="ward_tray"
     record("laundry_order:"+visit,"小护士实际填写污衣袋交接单，留在病房交接托盘。")
+    if observations!=null and observations.state().read.has("bed_card_old"):
+     var hook:Dictionary=observations.config.event_hooks.nurse_old_card_question
+     if claim("old_card_question","hospital_dialogue"):
+      for line in hook.dialogue:app.add_dialogue(str(line.speaker),str(line.text))
    else:
     data.registered=true;app.rules.owners["hospital_ticket"]="hero"
     record("registration:"+visit,"本次就诊登记完成；不是轮椅患者手续或污衣交接。")
+    observe("registration_cover_seen","实际看见导诊护士在本次登记接触中压住背面栏；遮挡未泄露批次、家属或签字内容。")
    clear_body()
   "prescription":
    if float(body.elapsed)>=handoff:
@@ -234,7 +275,7 @@ func advance_body(delta:float) -> void:
     body.kind="mix";body.elapsed=0;claim("dispense_order","prescription_received")
   "mix":
    if float(body.elapsed)>=float(config.test_parameters.mix):
-    app.rules.owners.hospital_cup="pharmacist";body.kind="cup_transfer";body.elapsed=0;body.delay=0
+    app.rules.owners.hospital_cup="pharmacist";data.cup_full=true;body.kind="cup_transfer";body.elapsed=0;body.delay=0
   "cup_transfer":
    if float(body.elapsed)>=handoff:
     app.rules.owners.hospital_cup="hero";claim("cup","cup_received")
@@ -243,7 +284,7 @@ func advance_body(delta:float) -> void:
   "raise_cup":
    if float(body.elapsed)+0.000001>=float(config.timing.cup_raise):
     if claim("swallow","medicine_swallowed",{"sp_damage":15}):
-     app.rules.owners.hospital_cup="empty_cup";data.swallowed=true
+     app.rules.owners.hospital_cup="hero";data.cup_full=false;data.swallowed=true
      app.rules.change_sp(-int(config.values.medicine_sp));data.medicine_stop=float(config.timing.medicine_stop)
      # The swallow happens at this verdict node. NeuralRules will advance the
      # preceding interval once, so preserve the full newly-started second.
@@ -294,23 +335,52 @@ func finish_exam(sample_completed:bool) -> void:
 func refuse_medicine() -> void:
  if data.swallowed or data.refused:return
  data.refused=true;app.rules.owners.hospital_cup="counter"
+ # The contact location is the placement anchor for this same, unconsumed cup;
+ # later presentation can map that anchor to a tray without changing ownership.
+ data.cup_place={"room":app.room_id,"pos":xy(app.hero_pos)}
  claim("refuse_medicine","medicine_refused");record("refuse_medicine:"+current_visit(),"明确拒服，原杯放回。")
  clear_body();say("REFUSE_MEDICINE")
  # The nurse must be here and see the actual refusal, before a later sticker.
- if near("nurse",2):data.false_sticker={"left":float(config.test_parameters.paperwork),"visit":current_visit()}
+ if near("nurse",2):
+  data.false_sticker={"left":float(config.test_parameters.paperwork),"visit":current_visit(),"room":app.room_id,"pos":xy(app.hero_pos),"witness_complete":true}
+
+func advance_false_sticker(delta:float) -> void:
+ if not data.has("false_sticker") or not present("nurse"):return
+ var event:Dictionary=data.false_sticker
+ # Old pending records did not retain the placement or continuous witness.
+ # They may still be completed at the pharmacy, but cannot invent a full view.
+ if not event.has("room"):
+  event.room="pharmacy";event.pos=xy(layout_for("pharmacy").furniture[0].at)
+  event.witness_complete=false
+ var room:String=str(event.room)
+ var at:=Vector2(float(event.pos[0]),float(event.pos[1]))
+ var nurse:Dictionary=actor("nurse")
+ var visible:bool=app.room_id==room and near("nurse",2.0) and layout_for(room).clear_segment(app.hero_pos,at)
+ event.witness_complete=bool(event.get("witness_complete",false)) and visible
+ if nurse.room!=room:
+  travel("nurse",room,delta);return
+ var floor_layout=layout_for(room)
+ if position("nurse").distance_to(at)>0.65 or not floor_layout.clear_segment(position("nurse"),at):
+  move("nurse",at,delta);return
+ if app.rules.owners.get("hospital_cup","")!="counter" or data.swallowed:return
+ event.left-=delta
+ if float(event.left)>0:return
+ record("false_medicine:"+str(event.visit),"已服用（机构贴签；实际未服另账）。")
+ claim("false_sticker:"+str(event.visit),"false_medicine_sticker",{"visit":event.visit,"room":room,"pos":event.pos.duplicate()})
+ var witnessed:bool=bool(event.witness_complete)
+ data.erase("false_sticker")
+ if witnessed:
+  observe("false_medicine_seen","亲眼看见明确拒服之后，小护士仍贴上已服用标签。")
+  say("FALSE_MEDICINE")
 
 func advance_transport(delta:float) -> void:
- if data.has("false_sticker") and near("nurse",2):
-  data.false_sticker.left-=delta
-  if data.false_sticker.left<=0:
-   record("false_medicine:"+str(data.false_sticker.visit),"已服用（机构贴签；实际未服另账）。")
-   observe("false_medicine_seen","亲眼看见明确拒服之后，小护士仍贴上已服用标签。")
-   data.erase("false_sticker");say("FALSE_MEDICINE")
+ advance_false_sticker(delta)
+ if not app.dialogue_queue.is_empty():return
  if not present("porter"):return
  var porter:Dictionary=actor("porter")
  if data.transport.is_empty():
   if present("guide") and present("wheelchair") and not data.get("wheelchair_gone",false):
-   data.transport={"kind":"patient","phase":"paperwork","elapsed":0.0,"witness":[]};say("TRANSFER")
+   data.transport={"kind":"patient","phase":"paperwork","elapsed":0.0,"witness":[]}
   elif data.bag_order and data.bag=="ward":data.transport={"kind":"bag","phase":"approach","elapsed":0.0,"witness":[]}
   else:return
  var event:Dictionary=data.transport
@@ -318,7 +388,8 @@ func advance_transport(delta:float) -> void:
  if not travel("porter",room,delta):return
  if event.kind=="bag":
   if event.phase=="approach":
-   if move("porter",Vector2(3.05,1.3),delta):event.phase="lift";event.elapsed=0;say("BAG")
+   if move("porter",Vector2(3.05,1.3),delta):
+    event.phase="lift";event.elapsed=0;say_local("BAG",["porter","nurse"])
   elif event.phase=="lift":
    event.elapsed+=delta
    if event.elapsed>=float(config.test_parameters.handoff):
@@ -338,6 +409,7 @@ func advance_transport(delta:float) -> void:
    move("guide",patient_pos,delta);return
   if position("porter").distance_to(position("guide"))>float(config.test_parameters.approach_distance) or not layout_for("lobby").clear_segment(position("porter"),position("guide")):
    move("porter",position("guide"),delta);return
+  if float(event.elapsed)<=0.000001 and say_local("TRANSFER",["guide","wheelchair","porter"]):return
   event.elapsed+=delta
   if event.elapsed>=float(config.test_parameters.paperwork):event.phase="push";data.wheelchair_order=true;claim("patient_order","patient_transport_order",{"patient":"wheelchair"});record("wheelchair_order","导诊护士实际完成轮椅患者自己的转运手续；不使用角色核号表替代。")
  elif event.phase=="push":
@@ -348,7 +420,7 @@ func advance_transport(delta:float) -> void:
   var reached:bool=move("porter",to,delta)
   actor("wheelchair").pos=porter.pos.duplicate()
   if reached:
-   event.phase="fingers";event.elapsed=0;say("FRAME")
+   event.phase="fingers";event.elapsed=0;say_local("FRAME",["wheelchair"])
    if app.room_id=="lobby" and near("wheelchair",2) and not "frame" in event.witness:event.witness.append("frame")
  elif event.phase=="fingers":
   if not present("guide") or actor("guide").room!="lobby":return
@@ -373,6 +445,8 @@ func on_skill(result:Dictionary) -> void:
  if not result.get("success",false):return
  if records!=null:records.on_skill(result)
  var id:String=result.id
+ if observations!=null and id in ["SKIN","GUT","KNEE","WITHDRAW","STARTLE","FEAR","CONTROL"]:
+  app.cancel_hospital_observation()
  if id=="DRYMOUTH" and not data.body.is_empty() and data.body.kind in ["registration","nurse_register","prescription","prescription_transfer","cup_transfer"]:data.body.delay+=float(config.timing.drymouth)
  if id=="GUT" and app.rules.owners.get("hospital_cup","")=="hero" and not data.swallowed:refuse_medicine()
  elif id in ["SKIN","GUT","WITHDRAW","STARTLE","FEAR","CONTROL"] and not data.body.is_empty() and data.body.kind not in ["exam","sample","guard_drag"]:

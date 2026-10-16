@@ -1,0 +1,2093 @@
+{
+  "accelerated_engine_time": false,
+  "actual_attempt_delta": 0,
+  "actual_event_facts": [
+    {
+      "duration": 4.0,
+      "event_id": "search:1:1",
+      "kind": "search_started",
+      "target": "bedroom:0",
+      "time": 0.0333333333333333
+    },
+    {
+      "event_id": "search:1:1",
+      "kind": "search_cancelled",
+      "target": "bedroom:0",
+      "time": 0.533333333333333
+    },
+    {
+      "duration": 4.0,
+      "event_id": "search:1:2",
+      "kind": "search_started",
+      "target": "bedroom:0",
+      "time": 0.6
+    },
+    {
+      "event_id": "search:1:2",
+      "kind": "search_cancelled",
+      "target": "bedroom:0",
+      "time": 1.1
+    },
+    {
+      "duration": 4.0,
+      "event_id": "search:1:3",
+      "kind": "search_started",
+      "target": "bedroom:0",
+      "time": 1.16666666666667
+    },
+    {
+      "event_id": "search:1:3",
+      "kind": "search_cancelled",
+      "target": "bedroom:0",
+      "time": 1.66666666666667
+    },
+    {
+      "duration": 4.0,
+      "event_id": "search:1:4",
+      "kind": "search_started",
+      "target": "bedroom:0",
+      "time": 1.73333333333334
+    },
+    {
+      "action": "掀被角",
+      "event_id": "search:1:4:掀被角",
+      "kind": "prop_action",
+      "point": "bed",
+      "time": 2.33333333333333
+    },
+    {
+      "action": "检查床沿",
+      "event_id": "search:1:4:检查床沿",
+      "kind": "prop_action",
+      "point": "bed",
+      "time": 3.33333333333333
+    },
+    {
+      "action": "查看床底",
+      "event_id": "search:1:4:查看床底",
+      "kind": "prop_action",
+      "point": "bed",
+      "time": 4.33333333333333
+    },
+    {
+      "event_id": "search:1:4",
+      "kind": "search_completed",
+      "neurons": 1,
+      "target": "bedroom:0",
+      "time": 5.73333333333332
+    },
+    {
+      "duration": 4.0,
+      "event_id": "search:1:5",
+      "kind": "search_started",
+      "target": "bedroom:10",
+      "time": 6.83333333333332
+    },
+    {
+      "action": "查看外露底座",
+      "event_id": "search:1:5:查看外露底座",
+      "kind": "prop_action",
+      "point": "fan",
+      "time": 7.56666666666665
+    },
+    {
+      "action": "检查底座后侧",
+      "event_id": "search:1:5:检查底座后侧",
+      "kind": "prop_action",
+      "point": "fan",
+      "time": 8.63333333333331
+    },
+    {
+      "action": "查看地面接缝",
+      "event_id": "search:1:5:查看地面接缝",
+      "kind": "prop_action",
+      "point": "fan",
+      "time": 9.63333333333331
+    },
+    {
+      "event_id": "search:1:5",
+      "kind": "search_completed",
+      "neurons": 1,
+      "target": "bedroom:10",
+      "time": 10.8333333333333
+    },
+    {
+      "duration": 4.0,
+      "event_id": "search:1:6",
+      "kind": "search_started",
+      "target": "bedroom:9",
+      "time": 11.6
+    },
+    {
+      "action": "翻查旧衣杂物",
+      "event_id": "search:1:6:翻查旧衣杂物",
+      "kind": "prop_action",
+      "point": "storage",
+      "time": 12.3333333333333
+    },
+    {
+      "action": "看见露角血迹",
+      "event_id": "search:1:6:看见露角血迹",
+      "kind": "prop_action",
+      "point": "storage",
+      "time": 13.0
+    },
+    {
+      "action": "取出展开病服",
+      "event_id": "search:1:6:取出展开病服",
+      "kind": "prop_action",
+      "point": "storage",
+      "time": 13.6
+    },
+    {
+      "action": "翻看磨损领标",
+      "event_id": "search:1:6:翻看磨损领标",
+      "kind": "prop_action",
+      "point": "storage",
+      "time": 14.6333333333333
+    },
+    {
+      "action": "放回病服",
+      "event_id": "search:1:6:放回病服",
+      "kind": "prop_action",
+      "point": "storage",
+      "time": 15.3333333333333
+    },
+    {
+      "event_id": "search:1:6",
+      "kind": "search_completed",
+      "neurons": 1,
+      "target": "bedroom:9",
+      "time": 15.6
+    }
+  ],
+  "asylum_entered": false,
+  "asylum_entry_frame": -1,
+  "asylum_exit_reached": false,
+  "cycle_delta": 0,
+  "dialogue_advance_clicks": 23,
+  "elapsed_process_frames": 653,
+  "endpoint": {
+    "is_game_completion": false,
+    "kind": "actual_death",
+    "reason": "Actual HP reached zero during the natural route; no revival, resources or route were forced by the driver."
+  },
+  "engine_time_scale": 1.0,
+  "failures": [],
+  "final_actual_attempt": 1,
+  "final_cycle": 1,
+  "final_institutional_records": [],
+  "final_known_information": [
+    "uniform_blood",
+    "uniform_seen",
+    "uniform_damaged_label"
+  ],
+  "final_level": 1,
+  "final_resources": {
+    "hp": 0,
+    "inventory": [],
+    "neurons": 8,
+    "owners": {
+      "key": "bedroom:2",
+      "porridge": "mother"
+    },
+    "plexus": 3,
+    "sp": 0
+  },
+  "final_room": "bedroom",
+  "final_search_attempts": 6,
+  "final_search_completed": 3,
+  "first_npc_observed": true,
+  "frame_limit": 12000,
+  "hospital_entered": false,
+  "hospital_entry_frame": -1,
+  "hospital_exit_reached": false,
+  "initial_actual_attempt": 1,
+  "initial_cycle": 1,
+  "initial_level": 1,
+  "last_snapshot_file": "final_snapshot.json",
+  "no_gameplay_fixture": true,
+  "observations": [
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 37,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "initial_world",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "occupy",
+          "point": 0,
+          "pos": [
+            2.54999995231628,
+            1.20000004768372
+          ],
+          "present": true,
+          "rounds": 0,
+          "route": []
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 0,
+      "search_completed": 0,
+      "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+      "world_time": 0.0
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 37,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "first_npc",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "occupy",
+          "point": 0,
+          "pos": [
+            2.54999995231628,
+            1.20000004768372
+          ],
+          "present": true,
+          "rounds": 0,
+          "route": []
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 0,
+      "search_completed": 0,
+      "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+      "world_time": 0.0
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 66,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "search",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "occupy",
+          "point": 0,
+          "pos": [
+            2.54999995231628,
+            1.20000004768372
+          ],
+          "present": true,
+          "rounds": 0,
+          "route": []
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 1,
+      "search_completed": 0,
+      "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+      "world_time": 0.0666666666666667
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 81,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "occupy",
+          "point": 0,
+          "pos": [
+            2.54999995231628,
+            1.20000004768372
+          ],
+          "present": true,
+          "rounds": 1,
+          "route": []
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 1,
+      "search_completed": 0,
+      "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+      "world_time": 0.566666666666667
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 102,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "search",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "occupy",
+          "point": 0,
+          "pos": [
+            2.54999995231628,
+            1.20000004768372
+          ],
+          "present": true,
+          "rounds": 1,
+          "route": []
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 2,
+      "search_completed": 0,
+      "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+      "world_time": 0.633333333333333
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 117,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "occupy",
+          "point": 0,
+          "pos": [
+            2.54999995231628,
+            1.20000004768372
+          ],
+          "present": true,
+          "rounds": 2,
+          "route": []
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 2,
+      "search_completed": 0,
+      "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+      "world_time": 1.13333333333333
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 138,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "search",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "occupy",
+          "point": 0,
+          "pos": [
+            2.54999995231628,
+            1.20000004768372
+          ],
+          "present": true,
+          "rounds": 2,
+          "route": []
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 3,
+      "search_completed": 0,
+      "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+      "world_time": 1.2
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 153,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            2.59992289543152,
+            1.2332820892334
+          ],
+          "present": true,
+          "rounds": 3,
+          "route": [
+            [
+              2.70000004768372,
+              1.30000007152557
+            ],
+            [
+              2.79999995231628,
+              1.39999997615814
+            ],
+            [
+              2.90000009536743,
+              1.5
+            ],
+            [
+              2.90000009536743,
+              1.60000002384186
+            ],
+            [
+              2.90000009536743,
+              1.70000004768372
+            ],
+            [
+              2.90000009536743,
+              1.80000007152557
+            ],
+            [
+              3.0,
+              1.89999997615814
+            ],
+            [
+              3.10000014305115,
+              2.0
+            ],
+            [
+              3.20000004768372,
+              2.10000014305115
+            ],
+            [
+              3.29999995231628,
+              2.20000004768372
+            ],
+            [
+              3.40000009536743,
+              2.29999995231628
+            ],
+            [
+              3.5,
+              2.40000009536743
+            ],
+            [
+              3.60000014305115,
+              2.5
+            ],
+            [
+              3.70000004768372,
+              2.60000014305115
+            ],
+            [
+              3.79999995231628,
+              2.70000004768372
+            ],
+            [
+              3.90000009536743,
+              2.79999995231628
+            ],
+            [
+              4.0,
+              2.90000009536743
+            ],
+            [
+              4.0,
+              3.0
+            ],
+            [
+              4.0,
+              3.10000014305115
+            ],
+            [
+              4.0,
+              3.20000004768372
+            ],
+            [
+              4.0,
+              3.29999995231628
+            ],
+            [
+              4.0,
+              3.40000009536743
+            ],
+            [
+              4.0,
+              3.5
+            ],
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 3,
+      "search_completed": 0,
+      "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+      "world_time": 1.7
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 174,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "search",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            2.69976878166199,
+            1.29984593391418
+          ],
+          "present": true,
+          "rounds": 3,
+          "route": [
+            [
+              2.70000004768372,
+              1.30000007152557
+            ],
+            [
+              2.79999995231628,
+              1.39999997615814
+            ],
+            [
+              2.90000009536743,
+              1.5
+            ],
+            [
+              2.90000009536743,
+              1.60000002384186
+            ],
+            [
+              2.90000009536743,
+              1.70000004768372
+            ],
+            [
+              2.90000009536743,
+              1.80000007152557
+            ],
+            [
+              3.0,
+              1.89999997615814
+            ],
+            [
+              3.10000014305115,
+              2.0
+            ],
+            [
+              3.20000004768372,
+              2.10000014305115
+            ],
+            [
+              3.29999995231628,
+              2.20000004768372
+            ],
+            [
+              3.40000009536743,
+              2.29999995231628
+            ],
+            [
+              3.5,
+              2.40000009536743
+            ],
+            [
+              3.60000014305115,
+              2.5
+            ],
+            [
+              3.70000004768372,
+              2.60000014305115
+            ],
+            [
+              3.79999995231628,
+              2.70000004768372
+            ],
+            [
+              3.90000009536743,
+              2.79999995231628
+            ],
+            [
+              4.0,
+              2.90000009536743
+            ],
+            [
+              4.0,
+              3.0
+            ],
+            [
+              4.0,
+              3.10000014305115
+            ],
+            [
+              4.0,
+              3.20000004768372
+            ],
+            [
+              4.0,
+              3.29999995231628
+            ],
+            [
+              4.0,
+              3.40000009536743
+            ],
+            [
+              4.0,
+              3.5
+            ],
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 4,
+      "search_completed": 0,
+      "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+      "world_time": 1.76666666666667
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 221,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "search",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            3.96366691589355,
+            3.57266640663147
+          ],
+          "present": false,
+          "rounds": 3,
+          "route": [
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 4,
+      "search_completed": 0,
+      "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+      "world_time": 3.33333333333333
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 312,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            3.96366691589355,
+            3.57266640663147
+          ],
+          "present": false,
+          "rounds": 3,
+          "route": [
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 6,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 4,
+      "search_completed": 1,
+      "status_note": "搜寻完成：+1神经元；此处无钥匙",
+      "world_time": 5.73333333333332
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 326,
+      "hero_pos": [
+        2.6266667842865,
+        1.20000004768372
+      ],
+      "hero_state": "walk",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            3.96366691589355,
+            3.57266640663147
+          ],
+          "present": false,
+          "rounds": 3,
+          "route": [
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 6,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 4,
+      "search_completed": 1,
+      "status_note": "搜寻完成：+1神经元；此处无钥匙",
+      "world_time": 5.79999999999999
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 357,
+      "hero_pos": [
+        3.6907377243042,
+        0.899999976158142
+      ],
+      "hero_state": "search",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            3.96366691589355,
+            3.57266640663147
+          ],
+          "present": false,
+          "rounds": 3,
+          "route": [
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 6,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 5,
+      "search_completed": 1,
+      "status_note": "搜寻完成：+1神经元；此处无钥匙",
+      "world_time": 6.83333333333332
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 477,
+      "hero_pos": [
+        3.6907377243042,
+        0.899999976158142
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            3.96366691589355,
+            3.57266640663147
+          ],
+          "present": false,
+          "rounds": 3,
+          "route": [
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 7,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 5,
+      "search_completed": 2,
+      "status_note": "搜寻完成：+1神经元；此处无钥匙",
+      "world_time": 10.8333333333333
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 491,
+      "hero_pos": [
+        3.73833346366882,
+        0.899999976158142
+      ],
+      "hero_state": "walk",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            3.96366691589355,
+            3.57266640663147
+          ],
+          "present": false,
+          "rounds": 3,
+          "route": [
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 7,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 5,
+      "search_completed": 2,
+      "status_note": "搜寻完成：+1神经元；此处无钥匙",
+      "world_time": 10.9
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 512,
+      "hero_pos": [
+        4.44277429580688,
+        1.05722570419312
+      ],
+      "hero_state": "search",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            3.96366691589355,
+            3.57266640663147
+          ],
+          "present": false,
+          "rounds": 3,
+          "route": [
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 7,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 6,
+      "search_completed": 2,
+      "status_note": "搜寻完成：+1神经元；此处无钥匙",
+      "world_time": 11.6
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 632,
+      "hero_pos": [
+        4.44277429580688,
+        1.05722570419312
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            3.96366691589355,
+            3.57266640663147
+          ],
+          "present": false,
+          "rounds": 3,
+          "route": [
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 8,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 6,
+      "search_completed": 3,
+      "status_note": "搜寻完成：+1神经元；此处无钥匙",
+      "world_time": 15.6
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 646,
+      "hero_pos": [
+        4.44277429580688,
+        1.05722570419312
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "stage_change",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            3.96366691589355,
+            3.57266640663147
+          ],
+          "present": false,
+          "rounds": 3,
+          "route": [
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.6,
+            0.22
+          ],
+          "present": false,
+          "route": [],
+          "used": false
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "intro",
+          "pos": [
+            4.59999990463257,
+            0.219999998807907
+          ],
+          "present": true,
+          "route": [],
+          "used": true
+        }
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 8,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 6,
+      "search_completed": 3,
+      "status_note": "搜寻完成：+1神经元；此处无钥匙",
+      "world_time": 15.6333333333333
+    },
+    {
+      "action_phase": "collapse",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 653,
+      "hero_pos": [
+        4.44277429580688,
+        1.05722570419312
+      ],
+      "hero_state": "hit",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "terminal_observation",
+      "level": 1,
+      "npcs": {
+        "cat": {
+          "left": 0.0,
+          "phase": "leave",
+          "point": 0,
+          "pos": [
+            3.96366691589355,
+            3.57266640663147
+          ],
+          "present": false,
+          "rounds": 3,
+          "route": [
+            [
+              3.95000004768372,
+              3.59999990463257
+            ]
+          ]
+        },
+        "dog": {
+          "alive": true,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.1,
+            1.6
+          ],
+          "present": false,
+          "remaining": 3,
+          "route": [],
+          "target": -1
+        },
+        "father": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "intro",
+          "pos": [
+            4.59999990463257,
+            0.219999998807907
+          ],
+          "present": true,
+          "route": [],
+          "used": true
+        },
+        "mother": {
+          "branch": "",
+          "elapsed": 0.0,
+          "phase": "intro",
+          "pos": [
+            4.59999990463257,
+            0.219999998807907
+          ],
+          "present": true,
+          "route": [],
+          "used": true
+        }
+      },
+      "resources": {
+        "hp": 0,
+        "inventory": [],
+        "neurons": 8,
+        "owners": {
+          "key": "bedroom:2",
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 0
+      },
+      "room": "bedroom",
+      "search_attempts": 6,
+      "search_completed": 3,
+      "status_note": "搜寻完成：+1神经元；此处无钥匙",
+      "world_time": 15.6333333333333
+    }
+  ],
+  "passes": [
+    "Actual title/profile UI starts an ordinary random first home attempt",
+    "Practice is skipped through its visible button; the driver writes no gameplay fields",
+    "Natural first attempt reaches an actual observed endpoint without gameplay fixtures"
+  ],
+  "rendered": true,
+  "scope": "normal title/profile/tutorial-skip/dialogue mouse input, natural RNG and ordinary _process through L1/L2/L3; no seed/actor/resource/position/route fixture; fixed game clock is automated observation, not human all-branch/art/audio acceptance",
+  "screenshots": [
+    {
+      "frame": 37,
+      "name": "01_initial_world.png"
+    },
+    {
+      "frame": 38,
+      "name": "02_first_npc.png"
+    },
+    {
+      "frame": 653,
+      "name": "03_terminal_actual_death.png"
+    }
+  ],
+  "stall_frame_limit": 900
+}

@@ -189,9 +189,14 @@ func _ready() -> void:
 
  hospital_fixture();spawn_actor("nurse");hospital_step()
  check(app.hospital.data.body.get("kind","")=="nurse_register" and app.hospital.data.bandage==0,"full HP bypasses bandaging and proceeds to number verification")
- check(hospital_until(func():return app.hospital.data.registered,2.0),"real number-check duration completes without treatment requirement")
- check(app.rules.owners.get("hospital_ticket","")=="hero" and not app.hospital.data.healed and app.rules.hp==100,"registration delivers its ticket without consuming healing opportunity")
+ check(hospital_until(func():return app.hospital.data.nurse_checked,2.0),"real nurse number-check completes without treatment requirement")
+ check(not app.hospital.data.registered and not app.rules.owners.has("hospital_ticket") and app.rules.owners.get("hospital_laundry_manifest","")=="ward_tray" and not app.hospital.data.healed and app.rules.hp==100,"nurse check delivers a laundry manifest without inventing guide registration or consuming healing")
  check(app.hospital.data.actors.size()==10 and hospital_until(func():return app.hospital.actor("nurse").room=="pharmacy",20.0),"the existing nurse actually walks between rooms instead of being cloned")
+
+ hospital_fixture("lobby");spawn_actor("guide");hospital_step()
+ check(app.hospital.data.body.get("kind","")=="registration" and not app.hospital.data.registered,"actual guide begins a separate registration contact")
+ check(hospital_until(func():return app.hospital.data.registered,2.0) and app.rules.owners.get("hospital_ticket","")=="hero","only completed guide registration delivers the hero ticket")
+ check(not app.hospital.data.nurse_checked and not app.rules.owners.has("hospital_laundry_manifest"),"guide ticket never substitutes for a nurse check or laundry order")
 
  hospital_fixture("clinic");app.hero_pos=app.layout.furniture[3].at;spawn_actor("doctor");spawn_actor("assistant",app.hero_pos+Vector2(-0.3,0));hospital_step()
  check(app.hospital.data.body.get("kind","")=="exam" and app.rules.hp==100,"doctor invites examination before actual needle contact")
@@ -281,7 +286,9 @@ func _ready() -> void:
  check(roundtrip() and app.hospital.data.refused and not app.hospital.data.swallowed,"actual JSON retains refusal, same cup and completed false-label knowledge")
  await capture("05_false_record_after_refusal")
 
- hospital_fixture();spawn_actor("porter",Vector2(3.05,1.3));app.hospital.data.bag_order=true
+ hospital_fixture();spawn_actor("nurse");hospital_step()
+ check(hospital_until(func():return app.hospital.data.nurse_checked,2.0) and app.rules.owners.get("hospital_laundry_manifest","")=="ward_tray","actual nurse writing/contact supplies the required laundry order before porter task")
+ spawn_actor("porter",Vector2(3.05,1.3))
  check(hospital_until(func():return not app.hospital.data.transport.is_empty() and app.hospital.data.transport.phase=="lift",5.0),"unique porter physically reaches the actual dirty-clothes bag before lifting")
  check(app.hospital.data.bag=="ward","unfinished bag lift cannot create a completed transfer record")
  hospital_step(0.56)

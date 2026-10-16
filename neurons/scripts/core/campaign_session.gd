@@ -1,5 +1,6 @@
 extends RefCounted
 ## Persistent facts for the implemented exploration slice. No textures here.
+const AsylumMap=preload("res://scripts/core/asylum_map.gd")
 const ROOM_POINTS={
  "bedroom":["床","床头柜","靠背椅","书桌","蓝色圆凳与纸箱","杂物箱","衣帽架","衣柜","五层书架","储物柜","立式风扇"],
  "ward":[],
@@ -11,20 +12,20 @@ const GRAPH={"ward":["lobby"],"lobby":["ward","clinic","pharmacy","office"],"cli
 var data:Dictionary={}
 
 func _init() -> void:
- data={"level":1,"cycle":1,"attempts":{"1":1,"2":1},"targets":[],"key_target":"","key_seen":false,"key_owner":"",
+ data={"level":1,"cycle":1,"attempts":{"1":1,"2":1,"3":1},"targets":[],"key_target":"","key_seen":false,"key_owner":"",
   "unlocked":[1],"rooms":{},"receipts":{},"exploration_boundary":false,"profile":{}}
 
 func new_attempt(level:int,rng:RandomNumberGenerator) -> void:
  var candidates:Array=[]
- var rooms:Array=["bedroom"] if level==1 else ["lobby","clinic","pharmacy","office"]
+ var rooms:Array=["bedroom"] if level==1 else ["lobby","clinic","pharmacy","office"] if level==2 else AsylumMap.POINTS.keys()
  for room in rooms:
-  for index in range(ROOM_POINTS[room].size()):candidates.append("%s:%d"%[room,index])
+  for index in range(point_names(level,room).size()):candidates.append("%s:%d"%[room,index])
  for i in range(candidates.size()-1,0,-1):
   var j:int=rng.randi_range(0,i)
   var temp=candidates[i]
   candidates[i]=candidates[j]
   candidates[j]=temp
- candidates.resize(10 if level==1 else 12)
+ candidates.resize(10 if level==1 else 12 if level==2 else 14)
  data.level=level
  data.targets=candidates
  data.key_target=candidates[rng.randi_range(0,candidates.size()-1)]
@@ -32,11 +33,22 @@ func new_attempt(level:int,rng:RandomNumberGenerator) -> void:
  data.key_owner=data.key_target
  data.rooms={}
  data.exploration_boundary=false
+ if not data.attempts.has(str(level)):data.attempts[str(level)]=1
+
+static func point_names(level:int,room:String) -> Array:
+ return AsylumMap.POINTS.get(room,[]) if level==3 else ROOM_POINTS.get(room,[])
+
+func doors(room:String) -> Array:
+ if int(data.level)==3:return AsylumMap.doors(room)
+ var result:Array=GRAPH.get(room,[]).duplicate()
+ if room=="lobby":result.append("stairs")
+ return result
 
 func has_key() -> bool:
  return data.key_owner=="hero"
 
 func next_room(from:String,to:String) -> String:
+ if int(data.level)==3:return AsylumMap.next_room(from,to)
  if from==to:return from
  var pending:Array=[from]
  var visited:Dictionary={from:""}

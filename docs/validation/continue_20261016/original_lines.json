@@ -1,0 +1,639 @@
+{
+  "source": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+  "source_sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+  "count": 91,
+  "failed": [],
+  "lines": [
+    {
+      "speaker": "小护士[平静]",
+      "text": "手给我看看。",
+      "source": "S3:P355",
+      "group": "NURSE",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "你胸牌戴反了。",
+      "source": "S3:P356",
+      "group": "NURSE",
+      "exact_match": true
+    },
+    {
+      "speaker": "小护士[平静]",
+      "text": "不影响。",
+      "source": "S3:P357",
+      "group": "NURSE",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[无语]",
+      "text": "名字不让看，手倒得给她。",
+      "source": "S3:P358",
+      "group": "NURSE",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[认真]",
+      "text": "好了吧？",
+      "source": "S3:P361",
+      "group": "NURSE_DONE",
+      "exact_match": true
+    },
+    {
+      "speaker": "小护士[平静]",
+      "text": "还要核一下号。",
+      "source": "S3:P362",
+      "group": "NURSE_DONE",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "我只是想出去。",
+      "source": "S3:P400",
+      "group": "REGISTER",
+      "exact_match": true
+    },
+    {
+      "speaker": "导诊护士[平静]",
+      "text": "先登记。",
+      "source": "S3:P401",
+      "group": "REGISTER",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[无语]",
+      "text": "问路也得登记？",
+      "source": "S3:P402",
+      "group": "REGISTER",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "后面还有一栏。",
+      "source": "S3:P404",
+      "group": "REGISTER",
+      "exact_match": true
+    },
+    {
+      "speaker": "导诊护士[平静]",
+      "text": "那栏不用你填。",
+      "source": "S3:P405",
+      "group": "REGISTER",
+      "exact_match": true
+    },
+    {
+      "speaker": "轮椅患者[疑问]",
+      "text": "外面有人来找我吗？",
+      "source": "S3:P414",
+      "group": "WHEELCHAIR",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[迟疑]",
+      "text": "我刚进来，没看见。",
+      "source": "S3:P415",
+      "group": "WHEELCHAIR",
+      "exact_match": true
+    },
+    {
+      "speaker": "轮椅患者[认真]",
+      "text": "要是有人问，就说我还在这。",
+      "source": "S3:P416",
+      "group": "WHEELCHAIR",
+      "exact_match": true
+    },
+    {
+      "speaker": "导诊护士[平静]",
+      "text": "家属没来？那不用等了。",
+      "source": "S3:P425",
+      "group": "TRANSFER",
+      "exact_match": true
+    },
+    {
+      "speaker": "轮椅患者[急切]",
+      "text": "我给他们留过地址。",
+      "source": "S3:P426",
+      "group": "TRANSFER",
+      "exact_match": true
+    },
+    {
+      "speaker": "转运工[平静]",
+      "text": "手收进去。",
+      "source": "S3:P427",
+      "group": "TRANSFER",
+      "exact_match": true
+    },
+    {
+      "speaker": "轮椅患者[抗拒]",
+      "text": "我不走。你让他们过来。",
+      "source": "S3:P429",
+      "group": "FRAME",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[震惊]",
+      "text": "他不是说不走吗？",
+      "source": "S3:P431",
+      "group": "TRANSFER_DONE",
+      "exact_match": true
+    },
+    {
+      "speaker": "导诊护士[平静]",
+      "text": "已经办完了。",
+      "source": "S3:P432",
+      "group": "TRANSFER_DONE",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[凝重]",
+      "text": "他本人答没答应，表上根本没填。",
+      "source": "S3:P433",
+      "group": "TRANSFER_DONE",
+      "exact_match": true
+    },
+    {
+      "speaker": "人物[认真]",
+      "text": "名字他们会换。看后面的数。",
+      "source": "S3:P443",
+      "group": "PATIENT",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "你说哪个？",
+      "source": "S3:P444",
+      "group": "PATIENT",
+      "exact_match": true
+    },
+    {
+      "speaker": "人物[认真]",
+      "text": "翻过来。",
+      "source": "S3:P445",
+      "group": "PATIENT",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[认真]",
+      "text": "他说的是背面。",
+      "source": "S3:P446",
+      "group": "PATIENT",
+      "exact_match": true
+    },
+    {
+      "speaker": "人物[认真]",
+      "text": "刚才不是你自己停下来的吧。",
+      "source": "S3:P450",
+      "group": "PATIENT_ANOMALY",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[迟疑]",
+      "text": "……你也看见了？",
+      "source": "S3:P452",
+      "group": "PATIENT_ANOMALY",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[警惕]",
+      "text": "他怎么会问这个？",
+      "source": "S3:P453",
+      "group": "PATIENT_ANOMALY",
+      "exact_match": true
+    },
+    {
+      "speaker": "人物[认真]",
+      "text": "刚才不是你自己停下来的吧。",
+      "source": "S3:P450",
+      "group": "PATIENT_AWARE",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[冷淡]",
+      "text": "你还看见了什么？",
+      "source": "S3:P455",
+      "group": "PATIENT_AWARE",
+      "exact_match": true
+    },
+    {
+      "speaker": "人物[平静]",
+      "text": "就刚才那一下。",
+      "source": "S3:P456",
+      "group": "PATIENT_AWARE",
+      "exact_match": true
+    },
+    {
+      "speaker": "医生[平静]",
+      "text": "手伸出来。",
+      "source": "S3:P472",
+      "group": "DOCTOR",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "检查什么？",
+      "source": "S3:P473",
+      "group": "DOCTOR",
+      "exact_match": true
+    },
+    {
+      "speaker": "医生[平静]",
+      "text": "哪里疼以后再说，先看能不能用。",
+      "source": "S3:P475",
+      "group": "DOCTOR",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[怀疑]",
+      "text": "什么叫能不能用？",
+      "source": "S3:P476",
+      "group": "DOCTOR",
+      "exact_match": true
+    },
+    {
+      "speaker": "医生[平静]",
+      "text": "先做检查。",
+      "source": "S3:P477",
+      "group": "DOCTOR",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[疑惑]",
+      "text": "他连哪里不舒服都没问。",
+      "source": "S3:P478",
+      "group": "DOCTOR",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[警惕]",
+      "text": "等一下，我还没答应。",
+      "source": "S3:P483",
+      "group": "AVOID",
+      "exact_match": true
+    },
+    {
+      "speaker": "医生[平静]",
+      "text": "那就写拒绝。",
+      "source": "S3:P484",
+      "group": "AVOID",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[认真]",
+      "text": "总比先扎进去再说好。",
+      "source": "S3:P485",
+      "group": "AVOID",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疼痛]",
+      "text": "嘶……轻点！",
+      "source": "S3:P487",
+      "group": "NEEDLE",
+      "exact_match": true
+    },
+    {
+      "speaker": "医生[平静]",
+      "text": "别动。",
+      "source": "S3:P488",
+      "group": "NEEDLE",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[不满]",
+      "text": "问话不回答，动手倒挺快。",
+      "source": "S3:P489",
+      "group": "NEEDLE",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "结果什么时候给我？",
+      "source": "S3:P491",
+      "group": "SAMPLE",
+      "exact_match": true
+    },
+    {
+      "speaker": "医生[平静]",
+      "text": "不用你拿。",
+      "source": "S3:P492",
+      "group": "SAMPLE",
+      "exact_match": true
+    },
+    {
+      "speaker": "医生[平静]",
+      "text": "拿去药房。",
+      "source": "S3:P495",
+      "group": "PRESCRIPTION",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "检查还没出结果，就开药？",
+      "source": "S3:P496",
+      "group": "PRESCRIPTION",
+      "exact_match": true
+    },
+    {
+      "speaker": "医生[平静]",
+      "text": "照单拿。",
+      "source": "S3:P497",
+      "group": "PRESCRIPTION",
+      "exact_match": true
+    },
+    {
+      "speaker": "助手[平静]",
+      "text": "不配合检查。",
+      "source": "S3:P508",
+      "group": "ASSIST_REFUSE",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[生气]",
+      "text": "我只是让他先说清楚。",
+      "source": "S3:P509",
+      "group": "ASSIST_REFUSE",
+      "exact_match": true
+    },
+    {
+      "speaker": "助手[平静]",
+      "text": "我写的是你没配合。",
+      "source": "S3:P510",
+      "group": "ASSIST_REFUSE",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[无语]",
+      "text": "原因一个字不写。",
+      "source": "S3:P511",
+      "group": "ASSIST_REFUSE",
+      "exact_match": true
+    },
+    {
+      "speaker": "助手[认真]",
+      "text": "攻击工作人员。",
+      "source": "S3:P513",
+      "group": "ASSIST_KICK",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[愤怒]",
+      "text": "是他先按住我的。",
+      "source": "S3:P514",
+      "group": "ASSIST_KICK",
+      "exact_match": true
+    },
+    {
+      "speaker": "药师[平静]",
+      "text": "单子给我。",
+      "source": "S3:P537",
+      "group": "PHARMACY",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "杯子上怎么只有号码？",
+      "source": "S3:P538",
+      "group": "PHARMACY",
+      "exact_match": true
+    },
+    {
+      "speaker": "药师[平静]",
+      "text": "按单子配的。",
+      "source": "S3:P539",
+      "group": "PHARMACY",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[疑惑]",
+      "text": "配了什么，还是没说。",
+      "source": "S3:P540",
+      "group": "PHARMACY",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[警惕]",
+      "text": "先告诉我里面是什么。",
+      "source": "S3:P542",
+      "group": "REFUSE_MEDICINE",
+      "exact_match": true
+    },
+    {
+      "speaker": "药师[平静]",
+      "text": "不喝就放下。",
+      "source": "S3:P543",
+      "group": "REFUSE_MEDICINE",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[难受]",
+      "text": "……等一下。",
+      "source": "S3:P546",
+      "group": "SWALLOW",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[凝重]",
+      "text": "刚喝下去就这样？",
+      "source": "S3:P547",
+      "group": "SWALLOW",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[质问]",
+      "text": "我没喝，你贴这个干什么？",
+      "source": "S3:P556",
+      "group": "FALSE_MEDICINE",
+      "exact_match": true
+    },
+    {
+      "speaker": "小护士[平静]",
+      "text": "这栏要填完。",
+      "source": "S3:P557",
+      "group": "FALSE_MEDICINE",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[生气]",
+      "text": "那也不是喝了。",
+      "source": "S3:P558",
+      "group": "FALSE_MEDICINE",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[凝重]",
+      "text": "杯子还在那儿。",
+      "source": "S3:P559",
+      "group": "FALSE_MEDICINE",
+      "exact_match": true
+    },
+    {
+      "speaker": "档案员[平静]",
+      "text": "这份放下。",
+      "source": "S3:P565",
+      "group": "STOP_FILE",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "这是什么记录？",
+      "source": "S3:P570",
+      "group": "STOP_FILE",
+      "exact_match": true
+    },
+    {
+      "speaker": "档案员[冷淡]",
+      "text": "你不用看这个。",
+      "source": "S3:P567",
+      "group": "STOP_FILE",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[凝重]",
+      "text": "他要收走了。",
+      "source": "S3:P568",
+      "group": "STOP_FILE",
+      "exact_match": true
+    },
+    {
+      "speaker": "档案员[平静]",
+      "text": "他一直在翻这些。",
+      "source": "S3:P572",
+      "group": "REPORT",
+      "exact_match": true
+    },
+    {
+      "speaker": "保安[平静]",
+      "text": "哪个人？",
+      "source": "S3:P573",
+      "group": "REPORT",
+      "exact_match": true
+    },
+    {
+      "speaker": "保安[严肃]",
+      "text": "手里的东西先停一下。",
+      "source": "S3:P581",
+      "group": "GUARD",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[警惕]",
+      "text": "我在看记录。",
+      "source": "S3:P582",
+      "group": "GUARD",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[生气]",
+      "text": "别碰我。",
+      "source": "S3:P584",
+      "group": "GUARD_MISS",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疼痛]",
+      "text": "松手！我自己会走。",
+      "source": "S3:P587",
+      "group": "GUARD_DRAG",
+      "exact_match": true
+    },
+    {
+      "speaker": "保安[平静]",
+      "text": "到门口去。",
+      "source": "S3:P588",
+      "group": "GUARD_DRAG",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[凝重]",
+      "text": "先看看手，还能动吗？",
+      "source": "S3:P590",
+      "group": "GUARD_RELEASE",
+      "exact_match": true
+    },
+    {
+      "speaker": "病人[压低声音]",
+      "text": "先别问了。",
+      "source": "S3:P601",
+      "group": "PATIENT_STOP",
+      "exact_match": true
+    },
+    {
+      "speaker": "病人[平静]",
+      "text": "我还没说完。",
+      "source": "S3:P603",
+      "group": "PATIENT_HELD",
+      "exact_match": true
+    },
+    {
+      "speaker": "保安[冷淡]",
+      "text": "走。",
+      "source": "S3:P604",
+      "group": "PATIENT_HELD",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[凝重]",
+      "text": "他只是跟我说了几句话。",
+      "source": "S3:P606",
+      "group": "PATIENT_GONE",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[凝重]",
+      "text": "没说完的，先别替他猜。",
+      "source": "S3:P607",
+      "group": "PATIENT_GONE",
+      "exact_match": true
+    },
+    {
+      "speaker": "转运工[平静]",
+      "text": "这袋？",
+      "source": "S3:P382",
+      "group": "BAG",
+      "exact_match": true
+    },
+    {
+      "speaker": "小护士[平静]",
+      "text": "对一下标签。",
+      "source": "S3:P383",
+      "group": "BAG",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "里面那件衣服要拿去哪？",
+      "source": "S3:P385",
+      "group": "BAG",
+      "exact_match": true
+    },
+    {
+      "speaker": "转运工[平静]",
+      "text": "单上没写给你看。",
+      "source": "S3:P386",
+      "group": "BAG",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家看见标签时[认真]",
+      "text": "先看清号码。",
+      "source": "S3:P387",
+      "group": "BAG",
+      "exact_match": true
+    },
+    {
+      "speaker": "角色[疑惑]",
+      "text": "卡上原来那个呢？",
+      "exact_match": true
+    },
+    {
+      "speaker": "小护士[平静]",
+      "text": "现在用新的。",
+      "exact_match": true
+    },
+    {
+      "speaker": "玩家[疑惑]",
+      "text": "旧的为什么还留着？",
+      "exact_match": true
+    }
+  ]
+}

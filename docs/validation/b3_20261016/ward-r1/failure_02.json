@@ -1,0 +1,1550 @@
+{
+  "label": "JSON preserves actual bed progress and independent wristband fall location",
+  "snapshot": {
+    "action_left": 0.0,
+    "action_phase": "autonomy",
+    "asylum_state": {
+      "actors": {
+        "archivist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "office",
+          "route": []
+        },
+        "assistant": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "clinic",
+          "route": []
+        },
+        "cleaner": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "bathroom",
+          "route": []
+        },
+        "corner_patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "double_ward",
+          "route": []
+        },
+        "doctor": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "clinic",
+          "route": []
+        },
+        "guard": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "office",
+          "route": []
+        },
+        "head_nurse": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "corridor",
+          "route": []
+        },
+        "informer": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "activity",
+          "route": []
+        },
+        "isolation_orderly": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "quiet",
+          "route": []
+        },
+        "labor_patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "workshop",
+          "route": []
+        },
+        "med_nurse": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "pharmacy",
+          "route": []
+        },
+        "ordinary_orderly": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "ward",
+          "route": []
+        },
+        "patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "office",
+          "route": []
+        },
+        "pharmacist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "pharmacy",
+          "route": []
+        },
+        "porter": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.10152912139893,
+            0.200000002980232
+          ],
+          "room": "corridor",
+          "route": [
+            [
+              3.07402992248535,
+              0.200000002980232
+            ]
+          ]
+        },
+        "postop_patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "activity",
+          "route": []
+        },
+        "registration_nurse": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "lobby",
+          "route": []
+        },
+        "speaker": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "group_therapy",
+          "route": []
+        },
+        "supervisor": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "workshop",
+          "route": []
+        },
+        "therapist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "group_therapy",
+          "route": []
+        },
+        "transport_patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "idle",
+          "pos": [
+            3.07402992248535,
+            0.200000002980232
+          ],
+          "room": "corridor",
+          "route": [
+            [
+              3.0,
+              0.200000002980232
+            ],
+            [
+              2.90000009536743,
+              0.200000002980232
+            ],
+            [
+              2.79999995231628,
+              0.200000002980232
+            ],
+            [
+              2.65000009536743,
+              0.239999994635582
+            ]
+          ]
+        }
+      },
+      "batches": {},
+      "body": {},
+      "carry": {},
+      "clock": 6.17500000000002,
+      "cup_full": false,
+      "diagnosed": false,
+      "dispensed": false,
+      "exam": {},
+      "groups": {
+        "chief": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "cleaner": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "clinic": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "corner": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "isolation": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "office": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "orderly": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "patient": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "pharmacy": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "postop": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "registration": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "therapy": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "transport": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        },
+        "work": {
+          "checks": 0.0,
+          "drawn": true,
+          "pending": false
+        }
+      },
+      "holder": "",
+      "isolation_state": {
+        "closed_elapsed": 0.0,
+        "door_closed": false,
+        "door_progress": 0.0,
+        "elapsed": 0.0,
+        "evaded": false,
+        "grab_invalidated": false,
+        "handled": {},
+        "hero_attempted": false,
+        "hero_held": false,
+        "last_pos": [],
+        "last_room": "",
+        "open_from": 0.0,
+        "order": {},
+        "outcome": "",
+        "phase": "idle",
+        "target": "",
+        "waiting": "",
+        "was_closed": false
+      },
+      "medicine_stop": 0.0,
+      "order_delivered": false,
+      "order_source": "",
+      "order_written": false,
+      "receipts": {
+        "asylum:1:bed_brake_released": "asylum_bed_brake_released",
+        "asylum:1:patient_grasped_bed": "asylum_patient_hand_visible",
+        "asylum:1:patient_hand_returned": "asylum_patient_hand_returned",
+        "asylum:1:transport_band_dropped": "asylum_band_dropped",
+        "asylum:1:transport_initial_order": "asylum_transfer_order_initial",
+        "asylum:1:transport_subject_check": "asylum_transfer_subject_checked",
+        "asylum:1:ward_line:TRANSFER_ALIVE": "asylum_dialogue",
+        "asylum:1:ward_line:TRANSFER_HAND": "asylum_dialogue"
+      },
+      "records_state": {
+        "archivist": {
+          "elapsed": 0.0,
+          "phase": "idle"
+        },
+        "files": {
+          "asylum_archive_index": "office:0",
+          "asylum_current_report": "office:10",
+          "asylum_death_page": "office:10",
+          "asylum_duty_roster": "office:6",
+          "asylum_fee_page": "office:10",
+          "asylum_no_external_injury": "office:5",
+          "asylum_prior_copy": "office:6",
+          "asylum_scar_photo": "office:5"
+        },
+        "guard": {
+          "done": false,
+          "elapsed": 0.0,
+          "last_room": "",
+          "last_seen": [],
+          "phase": "idle",
+          "target": ""
+        },
+        "inherited_patient": {},
+        "inherited_patient_records": {},
+        "patient_anomaly_seen": false,
+        "patient_delivered": false,
+        "patient_silenced": false,
+        "read": [],
+        "reading": {},
+        "report": {},
+        "serial": 0.0,
+        "stopped": {}
+      },
+      "refused": false,
+      "registered": false,
+      "regrab_elapsed": 6.97500000000003,
+      "room_left": {},
+      "staff_targets": {},
+      "swallowed": false,
+      "trace_events": {
+        "active": {},
+        "cleaner": {
+          "elapsed": 0.0,
+          "phase": "idle",
+          "relic_index": 0.0,
+          "wash_index": 0.0
+        },
+        "conversation": {
+          "complete": false,
+          "elapsed": 0.0,
+          "phase": "idle",
+          "shown": {},
+          "stopped": false
+        },
+        "corner": {
+          "done": false,
+          "elapsed": 0.0,
+          "phase": "idle",
+          "witness": false
+        },
+        "corpse": {
+          "covered": false,
+          "identity": "independent_deceased",
+          "moved_out": false,
+          "on_board": false,
+          "pos": [
+            4.2,
+            1.1
+          ],
+          "room": "bathroom"
+        },
+        "read": {},
+        "screen_closed": false,
+        "washed": []
+      },
+      "ward_events": {
+        "chief_internal": {
+          "elapsed": 0.0,
+          "last_pos": [],
+          "last_room": "corridor",
+          "phase": "idle",
+          "report_id": ""
+        },
+        "clamp": {
+          "attempted": false,
+          "elapsed": 0.0,
+          "hand_out": false,
+          "hold_invalidated": false,
+          "phase": "idle",
+          "retract_left": 0.0
+        },
+        "ordinary_job": {
+          "elapsed": 0.0,
+          "full_witness": false,
+          "holding": false,
+          "phase": "idle",
+          "report_id": "",
+          "target": ""
+        },
+        "postop": {
+          "elapsed": 0.0,
+          "hero_saw_wound": false,
+          "informer_elapsed": 0.0,
+          "informer_phase": "privacy_walk",
+          "informer_saw_wound": false,
+          "last_pos": [],
+          "last_room": "activity",
+          "phase": "idle",
+          "report_elapsed": 0.0,
+          "report_id": "",
+          "report_phase": "idle",
+          "wound_visible": false
+        },
+        "reports": [],
+        "therapy": {
+          "elapsed": 0.0,
+          "heard_original": false,
+          "heard_retraction": false,
+          "original_spoken": false,
+          "paper": "therapist",
+          "phase": "idle",
+          "recording": false,
+          "retraction_spoken": false,
+          "saw_deletion": false,
+          "seat_required": false,
+          "segment_exists": false,
+          "speaker_number": null
+        },
+        "transfer": {
+          "band_drop": {
+            "number": null,
+            "pos": [
+              4.05000019073486,
+              0.239999994635582
+            ],
+            "read": false,
+            "read_elapsed": 0.0,
+            "room": "corridor"
+          },
+          "bed_pos": [
+            3.07402992248535,
+            0.200000002980232
+          ],
+          "bed_room": "corridor",
+          "brake": false,
+          "delivered": false,
+          "elapsed": 0.0,
+          "hand_done": true,
+          "isolation_authorized": false,
+          "order": "porter",
+          "patient_number": null,
+          "phase": "push",
+          "seen": [
+            "hand"
+          ]
+        },
+        "work": {
+          "batch": null,
+          "box": "none",
+          "elapsed": 0.0,
+          "label": "rack",
+          "paper": "rack",
+          "phase": "take_paper",
+          "products": 0.0,
+          "table": "workshop:1"
+        }
+      },
+      "wrist_checked": false,
+      "wrist_done": false
+    },
+    "audio_state": {
+      "playing": [],
+      "receipts": {}
+    },
+    "closing_left": 0.0,
+    "completed": [],
+    "controlled_route": false,
+    "death_left": 0.0,
+    "deferred_targets": {},
+    "destination": "",
+    "dialogue": [],
+    "drawer_open": {},
+    "family_state": {
+      "actions": 0.0,
+      "auto_food_used": false,
+      "blood_door": false,
+      "checks": {},
+      "collapse": {},
+      "dialogue_choices": {},
+      "eating": {},
+      "eating_serial": 0.0,
+      "extra_checked": false,
+      "fact_cursor": 0.0,
+      "father": {
+        "branch": "",
+        "elapsed": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.6,
+          0.22
+        ],
+        "present": false,
+        "route": [],
+        "used": false
+      },
+      "food_types": {},
+      "gift": [],
+      "gift_pick": 0.0,
+      "gift_roll": -1.0,
+      "gift_wait": 0.0,
+      "hidden_pending": false,
+      "inventory": [],
+      "mother": {
+        "branch": "",
+        "elapsed": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.6,
+          0.22
+        ],
+        "present": false,
+        "route": [],
+        "used": false
+      },
+      "mother_rest": false,
+      "picking_gift": false,
+      "pressure": 0.0,
+      "queued": [],
+      "rescued": false,
+      "spawn_order": [],
+      "startle": {},
+      "system_prompts": {}
+    },
+    "first_damage": true,
+    "first_damage_pending": false,
+    "footstep_left": 0.0,
+    "footstep_serial": 0,
+    "hero_facing": [
+      1.0,
+      0.0
+    ],
+    "hero_pos": [
+      2.65000009536743,
+      0.239999994635582
+    ],
+    "hero_state": "idle",
+    "hidden_state": {},
+    "home_state": {
+      "blocked_left": 0.0,
+      "blocked_search": "",
+      "cat": {
+        "left": 0.0,
+        "phase": "occupy",
+        "point": 0.0,
+        "pos": [
+          2.54999995231628,
+          1.20000004768372
+        ],
+        "present": false,
+        "rounds": 0.0,
+        "route": []
+      },
+      "counted": {},
+      "dialogue_choices": {
+        "DOG_HELP:request": 1.0,
+        "DOG_OPEN:arrival": 3.0,
+        "DOG_THANK:initial": 0.0,
+        "S1_START:attempt": 6.0
+      },
+      "dialogue_played": {
+        "DOG_HELP:request": true,
+        "DOG_OPEN:arrival": true,
+        "DOG_THANK:initial": true,
+        "S1_START:attempt": true
+      },
+      "dog": {
+        "alive": true,
+        "left": 0.0,
+        "phase": "idle",
+        "pos": [
+          3.1,
+          1.6
+        ],
+        "present": true,
+        "remaining": 3.0,
+        "route": [],
+        "target": -1.0
+      },
+      "dog_serial": 0.0,
+      "fighting": false,
+      "key_drop": [],
+      "tracked_search": ""
+    },
+    "hospital_state": {
+      "actors": {
+        "archivist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "office",
+          "route": []
+        },
+        "assistant": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "clinic",
+          "route": []
+        },
+        "doctor": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "clinic",
+          "route": []
+        },
+        "guard": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "office",
+          "route": []
+        },
+        "guide": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "lobby",
+          "route": []
+        },
+        "nurse": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "ward",
+          "route": []
+        },
+        "patient": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "lobby",
+          "route": []
+        },
+        "pharmacist": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "pharmacy",
+          "route": []
+        },
+        "porter": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "lobby",
+          "route": []
+        },
+        "wheelchair": {
+          "elapsed": 0.0,
+          "left": 0.0,
+          "phase": "absent",
+          "pos": [
+            4.4,
+            0.35
+          ],
+          "room": "lobby",
+          "route": []
+        }
+      },
+      "bag": "ward",
+      "bag_order": false,
+      "bandage": 0.0,
+      "batches": {},
+      "body": {},
+      "clock": 0.0,
+      "dispensed": false,
+      "exam_done": false,
+      "groups": {
+        "clinic": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "lobby": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "nurse": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "office": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "patient": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        },
+        "pharmacist": {
+          "checks": 0.0,
+          "drawn": false,
+          "pending": false
+        }
+      },
+      "healed": false,
+      "holder": "",
+      "known_pages": [],
+      "medicine_stop": 0.0,
+      "nurse_checked": false,
+      "prescribed": false,
+      "prescription_visit": "",
+      "receipts": {},
+      "refused": false,
+      "registered": false,
+      "regrab_elapsed": 0.8,
+      "room_left": {},
+      "sample": false,
+      "suspended_body": {},
+      "swallowed": false,
+      "transport": {},
+      "visit": ""
+    },
+    "menu_open": false,
+    "menu_page": "cast",
+    "motion": {},
+    "observing_index": -1,
+    "opening_state": {},
+    "paused_manual": true,
+    "presentation_id": "a",
+    "profile": {
+      "invader_id": 9176.0,
+      "name": "精神病院二层事件验证",
+      "opening_completed": true,
+      "tutorial_completed": true
+    },
+    "prop_receipts": {},
+    "rng_state": "7885037462851127637",
+    "room_id": "corridor",
+    "route": [],
+    "route_action_origin": "autonomous",
+    "rules": {
+      "_cast_serial": 0,
+      "_completed_targets": {},
+      "_search_id": "",
+      "_search_serial": 0,
+      "_sp_depleted": false,
+      "absent": false,
+      "action": {},
+      "action_serial": 0,
+      "actual_attempt": 1,
+      "awakening_receipts": {},
+      "awareness_feedback": [],
+      "awareness_stage": 0,
+      "body_feedback": [],
+      "book_extensions": {},
+      "combat_regen": 0.0,
+      "config": {
+        "book_extensions": {
+          "book_item_parameters": {
+            "category": "物品",
+            "cost": 5.0,
+            "name": "已见物品参数",
+            "source": "体验:P428；R1:P39–42；S4:T4"
+          },
+          "book_person_parameters": {
+            "category": "人物",
+            "cost": 5.0,
+            "name": "已见人物行为参数",
+            "source": "体验:P429；R1:P39–42；S3/S4第一关规则"
+          },
+          "book_role_resistance": {
+            "category": "角色",
+            "cost": 5.0,
+            "name": "抗性明细",
+            "source": "体验:P427；R1:P39–42"
+          }
+        },
+        "schema": 1.0,
+        "skills": [
+          {
+            "combat_description": "消耗1神经元。侧挪：向选定方向短移一步；无无敌效果，不能穿过障碍。。角色表现：侧挪。",
+            "combat_dialogue": [
+              "[警惕]“不能站在这里。”",
+              "[紧张]“对，别停在那儿。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式取消未完成搜寻，战斗模式向选择方向短移。角色分别表现为收手抓挠、侧挪。",
+            "exploration_description": "消耗1神经元。抓挠，取消尚未完成的搜寻。角色表现：收手抓挠。",
+            "exploration_dialogue": [
+              "收手抓挠",
+              "[烦躁]“哪来的蚊子……”"
+            ],
+            "id": "SKIN",
+            "name": "皮肤刺激",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 0.0
+          },
+          {
+            "combat_description": "消耗1神经元。俯身：短暂降低上身受击范围；不能避开低位、地面及覆盖全身的攻击。。角色表现：俯身。",
+            "combat_dialogue": [
+              "[难受]“偏偏这时候……”",
+              "[紧张]“先低着头，别急着起来。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式中断搜寻或本次劝休，战斗模式俯身降低上身受击范围。角色捂腹弯腰。",
+            "exploration_description": "消耗1神经元。腹痛，取消搜寻；可中断本次劝休。角色表现：捂腹弯腰。",
+            "exploration_dialogue": [
+              "捂腹弯腰",
+              "[难受]“偏偏这个时候……”"
+            ],
+            "id": "GUT",
+            "name": "肠胃蠕动",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 1.0
+          },
+          {
+            "combat_description": "消耗1神经元。警觉转身：转向已经感知的最近威胁，中止无关动作；不透视发现敌人。。角色表现：警觉转身。",
+            "combat_dialogue": [
+              "[警惕]“在那边。”",
+              "[认真]“……看到了。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式产生旁人可以察觉的皮肤异常、搜寻继续，战斗模式转向已感知的威胁。角色分别表现为查看手臂、转身警戒。",
+            "exploration_description": "消耗1神经元。出现可见异常，可引起附近人物注意；搜寻继续。角色表现：查看手臂。",
+            "exploration_dialogue": [
+              "查看手臂",
+              "[疑惑]“怎么起鸡皮疙瘩了？”"
+            ],
+            "id": "PORES",
+            "name": "毛孔变化",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 1.0
+          },
+          {
+            "combat_description": "消耗1神经元。短时提速：加快移动，结束后恢复；不叠加，不附带免伤。。角色表现：短时提速。",
+            "combat_dialogue": [
+              "[凝重]“先离开这里。”",
+              "[着急]“快快快，别停。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式短暂减慢移动与搜寻，战斗模式短暂提高移动速度。角色分别表现为打颤、加快步频。",
+            "exploration_description": "消耗1神经元。颤抖，延缓当前移动或搜寻。角色表现：打颤、搓手。",
+            "exploration_dialogue": [
+              "打颤、搓手",
+              "[抱怨]“这地方空调不要钱啊？”"
+            ],
+            "id": "TEMP",
+            "name": "冷热感",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 1.0
+          },
+          {
+            "combat_description": "消耗1神经元。止步：停止当前前进，短暂停顿后重新判断路线；不取消敌人攻击。。角色表现：止步。",
+            "combat_dialogue": [
+              "[警惕]“等一下……看看别的路。”",
+              "[紧张]“先别往前冲。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式短暂停顿后继续行动，战斗模式停止移动并重新判断路线。角色侧头停步，耳鸣不产生外界声源。",
+            "exploration_description": "消耗1神经元。短暂停步，随后继续；声音仅角色听见。角色表现：停步侧头。",
+            "exploration_dialogue": [
+              "停步侧头",
+              "[疑惑]“谁在响？……我耳朵？”"
+            ],
+            "id": "TINNITUS",
+            "name": "耳鸣",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 1.0
+          },
+          {
+            "combat_description": "消耗1神经元。抑制出声：暂时压低惊叫、求助等声音；脚步和碰撞声仍存在，仅影响具有听觉判定的人物。。角色表现：抑制出声。",
+            "combat_dialogue": [
+              "[克制]“……先别出声。”",
+              "[紧张]“别喊，我看着呢。”"
+            ],
+            "cooldown": 2.0,
+            "cost": 1.0,
+            "description": "消耗1神经元。探索模式延缓未完成的物品交接，战斗模式暂时抑制角色出声。角色抿嘴吞咽，脚步与碰撞声仍存在。",
+            "exploration_description": "消耗1神经元。延缓尚未完成的物品交接，不撤销已获物品。角色表现：抿嘴吞咽，递出的手稍停。",
+            "exploration_dialogue": [
+              "抿嘴吞咽，递出的手稍停",
+              "[尴尬]“等一下……嗓子有点干。”"
+            ],
+            "id": "DRYMOUTH",
+            "name": "口腔干涩",
+            "power": 1.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 1.0,
+            "unlock_cost": 1.0
+          },
+          {
+            "combat_description": "消耗2神经元。踢击：近距离向前攻击；命中才结算伤害，能否击退按目标规则处理。。角色表现：踢击。",
+            "combat_dialogue": [
+              "[警惕]“别靠过来。”",
+              "[紧张]“踢完就走，别耗着。”"
+            ],
+            "cooldown": 4.0,
+            "cost": 2.0,
+            "description": "消耗2神经元。中断未完成搜寻并向前踢击，实际命中才结算伤害与对应击退。角色突然向前弹腿。",
+            "exploration_description": "消耗2神经元。取消搜寻，向前弹腿；实际命中才伤害。角色表现：突然向前弹腿。",
+            "exploration_dialogue": [
+              "突然向前弹腿",
+              "[震惊]“不是……我腿怎么了？”"
+            ],
+            "id": "KNEE",
+            "name": "膝跳反射",
+            "power": 2.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "GUT"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 2.0,
+            "unlock_cost": 2.0
+          },
+          {
+            "combat_description": "消耗2神经元。收臂：及时撤回手臂；不能解除已经锁紧的束缚，也不能防御全身攻击。。角色表现：收臂。",
+            "combat_dialogue": [
+              "[凝重]“手……又自己动了。”",
+              "[认真]“收回来了，接着走。”"
+            ],
+            "cooldown": 4.0,
+            "cost": 2.0,
+            "description": "消耗2神经元。中断未完成搜寻并收回手臂，可避开尚未命中的手部抓握、不能解除已经成立的控制。角色迅速收手。",
+            "exploration_description": "消耗2神经元。取消搜寻，避开尚未成立的手臂抓握。角色表现：猛地收手。",
+            "exploration_dialogue": [
+              "猛地收手",
+              "[警惕]“别碰我！”"
+            ],
+            "id": "WITHDRAW",
+            "name": "缩手反射",
+            "power": 2.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "SKIN"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 2.0,
+            "unlock_cost": 2.0
+          },
+          {
+            "combat_description": "消耗2神经元。后撤：距离大于皮肤刺激的侧挪；依靠实际位移避开攻击，无无敌效果，后方受阻则不能完整撤出。。角色表现：后撤。",
+            "combat_dialogue": [
+              "[警惕]“退开点。”",
+              "[紧张]“后面也得看着点。”"
+            ],
+            "cooldown": 4.0,
+            "cost": 2.0,
+            "description": "消耗2神经元。中断未完成搜寻并尝试向后移动，实际退开才可能避过攻击。角色后撤，遇到障碍不能穿过。",
+            "exploration_description": "消耗2神经元。取消搜寻，向后短移。角色表现：惊跳，后方可走时退步。",
+            "exploration_dialogue": [
+              "惊跳，后方可走时退步",
+              "[惊疑]“什么东西？！”"
+            ],
+            "id": "STARTLE",
+            "name": "惊跳反应",
+            "power": 2.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "TEMP"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 2.0,
+            "unlock_cost": 2.0
+          },
+          {
+            "combat_description": "消耗3神经元。撤离倾向：停止主动进攻，远离已感知威胁；仍降低精神，不自动找到出口。。角色表现：撤离倾向。",
+            "combat_dialogue": [
+              "[不安]“不行……离它远点。”",
+              "[凝重]“先退，别硬撑。”"
+            ],
+            "cooldown": 8.0,
+            "cost": 3.0,
+            "description": "消耗3神经元。降低精神，探索模式取消搜寻并延后当前目标，战斗模式停止进攻并远离已感知威胁。角色收手、警戒并尝试退离。",
+            "exploration_description": "消耗3神经元。降低精神，取消搜寻，将当前目标延后。角色表现：缩手，盯住目标。",
+            "exploration_dialogue": [
+              "缩手，盯住目标",
+              "[不安]“这个……先不看了。”"
+            ],
+            "id": "FEAR",
+            "name": "恐惧",
+            "power": 3.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "TINNITUS",
+              "STARTLE"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 3.0,
+            "unlock_cost": 3.0
+          },
+          {
+            "combat_description": "消耗3神经元。稳定状态：恢复精神，解除自身情绪造成的犹豫；不回血、不解除物理束缚、不取消敌人威胁。。角色表现：稳定状态。",
+            "combat_dialogue": [
+              "[克制]“别慌……先看清楚。”",
+              "[认真]“还没出去呢。”"
+            ],
+            "cooldown": 8.0,
+            "cost": 3.0,
+            "description": "消耗3神经元。恢复精神并缓解角色自身恐惧，不恢复生命、不解除抓握。角色紧绷动作减轻、呼吸趋稳。",
+            "exploration_description": "消耗3神经元。恢复精神，缓解角色自身恐慌、犹豫；搜寻继续。角色表现：肩膀放松，轻笑后继续。",
+            "exploration_dialogue": [
+              "肩膀放松，轻笑后继续",
+              "[轻松]“算了，再找找。”"
+            ],
+            "id": "JOY",
+            "name": "开心",
+            "power": 3.0,
+            "prerequisite_mode": "all",
+            "prerequisites": [
+              "PORES",
+              "WITHDRAW"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 3.0,
+            "unlock_cost": 3.0
+          },
+          {
+            "combat_description": "消耗5神经元。直接控制：接管移动、朝向及角色已经具备的攻击、互动；不自动获得其他技能，不保证命中或逃脱。。角色表现：直接控制。",
+            "combat_dialogue": [
+              "未识破：[惊疑]“我没想这么走……”；已识破：[冷漠]“看路。别停。”",
+              "[紧张]“先离开这里。”"
+            ],
+            "cooldown": 20.0,
+            "cost": 5.0,
+            "description": "消耗5神经元。接管移动、朝向与互动6秒，战斗模式可调用已解锁的踢击。角色响应输入，仍正常承受攻击与控制。",
+            "exploration_description": "消耗5神经元。接管移动与互动。角色表现：动作短暂停顿，随后响应操作。",
+            "exploration_dialogue": [
+              "动作短暂停顿，随后响应操作",
+              "[冷漠]“这一步，是你选的。”"
+            ],
+            "id": "CONTROL",
+            "name": "完全掌控",
+            "power": 4.0,
+            "prerequisite_mode": "any",
+            "prerequisites": [
+              "FEAR",
+              "JOY"
+            ],
+            "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+            "tier": 4.0,
+            "unlock_cost": 5.0
+          }
+        ],
+        "test_parameters": {
+          "exploration_startle_distance": 0.4,
+          "note": "探索后撤距离为集中测试表现参数；完成判定按真实位移，不套战斗0.35秒。膝跳分段已按S4:P170定值。"
+        },
+        "timing": {
+          "combat_skin_distance": 0.8,
+          "combat_skin_duration": 0.25,
+          "combat_startle_distance": 1.4,
+          "combat_startle_duration": 0.35,
+          "control": 6.0,
+          "drymouth_combat": 6.0,
+          "drymouth_transfer_delay": 2.0,
+          "fear_combat": 3.0,
+          "fear_retry": 6.0,
+          "gut_reaction": 1.2,
+          "kick_attack": 0.15,
+          "kick_damage": 15.0,
+          "kick_prepare": 0.15,
+          "kick_push": 0.8,
+          "kick_range": 1.0,
+          "kick_recover": 0.35,
+          "kick_source": "S4:P170",
+          "kick_stun": 0.8,
+          "pores": 3.0,
+          "skin_reaction": 0.5,
+          "temp": 3.0,
+          "temp_combat_rate": 1.25,
+          "temp_exploration_rate": 0.75,
+          "tinnitus_combat": 0.3,
+          "tinnitus_exploration": 1.0,
+          "withdraw": 0.3
+        }
+      },
+      "control_context": {},
+      "control_event": "",
+      "control_evidence_receipts": {},
+      "control_feedback": [],
+      "control_fraction_ms": 0.0,
+      "control_left": 0.0,
+      "control_ms": 0,
+      "control_stage": 0,
+      "control_stage_receipts": {},
+      "cooldown_until": 0.0,
+      "effects": {
+        "MEDICINE": 0.0
+      },
+      "evidence": [],
+      "facts": [
+        {
+          "event_id": "asylum:1:transport_initial_order",
+          "kind": "asylum_transfer_order_initial",
+          "number": null,
+          "patient": "transport_patient",
+          "time": 0.0,
+          "witness": false
+        },
+        {
+          "event_id": "asylum:1:transport_subject_check",
+          "kind": "asylum_transfer_subject_checked",
+          "protagonist_number_known": false,
+          "subject": "transport_patient",
+          "subject_binding_verified": true,
+          "time": 0.875,
+          "visible_number": null
+        },
+        {
+          "event_id": "asylum:1:bed_brake_released",
+          "kind": "asylum_bed_brake_released",
+          "time": 1.425
+        },
+        {
+          "alive": true,
+          "event_id": "asylum:1:patient_grasped_bed",
+          "kind": "asylum_patient_hand_visible",
+          "time": 1.45
+        },
+        {
+          "event_id": "asylum:1:ward_line:TRANSFER_HAND",
+          "kind": "asylum_dialogue",
+          "source": [
+            "S3:P824–843/T26",
+            "S3:P887–917/T28",
+            "S3:P1014–1054/T33",
+            "S4:T15R8/P181–207",
+            "第五阶段第8–9轮"
+          ],
+          "time": 1.45
+        },
+        {
+          "event_id": "asylum:1:patient_hand_returned",
+          "kind": "asylum_patient_hand_returned",
+          "time": 2.15
+        },
+        {
+          "event_id": "asylum:1:transport_band_dropped",
+          "kind": "asylum_band_dropped",
+          "number": null,
+          "pos": [
+            4.05000019073486,
+            0.239999994635582
+          ],
+          "room": "corridor",
+          "time": 2.15
+        },
+        {
+          "event_id": "asylum:1:ward_line:TRANSFER_ALIVE",
+          "kind": "asylum_dialogue",
+          "source": [
+            "S3:P824–843/T26",
+            "S3:P887–917/T28",
+            "S3:P1014–1054/T33",
+            "S4:T15R8/P181–207",
+            "第五阶段第8–9轮"
+          ],
+          "time": 2.15
+        }
+      ],
+      "global_resistance": 0,
+      "gripped": false,
+      "hp": 100,
+      "hurt_left": 0.0,
+      "institutional_records": [],
+      "intervention_lock": false,
+      "kick_until": 0.0,
+      "known": [
+        "asylum_transport_alive_seen"
+      ],
+      "loading": false,
+      "lock_after_serial": 0,
+      "mode": "exploration",
+      "neurons": 5,
+      "observations": [
+        {
+          "category": "物品",
+          "id": "asylum_transport_alive_seen",
+          "kind": "亲历事实",
+          "source": "精神病院实际观察",
+          "text": "实际看见第三关推床患者在床单下伸手抓床沿；此人仍活着，不套用第二关轮椅患者身份。"
+        }
+      ],
+      "owners": {
+        "asylum_archive_index": "office:0",
+        "asylum_corner_transfer_note": "corner_patient",
+        "asylum_corpse_wristband": "bathroom:drain",
+        "asylum_current_report": "office:10",
+        "asylum_death_page": "office:10",
+        "asylum_duty_roster": "office:6",
+        "asylum_fee_page": "office:10",
+        "asylum_meal_list": "bathroom:relics",
+        "asylum_no_external_injury": "office:5",
+        "asylum_patient_transfer_note": "patient",
+        "asylum_prior_copy": "office:6",
+        "asylum_scar_photo": "office:5",
+        "asylum_transport_band": "ward_floor",
+        "key": "corridor:0",
+        "porridge": "mother"
+      },
+      "pending_global_growth": 0,
+      "pending_neural": {},
+      "pending_skin": {},
+      "plexus": 3,
+      "public_action": {},
+      "public_serial": 0,
+      "reaction_left": 0.0,
+      "reaction_skill": "",
+      "search_active": false,
+      "search_attempts": 0,
+      "search_count": 0,
+      "search_duration": 4.0,
+      "search_elapsed": 0.0,
+      "search_limit": 14,
+      "search_target": "",
+      "settled": {},
+      "skill_states": {
+        "CONTROL": {
+          "growth": false,
+          "power": 4.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "DRYMOUTH": {
+          "growth": false,
+          "power": 1.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "FEAR": {
+          "growth": false,
+          "power": 3.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "GUT": {
+          "growth": false,
+          "power": 1.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "JOY": {
+          "growth": false,
+          "power": 3.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "KNEE": {
+          "growth": false,
+          "power": 2.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "PORES": {
+          "growth": false,
+          "power": 1.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "SKIN": {
+          "growth": false,
+          "power": 1,
+          "reactions": 0,
+          "resistance": 0,
+          "unlocked": true,
+          "until": 0.0
+        },
+        "STARTLE": {
+          "growth": false,
+          "power": 2.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "TEMP": {
+          "growth": false,
+          "power": 1.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "TINNITUS": {
+          "growth": false,
+          "power": 1.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        },
+        "WITHDRAW": {
+          "growth": false,
+          "power": 2.0,
+          "reactions": 0.0,
+          "resistance": 0.0,
+          "unlocked": false,
+          "until": 0.0
+        }
+      },
+      "skin_pending_resistance": false,
+      "skin_power": 1,
+      "skin_reactions": 0,
+      "skin_resistance": 0,
+      "sp": 100,
+      "stun_left": 0.0,
+      "transitioning": false,
+      "trial": {},
+      "trial_attempt": 0,
+      "trial_evidence_count": 0,
+      "tutorial_demo": false,
+      "world_time": 6.17500000000002
+    },
+    "schema": 2,
+    "search_action_origin": "autonomous",
+    "search_props": {
+      "bedroom:bed": {},
+      "bedroom:bedside": {},
+      "bedroom:books": {},
+      "bedroom:box": {},
+      "bedroom:chair": {},
+      "bedroom:desk": {},
+      "bedroom:fan": {},
+      "bedroom:rack": {},
+      "bedroom:stool": {},
+      "bedroom:storage": {},
+      "bedroom:wardrobe": {}
+    },
+    "session": {
+      "attempts": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0
+      },
+      "cycle": 1.0,
+      "exploration_boundary": true,
+      "key_owner": "corridor:0",
+      "key_seen": false,
+      "key_target": "corridor:0",
+      "level": 3.0,
+      "profile": {},
+      "receipts": {},
+      "rooms": {},
+      "targets": [
+        "corridor:1",
+        "double_ward:1",
+        "activity:3",
+        "quiet:1",
+        "activity:2",
+        "double_ward:3",
+        "activity:4",
+        "group_therapy:0",
+        "group_therapy:1",
+        "corridor:0",
+        "workshop:1",
+        "activity:5",
+        "double_ward:0",
+        "group_therapy:2"
+      ],
+      "unlocked": [
+        1.0,
+        2.0,
+        3.0
+      ]
+    },
+    "status_visible": true,
+    "target_index": -1,
+    "vitality_display": {
+      "automatic": true,
+      "hint_acknowledged": false,
+      "hint_demo_seen": true,
+      "last_action": "",
+      "manual": false,
+      "pending": false
+    },
+    "world_visual_time": 42.5499999999986,
+    "zoom_index": 1
+  }
+}

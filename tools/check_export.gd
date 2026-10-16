@@ -46,7 +46,7 @@ func run_check() -> void:
  check(OS.has_feature("windows"),"package validation runs on target Windows platform")
  check(not FileAccess.file_exists("res://tests/test_rules.gd"),"test scripts are excluded from shipped pack")
  check(not DirAccess.dir_exists_absolute("res://DOCX"),"source documents are not shipped")
- for name in ["skills","home_rules","home_dialogue","tutorial_dialogue","search_actions","presentation","audio_bindings","hospital","hidden_street","opening"]:
+ for name in ["skills","home_rules","home_dialogue","tutorial_dialogue","search_actions","presentation","audio_bindings","hospital","hospital_observations","hidden_street","opening","asylum","asylum_records","asylum_ward_events","asylum_trace_events","asylum_isolation","asylum_observations","asylum_nurse_duty"]:
   check(JSON.parse_string(FileAccess.get_file_as_string("res://data/%s.json"%name)) is Dictionary,"dynamic JSON is in PCK: "+name)
  var bindings=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_bindings.json"))
  for entry in bindings.assets:

@@ -44,11 +44,12 @@ func _ready() -> void:
   startup_opening.completed.connect(func(_sequence,_skipped):startup_opening.queue_free();startup_opening=null)
   startup_opening.start("startup")
  var checks:Dictionary={
-  "--campaign-check":"campaign_check", "--b1-check":"b1_check", "--b1-acceptance-check":"b1_acceptance_check", "--hospital-check":"hospital_check", "--hidden-campaign-check":"hidden_campaign_check", "--opening-campaign-check":"opening_campaign_check",
+  "--asylum-registration-mouse-check":"asylum_registration_mouse_check", "--asylum-chain-check":"asylum_chain_check", "--asylum-observation-check":"asylum_observation_check", "--asylum-registration-check":"asylum_registration_check", "--asylum-nurse-duty-check":"asylum_nurse_duty_check",
+  "--natural-asylum-check":"natural_asylum_check", "--asylum-trace-check":"asylum_trace_check", "--asylum-ward-check":"asylum_ward_check", "--asylum-isolation-check":"asylum_isolation_check", "--asylum-record-check":"asylum_record_check", "--asylum-records-check":"asylum_records_check", "--asylum-ui-check":"asylum_ui_check", "--continue-asylum-check":"continue_asylum_check", "--asylum-check":"asylum_check", "--asylum-events-check":"asylum_events_check", "--campaign-check":"campaign_check", "--b1-check":"b1_check", "--b1-acceptance-check":"b1_acceptance_check", "--hospital-observation-check":"hospital_observation_check", "--hospital-edges-check":"hospital_edges_check", "--hospital-check":"hospital_check", "--hidden-campaign-check":"hidden_campaign_check", "--opening-campaign-check":"opening_campaign_check",
   "--animals-check":"animals_check", "--family-check":"family_check",
   "--story-record":"story_record", "--search-actions-check":"search_actions_check",
   "--tutorial-check":"tutorial_check", "--awareness-check":"awareness_check",
-  "--natural-home-check":"natural_home_check", "--home-adverse-check":"home_adverse_check", "--feedback-check":"feedback_check", "--rest-input-check":"rest_input_check", "--family-sequence-check":"family_sequence_check", "--status-check":"status_check", "--tutorial-input-check":"tutorial_input_check", "--persistence-ui-check":"persistence_ui_check"}
+  "--natural-hospital-check":"natural_hospital_check", "--natural-home-check":"natural_home_check", "--home-adverse-check":"home_adverse_check", "--feedback-check":"feedback_check", "--rest-input-check":"rest_input_check", "--family-sequence-check":"family_sequence_check", "--status-check":"status_check", "--tutorial-input-check":"tutorial_input_check", "--persistence-ui-check":"persistence_ui_check"}
  for argument in OS.get_cmdline_user_args():
   if checks.has(argument):
    if store.root=="user://profiles":store.root="res://../tmp/check_saves/"+str(checks[argument])
@@ -94,7 +95,7 @@ func create_title() -> void:
  content.add_child(title)
  message=Label.new()
  message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
- message.text="自主行动与神经干预\n当前开发批次：开场、首关、医院人物与隐藏Street；画面使用标注占位，后续关卡继续制作。"
+ message.text="自主行动与神经干预\n当前开发批次：开场、首关、医院、精神病院两层与隐藏Street；画面使用标注占位，后续关卡继续制作。"
  content.add_child(message)
  add_button("CONTINUE / 继续",continue_game,not store.load_snapshot().ok)
  add_button("NEW GAME / 建立档案",show_profile)

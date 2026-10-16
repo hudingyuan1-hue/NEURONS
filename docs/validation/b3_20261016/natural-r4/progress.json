@@ -1,0 +1,14 @@
+{
+  "body": {},
+  "frame": 600,
+  "guard": {},
+  "hero": [
+    4.44277429580688,
+    1.05722570419312
+  ],
+  "hospital_reading": {},
+  "phase": "autonomy",
+  "room": "bedroom",
+  "transport": {},
+  "world_time": 14.5333333333333
+}

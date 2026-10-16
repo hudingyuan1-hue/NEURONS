@@ -1,0 +1,75 @@
+{
+  "failures": [],
+  "matrix": [
+    {
+      "action_phase": "hospital_observing",
+      "case": "controlled_bed_click",
+      "closing": 0.0,
+      "dialogue": [],
+      "hero": "(2.55, 1.2)",
+      "hospital_body": {},
+      "input_lock_frames": 0,
+      "menu": false,
+      "public_action": {
+        "kind": "observe",
+        "origin": "controlled",
+        "room": "ward",
+        "serial": 2,
+        "target": "bed_card_old"
+      },
+      "result": {
+        "context": {
+          "action": "autonomy",
+          "father_rescue": false,
+          "intent_point": [
+            2.54999995231628,
+            1.20000004768372
+          ],
+          "medical_rescue": false,
+          "room": "ward",
+          "target": "self"
+        },
+        "event_id": "neural:1:1",
+        "id": "CONTROL",
+        "ok": true,
+        "power": 4,
+        "reason": "queued",
+        "resistance": 0,
+        "success": true
+      },
+      "status_note": "接近并翻看：揭开床头卡覆盖处"
+    }
+  ],
+  "passes": [
+    "distant card cannot begin physical reading or grant knowledge",
+    "near card behind LOS blocker cannot be read",
+    "actual preparation begins with no early read, reward or resource change",
+    "contact then finish remain visible and unread before the complete one second",
+    "only full physical reading commits one receipt and knowledge without income",
+    "completed same-revision card cannot replay a read or fact",
+    "actual half-read JSON and manual pause retain exact contact progress without completion",
+    "saved contact resumes remaining duration once and completed JSON cannot duplicate it",
+    "actual SKIN interrupts unfinished card without completed knowledge",
+    "actual GUT interrupts unfinished card rather than completing it",
+    "actual needle/grip contact from explicit final-windup fixture interrupts unfinished card first",
+    "actual remaining lift contact moves bag and cancels unfinished label reading",
+    "room transition cancels an unfinished read without granting card knowledge",
+    "four actually read pages with null case glyphs remain separate rather than proving same-number identity",
+    "both actually read texts retain the explicitly authored same-person rewrite without inventing number glyphs",
+    "actually read unspecified signature and registration glyphs cannot invent date order",
+    "actual completed office search removes its already-read page from optional reading candidates",
+    "removed bag leaves no readable label or empty-location information",
+    "autonomous observation route actually moves without teleporting or starting remotely",
+    "route starts preparation only after reaching the actual legal anchor",
+    "actual CONTROL and viewport bed click start optional observation without key-search or premature controlled-execution evidence",
+    "controlled bed observation records actual execution only at full reading completion, with no fictitious ward search",
+    "actual controlled floor click replaces unfinished reading without its late knowledge or receipt",
+    "same-position owned page closes navigation and begins its separate actual observe public action",
+    "separate held-page public observation closes on real completion and on actual SKIN cancellation",
+    "existing medical body action has priority over optional clinic page reading",
+    "previously read old card produces exact configured three original lines only at completed nurse number-check contact",
+    "guide cover behavior becomes known only at completed registration contact and reveals no hidden back fields"
+  ],
+  "rendered": true,
+  "scope": "representative physical hospital observation preparation/contact/finish, cancellation, actual JSON/pause, null-glyph relations, actual office search and routing, viewport mouse controlled reading and original dialogue hooks; explicit actor/location/prior-phase/resource fixtures; not all page semantics, natural probability coverage, human play or final-art/audio acceptance"
+}

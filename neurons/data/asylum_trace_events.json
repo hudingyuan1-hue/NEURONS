@@ -1,0 +1,224 @@
+{
+  "sources": [
+    "S3:P950–1013/T32",
+    "S4:P0185–0186（不额外扣值）"
+  ],
+  "parameters": {
+    "note": "逻辑米与有限动作表现参数；非新增剧情数值。病友带离没有英雄6秒上限。清理只由游戏时钟驱动。",
+    "walk_speed": 0.75,
+    "notice_distance": 2.0,
+    "body_clearance": 0.36,
+    "door_notice": 0.7,
+    "contact_seconds": 0.55,
+    "wash_seconds": 1.5,
+    "reach_seconds": 0.5,
+    "read_seconds": 1.0,
+    "read_distance": 0.65
+  },
+  "corpse": {
+    "identity": "independent_deceased",
+    "source_relation": "脚腕标签、地漏断裂腕带、用餐名单属于同一独立死者；不是patient/postop_patient/transport_patient或任何既往活人身份",
+    "source": "S3:P952"
+  },
+  "corridor_parking": [
+    3.9,
+    0.8
+  ],
+  "corner_waiting": [
+    3.8,
+    2.55
+  ],
+  "medical_staff": [
+    "ordinary_orderly",
+    "registration_nurse",
+    "doctor",
+    "assistant",
+    "pharmacist",
+    "med_nurse",
+    "archivist",
+    "guard",
+    "head_nurse",
+    "porter",
+    "therapist",
+    "isolation_orderly",
+    "supervisor"
+  ],
+  "relic_order": [
+    "asylum_corpse_wristband",
+    "asylum_meal_list"
+  ],
+  "relics": {
+    "asylum_corpse_wristband": {
+      "name": "地漏断裂腕带",
+      "owner": "bathroom:drain",
+      "pos": [
+        2.75,
+        1.75
+      ],
+      "region": "drain",
+      "source": "S3:P952/P954–956"
+    },
+    "asylum_meal_list": {
+      "name": "用餐名单残页",
+      "owner": "bathroom:relics",
+      "pos": [
+        4.2,
+        2.5
+      ],
+      "region": "shower2",
+      "source": "S3:P955"
+    }
+  },
+  "notes": {
+    "asylum_patient_transfer_note": {
+      "actor": "patient",
+      "source": "S3:P982–986"
+    },
+    "asylum_corner_transfer_note": {
+      "actor": "corner_patient",
+      "source": "S3:P982–986"
+    }
+  },
+  "wash_regions": [
+    {
+      "id": "shower1",
+      "pos": [
+        4.2,
+        1.1
+      ]
+    },
+    {
+      "id": "drain",
+      "pos": [
+        2.75,
+        1.75
+      ]
+    },
+    {
+      "id": "shower2",
+      "pos": [
+        4.2,
+        2.5
+      ]
+    }
+  ],
+  "glyphs": {
+    "corpse_tag": {
+      "number": null
+    },
+    "asylum_corpse_wristband": {
+      "number": null
+    },
+    "asylum_meal_list": {
+      "number": null
+    },
+    "asylum_patient_transfer_note": {
+      "date": null,
+      "vehicle": null,
+      "number": null
+    },
+    "asylum_corner_transfer_note": {
+      "date": null,
+      "vehicle": null,
+      "number": null
+    }
+  },
+  "read_text": {
+    "corpse_tag": "实际看清独立死者脚腕标签的可辨部分；具体号码尚未提供，不绑定任何活人。",
+    "asylum_corpse_wristband": "实际查看地漏断裂腕带；没有拿取就仍在现场，可被保洁员收走。",
+    "asylum_meal_list": "实际展开用餐名单残页；名单只证明记录存在，不证明此人仍活着，具体编号未知。",
+    "asylum_patient_transfer_note": "实际读到跨关精神病人出示的旧转运凭条；日期、车次、个人号字形未知，物件仍归他。",
+    "asylum_corner_transfer_note": "实际读到角落病友出示的旧转运凭条；日期、车次、个人号字形未知，物件仍归他。"
+  },
+  "dialogue": {
+    "COVER": [
+      {
+        "speaker": "保洁员[平静]",
+        "text": "让一下，这里还没收完。",
+        "source": "S3:P962"
+      }
+    ],
+    "CORPSE_SEEN": [
+      {
+        "speaker": "角色[震惊]",
+        "text": "里面有个人。",
+        "source": "S3:P964"
+      },
+      {
+        "speaker": "保洁员[平静]",
+        "text": "先出去。",
+        "source": "S3:P965"
+      }
+    ],
+    "RELIC_MATCH": [
+      {
+        "speaker": "角色[凝重]",
+        "text": "这两处的号码对得上。",
+        "source": "S3:P967"
+      },
+      {
+        "speaker": "玩家[认真]",
+        "text": "记清楚，东西要被收走了。",
+        "source": "S3:P968"
+      }
+    ],
+    "SAME_CAR": [
+      {
+        "speaker": "跨关精神病人[低声]",
+        "text": "我们是同一辆车送来的。",
+        "source": "S3:P988"
+      }
+    ],
+    "CORNER_SHOW": [
+      {
+        "speaker": "角落病友[低声]",
+        "text": "这个号，我记得。",
+        "source": "S3:P990"
+      }
+    ],
+    "BOTH_NOTES": [
+      {
+        "speaker": "角色[认真]",
+        "text": "车次相同，你们的号码不同。",
+        "source": "S3:P992"
+      },
+      {
+        "speaker": "玩家[认真]",
+        "text": "再看看日期。",
+        "source": "S3:P993"
+      }
+    ],
+    "ONE_NOTE": [
+      {
+        "speaker": "角色[疑惑]",
+        "text": "另一份呢？",
+        "source": "S3:P995"
+      }
+    ],
+    "ORDERLY": [
+      {
+        "speaker": "护工[冷淡]",
+        "text": "收起来，跟我走。",
+        "source": "S3:P1007"
+      }
+    ],
+    "CORNER_HELD": [
+      {
+        "speaker": "角落病友[低声]",
+        "text": "别拿我的东西。",
+        "source": "S3:P1010"
+      }
+    ],
+    "WITNESS_CORNER": [
+      {
+        "speaker": "角色[生气]",
+        "text": "他只是给我看了一张纸。",
+        "source": "S3:P1012"
+      }
+    ]
+  },
+  "scope": {
+    "fully_covered_claim_not_allowed": "阅读过1份或2份单独保存。未知字段不能比相等，不调用992/993。原988仅保存为当事人陈述；未交付凭条不改唯一物权。",
+    "interruption": "保洁员缺席/通道堵塞保留清理进度；角色神经异常不相关时不停止工作；菜单/对白冻结由app游戏时钟统一。"
+  }
+}

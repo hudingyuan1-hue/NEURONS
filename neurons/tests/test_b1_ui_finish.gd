@@ -111,6 +111,6 @@ func run() -> void:
  var out:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
  out.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":true,"scope":"UI-only 12-skill poses and 13 language wrappers; explicit 100C fixture; original source quotes separately compared; not combat/character art approval"},"  "));out.close()
  print("B1_UI_FINISH %d passed %d failed"%[passes.size(),failures.size()])
- app.audio.reset_scene();frontend.remove_child(app);app.queue_free();frontend.active=null;app=null
- await frames(4);root.remove_child(frontend);frontend.queue_free();await frames(4)
- quit(0 if failures.is_empty() else 1)
+ # Use the production shutdown, which freezes the world and gives the
+ # asynchronous audio backend its real-time retirement window at fast FPS.
+ frontend.request_exit(0 if failures.is_empty() else 1)

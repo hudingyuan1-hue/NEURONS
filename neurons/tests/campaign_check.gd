@@ -158,8 +158,8 @@ func _ready() -> void:
  check(count==32,"hospital room point counts are exactly 0 + 6 + 8 + 7 + 11")
  app.restore_snapshot(hospital)
  app.paused_manual=true
- check(fast_until(func():return app.session.data.exploration_boundary,9000),"hospital AI travels actual spoke doors searches and reaches keyed stair boundary")
- check(app.has_key() and app.rules.plexus==5,"hospital exploration never duplicates unlock reward")
+ check(fast_until(func():return int(app.session.data.level)==3,9000),"hospital AI travels actual spoke doors searches and opens the keyed stairs into L3")
+ check(app.rules.plexus==7 and app.session.data.targets.size()==14,"hospital departure grants the new L3 unlock once and samples the next fixed key")
  await capture("05_hospital_exit_boundary")
  check(JSON.stringify(hospital,"",true)==hospital_fingerprint,"saved snapshot arrays and receipts never mutate while the live world advances")
  # Paused in-flight search snapshots retain completion receipts across repeated loads.

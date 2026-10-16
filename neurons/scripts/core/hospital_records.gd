@@ -56,6 +56,30 @@ func guard_free() -> bool:
  var value:Dictionary=state().guard
  return owner.present("guard") and value.phase=="idle" and str(owner.data.get("holder",""))!="guard"
 
+func sees_patient() -> bool:
+ if not owner.present("guard") or not owner.present("patient"):return false
+ var room:String=str(owner.actor("patient").room)
+ if visible("guard",owner.position("patient"),room,parameter("notice_distance",1.2)):return true
+ # The patient stays outside the office. An actual open doorway can be seen
+ # from both sides; the guard still has to walk through it before reaching.
+ if str(owner.actor("guard").room)!="office" or room!="lobby":return false
+ var inside:Vector2=owner.app.door_point_for("office","lobby")
+ var outside:Vector2=owner.app.door_point_for("lobby","office")
+ return owner.position("guard").distance_to(inside)+owner.position("patient").distance_to(outside)<=parameter("notice_distance",1.2) and owner.layout_for("office").clear_segment(owner.position("guard"),inside) and owner.layout_for("lobby").clear_segment(outside,owner.position("patient"))
+
+func advance_patient(delta:float) -> void:
+ var value:Dictionary=state()
+ if value.patient_gone or not owner.present("patient") or str(owner.actor("patient").room)!="lobby":return
+ if value.guard.target=="patient" and value.guard.phase!="idle":return
+ if not value.has("patient_walk"):value.patient_walk={"leg":"center","left":parameter("patient_pause",3.0)}
+ var walk:Dictionary=value.patient_walk
+ walk.left=maxf(0,float(walk.left)-delta)
+ if float(walk.left)>0:return
+ var target:Vector2=Vector2(2.8,1.4) if walk.leg=="center" else owner.app.door_point_for("lobby","office")+Vector2(0,0.45)
+ if owner.move("patient",target,delta):
+  walk.leg="office" if walk.leg=="center" else "center"
+  walk.left=parameter("patient_pause",3.0)
+
 func tick(delta:float) -> void:
  if owner.data.is_empty():return
  var value:Dictionary=state()
@@ -73,11 +97,13 @@ func tick(delta:float) -> void:
  if not owner.app.dialogue_queue.is_empty():return
  if guard_free() and not value.patient_gone and owner.present("patient"):
   var room:String=str(owner.actor("patient").room)
-  if visible("guard",owner.position("patient"),room,parameter("notice_distance",1.2)):
+  if sees_patient():
    value.guard.phase="approach";value.guard.target="patient";value.guard.elapsed=0.0
    value.guard.last_seen=xy(owner.position("patient"));value.guard.last_room=room
    value.patient_silenced=true
    if owner.near("patient",2.0):owner.say("PATIENT_STOP")
+ if not owner.app.dialogue_queue.is_empty():return
+ advance_patient(delta)
 
 func advance_archivist(delta:float) -> void:
  if not owner.present("archivist"):return
@@ -204,10 +230,13 @@ func advance_guard(delta:float) -> void:
  var hero:bool=event.target=="hero"
  var target_room:String=owner.app.room_id if hero else str(owner.actor("patient").room)
  var target_pos:Vector2=owner.app.hero_pos if hero else owner.position("patient")
- var can_see:bool=visible("guard",target_pos,target_room,parameter("notice_distance",1.2))
+ var can_see:bool=visible("guard",target_pos,target_room,parameter("notice_distance",1.2)) if hero else sees_patient()
  if event.phase=="approach":
   if can_see:event.last_seen=xy(target_pos);event.last_room=target_room
-  if str(owner.actor("guard").room)!=str(event.last_room):finish_guard(true);return
+  if str(owner.actor("guard").room)!=str(event.last_room):
+   if hero or not can_see:finish_guard(true);return
+   owner.travel("guard",str(event.last_room),delta)
+   return
   var at:Vector2=point(event.last_seen)
   if not can_see:
    if owner.move("guard",at,delta):finish_guard(true)
@@ -256,8 +285,12 @@ func advance_guard(delta:float) -> void:
    if owner.app.hero_pos.distance_to(doorway)<0.05 or float(event.elapsed)>=float(owner.config.timing.guard_max):finish_guard()
   else:
    value.patient_witness=bool(value.get("patient_witness",false)) and owner.near("guard",2.0)
-   if owner.position("guard").distance_to(owner.position("patient"))<=0.6:owner.move("guard",doorway,delta)
-   owner.move("patient",owner.position("guard"),delta)
+   var leader_arrived:bool=owner.position("guard").distance_to(doorway)<0.035
+   if owner.position("guard").distance_to(owner.position("patient"))<=0.6:leader_arrived=owner.move("guard",doorway,delta)
+   # Once the leader reaches the doorway, the follower walks its last few
+   # centimetres to that same exit, rather than stopping at the leader's
+   # movement tolerance and leaving the pair permanently short of the door.
+   owner.move("patient",doorway if leader_arrived else owner.position("guard"),delta)
    if owner.position("patient").distance_to(doorway)<0.05:
     value.patient_gone=true;owner.data.patient_gone=true;owner.actor("patient").phase="gone"
     owner.claim("patient_removed","patient_removed",{"room":room})
@@ -270,6 +303,10 @@ func on_skill(result:Dictionary) -> void:
  # The skill acts only on the protagonist. It cannot release the patient or
  # erase a report; normal body reactions never undo an established grip.
  if event.target=="hero" and event.phase=="reach" and result.get("id","")=="WITHDRAW":event.evaded=true
+ # An assistant may record an observed refusal, never a resisted cast or a
+ # mere reaction after injury. This does not imply an attack or valid sample.
+ if result.get("id","")=="WITHDRAW" and owner.data.body.get("kind","")=="exam" and owner.present("doctor") and owner.actor("doctor").phase=="grab" and owner.near("doctor",0.65) and owner.near("assistant",2.0):
+  owner.record("refusal:"+owner.current_visit(),"不配合检查")
 
 func kick_contact() -> void:pass
 

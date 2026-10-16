@@ -1,0 +1,21 @@
+{
+  "body": {},
+  "frame": 4800,
+  "guard": {
+    "done": false,
+    "elapsed": 0.0,
+    "last_room": "",
+    "last_seen": [],
+    "phase": "idle",
+    "target": ""
+  },
+  "hero": [
+    4.18374490737915,
+    1.08374500274658
+  ],
+  "hospital_reading": {},
+  "phase": "autonomy",
+  "room": "bathroom",
+  "transport": {},
+  "world_time": 169.499999999993
+}

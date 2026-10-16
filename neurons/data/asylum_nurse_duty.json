@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "sources": "S3:P701–728/T22, P799–808; S1:T10R3; S4:P109/T16R3; S5:R6-02/R6-04",
+  "presentation_timing": {"read": 0.45, "number_check": 0.4, "write": 0.75, "clip": 0.35},
+  "implementation_parameters": {
+    "status": "These are reversible presentation timings/standing positions, not a newly authored duty schedule or a rule gate.",
+    "source_contact_distance": 0.65,
+    "station_write_pos": [1.3, 2.7],
+    "prior_copy_room": "office",
+    "prior_copy_index": 6,
+    "station_room": "corridor",
+    "station_index": 0,
+    "duty_wait_seconds": null
+  },
+  "categories": ["安静", "拒服", "待处理"],
+  "fields": {"patient_number": null},
+  "dialogue": {
+    "COPIED_ERROR": [
+      {"speaker": "角色[质问]", "text": "这件事不是这样发生的。", "source": "S3:P806"},
+      {"speaker": "病区护士[平静]", "text": "我收到的就是这份。", "source": "S3:P807"},
+      {"speaker": "玩家[凝重]", "text": "抄了一遍，还是错的。", "source": "S3:P808"}
+    ]
+  }
+}

@@ -81,6 +81,12 @@ func extra_actors() -> Array:
  var actors:Array=app.home.actors() if app!=null and app.home!=null else []
  if app!=null and app.family!=null:actors.append_array(app.family.actors())
  if app!=null and app.hospital!=null:actors.append_array(app.hospital.actors())
+ if app!=null and app.asylum!=null:actors.append_array(app.asylum.actors())
+ if app!=null and app.asylum!=null and app.session.data.level==3:
+  for item in asylum_props():
+   if item.room==app.room_id:
+    var at:=Vector2(float(item.pos[0]),float(item.pos[1]))
+    actors.append({"type":"actor","data":"asylum_prop:"+str(item.id),"depth":layout.project(at).y-0.1})
  if app!=null and app.hidden_route!=null:actors.append_array(app.hidden_route.actors())
  if app!=null and app.search_actions!=null and app.room_id=="bedroom":
   var props:Dictionary=app.search_actions.state("box")
@@ -115,11 +121,114 @@ func bedside_handle() -> Vector2:
  var spec:Dictionary=catalog.furniture()
  return layout.project(layout.furniture[1].rect.position)-Vector2(float(spec.foot[0]),float(spec.foot[1]))+Vector2(float(spec.handle[0]),float(spec.handle[1]))+Vector2(float(spec.travel[0]),float(spec.travel[1]))*float(app.drawer_open.get("bedside",0.0))
 
+func asylum_props() -> Array:
+ var result:Array=app.asylum.ward_events.markers()
+ result.append_array(app.asylum.trace_events.render_state())
+ if app.asylum.isolation!=null:result.append_array(app.asylum.isolation.markers())
+ for index in range(result.size()-1,-1,-1):
+  if app.rules.owners.get(str(result[index].id),"")=="hero":result.remove_at(index)
+ var held:Array=app.asylum.trace_events.config.relics.keys()+app.asylum.trace_events.config.notes.keys()+["asylum_transport_band"]
+ var slot:int=0
+ for id in held:
+  if app.rules.owners.get(str(id),"")!="hero":continue
+  result.append({"id":str(id),"room":app.room_id,"pos":[app.hero_pos.x,app.hero_pos.y],"kind":"band" if id=="asylum_transport_band" else "relic","held":true,"draw_offset":[20+slot*13,-23]})
+  slot+=1
+ return result
+
+func asylum_item_pixel(item:Dictionary) -> Vector2:
+ var offset:Array=item.get("draw_offset",[0,0])
+ return layout.project(Vector2(float(item.pos[0]),float(item.pos[1])))+Vector2(float(offset[0]),float(offset[1]))+Vector2(0,-5)
+
 func draw_actor(who:String) -> void:
+ if who.begins_with("asylum_prop:"):
+  for item in asylum_props():
+   if str(item.id)!=who.trim_prefix("asylum_prop:") or item.room!=app.room_id:continue
+   var offset:Array=item.get("draw_offset",[0,0])
+   var at:Vector2=layout.project(Vector2(float(item.pos[0]),float(item.pos[1])))+Vector2(float(offset[0]),float(offset[1]))
+   match str(item.kind):
+    "transport_bed":
+     draw_rect(Rect2(at+Vector2(-22,-18),Vector2(44,15)),Color("5c6a65"))
+     draw_rect(Rect2(at+Vector2(-20,-21),Vector2(40,12)),Color("bbc1b1"))
+     for x in [-15,15]:draw_circle(at+Vector2(x,0),3,Color("303e40"))
+    "corpse":
+     draw_ellipse_blood(at)
+     draw_rect(Rect2(at+Vector2(-20,-12),Vector2(39,9)),Color("8e9e96") if item.covered else Color("8a635e"))
+     if not item.covered:draw_circle(at+Vector2(-20,-10),5,Color("c4b5a6"))
+     if item.get("screen_closed",false):
+      draw_rect(Rect2(at+Vector2(-23,-45),Vector2(46,40)),Color("6c8180"))
+      for i in range(6):draw_line(at+Vector2(-20+i*8,-43),at+Vector2(-20+i*8,-6),Color("526969"),1)
+    "box":draw_rect(Rect2(at+Vector2(-7,-10),Vector2(14,9)),Color("c0ac81"))
+    "trace":draw_ellipse_blood(at)
+    "band","relic","note":
+     draw_rect(Rect2(at+Vector2(-5,-7),Vector2(11,5)),Color("d2cdb1"))
+     draw_line(at+Vector2(-2,-5),at+Vector2(3,-5),Color("647674"),1)
+    "isolation_door":
+     var progress:float=float(item.get("progress",0))
+     draw_rect(Rect2(at+Vector2(-18,-51),Vector2(36*progress,50)),Color("596f6c"))
+     draw_rect(Rect2(at+Vector2(-18,-51),Vector2(36,50)),Color("a7ada0"),false,2)
+     if item.get("closed",false):draw_line(at+Vector2(-12,-25),at+Vector2(12,-25),Color("b68570"),3)
+     draw_string(font,at+Vector2(-23,-60),str(item.label),HORIZONTAL_ALIGNMENT_LEFT,-1,8,Color("dec6a4"))
+   return
+  return
+ if who.begins_with("asylum_"):
+  var id:String=who.trim_prefix("asylum_")
+  var actor:Dictionary=app.asylum.actor(id)
+  var at:Vector2=layout.project(app.asylum.position(id))
+  var color:=Color("899a95") if id not in ["patient","transport_patient","postop_patient","speaker","corner_patient","labor_patient"] else Color("829aa7")
+  var phase:String=str(actor.get("phase","idle"))
+  var action:String=app.asylum.ward_events.action_label(id)
+  if id=="med_nurse" and app.asylum.nurse_duty!=null:action=app.asylum.nurse_duty.action_label()
+  if not action.is_empty():phase=action
+  draw_circle(at,9,Color(0.05,0.08,0.08,0.3))
+  draw_rect(Rect2(at+Vector2(-8,-43),Vector2(16,29)),color)
+  draw_circle(at+Vector2(0,-51),8,color.lightened(0.2))
+  for side in [-1,1]:
+   draw_line(at+Vector2(side*5,-14),at+Vector2(side*5,0),color,5)
+   draw_line(at+Vector2(side*7,-37),at+Vector2(side*12,-20),color,4)
+  draw_line(at+Vector2(0,-1),at+Vector2(0,7),Color("d2bd83"),1)
+  var body:Dictionary=app.asylum.data.get("body",{})
+  if body.get("actor","")==id:
+   phase=str(body.get("kind",phase))
+   if app.asylum.near(id,0.65):draw_line(at+Vector2(6,-34),layout.project(app.hero_pos)+Vector2(10,-31),Color("c8cbb4"),3)
+   if phase=="registration_followup":
+    phase={"approach":"靠近答问","write":"书写追问记录","read":"出示记录"}.get(str(body.get("phase","")),"答问")
+    if body.get("phase","") in ["write","read"]:
+     draw_rect(Rect2(at+Vector2(10,-38),Vector2(11,13)),Color("d4c8ac"))
+     draw_line(at+Vector2(7,-37),at+Vector2(14,-31),Color("bfc8b8"),3)
+  if id=="med_nurse" and not action.is_empty() and (action.contains("写") or action.contains("核") or action.contains("读") or action.contains("夹")):
+   var hand:Vector2=at+Vector2(14,-33)
+   draw_line(at+Vector2(7,-37),hand,Color("c3c8ae"),3)
+   draw_rect(Rect2(hand+Vector2(-3,-6),Vector2(10,12)),Color("d4c8ac"))
+   if action.contains("写"):draw_line(hand+Vector2(7,-8),hand,Color("585c58"),1)
+  var ward:Dictionary=app.asylum.ward_events.state()
+  if id=="supervisor" and ward.clamp.phase=="windup":
+   var closing:Vector2=layout.project(layout.furniture[6].rect.position)+Vector2(0,-25)
+   draw_line(at+Vector2(6,-34),at.lerp(closing,clampf(float(ward.clamp.elapsed)/float(app.asylum.ward_events.config.presentation_timing.drawer_windup),0,1)),Color("b7bda9"),4)
+  if id=="postop_patient" and ward.postop.get("wound_visible",false):
+   draw_rect(Rect2(at+Vector2(3,-27),Vector2(8,11)),Color("b6b9a3"))
+   draw_line(at+Vector2(6,-24),at+Vector2(7,-19),Color("8d4246"),3)
+  var paired:String=""
+  var guard:Dictionary=app.asylum.data.get("records_state",{}).get("guard",{})
+  var corner:Dictionary=app.asylum.data.get("trace_events",{}).get("corner",{})
+  var isolated:Dictionary=app.asylum.data.get("isolation_state",{})
+  if id=="guard" and guard.get("target","")=="patient" and guard.get("phase","")=="drag":paired="patient"
+  if id=="ordinary_orderly" and ward.ordinary_job.get("holding",false) and ward.ordinary_job.get("target","")!="hero":paired=str(ward.ordinary_job.target)
+  if id=="ordinary_orderly" and corner.get("phase","")=="drag":paired="corner_patient"
+  if id=="isolation_orderly" and isolated.get("phase","")=="drag" and isolated.get("target","")!="hero":paired=str(isolated.target)
+  if not paired.is_empty() and app.asylum.present(paired) and app.asylum.actor(paired).room==app.room_id:
+   draw_line(at+Vector2(6,-34),layout.project(app.asylum.position(paired))+Vector2(0,-32),Color("c0bda4"),4)
+  phase={"idle":"等候","absent":"未到场","wrist_check":"核对腕带","wrist_reach":"伸手抓取","wrist_hold":"扭腕固定","registration":"核对记录","diagnosis":"记录陈述","medical_order_write":"填写医嘱","order_transfer":"递出医嘱","order_receive":"接收医嘱","mix":"配药","cup_transfer":"递杯","raise_cup":"举杯","records_guard_drag":"带至门口","ward_ordinary_hero_drag":"带至站侧","ward_isolation_drag":"带入观察位"}.get(phase,phase)
+  var label:String=str(app.asylum.config.get("names",{}).get(id,id))
+  draw_string(font,at+Vector2(-20,-65),label+"·占位",HORIZONTAL_ALIGNMENT_LEFT,-1,8,Color("e0e1cb"))
+  draw_string(font,at+Vector2(-20,-76),phase,HORIZONTAL_ALIGNMENT_LEFT,-1,8,Color("d3b1a0"))
+  return
  if who=="hidden_hunter" or who.begins_with("hospital_"):
   var id:String=who.trim_prefix("hospital_")
   var at:Vector2=layout.project(app.hidden_route.position() if who=="hidden_hunter" else app.hospital.position(id))
   var phase:String=str(app.hidden_route.data.hunter.phase) if who=="hidden_hunter" else str(app.hospital.actor(id).phase)
+  if who!="hidden_hunter" and id=="guard":
+   var disposition:Dictionary=app.hospital.data.get("records_state",{}).get("guard",{})
+   if disposition.get("phase","idle")!="idle":phase=str(disposition.phase)
   var color:=Color("754e55") if who=="hidden_hunter" else Color("9aaba2")
   draw_circle(at,9,Color(0.05,0.08,0.08,0.3))
   draw_rect(Rect2(at+Vector2(-8,-43),Vector2(16,29)),color)
@@ -141,6 +250,14 @@ func draw_actor(who:String) -> void:
     draw_string(font,at+Vector2(-20,-77),str(body.kind),HORIZONTAL_ALIGNMENT_LEFT,-1,8,Color("e4c997"))
     if body.kind=="bandage":draw_rect(Rect2(hand-Vector2(4,2),Vector2(8,4)),Color("d7d8c4"))
    if id=="doctor" and phase=="sample":draw_line(at+Vector2(-4,-35),layout.project(app.hero_pos)+Vector2(10,-34),Color("b9d1c8"),1)
+   if id=="guard":
+    var disposition:Dictionary=app.hospital.data.get("records_state",{}).get("guard",{})
+    if disposition.get("target","")=="patient" and phase in ["reach","drag"] and app.hospital.actor("patient").room==app.room_id:
+     var paired:Vector2=layout.project(app.hospital.position("patient"))+Vector2(0,-31)
+     var arm:Vector2=at+Vector2(4,-34)
+     var reach:float=clampf(float(disposition.elapsed)/float(app.hospital.config.test_parameters.grab_prepare),0,1) if phase=="reach" else 1.0
+     draw_line(arm,arm.lerp(paired,reach),Color("bec3a7"),3)
+     draw_string(font,at+Vector2(-18,-78),"抓握前摇" if phase=="reach" else "带离",HORIZONTAL_ALIGNMENT_LEFT,-1,8,Color("dbb2a7"))
   if id=="wheelchair":draw_arc(at+Vector2(0,-8),12,0,TAU,12,Color("485c5a"),2)
   return
  if who=="upper_box":
@@ -204,6 +321,32 @@ func draw_actor(who:String) -> void:
   for i in range(5):draw_circle(center+Vector2(9+i%2*3,-35+i*3),1.0,Color("9fcebc"))
  if float(app.rules.effects.get("DRYMOUTH",0))>0:draw_line(center+Vector2(7,-43),center+Vector2(10,-35),Color("d6c8b0"),2)
  if app.hero_state=="eat":draw_eating_gesture(center)
+ if app.session.data.level==2:
+  var reading:Dictionary=app.hospital.data.get("observation_state",{}).get("active",{})
+  if not reading.is_empty():
+   var progress:float=float(reading.get("phase_progress",0))
+   var reach:float=progress if reading.phase=="prepare" else 1.0-progress if reading.phase=="finish" else 1.0
+   var hand:Vector2=center+Vector2(8+12*reach,-30-7*reach)
+   draw_line(center+Vector2(7,-35),hand,Color("a4b9bb"),3)
+   draw_rect(Rect2(hand+Vector2(-4,-6),Vector2(9,11)),Color("c9c6a9"))
+   draw_line(hand+Vector2(-2,-3),hand+Vector2(3,-3),Color("777e70"),1)
+   var phase_name:String={"prepare":"伸手","contact":"翻看","finish":"收手"}.get(str(reading.phase),"")
+   draw_string(font,center+Vector2(-28,-71),phase_name,HORIZONTAL_ALIGNMENT_LEFT,-1,9,Color("e1d6ad"))
+ if app.session.data.level==3 and app.asylum.blocks_hero() and str(app.asylum.data.holder).is_empty():
+  var reading:Dictionary=app.asylum.data.get("records_state",{}).get("reading",{})
+  var trace:Dictionary=app.asylum.data.get("trace_events",{}).get("active",{})
+  if reading.is_empty():reading=app.asylum.data.get("observations_state",{}).get("active",{})
+  if not reading.is_empty() or not trace.is_empty():
+   var elapsed:float=float(reading.get("elapsed",trace.get("elapsed",0)))
+   var reach:float=clampf(elapsed/0.25,0,1) if elapsed<0.65 else clampf((1.0-elapsed)/0.35,0,1)
+   var hand:Vector2=center+Vector2(9+11*reach,-33)
+   draw_line(center+Vector2(7,-35),hand,Color("afbeb3"),3)
+   draw_rect(Rect2(hand+Vector2(-4,-6),Vector2(9,11)),Color("d1c5a4"))
+ if app.session.data.level==3 and app.rules.owners.get("asylum_cup","")=="hero":
+  var raising:bool=app.asylum.data.get("body",{}).get("kind","")=="raise_cup"
+  var hand:Vector2=center+Vector2(12,-43 if raising else -27)
+  draw_line(center+Vector2(7,-36),hand,Color("9cb4b5"),3)
+  draw_rect(Rect2(hand+Vector2(-3,-4),Vector2(6,6)),Color("d2d6bc"))
  if app.session.data.level==2 and app.rules.owners.get("hospital_cup","")=="hero":
   var raising:bool=app.hospital.data.body.get("kind","")=="raise_cup"
   var hand:Vector2=center+Vector2(12,-43 if raising else -27)
@@ -221,6 +364,12 @@ func draw_actor(who:String) -> void:
  draw_line(center+Vector2(0,-2),center+app.hero_facing*9,Color("f1c17d"),1)
 
 func draw_furniture(f:Dictionary) -> void:
+ if f.has("collision_rects"):
+  for rect in f.collision_rects:prism(rect,float(f.height),f.color)
+  if f.collision_rects.is_empty():
+   var at:Vector2=layout.project(f.rect.get_center())
+   for i in range(4):draw_line(at+Vector2(-9+i*5,-3),at+Vector2(-6+i*5,4),Color("45565a"),1)
+  return
  if f.id=="bed" and app.action_phase=="resting" and not catalog.current.is_empty():
   super.draw_furniture(f);draw_resting_actor();return
  if app.search_actions==null or app.room_id!="bedroom":super.draw_furniture(f);return
@@ -299,6 +448,9 @@ func _draw() -> void:
  for id in app.visible_doors:
   var point:Vector2=layout.project(app.door_point(id))
   draw_arc(point,9,PI,TAU,16,Color("9dc2bb"),2)
+  if app.session.data.level==3:
+   var width:float=font.get_string_size(app.room_title(id),HORIZONTAL_ALIGNMENT_LEFT,-1,10).x
+   draw_rect(Rect2(point+Vector2(-15,-24),Vector2(width+3,13)),Color(0.1,0.18,0.19,0.8))
   draw_string(font,point+Vector2(-15,-13),app.room_title(id),HORIZONTAL_ALIGNMENT_LEFT,-1,10,Color("e2dfc9"))
  if app.key_visible() and not app.has_key():
   var point:Vector2=layout.project(app.key_position())+Vector2(0,-12)

@@ -1,0 +1,13 @@
+{
+  "version":1,
+  "source":"S3:P925–949/T30; S4:T15R9/P180–202; S5R3正文补丁§1",
+  "rules":{"hero_max_drag":6.0,"closed_observation":8.0,"close_limit":1.0,"open_limit":1.0,"regrab_delay":0.8,"hp_damage":0,"sp_damage":0,"healing":0},
+  "presentation_timing":{"order_receive":0.55,"target_check":0.45,"grab_prepare":0.5,"close":0.7,"open":0.6},
+  "parameters":{"notice_distance":2.0,"contact_distance":0.65,"grab_distance":0.55,"door_observe_distance":0.65,"walk_speed":0.9,"observation_pos":[2.8,1.6],"staff_side_pos":[3.3,0.65]},
+  "timing_note":"6秒带入上限、闭门后8秒观察、关门及开门各最多1秒、恢复可动0.8秒后才允许下一抓握来自S4；其他时长/距离仅可替换的表现参数，不增加伤害或通关要求。NPC送达不套用6秒上限。",
+  "dialogue":{
+    "NOTICE":[{"speaker":"隔离护工[平静]","text":"先到里面待一会儿。","source":"S3:P935"},{"speaker":"角色[警惕]","text":"为什么是我？","source":"S3:P936"}],
+    "CLOSED":[{"speaker":"角色[生气]","text":"门打开。","source":"S3:P939"},{"speaker":"护工[平静]","text":"等这次观察结束。","source":"S3:P940"}],
+    "OPENED":[{"speaker":"角色[凝重]","text":"可以走了？","source":"S3:P942"}]
+  }
+}

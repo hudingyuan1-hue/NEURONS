@@ -17,10 +17,20 @@ const VitalityPanel=preload("res://scripts/ui/vitality_panel.gd")
 const Tutorial=preload("res://scripts/ui/tutorial_overlay.gd")
 const HospitalEvents=preload("res://scripts/core/hospital_events.gd")
 const HospitalRecords=preload("res://scripts/core/hospital_records.gd")
+const HospitalObservations=preload("res://scripts/core/hospital_observations.gd")
 const HiddenStreet=preload("res://scripts/core/hidden_street.gd")
 const HiddenLayout=preload("res://scripts/world/hidden_layout.gd")
 const Achievements=preload("res://scripts/core/achievement_store.gd")
 const Opening=preload("res://scripts/ui/opening_flow.gd")
+const AsylumMap=preload("res://scripts/core/asylum_map.gd")
+const AsylumLayout=preload("res://scripts/world/asylum_layout.gd")
+const AsylumEvents=preload("res://scripts/core/asylum_events.gd")
+const AsylumWardEvents=preload("res://scripts/core/asylum_ward_events.gd")
+const AsylumRecords=preload("res://scripts/core/asylum_records.gd")
+const AsylumTrace=preload("res://scripts/core/asylum_trace_events.gd")
+const AsylumIsolation=preload("res://scripts/core/asylum_isolation.gd")
+const AsylumObservations=preload("res://scripts/core/asylum_observations.gd")
+const AsylumNurseDuty=preload("res://scripts/core/asylum_nurse_duty.gd")
 var session=Session.new()
 var store=Store.new()
 var profile:Dictionary={}
@@ -60,6 +70,7 @@ var hidden_route
 var achievements
 var restoring:bool=false
 var opening_ui
+var asylum
 
 func make_menu() -> Control:
  return CampaignMenu.new()
@@ -158,6 +169,14 @@ func _ready() -> void:
  family=FamilyEvents.new(self)
  hospital=HospitalEvents.new(self)
  hospital.records=HospitalRecords.new(hospital)
+ hospital.observations=HospitalObservations.new(hospital)
+ asylum=AsylumEvents.new(self)
+ asylum.ward_events=AsylumWardEvents.new(asylum)
+ asylum.records=AsylumRecords.new(asylum)
+ asylum.trace_events=AsylumTrace.new(asylum)
+ asylum.isolation=AsylumIsolation.new(asylum)
+ asylum.observations=AsylumObservations.new(asylum)
+ asylum.nurse_duty=AsylumNurseDuty.new(asylum)
  hidden_route=HiddenStreet.new(self)
  achievements=Achievements.new();achievements.root=store.root
  search_actions=SearchActions.new(self)
@@ -242,6 +261,7 @@ func _process(delta:float) -> void:
    if family.advance_collapse(delta):restart_attempt(3,true)
   update_ui();view.queue_redraw();return
  if rules.hp<=0:
+  if session.data.level==3 and asylum!=null:asylum.release_all()
   if death_left<=0:death_left=float(family.config.test_parameters.death_presentation)
   if not paused_manual and not menu.visible and not audio_panel.visible:
    death_left-=delta
@@ -303,10 +323,12 @@ func set_auto_status(value:bool) -> void:
  status_preferences_changed.emit(value)
 
 func room_title(id:String) -> String:
+ if int(session.data.level)==3:return str(AsylumMap.ROOM_NAMES.get(id,"第四关出口" if id=="cortex_exit" else id))
  return {"bedroom":"卧室","ward":"小病房","lobby":"候诊区","clinic":"诊室","pharmacy":"药房","office":"医护办公室","stairs":"楼梯","hidden_street":"隐藏Street · 广场"}.get(id,id)
 
 func layout_for_room(id:String):
  if id=="hidden_street":return HiddenLayout.new()
+ if int(session.data.level)==3 and id in AsylumMap.UPPER_ROOMS:return AsylumLayout.new(id)
  var floor_layout=Layout.new()
  if id!="bedroom" and id!="ward":
   floor_layout.furniture.clear()
@@ -326,14 +348,14 @@ func enter_room(id:String) -> void:
  layout=layout_for_room(id)
  view.layout=layout
  hero_pos=layout.BED_STOP if id=="bedroom" or id=="ward" else Vector2(2.8,1.4)
+ if int(session.data.level)==3 and not restoring and previous in AsylumMap.GRAPH.get(id,[]):hero_pos=AsylumMap.doorway(id,previous)
  hero_route=PackedVector2Array()
  target_index=-1
  hero_state="idle"
  drawer_open=session.data.rooms.get(id,{}).get("drawer",{}).duplicate(true)
  visible_doors=[]
  if id=="bedroom":visible_doors=["lobby"]
- elif Session.GRAPH.has(id):visible_doors=Session.GRAPH[id].duplicate()
- if id=="lobby":visible_doors.append("stairs")
+ else:visible_doors=session.doors(id)
  input_lock_frames=3
  action_phase="autonomy"
  status_note="进入"+room_title(id)
@@ -341,6 +363,7 @@ func enter_room(id:String) -> void:
  if audio!=null:
   if id!="bedroom":audio.stop_channel("ambience")
  if hospital!=null and not restoring:hospital.on_enter(previous,id)
+ if asylum!=null and not restoring:asylum.on_enter(previous,id)
 
 func enter_hidden_street() -> void:
  family.data.hidden_pending=false;family.data.pressure=0;family.data.blood_door=false
@@ -357,6 +380,7 @@ func door_point(id:String) -> Vector2:
  return door_point_for(room_id,id)
 
 func door_point_for(room:String,id:String) -> Vector2:
+ if int(session.data.level)==3:return AsylumMap.doorway(room,id)
  if room in ["bedroom","ward"]:return Layout.DOOR
  var doors:Array=Session.GRAPH.get(room,[]).duplicate()
  if room=="lobby":doors.append("stairs")
@@ -385,6 +409,13 @@ func advance_world(delta:float) -> void:
  if home!=null:home.tick(delta)
  if family!=null:family.tick(delta)
  if hospital!=null:hospital.tick(delta)
+ if asylum!=null:asylum.tick(delta)
+ if session.data.level==3 and rules.search_active and target_index>=0:
+  var descriptor:Dictionary=layout.furniture[target_index].get("data",{})
+  var ratio:float=rules.search_elapsed/rules.search_duration
+  search_actions.pose=str(descriptor.get("pose","mid")) if ratio>=0.08 and ratio<0.9 else "mid"
+  search_actions.action_label="准备" if ratio<0.08 else "收手" if ratio>=0.9 else {"low":"低位翻查","high":"高位查看"}.get(search_actions.pose,"翻查")
+  status_note=str(descriptor.get("action","搜寻中"))
  if not rules.search_active and rules.public_action.get("kind","")=="search" and rules.settled.has(rules._search_id):rules.finish_public_action(search_action_origin)
  world_visual_time+=delta
  var was_controlled:bool=rules.control_left>0
@@ -411,8 +442,11 @@ func advance_world(delta:float) -> void:
    status_note="搜寻完成：+1神经元；此处无钥匙"
   if completed_index>=0:search_actions.on_complete(completed_index,id==session.data.key_target)
   if completed_index>=0 and session.data.level==2:hospital.on_search_complete(completed_index,id==session.data.key_target)
+  if completed_index>=0 and session.data.level==3:asylum.on_search_complete(completed_index,id==session.data.key_target)
+  if completed_index>=0 and session.data.level==3:asylum_search_feedback(completed_index,id==session.data.key_target)
   target_index=-1
   return
+
  if not dialogue_queue.is_empty():return
  if not rules.control_feedback.is_empty() and not rules.body_busy() and not rules.gripped and not rules.search_active and action_phase=="autonomy":
   var stage:int=int(rules.control_feedback.pop_front())
@@ -426,6 +460,7 @@ func advance_world(delta:float) -> void:
   var attack:Dictionary=rules.advance_kick(delta)
   family.kick_contact()
   if hospital!=null and session.data.level==2:hospital.kick_contact()
+  if asylum!=null and session.data.level==3:asylum.kick_contact()
   hero_state="grab" if attack.get("phase","")=="prepare" else "give"
   return
  if not motion.is_empty():
@@ -445,6 +480,60 @@ func advance_world(delta:float) -> void:
  elif hero_state in ["scratch","hit","eat"]:hero_state="idle"
  if rules.body_busy() or rules.gripped:return
  if hospital!=null and session.data.level==2 and hospital.blocks_hero():return
+ if asylum!=null and session.data.level==3 and asylum.blocks_hero():return
+ if action_phase=="asylum_item":
+  var item:Dictionary=asylum.data.get("band_action",{})
+  var band:Dictionary=asylum.ward_events.state().transfer.band_drop
+  var held:bool=rules.owners.get("asylum_transport_band","")=="hero"
+  if item.is_empty() or band.is_empty() or rules.control_left<=0 or (not held and room_id!=str(band.room)):cancel_asylum_read();return
+  var at:Vector2=hero_pos if held else Vector2(float(band.pos[0]),float(band.pos[1]))
+  if hero_pos.distance_to(at)>0.65 or not layout.clear_segment(hero_pos,at):cancel_asylum_read();return
+  item.elapsed+=minf(delta,rules.control_left)
+  search_actions.pose="mid";search_actions.action_label="翻看腕带" if item.kind=="band_read" else "伸手拾取"
+  var finished:bool=false
+  if item.kind=="band_read":finished=float(item.elapsed)>=1.0 if band.get("read",false) else asylum.ward_events.read_band(minf(delta,rules.control_left))
+  elif float(item.elapsed)>=0.55:finished=asylum.ward_events.take_band()
+  if finished:
+   rules.controlled_execution("observe" if item.kind=="band_read" else "take","asylum_transport_band")
+   cancel_asylum_read()
+  return
+ if action_phase=="asylum_reading":action_phase="autonomy";hero_state="idle"
+ if action_phase=="asylum_read_route":
+  var request:Dictionary=asylum.data.get("read_route",{})
+  if request.is_empty() or request.get("controlled",false) and rules.control_left<=0:cancel_asylum_read();return
+  if request.kind=="observation":
+   var spec:Dictionary=asylum.observations.specification(str(request.id))
+   if spec.is_empty() or not asylum.observations.available(spec) or asylum.observations.target_room(spec)!=room_id:cancel_asylum_read();return
+  var at:Vector2=Vector2(float(request.pos[0]),float(request.pos[1]))
+  move_hero(delta)
+  if hero_pos.distance_to(at)<=0.035:
+   hero_route=PackedVector2Array();action_phase="asylum_reading"
+   if request.kind in ["band_read","band_take"]:
+    asylum.data.band_action=request.duplicate(true);asylum.data.band_action.elapsed=0.0;asylum.data.erase("read_route")
+    action_phase="asylum_item";hero_state="search"
+    rules.begin_public_action("observe" if request.kind=="band_read" else "take","asylum_transport_band","controlled",room_id)
+    return
+   var accepted:bool=asylum.begin_registration_followup(bool(request.controlled)) if request.kind=="registration_followup" else asylum.observations.begin(str(request.id),bool(request.controlled)) if request.kind=="observation" else asylum.records.begin_read(int(request.index),"",bool(request.controlled)) if request.kind=="record" else asylum.trace_events.begin_read(str(request.id)) if request.kind=="trace" else asylum.trace_events.take_relic(str(request.id))
+   if not accepted:cancel_asylum_read()
+   else:asylum.data.erase("read_route");hero_state="search"
+  return
+ if action_phase=="hospital_observing":action_phase="autonomy";hero_state="idle"
+ if action_phase=="hospital_observation_route":
+  var request:Dictionary=hospital.data.get("observation_route",{})
+  var spec:Dictionary=hospital.observations.specification(str(request.get("id","")))
+  if spec.is_empty() or not hospital.observations.available(spec) or hospital.observations.target_room(spec)!=room_id or (request.get("controlled",false) and rules.control_left<=0):
+   cancel_hospital_observation();return
+  var at:Vector2=hospital.observations.target_position(spec)
+  if hero_pos.distance_to(at)>0.035:
+   if hero_route.is_empty() or hero_route[-1].distance_to(at)>0.08:hero_route=layout.path(hero_pos,at)
+   if hero_route.is_empty():cancel_hospital_observation();return
+   move_hero(delta)
+  if hero_pos.distance_to(at)<=0.035:
+   hero_route=PackedVector2Array()
+   action_phase="hospital_observing" if hospital.observations.begin(str(spec.id),bool(request.get("controlled",false))) else "autonomy"
+   if action_phase=="autonomy" and rules.public_action.get("target","")==spec.id:rules.finish_public_action(route_action_origin)
+   hospital.data.erase("observation_route")
+  return
  if family!=null and family.blocks_hero():
   var pose:String=family.hero_pose()
   if not pose.is_empty():hero_state=pose
@@ -497,7 +586,7 @@ func advance_world(delta:float) -> void:
    if rules.begin_search(point_id(target_index)):
     search_action_origin="controlled"
     rules.controlled_execution("search",point_id(target_index))
-    rules.search_duration*=1.25 if session.data.level==2 else 1.0
+    rules.search_duration*=1.25 if session.data.level==2 else 1.5 if session.data.level==3 else 1.0
     hero_state="search"
    action_phase="autonomy"
   return
@@ -513,6 +602,10 @@ func advance_world(delta:float) -> void:
     audio.cue("SFX_KEY",event_id)
     status_note="钥匙已实际取得，前往出口"
    action_phase="autonomy"
+  return
+ if action_phase in ["door","opening"] and session.data.level==3 and not asylum.isolation.can_exit(room_id,destination):
+  hero_route=PackedVector2Array();action_phase="autonomy";hero_state="idle"
+  status_note="门已实际关闭；离房动作取消，室内仍可行动与查看"
   return
  if action_phase=="door" or action_phase=="return_bed":
   move_hero(delta)
@@ -533,14 +626,16 @@ func advance_world(delta:float) -> void:
    return
   if action_left>0:return
   if action_phase=="resting":finish_rest()
-  elif destination=="stairs":
-   session.data.exploration_boundary=true
-   status_note="已到第二关出口；第三关及人物分支待接入，当前不宣称全游戏完成"
+  elif destination=="stairs" and session.data.level==2:unlock_asylum()
+  elif destination=="cortex_exit" and session.data.level==3:
+   session.data.exploration_boundary=true;action_phase="autonomy";hero_state="idle"
+   status_note="已到第三关持钥匙出口；第四关仍待接入，此处不是结局"
   elif room_id=="bedroom":unlock_hospital()
   else:enter_room(destination)
   return
  if has_key():
-  route_to_door("lobby" if room_id=="bedroom" or room_id!="lobby" else "stairs")
+  if session.data.level==3:route_to_door("cortex_exit" if room_id=="stairs" else session.next_room(room_id,"stairs"))
+  else:route_to_door("lobby" if room_id=="bedroom" or room_id!="lobby" else "stairs")
   return
  if key_visible():
   if hero_pos.distance_to(key_position())<=0.035:
@@ -559,7 +654,86 @@ func advance_world(delta:float) -> void:
    hero_route=layout.path(hero_pos,layout.BED_STOP)
   return
  if action_phase=="autonomy" and family!=null and family.try_auto_food():return
+ if action_phase=="autonomy" and target_index<0 and session.data.level==2 and not has_key() and rules.control_left<=0:
+  var observation:Dictionary=hospital.observations.candidate(room_id)
+  if not observation.is_empty() and hero_pos.distance_to(observation.pos)<=1.2:
+   if route_hospital_observation(observation,false):return
+ if action_phase=="autonomy" and target_index<0 and session.data.level==3 and room_id=="office" and not has_key() and rules.control_left<=0:
+  for index in asylum.records.read_candidates():
+   var at:Vector2=layout.furniture[int(index)].at
+   if hero_pos.distance_to(at)<=1.2 and route_asylum_read({"kind":"record","index":int(index),"pos":[at.x,at.y]},false):return
+ if action_phase=="autonomy" and target_index<0 and session.data.level==3 and not has_key() and rules.control_left<=0:
+  var observation:Dictionary=asylum.observations.candidate(room_id)
+  if not observation.is_empty() and hero_pos.distance_to(observation.pos)<=1.2:
+   if route_asylum_read({"kind":"observation","id":str(observation.id),"pos":[observation.pos.x,observation.pos.y]},false):return
  choose_public_target(delta)
+
+func route_asylum_read(request:Dictionary,controlled:bool) -> bool:
+ var at:Vector2=Vector2(float(request.pos[0]),float(request.pos[1]))
+ var path:PackedVector2Array=layout.path(hero_pos,at)
+ if path.is_empty() and hero_pos.distance_to(at)>0.035:return false
+ cancel_asylum_read();rules.cancel_search()
+ request.controlled=controlled;asylum.data.read_route=request.duplicate(true)
+ hero_route=path;target_index=-1;controlled_route=false;action_phase="asylum_read_route"
+ route_action_origin="controlled" if controlled else "autonomous"
+ rules.begin_public_action("navigation",str(request.get("id",request.get("index",""))),route_action_origin,room_id)
+ status_note="接近并翻看实物；完成前不取得信息"
+ return true
+
+func route_registration_followup() -> bool:
+ var request:Dictionary=asylum.registration_interaction(true)
+ if request.is_empty():return false
+ var subject:Vector2=Vector2(float(request.pos[0]),float(request.pos[1]))
+ for offset in [Vector2(0.6,0),Vector2(-0.6,0),Vector2(0,0.6),Vector2(0,-0.6)]:
+  var stand:Vector2=subject+offset
+  if not layout.walkable(stand) or not layout.clear_segment(stand,subject):continue
+  if hero_pos.distance_to(stand)>0.035 and layout.path(hero_pos,stand).is_empty():continue
+  request.pos=[stand.x,stand.y]
+  return route_asylum_read(request,true)
+ return false
+
+func cancel_asylum_read() -> void:
+ if session.data.level!=3 or asylum==null:return
+ asylum.records.cancel_read("new_action");asylum.trace_events.cancel_read();asylum.data.erase("read_route")
+ if asylum.observations!=null:asylum.observations.cancel()
+ asylum.cancel_registration_interaction()
+ if asylum.data.has("band_action"):
+  var band:Dictionary=asylum.ward_events.state().transfer.band_drop
+  if not band.is_empty() and not band.get("read",false):band.read_elapsed=0.0
+  asylum.data.erase("band_action")
+  if rules.public_action.get("target","")=="asylum_transport_band":rules.finish_public_action(str(rules.public_action.get("origin","controlled")))
+ if action_phase in ["asylum_reading","asylum_read_route","asylum_item"]:
+  if rules.public_action.get("kind","")=="navigation":rules.finish_public_action(str(rules.public_action.get("origin","autonomous")))
+  action_phase="autonomy";hero_route=PackedVector2Array()
+
+func asylum_search_feedback(index:int,found_key:bool) -> void:
+ if found_key:
+  add_dialogue("角色 · 得意","哈！找到了！");add_dialogue("玩家 · 无语","可算找着了。")
+  return
+ var spec:Dictionary=layout.furniture[index].get("data",{})
+ if spec.is_empty() or not asylum.claim("search_comment:"+point_id(index),"asylum_search_feedback"):return
+ if room_id=="quiet" and index==2:asylum.observe("asylum_quiet_scratches","实际掀开活动软垫并查看缝隙、座面下方的抓痕；未认定是角色自己留下。")
+ var visible:bool=not spec.get("failure_requires_observation",false) or (room_id=="quiet" and "asylum_quiet_scratches" in rules.known) or (room_id=="workshop" and "asylum_display_label_back_seen" in rules.known)
+ add_dialogue("角色",str(spec.get("failure_hero","这里没有钥匙。")) if visible else str(spec.get("failure_unobserved","这里没有钥匙。")))
+ if visible:add_dialogue("玩家",str(spec.get("failure_player","")))
+
+func route_hospital_observation(target:Dictionary,controlled:bool) -> bool:
+ var path:PackedVector2Array=layout.path(hero_pos,target.pos)
+ if path.is_empty() and hero_pos.distance_to(target.pos)>0.035:return false
+ cancel_hospital_observation()
+ hospital.data.observation_route={"id":str(target.id),"controlled":controlled}
+ hero_route=path;target_index=-1;controlled_route=false;action_phase="hospital_observation_route"
+ route_action_origin="controlled" if controlled else "autonomous"
+ rules.begin_public_action("navigation",str(target.id),route_action_origin,room_id)
+ status_note="接近并翻看："+str(target.name)
+ return true
+
+func cancel_hospital_observation() -> void:
+ if hospital==null or session.data.level!=2:return
+ var request:Dictionary=hospital.data.get("observation_route",{})
+ hospital.observations.cancel();hospital.data.erase("observation_route")
+ if not request.is_empty() and rules.public_action.get("kind","")=="navigation" and rules.public_action.get("target","")==request.id:rules.finish_public_action(str(rules.public_action.get("origin","autonomous")))
+ if action_phase in ["hospital_observing","hospital_observation_route"]:action_phase="autonomy";hero_route=PackedVector2Array()
 
 func choose_public_target(delta:float) -> void:
  # Only public sampled targets and already-completed receipts are inspected.
@@ -592,11 +766,12 @@ func choose_public_target(delta:float) -> void:
   rules.begin_public_action("search",point_id(target_index),"autonomous",room_id)
   if rules.begin_search(point_id(target_index)):
    search_action_origin="autonomous"
-   rules.search_duration*=1.25 if session.data.level==2 else 1.0
+   rules.search_duration*=1.25 if session.data.level==2 else 1.5 if session.data.level==3 else 1.0
    hero_state="search"
 
 func route_to_door(id:String) -> void:
  if not id in visible_doors:return
+ if session.data.level==3 and not asylum.isolation.can_exit(room_id,id):status_note="隔离门尚未实际打开；室内仍可行动与查看";return
  if room_id=="bedroom" and id=="lobby" and family!=null and not family.data.is_empty() and family.data.blood_door:
   status_note="血门仍由父亲事件控制；钥匙不能将其当作普通医院出口"
   return
@@ -621,6 +796,20 @@ func unlock_hospital() -> void:
  rules.owners["key"]=session.data.key_owner
  hospital.start_attempt()
  enter_room("lobby")
+
+func unlock_asylum() -> void:
+ # S1:P98/S4:T24: same first floor changes; the existing stairs stay open.
+ # Pass facts as a copy, never replay old treatment, samples or reports.
+ rules.end_control();rules.intervention_lock=false;rules.trial.clear();rules.public_action.clear()
+ rules.body_feedback.clear();rules.cancel_search()
+ if not 3 in session.data.unlocked:
+  session.data.unlocked.append(3);rules.neurons+=3;rules.plexus+=2
+ rules.search_attempts=0;rules.search_limit=14;rules._completed_targets.clear()
+ completed.clear();deferred_targets.clear();motion.clear()
+ session.new_attempt(3,rng);rules.actual_attempt=int(session.data.attempts["3"])
+ rules.owners.key=session.data.key_owner
+ asylum.start_attempt(hospital.data.duplicate(true))
+ enter_room("stairs")
 
 func finish_rest() -> void:
  restart_attempt(1,false)
@@ -651,6 +840,7 @@ func restart_attempt(cycle_increment:int,revival:bool) -> void:
  rules.owners["key"]=session.data.key_owner
  hidden_route.data.clear();rules.mode="exploration"
  if session.data.level==2:hospital.start_attempt()
+ if session.data.level==3:asylum.start_attempt(asylum.data.get("carry",{}).duplicate(true))
  enter_room("bedroom" if session.data.level==1 else "ward")
  family.start_attempt()
  if mother_unlock:unlock_hospital()
@@ -670,6 +860,7 @@ func apply_cast() -> void:
  var id:String=result.id
  if home!=null:home.anomaly(index_before,result)
  if session.data.level==2:hospital.on_skill(result)
+ if session.data.level==3:asylum.on_skill(result)
  if room_id=="hidden_street":hidden_route.on_skill(result)
  var interrupted:bool=result.search_cancelled or id in ["CONTROL","STARTLE","FEAR"]
  if action_phase=="observe_cuff" and id in ["SKIN","GUT","KNEE","WITHDRAW","STARTLE","FEAR","CONTROL"]:
@@ -713,7 +904,8 @@ func skill_context() -> Dictionary:
  if family!=null and family.present("father"):target="father";kind="father_event"
  elif family!=null and family.present("mother"):target="mother";kind="mother_event"
  var intended:Vector2=layout.furniture[target_index].at if target_index>=0 else hero_route[-1] if not hero_route.is_empty() else hero_pos
- var context:Dictionary={"father_rescue":family!=null and family.rescue_context(),"medical_rescue":session.data.level==2 and hospital.data.get("holder","")=="doctor","room":room_id,"action":kind,"target":target,"intent_point":[intended.x,intended.y]}
+ var medical_rescue:bool=(session.data.level==2 and hospital.data.get("holder","")=="doctor") or (session.data.level==3 and asylum.data.get("holder","") in ["doctor","assistant"])
+ var context:Dictionary={"father_rescue":family!=null and family.rescue_context(),"medical_rescue":medical_rescue,"room":room_id,"action":kind,"target":target,"intent_point":[intended.x,intended.y]}
  if room_id=="hidden_street":context.merge(hidden_route.skill_context(),true)
  return context
 
@@ -758,6 +950,7 @@ func move_hero(delta:float) -> void:
   rules.finish_public_action(route_action_origin)
 
 func cancel_control_route() -> void:
+ if session.data.level==3 and action_phase in ["asylum_reading","asylum_read_route","asylum_item"]:cancel_asylum_read()
  if controlled_route:
   hero_route=PackedVector2Array()
   controlled_route=false
@@ -785,30 +978,62 @@ func _unhandled_input(event:InputEvent) -> void:
  if event is InputEventMouseButton and event.pressed and not world_paused():
   var pixel:Vector2=world_mouse_position(event.position)
   var actor_screen:Vector2=layout.project(hero_pos)
-  if view.hero_body_rect().has_point(pixel):
+  var item_click:bool=false
+  if session.data.level==3 and rules.control_left>0 and event.button_index==MOUSE_BUTTON_LEFT:
+   for item in view.asylum_props():
+    if item.room!=room_id or str(item.kind) not in ["corpse","relic","note","band"]:continue
+    if pixel.distance_to(view.asylum_item_pixel(item))<=13:item_click=true;break
+  if view.hero_body_rect().has_point(pixel) and not item_click:
    if event.button_index==MOUSE_BUTTON_RIGHT:open_system_page("tree");return
    if event.button_index==MOUSE_BUTTON_LEFT:open_neuron_menu();return
   if rules.control_left>0 and not rules.body_busy() and not rules.gripped:
    var point:Vector2=layout.unproject(pixel)
    if event.button_index==MOUSE_BUTTON_RIGHT:
     hero_facing=(point-hero_pos).normalized();return
-   if event.button_index==MOUSE_BUTTON_LEFT and not view.hero_body_rect().has_point(pixel):
+   if event.button_index==MOUSE_BUTTON_LEFT and (item_click or not view.hero_body_rect().has_point(pixel)):
     for door in visible_doors:
      if pixel.distance_to(layout.project(door_point(door)))<18:
-      if door in ["stairs","lobby"] and room_id=="bedroom" or door=="stairs":
+      if (room_id=="bedroom" and door=="lobby") or (session.data.level==2 and door=="stairs") or door=="cortex_exit":
        if not has_key():status_note="门尚未具备开锁条件";return
-      rules.cancel_search();route_to_door(door);controlled_route=false;return
+      cancel_hospital_observation();cancel_asylum_read();rules.cancel_search();route_to_door(door);controlled_route=false;return
     if key_visible() and not has_key() and pixel.distance_to(layout.project(key_position())+Vector2(0,-12))<18:
+     cancel_hospital_observation()
+     cancel_asylum_read()
      rules.cancel_search()
      hero_route=layout.path(hero_pos,key_position());action_phase="controlled_pickup";controlled_route=false;return
+    if session.data.level==3:
+     if room_id=="lobby" and asylum.present("registration_nurse") and pixel.distance_to(layout.project(asylum.position("registration_nurse"))+Vector2(0,-25))<=18:
+      if route_registration_followup():return
+     for item in view.asylum_props():
+      if item.room!=room_id or str(item.kind) not in ["corpse","relic","note","band"]:continue
+      var at:=Vector2(float(item.pos[0]),float(item.pos[1]))
+      if pixel.distance_to(view.asylum_item_pixel(item))>13:continue
+      var id:String="corpse_tag" if item.kind=="corpse" else str(item.id)
+      if event.shift_pressed and rules.owners.get(id,"")=="hero":status_note="已经持有；普通点击可查看";return
+      var kind:String="band_take" if event.shift_pressed else "band_read"
+      if id!="asylum_transport_band":kind="take" if event.shift_pressed and asylum.trace_events.config.relics.has(id) else "trace"
+      if route_asylum_read({"id":id,"kind":kind,"pos":[at.x,at.y]},true):return
+      status_note="该实物当前不可接近；未读取、未取得";return
     for i in range(layout.furniture.size()):
      if layout.furniture[i].rect.has_point(point):
+      if session.data.level==2 and (i>=Session.ROOM_POINTS[room_id].size() or point_id(i) in completed):
+       var observation:Dictionary=hospital.observations.candidate(room_id,i)
+       if not observation.is_empty() and route_hospital_observation(observation,true):return
+      if session.data.level==3 and room_id=="office" and i in asylum.records.read_candidates():
+       var at:Vector2=layout.furniture[i].at
+       if route_asylum_read({"kind":"record","index":i,"pos":[at.x,at.y]},true):return
+      if session.data.level==3 and room_id=="lobby" and i==0 and route_registration_followup():return
+      if session.data.level==3:
+       var observation:Dictionary=asylum.observations.candidate(room_id,i)
+       if not observation.is_empty() and route_asylum_read({"kind":"observation","id":str(observation.id),"pos":[observation.pos.x,observation.pos.y]},true):return
       if room_id=="bedroom" and i==6 and point_id(i) in completed and not "cuff_seam" in rules.known:
        hero_route=layout.path(hero_pos,layout.furniture[i].at)
        search_actions.observing_index=i;controlled_route=false;action_phase="controlled_observe_cuff";return
-      if room_id=="hidden_street" or i>=Session.ROOM_POINTS[room_id].size() or point_id(i) in completed or rules.search_attempts>=rules.search_limit:
+      if room_id=="hidden_street" or i>=Session.point_names(int(session.data.level),room_id).size() or point_id(i) in completed or rules.search_attempts>=rules.search_limit:
        status_note="此处当前没有可执行搜寻";return
       rules.cancel_search()
+      cancel_hospital_observation()
+      cancel_asylum_read()
       target_index=i
       hero_route=layout.path(hero_pos,layout.furniture[i].at)
       controlled_route=false
@@ -818,6 +1043,8 @@ func _unhandled_input(event:InputEvent) -> void:
     family.data.eating.clear()
     var path:PackedVector2Array=layout.path(hero_pos,point)
     if path.is_empty():status_note="目标不可达";return
+    cancel_hospital_observation()
+    cancel_asylum_read()
     hero_route=path;controlled_route=true;target_index=-1;action_phase="autonomy"
     route_action_origin="controlled";rules.begin_public_action("navigation","floor","controlled",room_id)
     return
@@ -853,13 +1080,17 @@ func snapshot_data() -> Dictionary:
   "deferred_targets":deferred_targets.duplicate(true),"motion":motion.duplicate(true),"controlled_route":controlled_route,
   "audio_state":audio.snapshot_playback(),"footstep_left":footstep_left,"footstep_serial":footstep_serial,"home_state":home.data.duplicate(true),"family_state":family.data.duplicate(true),"death_left":death_left,"first_damage":first_damage,"status_visible":status_visible,"first_damage_pending":first_damage_pending,"vitality_display":vitality_panel.snapshot(),
   "search_props":search_actions.states.duplicate(true),"prop_receipts":search_actions.receipts.duplicate(true),"observing_index":search_actions.observing_index,"route_action_origin":route_action_origin,"search_action_origin":search_action_origin,
-  "hospital_state":hospital.data.duplicate(true),"hidden_state":hidden_route.data.duplicate(true),"opening_state":opening_ui.snapshot() if opening_ui!=null else {}}
+  "hospital_state":hospital.data.duplicate(true),"asylum_state":asylum.data.duplicate(true),"hidden_state":hidden_route.data.duplicate(true),"opening_state":opening_ui.snapshot() if opening_ui!=null else {}}
  # Animal actions and their unique search/transfer receipts survive loads.
 
 func restore_snapshot(data:Dictionary) -> bool:
  if int(data.get("schema",0)) not in [1,2] or not data.has("session") or not data.has("rules"):return false
  var proposed:Dictionary=data.session
- if int(proposed.get("level",0)) not in [1,2] or not (Session.ROOM_POINTS.has(str(data.get("room_id",""))) or data.get("room_id","")=="hidden_street"):return false
+ if int(proposed.get("level",0)) not in [1,2,3]:return false
+ var saved_room:String=str(data.get("room_id",""))
+ if int(proposed.level)==3:
+  if not AsylumMap.ROOM_NAMES.has(saved_room):return false
+ elif not Session.ROOM_POINTS.has(saved_room) and saved_room!="hidden_street":return false
  restoring=true
  if opening_ui!=null:opening_ui.queue_free();opening_ui=null
  runtime_generation+=1
@@ -879,6 +1110,7 @@ func restore_snapshot(data:Dictionary) -> bool:
  rules.sync_skin()
  family.restore_state(data.get("family_state",{}))
  hospital.restore(data.get("hospital_state",{}))
+ asylum.restore(data.get("asylum_state",{}))
  hidden_route.data=data.get("hidden_state",{}).duplicate(true)
  if family.data.is_empty():family.start_attempt()
  death_left=float(data.get("death_left",0))

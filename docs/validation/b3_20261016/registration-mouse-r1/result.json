@@ -1,0 +1,31 @@
+{
+  "failures": [
+    "same controlled protagonist really follows the new floor route",
+    "later real nurse click routes back and reads the same completed paper",
+    "re-reading through actual input creates no duplicate paper, settlement or second CONTROL fee"
+  ],
+  "fixtures": "Initial walkable nurse/hero, carried prior wheelchair departure, no random arrivals, 50N/unlocked CONTROL and empty unrelated autonomous targets. The first registration answer is genuinely earned with finite world steps, then consumed using actual Enter while the explicitly paused preparation state prevents an automatic follow-up. No question, written accusation or read knowledge is assigned.",
+  "passes": [
+    "mouse fixture earns the real initial departure-copy answer without injecting a follow-up outcome",
+    "actual Enter inputs finish the first answer while the explicit manual pause preserves the unasked state",
+    "actual CRT payment starts legal CONTROL before a new autonomous question",
+    "real registration-desk mouse click requests the implemented route/contact interaction",
+    "ordinary process reaches the nurse and asks the original follow-up after the desk click",
+    "desk route physically moves before the actual question; speech alone issues no completed paper",
+    "desk-initiated nurse really completes interruptible writing before the accusation exists",
+    "finished desk-initiated paper remains unread until the separate viewing clock",
+    "desk-initiated actual viewing completes and obtains the source reaction through normal process",
+    "actual mouse sequence keeps one nurse-owned paper, one CONTROL fee and no invented damage",
+    "mouse fixture earns the real initial departure-copy answer without injecting a follow-up outcome",
+    "actual Enter inputs finish the first answer while the explicit manual pause preserves the unasked state",
+    "actual CRT payment starts legal CONTROL before a new autonomous question",
+    "real visible nurse-body click also enters the physical registration interaction",
+    "nurse-body click reaches actual question rather than a debug completion",
+    "nurse-body sequence earns the original finished sheet before interruption",
+    "new-command target is an explicitly checked walkable floor position",
+    "actual new floor command cancels only unfinished viewing and preserves the one written accusation"
+  ],
+  "rendered": true,
+  "scope": "Two finite actual CRT/world-mouse registration sequences: desk click and visible nurse-body click, real route/contact, interruptible writing, floor-command interruption and later same-paper reading. Ordinary _process after CRT opens; no direct begin/cancel API or manual world tick in the mouse sequences.",
+  "untested": "Natural-RNG full playthrough, every competing NPC or obstruction, approved concrete patient-number glyphs, formal art and subjective audio."
+}

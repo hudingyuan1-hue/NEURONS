@@ -1,0 +1,264 @@
+{
+  "failures": [],
+  "frames": 300,
+  "observations": [
+    {
+      "clamp": {
+        "attempted": false,
+        "elapsed": 0.0,
+        "hand_out": false,
+        "hold_invalidated": false,
+        "phase": "idle",
+        "retract_left": 0.0
+      },
+      "frame": 0,
+      "game_time": 0.0,
+      "hero": [
+        4.40000009536743,
+        2.34999990463257
+      ],
+      "hp": 100,
+      "menu": false,
+      "neurons": 50,
+      "phase": "autonomy",
+      "search_attempts": 0,
+      "sp": 100
+    },
+    {
+      "clamp": {
+        "attempted": false,
+        "elapsed": 0.0,
+        "hand_out": false,
+        "hold_invalidated": false,
+        "phase": "idle",
+        "retract_left": 0.0
+      },
+      "frame": 20,
+      "game_time": 0.666666666666667,
+      "hero": [
+        4.40000009536743,
+        3.11666822433472
+      ],
+      "hp": 100,
+      "menu": false,
+      "neurons": 50,
+      "phase": "autonomy",
+      "search_attempts": 1,
+      "sp": 100
+    },
+    {
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.0,
+        "hand_out": false,
+        "hold_invalidated": false,
+        "phase": "windup",
+        "retract_left": 0.0,
+        "search_id": "search:1:1"
+      },
+      "frame": 21,
+      "game_time": 0.7,
+      "hero": [
+        4.40000009536743,
+        3.11666822433472
+      ],
+      "hp": 100,
+      "menu": false,
+      "neurons": 50,
+      "phase": "autonomy",
+      "search_attempts": 1,
+      "sp": 100
+    },
+    {
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.233333333333333,
+        "hand_out": false,
+        "hold_invalidated": false,
+        "phase": "windup",
+        "retract_left": 0.0,
+        "search_id": "search:1:1"
+      },
+      "frame": 51,
+      "game_time": 0.933333333333333,
+      "hero": [
+        4.40000009536743,
+        3.11666822433472
+      ],
+      "hp": 100,
+      "menu": true,
+      "neurons": 50,
+      "phase": "autonomy",
+      "search_attempts": 1,
+      "sp": 100
+    },
+    {
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.233333333333333,
+        "hand_out": false,
+        "hold_invalidated": false,
+        "phase": "windup",
+        "retract_left": 0.0,
+        "search_id": "search:1:1"
+      },
+      "frame": 53,
+      "game_time": 0.933333333333333,
+      "hero": [
+        4.40000009536743,
+        3.11666822433472
+      ],
+      "hp": 100,
+      "menu": false,
+      "neurons": 48,
+      "phase": "autonomy",
+      "search_attempts": 1,
+      "sp": 100
+    },
+    {
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.266666666666667,
+        "hand_out": false,
+        "hold_invalidated": false,
+        "phase": "windup",
+        "retract_left": 0.266666666666667,
+        "search_id": "search:1:1"
+      },
+      "frame": 59,
+      "game_time": 0.966666666666667,
+      "hero": [
+        4.40000009536743,
+        3.11666822433472
+      ],
+      "hp": 100,
+      "menu": false,
+      "neurons": 48,
+      "phase": "autonomy",
+      "search_attempts": 1,
+      "sp": 100
+    },
+    {
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.533333333333333,
+        "hand_out": false,
+        "hold_invalidated": false,
+        "phase": "windup",
+        "retract_left": 0.0000000000000000416333634234434,
+        "search_id": "search:1:1"
+      },
+      "frame": 67,
+      "game_time": 1.23333333333333,
+      "hero": [
+        4.40000009536743,
+        3.11666822433472
+      ],
+      "hp": 100,
+      "menu": false,
+      "neurons": 48,
+      "phase": "autonomy",
+      "search_attempts": 1,
+      "sp": 100
+    },
+    {
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.633333333333333,
+        "hand_out": true,
+        "hold_invalidated": false,
+        "phase": "windup",
+        "retract_left": 0.0,
+        "search_id": "search:1:1"
+      },
+      "frame": 77,
+      "game_time": 1.33333333333333,
+      "hero": [
+        4.40000009536743,
+        3.11666822433472
+      ],
+      "hp": 100,
+      "menu": false,
+      "neurons": 48,
+      "phase": "autonomy",
+      "search_attempts": 2,
+      "sp": 100
+    },
+    {
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.0,
+        "hand_out": true,
+        "hold_invalidated": false,
+        "phase": "release",
+        "retract_left": 0.0,
+        "search_id": "search:1:1"
+      },
+      "frame": 82,
+      "game_time": 1.5,
+      "hero": [
+        4.40000009536743,
+        3.11666822433472
+      ],
+      "hp": 100,
+      "menu": false,
+      "neurons": 48,
+      "phase": "autonomy",
+      "search_attempts": 2,
+      "sp": 100
+    },
+    {
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.0,
+        "hand_out": true,
+        "hold_invalidated": false,
+        "phase": "done",
+        "retract_left": 0.0,
+        "search_id": "search:1:1"
+      },
+      "frame": 109,
+      "game_time": 2.16666666666667,
+      "hero": [
+        4.40000009536743,
+        3.11666822433472
+      ],
+      "hp": 100,
+      "menu": false,
+      "neurons": 48,
+      "phase": "autonomy",
+      "search_attempts": 2,
+      "sp": 100
+    },
+    {
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.0,
+        "hand_out": true,
+        "hold_invalidated": false,
+        "phase": "done",
+        "retract_left": 0.0,
+        "search_id": "search:1:1"
+      },
+      "frame": 262,
+      "game_time": 7.26666666666665,
+      "hero": [
+        4.40000009536743,
+        3.11666822433472
+      ],
+      "hp": 100,
+      "menu": false,
+      "neurons": 49,
+      "phase": "autonomy",
+      "search_attempts": 2,
+      "sp": 100
+    }
+  ],
+  "passes": [
+    "ordinary process with real CRT mouse intervention resumes autonomous search to completion",
+    "visible actual withdrawal avoids clamp without invented injury or removing one-attempt receipt",
+    "real UI intervention pays once and only eventual finished search gives one neuron"
+  ],
+  "rendered": true,
+  "scope": "continuous ordinary _process after initial stated workshop/actor/50N/unlocked-WITHDRAW/two-target fixture; actual Enter and CRT mouse; no manual world tick after setup, silent MovieMaker capture, not human natural-RNG/formal-art/audio acceptance"
+}

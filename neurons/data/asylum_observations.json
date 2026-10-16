@@ -1,0 +1,472 @@
+{
+  "version": "asylum-observations-1",
+  "sources": [
+    "S3:T19/P655/P697–699/P727–731/T23R7/P786–787/P800–808/T31/P947–948/P972–998/P1037–1047",
+    "S1:P103/P158/P178/P199",
+    "S4:P185–186"
+  ],
+  "timing": {
+    "prepare": 0.25,
+    "contact": 0.4,
+    "finish": 0.35
+  },
+  "contact_distance": 0.65,
+  "implementation_note": "动作时长及家具站位是可替换表现参数；完成才获得信息，不占用钥匙搜寻次数、不奖励神经元、不新增伤害/治疗/强制剧情。",
+  "glyph_policy": "null表示原文没有交付具体字形。实际检查位置、揭开下层与已知内容分别保存；两个null不能核成同号、同日或同人。",
+  "glyphs": {
+    "old_bed_name": null,
+    "laundry_bag_number": null,
+    "family_closed_by": null,
+    "family_closed_at": null,
+    "under_transport_number": null,
+    "medicine_prefill_text": null,
+    "medicine_prefill_time": null,
+    "recovery_photo_number": null,
+    "isolation_prefill_time": null,
+    "bed1_erased_name": null,
+    "bed1_number": null,
+    "bed2_erased_name": null,
+    "bed2_number": null,
+    "workshop_batch": null
+  },
+  "dialogue": {
+    "CARD": [
+      {
+        "speaker": "角色",
+        "text": "下面还有字。",
+        "source": "S3:T19R2"
+      }
+    ],
+    "STRAPS": [
+      {
+        "speaker": "角色",
+        "text": "带子是固定在床上的。",
+        "source": "S3:T19R3"
+      }
+    ],
+    "BADGE": [
+      {
+        "speaker": "角色",
+        "text": "胸牌被拿掉了。",
+        "source": "S3:T19R4"
+      }
+    ],
+    "COAT_RECOGNISE": [
+      {
+        "speaker": "角色[凝重]",
+        "text": "这个袖口……房间里那件也是这样。",
+        "source": "S3:P278"
+      },
+      {
+        "speaker": "玩家[疑惑]",
+        "text": "先看看里面有没有名字。",
+        "source": "S3:P279"
+      }
+    ],
+    "LABEL_UNDER": [
+      {
+        "speaker": "角色[凝重]",
+        "text": "新标签压着旧的。",
+        "source": "S3:P730"
+      },
+      {
+        "speaker": "玩家[认真]",
+        "text": "先看清下面那一层。",
+        "source": "S3:P731"
+      }
+    ],
+    "RAIL": [
+      {
+        "speaker": "角色[疑惑]",
+        "text": "这些痕迹是怎么磨出来的？",
+        "source": "S3:P787"
+      }
+    ],
+    "PREFILLED": [
+      {
+        "speaker": "角色[质问]",
+        "text": "我刚进来，这里已经写完了？",
+        "source": "S3:P947"
+      },
+      {
+        "speaker": "玩家[凝重]",
+        "text": "连结果都填好了。",
+        "source": "S3:P948"
+      }
+    ],
+    "ERASED_NAME": [
+      {
+        "speaker": "角色[疑惑]",
+        "text": "名字擦过，床号还留着。",
+        "source": "S3:P997"
+      }
+    ]
+  },
+  "targets": [
+    {
+      "id": "asylum_bed_card_under",
+      "name": "掀开床头卡覆盖边缘",
+      "room": "ward",
+      "furniture": 0,
+      "kind": "static",
+      "source": "S3:T19R2",
+      "text": "实际掀起覆盖边缘并读到旧卡可辨部分；旧姓名具体字形未交付，既有认知保留，不重新生成身份。",
+      "fields": {
+        "old_name": "old_bed_name"
+      },
+      "dialogue": "CARD",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_bed_straps",
+      "name": "查看床下固定束带",
+      "room": "ward",
+      "furniture": 0,
+      "kind": "static",
+      "source": "S3:T19R3",
+      "text": "实际蹲下查看固定端、带身与磨痕，知道束带用于约束；未据此认定角色曾被绑，亦未自动触发绑缚。",
+      "fields": {},
+      "dialogue": "STRAPS",
+      "pose": "low",
+      "once_known": true
+    },
+    {
+      "id": "asylum_ward_coat_badge",
+      "name": "查看挂衣处白褂胸牌位置",
+      "room": "ward",
+      "furniture": 6,
+      "kind": "static",
+      "source": "S3:T19R4",
+      "text": "实际查看胸牌拆除处与衣物细节；同类衣物不证明主人身份，已知信息不重复奖励。",
+      "fields": {},
+      "dialogue": "BADGE",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_laundry_bag_label",
+      "name": "查看尚未搬走的污衣袋标签",
+      "room": "ward",
+      "furniture": 0,
+      "kind": "laundry_bag",
+      "source": "S3:T19R5/P291–293",
+      "text": "实际检查原污衣袋及标签；袋号字形仍未知，不生成第二件病服，也不补算搬运完成。",
+      "fields": {
+        "bag_number": "laundry_bag_number"
+      },
+      "dialogue": "",
+      "pose": "low",
+      "once_known": false
+    },
+    {
+      "id": "asylum_laundry_vacancy",
+      "name": "查看污衣袋原来的空位",
+      "room": "ward",
+      "furniture": 0,
+      "kind": "laundry_vacancy",
+      "source": "S3:T19R5",
+      "text": "实际看见已经搬走的污衣袋留下的空位；没有重新摆回污衣袋或病服，也没有删去前关已知信息。",
+      "fields": {},
+      "dialogue": "",
+      "pose": "low",
+      "once_known": false
+    },
+    {
+      "id": "asylum_family_contact_closed",
+      "name": "查看封闭的家属联系栏",
+      "room": "lobby",
+      "furniture": 0,
+      "kind": "static",
+      "source": "S3:P655",
+      "text": "实际看见家属联系栏封闭，只知道联系栏不可用；不知道是谁、何时封闭，不把未知栏内内容补给角色。",
+      "fields": {
+        "closed_by": "family_closed_by",
+        "closed_at": "family_closed_at"
+      },
+      "dialogue": "",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_diagnosis_page",
+      "name": "阅读医生实际写成的诊断表",
+      "room": "clinic",
+      "furniture": 0,
+      "kind": "diagnosis",
+      "source": "S3:P697/T21",
+      "text": "实际读到医生本次落笔写成的症状栏；这是机构对陈述的诊断记载，不删除真实证据，不补造伤害、攻击或吞服。",
+      "fields": {},
+      "dialogue": "",
+      "pose": "middle",
+      "once_known": false
+    },
+    {
+      "id": "asylum_clinic_coat_sleeve",
+      "name": "近看柜内破损大褂袖口",
+      "room": "clinic",
+      "furniture": 1,
+      "kind": "static",
+      "source": "S3:P698/P275/P278–279",
+      "text": "实际近看柜内大褂破损与缝线；只有以前看过卧室袖口细节才辨认对应外观，不认定两关医生是同一人。",
+      "fields": {},
+      "dialogue": "COAT_RECOGNISE",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_waste_label_outer",
+      "name": "阅读外层“废弃材料”标签",
+      "room": "pharmacy",
+      "furniture": 1,
+      "kind": "static",
+      "source": "S3:P727",
+      "text": "实际读到外层“废弃材料”；未翻开就不知道下层编号，也不自动获得跨关核对结论。",
+      "fields": {},
+      "dialogue": "",
+      "pose": "high",
+      "once_known": true
+    },
+    {
+      "id": "asylum_waste_label_under",
+      "name": "翻起覆盖标签查看下层",
+      "room": "pharmacy",
+      "furniture": 1,
+      "kind": "static",
+      "source": "S3:P727/P730–731",
+      "text": "实际翻起边角、查看原标签下层编号位置；具体编号字形仍未交付。确认新标签覆盖旧标签，不将两个未知号视为相同。",
+      "fields": {
+        "transport_number": "under_transport_number"
+      },
+      "dialogue": "LABEL_UNDER",
+      "pose": "high",
+      "once_known": true
+    },
+    {
+      "id": "asylum_medicine_prefill",
+      "name": "阅读提前盖章的服药表",
+      "room": "pharmacy",
+      "furniture": 5,
+      "kind": "static",
+      "source": "S3:P728",
+      "text": "实际阅读提前盖章的预填部分；预填内容、实际后来补写与身体吞服状态分开，具体预填字形和时间仍未知。",
+      "fields": {
+        "prefill_text": "medicine_prefill_text",
+        "prefill_time": "medicine_prefill_time"
+      },
+      "dialogue": "",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_medicine_update",
+      "name": "阅读本次实际补写的服药记录",
+      "room": "pharmacy",
+      "furniture": 5,
+      "kind": "medicine_update",
+      "source": "S3:P728/T22",
+      "text": "实际读到本次已经补写的服药栏；后来读表不等于亲见完整吞服或拒服后造假，不由纸面状态重新触发药效。",
+      "fields": {},
+      "dialogue": "",
+      "pose": "middle",
+      "once_known": false
+    },
+    {
+      "id": "asylum_access_panel",
+      "name": "查看现有门禁控制器状态",
+      "room": "office",
+      "furniture": 6,
+      "kind": "door_panel",
+      "source": "S3:T23R7/P733",
+      "text": "实际观察门禁指示和既有开关状态；不新增核验、钥匙或通行手续，不关闭返床和上下楼原路。",
+      "fields": {},
+      "dialogue": "",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_stair_rail_wear",
+      "name": "查看楼梯扶手束带磨痕",
+      "room": "stairs",
+      "furniture": 0,
+      "kind": "static",
+      "source": "S3:P786–787",
+      "text": "实际查看扶手上的反复摩擦痕迹；不据磨痕补造推床上下楼、受伤或死亡事件。",
+      "fields": {},
+      "dialogue": "RAIL",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_nurse_duty_table",
+      "name": "阅读护士实际写完的公共值班表",
+      "room": "corridor",
+      "furniture": 0,
+      "kind": "nurse_duty",
+      "source": "S3:P800–808",
+      "text": "实际阅读病区护士本次写完并夹回的值班表；保留每条原始来源与实际目击者，纸面分类不改变精神、位置或吞服事实。",
+      "fields": {},
+      "dialogue": "",
+      "pose": "middle",
+      "once_known": false
+    },
+    {
+      "id": "asylum_recovery_photo",
+      "name": "查看康复合影及座位旁说明",
+      "room": "activity",
+      "furniture": 2,
+      "kind": "static",
+      "source": "S1:P158/S3:P857/P876",
+      "text": "实际查看原有康复合影及说明，注意画面中的术后敷料；不自动认定为当前术后病友或某名已确认死者。",
+      "fields": {
+        "photo_number": "recovery_photo_number"
+      },
+      "dialogue": "",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_quiet_scratches",
+      "name": "掀开软垫查看抓痕",
+      "room": "quiet",
+      "furniture": 2,
+      "kind": "static",
+      "source": "S3:T31R2",
+      "text": "实际掀开活动软垫，查看缝隙与座面下方抓痕；不认定是角色自己留下。",
+      "fields": {},
+      "dialogue": "",
+      "pose": "low",
+      "once_known": true
+    },
+    {
+      "id": "asylum_call_no_response",
+      "name": "实际按下呼叫按钮",
+      "room": "quiet",
+      "furniture": 2,
+      "kind": "button",
+      "source": "S3:T31R3",
+      "text": "实际按下呼叫按钮并等待，没有响应；只凭无响应不能断定故障原因或线路断开。",
+      "fields": {},
+      "dialogue": "",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_call_wire_broken",
+      "name": "近看呼叫按钮的断线",
+      "room": "quiet",
+      "furniture": 2,
+      "kind": "static",
+      "source": "S3:T31R3",
+      "text": "实际看见呼叫按钮处可见的断线，确认线路断开；不是仅凭按下后无响应就推断原因。",
+      "fields": {},
+      "dialogue": "",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_prefilled_isolation_record",
+      "name": "阅读预填的“自行平静”观察表",
+      "room": "quiet",
+      "furniture": 0,
+      "kind": "static",
+      "source": "S3:T31R4/P947–948",
+      "text": "实际读到提前填写的“自行平静”观察记录；预填文书不改变角色精神，也不等于本次隔离已经发生。具体填写时间未交付。",
+      "fields": {
+        "filled_time": "isolation_prefill_time"
+      },
+      "dialogue": "PREFILLED",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_bed1_erased_name",
+      "name": "查看床①反复擦改的姓名",
+      "room": "double_ward",
+      "furniture": 4,
+      "kind": "static",
+      "source": "S3:P972/P996–998",
+      "text": "实际看清床①姓名被反复擦改、床号仍留存；床①及床头柜①绑定跨关精神病人，不由擦名推断两人曾同名。",
+      "fields": {
+        "erased_name": "bed1_erased_name",
+        "bed_number": "bed1_number"
+      },
+      "dialogue": "ERASED_NAME",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_bed2_erased_name",
+      "name": "查看床②反复擦改的姓名",
+      "room": "double_ward",
+      "furniture": 5,
+      "kind": "static",
+      "source": "S3:P973/P996–998",
+      "text": "实际看清床②姓名被反复擦改、床号仍留存；床②及床头柜②绑定角落病友，不把他合并为其他患者。",
+      "fields": {
+        "erased_name": "bed2_erased_name",
+        "bed_number": "bed2_number"
+      },
+      "dialogue": "ERASED_NAME",
+      "pose": "middle",
+      "once_known": true
+    },
+    {
+      "id": "asylum_display_label_back_seen",
+      "name": "扶稳展示板查看背面标签",
+      "room": "workshop",
+      "furniture": 5,
+      "kind": "display_back",
+      "source": "S3:P1037–1038/P1047",
+      "text": "实际扶稳展示板并查看背面标签；只看正面不获得背面内容。具体批次仍未知，运输批次不等于患者编号，不证明箱内内容。",
+      "fields": {
+        "batch": "workshop_batch"
+      },
+      "dialogue": "",
+      "pose": "high",
+      "once_known": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "asylum_number_screen",
+      "source": "S3:P654",
+      "reason": "当前没有已实际显示的具体编号事件/字形；不生成已见号码，不由广播证明离院。"
+    },
+    {
+      "id": "asylum_relic_bag_photo",
+      "source": "S3:P656/P659–660",
+      "reason": "前关照片随转运并被实际收存的独立接收事件尚无物理存袋状态；不只凭wheelchair_gone制造已辨认照片或遗物袋。"
+    },
+    {
+      "id": "asylum_departure_page",
+      "source": "S3:P657/T20",
+      "reason": "离院副本现由登记事件出示；本模块不重复其身份核对或把机构副本变成强制转运目击，后续可复用动态持有人锚点接独立翻页。"
+    },
+    {
+      "id": "asylum_self_injury_photo",
+      "source": "S3:T23R3",
+      "reason": "必须有实际拍摄记录。只有受伤不生成照片；当前无拍摄实现，不可读。"
+    },
+    {
+      "id": "asylum_statement_paper",
+      "source": "S3:P914",
+      "reason": "由既有团体治疗物权与照读事件保留；后续独立阅读须限实际展开/已交给病友的可见纸张，不能用读纸补造同意或照读。"
+    },
+    {
+      "id": "asylum_signature_record",
+      "source": "S3:P915",
+      "reason": "当前没有独立真实签字/代签物件，不能由预填姓名制造已签事实。"
+    },
+    {
+      "id": "asylum_whiteboard_text",
+      "source": "S3:P916",
+      "reason": "没有交付白板具体已写原文，不编写新的病情/剧情内容；现有托槽搜寻继续有效。"
+    },
+    {
+      "id": "asylum_product_label",
+      "source": "S3:P1048",
+      "reason": "已由有限折盒/贴标工序维护实际成品与批次；待接独立成品阅读时只允许折好且贴标后的实物，不用半成品提前发标签信息。"
+    }
+  ]
+}

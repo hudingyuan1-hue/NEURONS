@@ -1,0 +1,415 @@
+{
+  "sources": [
+    "S3:P614–777/T18–23",
+    "S3:P778–1059（二层身份与共享边界）",
+    "S4:T10/11/15/16/P0113–0118",
+    "S5:R3同节点先致命伤后恢复"
+  ],
+  "rooms": {
+    "ordinary_orderly": "ward",
+    "registration_nurse": "lobby",
+    "doctor": "clinic",
+    "assistant": "clinic",
+    "pharmacist": "pharmacy",
+    "med_nurse": "pharmacy",
+    "archivist": "office",
+    "guard": "office",
+    "patient": "office",
+    "head_nurse": "corridor",
+    "porter": "corridor",
+    "transport_patient": "corridor",
+    "postop_patient": "activity",
+    "informer": "activity",
+    "therapist": "group_therapy",
+    "speaker": "group_therapy",
+    "isolation_orderly": "quiet",
+    "cleaner": "bathroom",
+    "corner_patient": "double_ward",
+    "supervisor": "workshop",
+    "labor_patient": "workshop"
+  },
+  "names": {
+    "ordinary_orderly": "普通护工",
+    "registration_nurse": "登记护士",
+    "doctor": "精神科医生",
+    "assistant": "检查助手",
+    "pharmacist": "治疗药师",
+    "med_nurse": "给药护士／病区护士",
+    "archivist": "档案员",
+    "guard": "保安",
+    "patient": "跨关精神病人",
+    "head_nurse": "护士长",
+    "porter": "转运工",
+    "transport_patient": "被转运患者",
+    "postop_patient": "术后病友",
+    "informer": "告密病友",
+    "therapist": "治疗主任",
+    "speaker": "发言病友",
+    "isolation_orderly": "隔离护工",
+    "cleaner": "保洁员",
+    "corner_patient": "角落病友",
+    "supervisor": "作业督导",
+    "labor_patient": "劳动病友"
+  },
+  "groups": {
+    "orderly": [
+      "ordinary_orderly"
+    ],
+    "registration": [
+      "registration_nurse"
+    ],
+    "clinic": [
+      "doctor",
+      "assistant"
+    ],
+    "pharmacy": [
+      "pharmacist",
+      "med_nurse"
+    ],
+    "office": [
+      "archivist",
+      "guard"
+    ],
+    "patient": [
+      "patient"
+    ],
+    "chief": [
+      "head_nurse"
+    ],
+    "transport": [
+      "porter",
+      "transport_patient"
+    ],
+    "postop": [
+      "postop_patient",
+      "informer"
+    ],
+    "therapy": [
+      "therapist",
+      "speaker"
+    ],
+    "isolation": [
+      "isolation_orderly"
+    ],
+    "cleaner": [
+      "cleaner"
+    ],
+    "corner": [
+      "corner_patient"
+    ],
+    "work": [
+      "supervisor",
+      "labor_patient"
+    ]
+  },
+  "identities": {
+    "ordinary_orderly": {
+      "shared_with": "二层普通护工",
+      "source": "S3:P618/P783"
+    },
+    "med_nurse": {
+      "shared_with": "二层病区护士",
+      "source": "S3:P618/P701/P783"
+    },
+    "patient": {
+      "cross_level": "N41",
+      "source": "S3:P618/P759–768",
+      "prior_removed_is_not_death": true
+    }
+  },
+  "timing": {
+    "return_check": 20.0,
+    "spawn_batch": 10.0,
+    "wrist_max": 2.0,
+    "assistant_max": 3.0,
+    "cup_raise": 1.0,
+    "medicine_stop": 1.5,
+    "drymouth": 2.0,
+    "guard_max": 6.0
+  },
+  "values": {
+    "wrist_hp": 5,
+    "wrist_sp": 5,
+    "assistant_hp": 5,
+    "medicine_sp": 20,
+    "guard_hp": 5,
+    "guard_sp": 10
+  },
+  "test_parameters": {
+    "note": "实现表现参数，非原文固定规格；不覆盖S4已定伤害、药效、窗口与上限。所有距离为逻辑米。",
+    "walk_speed": 0.9,
+    "notice_distance": 1.2,
+    "approach_distance": 0.55,
+    "handoff": 0.55,
+    "grab_prepare": 0.5,
+    "paperwork": 0.75,
+    "mix": 0.8,
+    "dialogue_note": "T21只规定部分证据分支的陈述范围，没有对应原句；不足以调用CASE/FALSE时使用P677–678原有普通询问，书面诊断保留实际陈述依据类型，不新造正式剧情对白。"
+  },
+  "dialogue": {
+    "WRIST": [
+      {
+        "speaker": "护工[平静]",
+        "text": "手伸出来，看一下号。",
+        "source": "S3:P627"
+      },
+      {
+        "speaker": "角色[疑惑]",
+        "text": "床头不是写着吗？",
+        "source": "S3:P628"
+      },
+      {
+        "speaker": "护工[平静]",
+        "text": "要对腕带。",
+        "source": "S3:P629"
+      }
+    ],
+    "WRIST_HURT": [
+      {
+        "speaker": "角色[疼痛]",
+        "text": "你看号码，拧我手干什么？",
+        "source": "S3:P631"
+      },
+      {
+        "speaker": "护工[冷淡]",
+        "text": "别动。",
+        "source": "S3:P632"
+      },
+      {
+        "speaker": "玩家[凝重]",
+        "text": "他已经抓住了。",
+        "source": "S3:P633"
+      }
+    ],
+    "REGISTER_WITNESS": [
+      {
+        "speaker": "登记护士[平静]",
+        "text": "这里写的是自行离院。",
+        "source": "S3:P642"
+      },
+      {
+        "speaker": "角色[质问]",
+        "text": "他抓着门框不肯走，我看见了。",
+        "source": "S3:P643"
+      },
+      {
+        "speaker": "登记护士[平静]",
+        "text": "我按记录答复。",
+        "source": "S3:P644"
+      }
+    ],
+    "REGISTER_RECORD": [
+      {
+        "speaker": "角色[疑惑]",
+        "text": "这张上面，谁签的字？",
+        "source": "S3:P646"
+      },
+      {
+        "speaker": "登记护士[平静]",
+        "text": "手续已经办过了。",
+        "source": "S3:P647"
+      }
+    ],
+    "REGISTER_FOLLOWUP": [
+      {
+        "speaker": "角色[坚持]",
+        "text": "我问的是他去了哪。",
+        "source": "S3:P649"
+      },
+      {
+        "speaker": "角色看清记录后[生气]",
+        "text": "你写的不是我问的。",
+        "source": "S3:P651"
+      },
+      {
+        "speaker": "玩家[凝重]",
+        "text": "去向没写，追问倒记下了。",
+        "source": "S3:P652"
+      }
+    ],
+    "DOCTOR_CASE": [
+      {
+        "speaker": "角色[认真]",
+        "text": "摘除记录和死亡记录，是同一个号。",
+        "source": "S3:P668"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "你认为它们有关系。",
+        "source": "S3:P669"
+      },
+      {
+        "speaker": "角色[生气]",
+        "text": "不是我认为，纸上就这么写着。",
+        "source": "S3:P670"
+      }
+    ],
+    "DOCTOR_FALSE": [
+      {
+        "speaker": "角色[质问]",
+        "text": "我没喝，他们写我喝了。",
+        "source": "S3:P673"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "你是在否认这份记录？",
+        "source": "S3:P674"
+      },
+      {
+        "speaker": "角色[生气]",
+        "text": "我是在说它写错了。",
+        "source": "S3:P675"
+      }
+    ],
+    "DOCTOR_NONE": [
+      {
+        "speaker": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "source": "S3:P677"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "source": "S3:P678"
+      }
+    ],
+    "ASSIST_REACH": [
+      {
+        "speaker": "助手[平静]",
+        "text": "手放这里。",
+        "source": "S3:P690"
+      },
+      {
+        "speaker": "角色[警惕]",
+        "text": "你先说要做什么。",
+        "source": "S3:P691"
+      }
+    ],
+    "ASSIST_HOLD": [
+      {
+        "speaker": "角色[生气]",
+        "text": "只是问话，为什么要扣住？",
+        "source": "S3:P693"
+      },
+      {
+        "speaker": "助手[平静]",
+        "text": "先别动。",
+        "source": "S3:P694"
+      }
+    ],
+    "PHARMACY": [
+      {
+        "speaker": "治疗药师[平静]",
+        "text": "把医嘱给我。",
+        "source": "S3:P711"
+      },
+      {
+        "speaker": "角色[疑惑]",
+        "text": "上面写的是什么药？",
+        "source": "S3:P712"
+      },
+      {
+        "speaker": "治疗药师[平静]",
+        "text": "按这张配。",
+        "source": "S3:P713"
+      }
+    ],
+    "REFUSE": [
+      {
+        "speaker": "角色[警惕]",
+        "text": "我先不喝。",
+        "source": "S3:P715"
+      }
+    ],
+    "FALSE_MEDICINE": [
+      {
+        "speaker": "角色[生气]",
+        "text": "杯子还满着。",
+        "source": "S3:P721"
+      },
+      {
+        "speaker": "给药护士[平静]",
+        "text": "记录在这里签。",
+        "source": "S3:P722"
+      },
+      {
+        "speaker": "玩家[凝重]",
+        "text": "她看见了，还是这样写。",
+        "source": "S3:P723"
+      }
+    ],
+    "DOCTOR_TRANSFER": [
+      {
+        "speaker": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "source": "S3:P677"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "source": "S3:P678"
+      }
+    ],
+    "DOCTOR_PARTIAL": [
+      {
+        "speaker": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "source": "S3:P677"
+      },
+      {
+        "speaker": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "source": "S3:P678"
+      }
+    ]
+  },
+  "unconfirmed_glyphs": {
+    "wheelchair_number": null,
+    "relic_bag_number": null,
+    "old_bed_card_name": null,
+    "asylum_order_number": null
+  },
+  "implementation_scope": {
+    "floor1": "本批真实核号／诊断与独立医嘱／实际药杯；档案报告、保安带离及后续阅读根代理接续，调度身份保留",
+    "floor2": "asylum_ward_events独立实现已覆盖项；未实现项不能由身份出现等同完成"
+  },
+  "asset_ids": {
+    "ordinary_orderly": "ART_NPC_N02",
+    "registration_nurse": "ART_NPC_N04",
+    "doctor": "ART_NPC_N36",
+    "assistant": "ART_NPC_N14",
+    "pharmacist": "ART_NPC_N28",
+    "med_nurse": "ART_NPC_N22",
+    "archivist": "ART_NPC_N43",
+    "guard": "ART_NPC_N37",
+    "patient": "ART_NPC_N41",
+    "head_nurse": "ART_NPC_N05",
+    "porter": "ART_NPC_N23",
+    "transport_patient": "ART_NPC_N10",
+    "postop_patient": "ART_NPC_N11",
+    "informer": "ART_NPC_N44",
+    "therapist": "ART_NPC_N38",
+    "speaker": "ART_NPC_N24",
+    "isolation_orderly": "ART_NPC_N15",
+    "cleaner": "ART_NPC_N29",
+    "corner_patient": "ART_NPC_N08",
+    "supervisor": "ART_NPC_N25",
+    "labor_patient": "ART_NPC_N30"
+  },
+  "asset_contract": "占位外观按逻辑身份绘制；正式资源使用原表稳定组ID及其子ID映射，脚底/接触/动作结算不依赖图片文件名或序列帧编号。所有身份未收到正式资源，未确认造型不获自动批准。",
+  "registration_followup": {
+    "source": "S3:P637–658/T20R6–7",
+    "question_indices": [
+      0
+    ],
+    "read_indices": [
+      1,
+      2
+    ],
+    "write_seconds": 0.75,
+    "read_seconds": 1.0,
+    "timing_status": "实现表现参数；原文规定先追问，再实际落笔，再看清记录，不给新伤害或资源。",
+    "trigger": "自主角色已听完真实前关离院副本答复，同室近护士且可行动时自动发起一次；合法完全掌控也可实际接近后追问或重读。",
+    "interruption": "未写完不发机构标签；已写成未看清则保留同一纸面，后续接近只读不重写。中断不自动再次劝回互动，已取得钥匙及低SP返床优先。"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "source": "S3:P732–777/T23; S3:T14/T15; S4:T15R4/P180–202; S5R3正文补丁§1",
+  "timing": {"prepare":0.25,"contact":0.4,"finish":0.35,"stop":0.55,"paperwork":0.75,"handoff":0.55,"grab_prepare":0.5,"guard_max":6.0},
+  "parameters": {"notice_distance":1.2,"contact_distance":0.65,"approach_distance":0.55,"walk_speed":0.9},
+  "values": {"guard_hp":5,"guard_sp":10},
+  "documents": [
+    {"id":"asylum_archive_index","name":"既往患者档案目录","index":0,"controlled":true,"text":"实际翻读既往患者目录；目录不提供未到场人员的实时位置。","source":"S1:P125–127; S3:P735/T23R6"},
+    {"id":"asylum_scar_photo","name":"伤痕照片","index":5,"controlled":true,"text":"实际看清一份伤痕照片；具体患者编号字形未交付，不自动认作当前角色或仍活着的病友。","source":"S3:T23R2"},
+    {"id":"asylum_no_external_injury","name":"无外伤记录","index":5,"controlled":true,"text":"实际读到“无外伤”页；纸面结论不覆盖实际伤痕，编号未核对前不拼成同一案件。","source":"S3:T23R2"},
+    {"id":"asylum_duty_roster","name":"公开值班板","index":6,"controlled":false,"text":"实际读到人员与岗位安排；只知道排班，不透视实时位置。","source":"S3:T23R5"},
+    {"id":"asylum_prior_copy","name":"前关病历副本","index":6,"controlled":true,"text":"实际辨认前关副本的来源；纸面指控与实际发生的行为分开。","source":"S3:P619/T23R6"},
+    {"id":"asylum_death_page","name":"既往死亡页","index":10,"controlled":true,"text":"实际读取既往死亡页；具体编号与日期未交付，不套用给活着的病友。","source":"S3:T23R4"},
+    {"id":"asylum_fee_page","name":"既往费用页","index":10,"controlled":true,"text":"实际读取既往费用页；只保留本页可知内容，不补造未读取的摘除、死亡或交易结果。","source":"S3:T23R4"},
+    {"id":"asylum_current_report","name":"本关异常报告","index":10,"controlled":true,"requires_report":true,"text":"实际读取本关档案员写成的异常报告；机构指控不倒推未发生的攻击。","source":"S3:T23R6"}
+  ],
+  "fields": {"scar_patient_number":null,"no_injury_patient_number":null,"death_patient_number":null,"death_date":null,"fee_patient_number":null,"fee_date":null},
+  "dialogue": {
+    "STOP":[{"speaker":"档案员[平静]","text":"病历不能这样翻。","source":"S3:P738"},{"speaker":"角色[疑惑]","text":"这一页为什么被盖住了？","source":"S3:P742"}],
+    "STOP_MATCHED":[{"speaker":"档案员[平静]","text":"病历不能这样翻。","source":"S3:P738"},{"speaker":"角色[疑惑]","text":"照片和这行字对不上。","source":"S3:P739"}],
+    "GUARD":[{"speaker":"保安[严肃]","text":"先离开这张桌子。","source":"S3:P752"},{"speaker":"角色[警惕]","text":"我看完就走。","source":"S3:P753"}],
+    "HELD":[{"speaker":"角色[疼痛]","text":"你要把我带去哪？","source":"S3:P758"},{"speaker":"保安[平静]","text":"门口。","source":"S3:P756"}],
+    "HELD_AGAIN":[{"speaker":"角色[疼痛]","text":"你又要把我带去哪？","source":"S3:P755"},{"speaker":"保安[平静]","text":"门口。","source":"S3:P756"}],
+    "PATIENT_STOP":[{"speaker":"病人[低声]","text":"有人来了。","source":"S3:P771"}],
+    "PATIENT_HELD":[{"speaker":"病人[平静]","text":"我知道路。","source":"S3:P773"},{"speaker":"保安[冷淡]","text":"走。","source":"S3:P774"}],
+    "PATIENT_NUMBER":[{"speaker":"人物[认真]","text":"名字他们会换。看后面的数。","source":"S3:P762/P443"},{"speaker":"角色[疑惑]","text":"你说哪个？","source":"S3:P444"},{"speaker":"人物[认真]","text":"翻过来。","source":"S3:P445"},{"speaker":"玩家[认真]","text":"他说的是背面。","source":"S3:P446"}],
+    "PATIENT_ANOMALY":[{"speaker":"人物[认真]","text":"刚才不是你自己停下来的吧。","source":"S3:P763/P450"},{"speaker":"角色[迟疑]","text":"……你也看见了？","source":"S3:P452"},{"speaker":"玩家[警惕]","text":"他怎么会问这个？","source":"S3:P453"}],
+    "PATIENT_AWARE":[{"speaker":"人物[认真]","text":"刚才不是你自己停下来的吧。","source":"S3:P763/P450"},{"speaker":"角色[冷淡]","text":"你还看见了什么？","source":"S3:P455"},{"speaker":"人物[平静]","text":"就刚才那一下。","source":"S3:P456"}]
+  }
+}

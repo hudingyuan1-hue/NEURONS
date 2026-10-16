@@ -1,0 +1,145 @@
+{
+  "accelerated_engine_time": false,
+  "actual_attempt_delta": 0,
+  "actual_event_facts": [],
+  "asylum_entered": false,
+  "asylum_entry_frame": -1,
+  "asylum_exit_reached": false,
+  "cycle_delta": 0,
+  "dialogue_advance_clicks": 1,
+  "elapsed_process_frames": 935,
+  "endpoint": {
+    "is_game_completion": false,
+    "kind": "stalled",
+    "reason": "World-clock or decorative progression alone cannot count as playable progress"
+  },
+  "engine_time_scale": 1.0,
+  "failures": [
+    "No meaningful action, movement, contact, timer or dialogue progress for 900 process frames"
+  ],
+  "final_actual_attempt": 1,
+  "final_cycle": 1,
+  "final_institutional_records": [],
+  "final_known_information": [],
+  "final_level": 1,
+  "final_resources": {
+    "hp": 100,
+    "inventory": [],
+    "neurons": 5,
+    "owners": {
+      "porridge": "mother"
+    },
+    "plexus": 3,
+    "sp": 100
+  },
+  "final_room": "bedroom",
+  "final_search_attempts": 0,
+  "final_search_completed": 0,
+  "first_npc_observed": false,
+  "frame_limit": 12000,
+  "hospital_entered": false,
+  "hospital_entry_frame": -1,
+  "hospital_exit_reached": false,
+  "initial_actual_attempt": 1,
+  "initial_cycle": 1,
+  "initial_level": 1,
+  "last_snapshot_file": "",
+  "no_gameplay_fixture": true,
+  "observations": [
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 28,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "initial_world",
+      "level": 1,
+      "npcs": {
+        "cat": {},
+        "dog": {},
+        "father": {},
+        "mother": {}
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 0,
+      "search_completed": 0,
+      "status_note": "",
+      "world_time": 0.0
+    },
+    {
+      "action_phase": "autonomy",
+      "actual_attempt": 1,
+      "cycle": 1,
+      "frame": 935,
+      "hero_pos": [
+        2.54999995231628,
+        1.20000004768372
+      ],
+      "hero_state": "idle",
+      "hospital_body": {},
+      "hospital_groups": {},
+      "hospital_holder": "",
+      "hospital_receipt_count": 0,
+      "hospital_transport": {},
+      "label": "terminal_observation",
+      "level": 1,
+      "npcs": {
+        "cat": {},
+        "dog": {},
+        "father": {},
+        "mother": {}
+      },
+      "resources": {
+        "hp": 100,
+        "inventory": [],
+        "neurons": 5,
+        "owners": {
+          "porridge": "mother"
+        },
+        "plexus": 3,
+        "sp": 100
+      },
+      "room": "bedroom",
+      "search_attempts": 0,
+      "search_completed": 0,
+      "status_note": "",
+      "world_time": 0.0
+    }
+  ],
+  "passes": [
+    "Actual title/profile UI starts an ordinary random first home attempt",
+    "Practice is skipped through its visible button; the driver writes no gameplay fields"
+  ],
+  "rendered": true,
+  "scope": "normal title/profile/tutorial-skip/dialogue mouse input, natural RNG and ordinary _process through L1/L2/L3; no seed/actor/resource/position/route fixture; fixed game clock is automated observation, not human all-branch/art/audio acceptance",
+  "screenshots": [
+    {
+      "frame": 28,
+      "name": "01_initial_world.png"
+    },
+    {
+      "frame": 935,
+      "name": "03_terminal_stalled.png"
+    }
+  ],
+  "stall_frame_limit": 900
+}

@@ -1,0 +1,6 @@
+{
+  "engine": "4.7.2-stable (official)",
+  "errors": [],
+  "point_count": 45,
+  "scope": "actual Godot navigation/grid/segment collision only; visual acceptance is separate"
+}

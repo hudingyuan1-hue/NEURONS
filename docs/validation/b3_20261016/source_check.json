@@ -1,0 +1,2214 @@
+{
+  "audit": "B3 final source/reference audit",
+  "date": "2026-10-16",
+  "auditor_scope": "Read DOCX XML source, current B3 data and search declarations, existing final result JSON and screenshot filenames only. No Godot execution, Git or image/audio acceptance performed by this auditor.",
+  "sources": [
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+      "body_paragraphs": 1962,
+      "body_tables": 60
+    },
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第四阶段_数值与完整流程_合并修订版.docx",
+      "sha256": "c3f2e9ba7d0b23d7c0654b546b0fa0ce075a0e885f59f48066280dd0b33eee39",
+      "body_paragraphs": 312,
+      "body_tables": 28
+    }
+  ],
+  "inputs_sha256": {
+    "neurons/data/asylum.json": "3bd6bd356d15874ed8ef4ef9e654b2e034f0ee13a933b71c97b16b9876ab481d",
+    "neurons/data/asylum_isolation.json": "00e983a10a6b965cad147208c9a06830a2f698c2a3b0e8b1b124325e097d708a",
+    "neurons/data/asylum_records.json": "02adf1b6c19abc465500c08ea946f93b0fd6366a90bb168b897ff2d6cba8a9a6",
+    "neurons/data/asylum_trace_events.json": "303bab6cdcce01abc40889cc0dcb10ebe9a7dc33959e5988eeca21170b60d932",
+    "neurons/data/asylum_ward_events.json": "3e3e3893410f213f4acd22effa1d3694b73987d39f2867855e5293c3196d1a37",
+    "neurons/scripts/world/asylum_layout.gd": "27765cca8709e25239dd9e68667ed37f2eaab01741d1a2200071555e6cbab9a2"
+  },
+  "dialogue": {
+    "references": 119,
+    "exact_text_matches": 119,
+    "mismatches": [],
+    "entries": [
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST",
+        "source": "S3:P627",
+        "speaker_display": "护工[平静]",
+        "text": "手伸出来，看一下号。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST",
+        "source": "S3:P628",
+        "speaker_display": "角色[疑惑]",
+        "text": "床头不是写着吗？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST",
+        "source": "S3:P629",
+        "speaker_display": "护工[平静]",
+        "text": "要对腕带。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST_HURT",
+        "source": "S3:P631",
+        "speaker_display": "角色[疼痛]",
+        "text": "你看号码，拧我手干什么？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST_HURT",
+        "source": "S3:P632",
+        "speaker_display": "护工[冷淡]",
+        "text": "别动。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST_HURT",
+        "source": "S3:P633",
+        "speaker_display": "玩家[凝重]",
+        "text": "他已经抓住了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_WITNESS",
+        "source": "S3:P642",
+        "speaker_display": "登记护士[平静]",
+        "text": "这里写的是自行离院。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_WITNESS",
+        "source": "S3:P643",
+        "speaker_display": "角色[质问]",
+        "text": "他抓着门框不肯走，我看见了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_WITNESS",
+        "source": "S3:P644",
+        "speaker_display": "登记护士[平静]",
+        "text": "我按记录答复。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_RECORD",
+        "source": "S3:P646",
+        "speaker_display": "角色[疑惑]",
+        "text": "这张上面，谁签的字？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_RECORD",
+        "source": "S3:P647",
+        "speaker_display": "登记护士[平静]",
+        "text": "手续已经办过了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_FOLLOWUP",
+        "source": "S3:P649",
+        "speaker_display": "角色[坚持]",
+        "text": "我问的是他去了哪。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_FOLLOWUP",
+        "source": "S3:P651",
+        "speaker_display": "角色看清记录后[生气]",
+        "text": "你写的不是我问的。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_FOLLOWUP",
+        "source": "S3:P652",
+        "speaker_display": "玩家[凝重]",
+        "text": "去向没写，追问倒记下了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_CASE",
+        "source": "S3:P668",
+        "speaker_display": "角色[认真]",
+        "text": "摘除记录和死亡记录，是同一个号。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_CASE",
+        "source": "S3:P669",
+        "speaker_display": "医生[平静]",
+        "text": "你认为它们有关系。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_CASE",
+        "source": "S3:P670",
+        "speaker_display": "角色[生气]",
+        "text": "不是我认为，纸上就这么写着。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_FALSE",
+        "source": "S3:P673",
+        "speaker_display": "角色[质问]",
+        "text": "我没喝，他们写我喝了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_FALSE",
+        "source": "S3:P674",
+        "speaker_display": "医生[平静]",
+        "text": "你是在否认这份记录？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_FALSE",
+        "source": "S3:P675",
+        "speaker_display": "角色[生气]",
+        "text": "我是在说它写错了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_NONE",
+        "source": "S3:P677",
+        "speaker_display": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_NONE",
+        "source": "S3:P678",
+        "speaker_display": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_REACH",
+        "source": "S3:P690",
+        "speaker_display": "助手[平静]",
+        "text": "手放这里。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_REACH",
+        "source": "S3:P691",
+        "speaker_display": "角色[警惕]",
+        "text": "你先说要做什么。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_HOLD",
+        "source": "S3:P693",
+        "speaker_display": "角色[生气]",
+        "text": "只是问话，为什么要扣住？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_HOLD",
+        "source": "S3:P694",
+        "speaker_display": "助手[平静]",
+        "text": "先别动。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "PHARMACY",
+        "source": "S3:P711",
+        "speaker_display": "治疗药师[平静]",
+        "text": "把医嘱给我。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "PHARMACY",
+        "source": "S3:P712",
+        "speaker_display": "角色[疑惑]",
+        "text": "上面写的是什么药？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "PHARMACY",
+        "source": "S3:P713",
+        "speaker_display": "治疗药师[平静]",
+        "text": "按这张配。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REFUSE",
+        "source": "S3:P715",
+        "speaker_display": "角色[警惕]",
+        "text": "我先不喝。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "FALSE_MEDICINE",
+        "source": "S3:P721",
+        "speaker_display": "角色[生气]",
+        "text": "杯子还满着。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "FALSE_MEDICINE",
+        "source": "S3:P722",
+        "speaker_display": "给药护士[平静]",
+        "text": "记录在这里签。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "FALSE_MEDICINE",
+        "source": "S3:P723",
+        "speaker_display": "玩家[凝重]",
+        "text": "她看见了，还是这样写。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_TRANSFER",
+        "source": "S3:P677",
+        "speaker_display": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_TRANSFER",
+        "source": "S3:P678",
+        "speaker_display": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_PARTIAL",
+        "source": "S3:P677",
+        "speaker_display": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_PARTIAL",
+        "source": "S3:P678",
+        "speaker_display": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "NOTICE",
+        "source": "S3:P935",
+        "speaker_display": "隔离护工[平静]",
+        "text": "先到里面待一会儿。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "NOTICE",
+        "source": "S3:P936",
+        "speaker_display": "角色[警惕]",
+        "text": "为什么是我？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "CLOSED",
+        "source": "S3:P939",
+        "speaker_display": "角色[生气]",
+        "text": "门打开。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "CLOSED",
+        "source": "S3:P940",
+        "speaker_display": "护工[平静]",
+        "text": "等这次观察结束。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "OPENED",
+        "source": "S3:P942",
+        "speaker_display": "角色[凝重]",
+        "text": "可以走了？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP",
+        "source": "S3:P738",
+        "speaker_display": "档案员[平静]",
+        "text": "病历不能这样翻。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP",
+        "source": "S3:P742",
+        "speaker_display": "角色[疑惑]",
+        "text": "这一页为什么被盖住了？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP_MATCHED",
+        "source": "S3:P738",
+        "speaker_display": "档案员[平静]",
+        "text": "病历不能这样翻。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP_MATCHED",
+        "source": "S3:P739",
+        "speaker_display": "角色[疑惑]",
+        "text": "照片和这行字对不上。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "GUARD",
+        "source": "S3:P752",
+        "speaker_display": "保安[严肃]",
+        "text": "先离开这张桌子。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "GUARD",
+        "source": "S3:P753",
+        "speaker_display": "角色[警惕]",
+        "text": "我看完就走。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD",
+        "source": "S3:P758",
+        "speaker_display": "角色[疼痛]",
+        "text": "你要把我带去哪？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD",
+        "source": "S3:P756",
+        "speaker_display": "保安[平静]",
+        "text": "门口。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD_AGAIN",
+        "source": "S3:P755",
+        "speaker_display": "角色[疼痛]",
+        "text": "你又要把我带去哪？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD_AGAIN",
+        "source": "S3:P756",
+        "speaker_display": "保安[平静]",
+        "text": "门口。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_STOP",
+        "source": "S3:P771",
+        "speaker_display": "病人[低声]",
+        "text": "有人来了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_HELD",
+        "source": "S3:P773",
+        "speaker_display": "病人[平静]",
+        "text": "我知道路。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_HELD",
+        "source": "S3:P774",
+        "speaker_display": "保安[冷淡]",
+        "text": "走。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "source": "S3:P762/P443",
+        "speaker_display": "人物[认真]",
+        "text": "名字他们会换。看后面的数。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "source": "S3:P444",
+        "speaker_display": "角色[疑惑]",
+        "text": "你说哪个？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "source": "S3:P445",
+        "speaker_display": "人物[认真]",
+        "text": "翻过来。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "source": "S3:P446",
+        "speaker_display": "玩家[认真]",
+        "text": "他说的是背面。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_ANOMALY",
+        "source": "S3:P763/P450",
+        "speaker_display": "人物[认真]",
+        "text": "刚才不是你自己停下来的吧。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_ANOMALY",
+        "source": "S3:P452",
+        "speaker_display": "角色[迟疑]",
+        "text": "……你也看见了？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_ANOMALY",
+        "source": "S3:P453",
+        "speaker_display": "玩家[警惕]",
+        "text": "他怎么会问这个？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_AWARE",
+        "source": "S3:P763/P450",
+        "speaker_display": "人物[认真]",
+        "text": "刚才不是你自己停下来的吧。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_AWARE",
+        "source": "S3:P455",
+        "speaker_display": "角色[冷淡]",
+        "text": "你还看见了什么？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_AWARE",
+        "source": "S3:P456",
+        "speaker_display": "人物[平静]",
+        "text": "就刚才那一下。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "COVER",
+        "source": "S3:P962",
+        "speaker_display": "保洁员[平静]",
+        "text": "让一下，这里还没收完。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORPSE_SEEN",
+        "source": "S3:P964",
+        "speaker_display": "角色[震惊]",
+        "text": "里面有个人。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORPSE_SEEN",
+        "source": "S3:P965",
+        "speaker_display": "保洁员[平静]",
+        "text": "先出去。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "RELIC_MATCH",
+        "source": "S3:P967",
+        "speaker_display": "角色[凝重]",
+        "text": "这两处的号码对得上。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "RELIC_MATCH",
+        "source": "S3:P968",
+        "speaker_display": "玩家[认真]",
+        "text": "记清楚，东西要被收走了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "SAME_CAR",
+        "source": "S3:P988",
+        "speaker_display": "跨关精神病人[低声]",
+        "text": "我们是同一辆车送来的。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORNER_SHOW",
+        "source": "S3:P990",
+        "speaker_display": "角落病友[低声]",
+        "text": "这个号，我记得。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "BOTH_NOTES",
+        "source": "S3:P992",
+        "speaker_display": "角色[认真]",
+        "text": "车次相同，你们的号码不同。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "BOTH_NOTES",
+        "source": "S3:P993",
+        "speaker_display": "玩家[认真]",
+        "text": "再看看日期。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "ONE_NOTE",
+        "source": "S3:P995",
+        "speaker_display": "角色[疑惑]",
+        "text": "另一份呢？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "ORDERLY",
+        "source": "S3:P1007",
+        "speaker_display": "护工[冷淡]",
+        "text": "收起来，跟我走。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORNER_HELD",
+        "source": "S3:P1010",
+        "speaker_display": "角落病友[低声]",
+        "text": "别拿我的东西。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "WITNESS_CORNER",
+        "source": "S3:P1012",
+        "speaker_display": "角色[生气]",
+        "text": "他只是给我看了一张纸。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_NOTICE",
+        "source": "S3:P1022",
+        "speaker_display": "作业督导 · 严肃",
+        "text": "那边的材料不能翻。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_NOTICE",
+        "source": "S3:P1023",
+        "speaker_display": "角色 · 警惕",
+        "text": "我看完就放回去。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_HURT",
+        "source": "S3:P1025",
+        "speaker_display": "角色 · 疼痛",
+        "text": "手还在里面！",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_HURT",
+        "source": "S3:P1027",
+        "speaker_display": "玩家 · 凝重",
+        "text": "先把手收回来。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_MISS",
+        "source": "S3:P1029",
+        "speaker_display": "角色 · 生气",
+        "text": "你没看见我的手吗？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR",
+        "source": "S3:P1040",
+        "speaker_display": "劳动病友 · 专注",
+        "text": "那叠还没贴。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR",
+        "source": "S3:P1041",
+        "speaker_display": "角色 · 疑惑",
+        "text": "这些盒子要送去哪？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR",
+        "source": "S3:P1042",
+        "speaker_display": "劳动病友 · 平静",
+        "text": "我只做这个。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR_MATCH",
+        "source": "S3:P1044",
+        "speaker_display": "角色 · 凝重",
+        "text": "冷藏箱上也有这个批次。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR_MATCH",
+        "source": "S3:P1045",
+        "speaker_display": "玩家 · 认真",
+        "text": "字和号码都对上了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_ORIGINAL",
+        "source": "S3:P897",
+        "speaker_display": "发言病友 · 紧张",
+        "text": "转运编号是【对应编号】，那天——",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_STOP",
+        "source": "S3:P898",
+        "speaker_display": "治疗主任 · 平静",
+        "text": "先停一下。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_READ",
+        "source": "S3:P900",
+        "speaker_display": "治疗主任 · 平静",
+        "text": "照这张读。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_RETRACT",
+        "source": "S3:P894 原文",
+        "speaker_display": "发言病友",
+        "text": "此前所述均不属实",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_QUESTION",
+        "source": "S3:P908",
+        "speaker_display": "角色 · 质问",
+        "text": "刚才那段为什么删了？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_QUESTION",
+        "source": "S3:P909",
+        "speaker_display": "治疗主任 · 平静",
+        "text": "保留他确认过的。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_QUESTION",
+        "source": "S3:P910",
+        "speaker_display": "角色 · 生气",
+        "text": "是你让他照着读的。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_HAND",
+        "source": "S3:P835",
+        "speaker_display": "被转运患者 · 微弱",
+        "text": "等一下……",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_HAND",
+        "source": "S3:P836",
+        "speaker_display": "转运工 · 平静",
+        "text": "手放回去。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_ALIVE",
+        "source": "S3:P838",
+        "speaker_display": "角色 · 警惕",
+        "text": "他还醒着。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_ALIVE",
+        "source": "S3:P839",
+        "speaker_display": "玩家 · 凝重",
+        "text": "看见了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_BAND",
+        "source": "S3:P841",
+        "speaker_display": "角色 · 认真",
+        "text": "号码还在。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_BAND",
+        "source": "S3:P842",
+        "speaker_display": "玩家 · 认真",
+        "text": "和单上的对一下。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_INVITE",
+        "source": "S3:P853",
+        "speaker_display": "术后病友 · 低声",
+        "text": "你帮我看看，还在渗吗？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_INVITE",
+        "source": "S3:P858 无康复标签知情时",
+        "speaker_display": "角色 · 迟疑",
+        "text": "伤口在哪？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_WOUND",
+        "source": "S3:P856",
+        "speaker_display": "角色 · 凝重",
+        "text": "还没好。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_REPORT",
+        "source": "S3:P864",
+        "speaker_display": "告密病友 · 低声",
+        "text": "他把伤口给别人看了。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_REPORT",
+        "source": "S3:P865",
+        "speaker_display": "护士长 · 平静",
+        "text": "哪个人？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_PERMIT",
+        "source": "S3:P868",
+        "speaker_display": "告密病友 · 急切",
+        "text": "那我能出去了吗？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_PERMIT",
+        "source": "S3:P869",
+        "speaker_display": "护士长 · 平静",
+        "text": "拿着。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_REMOVE",
+        "source": "S3:P879",
+        "speaker_display": "护工 · 平静",
+        "text": "把衣服放下，跟我来。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_REMOVE",
+        "source": "S3:P880",
+        "speaker_display": "术后病友 · 抗拒",
+        "text": "我只是让他看一下。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_WITNESS",
+        "source": "S3:P883",
+        "speaker_display": "角色 · 生气",
+        "text": "伤没好，为什么不先处理？",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_WITNESS",
+        "source": "S3:P884",
+        "speaker_display": "玩家 · 凝重",
+        "text": "先看他们把人带去哪。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CHIEF_INTERNAL",
+        "source": "S3:P793",
+        "speaker_display": "护士长 · 严肃",
+        "text": "这份不是给你看的。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CHIEF_INTERNAL",
+        "source": "S3:P794",
+        "speaker_display": "角色 · 警惕",
+        "text": "我在找东西。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CHIEF_REPORT",
+        "source": "S3:P797",
+        "speaker_display": "护士长 · 平静",
+        "text": "刚才翻这份记录的人，去看一下。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HERO",
+        "source": "S3:P819",
+        "speaker_display": "护工 · 平静",
+        "text": "先到这边来。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HERO",
+        "source": "S3:P820",
+        "speaker_display": "角色 · 警惕",
+        "text": "有什么事就在这里说。",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HURT",
+        "source": "S3:P822",
+        "speaker_display": "角色 · 疼痛",
+        "text": "松一点！",
+        "exact_text_match": true
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HURT",
+        "source": "S3:P823",
+        "speaker_display": "玩家 · 凝重",
+        "text": "已经抓住了。",
+        "exact_text_match": true
+      }
+    ],
+    "speaker_note": "Quoted speech text is checked verbatim. UI speaker labels may replace [情绪] with · 情绪; P894's narrated 病友照读 maps to the same 发言病友. Label typography is not counted as a changed spoken line."
+  },
+  "search": {
+    "points": 45,
+    "expected": 45,
+    "text_fields": 135,
+    "matched_fields": 135,
+    "mismatches": [],
+    "entries": [
+      {
+        "point": "stairs:0",
+        "source": "S3:T29R2",
+        "action": "查看窗台、窗框下沿及可触及缝隙",
+        "hero_line": "窗沿没有。",
+        "player_line": "站稳点。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "corridor:0",
+        "source": "S3:T29R3",
+        "action": "查看抽屉、桌面夹层与文件夹下方",
+        "hero_line": "这里只有资料。",
+        "player_line": "钥匙不在里面。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "corridor:1",
+        "source": "S3:T29R4",
+        "action": "查看花坛沿口与外侧底部",
+        "hero_line": "边上没有。",
+        "player_line": "不用把土全翻了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "corridor:2",
+        "source": "S3:T29R5",
+        "action": "检查座面下方、椅缝及同组椅脚旁",
+        "hero_line": "这排下面都没有。",
+        "player_line": "椅缝里也没有。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "corridor:3",
+        "source": "S3:T29R6",
+        "action": "逐格开柜，拨开可移动物件",
+        "hero_line": "柜子里也没有。",
+        "player_line": "关上再走。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:0",
+        "source": "S3:T29R7",
+        "action": "检查柜格、抽屉与电视底座旁",
+        "hero_line": "只有这些杂物。",
+        "player_line": "不是钥匙。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:1",
+        "source": "S3:T29R8",
+        "action": "查看窗台与下框",
+        "hero_line": "这边窗台没有。",
+        "player_line": "看看另一边。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:2",
+        "source": "S3:T29R9",
+        "action": "查看坐垫缝、扶手旁与可触及底部",
+        "hero_line": "缝里也没有。",
+        "player_line": "找完把垫子放好。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:3",
+        "source": "S3:T29R10",
+        "action": "检查台面、下层与物件底部",
+        "hero_line": "茶几下面没有。",
+        "player_line": "就剩这些纸。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:4",
+        "source": "S3:T29R11",
+        "action": "查看桌面物件之间、桌沿与下方",
+        "hero_line": "这里没找到。",
+        "player_line": "桌底也看过了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:5",
+        "source": "S3:T29R12",
+        "action": "检查盆沿、底托及盆后地面",
+        "hero_line": "盆后面也没有。",
+        "player_line": "下一处。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:6",
+        "source": "S3:T29R13",
+        "action": "查看另一处窗台和框沿",
+        "hero_line": "这扇下面也没有。",
+        "player_line": "两边都找过了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:7",
+        "source": "S3:T29R14",
+        "action": "查看可触及书缝、书后及层板",
+        "hero_line": "书后面没有。",
+        "player_line": "别把整架推倒了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:0",
+        "source": "S3:T29R15",
+        "action": "翻查柜格与盒子后方",
+        "hero_line": "柜里没有钥匙。",
+        "player_line": "都是这里用的东西。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:1",
+        "source": "S3:T29R16",
+        "action": "检查窗沿、窗框下缝",
+        "hero_line": "这边没有。",
+        "player_line": "看清就行。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:2",
+        "source": "S3:T29R17",
+        "action": "查看座面下方与固定椅之间的缝隙",
+        "hero_line": "椅子下面也没有。",
+        "player_line": "不用把它搬起来。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:3",
+        "source": "S3:T29R18",
+        "action": "查看盆边、底托与后方",
+        "hero_line": "这里只有灰。",
+        "player_line": "起来吧。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:4",
+        "source": "S3:T29R19",
+        "action": "查看另一扇窗的可触及边沿",
+        "hero_line": "这里也空着。",
+        "player_line": "换一处。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:5",
+        "source": "S3:T29R20",
+        "action": "查看托槽及附带资料夹",
+        "hero_line": "槽里没有钥匙。",
+        "player_line": "夹子下面呢？",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "quiet:0",
+        "source": "S3:T34R2",
+        "action": "打开可开启柜格，查看格底与物件后方",
+        "hero_line": "格子里没有。",
+        "player_line": "后面也摸过了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "quiet:1",
+        "source": "S3:T34R3",
+        "action": "逐层检查柜格及底部",
+        "hero_line": "这一层也没有。",
+        "player_line": "下面再看一下。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "quiet:2",
+        "source": "S3:T34R4",
+        "action": "掀起活动软垫，检查缝隙和座面下方",
+        "hero_line": "下面有抓痕，没有钥匙。",
+        "player_line": "看清就放回去。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "quiet:3",
+        "source": "S3:T34R5",
+        "action": "站立抬手检查可触及下沿",
+        "hero_line": "窗沿没有。",
+        "player_line": "不用往上爬。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:0",
+        "source": "S3:T34R6",
+        "action": "蹲下查看池下、管道旁及底部",
+        "hero_line": "这边下面没有。",
+        "player_line": "别碰到管子。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:1",
+        "source": "S3:T34R7",
+        "action": "查看另一池下的独立空间",
+        "hero_line": "这边也没有。",
+        "player_line": "两个都找过了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:2",
+        "source": "S3:T34R8",
+        "action": "查看格栅与可触及边缝",
+        "hero_line": "缝里没有钥匙。",
+        "player_line": "看清卡住的是什么。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:3",
+        "source": "S3:T34R9",
+        "action": "查看置物处、地面及本隔间小地漏",
+        "hero_line": "这里没有。",
+        "player_line": "地上的也看过了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:4",
+        "source": "S3:T34R10",
+        "action": "检查另一间置物处及小地漏",
+        "hero_line": "这一间也没有。",
+        "player_line": "往门边退一点。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:5",
+        "source": "S3:T34R11",
+        "action": "查看可触及的窗下沿及框缝",
+        "hero_line": "窗框下面没有。",
+        "player_line": "别踩那些湿的地方。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:6",
+        "source": "S3:T34R12",
+        "action": "查看水箱可开启处及底座外侧",
+        "hero_line": "这里也没找到。",
+        "player_line": "找完把盖子放好。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:0",
+        "source": "S3:T34R13",
+        "action": "分格翻查衣物间与柜底",
+        "hero_line": "衣服之间没有。",
+        "player_line": "别混到另一边去。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:1",
+        "source": "S3:T34R14",
+        "action": "检查柜格、盒后与底层",
+        "hero_line": "柜里没有钥匙。",
+        "player_line": "柜门别碰到旁边的人。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:2",
+        "source": "S3:T34R15",
+        "action": "掀被角，查看床沿与可触及床底",
+        "hero_line": "这张床没有。",
+        "player_line": "下面也看一下。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:3",
+        "source": "S3:T34R16",
+        "action": "检查平整被褥、床沿与床底",
+        "hero_line": "铺得这么整齐，也没有。",
+        "player_line": "找完放回原样。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:4",
+        "source": "S3:T34R17",
+        "action": "查看对应台面与抽屉",
+        "hero_line": "抽屉里没有。",
+        "player_line": "床号先对清楚。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:5",
+        "source": "S3:T34R18",
+        "action": "查看另一柜台面及抽屉夹层",
+        "hero_line": "这边也没找到。",
+        "player_line": "这是另一人的柜子。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:6",
+        "source": "S3:T34R19",
+        "action": "查看窗沿、下框及可触及缝隙",
+        "hero_line": "窗边没有。",
+        "player_line": "再看别处。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:0",
+        "source": "S3:T34R20",
+        "action": "查看纸张、绘画工具之间与桌下",
+        "hero_line": "纸下面没有钥匙。",
+        "player_line": "别把画揉坏了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:1",
+        "source": "S3:T34R21",
+        "action": "检查半成品旁、托盘及桌沿下方",
+        "hero_line": "盒子旁边也没有。",
+        "player_line": "没贴完的先放回去。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:2",
+        "source": "S3:T34R22",
+        "action": "查看柜格、抽屉与底层",
+        "hero_line": "矮柜里没有。",
+        "player_line": "里面找完了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:3",
+        "source": "S3:T34R23",
+        "action": "查看池下及管道旁",
+        "hero_line": "下面没有。",
+        "player_line": "起来吧。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:4",
+        "source": "S3:T34R24",
+        "action": "查看窗台与框沿",
+        "hero_line": "窗台也没有。",
+        "player_line": "下一处。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:5",
+        "source": "S3:T34R25",
+        "action": "查看托架、可接触背面与资料夹",
+        "hero_line": "后面不是钥匙，是标签。",
+        "player_line": "先看清写的什么。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:6",
+        "source": "S3:T34R26",
+        "action": "只检查未上锁取料抽屉及开放格",
+        "hero_line": "这一格没有钥匙。",
+        "player_line": "手先收回来。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:7",
+        "source": "S3:T34R27",
+        "action": "查看纸料、标签卷之间及层板",
+        "hero_line": "材料后面也没有。",
+        "player_line": "别把整叠弄散了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      }
+    ]
+  },
+  "identities": {
+    "count": 21,
+    "groups": 14,
+    "unique_group_members": 21,
+    "source_S4_P100": "人数纠错：第三关二层新增人物应为12人，原汇总漏计角落病友；第三关共21个身份。跨关同人去重后，Street仍为45个身份。",
+    "asset_ids_cover_all_identities": true
+  },
+  "asset_refs": {
+    "planning_source": "deliverables/NEURONS_2D_资产需求_20261015/data/art_requirements.json",
+    "planning_sha256": "562c503579583790ddd470f76c9d4134fb6e03fa7c9e558edd8b92f64a100cdc",
+    "count": 21,
+    "unique": 21,
+    "group_matches": 21,
+    "child_references": 84,
+    "missing_children": [],
+    "entries": [
+      {
+        "identity": "ordinary_orderly",
+        "asset_id": "ART_NPC_N02",
+        "group_exists": true,
+        "name": "普通护工第三关 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N02",
+          "CHR_OTHER_NPCS_N02_ALTERED",
+          "CHR_OTHER_NPCS_N02_PORTRAIT",
+          "CHR_OTHER_NPCS_N02_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "registration_nurse",
+        "asset_id": "ART_NPC_N04",
+        "group_exists": true,
+        "name": "登记护士第三关一层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N04",
+          "CHR_OTHER_NPCS_N04_ALTERED",
+          "CHR_OTHER_NPCS_N04_PORTRAIT",
+          "CHR_OTHER_NPCS_N04_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "doctor",
+        "asset_id": "ART_NPC_N36",
+        "group_exists": true,
+        "name": "精神科医生第三关一层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N36",
+          "CHR_OTHER_NPCS_N36_ALTERED",
+          "CHR_OTHER_NPCS_N36_PORTRAIT",
+          "CHR_OTHER_NPCS_N36_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "assistant",
+        "asset_id": "ART_NPC_N14",
+        "group_exists": true,
+        "name": "检查助手第三关一层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N14",
+          "CHR_OTHER_NPCS_N14_ALTERED",
+          "CHR_OTHER_NPCS_N14_PORTRAIT",
+          "CHR_OTHER_NPCS_N14_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "pharmacist",
+        "asset_id": "ART_NPC_N28",
+        "group_exists": true,
+        "name": "治疗药师第三关一层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N28",
+          "CHR_OTHER_NPCS_N28_ALTERED",
+          "CHR_OTHER_NPCS_N28_PORTRAIT",
+          "CHR_OTHER_NPCS_N28_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "med_nurse",
+        "asset_id": "ART_NPC_N22",
+        "group_exists": true,
+        "name": "给药护士 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N22",
+          "CHR_OTHER_NPCS_N22_ALTERED",
+          "CHR_OTHER_NPCS_N22_PORTRAIT",
+          "CHR_OTHER_NPCS_N22_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "archivist",
+        "asset_id": "ART_NPC_N43",
+        "group_exists": true,
+        "name": "档案员第三关一层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N43",
+          "CHR_OTHER_NPCS_N43_ALTERED",
+          "CHR_OTHER_NPCS_N43_PORTRAIT",
+          "CHR_OTHER_NPCS_N43_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "guard",
+        "asset_id": "ART_NPC_N37",
+        "group_exists": true,
+        "name": "保安第三关一层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N37",
+          "CHR_OTHER_NPCS_N37_ALTERED",
+          "CHR_OTHER_NPCS_N37_PORTRAIT",
+          "CHR_OTHER_NPCS_N37_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "patient",
+        "asset_id": "ART_NPC_N41",
+        "group_exists": true,
+        "name": "本身人格第二三关跨关精神病人 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N41",
+          "CHR_OTHER_NPCS_N41_ALTERED",
+          "CHR_OTHER_NPCS_N41_PORTRAIT",
+          "CHR_OTHER_NPCS_N41_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "head_nurse",
+        "asset_id": "ART_NPC_N05",
+        "group_exists": true,
+        "name": "护士长第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N05",
+          "CHR_OTHER_NPCS_N05_ALTERED",
+          "CHR_OTHER_NPCS_N05_PORTRAIT",
+          "CHR_OTHER_NPCS_N05_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "porter",
+        "asset_id": "ART_NPC_N23",
+        "group_exists": true,
+        "name": "转运工第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N23",
+          "CHR_OTHER_NPCS_N23_ALTERED",
+          "CHR_OTHER_NPCS_N23_PORTRAIT",
+          "CHR_OTHER_NPCS_N23_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "transport_patient",
+        "asset_id": "ART_NPC_N10",
+        "group_exists": true,
+        "name": "被转运患者第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N10",
+          "CHR_OTHER_NPCS_N10_ALTERED",
+          "CHR_OTHER_NPCS_N10_PORTRAIT",
+          "CHR_OTHER_NPCS_N10_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "postop_patient",
+        "asset_id": "ART_NPC_N11",
+        "group_exists": true,
+        "name": "术后病友第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N11",
+          "CHR_OTHER_NPCS_N11_ALTERED",
+          "CHR_OTHER_NPCS_N11_PORTRAIT",
+          "CHR_OTHER_NPCS_N11_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "informer",
+        "asset_id": "ART_NPC_N44",
+        "group_exists": true,
+        "name": "告密病友第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N44",
+          "CHR_OTHER_NPCS_N44_ALTERED",
+          "CHR_OTHER_NPCS_N44_PORTRAIT",
+          "CHR_OTHER_NPCS_N44_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "therapist",
+        "asset_id": "ART_NPC_N38",
+        "group_exists": true,
+        "name": "治疗主任第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N38",
+          "CHR_OTHER_NPCS_N38_ALTERED",
+          "CHR_OTHER_NPCS_N38_PORTRAIT",
+          "CHR_OTHER_NPCS_N38_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "speaker",
+        "asset_id": "ART_NPC_N24",
+        "group_exists": true,
+        "name": "发言病友第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N24",
+          "CHR_OTHER_NPCS_N24_ALTERED",
+          "CHR_OTHER_NPCS_N24_PORTRAIT",
+          "CHR_OTHER_NPCS_N24_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "isolation_orderly",
+        "asset_id": "ART_NPC_N15",
+        "group_exists": true,
+        "name": "隔离护工第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N15",
+          "CHR_OTHER_NPCS_N15_ALTERED",
+          "CHR_OTHER_NPCS_N15_PORTRAIT",
+          "CHR_OTHER_NPCS_N15_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "cleaner",
+        "asset_id": "ART_NPC_N29",
+        "group_exists": true,
+        "name": "保洁员第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N29",
+          "CHR_OTHER_NPCS_N29_ALTERED",
+          "CHR_OTHER_NPCS_N29_PORTRAIT",
+          "CHR_OTHER_NPCS_N29_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "corner_patient",
+        "asset_id": "ART_NPC_N08",
+        "group_exists": true,
+        "name": "角落病友第三关 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N08",
+          "CHR_OTHER_NPCS_N08_ALTERED",
+          "CHR_OTHER_NPCS_N08_PORTRAIT",
+          "CHR_OTHER_NPCS_N08_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "supervisor",
+        "asset_id": "ART_NPC_N25",
+        "group_exists": true,
+        "name": "作业督导第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N25",
+          "CHR_OTHER_NPCS_N25_ALTERED",
+          "CHR_OTHER_NPCS_N25_PORTRAIT",
+          "CHR_OTHER_NPCS_N25_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "labor_patient",
+        "asset_id": "ART_NPC_N30",
+        "group_exists": true,
+        "name": "劳动病友第三关二层 · 同一身份美术包",
+        "children": [
+          "CHR_OTHER_NPCS_N30",
+          "CHR_OTHER_NPCS_N30_ALTERED",
+          "CHR_OTHER_NPCS_N30_PORTRAIT",
+          "CHR_OTHER_NPCS_N30_ACTION_REF"
+        ],
+        "missing_children": []
+      }
+    ],
+    "limitation": "Valid stable planning-group/child references, not delivered formal textures. B3 actor appearance remains explicitly labeled 2D placeholders; no art approval inferred."
+  },
+  "validation_records_read": [
+    {
+      "directory": "exploration-r2",
+      "path": "docs/validation/b3_20261016/exploration-r2/result.json",
+      "sha256": "8bc7dae3c3a2845230c5784078368cc5e52f254eb148ef616741e3b9377a47f3",
+      "passed": 145,
+      "failed": 0,
+      "scope": "B3 exploration, actual doors/path/search/key/rest, finite fixed fixtures and real checksummed JSON; no human natural-RNG, all NPC combinations or formal art/audio acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "name": "01_third_level_stairs.png",
+          "bytes": 186070
+        },
+        {
+          "name": "02_workshop_actual_search.png",
+          "bytes": 154773
+        },
+        {
+          "name": "03_real_return_to_first_floor_bed.png",
+          "bytes": 159378
+        },
+        {
+          "name": "04_keyed_third_level_exit_boundary.png",
+          "bytes": 187168
+        }
+      ]
+    },
+    {
+      "directory": "first-floor-r3",
+      "path": "docs/validation/b3_20261016/first-floor-r3/result.json",
+      "sha256": "27787e9239bd655dc6f6bb106f581e78bae953cc18f6bf9bca7bbd86538dc4a9",
+      "passed": 38,
+      "failed": 0,
+      "scope": "B3 exploration, actual doors/path/search/key/rest, finite fixed fixtures and real checksummed JSON; no human natural-RNG, all NPC combinations or formal art/audio acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "name": "01_normal_wrist_check.png",
+          "bytes": 159450
+        },
+        {
+          "name": "02_medicine_stop.png",
+          "bytes": 187606
+        },
+        {
+          "name": "03_false_record.png",
+          "bytes": 149447
+        },
+        {
+          "name": "04_assistant_released.png",
+          "bytes": 189071
+        }
+      ]
+    },
+    {
+      "directory": "ward-r3",
+      "path": "docs/validation/b3_20261016/ward-r3/result.json",
+      "sha256": "4d58fa313039e96e62e6d16332c13f4acfda1f668012ab765b86b1dfc834934b",
+      "passed": 145,
+      "failed": 0,
+      "scope": "B3 second-floor finite actor/contact fixtures: real drawer timing and paid skills, workshop material conservation/JSON, recording-device and paper nodes, dynamic moving-bed obstruction/actual doors/band ownership, onsite porter-order handoff/wrist verification/independent isolation signature versus absent/departed head nurse, private wound exposure/informer delivery/ordinary escort, and actual internal-folder search/head-nurse report/ordinary hero grip/release/timeout. Explicit late-observer, pre-existing other-holder, staff-departure, blocked-side and busy-staff combination fixtures are not natural gameplay claims. Not all twenty-one identities, all random combinations, final art or subjective audio acceptance.",
+      "untested": "",
+      "screenshots": [
+        {
+          "name": "01_drawer_preparation.png",
+          "bytes": 161027
+        },
+        {
+          "name": "02_real_workshop_product.png",
+          "bytes": 162864
+        },
+        {
+          "name": "03_real_recording_deletion.png",
+          "bytes": 175052
+        },
+        {
+          "name": "04_original_band_location_after_delivery.png",
+          "bytes": 182314
+        },
+        {
+          "name": "05_actual_postop_patient_grasp.png",
+          "bytes": 163800
+        },
+        {
+          "name": "06_actual_ordinary_hero_delivery.png",
+          "bytes": 152439
+        },
+        {
+          "name": "07_actual_transfer_nurse_check.png",
+          "bytes": 183183
+        }
+      ]
+    },
+    {
+      "directory": "trace-r2",
+      "path": "docs/validation/b3_20261016/trace-r2/result.json",
+      "sha256": "1ea9f16f800d2641074951fc12a03a7cc43915e7e0da4c61a3a7ee993070cc1c",
+      "passed": 58,
+      "failed": 0,
+      "scope": "B3 finite trace API cases with explicitly placed walkable actors/protagonist, fixed world ticks and real schema2 JSON. Real cleaner/contact/ownership, real original guard patient delivery, actual orderly doorway travel. No natural-RNG playthrough, all combinations, subjective audio or formal-art acceptance.",
+      "untested": "Every cleaner blockage permutation; all ordinary-orderly/report/isolation interleavings; user-operated mouse routes; non-null approved date/vehicle/number art; formal corpse art and audio.",
+      "screenshots": [
+        {
+          "name": "01_real_read_and_owned_bracelet.png",
+          "bytes": 144211
+        },
+        {
+          "name": "02_cleaned_bathroom_actual_state.png",
+          "bytes": 164451
+        },
+        {
+          "name": "03_private_one_note_interrupted.png",
+          "bytes": 153469
+        },
+        {
+          "name": "04_two_actual_read_notes_unknown_fields.png",
+          "bytes": 153110
+        },
+        {
+          "name": "05_actual_corner_pair_released.png",
+          "bytes": 152431
+        }
+      ]
+    },
+    {
+      "directory": "records-r2",
+      "path": "docs/validation/b3_20261016/records-r2/result.json",
+      "sha256": "390d0f746be0b7b5bb352bd8d8573b1db2d3d5fafea3d250508dbbc1945fdf7e",
+      "passed": 59,
+      "failed": 0,
+      "scope": "B3 finite real office reading, archivist/report/guard APIs, fixed world ticks, pause and schema2 JSON. One complete chain earns report by an archivist actually observing continued page reading; alternate evade/upstairs cases use an explicitly pre-existing written desk report. No natural-RNG all-branch playthrough, mouse input, original-patient rerun, subjective audio or formal-art acceptance.",
+      "untested": "All archive collection/report/medical/isolation interleavings; non-null approved patient-number art; every blocked-drag path; guard death branch; final UI mouse routing and natural random combinations.",
+      "screenshots": [
+        {
+          "name": "01_seven_actual_office_pages.png",
+          "bytes": 179199
+        },
+        {
+          "name": "02_real_report_waiting_on_desk.png",
+          "bytes": 179316
+        },
+        {
+          "name": "03_actual_guard_doorway_release.png",
+          "bytes": 186255
+        },
+        {
+          "name": "04_actual_stair_escape_without_remote_grip.png",
+          "bytes": 189591
+        }
+      ]
+    },
+    {
+      "directory": "isolation-r2",
+      "path": "docs/validation/b3_20261016/isolation-r2/result.json",
+      "sha256": "5af63fcef85ba4a4c469ba715abc620f8aa10cb9444b169b8535a637b9162b60",
+      "passed": 70,
+      "failed": 0,
+      "scope": "B3 finite isolation integration with actual movement, paper contact, grip preparation/contact, paired doorway travel, door timing, indoor autonomy/search, paid JOY/WITHDRAW and checksummed schema2 JSON. Actual rendered viewport captures; fixed test conditions, not normal-speed human play or every random combination.",
+      "untested": "Full initial informer-to-signature chain in this suite; all competing-holder/arrival permutations; natural RNG; formal art, voice or subjective sound; non-null approved number glyphs; target-platform export.",
+      "screenshots": [
+        {
+          "name": "01_withdraw_ended_one_attempt.png",
+          "bytes": 169238
+        },
+        {
+          "name": "02_real_drag_release_position.png",
+          "bytes": 165051
+        },
+        {
+          "name": "03_npc_isolation_observer_outside.png",
+          "bytes": 176301
+        },
+        {
+          "name": "04_indoor_search_with_closed_door.png",
+          "bytes": 163855
+        },
+        {
+          "name": "05_open_exit_after_real_observation.png",
+          "bytes": 176400
+        }
+      ]
+    },
+    {
+      "directory": "ui-r2",
+      "path": "docs/validation/b3_20261016/ui-r2/result.json",
+      "sha256": "ffcde8c7582f98749472f522d8ccd5e48ea4e3cb9001616b459cb66ea073a0c3",
+      "passed": 15,
+      "failed": 0,
+      "scope": "real viewport CRT/furniture/material/Shift-pickup mouse and ordinary _process after explicit room/position/unlocked-CONTROL/50N fixture; not natural-RNG, all combinations, subjective audio or formal-art acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "name": "01_actual_office_read_mouse.png",
+          "bytes": 149880
+        },
+        {
+          "name": "02_new_mouse_command_cancels_read.png",
+          "bytes": 149846
+        },
+        {
+          "name": "03_actual_marker_read_and_take_mouse.png",
+          "bytes": 167291
+        }
+      ]
+    },
+    {
+      "directory": "continued",
+      "path": "docs/validation/b3_20261016/continued/result.json",
+      "sha256": "4a3095d710b0230d6a3355feecb7126ae789af7465c9eb36765927f026c38abf",
+      "passed": 2,
+      "failed": 0,
+      "scope": "real Continue and dialogue mouse input from a genuine earlier observed hospital-entry save; original saved RNG/actors/resources/positions retained, ordinary _process afterwards; fixed-clock automated observation, not a fresh L1 run, human all-branch or formal-art/audio acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "name": "01_actual_continue_from_hospital.png",
+          "bytes": 179362
+        },
+        {
+          "name": "02_hospital_entered.png",
+          "bytes": 179422
+        },
+        {
+          "name": "03_terminal_asylum_keyed_exit_development_boundary.png",
+          "bytes": 186245
+        },
+        {
+          "name": "04_asylum_entered.png",
+          "bytes": 181313
+        }
+      ]
+    },
+    {
+      "directory": "recording",
+      "path": "docs/validation/b3_20261016/recording/result.json",
+      "sha256": "b2c08763d420c449131959a1d428fb5650df47b8eeb467871610491a5cf4df01",
+      "passed": 3,
+      "failed": 0,
+      "scope": "continuous ordinary _process after initial stated workshop/actor/50N/unlocked-WITHDRAW/two-target fixture; actual Enter and CRT mouse; no manual world tick after setup, silent MovieMaker capture, not human natural-RNG/formal-art/audio acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "name": "01_visible_closing_preparation.png",
+          "bytes": 159801
+        },
+        {
+          "name": "02_real_withdraw_misses_clamp.png",
+          "bytes": 159688
+        },
+        {
+          "name": "03_autonomy_resumed_and_search_finished.png",
+          "bytes": 159194
+        }
+      ]
+    },
+    {
+      "directory": "regression-campaign",
+      "path": "docs/validation/b3_20261016/regression-campaign/result.json",
+      "sha256": "f5253ce47126478a079c4d265859cfba35d7adfe21b926abef1149daa8f53d74",
+      "passed": 70,
+      "failed": 0,
+      "scope": "profile save/load presentation replacement and L1/L2 exploration; NPC/remaining levels not complete",
+      "untested": "",
+      "screenshots": [
+        {
+          "name": "01_title.png",
+          "bytes": 52395
+        },
+        {
+          "name": "02_search.png",
+          "bytes": 156673
+        },
+        {
+          "name": "03_replacement_b.png",
+          "bytes": 155580
+        },
+        {
+          "name": "04_hospital_lobby.png",
+          "bytes": 179507
+        },
+        {
+          "name": "05_hospital_exit_boundary.png",
+          "bytes": 181611
+        },
+        {
+          "name": "06_drawer_a.png",
+          "bytes": 157867
+        },
+        {
+          "name": "07_drawer_b.png",
+          "bytes": 157455
+        }
+      ]
+    },
+    {
+      "directory": "regression-hospital",
+      "path": "docs/validation/b3_20261016/regression-hospital/result.json",
+      "sha256": "63a805ea80a69f619de26bc323c7de16eebb080430637af912b90138fc431ccd",
+      "passed": 89,
+      "failed": 0,
+      "scope": "formal campaign with explicit actor/position/RNG/body-phase fixtures; actual hospital clock/contact/navigation, CRT mouse and JSON; recording branch uses ordinary process after one stated initial setup; no human full playthrough, final-art or subjective sound acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "name": "01_nurse_treatment.png",
+          "bytes": 153515
+        },
+        {
+          "name": "02_valid_sample_prescription.png",
+          "bytes": 184106
+        },
+        {
+          "name": "03_doctor_actual_knee.png",
+          "bytes": 151108
+        },
+        {
+          "name": "04_swallowed_medicine.png",
+          "bytes": 186646
+        },
+        {
+          "name": "05_false_record_after_refusal.png",
+          "bytes": 183589
+        },
+        {
+          "name": "06_saved_guard_grip.png",
+          "bytes": 151248
+        },
+        {
+          "name": "07_office_exit_after_disposition.png",
+          "bytes": 187491
+        }
+      ]
+    },
+    {
+      "directory": "export_pack",
+      "path": "docs/validation/b3_20261016/export_pack/result.json",
+      "sha256": "841d204e957b64684d4fe80130c3cd25921ddefbb32f5490712dd687ef4e41f4",
+      "passed": 40,
+      "failed": 0,
+      "scope": "matching engine loads exported PCK with external driver; source resources and test scripts excluded; EXE normal startup checked separately; not full EXE gameplay or audio audition",
+      "untested": "",
+      "screenshots": [
+        {
+          "name": "01_windows_title.png",
+          "bytes": 52395
+        },
+        {
+          "name": "01b_windows_introduction.png",
+          "bytes": 32240
+        },
+        {
+          "name": "02_windows_tutorial.png",
+          "bytes": 41541
+        },
+        {
+          "name": "03_windows_freezer.png",
+          "bytes": 80978
+        }
+      ]
+    }
+  ],
+  "remaining_scope": [
+    {
+      "source": "S3:P649–652/T20R6",
+      "item": "登记护士答复后的再次追问及实际书写反复纠缠",
+      "status": "REGISTER_FOLLOWUP三句已在JSON逐字保留；未在当前生产GDScript找到该key的实际触发调用，不算分支已完成。"
+    },
+    {
+      "source": "S3:P730–731/P947–948/P997",
+      "item": "覆盖标签下层、预填隔离观察表、擦改姓名的专用观察反馈",
+      "status": "这些原句未在当前B3数据/生产脚本找到；不以已有搜寻或场景存在代替专用阅读分支。"
+    },
+    {
+      "source": "S3:T20–23/P983–993/S4明确编号关系",
+      "item": "患者具体编号、日期、车次及同人比较",
+      "status": "原材料尚未给可辨具体字形，保留null；对应精确同号/同车核对条件未按已批准非空字段验收。"
+    },
+    {
+      "source": "各最终result.scope/untested",
+      "item": "完整随机组合与正常速度人工通玩、正式音画",
+      "status": "固定条件与自动实机结果不等于全组合通关；主观试听、正式角色/场景/配音/全部NPC并发及所有阻挡分支仍未验收。"
+    }
+  ],
+  "missing_materials": [],
+  "all_source_text_matches": true
+}

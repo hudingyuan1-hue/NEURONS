@@ -1,0 +1,3622 @@
+{
+  "audit": "B3 source/reference audit revision 2",
+  "date": "2026-10-16",
+  "captured_at_utc": "2026-10-16T01:45:41.687040+00:00",
+  "auditor_scope": "Direct S1/S3/S4 DOCX XML, relevant S5R6 README, seven current B3 JSONs and scoped module/input/test code, saved result JSON and screenshot filenames. No Godot, Git, visual media viewing or audio acceptance by this auditor. A separate registration mouse test was authored at root request; actual runs are roots saved evidence.",
+  "supersedes": {
+    "path": "docs/validation/b3_20261016/source_check.json",
+    "sha256": "86131eee80711cee461fa3e23a93aa2f9df2da8dcb1a0ba9bb3f97a2f428ff1e",
+    "note": "R1 preserved unchanged; current registration follow-up and P730/P947/P997 observation fixes supersede those stale remaining-scope items."
+  },
+  "sources": [
+    {
+      "stage": "S1",
+      "path": "DOCX/AI整理后文档/NEURONS_第一阶段_空间物品人员_合并修订版.docx",
+      "sha256": "986cf8367f87d82df28583db45b745b1619afaab3533d291dcb92e0d632e307e",
+      "body_paragraphs": 514,
+      "body_tables": 23
+    },
+    {
+      "stage": "S3",
+      "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+      "body_paragraphs": 1962,
+      "body_tables": 60
+    },
+    {
+      "stage": "S4",
+      "path": "DOCX/AI整理后文档/NEURONS_第四阶段_数值与完整流程_合并修订版.docx",
+      "sha256": "c3f2e9ba7d0b23d7c0654b546b0fa0ce075a0e885f59f48066280dd0b33eee39",
+      "body_paragraphs": 312,
+      "body_tables": 28
+    },
+    {
+      "stage": "S5R6",
+      "path": "DOCX/AI整理后文档/第五阶段内容/NEURONS_第五阶段第6轮_第三关一层与跨层联动测试.zip",
+      "sha256": "daf229a86df0a1f473017a8ccad567ff47243fd13c196130488bd08e161a8c19",
+      "member": "neurons_stage5_r6/README.txt",
+      "member_sha256": "d2371e264c451404d801270b0c9e4ff577097252cbd9d3eb9ec459b1a513d34b",
+      "explicit_revisions": {
+        "R6-02": {
+          "exists": true,
+          "text": "R6-02 角色药停误阻止护士书写\n失败：角色实际吞服→精神扣20、停顿1500ms→在场且目击吞服的护士无法完成记录。\n修订：角色身体限制只挡角色动作；护士自己的已合法书写仍能完成。暂停/死亡及护士缺席继续阻断。\n依据：S3:T22、P703/P708-709，S4:T16/P189-192。"
+        },
+        "R6-04": {
+          "exists": true,
+          "text": "R6-04 隔室接取或拒绝未持有的药杯\n失败：药师在治疗室配杯→角色离室→远处调用接杯/拒杯仍成功。\n修订：准备好的杯子绑定实际位置；未接杯留在原处，已经持杯才随角色移动。中断后沿用同一杯，不补刷。\n依据：S3:P703/P708/P726，S3:P18/P23，S4:P190。"
+        }
+      },
+      "scope": "Only relevant README revisions; old model tests are not Godot acceptance."
+    }
+  ],
+  "inputs_sha256": {
+    "neurons/data/asylum.json": "3dd65eb0c421e653089663fadab4f74b368d101f1e13eaaabc596c6ff2fde055",
+    "neurons/data/asylum_isolation.json": "00e983a10a6b965cad147208c9a06830a2f698c2a3b0e8b1b124325e097d708a",
+    "neurons/data/asylum_records.json": "02adf1b6c19abc465500c08ea946f93b0fd6366a90bb168b897ff2d6cba8a9a6",
+    "neurons/data/asylum_trace_events.json": "303bab6cdcce01abc40889cc0dcb10ebe9a7dc33959e5988eeca21170b60d932",
+    "neurons/data/asylum_ward_events.json": "3e3e3893410f213f4acd22effa1d3694b73987d39f2867855e5293c3196d1a37",
+    "neurons/data/asylum_observations.json": "26a36fe8399572ae47a2942bca493428d6ae91933605fe6e96c49fd71514df86",
+    "neurons/data/asylum_nurse_duty.json": "067fb2af686efa190e7d952074ce82c939b999c3eb7538f61744a62fe6e78b36",
+    "neurons/scripts/world/asylum_layout.gd": "27765cca8709e25239dd9e68667ed37f2eaab01741d1a2200071555e6cbab9a2",
+    "deliverables/NEURONS_2D_资产需求_20261015/data/art_requirements.json": "562c503579583790ddd470f76c9d4134fb6e03fa7c9e558edd8b92f64a100cdc",
+    "docs/validation/b3_20261016/source_check.json": "86131eee80711cee461fa3e23a93aa2f9df2da8dcb1a0ba9bb3f97a2f428ff1e",
+    "neurons/scripts/core/asylum_map.gd": "8e66db89dec8ec5170ae09f2a90568cc0ae07b0b1533f5cb5baac129105ed8e2",
+    "neurons/scripts/core/asylum_events.gd": "61afac4127fdc6b83f4acda1d57c027f47a06f9eb8b17e3417b33ab2615db443",
+    "neurons/scripts/core/asylum_records.gd": "d6f32989ccbaab829eea788cf076289cb556c56e123d16a31c953c4c7f08def1",
+    "neurons/scripts/core/asylum_trace_events.gd": "40725749cf167625bef9546a840069ed491e715e05856946cdda2b494ede64b3",
+    "neurons/scripts/core/asylum_ward_events.gd": "0c26efdb7ab1a3f5b69e57902ae4b0e81eee632d15d5b6a6d3707c7624882bac",
+    "neurons/scripts/core/asylum_isolation.gd": "743fb51a766b047fda98435a8e246b5e3145e6f8083aca7dd67acbd25c6bbc1a",
+    "neurons/scripts/core/asylum_observations.gd": "a168c44877b0d40f295806982c7dc694ab93464c2921e3b63d20b708b13ec664",
+    "neurons/scripts/core/asylum_nurse_duty.gd": "c3a0017e327abfe305b0c4319a640aa55d1eb6b9d89cbf6da5e54c796122fac6",
+    "neurons/scripts/campaign.gd": "f8f585b321671ef9d9efe3bcd98be34efd525afcd8411f1ae83424c93a1be2b6",
+    "neurons/scripts/world/campaign_view.gd": "e74cbe4f64dd6450a090ea72c8c6b079130d3d754b2078d74c667a1b98718f24",
+    "neurons/tests/asylum_registration_check.gd": "14f836126a63aae38d5f2cda39a58be88dc58a5bb53c74c284edd599074d655e",
+    "neurons/tests/asylum_registration_mouse_check.gd": "fe224623ef437a25ff81662bafd98de98ad630ad20751d402580c616b2928ad4",
+    "neurons/tests/asylum_observation_check.gd": "59e262c34b4d9a98c5b847f550f37d8a0a1201f68ec10d20376b9f77846365fa",
+    "neurons/tests/asylum_nurse_duty_check.gd": "e023dc7f34e1b395a51547e2af966b2d3203c11fbf54322ba771687fb6f4d9d8",
+    "neurons/tests/asylum_chain_check.gd": "35637f5b3a1ca9f38dc7076014dde8bd1e8ca673cf6c4e7f2c7ef7966e304a70"
+  },
+  "dialogue": {
+    "references": 133,
+    "exact_text_matches": 133,
+    "mismatches": [],
+    "per_file": [
+      {
+        "file": "neurons/data/asylum.json",
+        "references": 37
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "references": 5
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "references": 23
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "references": 13
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "references": 41
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "references": 11
+      },
+      {
+        "file": "neurons/data/asylum_nurse_duty.json",
+        "references": 3
+      }
+    ],
+    "baseline": {
+      "references": 119,
+      "unchanged_including_speaker_source_text": 119,
+      "missing_or_changed": []
+    },
+    "new_references": 14,
+    "entries": [
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST",
+        "source": "S3:P627",
+        "speaker_display": "护工[平静]",
+        "text": "手伸出来，看一下号。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P627"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST",
+        "source": "S3:P628",
+        "speaker_display": "角色[疑惑]",
+        "text": "床头不是写着吗？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P628"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST",
+        "source": "S3:P629",
+        "speaker_display": "护工[平静]",
+        "text": "要对腕带。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P629"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST_HURT",
+        "source": "S3:P631",
+        "speaker_display": "角色[疼痛]",
+        "text": "你看号码，拧我手干什么？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P631"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST_HURT",
+        "source": "S3:P632",
+        "speaker_display": "护工[冷淡]",
+        "text": "别动。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P632"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "WRIST_HURT",
+        "source": "S3:P633",
+        "speaker_display": "玩家[凝重]",
+        "text": "他已经抓住了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P633"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_WITNESS",
+        "source": "S3:P642",
+        "speaker_display": "登记护士[平静]",
+        "text": "这里写的是自行离院。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P642"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_WITNESS",
+        "source": "S3:P643",
+        "speaker_display": "角色[质问]",
+        "text": "他抓着门框不肯走，我看见了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P643"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_WITNESS",
+        "source": "S3:P644",
+        "speaker_display": "登记护士[平静]",
+        "text": "我按记录答复。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P644"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_RECORD",
+        "source": "S3:P646",
+        "speaker_display": "角色[疑惑]",
+        "text": "这张上面，谁签的字？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P646"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_RECORD",
+        "source": "S3:P647",
+        "speaker_display": "登记护士[平静]",
+        "text": "手续已经办过了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P647"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_FOLLOWUP",
+        "source": "S3:P649",
+        "speaker_display": "角色[坚持]",
+        "text": "我问的是他去了哪。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P649"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_FOLLOWUP",
+        "source": "S3:P651",
+        "speaker_display": "角色看清记录后[生气]",
+        "text": "你写的不是我问的。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P651"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REGISTER_FOLLOWUP",
+        "source": "S3:P652",
+        "speaker_display": "玩家[凝重]",
+        "text": "去向没写，追问倒记下了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P652"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_CASE",
+        "source": "S3:P668",
+        "speaker_display": "角色[认真]",
+        "text": "摘除记录和死亡记录，是同一个号。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P668"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_CASE",
+        "source": "S3:P669",
+        "speaker_display": "医生[平静]",
+        "text": "你认为它们有关系。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P669"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_CASE",
+        "source": "S3:P670",
+        "speaker_display": "角色[生气]",
+        "text": "不是我认为，纸上就这么写着。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P670"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_FALSE",
+        "source": "S3:P673",
+        "speaker_display": "角色[质问]",
+        "text": "我没喝，他们写我喝了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P673"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_FALSE",
+        "source": "S3:P674",
+        "speaker_display": "医生[平静]",
+        "text": "你是在否认这份记录？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P674"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_FALSE",
+        "source": "S3:P675",
+        "speaker_display": "角色[生气]",
+        "text": "我是在说它写错了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P675"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_NONE",
+        "source": "S3:P677",
+        "speaker_display": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P677"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_NONE",
+        "source": "S3:P678",
+        "speaker_display": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P678"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_REACH",
+        "source": "S3:P690",
+        "speaker_display": "助手[平静]",
+        "text": "手放这里。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P690"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_REACH",
+        "source": "S3:P691",
+        "speaker_display": "角色[警惕]",
+        "text": "你先说要做什么。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P691"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_HOLD",
+        "source": "S3:P693",
+        "speaker_display": "角色[生气]",
+        "text": "只是问话，为什么要扣住？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P693"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "ASSIST_HOLD",
+        "source": "S3:P694",
+        "speaker_display": "助手[平静]",
+        "text": "先别动。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P694"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "PHARMACY",
+        "source": "S3:P711",
+        "speaker_display": "治疗药师[平静]",
+        "text": "把医嘱给我。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P711"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "PHARMACY",
+        "source": "S3:P712",
+        "speaker_display": "角色[疑惑]",
+        "text": "上面写的是什么药？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P712"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "PHARMACY",
+        "source": "S3:P713",
+        "speaker_display": "治疗药师[平静]",
+        "text": "按这张配。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P713"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "REFUSE",
+        "source": "S3:P715",
+        "speaker_display": "角色[警惕]",
+        "text": "我先不喝。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P715"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "FALSE_MEDICINE",
+        "source": "S3:P721",
+        "speaker_display": "角色[生气]",
+        "text": "杯子还满着。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P721"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "FALSE_MEDICINE",
+        "source": "S3:P722",
+        "speaker_display": "给药护士[平静]",
+        "text": "记录在这里签。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P722"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "FALSE_MEDICINE",
+        "source": "S3:P723",
+        "speaker_display": "玩家[凝重]",
+        "text": "她看见了，还是这样写。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P723"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_TRANSFER",
+        "source": "S3:P677",
+        "speaker_display": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P677"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_TRANSFER",
+        "source": "S3:P678",
+        "speaker_display": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P678"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_PARTIAL",
+        "source": "S3:P677",
+        "speaker_display": "角色[疑惑]",
+        "text": "我要去哪里才能出去？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P677"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum.json",
+        "key": "DOCTOR_PARTIAL",
+        "source": "S3:P678",
+        "speaker_display": "医生[平静]",
+        "text": "先说说你为什么想出去。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P678"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "NOTICE",
+        "source": "S3:P935",
+        "speaker_display": "隔离护工[平静]",
+        "text": "先到里面待一会儿。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P935"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "NOTICE",
+        "source": "S3:P936",
+        "speaker_display": "角色[警惕]",
+        "text": "为什么是我？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P936"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "CLOSED",
+        "source": "S3:P939",
+        "speaker_display": "角色[生气]",
+        "text": "门打开。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P939"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "CLOSED",
+        "source": "S3:P940",
+        "speaker_display": "护工[平静]",
+        "text": "等这次观察结束。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P940"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_isolation.json",
+        "key": "OPENED",
+        "source": "S3:P942",
+        "speaker_display": "角色[凝重]",
+        "text": "可以走了？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P942"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP",
+        "source": "S3:P738",
+        "speaker_display": "档案员[平静]",
+        "text": "病历不能这样翻。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P738"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP",
+        "source": "S3:P742",
+        "speaker_display": "角色[疑惑]",
+        "text": "这一页为什么被盖住了？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P742"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP_MATCHED",
+        "source": "S3:P738",
+        "speaker_display": "档案员[平静]",
+        "text": "病历不能这样翻。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P738"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "STOP_MATCHED",
+        "source": "S3:P739",
+        "speaker_display": "角色[疑惑]",
+        "text": "照片和这行字对不上。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P739"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "GUARD",
+        "source": "S3:P752",
+        "speaker_display": "保安[严肃]",
+        "text": "先离开这张桌子。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P752"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "GUARD",
+        "source": "S3:P753",
+        "speaker_display": "角色[警惕]",
+        "text": "我看完就走。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P753"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD",
+        "source": "S3:P758",
+        "speaker_display": "角色[疼痛]",
+        "text": "你要把我带去哪？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P758"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD",
+        "source": "S3:P756",
+        "speaker_display": "保安[平静]",
+        "text": "门口。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P756"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD_AGAIN",
+        "source": "S3:P755",
+        "speaker_display": "角色[疼痛]",
+        "text": "你又要把我带去哪？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P755"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "HELD_AGAIN",
+        "source": "S3:P756",
+        "speaker_display": "保安[平静]",
+        "text": "门口。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P756"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_STOP",
+        "source": "S3:P771",
+        "speaker_display": "病人[低声]",
+        "text": "有人来了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P771"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_HELD",
+        "source": "S3:P773",
+        "speaker_display": "病人[平静]",
+        "text": "我知道路。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P773"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_HELD",
+        "source": "S3:P774",
+        "speaker_display": "保安[冷淡]",
+        "text": "走。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P774"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "source": "S3:P762/P443",
+        "speaker_display": "人物[认真]",
+        "text": "名字他们会换。看后面的数。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P762",
+          "S3:P443"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "source": "S3:P444",
+        "speaker_display": "角色[疑惑]",
+        "text": "你说哪个？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P444"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "source": "S3:P445",
+        "speaker_display": "人物[认真]",
+        "text": "翻过来。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P445"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_NUMBER",
+        "source": "S3:P446",
+        "speaker_display": "玩家[认真]",
+        "text": "他说的是背面。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P446"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_ANOMALY",
+        "source": "S3:P763/P450",
+        "speaker_display": "人物[认真]",
+        "text": "刚才不是你自己停下来的吧。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P763",
+          "S3:P450"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_ANOMALY",
+        "source": "S3:P452",
+        "speaker_display": "角色[迟疑]",
+        "text": "……你也看见了？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P452"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_ANOMALY",
+        "source": "S3:P453",
+        "speaker_display": "玩家[警惕]",
+        "text": "他怎么会问这个？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P453"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_AWARE",
+        "source": "S3:P763/P450",
+        "speaker_display": "人物[认真]",
+        "text": "刚才不是你自己停下来的吧。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P763",
+          "S3:P450"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_AWARE",
+        "source": "S3:P455",
+        "speaker_display": "角色[冷淡]",
+        "text": "你还看见了什么？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P455"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_records.json",
+        "key": "PATIENT_AWARE",
+        "source": "S3:P456",
+        "speaker_display": "人物[平静]",
+        "text": "就刚才那一下。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P456"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "COVER",
+        "source": "S3:P962",
+        "speaker_display": "保洁员[平静]",
+        "text": "让一下，这里还没收完。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P962"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORPSE_SEEN",
+        "source": "S3:P964",
+        "speaker_display": "角色[震惊]",
+        "text": "里面有个人。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P964"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORPSE_SEEN",
+        "source": "S3:P965",
+        "speaker_display": "保洁员[平静]",
+        "text": "先出去。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P965"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "RELIC_MATCH",
+        "source": "S3:P967",
+        "speaker_display": "角色[凝重]",
+        "text": "这两处的号码对得上。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P967"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "RELIC_MATCH",
+        "source": "S3:P968",
+        "speaker_display": "玩家[认真]",
+        "text": "记清楚，东西要被收走了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P968"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "SAME_CAR",
+        "source": "S3:P988",
+        "speaker_display": "跨关精神病人[低声]",
+        "text": "我们是同一辆车送来的。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P988"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORNER_SHOW",
+        "source": "S3:P990",
+        "speaker_display": "角落病友[低声]",
+        "text": "这个号，我记得。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P990"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "BOTH_NOTES",
+        "source": "S3:P992",
+        "speaker_display": "角色[认真]",
+        "text": "车次相同，你们的号码不同。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P992"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "BOTH_NOTES",
+        "source": "S3:P993",
+        "speaker_display": "玩家[认真]",
+        "text": "再看看日期。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P993"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "ONE_NOTE",
+        "source": "S3:P995",
+        "speaker_display": "角色[疑惑]",
+        "text": "另一份呢？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P995"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "ORDERLY",
+        "source": "S3:P1007",
+        "speaker_display": "护工[冷淡]",
+        "text": "收起来，跟我走。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1007"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "CORNER_HELD",
+        "source": "S3:P1010",
+        "speaker_display": "角落病友[低声]",
+        "text": "别拿我的东西。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1010"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_trace_events.json",
+        "key": "WITNESS_CORNER",
+        "source": "S3:P1012",
+        "speaker_display": "角色[生气]",
+        "text": "他只是给我看了一张纸。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1012"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_NOTICE",
+        "source": "S3:P1022",
+        "speaker_display": "作业督导 · 严肃",
+        "text": "那边的材料不能翻。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1022"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_NOTICE",
+        "source": "S3:P1023",
+        "speaker_display": "角色 · 警惕",
+        "text": "我看完就放回去。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1023"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_HURT",
+        "source": "S3:P1025",
+        "speaker_display": "角色 · 疼痛",
+        "text": "手还在里面！",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1025"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_HURT",
+        "source": "S3:P1027",
+        "speaker_display": "玩家 · 凝重",
+        "text": "先把手收回来。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1027"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CLAMP_MISS",
+        "source": "S3:P1029",
+        "speaker_display": "角色 · 生气",
+        "text": "你没看见我的手吗？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1029"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR",
+        "source": "S3:P1040",
+        "speaker_display": "劳动病友 · 专注",
+        "text": "那叠还没贴。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1040"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR",
+        "source": "S3:P1041",
+        "speaker_display": "角色 · 疑惑",
+        "text": "这些盒子要送去哪？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1041"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR",
+        "source": "S3:P1042",
+        "speaker_display": "劳动病友 · 平静",
+        "text": "我只做这个。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1042"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR_MATCH",
+        "source": "S3:P1044",
+        "speaker_display": "角色 · 凝重",
+        "text": "冷藏箱上也有这个批次。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1044"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "LABOR_MATCH",
+        "source": "S3:P1045",
+        "speaker_display": "玩家 · 认真",
+        "text": "字和号码都对上了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P1045"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_ORIGINAL",
+        "source": "S3:P897",
+        "speaker_display": "发言病友 · 紧张",
+        "text": "转运编号是【对应编号】，那天——",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P897"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_STOP",
+        "source": "S3:P898",
+        "speaker_display": "治疗主任 · 平静",
+        "text": "先停一下。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P898"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_READ",
+        "source": "S3:P900",
+        "speaker_display": "治疗主任 · 平静",
+        "text": "照这张读。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P900"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_RETRACT",
+        "source": "S3:P894 原文",
+        "speaker_display": "发言病友",
+        "text": "此前所述均不属实",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P894"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_QUESTION",
+        "source": "S3:P908",
+        "speaker_display": "角色 · 质问",
+        "text": "刚才那段为什么删了？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P908"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_QUESTION",
+        "source": "S3:P909",
+        "speaker_display": "治疗主任 · 平静",
+        "text": "保留他确认过的。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P909"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "THERAPY_QUESTION",
+        "source": "S3:P910",
+        "speaker_display": "角色 · 生气",
+        "text": "是你让他照着读的。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P910"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_HAND",
+        "source": "S3:P835",
+        "speaker_display": "被转运患者 · 微弱",
+        "text": "等一下……",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P835"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_HAND",
+        "source": "S3:P836",
+        "speaker_display": "转运工 · 平静",
+        "text": "手放回去。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P836"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_ALIVE",
+        "source": "S3:P838",
+        "speaker_display": "角色 · 警惕",
+        "text": "他还醒着。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P838"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_ALIVE",
+        "source": "S3:P839",
+        "speaker_display": "玩家 · 凝重",
+        "text": "看见了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P839"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_BAND",
+        "source": "S3:P841",
+        "speaker_display": "角色 · 认真",
+        "text": "号码还在。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P841"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "TRANSFER_BAND",
+        "source": "S3:P842",
+        "speaker_display": "玩家 · 认真",
+        "text": "和单上的对一下。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P842"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_INVITE",
+        "source": "S3:P853",
+        "speaker_display": "术后病友 · 低声",
+        "text": "你帮我看看，还在渗吗？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P853"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_INVITE",
+        "source": "S3:P858 无康复标签知情时",
+        "speaker_display": "角色 · 迟疑",
+        "text": "伤口在哪？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P858"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_WOUND",
+        "source": "S3:P856",
+        "speaker_display": "角色 · 凝重",
+        "text": "还没好。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P856"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_REPORT",
+        "source": "S3:P864",
+        "speaker_display": "告密病友 · 低声",
+        "text": "他把伤口给别人看了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P864"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_REPORT",
+        "source": "S3:P865",
+        "speaker_display": "护士长 · 平静",
+        "text": "哪个人？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P865"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_PERMIT",
+        "source": "S3:P868",
+        "speaker_display": "告密病友 · 急切",
+        "text": "那我能出去了吗？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P868"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "INFORMER_PERMIT",
+        "source": "S3:P869",
+        "speaker_display": "护士长 · 平静",
+        "text": "拿着。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P869"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_REMOVE",
+        "source": "S3:P879",
+        "speaker_display": "护工 · 平静",
+        "text": "把衣服放下，跟我来。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P879"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_REMOVE",
+        "source": "S3:P880",
+        "speaker_display": "术后病友 · 抗拒",
+        "text": "我只是让他看一下。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P880"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_WITNESS",
+        "source": "S3:P883",
+        "speaker_display": "角色 · 生气",
+        "text": "伤没好，为什么不先处理？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P883"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "POSTOP_WITNESS",
+        "source": "S3:P884",
+        "speaker_display": "玩家 · 凝重",
+        "text": "先看他们把人带去哪。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P884"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CHIEF_INTERNAL",
+        "source": "S3:P793",
+        "speaker_display": "护士长 · 严肃",
+        "text": "这份不是给你看的。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P793"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CHIEF_INTERNAL",
+        "source": "S3:P794",
+        "speaker_display": "角色 · 警惕",
+        "text": "我在找东西。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P794"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "CHIEF_REPORT",
+        "source": "S3:P797",
+        "speaker_display": "护士长 · 平静",
+        "text": "刚才翻这份记录的人，去看一下。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P797"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HERO",
+        "source": "S3:P819",
+        "speaker_display": "护工 · 平静",
+        "text": "先到这边来。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P819"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HERO",
+        "source": "S3:P820",
+        "speaker_display": "角色 · 警惕",
+        "text": "有什么事就在这里说。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P820"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HURT",
+        "source": "S3:P822",
+        "speaker_display": "角色 · 疼痛",
+        "text": "松一点！",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P822"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_ward_events.json",
+        "key": "ORDINARY_HURT",
+        "source": "S3:P823",
+        "speaker_display": "玩家 · 凝重",
+        "text": "已经抓住了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P823"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "CARD",
+        "source": "S3:T19R2",
+        "speaker_display": "角色",
+        "text": "下面还有字。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:T19R2"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "STRAPS",
+        "source": "S3:T19R3",
+        "speaker_display": "角色",
+        "text": "带子是固定在床上的。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:T19R3"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "BADGE",
+        "source": "S3:T19R4",
+        "speaker_display": "角色",
+        "text": "胸牌被拿掉了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:T19R4"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "COAT_RECOGNISE",
+        "source": "S3:P278",
+        "speaker_display": "角色[凝重]",
+        "text": "这个袖口……房间里那件也是这样。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P278"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "COAT_RECOGNISE",
+        "source": "S3:P279",
+        "speaker_display": "玩家[疑惑]",
+        "text": "先看看里面有没有名字。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P279"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "LABEL_UNDER",
+        "source": "S3:P730",
+        "speaker_display": "角色[凝重]",
+        "text": "新标签压着旧的。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P730"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "LABEL_UNDER",
+        "source": "S3:P731",
+        "speaker_display": "玩家[认真]",
+        "text": "先看清下面那一层。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P731"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "RAIL",
+        "source": "S3:P787",
+        "speaker_display": "角色[疑惑]",
+        "text": "这些痕迹是怎么磨出来的？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P787"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "PREFILLED",
+        "source": "S3:P947",
+        "speaker_display": "角色[质问]",
+        "text": "我刚进来，这里已经写完了？",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P947"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "PREFILLED",
+        "source": "S3:P948",
+        "speaker_display": "玩家[凝重]",
+        "text": "连结果都填好了。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P948"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_observations.json",
+        "key": "ERASED_NAME",
+        "source": "S3:P997",
+        "speaker_display": "角色[疑惑]",
+        "text": "名字擦过，床号还留着。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P997"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_nurse_duty.json",
+        "key": "COPIED_ERROR",
+        "source": "S3:P806",
+        "speaker_display": "角色[质问]",
+        "text": "这件事不是这样发生的。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P806"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_nurse_duty.json",
+        "key": "COPIED_ERROR",
+        "source": "S3:P807",
+        "speaker_display": "病区护士[平静]",
+        "text": "我收到的就是这份。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P807"
+        ]
+      },
+      {
+        "file": "neurons/data/asylum_nurse_duty.json",
+        "key": "COPIED_ERROR",
+        "source": "S3:P808",
+        "speaker_display": "玩家[凝重]",
+        "text": "抄了一遍，还是错的。",
+        "exact_text_match": true,
+        "matching_anchors": [
+          "S3:P808"
+        ]
+      }
+    ],
+    "speaker_note": "Emotion-label typography is a display convention; exact spoken text is checked against the cited source."
+  },
+  "search": {
+    "points": 45,
+    "text_fields": 135,
+    "matched_fields": 135,
+    "mismatches": [],
+    "entries": [
+      {
+        "point": "stairs:0",
+        "source": "S3:T29R2",
+        "action": "查看窗台、窗框下沿及可触及缝隙",
+        "hero_line": "窗沿没有。",
+        "player_line": "站稳点。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "corridor:0",
+        "source": "S3:T29R3",
+        "action": "查看抽屉、桌面夹层与文件夹下方",
+        "hero_line": "这里只有资料。",
+        "player_line": "钥匙不在里面。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "corridor:1",
+        "source": "S3:T29R4",
+        "action": "查看花坛沿口与外侧底部",
+        "hero_line": "边上没有。",
+        "player_line": "不用把土全翻了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "corridor:2",
+        "source": "S3:T29R5",
+        "action": "检查座面下方、椅缝及同组椅脚旁",
+        "hero_line": "这排下面都没有。",
+        "player_line": "椅缝里也没有。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "corridor:3",
+        "source": "S3:T29R6",
+        "action": "逐格开柜，拨开可移动物件",
+        "hero_line": "柜子里也没有。",
+        "player_line": "关上再走。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:0",
+        "source": "S3:T29R7",
+        "action": "检查柜格、抽屉与电视底座旁",
+        "hero_line": "只有这些杂物。",
+        "player_line": "不是钥匙。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:1",
+        "source": "S3:T29R8",
+        "action": "查看窗台与下框",
+        "hero_line": "这边窗台没有。",
+        "player_line": "看看另一边。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:2",
+        "source": "S3:T29R9",
+        "action": "查看坐垫缝、扶手旁与可触及底部",
+        "hero_line": "缝里也没有。",
+        "player_line": "找完把垫子放好。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:3",
+        "source": "S3:T29R10",
+        "action": "检查台面、下层与物件底部",
+        "hero_line": "茶几下面没有。",
+        "player_line": "就剩这些纸。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:4",
+        "source": "S3:T29R11",
+        "action": "查看桌面物件之间、桌沿与下方",
+        "hero_line": "这里没找到。",
+        "player_line": "桌底也看过了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:5",
+        "source": "S3:T29R12",
+        "action": "检查盆沿、底托及盆后地面",
+        "hero_line": "盆后面也没有。",
+        "player_line": "下一处。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:6",
+        "source": "S3:T29R13",
+        "action": "查看另一处窗台和框沿",
+        "hero_line": "这扇下面也没有。",
+        "player_line": "两边都找过了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "activity:7",
+        "source": "S3:T29R14",
+        "action": "查看可触及书缝、书后及层板",
+        "hero_line": "书后面没有。",
+        "player_line": "别把整架推倒了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:0",
+        "source": "S3:T29R15",
+        "action": "翻查柜格与盒子后方",
+        "hero_line": "柜里没有钥匙。",
+        "player_line": "都是这里用的东西。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:1",
+        "source": "S3:T29R16",
+        "action": "检查窗沿、窗框下缝",
+        "hero_line": "这边没有。",
+        "player_line": "看清就行。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:2",
+        "source": "S3:T29R17",
+        "action": "查看座面下方与固定椅之间的缝隙",
+        "hero_line": "椅子下面也没有。",
+        "player_line": "不用把它搬起来。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:3",
+        "source": "S3:T29R18",
+        "action": "查看盆边、底托与后方",
+        "hero_line": "这里只有灰。",
+        "player_line": "起来吧。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:4",
+        "source": "S3:T29R19",
+        "action": "查看另一扇窗的可触及边沿",
+        "hero_line": "这里也空着。",
+        "player_line": "换一处。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "group_therapy:5",
+        "source": "S3:T29R20",
+        "action": "查看托槽及附带资料夹",
+        "hero_line": "槽里没有钥匙。",
+        "player_line": "夹子下面呢？",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "quiet:0",
+        "source": "S3:T34R2",
+        "action": "打开可开启柜格，查看格底与物件后方",
+        "hero_line": "格子里没有。",
+        "player_line": "后面也摸过了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "quiet:1",
+        "source": "S3:T34R3",
+        "action": "逐层检查柜格及底部",
+        "hero_line": "这一层也没有。",
+        "player_line": "下面再看一下。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "quiet:2",
+        "source": "S3:T34R4",
+        "action": "掀起活动软垫，检查缝隙和座面下方",
+        "hero_line": "下面有抓痕，没有钥匙。",
+        "player_line": "看清就放回去。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "quiet:3",
+        "source": "S3:T34R5",
+        "action": "站立抬手检查可触及下沿",
+        "hero_line": "窗沿没有。",
+        "player_line": "不用往上爬。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:0",
+        "source": "S3:T34R6",
+        "action": "蹲下查看池下、管道旁及底部",
+        "hero_line": "这边下面没有。",
+        "player_line": "别碰到管子。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:1",
+        "source": "S3:T34R7",
+        "action": "查看另一池下的独立空间",
+        "hero_line": "这边也没有。",
+        "player_line": "两个都找过了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:2",
+        "source": "S3:T34R8",
+        "action": "查看格栅与可触及边缝",
+        "hero_line": "缝里没有钥匙。",
+        "player_line": "看清卡住的是什么。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:3",
+        "source": "S3:T34R9",
+        "action": "查看置物处、地面及本隔间小地漏",
+        "hero_line": "这里没有。",
+        "player_line": "地上的也看过了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:4",
+        "source": "S3:T34R10",
+        "action": "检查另一间置物处及小地漏",
+        "hero_line": "这一间也没有。",
+        "player_line": "往门边退一点。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:5",
+        "source": "S3:T34R11",
+        "action": "查看可触及的窗下沿及框缝",
+        "hero_line": "窗框下面没有。",
+        "player_line": "别踩那些湿的地方。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "bathroom:6",
+        "source": "S3:T34R12",
+        "action": "查看水箱可开启处及底座外侧",
+        "hero_line": "这里也没找到。",
+        "player_line": "找完把盖子放好。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:0",
+        "source": "S3:T34R13",
+        "action": "分格翻查衣物间与柜底",
+        "hero_line": "衣服之间没有。",
+        "player_line": "别混到另一边去。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:1",
+        "source": "S3:T34R14",
+        "action": "检查柜格、盒后与底层",
+        "hero_line": "柜里没有钥匙。",
+        "player_line": "柜门别碰到旁边的人。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:2",
+        "source": "S3:T34R15",
+        "action": "掀被角，查看床沿与可触及床底",
+        "hero_line": "这张床没有。",
+        "player_line": "下面也看一下。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:3",
+        "source": "S3:T34R16",
+        "action": "检查平整被褥、床沿与床底",
+        "hero_line": "铺得这么整齐，也没有。",
+        "player_line": "找完放回原样。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:4",
+        "source": "S3:T34R17",
+        "action": "查看对应台面与抽屉",
+        "hero_line": "抽屉里没有。",
+        "player_line": "床号先对清楚。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:5",
+        "source": "S3:T34R18",
+        "action": "查看另一柜台面及抽屉夹层",
+        "hero_line": "这边也没找到。",
+        "player_line": "这是另一人的柜子。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "double_ward:6",
+        "source": "S3:T34R19",
+        "action": "查看窗沿、下框及可触及缝隙",
+        "hero_line": "窗边没有。",
+        "player_line": "再看别处。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:0",
+        "source": "S3:T34R20",
+        "action": "查看纸张、绘画工具之间与桌下",
+        "hero_line": "纸下面没有钥匙。",
+        "player_line": "别把画揉坏了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:1",
+        "source": "S3:T34R21",
+        "action": "检查半成品旁、托盘及桌沿下方",
+        "hero_line": "盒子旁边也没有。",
+        "player_line": "没贴完的先放回去。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:2",
+        "source": "S3:T34R22",
+        "action": "查看柜格、抽屉与底层",
+        "hero_line": "矮柜里没有。",
+        "player_line": "里面找完了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:3",
+        "source": "S3:T34R23",
+        "action": "查看池下及管道旁",
+        "hero_line": "下面没有。",
+        "player_line": "起来吧。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:4",
+        "source": "S3:T34R24",
+        "action": "查看窗台与框沿",
+        "hero_line": "窗台也没有。",
+        "player_line": "下一处。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:5",
+        "source": "S3:T34R25",
+        "action": "查看托架、可接触背面与资料夹",
+        "hero_line": "后面不是钥匙，是标签。",
+        "player_line": "先看清写的什么。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:6",
+        "source": "S3:T34R26",
+        "action": "只检查未上锁取料抽屉及开放格",
+        "hero_line": "这一格没有钥匙。",
+        "player_line": "手先收回来。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "point": "workshop:7",
+        "source": "S3:T34R27",
+        "action": "查看纸料、标签卷之间及层板",
+        "hero_line": "材料后面也没有。",
+        "player_line": "别把整叠弄散了。",
+        "matching_fields": [
+          true,
+          true,
+          true
+        ]
+      }
+    ]
+  },
+  "identities": {
+    "count": 21,
+    "groups": 14,
+    "members": 21,
+    "unique_members": 21,
+    "exact_partition": true,
+    "source_S4_P100": "人数纠错：第三关二层新增人物应为12人，原汇总漏计角落病友；第三关共21个身份。跨关同人去重后，Street仍为45个身份。",
+    "shared_declarations": {
+      "ordinary_orderly": {
+        "shared_with": "二层普通护工",
+        "source": "S3:P618/P783"
+      },
+      "med_nurse": {
+        "shared_with": "二层病区护士",
+        "source": "S3:P618/P701/P783"
+      },
+      "patient": {
+        "cross_level": "N41",
+        "source": "S3:P618/P759–768",
+        "prior_removed_is_not_death": true
+      }
+    }
+  },
+  "asset_refs": {
+    "planning_source": "deliverables/NEURONS_2D_资产需求_20261015/data/art_requirements.json",
+    "planning_sha256": "562c503579583790ddd470f76c9d4134fb6e03fa7c9e558edd8b92f64a100cdc",
+    "count": 21,
+    "unique": 21,
+    "same_identity_asset_mapping_as_r1": true,
+    "group_matches": 21,
+    "child_references": 84,
+    "missing_children": [],
+    "entries": [
+      {
+        "identity": "ordinary_orderly",
+        "asset_id": "ART_NPC_N02",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N02",
+          "CHR_OTHER_NPCS_N02_ALTERED",
+          "CHR_OTHER_NPCS_N02_PORTRAIT",
+          "CHR_OTHER_NPCS_N02_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "registration_nurse",
+        "asset_id": "ART_NPC_N04",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N04",
+          "CHR_OTHER_NPCS_N04_ALTERED",
+          "CHR_OTHER_NPCS_N04_PORTRAIT",
+          "CHR_OTHER_NPCS_N04_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "doctor",
+        "asset_id": "ART_NPC_N36",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N36",
+          "CHR_OTHER_NPCS_N36_ALTERED",
+          "CHR_OTHER_NPCS_N36_PORTRAIT",
+          "CHR_OTHER_NPCS_N36_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "assistant",
+        "asset_id": "ART_NPC_N14",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N14",
+          "CHR_OTHER_NPCS_N14_ALTERED",
+          "CHR_OTHER_NPCS_N14_PORTRAIT",
+          "CHR_OTHER_NPCS_N14_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "pharmacist",
+        "asset_id": "ART_NPC_N28",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N28",
+          "CHR_OTHER_NPCS_N28_ALTERED",
+          "CHR_OTHER_NPCS_N28_PORTRAIT",
+          "CHR_OTHER_NPCS_N28_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "med_nurse",
+        "asset_id": "ART_NPC_N22",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N22",
+          "CHR_OTHER_NPCS_N22_ALTERED",
+          "CHR_OTHER_NPCS_N22_PORTRAIT",
+          "CHR_OTHER_NPCS_N22_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "archivist",
+        "asset_id": "ART_NPC_N43",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N43",
+          "CHR_OTHER_NPCS_N43_ALTERED",
+          "CHR_OTHER_NPCS_N43_PORTRAIT",
+          "CHR_OTHER_NPCS_N43_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "guard",
+        "asset_id": "ART_NPC_N37",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N37",
+          "CHR_OTHER_NPCS_N37_ALTERED",
+          "CHR_OTHER_NPCS_N37_PORTRAIT",
+          "CHR_OTHER_NPCS_N37_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "patient",
+        "asset_id": "ART_NPC_N41",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N41",
+          "CHR_OTHER_NPCS_N41_ALTERED",
+          "CHR_OTHER_NPCS_N41_PORTRAIT",
+          "CHR_OTHER_NPCS_N41_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "head_nurse",
+        "asset_id": "ART_NPC_N05",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N05",
+          "CHR_OTHER_NPCS_N05_ALTERED",
+          "CHR_OTHER_NPCS_N05_PORTRAIT",
+          "CHR_OTHER_NPCS_N05_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "porter",
+        "asset_id": "ART_NPC_N23",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N23",
+          "CHR_OTHER_NPCS_N23_ALTERED",
+          "CHR_OTHER_NPCS_N23_PORTRAIT",
+          "CHR_OTHER_NPCS_N23_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "transport_patient",
+        "asset_id": "ART_NPC_N10",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N10",
+          "CHR_OTHER_NPCS_N10_ALTERED",
+          "CHR_OTHER_NPCS_N10_PORTRAIT",
+          "CHR_OTHER_NPCS_N10_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "postop_patient",
+        "asset_id": "ART_NPC_N11",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N11",
+          "CHR_OTHER_NPCS_N11_ALTERED",
+          "CHR_OTHER_NPCS_N11_PORTRAIT",
+          "CHR_OTHER_NPCS_N11_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "informer",
+        "asset_id": "ART_NPC_N44",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N44",
+          "CHR_OTHER_NPCS_N44_ALTERED",
+          "CHR_OTHER_NPCS_N44_PORTRAIT",
+          "CHR_OTHER_NPCS_N44_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "therapist",
+        "asset_id": "ART_NPC_N38",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N38",
+          "CHR_OTHER_NPCS_N38_ALTERED",
+          "CHR_OTHER_NPCS_N38_PORTRAIT",
+          "CHR_OTHER_NPCS_N38_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "speaker",
+        "asset_id": "ART_NPC_N24",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N24",
+          "CHR_OTHER_NPCS_N24_ALTERED",
+          "CHR_OTHER_NPCS_N24_PORTRAIT",
+          "CHR_OTHER_NPCS_N24_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "isolation_orderly",
+        "asset_id": "ART_NPC_N15",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N15",
+          "CHR_OTHER_NPCS_N15_ALTERED",
+          "CHR_OTHER_NPCS_N15_PORTRAIT",
+          "CHR_OTHER_NPCS_N15_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "cleaner",
+        "asset_id": "ART_NPC_N29",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N29",
+          "CHR_OTHER_NPCS_N29_ALTERED",
+          "CHR_OTHER_NPCS_N29_PORTRAIT",
+          "CHR_OTHER_NPCS_N29_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "corner_patient",
+        "asset_id": "ART_NPC_N08",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N08",
+          "CHR_OTHER_NPCS_N08_ALTERED",
+          "CHR_OTHER_NPCS_N08_PORTRAIT",
+          "CHR_OTHER_NPCS_N08_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "supervisor",
+        "asset_id": "ART_NPC_N25",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N25",
+          "CHR_OTHER_NPCS_N25_ALTERED",
+          "CHR_OTHER_NPCS_N25_PORTRAIT",
+          "CHR_OTHER_NPCS_N25_ACTION_REF"
+        ],
+        "missing_children": []
+      },
+      {
+        "identity": "labor_patient",
+        "asset_id": "ART_NPC_N30",
+        "group_exists": true,
+        "children": [
+          "CHR_OTHER_NPCS_N30",
+          "CHR_OTHER_NPCS_N30_ALTERED",
+          "CHR_OTHER_NPCS_N30_PORTRAIT",
+          "CHR_OTHER_NPCS_N30_ACTION_REF"
+        ],
+        "missing_children": []
+      }
+    ],
+    "limitation": "Stable planning references only, not delivered or approved final art. Desktop NEW form is not edited."
+  },
+  "observations": {
+    "targets": 23,
+    "unique_target_ids": 23,
+    "deferred": 8,
+    "unique_deferred_ids": 8,
+    "target_deferred_intersection": [],
+    "target_errors": [],
+    "glyphs": {
+      "old_bed_name": null,
+      "laundry_bag_number": null,
+      "family_closed_by": null,
+      "family_closed_at": null,
+      "under_transport_number": null,
+      "medicine_prefill_text": null,
+      "medicine_prefill_time": null,
+      "recovery_photo_number": null,
+      "isolation_prefill_time": null,
+      "bed1_erased_name": null,
+      "bed1_number": null,
+      "bed2_erased_name": null,
+      "bed2_number": null,
+      "workshop_batch": null
+    },
+    "all14_glyphs_unknown": true,
+    "entries": [
+      {
+        "id": "asylum_bed_card_under",
+        "source": "S3:T19R2",
+        "resolved_anchors": [
+          "S3:T19R2"
+        ],
+        "room": "ward",
+        "furniture": 0,
+        "kind": "static",
+        "dialogue_key": "CARD",
+        "fields": {
+          "old_name": "old_bed_name"
+        },
+        "errors": []
+      },
+      {
+        "id": "asylum_bed_straps",
+        "source": "S3:T19R3",
+        "resolved_anchors": [
+          "S3:T19R3"
+        ],
+        "room": "ward",
+        "furniture": 0,
+        "kind": "static",
+        "dialogue_key": "STRAPS",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_ward_coat_badge",
+        "source": "S3:T19R4",
+        "resolved_anchors": [
+          "S3:T19R4"
+        ],
+        "room": "ward",
+        "furniture": 6,
+        "kind": "static",
+        "dialogue_key": "BADGE",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_laundry_bag_label",
+        "source": "S3:T19R5/P291–293",
+        "resolved_anchors": [
+          "S3:T19R5",
+          "S3:P291",
+          "S3:P292",
+          "S3:P293"
+        ],
+        "room": "ward",
+        "furniture": 0,
+        "kind": "laundry_bag",
+        "dialogue_key": "",
+        "fields": {
+          "bag_number": "laundry_bag_number"
+        },
+        "errors": []
+      },
+      {
+        "id": "asylum_laundry_vacancy",
+        "source": "S3:T19R5",
+        "resolved_anchors": [
+          "S3:T19R5"
+        ],
+        "room": "ward",
+        "furniture": 0,
+        "kind": "laundry_vacancy",
+        "dialogue_key": "",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_family_contact_closed",
+        "source": "S3:P655",
+        "resolved_anchors": [
+          "S3:P655"
+        ],
+        "room": "lobby",
+        "furniture": 0,
+        "kind": "static",
+        "dialogue_key": "",
+        "fields": {
+          "closed_by": "family_closed_by",
+          "closed_at": "family_closed_at"
+        },
+        "errors": []
+      },
+      {
+        "id": "asylum_diagnosis_page",
+        "source": "S3:P697/T21",
+        "resolved_anchors": [
+          "S3:P697",
+          "S3:T21"
+        ],
+        "room": "clinic",
+        "furniture": 0,
+        "kind": "diagnosis",
+        "dialogue_key": "",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_clinic_coat_sleeve",
+        "source": "S3:P698/P275/P278–279",
+        "resolved_anchors": [
+          "S3:P698",
+          "S3:P275",
+          "S3:P278",
+          "S3:P279"
+        ],
+        "room": "clinic",
+        "furniture": 1,
+        "kind": "static",
+        "dialogue_key": "COAT_RECOGNISE",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_waste_label_outer",
+        "source": "S3:P727",
+        "resolved_anchors": [
+          "S3:P727"
+        ],
+        "room": "pharmacy",
+        "furniture": 1,
+        "kind": "static",
+        "dialogue_key": "",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_waste_label_under",
+        "source": "S3:P727/P730–731",
+        "resolved_anchors": [
+          "S3:P727",
+          "S3:P730",
+          "S3:P731"
+        ],
+        "room": "pharmacy",
+        "furniture": 1,
+        "kind": "static",
+        "dialogue_key": "LABEL_UNDER",
+        "fields": {
+          "transport_number": "under_transport_number"
+        },
+        "errors": []
+      },
+      {
+        "id": "asylum_medicine_prefill",
+        "source": "S3:P728",
+        "resolved_anchors": [
+          "S3:P728"
+        ],
+        "room": "pharmacy",
+        "furniture": 5,
+        "kind": "static",
+        "dialogue_key": "",
+        "fields": {
+          "prefill_text": "medicine_prefill_text",
+          "prefill_time": "medicine_prefill_time"
+        },
+        "errors": []
+      },
+      {
+        "id": "asylum_medicine_update",
+        "source": "S3:P728/T22",
+        "resolved_anchors": [
+          "S3:P728",
+          "S3:T22"
+        ],
+        "room": "pharmacy",
+        "furniture": 5,
+        "kind": "medicine_update",
+        "dialogue_key": "",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_access_panel",
+        "source": "S3:T23R7/P733",
+        "resolved_anchors": [
+          "S3:T23R7",
+          "S3:P733"
+        ],
+        "room": "office",
+        "furniture": 6,
+        "kind": "door_panel",
+        "dialogue_key": "",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_stair_rail_wear",
+        "source": "S3:P786–787",
+        "resolved_anchors": [
+          "S3:P786",
+          "S3:P787"
+        ],
+        "room": "stairs",
+        "furniture": 0,
+        "kind": "static",
+        "dialogue_key": "RAIL",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_nurse_duty_table",
+        "source": "S3:P800–808",
+        "resolved_anchors": [
+          "S3:P800",
+          "S3:P801",
+          "S3:P802",
+          "S3:P803",
+          "S3:P804",
+          "S3:P805",
+          "S3:P806",
+          "S3:P807",
+          "S3:P808"
+        ],
+        "room": "corridor",
+        "furniture": 0,
+        "kind": "nurse_duty",
+        "dialogue_key": "",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_recovery_photo",
+        "source": "S1:P158/S3:P857/P876",
+        "resolved_anchors": [
+          "S1:P158",
+          "S3:P857",
+          "S3:P876"
+        ],
+        "room": "activity",
+        "furniture": 2,
+        "kind": "static",
+        "dialogue_key": "",
+        "fields": {
+          "photo_number": "recovery_photo_number"
+        },
+        "errors": []
+      },
+      {
+        "id": "asylum_quiet_scratches",
+        "source": "S3:T31R2",
+        "resolved_anchors": [
+          "S3:T31R2"
+        ],
+        "room": "quiet",
+        "furniture": 2,
+        "kind": "static",
+        "dialogue_key": "",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_call_no_response",
+        "source": "S3:T31R3",
+        "resolved_anchors": [
+          "S3:T31R3"
+        ],
+        "room": "quiet",
+        "furniture": 2,
+        "kind": "button",
+        "dialogue_key": "",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_call_wire_broken",
+        "source": "S3:T31R3",
+        "resolved_anchors": [
+          "S3:T31R3"
+        ],
+        "room": "quiet",
+        "furniture": 2,
+        "kind": "static",
+        "dialogue_key": "",
+        "fields": {},
+        "errors": []
+      },
+      {
+        "id": "asylum_prefilled_isolation_record",
+        "source": "S3:T31R4/P947–948",
+        "resolved_anchors": [
+          "S3:T31R4",
+          "S3:P947",
+          "S3:P948"
+        ],
+        "room": "quiet",
+        "furniture": 0,
+        "kind": "static",
+        "dialogue_key": "PREFILLED",
+        "fields": {
+          "filled_time": "isolation_prefill_time"
+        },
+        "errors": []
+      },
+      {
+        "id": "asylum_bed1_erased_name",
+        "source": "S3:P972/P996–998",
+        "resolved_anchors": [
+          "S3:P972",
+          "S3:P996",
+          "S3:P997",
+          "S3:P998"
+        ],
+        "room": "double_ward",
+        "furniture": 4,
+        "kind": "static",
+        "dialogue_key": "ERASED_NAME",
+        "fields": {
+          "erased_name": "bed1_erased_name",
+          "bed_number": "bed1_number"
+        },
+        "errors": []
+      },
+      {
+        "id": "asylum_bed2_erased_name",
+        "source": "S3:P973/P996–998",
+        "resolved_anchors": [
+          "S3:P973",
+          "S3:P996",
+          "S3:P997",
+          "S3:P998"
+        ],
+        "room": "double_ward",
+        "furniture": 5,
+        "kind": "static",
+        "dialogue_key": "ERASED_NAME",
+        "fields": {
+          "erased_name": "bed2_erased_name",
+          "bed_number": "bed2_number"
+        },
+        "errors": []
+      },
+      {
+        "id": "asylum_display_label_back_seen",
+        "source": "S3:P1037–1038/P1047",
+        "resolved_anchors": [
+          "S3:P1037",
+          "S3:P1038",
+          "S3:P1047"
+        ],
+        "room": "workshop",
+        "furniture": 5,
+        "kind": "display_back",
+        "dialogue_key": "",
+        "fields": {
+          "batch": "workshop_batch"
+        },
+        "errors": []
+      }
+    ],
+    "deferred_entries": [
+      {
+        "id": "asylum_number_screen",
+        "source": "S3:P654",
+        "reason": "当前没有已实际显示的具体编号事件/字形；不生成已见号码，不由广播证明离院。",
+        "resolved_anchors": [
+          "S3:P654"
+        ],
+        "all_anchors_exist": true
+      },
+      {
+        "id": "asylum_relic_bag_photo",
+        "source": "S3:P656/P659–660",
+        "reason": "前关照片随转运并被实际收存的独立接收事件尚无物理存袋状态；不只凭wheelchair_gone制造已辨认照片或遗物袋。",
+        "resolved_anchors": [
+          "S3:P656",
+          "S3:P659",
+          "S3:P660"
+        ],
+        "all_anchors_exist": true
+      },
+      {
+        "id": "asylum_departure_page",
+        "source": "S3:P657/T20",
+        "reason": "离院副本现由登记事件出示；本模块不重复其身份核对或把机构副本变成强制转运目击，后续可复用动态持有人锚点接独立翻页。",
+        "resolved_anchors": [
+          "S3:P657",
+          "S3:T20"
+        ],
+        "all_anchors_exist": true
+      },
+      {
+        "id": "asylum_self_injury_photo",
+        "source": "S3:T23R3",
+        "reason": "必须有实际拍摄记录。只有受伤不生成照片；当前无拍摄实现，不可读。",
+        "resolved_anchors": [
+          "S3:T23R3"
+        ],
+        "all_anchors_exist": true
+      },
+      {
+        "id": "asylum_statement_paper",
+        "source": "S3:P914",
+        "reason": "由既有团体治疗物权与照读事件保留；后续独立阅读须限实际展开/已交给病友的可见纸张，不能用读纸补造同意或照读。",
+        "resolved_anchors": [
+          "S3:P914"
+        ],
+        "all_anchors_exist": true
+      },
+      {
+        "id": "asylum_signature_record",
+        "source": "S3:P915",
+        "reason": "当前没有独立真实签字/代签物件，不能由预填姓名制造已签事实。",
+        "resolved_anchors": [
+          "S3:P915"
+        ],
+        "all_anchors_exist": true
+      },
+      {
+        "id": "asylum_whiteboard_text",
+        "source": "S3:P916",
+        "reason": "没有交付白板具体已写原文，不编写新的病情/剧情内容；现有托槽搜寻继续有效。",
+        "resolved_anchors": [
+          "S3:P916"
+        ],
+        "all_anchors_exist": true
+      },
+      {
+        "id": "asylum_product_label",
+        "source": "S3:P1048",
+        "reason": "已由有限折盒/贴标工序维护实际成品与批次；待接独立成品阅读时只允许折好且贴标后的实物，不用半成品提前发标签信息。",
+        "resolved_anchors": [
+          "S3:P1048"
+        ],
+        "all_anchors_exist": true
+      }
+    ],
+    "method": "Exact original dialogue check is separate from direct semantic reading of target descriptions. Source-anchor existence and static furniture-index validity do not replace rendered navigation testing."
+  },
+  "unknown_original_fields": {
+    "base": {
+      "wheelchair_number": null,
+      "relic_bag_number": null,
+      "old_bed_card_name": null,
+      "asylum_order_number": null
+    },
+    "nurse": {
+      "patient_number": null
+    },
+    "duty_wait_seconds": null,
+    "policy": "Original unknown fields are not assigned fabricated glyphs; null is not equality evidence."
+  },
+  "native_interface_review": [
+    {
+      "id": "registration_input",
+      "source": "S3:P649–652/T20R6–7",
+      "review": "One autonomous follow-up remains available after the actual answer. Legal CONTROL desk0/nurse-body input consumes interaction.pos array, selects a walkable visible 0.6m stand, routes and dispatches registration_followup to begin. Cancellation does not recurse back to app.cancel_asylum_read. Writing and later reading settle separately.",
+      "markers_valid": true
+    },
+    {
+      "id": "observation_contact",
+      "source": "S3:T19/P697/P727–731/T31/P996–998/P1047",
+      "review": "Available physical target, same room, contact, clear segment and unchanged document revision precede the timed completion. Prior document versions survive. Cuff correspondence needs cuff_seam; lower label only saves layers_exposed, without null-number equality. target.text is implementation description, not new original dialogue.",
+      "markers_valid": true
+    },
+    {
+      "id": "shared_nurse_budget",
+      "source": "S1:T10R3/S4:P109/P114",
+      "review": "Original pharmacy group shares one checks record with corridor entry: three total checks at most, subsequent checks need 20 game seconds and half rate. Linked actors enter at original pharmacy doorway; the same med_nurse walks actual rooms/stairs to duty, not a second identity.",
+      "markers_valid": true
+    },
+    {
+      "id": "nurse_records",
+      "source": "S3:P800–808/T22/S5:R6-02/R6-04",
+      "review": "Actual source reading/check, real doors, writing and clipping precede public rows. Source identity/attempt/snapshot remains and copies never become own swallowing witness or repeat medicine. Own actual swallow witness queues separate writing. Inherited order selects prescription:+carry.prescription_visit only when it equals carry.visit, not the first historical prescription.",
+      "markers_valid": true
+    },
+    {
+      "id": "nurse_original_reaction",
+      "source": "S3:P805–808",
+      "review": "Original copied-error speech requires an actual clipped current-attempt row physically read at the station, exact already-known error source and same nurse onsite. Unknown identifiers do not establish certainty.",
+      "markers_valid": true
+    }
+  ],
+  "validation_records_read": [
+    {
+      "name": "exploration-r2",
+      "path": "docs/validation/b3_20261016/exploration-r2/result.json",
+      "sha256": "8bc7dae3c3a2845230c5784078368cc5e52f254eb148ef616741e3b9377a47f3",
+      "passes": 145,
+      "failures": 0,
+      "scope": "B3 exploration, actual doors/path/search/key/rest, finite fixed fixtures and real checksummed JSON; no human natural-RNG, all NPC combinations or formal art/audio acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/exploration-r2/01_third_level_stairs.png",
+          "bytes": 186070,
+          "sha256": "06728dbef6f78e672226acfde4ebd902c0ed1f7f600cd8e229c1f65309c52bfb"
+        },
+        {
+          "file": "docs/validation/b3_20261016/exploration-r2/02_workshop_actual_search.png",
+          "bytes": 154773,
+          "sha256": "9943dead0f6ee9a8bd71d2c48078bee42325a51a58c82f8d9cf601d22b8c66f7"
+        },
+        {
+          "file": "docs/validation/b3_20261016/exploration-r2/03_real_return_to_first_floor_bed.png",
+          "bytes": 159378,
+          "sha256": "5bbafcba348ad15116f76b90d7e0bce476da5557c6cddd89e136bd65e755189a"
+        },
+        {
+          "file": "docs/validation/b3_20261016/exploration-r2/04_keyed_third_level_exit_boundary.png",
+          "bytes": 187168,
+          "sha256": "4c34574ac72e8c8adb3b9e2d9b5632ac8dc0ebc6faf9f72f1933c98a4b235855"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "first-floor-r4",
+      "path": "docs/validation/b3_20261016/first-floor-r4/result.json",
+      "sha256": "27787e9239bd655dc6f6bb106f581e78bae953cc18f6bf9bca7bbd86538dc4a9",
+      "passes": 38,
+      "failures": 0,
+      "scope": "B3 exploration, actual doors/path/search/key/rest, finite fixed fixtures and real checksummed JSON; no human natural-RNG, all NPC combinations or formal art/audio acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/first-floor-r4/01_normal_wrist_check.png",
+          "bytes": 159614,
+          "sha256": "1f439518eff6429b2011e37a710c428c713cda57b905409779180930dfc7247b"
+        },
+        {
+          "file": "docs/validation/b3_20261016/first-floor-r4/02_medicine_stop.png",
+          "bytes": 187742,
+          "sha256": "65e7d9adf6b44c6a85f06ff8c516c7b6cad5f7305f8f924234394c0f914ec273"
+        },
+        {
+          "file": "docs/validation/b3_20261016/first-floor-r4/03_false_record.png",
+          "bytes": 150746,
+          "sha256": "da430f03621b620c1fc0cf40e64fd6762ed6e7b1eea0e44441d0091c8a104c83"
+        },
+        {
+          "file": "docs/validation/b3_20261016/first-floor-r4/04_assistant_released.png",
+          "bytes": 189171,
+          "sha256": "5116195978089d4b2ff9dbb01c4ac5ee8629ac430be831de6f5427d7b11c0549"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "ward-r4",
+      "path": "docs/validation/b3_20261016/ward-r4/result.json",
+      "sha256": "4d58fa313039e96e62e6d16332c13f4acfda1f668012ab765b86b1dfc834934b",
+      "passes": 145,
+      "failures": 0,
+      "scope": "B3 second-floor finite actor/contact fixtures: real drawer timing and paid skills, workshop material conservation/JSON, recording-device and paper nodes, dynamic moving-bed obstruction/actual doors/band ownership, onsite porter-order handoff/wrist verification/independent isolation signature versus absent/departed head nurse, private wound exposure/informer delivery/ordinary escort, and actual internal-folder search/head-nurse report/ordinary hero grip/release/timeout. Explicit late-observer, pre-existing other-holder, staff-departure, blocked-side and busy-staff combination fixtures are not natural gameplay claims. Not all twenty-one identities, all random combinations, final art or subjective audio acceptance.",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/ward-r4/01_drawer_preparation.png",
+          "bytes": 160758,
+          "sha256": "de48a58392ebf94c0d0e4609c0a423dfb04c8a2006da9f8d87c302baeb95068f"
+        },
+        {
+          "file": "docs/validation/b3_20261016/ward-r4/02_real_workshop_product.png",
+          "bytes": 162614,
+          "sha256": "3e82205cdbad33428ea63b0e8b763078767b969e21bfd5606b589ca660b41cc3"
+        },
+        {
+          "file": "docs/validation/b3_20261016/ward-r4/03_real_recording_deletion.png",
+          "bytes": 174761,
+          "sha256": "4041b8a2308e8b96525e93a5736f03872a941a10de92b8d85e53cf65227f23a6"
+        },
+        {
+          "file": "docs/validation/b3_20261016/ward-r4/04_original_band_location_after_delivery.png",
+          "bytes": 182108,
+          "sha256": "6db696902af4e9e953f17f6f17abf8aeab257f749aac53b34b5b9bbd8652637c"
+        },
+        {
+          "file": "docs/validation/b3_20261016/ward-r4/05_actual_postop_patient_grasp.png",
+          "bytes": 163445,
+          "sha256": "b1e112c40aeeb68ad7ba3ba1c9df6d198b95d8ab6b65f46f3bd5bf260554a09a"
+        },
+        {
+          "file": "docs/validation/b3_20261016/ward-r4/06_actual_ordinary_hero_delivery.png",
+          "bytes": 152303,
+          "sha256": "d27258d6418eda272dbb69d84f80063c5da9555e5234a20eacee003d4cb2b477"
+        },
+        {
+          "file": "docs/validation/b3_20261016/ward-r4/07_actual_transfer_nurse_check.png",
+          "bytes": 182968,
+          "sha256": "13d4f91d83d972a12bf22052ffa10d9750d4cb20ed355f631b8939f42457e08a"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "trace-r2",
+      "path": "docs/validation/b3_20261016/trace-r2/result.json",
+      "sha256": "1ea9f16f800d2641074951fc12a03a7cc43915e7e0da4c61a3a7ee993070cc1c",
+      "passes": 58,
+      "failures": 0,
+      "scope": "B3 finite trace API cases with explicitly placed walkable actors/protagonist, fixed world ticks and real schema2 JSON. Real cleaner/contact/ownership, real original guard patient delivery, actual orderly doorway travel. No natural-RNG playthrough, all combinations, subjective audio or formal-art acceptance.",
+      "untested": "Every cleaner blockage permutation; all ordinary-orderly/report/isolation interleavings; user-operated mouse routes; non-null approved date/vehicle/number art; formal corpse art and audio.",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/trace-r2/01_real_read_and_owned_bracelet.png",
+          "bytes": 144211,
+          "sha256": "331eece0f36c637b7182dc5730672c185fdd00b6f50d142efe3786082ac6e26e"
+        },
+        {
+          "file": "docs/validation/b3_20261016/trace-r2/02_cleaned_bathroom_actual_state.png",
+          "bytes": 164451,
+          "sha256": "607c6813a8cbba71d16a717f73c26bbdb05d5c60c36969c46091e6e8273e1722"
+        },
+        {
+          "file": "docs/validation/b3_20261016/trace-r2/03_private_one_note_interrupted.png",
+          "bytes": 153469,
+          "sha256": "2d966ce54865ec94349584f29b977f9ce16e7de21497f56fc97bc8f6337d432d"
+        },
+        {
+          "file": "docs/validation/b3_20261016/trace-r2/04_two_actual_read_notes_unknown_fields.png",
+          "bytes": 153110,
+          "sha256": "92ba021b06da66d495b2e22171334501d0cf889a99694c1b70e4d0cfe01246f3"
+        },
+        {
+          "file": "docs/validation/b3_20261016/trace-r2/05_actual_corner_pair_released.png",
+          "bytes": 152431,
+          "sha256": "085fccc81566f4f03efde390173314fc0b3f2c19d4594025bf99d304d0669eae"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "records-r2",
+      "path": "docs/validation/b3_20261016/records-r2/result.json",
+      "sha256": "390d0f746be0b7b5bb352bd8d8573b1db2d3d5fafea3d250508dbbc1945fdf7e",
+      "passes": 59,
+      "failures": 0,
+      "scope": "B3 finite real office reading, archivist/report/guard APIs, fixed world ticks, pause and schema2 JSON. One complete chain earns report by an archivist actually observing continued page reading; alternate evade/upstairs cases use an explicitly pre-existing written desk report. No natural-RNG all-branch playthrough, mouse input, original-patient rerun, subjective audio or formal-art acceptance.",
+      "untested": "All archive collection/report/medical/isolation interleavings; non-null approved patient-number art; every blocked-drag path; guard death branch; final UI mouse routing and natural random combinations.",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/records-r2/01_seven_actual_office_pages.png",
+          "bytes": 179199,
+          "sha256": "14937afc66d29f11abc81edcd57b456b4126b64eaf407e5aea8fb7e27c9ed2f0"
+        },
+        {
+          "file": "docs/validation/b3_20261016/records-r2/02_real_report_waiting_on_desk.png",
+          "bytes": 179316,
+          "sha256": "32ff68fde429565dfc58f4e7279423820a1cd029ab5002193c892eb5b2e87147"
+        },
+        {
+          "file": "docs/validation/b3_20261016/records-r2/03_actual_guard_doorway_release.png",
+          "bytes": 186255,
+          "sha256": "6e2e2b36b5b93f4b8a209d8e7baf7768926f277907be933207c8bead22aed9df"
+        },
+        {
+          "file": "docs/validation/b3_20261016/records-r2/04_actual_stair_escape_without_remote_grip.png",
+          "bytes": 189591,
+          "sha256": "3fe97ac7cd19166847bd553e061e1d53f9ea69b8b6d21ac7419c3bdd4c8b5571"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "isolation-r3",
+      "path": "docs/validation/b3_20261016/isolation-r3/result.json",
+      "sha256": "5af63fcef85ba4a4c469ba715abc620f8aa10cb9444b169b8535a637b9162b60",
+      "passes": 70,
+      "failures": 0,
+      "scope": "B3 finite isolation integration with actual movement, paper contact, grip preparation/contact, paired doorway travel, door timing, indoor autonomy/search, paid JOY/WITHDRAW and checksummed schema2 JSON. Actual rendered viewport captures; fixed test conditions, not normal-speed human play or every random combination.",
+      "untested": "Full initial informer-to-signature chain in this suite; all competing-holder/arrival permutations; natural RNG; formal art, voice or subjective sound; non-null approved number glyphs; target-platform export.",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/isolation-r3/01_withdraw_ended_one_attempt.png",
+          "bytes": 169406,
+          "sha256": "d8050a18a85709d65427583602319997ae1d5ac64581c97732c7afa2ad5eb097"
+        },
+        {
+          "file": "docs/validation/b3_20261016/isolation-r3/02_real_drag_release_position.png",
+          "bytes": 165245,
+          "sha256": "af2f9a7b7498cf300262b97086187244c58c2daa9c1c73b83bd027307193c809"
+        },
+        {
+          "file": "docs/validation/b3_20261016/isolation-r3/03_npc_isolation_observer_outside.png",
+          "bytes": 176537,
+          "sha256": "d38265c2cf18fc3a73c9ad63512a704b6be83f4fe307ae3a24f2b89ec0fac74a"
+        },
+        {
+          "file": "docs/validation/b3_20261016/isolation-r3/04_indoor_search_with_closed_door.png",
+          "bytes": 164011,
+          "sha256": "33c508d744350b48a6eae4b8670903379bb0a2b8bcee5c7265eb420d600ac37d"
+        },
+        {
+          "file": "docs/validation/b3_20261016/isolation-r3/05_open_exit_after_real_observation.png",
+          "bytes": 176647,
+          "sha256": "7e5072fb9fba8bec1cdf06ba0016f331042420d51753e749cbc93526c338b6ac"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "ui-r3",
+      "path": "docs/validation/b3_20261016/ui-r3/result.json",
+      "sha256": "ffcde8c7582f98749472f522d8ccd5e48ea4e3cb9001616b459cb66ea073a0c3",
+      "passes": 15,
+      "failures": 0,
+      "scope": "real viewport CRT/furniture/material/Shift-pickup mouse and ordinary _process after explicit room/position/unlocked-CONTROL/50N fixture; not natural-RNG, all combinations, subjective audio or formal-art acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/ui-r3/01_actual_office_read_mouse.png",
+          "bytes": 149923,
+          "sha256": "bfcbc5b7c3e9cef670ea050138bba12b50f930be696c86c64aadd6d1ac660138"
+        },
+        {
+          "file": "docs/validation/b3_20261016/ui-r3/02_new_mouse_command_cancels_read.png",
+          "bytes": 149905,
+          "sha256": "ee0030a1adeeb6a4751c6385aba3579a89a4a84fcc5e7230b7c89e6a641c4fb6"
+        },
+        {
+          "file": "docs/validation/b3_20261016/ui-r3/03_actual_marker_read_and_take_mouse.png",
+          "bytes": 167355,
+          "sha256": "576d14c352c65fcd5d7663163108f65c09066ff2788eafea30a42bb2e156481d"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "registration-r2",
+      "path": "docs/validation/b3_20261016/registration-r2/result.json",
+      "sha256": "884835f7e408202a183019a78f56b9cad1ca9ae514e039f03b44ffafe34f4414",
+      "passes": 45,
+      "failures": 0,
+      "scope": "B3 finite registration follow-up cases. Initial fixture states only an actual prior wheelchair transfer or its absence, initial walkable registration nurse and protagonist, and fixed SP. Autonomous new reply/question, writing and read phases use the real game clock, paid neural skills and actual JSON. No natural-RNG/full-game, mouse UI, formal-art or subjective audio acceptance.",
+      "untested": "Every other medical/guard/isolation interleaving, normal-speed human playthrough, approved concrete patient-number glyphs, actual CONTROL mouse desk/nurse routing, formal assets and audio.",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/registration-r2/01_actual_autonomous_followup_read.png",
+          "bytes": 183776,
+          "sha256": "347fc3dec766c60bc8a78a333acf822cd3ef3a8dec63e19b04f62cffcdd41a1c"
+        },
+        {
+          "file": "docs/validation/b3_20261016/registration-r2/02_interrupted_write_then_same_paper_read.png",
+          "bytes": 149728,
+          "sha256": "158a856f8fd14c5c1d696dad329022024a1d89f6552ac7824dc1c10f08106ac0"
+        },
+        {
+          "file": "docs/validation/b3_20261016/registration-r2/03_remote_followup_rejected.png",
+          "bytes": 186116,
+          "sha256": "8725402b942c8a0fcbd6bde5118829ea28a9ab08a8e0e7ffceaa50ecc2244623"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "observations-r2",
+      "path": "docs/validation/b3_20261016/observations-r2/result.json",
+      "sha256": "7f883ac3c8f1f10f33b3ce62c8ca7a68aaa94dced8ab74dee0d62e38368d61e0",
+      "passes": 58,
+      "failures": 0,
+      "scope": "B3 twenty-three observation configurations: finite real prepare/contact/finish APIs, interruption and original source/knowledge boundaries, actual checksummed JSON plus real CRT CONTROL and furniture/world mouse driven by ordinary _process. Not all natural-RNG combinations, formal-art acceptance or subjective sound.",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/observations-r2/01_old_card_contact.png",
+          "bytes": 159743,
+          "sha256": "55f6b9d9e9f2c204c60d6dda677921266bcf33e9dfb2a2768e66f147dcf3cbe2"
+        },
+        {
+          "file": "docs/validation/b3_20261016/observations-r2/02_label_lower_layer_completed.png",
+          "bytes": 153662,
+          "sha256": "a98c00dbbc364634c407bdf8751518481685e1443bc763f04178cf7423d0d9a2"
+        },
+        {
+          "file": "docs/validation/b3_20261016/observations-r2/03_two_distinct_erased_cards.png",
+          "bytes": 159864,
+          "sha256": "de10fdd2edf33206c8be41ff8ab540408c9b87c4efe819aac545c3ffcb975e68"
+        },
+        {
+          "file": "docs/validation/b3_20261016/observations-r2/04_actual_crt_bed_card_mouse.png",
+          "bytes": 141017,
+          "sha256": "1739743dbdea091f5565d49ca54960f8e939bf8a34a9ffc11f6d7ebffd185123"
+        },
+        {
+          "file": "docs/validation/b3_20261016/observations-r2/05_actual_mouse_cancels_read.png",
+          "bytes": 137150,
+          "sha256": "7fcb0a384899d6ebac2769faf8102bfb27eb29f9229e03422a880cb81968e63b"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "nurse-duty-r4",
+      "path": "docs/validation/b3_20261016/nurse-duty-r4/result.json",
+      "sha256": "0947bd77824574ab5daa83f754279a38e2f5631bcfa2166d02dcd64faf572db7",
+      "passes": 51,
+      "failures": 0,
+      "scope": "B3 one shared med_nurse: actual medication witness followed by independent physical writing, no upstairs or remote swallow witness, refusal/false-paper mutual exclusion, physical source reading/number checking/real inter-floor movement/duty writing/clipping, existing prior-paper source preservation and null number, save/pause/once-only accounting, and real public-table observation with conditional original dialogue. Explicit inherited-paper and staff-busy fixtures do not assert a complete prior-level or natural-RNG run. No formal art, subjective audio, all NPC combinations or whole-game acceptance.",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/nurse-duty-r4/01_actual_nurse_duty_clipped.png",
+          "bytes": 182826,
+          "sha256": "decf534e002f900fa7cbf1dc41f60c63a641fed459d2898ed1d8e9399e4e4cc9"
+        },
+        {
+          "file": "docs/validation/b3_20261016/nurse-duty-r4/02_prior_copy_provenance.png",
+          "bytes": 183818,
+          "sha256": "34a311f8a1b7d9c990d0dc29ead7e7065159dd63452ba6e36b55ab81d32a21e2"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "registration-mouse-r2",
+      "path": "docs/validation/b3_20261016/registration-mouse-r2/result.json",
+      "sha256": "345c2029e1ba3de549a6670e29bbd0f775cb19bcff1b17ad17d4a244078f4dd8",
+      "passes": 21,
+      "failures": 0,
+      "scope": "Two finite actual CRT/world-mouse registration sequences: desk click and visible nurse-body click, real route/contact, interruptible writing, floor-command interruption and later same-paper reading. Ordinary _process after CRT opens; no direct begin/cancel API or manual world tick in the mouse sequences.",
+      "untested": "Natural-RNG full playthrough, every competing NPC or obstruction, approved concrete patient-number glyphs, formal art and subjective audio.",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/registration-mouse-r2/01_actual_desk_route_write_read.png",
+          "bytes": 154056,
+          "sha256": "a0dc3ba4b3730b42d76a15456351cdf7d8f027e7b95edb57315acb36c12103d1"
+        },
+        {
+          "file": "docs/validation/b3_20261016/registration-mouse-r2/02_actual_floor_command_preserves_unread_paper.png",
+          "bytes": 189445,
+          "sha256": "2651a00f4ce0017e55ba6fbc981d88d77f32000d85bf346bdc8f8d8be70d819d"
+        },
+        {
+          "file": "docs/validation/b3_20261016/registration-mouse-r2/03_actual_nurse_same_paper_read.png",
+          "bytes": 154114,
+          "sha256": "d6e0cfac73a70cc9133a77f7e4479e9830c81772b03bbdbbe4851a8a13dd683e"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "chains-r2",
+      "path": "docs/validation/b3_20261016/chains-r2/result.json",
+      "sha256": "27654df20fe56f0530f178b9b37c24ec1b8c56da0e6b34b91f56edace87a5890",
+      "passes": 11,
+      "failures": 0,
+      "scope": "Initial actor/position fixture only, then actual porter/head-nurse paper/verification/signature/delivery through real doors and isolation fetch/target/close/eight-second/open chain. No prewritten report or fabricated outcome; finite game-time automatic driver, not natural RNG/human play or formal audio/art acceptance.",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/chains-r2/01_full_transport_signature_to_real_closed_door.png",
+          "bytes": 181543,
+          "sha256": "4081218061956ff309fdc9bf33ab4103338800cfc870b24a81c7f13d0580fe5b"
+        },
+        {
+          "file": "docs/validation/b3_20261016/chains-r2/02_original_live_patient_after_observation.png",
+          "bytes": 179529,
+          "sha256": "436e889b418b9c5cb095d757dbfe0006f422e3f9993994b12bee98fea7e75a2e"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "continued-r2",
+      "path": "docs/validation/b3_20261016/continued-r2/result.json",
+      "sha256": "8e54e950e125cece733238e2f07c17e9e761adb92d794124c5b49248ade8cbd8",
+      "passes": 2,
+      "failures": 0,
+      "scope": "real Continue and dialogue mouse input from a genuine earlier observed hospital-entry save; original saved RNG/actors/resources/positions retained, ordinary _process afterwards; fixed-clock automated observation, not a fresh L1 run, human all-branch or formal-art/audio acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/continued-r2/01_actual_continue_from_hospital.png",
+          "bytes": 179362,
+          "sha256": "a65109a1689c2ef11314672fd30fb30385da85f9f8bdc42760cecd97487e9115"
+        },
+        {
+          "file": "docs/validation/b3_20261016/continued-r2/02_hospital_entered.png",
+          "bytes": 179422,
+          "sha256": "f99f9cd5ceceda3d4b6cf64e0521d9436e4e118a3bd5e6814a41594ac992d602"
+        },
+        {
+          "file": "docs/validation/b3_20261016/continued-r2/03_terminal_asylum_keyed_exit_development_boundary.png",
+          "bytes": 186245,
+          "sha256": "453c83ec9dfd4266172891c6f22185d93877a5f038d64e10bc46a375026e4377"
+        },
+        {
+          "file": "docs/validation/b3_20261016/continued-r2/04_asylum_entered.png",
+          "bytes": 181313,
+          "sha256": "8d7587193aa23fbd949d346556b72270596107d9917593673650a092fa304479"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "recording-r2",
+      "path": "docs/validation/b3_20261016/recording-r2/result.json",
+      "sha256": "a329f9b6166a7f123f9d5403457fdf7e51d5306a7541c4ff39285c6012f273f4",
+      "passes": 3,
+      "failures": 0,
+      "scope": "continuous ordinary _process after initial stated workshop/actor/50N/unlocked-WITHDRAW/two-target fixture; actual Enter and CRT mouse; no manual world tick after setup, silent MovieMaker capture, not human natural-RNG/formal-art/audio acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/recording-r2/01_visible_closing_preparation.png",
+          "bytes": 159531,
+          "sha256": "9134da350773493af54372889637f39f17527c63245f864b1dc7534eff7c4ec6"
+        },
+        {
+          "file": "docs/validation/b3_20261016/recording-r2/02_real_withdraw_misses_clamp.png",
+          "bytes": 159484,
+          "sha256": "616dea6555b847b19d2c487d984dfb12aa862f13072f08e1502e492eaaccaa0a"
+        },
+        {
+          "file": "docs/validation/b3_20261016/recording-r2/03_autonomy_resumed_and_search_finished.png",
+          "bytes": 158868,
+          "sha256": "cc3c197be4fbaa014d7a05f851ddd16c0978cb065025710ee71f3c716a52b5f1"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "regression-campaign",
+      "path": "docs/validation/b3_20261016/regression-campaign/result.json",
+      "sha256": "f5253ce47126478a079c4d265859cfba35d7adfe21b926abef1149daa8f53d74",
+      "passes": 70,
+      "failures": 0,
+      "scope": "profile save/load presentation replacement and L1/L2 exploration; NPC/remaining levels not complete",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/regression-campaign/01_title.png",
+          "bytes": 52395,
+          "sha256": "0a9e284c86f851c8e7260f19493b01da958ba3f03500b8ebe998cc8f56de70cf"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-campaign/02_search.png",
+          "bytes": 156673,
+          "sha256": "6832ca2f624ec45133e4ba8dc529e6b5dad17317a6c5d6fcbb1761d74376349d"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-campaign/03_replacement_b.png",
+          "bytes": 155580,
+          "sha256": "d48a27fb6c7a6e13b41d747887d7a720fb57ccfaf6092fe9aee060df34ba0949"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-campaign/04_hospital_lobby.png",
+          "bytes": 179507,
+          "sha256": "b5c53587c0d98988f0f9f035c4702bd4b171b5ef1d4d5beb36a5f97885c5842b"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-campaign/05_hospital_exit_boundary.png",
+          "bytes": 181611,
+          "sha256": "41c903f9a5434363100aabf3aa69fa337448b3059415aed22d68e53998cd5a60"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-campaign/06_drawer_a.png",
+          "bytes": 157867,
+          "sha256": "98f7e7b63b71f4f7cd2afc0011c8debbadff535249a96429f1cc7cc6bf815922"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-campaign/07_drawer_b.png",
+          "bytes": 157455,
+          "sha256": "ba1bc0d39cf6946eaf3ee28c9724447be858f4cf09dbb8a130eda99542e0d296"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "regression-hospital",
+      "path": "docs/validation/b3_20261016/regression-hospital/result.json",
+      "sha256": "63a805ea80a69f619de26bc323c7de16eebb080430637af912b90138fc431ccd",
+      "passes": 89,
+      "failures": 0,
+      "scope": "formal campaign with explicit actor/position/RNG/body-phase fixtures; actual hospital clock/contact/navigation, CRT mouse and JSON; recording branch uses ordinary process after one stated initial setup; no human full playthrough, final-art or subjective sound acceptance",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/regression-hospital/01_nurse_treatment.png",
+          "bytes": 153515,
+          "sha256": "68c50d0ab7ae692f78769c50ca193c140a333ac566cd0a4a6cad890a88437271"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-hospital/02_valid_sample_prescription.png",
+          "bytes": 184106,
+          "sha256": "cec653ed4e6d3b43b10a18c0fb03650a741491be923462a0fad26a3b87adce97"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-hospital/03_doctor_actual_knee.png",
+          "bytes": 151108,
+          "sha256": "a481586aa908061d9e728bafe0d31b8f9c1921dfd2e54acc5308ead60f906303"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-hospital/04_swallowed_medicine.png",
+          "bytes": 186646,
+          "sha256": "865fd628d7c44cf0c41c85e907aeb92e559a13390db62bbfb3be4085124a44df"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-hospital/05_false_record_after_refusal.png",
+          "bytes": 183589,
+          "sha256": "cf16c26aed227357686788385160be1b426e05c041b12425e6a95cc096633cf4"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-hospital/06_saved_guard_grip.png",
+          "bytes": 151248,
+          "sha256": "752d7e63b375b56b151a379c11b462a5751ad2984c37310bcf849aa67ffc6fb4"
+        },
+        {
+          "file": "docs/validation/b3_20261016/regression-hospital/07_office_exit_after_disposition.png",
+          "bytes": 187491,
+          "sha256": "c95df47166222e41c0322491b69684031c7a718d2f42ddac355ac5d69aa93854"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    },
+    {
+      "name": "export_pack_r2",
+      "path": "docs/validation/b3_20261016/export_pack_r2/result.json",
+      "sha256": "0973f9cf87c4fc13b0b11c3b981b563416a2ece00965c7ea0cb19dac2228a519",
+      "passes": 42,
+      "failures": 0,
+      "scope": "matching engine loads exported PCK with external driver; source resources and test scripts excluded; EXE normal startup checked separately; not full EXE gameplay or audio audition",
+      "untested": "",
+      "screenshots": [
+        {
+          "file": "docs/validation/b3_20261016/export_pack_r2/01_windows_title.png",
+          "bytes": 52395,
+          "sha256": "0a9e284c86f851c8e7260f19493b01da958ba3f03500b8ebe998cc8f56de70cf"
+        },
+        {
+          "file": "docs/validation/b3_20261016/export_pack_r2/01b_windows_introduction.png",
+          "bytes": 32240,
+          "sha256": "2ec07e136c07981d06e17a2f8b470e5cf7c794a153c9fe7b92beeaf92271d6ce"
+        },
+        {
+          "file": "docs/validation/b3_20261016/export_pack_r2/02_windows_tutorial.png",
+          "bytes": 41541,
+          "sha256": "85ef170063ce3968d943ea02f89274d7583a803a6d9d6abbbf82d954b1845693"
+        },
+        {
+          "file": "docs/validation/b3_20261016/export_pack_r2/03_windows_freezer.png",
+          "bytes": 80978,
+          "sha256": "f4b4aae061fbc0a55e67ee4ce08f4813c5de177e79024cdb701f899ca2c39cf4"
+        }
+      ],
+      "auditor_viewed_screenshots": false
+    }
+  ],
+  "export_exe_read": {
+    "path": "docs/validation/b3_20261016/export_exe_r2/normal_exe_startup.json",
+    "sha256": "218377cbcd7c469788955bc38ed4fd69122bb413bd7440af9300f467ecaccc9b",
+    "result": {
+      "passed": true,
+      "closed_normally": true,
+      "close_message_sent": true,
+      "exit_code": 0,
+      "stderr": null,
+      "scope": "Actual Windows release EXE, normal main scene and OS WM_CLOSE; no custom script/project override; Dummy audio, no full gameplay or listening claim",
+      "window_created": true
+    },
+    "stderr_bytes": 0
+  },
+  "media_file_inventory": [
+    {
+      "path": "docs/validation/b3_20261016/asylum_sequence_r2.mp4",
+      "bytes": 354922,
+      "sha256": "bad2edfc3a6b0259899655e21a6ec1d76cf62e122b6e85021c40c7e6f6a65f1e",
+      "auditor_viewed": false
+    }
+  ],
+  "closed_r1_findings": [
+    {
+      "source": "S3:P649–652/T20R6",
+      "status": "Autonomous and optional lawful CONTROL physical question/write/read implemented and covered by indexed finite tests."
+    },
+    {
+      "source": "S3:P730–731/P947–948/P997",
+      "status": "Original feedback now lives in observations JSON and is gated by real completed source-specific reading."
+    }
+  ],
+  "remaining_scope": [
+    {
+      "id": "observations_deferred",
+      "items": [
+        {
+          "id": "asylum_number_screen",
+          "source": "S3:P654",
+          "reason": "当前没有已实际显示的具体编号事件/字形；不生成已见号码，不由广播证明离院。",
+          "resolved_anchors": [
+            "S3:P654"
+          ],
+          "all_anchors_exist": true
+        },
+        {
+          "id": "asylum_relic_bag_photo",
+          "source": "S3:P656/P659–660",
+          "reason": "前关照片随转运并被实际收存的独立接收事件尚无物理存袋状态；不只凭wheelchair_gone制造已辨认照片或遗物袋。",
+          "resolved_anchors": [
+            "S3:P656",
+            "S3:P659",
+            "S3:P660"
+          ],
+          "all_anchors_exist": true
+        },
+        {
+          "id": "asylum_departure_page",
+          "source": "S3:P657/T20",
+          "reason": "离院副本现由登记事件出示；本模块不重复其身份核对或把机构副本变成强制转运目击，后续可复用动态持有人锚点接独立翻页。",
+          "resolved_anchors": [
+            "S3:P657",
+            "S3:T20"
+          ],
+          "all_anchors_exist": true
+        },
+        {
+          "id": "asylum_self_injury_photo",
+          "source": "S3:T23R3",
+          "reason": "必须有实际拍摄记录。只有受伤不生成照片；当前无拍摄实现，不可读。",
+          "resolved_anchors": [
+            "S3:T23R3"
+          ],
+          "all_anchors_exist": true
+        },
+        {
+          "id": "asylum_statement_paper",
+          "source": "S3:P914",
+          "reason": "由既有团体治疗物权与照读事件保留；后续独立阅读须限实际展开/已交给病友的可见纸张，不能用读纸补造同意或照读。",
+          "resolved_anchors": [
+            "S3:P914"
+          ],
+          "all_anchors_exist": true
+        },
+        {
+          "id": "asylum_signature_record",
+          "source": "S3:P915",
+          "reason": "当前没有独立真实签字/代签物件，不能由预填姓名制造已签事实。",
+          "resolved_anchors": [
+            "S3:P915"
+          ],
+          "all_anchors_exist": true
+        },
+        {
+          "id": "asylum_whiteboard_text",
+          "source": "S3:P916",
+          "reason": "没有交付白板具体已写原文，不编写新的病情/剧情内容；现有托槽搜寻继续有效。",
+          "resolved_anchors": [
+            "S3:P916"
+          ],
+          "all_anchors_exist": true
+        },
+        {
+          "id": "asylum_product_label",
+          "source": "S3:P1048",
+          "reason": "已由有限折盒/贴标工序维护实际成品与批次；待接独立成品阅读时只允许折好且贴标后的实物，不用半成品提前发标签信息。",
+          "resolved_anchors": [
+            "S3:P1048"
+          ],
+          "all_anchors_exist": true
+        }
+      ],
+      "note": "8 source-specific independent readings explicitly deferred. Existing parent events are not deemed absent merely because a dedicated independent reading is pending."
+    },
+    {
+      "id": "unprovided_glyphs",
+      "note": "Concrete number/name/date/vehicle/batch glyphs remain unapproved or undelivered. New observation14, base4, nurse patient_number and undefined duty_wait_seconds remain null; precise same-number/person/vehicle comparisons are not claimed."
+    },
+    {
+      "id": "unexhausted_scope",
+      "note": "Final result scopes retain their finite fixtures. All NPC obstruction/holder/report/isolation interleavings, normal-speed human all-branch play, formal art/voice and subjective sound remain outside this source audit."
+    }
+  ],
+  "missing_materials": [],
+  "all_source_text_matches": true,
+  "audit_errors": []
+}

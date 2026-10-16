@@ -1,0 +1,469 @@
+{
+  "version": "hospital-observations-1",
+  "sources": [
+    "S3:P280–300/P364–447/P469–500/P527–554/T12/T17",
+    "S3:P563/P613",
+    "S4:P185–186"
+  ],
+  "timing": {
+    "prepare": 0.25,
+    "contact": 0.4,
+    "finish": 0.35
+  },
+  "contact_distance": 0.65,
+  "implementation_note": "以上为集中可改的二维表现参数；不改变钥匙、搜寻点、治疗、处方、取样、伤害和通关规则。静态物件沿现有家具at；已持有或移动物件使用实际持有人/放置锚点。",
+  "glyph_policy": "null表示来源未交付具体字形；不得补造号码、日期、金额或凭空确认同号身份。只记录已实际翻看的页面与待核字段。",
+  "glyphs": {
+    "bed_card_old": null,
+    "uniform_label": null,
+    "laundry_bag_number": null,
+    "visit_number": null,
+    "transport_batch": null,
+    "ticket_family_field": null,
+    "ticket_signature_field": null,
+    "registration_time": null,
+    "prescription_number": null,
+    "prescription_signature_date": null,
+    "cup_number": null,
+    "cold_box_number": null,
+    "laundry_recipient": null,
+    "past_case_number": null,
+    "past_case_fees": null,
+    "complainant_number": null,
+    "wheelchair_number": null,
+    "sample_number": null
+  },
+  "event_hooks": {
+    "registration_cover": {
+      "source": "S3:P403–407",
+      "at": "导诊实际压住背面栏的接触节点",
+      "result": "只记录遮挡行为；不得获得批次、家属或签字栏内容。"
+    },
+    "nurse_old_card_question": {
+      "source": "S3:P364–367",
+      "requires": "床头卡已实际揭开读过，随后小护士实际核号",
+      "dialogue": [
+        {
+          "speaker": "角色[疑惑]",
+          "text": "卡上原来那个呢？"
+        },
+        {
+          "speaker": "小护士[平静]",
+          "text": "现在用新的。"
+        },
+        {
+          "speaker": "玩家[疑惑]",
+          "text": "旧的为什么还留着？"
+        }
+      ]
+    }
+  },
+  "targets": [
+    {
+      "id": "bed_card_old",
+      "name": "揭开床头卡覆盖处",
+      "room": "ward",
+      "furniture": 0,
+      "kind": "static",
+      "source": "S3:P364–371",
+      "text": "实际揭开床头卡覆盖处并翻看旧号；具体旧号字形待核，不把旧号认作角色身份。",
+      "fields": {
+        "old_number": "bed_card_old"
+      },
+      "known": [
+        "bed_card_old"
+      ]
+    },
+    {
+      "id": "uniform_label",
+      "name": "翻看污衣袋内病服领标",
+      "room": "ward",
+      "furniture": 0,
+      "kind": "bag",
+      "source": "S3:P280–294/P379/T17R3",
+      "text": "实际展开污衣袋内对应病服、翻看领标；可辨片段字形待核，不认定衣物属于自己。",
+      "fields": {
+        "uniform_fragment": "uniform_label"
+      },
+      "known": [
+        "uniform_label"
+      ]
+    },
+    {
+      "id": "laundry_tag",
+      "name": "翻看污衣袋口标签",
+      "room": "ward",
+      "furniture": 0,
+      "kind": "bag",
+      "source": "S3:P378–392",
+      "text": "实际翻看尚未搬走的污衣袋口标签；袋号字形待核，未凭标签推断搬运已完成。",
+      "fields": {
+        "bag_number": "laundry_bag_number"
+      },
+      "known": [
+        "laundry_tag"
+      ]
+    },
+    {
+      "id": "hospital_patient_check",
+      "name": "查看患者核对表",
+      "room": "ward",
+      "furniture": 0,
+      "kind": "patient_check",
+      "source": "S3:P363–370",
+      "text": "实际翻看已写成的患者核对表；本次就诊号与旧号分别保留，病服编号不自动成为人物身份。",
+      "fields": {
+        "current_number": "visit_number",
+        "old_number": "bed_card_old"
+      },
+      "known": [
+        "hospital_patient_check"
+      ],
+      "actor": "nurse"
+    },
+    {
+      "id": "hospital_ticket_front",
+      "name": "查看号码凭条正面",
+      "room": "lobby",
+      "furniture": 0,
+      "kind": "ticket",
+      "source": "S3:P399–408/T12R1",
+      "text": "实际拿着凭条查看正面；本次就诊编号沿用原记录，正面不提供背面批次。",
+      "fields": {
+        "current_number": "visit_number"
+      },
+      "known": [
+        "hospital_ticket_front"
+      ],
+      "item": "hospital_ticket",
+      "home_owner": "hero"
+    },
+    {
+      "id": "hospital_ticket_back",
+      "name": "翻看号码凭条背面",
+      "room": "lobby",
+      "furniture": 0,
+      "kind": "ticket",
+      "source": "S3:P403–407/P441–447/T12R1",
+      "text": "实际翻看凭条背面的批次、家属与签字栏目；各栏具体字形待核，未据提示自动解锁其他档案。",
+      "fields": {
+        "transport_batch": "transport_batch",
+        "family_field": "ticket_family_field",
+        "signature_field": "ticket_signature_field"
+      },
+      "known": [
+        "hospital_ticket_back"
+      ],
+      "item": "hospital_ticket",
+      "home_owner": "hero"
+    },
+    {
+      "id": "hospital_registration_time",
+      "name": "查看本次登记时间",
+      "room": "lobby",
+      "furniture": 0,
+      "kind": "visit_record",
+      "source": "S3:P406/P499/T17R1",
+      "text": "实际查看已形成的本次就诊登记时间；未补造时间字形，尚不能仅凭一张表认定先签后登记。",
+      "fields": {
+        "registration_time": "registration_time"
+      },
+      "known": [
+        "hospital_registration_time"
+      ]
+    },
+    {
+      "id": "donor_screening",
+      "name": "翻看检查单",
+      "room": "clinic",
+      "furniture": 0,
+      "kind": "file",
+      "source": "S3:P469/T12R4",
+      "text": "实际翻看检查单上的供体筛查项目与空白主诉栏；只获得这张表的信息，不自动了解全部黑幕。",
+      "fields": {
+        "case_number": "visit_number"
+      },
+      "known": [
+        "donor_screening"
+      ],
+      "item": "hospital_exam_sheet",
+      "home_owner": "clinic:0"
+    },
+    {
+      "id": "presigned_form",
+      "name": "翻看预签处方与签字日期",
+      "room": "clinic",
+      "furniture": 0,
+      "kind": "prescription",
+      "source": "S3:P494–500/T12R6/T17R1",
+      "text": "实际翻看取得的预签处方、处方号及签字日期；具体字形待核，与本次登记时间分别保存。",
+      "fields": {
+        "prescription_number": "prescription_number",
+        "signature_date": "prescription_signature_date"
+      },
+      "known": [
+        "presigned_form"
+      ],
+      "item": "hospital_prescription"
+    },
+    {
+      "id": "hospital_cup_number",
+      "name": "查看编号药杯",
+      "room": "pharmacy",
+      "furniture": 0,
+      "kind": "cup",
+      "source": "S3:P527–535/T17R1",
+      "text": "实际看清当前这一只药杯的编号位置；具体字形待核，看到杯子不算吞服，也不改变药液剩量。",
+      "fields": {
+        "cup_number": "cup_number"
+      },
+      "known": [
+        "hospital_cup_number"
+      ],
+      "item": "hospital_cup"
+    },
+    {
+      "id": "hospital_prescription_clip",
+      "name": "查看药房处方夹",
+      "room": "pharmacy",
+      "furniture": 5,
+      "kind": "pharmacy_clip",
+      "source": "S3:P527–535/T17R1",
+      "text": "实际翻看药师已收到的原处方与签字日期；未复制处方，未据一份文件直接确认全部编号匹配。",
+      "fields": {
+        "prescription_number": "prescription_number",
+        "signature_date": "prescription_signature_date"
+      },
+      "known": [
+        "hospital_prescription_clip"
+      ],
+      "item": "hospital_prescription",
+      "actor": "pharmacist"
+    },
+    {
+      "id": "cold_box_label",
+      "name": "隔着可见位置查看冷藏箱标签",
+      "room": "pharmacy",
+      "furniture": 1,
+      "kind": "static",
+      "source": "S3:T17R2",
+      "text": "实际隔着可见位置查看冷藏箱编号；字形待核，不打开上锁区域，不默认样本属于角色。",
+      "fields": {
+        "past_case_number": "cold_box_number"
+      },
+      "known": [
+        "cold_box_label"
+      ]
+    },
+    {
+      "id": "hospital_medicine_record",
+      "name": "查看已写成的服药记录",
+      "room": "pharmacy",
+      "furniture": 5,
+      "kind": "medicine_record",
+      "source": "S3:P550–554",
+      "text": "实际读到本次表格写着的服药记录；纸面内容与真实吞服分账，后来读表不等于亲眼见过拒服后贴签。",
+      "fields": {
+        "record_number": "visit_number"
+      },
+      "known": [
+        "hospital_medicine_record"
+      ]
+    },
+    {
+      "id": "laundry_stub",
+      "name": "翻看污衣交接存根",
+      "room": "office",
+      "furniture": 6,
+      "kind": "file",
+      "source": "S3:P392/T17R3",
+      "text": "实际读到污衣袋号、交接对象与完成栏；搬运未完成时不当成已完成交接，病服领标另行核对。",
+      "fields": {
+        "bag_number": "laundry_bag_number",
+        "recipient": "laundry_recipient"
+      },
+      "known": [
+        "laundry_stub"
+      ],
+      "item": "laundry_stub",
+      "home_owner": "office:6"
+    },
+    {
+      "id": "case_removal",
+      "name": "翻看既往病例摘除页",
+      "room": "office",
+      "furniture": 5,
+      "kind": "file",
+      "source": "S3:T17R4",
+      "text": "实际读到一份既往病例的摘除记录；编号字形待核，不自动绑定给角色、病友或其他活着的人。",
+      "fields": {
+        "case_number": "past_case_number"
+      },
+      "known": [
+        "case_removal",
+        "removal_record"
+      ],
+      "item": "case_removal",
+      "home_owner": "office:5"
+    },
+    {
+      "id": "case_death",
+      "name": "翻看既往病例死亡页",
+      "room": "office",
+      "furniture": 10,
+      "kind": "file",
+      "source": "S3:T17R4",
+      "text": "实际读到一份既往病例死亡页；与摘除、费用及离院页逐页保留，未读页面仍未知。",
+      "fields": {
+        "case_number": "past_case_number"
+      },
+      "known": [
+        "case_death"
+      ],
+      "item": "case_death",
+      "home_owner": "office:10"
+    },
+    {
+      "id": "case_fees",
+      "name": "翻看既往病例费用页",
+      "room": "office",
+      "furniture": 10,
+      "kind": "file",
+      "source": "S3:T17R4",
+      "text": "实际读到一份既往病例费用页；金额与编号字形待核，不据费用标签补造身体事件。",
+      "fields": {
+        "case_number": "past_case_number",
+        "amount": "past_case_fees"
+      },
+      "known": [
+        "case_fees"
+      ],
+      "item": "case_fees",
+      "home_owner": "office:10"
+    },
+    {
+      "id": "case_discharge",
+      "name": "翻看既往病例离院页",
+      "room": "office",
+      "furniture": 10,
+      "kind": "file",
+      "source": "S3:T17R4",
+      "text": "实际读到一份既往病例离院页；离院记载与死亡、摘除页分别保存，不把该死者当成在场病友。",
+      "fields": {
+        "case_number": "past_case_number"
+      },
+      "known": [
+        "case_discharge"
+      ],
+      "item": "case_discharge",
+      "home_owner": "office:10"
+    },
+    {
+      "id": "complaint_original",
+      "name": "翻看投诉原文",
+      "room": "office",
+      "furniture": 7,
+      "kind": "file",
+      "source": "S3:T17R5",
+      "text": "实际读到投诉原文；投诉者编号字形待核，不提前知道另一份文件的内容。",
+      "fields": {
+        "person_number": "complainant_number"
+      },
+      "known": [
+        "complaint_original"
+      ],
+      "item": "complaint_original",
+      "home_owner": "office:7"
+    },
+    {
+      "id": "complaint_rewrite",
+      "name": "翻看异常报告",
+      "room": "office",
+      "furniture": 7,
+      "kind": "file",
+      "source": "S3:T17R5",
+      "text": "实际读到异常报告的机构表述；与投诉原文分别保留，机构标签不替代真实发生的事。",
+      "fields": {
+        "person_number": "complainant_number"
+      },
+      "known": [
+        "complaint_rewrite"
+      ],
+      "item": "complaint_rewrite",
+      "home_owner": "office:7"
+    },
+    {
+      "id": "archive_report_read",
+      "name": "查看本次档案员报告",
+      "room": "office",
+      "furniture": 10,
+      "kind": "archive_report",
+      "source": "S3:P571–578/T17R6",
+      "text": "实际读到本次已经写成的档案员报告；只知道报告指控，不倒推实施过未发生的行为。",
+      "fields": {
+        "reported_number": "visit_number"
+      },
+      "known": [
+        "archive_report_read"
+      ],
+      "item": "hospital_archive_report"
+    },
+    {
+      "id": "hospital_patient_order",
+      "name": "查看轮椅患者转运单",
+      "room": "lobby",
+      "furniture": 0,
+      "kind": "patient_order",
+      "source": "S3:P419–436/T12R3",
+      "text": "实际读到已完成的轮椅患者本人转运手续；患者本人同意、实际离场与纸面自行离院分别保留。",
+      "fields": {
+        "patient_number": "wheelchair_number"
+      },
+      "known": [
+        "hospital_patient_order"
+      ],
+      "actor": "guide"
+    },
+    {
+      "id": "hospital_family_photo_seen",
+      "name": "查看患者握着的家属照片",
+      "room": "lobby",
+      "furniture": 0,
+      "kind": "photo",
+      "source": "S3:P411–417/T12R2",
+      "text": "实际看见轮椅患者握着的家属照片；照片仍属患者，观看不转移归属，也不补造家属身份。",
+      "fields": {},
+      "known": [
+        "hospital_family_photo_seen"
+      ],
+      "item": "family_photo",
+      "actor": "wheelchair"
+    },
+    {
+      "id": "hospital_sample_label",
+      "name": "查看实际完成的样本标签",
+      "room": "clinic",
+      "furniture": 0,
+      "kind": "sample",
+      "source": "S3:P490–499/T12R5",
+      "text": "实际查看取样完成后才形成的有效样本标签；对应本次实际采样对象，具体字形待核，不把既往样本绑定给角色。",
+      "fields": {
+        "sample_number": "sample_number"
+      },
+      "known": [
+        "hospital_sample_label"
+      ],
+      "actor": "doctor"
+    }
+  ],
+  "document_relations": {
+    "complaint_pair": {
+      "members": [
+        "complaint_original",
+        "complaint_rewrite"
+      ],
+      "same_person": true,
+      "source": "S3:T17 投诉及异常报告：明确同一人的两份文件，不以未提供的具体编号替代这一已确认关系"
+    }
+  }
+}

@@ -1,0 +1,768 @@
+{
+  "date": "2026-10-16",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "baseline": "main/cbdac8f",
+  "git_writes": false,
+  "development_build_only": true,
+  "pck": {
+    "passed": 35,
+    "failed": 0
+  },
+  "exe_startup": {
+    "exit_code": 0,
+    "passed": true,
+    "closed_normally": true,
+    "close_message_sent": true,
+    "scope": "Actual Windows release EXE, normal main scene and OS WM_CLOSE; no custom script/project override; Dummy audio, no full gameplay or listening claim",
+    "window_created": true,
+    "stderr": null
+  },
+  "files": [
+    {
+      "path": "exports/continue_20261016/NEURONS.exe",
+      "bytes": 109168640,
+      "sha256": "3d19ee4a764e8bb153bfa7f811f98e0dfb0139c9e0c8bc6b76b93d3ed09185bf"
+    },
+    {
+      "path": "exports/continue_20261016/NEURONS.pck",
+      "bytes": 21427632,
+      "sha256": "583f606be245aea3a750bd33e4d7bcedc25ba59143af5b013bab90430968f820"
+    },
+    {
+      "path": "neurons/assets/fonts/coverage-source-corpus.json",
+      "bytes": 2395,
+      "sha256": "9398ebef0814ce7a90b3e6decaa5132f275836d9d9e0aadf27060bb91f4cfda8"
+    },
+    {
+      "path": "neurons/data/audio_bindings.json",
+      "bytes": 13155,
+      "sha256": "15b5d63ccec4f05cf81b66b64ed63b0716ed178b5594a3033c49e3ff97661ef4"
+    },
+    {
+      "path": "neurons/data/hidden_street.json",
+      "bytes": 2278,
+      "sha256": "6f4e2e014963a83254497f05fb37ef331434750fa9e007bd68a70709963d75af"
+    },
+    {
+      "path": "neurons/data/home_dialogue.json",
+      "bytes": 10370,
+      "sha256": "caadbec27dd707324fa1e599e3d52d0f1dd4d0618d09746367b4394c0a70fc35"
+    },
+    {
+      "path": "neurons/data/home_rules.json",
+      "bytes": 1046,
+      "sha256": "f4c49bd06eaa74c5d41eeb8df4fe25cee0f7afb39645a211feaeffea9b1f2751"
+    },
+    {
+      "path": "neurons/data/hospital.json",
+      "bytes": 21327,
+      "sha256": "cfae23f47e1a9f29a2be99c75959643d430d52043987ef87e589b1614564c897"
+    },
+    {
+      "path": "neurons/data/hospital_observations.json",
+      "bytes": 15030,
+      "sha256": "dddbb27227d66b95a264da29a9cad098c8baa1a15ece6b96bebc55377619d5e7"
+    },
+    {
+      "path": "neurons/data/opening.json",
+      "bytes": 3456,
+      "sha256": "9f62f504d1bbcfefbd1660c5c402f35df0638b27edce5c658dee9d37c26137ce"
+    },
+    {
+      "path": "neurons/data/presentation.json",
+      "bytes": 3008,
+      "sha256": "57d49898779486fdff16591b08bba2e9d0a6b302e830c7a695fe51b95694a01d"
+    },
+    {
+      "path": "neurons/data/search_actions.json",
+      "bytes": 9104,
+      "sha256": "a964c24cdd9ee27f1c60699332315d7ae926a7663f5c263746311cf18f08f342"
+    },
+    {
+      "path": "neurons/data/skills.json",
+      "bytes": 14305,
+      "sha256": "1892910a62c7b06f9cfef92f57dba12caa14d27409241bc1cc59b14d480b62d8"
+    },
+    {
+      "path": "neurons/data/tutorial_dialogue.json",
+      "bytes": 3986,
+      "sha256": "c859de4355ecd8787fda545093b5abc3ce618486192e37cb062c867c24efb3e5"
+    },
+    {
+      "path": "neurons/export_presets.cfg",
+      "bytes": 557,
+      "sha256": "4b7513c9276d6657778743f44304878c3415ad5bccdcdd5c2469eb6097358ec4"
+    },
+    {
+      "path": "neurons/project.godot",
+      "bytes": 732,
+      "sha256": "6796c510e055a71adeb859cf601d0a128c86290e71c9fe26b610e55978ccaa5c"
+    },
+    {
+      "path": "neurons/scenes/bedroom_art_trial.tscn",
+      "bytes": 314,
+      "sha256": "35ac1923c39b558957b50fa460a10227b71f93e166aacc4d56bc193b51c85e7a"
+    },
+    {
+      "path": "neurons/scenes/bedroom_sample.tscn",
+      "bytes": 309,
+      "sha256": "b5cb7205d72104a1d9cd07dcfb82be6824bbe72146013079df161b083038df8f"
+    },
+    {
+      "path": "neurons/scenes/front_end.tscn",
+      "bytes": 284,
+      "sha256": "15293f8ca14797629eb86f4d3c9e02b1978392ea51994d0fa197932da4258fdd"
+    },
+    {
+      "path": "neurons/scripts/bedroom_art_trial.gd",
+      "bytes": 1763,
+      "sha256": "e2e2735b7a67d65beadb5f66dcff873b52e8f62c138cb45dd0885babd7df27d4"
+    },
+    {
+      "path": "neurons/scripts/bedroom_art_trial.gd.uid",
+      "bytes": 20,
+      "sha256": "3759e1f569bfd1e8490a5af1113e0fd28a6dece41cc417a2f1326bb20712a3d5"
+    },
+    {
+      "path": "neurons/scripts/bedroom_sample.gd",
+      "bytes": 27544,
+      "sha256": "7c5ebad9ec31b9f06aebf591c33e487956159c00b7ac677e2745b927475ab218"
+    },
+    {
+      "path": "neurons/scripts/bedroom_sample.gd.uid",
+      "bytes": 20,
+      "sha256": "d315dac00ef710b692d0995762be12d8009bf4520b6bcf251b8783da735bac8f"
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "bytes": 47553,
+      "sha256": "cc2296f9ae917ea268767910521d38ccf7327916f1f4506043d0ff88060e3ff5"
+    },
+    {
+      "path": "neurons/scripts/campaign.gd.uid",
+      "bytes": 20,
+      "sha256": "3e1eba0304c58720b137fb15eafc85126938c23f2862cc3211c9e6bed601e752"
+    },
+    {
+      "path": "neurons/scripts/core/achievement_store.gd",
+      "bytes": 4538,
+      "sha256": "b2b87b8b0cf05ae9ee0ec05fc9fd40903266d08ff3924abc011e7319a5c31fec"
+    },
+    {
+      "path": "neurons/scripts/core/achievement_store.gd.uid",
+      "bytes": 19,
+      "sha256": "9b77b554e832c13a1f39b48b2f14f366673cee39c5bbf6ebe2f6766090bcccca"
+    },
+    {
+      "path": "neurons/scripts/core/campaign_session.gd",
+      "bytes": 2409,
+      "sha256": "da7423aab6b8363319e1d25bad82e76af11d577abcdac130bc8338b7f12cb525"
+    },
+    {
+      "path": "neurons/scripts/core/campaign_session.gd.uid",
+      "bytes": 20,
+      "sha256": "a01b5cb47ddc4f48da15acbdb09959a4c482b3946190fdd1f48d8334dc4362ac"
+    },
+    {
+      "path": "neurons/scripts/core/family_events.gd",
+      "bytes": 29008,
+      "sha256": "086c452195d0b7acc6e72ddc632fc64bc9ad03eda42fb39b349e9309538b358c"
+    },
+    {
+      "path": "neurons/scripts/core/family_events.gd.uid",
+      "bytes": 19,
+      "sha256": "0d0555698e2d1a8d7fcb7fdf84ba8581e41182f275a54676895ff5c5a6567199"
+    },
+    {
+      "path": "neurons/scripts/core/hidden_street.gd",
+      "bytes": 15931,
+      "sha256": "20636c647da055222952a626eaa890797045a6925fe86b997ea7eee53a9a9c47"
+    },
+    {
+      "path": "neurons/scripts/core/hidden_street.gd.uid",
+      "bytes": 19,
+      "sha256": "9effd6bf84187868d2945306756c61588f48e96ee035d17411c2357ff13c1938"
+    },
+    {
+      "path": "neurons/scripts/core/home_animals.gd",
+      "bytes": 9273,
+      "sha256": "43056ddbebbc0cfbc855c805d2af0b060f8324857e1a2e9c0699ecc6e628ffc6"
+    },
+    {
+      "path": "neurons/scripts/core/home_animals.gd.uid",
+      "bytes": 20,
+      "sha256": "95f8b9ef5b464249aab3ebc4c7e36bc82ed68e17d09813e41055521953dec6de"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_events.gd",
+      "bytes": 26860,
+      "sha256": "84ff27484614c22bfe9fcc7455917ccc8ad9e0112007514e63a4bfbfc123454d"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_events.gd.uid",
+      "bytes": 19,
+      "sha256": "86f391204187010948ab5ee33dd2c24b976daf24f0f50b29e1144ddb7a49c482"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_observations.gd",
+      "bytes": 14655,
+      "sha256": "2960ce3f95aba09a26d60252df32a0dd4173b52db66e8db2a0118d05bc17aa7b"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_observations.gd.uid",
+      "bytes": 20,
+      "sha256": "684e8f1276fb6d316dc46fdc5e5374131f6a13fcc75955937ca5787457ea8634"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_records.gd",
+      "bytes": 19507,
+      "sha256": "5088f4a13a18dbb4620ce0e298bec10dca19864a5474f1764eef60ffc63de8aa"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_records.gd.uid",
+      "bytes": 20,
+      "sha256": "e9157882b709813af4d286742ca9b76558a81a39c54bad5726d758c68ffc172f"
+    },
+    {
+      "path": "neurons/scripts/core/interaction_rules.gd",
+      "bytes": 9414,
+      "sha256": "f0d9264b8e6b6e00a196499a9e45fad53c33b2eaa94851e593ac576ccdf975c9"
+    },
+    {
+      "path": "neurons/scripts/core/interaction_rules.gd.uid",
+      "bytes": 20,
+      "sha256": "e2607e45027330426934a630562e11de4fda24199d0b8f02eb5638cddd82abea"
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd",
+      "bytes": 20569,
+      "sha256": "92397eea2ef0d00c1e3c7f7b2b4061f3ffc958cf6d9363b8c48a973d779be7b8"
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd.uid",
+      "bytes": 20,
+      "sha256": "1dffcaba0bff89855af1cedb2dd271ba3eaff1ae630c83ac4bfe40fa051898b7"
+    },
+    {
+      "path": "neurons/scripts/core/save_store.gd",
+      "bytes": 2423,
+      "sha256": "7c81707c64928713db774ebf76703fd3e9440c70bf8413e99973b146d4c511ee"
+    },
+    {
+      "path": "neurons/scripts/core/save_store.gd.uid",
+      "bytes": 20,
+      "sha256": "f000bd447057bf9db7c3902b4670cac76c37c8c37cd0ffc1dd4b58a0942d0396"
+    },
+    {
+      "path": "neurons/scripts/presentation/asset_catalog.gd",
+      "bytes": 3889,
+      "sha256": "46fcc4dbd1319eb535e0d2b85710bd4567f4d8e908b0060dc41f6eea8d766f04"
+    },
+    {
+      "path": "neurons/scripts/presentation/asset_catalog.gd.uid",
+      "bytes": 20,
+      "sha256": "a30a326ef8ca990de2efa7f08811ec0a2e08f01013b4ed5a07cb516334f28f2a"
+    },
+    {
+      "path": "neurons/scripts/presentation/search_actions.gd",
+      "bytes": 5193,
+      "sha256": "27528fe1483ac4d4924a0142647605de907da370c95847bd05c92c7b19ddebc3"
+    },
+    {
+      "path": "neurons/scripts/presentation/search_actions.gd.uid",
+      "bytes": 20,
+      "sha256": "c08887e984307c40117812104d3625a35f2203efc6c2cb5e570d675afb443155"
+    },
+    {
+      "path": "neurons/scripts/ui/body_preview.gd",
+      "bytes": 5605,
+      "sha256": "bf04377fcaa6ba3b15bf9d4a5586d009f489d29ed5342e2b9f3aa45f07910573"
+    },
+    {
+      "path": "neurons/scripts/ui/body_preview.gd.uid",
+      "bytes": 20,
+      "sha256": "be3c7f6455626eb214ade943d2b9e0ee1164c1d492c0b50202bedd204deb51a8"
+    },
+    {
+      "path": "neurons/scripts/ui/campaign_menu.gd",
+      "bytes": 19548,
+      "sha256": "e44a4005a15f39c4c34ca86d48aaa677d86303378cdcdab6d44e99e91a61df8e"
+    },
+    {
+      "path": "neurons/scripts/ui/campaign_menu.gd.uid",
+      "bytes": 20,
+      "sha256": "656aab0bec83c3c9bd408257ed03128c4f93e1e9be3e9f4ae71468a6e213e87d"
+    },
+    {
+      "path": "neurons/scripts/ui/father_prompt.gd",
+      "bytes": 2661,
+      "sha256": "c7d2557b94da7313d39d44ac7500bd1eccbd2c59434971b3ea5a3833544dc000"
+    },
+    {
+      "path": "neurons/scripts/ui/father_prompt.gd.uid",
+      "bytes": 19,
+      "sha256": "2cb7eb550c5cc72213c29226b40c7d26276d35b2b23e3a57ebf207c67507f662"
+    },
+    {
+      "path": "neurons/scripts/ui/feedback_audio.gd",
+      "bytes": 6395,
+      "sha256": "b858fb6f4c9bc61d89846b7a3307f107aa631617c74e10a44757fedb2b032d5e"
+    },
+    {
+      "path": "neurons/scripts/ui/feedback_audio.gd.uid",
+      "bytes": 20,
+      "sha256": "8a28774813a926430d16cf957ef9e10ebda54f9ab8bb60bd45a5eb0a08735ee1"
+    },
+    {
+      "path": "neurons/scripts/ui/front_end.gd",
+      "bytes": 10809,
+      "sha256": "275e3058d4a02ee01d9f0aaab251cc6ef65548b187ba4e5b20fa3eeea7e895ee"
+    },
+    {
+      "path": "neurons/scripts/ui/front_end.gd.uid",
+      "bytes": 19,
+      "sha256": "32038e886e7d3264197cd59bd05e8d3002343fa8b283090391c3a259ade5fa0d"
+    },
+    {
+      "path": "neurons/scripts/ui/menu_art.gd",
+      "bytes": 81,
+      "sha256": "7c797e860d0458f2f9f7be2a085f7807a48b36149f4554692d6517f6af396660"
+    },
+    {
+      "path": "neurons/scripts/ui/menu_art.gd.uid",
+      "bytes": 19,
+      "sha256": "afe45b013e1ae2bb2dab6a9194b5d3a168f14b91da382d06191872db783e9f2b"
+    },
+    {
+      "path": "neurons/scripts/ui/neuron_menu.gd",
+      "bytes": 9157,
+      "sha256": "94ece17fe8775e3a4cb39f8950f5df9e0343f1c90fb39f16ecf7914e0e3e061c"
+    },
+    {
+      "path": "neurons/scripts/ui/neuron_menu.gd.uid",
+      "bytes": 20,
+      "sha256": "8b1cb089a66d36ea6a360179565f9b6996a58933db6149cd841dd86e11c232dc"
+    },
+    {
+      "path": "neurons/scripts/ui/opening_flow.gd",
+      "bytes": 11133,
+      "sha256": "6bbb0a274c02259e8f63d96f0791d16a108e9f9e4e74f23f560829b62fdc2a9f"
+    },
+    {
+      "path": "neurons/scripts/ui/opening_flow.gd.uid",
+      "bytes": 19,
+      "sha256": "20aa88648dda347f1881c2a266cbcb76e44e04936a8577832042a0459c1a2e1a"
+    },
+    {
+      "path": "neurons/scripts/ui/tutorial_overlay.gd",
+      "bytes": 17378,
+      "sha256": "be0bd573e3fea727eaf61fb49543788258216abae911b7f0ee05caee1a923bef"
+    },
+    {
+      "path": "neurons/scripts/ui/tutorial_overlay.gd.uid",
+      "bytes": 20,
+      "sha256": "8505cd1f567563a35b8d54b95a72625f4e973e2da215983160ba6ba47a8b0f28"
+    },
+    {
+      "path": "neurons/scripts/ui/vitality_panel.gd",
+      "bytes": 5841,
+      "sha256": "b18af996d8a2137e1ac962924caf1ec591d9c2a9b9bc2ce19cd4e79ddaef2cc9"
+    },
+    {
+      "path": "neurons/scripts/ui/vitality_panel.gd.uid",
+      "bytes": 20,
+      "sha256": "2754fed94b88325a9d90003fc2c6a746cc9e8b98821422e06449d40a87a9af54"
+    },
+    {
+      "path": "neurons/scripts/world/campaign_view.gd",
+      "bytes": 20817,
+      "sha256": "c8e41bdd201c898f67cb827663b7bd536fa1d1d86de301689a36bbd0e48febfd"
+    },
+    {
+      "path": "neurons/scripts/world/campaign_view.gd.uid",
+      "bytes": 19,
+      "sha256": "791872dbba00824d0a40737c3137658d44bb2f5939df747d93e8f59d792c1224"
+    },
+    {
+      "path": "neurons/scripts/world/hidden_layout.gd",
+      "bytes": 1310,
+      "sha256": "4efe5c1aa825c9f6b22f48a05ee1a1a1eef108fe4991dd774bd713036b6f9b82"
+    },
+    {
+      "path": "neurons/scripts/world/hidden_layout.gd.uid",
+      "bytes": 20,
+      "sha256": "25de7809eb9defcfa3c693a9389206db5942c0eb5b95c1193e708067df8601ab"
+    },
+    {
+      "path": "neurons/scripts/world/room_art_trial_view.gd",
+      "bytes": 3747,
+      "sha256": "4e379d314ee5eb1df26254de2e2bf233821c93ecc6db3fe54346833457102a2c"
+    },
+    {
+      "path": "neurons/scripts/world/room_art_trial_view.gd.uid",
+      "bytes": 20,
+      "sha256": "fddb6a912ecbc6d25a6ddc820578d8f4aa09be73cced5836f50322d7abfc1014"
+    },
+    {
+      "path": "neurons/scripts/world/room_layout.gd",
+      "bytes": 4347,
+      "sha256": "8ffe586e8535bfbe982a6a03487073fb1db1031d0cc0a05599c13de3ed0ec07a"
+    },
+    {
+      "path": "neurons/scripts/world/room_layout.gd.uid",
+      "bytes": 20,
+      "sha256": "d70b429a5a66214aaeca22b6392df333366c4362fe61cf27aa1fb519e2544a77"
+    },
+    {
+      "path": "neurons/scripts/world/room_view.gd",
+      "bytes": 13831,
+      "sha256": "3238f4fbd42c807f9abc3df010f34c6cfd1d6d2826016793fbaded4a2a98cdea"
+    },
+    {
+      "path": "neurons/scripts/world/room_view.gd.uid",
+      "bytes": 19,
+      "sha256": "177bf0d98b7eb8778558191a5546494c47c3dad606f498efaff87237a637b894"
+    },
+    {
+      "path": "neurons/tests/animals_check.gd",
+      "bytes": 7563,
+      "sha256": "a7ae7f665a08c0060ceabd03b577f35a9a336ff3dc49e12602c9cc9f8f74a921"
+    },
+    {
+      "path": "neurons/tests/animals_check.gd.uid",
+      "bytes": 20,
+      "sha256": "9a98b72eb3072b33e25edb38e36459c6185693645cc69a0e5632691a12b5ba80"
+    },
+    {
+      "path": "neurons/tests/art_trial_check.gd",
+      "bytes": 7112,
+      "sha256": "6fced1d184a0369436aaaa8d2546405120d27c9da797007fb85337e3ccf3bb56"
+    },
+    {
+      "path": "neurons/tests/art_trial_check.gd.uid",
+      "bytes": 20,
+      "sha256": "765a6ab8da4986a21d9ec42cabd78969aba55a053f5bd8459a753613cc1bf6f3"
+    },
+    {
+      "path": "neurons/tests/awareness_check.gd",
+      "bytes": 4189,
+      "sha256": "a9e02fc9df284ba229df04a65599b527a86895666ecab670675e086f159ba43e"
+    },
+    {
+      "path": "neurons/tests/awareness_check.gd.uid",
+      "bytes": 20,
+      "sha256": "39c87fb25444d60b235311a607428bfbee21eae16677d8c466db9813912a5f97"
+    },
+    {
+      "path": "neurons/tests/b1_acceptance_check.gd",
+      "bytes": 6165,
+      "sha256": "2e29a989756de7686cecbb56d4c178eed32bce305cb173588119470efaaec9dc"
+    },
+    {
+      "path": "neurons/tests/b1_acceptance_check.gd.uid",
+      "bytes": 20,
+      "sha256": "5a1f61a077ba9e4d3c9b3a6a31e259009a0ba6797feaa4ed0bc0eddba907a07c"
+    },
+    {
+      "path": "neurons/tests/b1_check.gd",
+      "bytes": 7044,
+      "sha256": "01ff33a3cfdbcedb4fccf5bdf2efe7d408b24ba64a24d6a4caeffd1b5858d82f"
+    },
+    {
+      "path": "neurons/tests/b1_check.gd.uid",
+      "bytes": 19,
+      "sha256": "be022d96bd7380fcc13cf384446cf64ba59a5f3d240aaae58f1c31d0df2136df"
+    },
+    {
+      "path": "neurons/tests/bedside_check.gd",
+      "bytes": 7610,
+      "sha256": "26fb1265175eb14fc79a9baf6bcbd4b7f02375f81f5fa5941d168532543948ed"
+    },
+    {
+      "path": "neurons/tests/bedside_check.gd.uid",
+      "bytes": 19,
+      "sha256": "54087a422073528b41d5ce7dbfcf454b3639d5a4892bad6d4985b0992cb9a46c"
+    },
+    {
+      "path": "neurons/tests/campaign_check.gd",
+      "bytes": 11273,
+      "sha256": "548ab8d322fb904d35d78eece560d12429a7f80c7bbffa69e54d45c1e75fc141"
+    },
+    {
+      "path": "neurons/tests/campaign_check.gd.uid",
+      "bytes": 20,
+      "sha256": "f58b33c79cda79df6c7569ee7aae68f259b7b6fdac6a15adadd13faaabfb2493"
+    },
+    {
+      "path": "neurons/tests/family_check.gd",
+      "bytes": 13598,
+      "sha256": "eed74ab33f0b0d0c04d13ccaafa2776d1e07f654304d5a12d9a78c55c970b3a5"
+    },
+    {
+      "path": "neurons/tests/family_check.gd.uid",
+      "bytes": 19,
+      "sha256": "93e667df6a767ac431fcad785aafa029f57b2dd4474113b18d4f563fe83e57f8"
+    },
+    {
+      "path": "neurons/tests/family_sequence_check.gd",
+      "bytes": 11449,
+      "sha256": "f39ecbd44eb9e36495a534a315c95eb5d16c0961ff98e18b53454547c6e00fb4"
+    },
+    {
+      "path": "neurons/tests/family_sequence_check.gd.uid",
+      "bytes": 20,
+      "sha256": "11aaa4a17feae3eb569d374e8643d5cad4984d62e56e57c6cde106982833e4db"
+    },
+    {
+      "path": "neurons/tests/feedback_check.gd",
+      "bytes": 11568,
+      "sha256": "6d38fc64e03e3328332455a5d3749082eacf97fa50e1282a16e75826ea7d8e45"
+    },
+    {
+      "path": "neurons/tests/feedback_check.gd.uid",
+      "bytes": 20,
+      "sha256": "3e2c5d7f7a3d09aa59ec562f98a33309b611913b78c21ec80c85c4af48870473"
+    },
+    {
+      "path": "neurons/tests/hidden_campaign_check.gd",
+      "bytes": 12906,
+      "sha256": "52937fe420a68bf12f7853538b8947dc465c4c35861d00c116a756a7be2675e7"
+    },
+    {
+      "path": "neurons/tests/hidden_campaign_check.gd.uid",
+      "bytes": 20,
+      "sha256": "15cd050648c80c8fc3354e0fa2a2343041f43af31134f3052144ad3ac841fc3e"
+    },
+    {
+      "path": "neurons/tests/home_adverse_check.gd",
+      "bytes": 9091,
+      "sha256": "f02a94599dca9e13dac3b413f3c8e72b02aa377715c1332b03a0677483962997"
+    },
+    {
+      "path": "neurons/tests/home_adverse_check.gd.uid",
+      "bytes": 19,
+      "sha256": "7df07c105e960e7af04209a8652f86047db9a237255daa7b1648855273ffc9ed"
+    },
+    {
+      "path": "neurons/tests/hospital_check.gd",
+      "bytes": 27667,
+      "sha256": "f011b5e08cfb06309e7af395b89b96ef83a5c7981c4040fc5cb0ddcfe56811c7"
+    },
+    {
+      "path": "neurons/tests/hospital_check.gd.uid",
+      "bytes": 20,
+      "sha256": "92c61400696c9e8c635e37da26cc3eac4896983019cb4ccebb4083506a99ee86"
+    },
+    {
+      "path": "neurons/tests/hospital_edges_check.gd",
+      "bytes": 14898,
+      "sha256": "ce6760f3c2c74203a501904c84ab5b728efb5300c537153c0cbb9b6bb435f707"
+    },
+    {
+      "path": "neurons/tests/hospital_edges_check.gd.uid",
+      "bytes": 19,
+      "sha256": "a35ad688fa5e8fb43cd25551787ff0aaf2544a9b8d8a5ae36e0b47c84e8b2a03"
+    },
+    {
+      "path": "neurons/tests/hospital_observation_check.gd",
+      "bytes": 15811,
+      "sha256": "91770f05e0705e4b27b2d25acd0d91bf472f5451b85711f39ff2a06e2d70d61e"
+    },
+    {
+      "path": "neurons/tests/hospital_observation_check.gd.uid",
+      "bytes": 20,
+      "sha256": "8aef55d8fe600710ae09673003d7e9a8eb97ff2c45f452bbf702655859c34b6f"
+    },
+    {
+      "path": "neurons/tests/natural_home_check.gd",
+      "bytes": 13019,
+      "sha256": "fd541780db89b6d8c79a9c4f040ea1ee7e95e919f6f1649bf0f67e34698c77cc"
+    },
+    {
+      "path": "neurons/tests/natural_home_check.gd.uid",
+      "bytes": 20,
+      "sha256": "ce2a04cd676942dc88651af8246fd7bbb1ef26085b85d3bb163ec99fb78d07c7"
+    },
+    {
+      "path": "neurons/tests/natural_hospital_check.gd",
+      "bytes": 7247,
+      "sha256": "a8187fe06661d9c30d3a6e55a5b060d5c9ad15f915a3603395f87cada5f092e4"
+    },
+    {
+      "path": "neurons/tests/natural_hospital_check.gd.uid",
+      "bytes": 19,
+      "sha256": "5886623f79e0c6a975cba690b8ea9025589397a3092a2c95fa691234016b4f97"
+    },
+    {
+      "path": "neurons/tests/opening_campaign_check.gd",
+      "bytes": 8831,
+      "sha256": "1958a2e6eb9c0ebe74b55572132f4c32de445b63bea69d0478be88b1e194e845"
+    },
+    {
+      "path": "neurons/tests/opening_campaign_check.gd.uid",
+      "bytes": 20,
+      "sha256": "6d94f0a0e096ac91fa90cc967f5bf377f83ef93b61d157380335bbfa4c1a35cc"
+    },
+    {
+      "path": "neurons/tests/persistence_ui_check.gd",
+      "bytes": 5032,
+      "sha256": "0cda22c98754fb5933cba7dccf882d3c44fae1460bccbee477c9408d8ae94b1a"
+    },
+    {
+      "path": "neurons/tests/persistence_ui_check.gd.uid",
+      "bytes": 20,
+      "sha256": "d3b78b990d95a3fad4ddebe0f9874f3fbfbbd122c50ebf0bd97fe5a9c0b9d83a"
+    },
+    {
+      "path": "neurons/tests/rest_input_check.gd",
+      "bytes": 5070,
+      "sha256": "f68eb46cac7d197887e6f9df230c60455c816ec4884dada236ae7a6ef8471871"
+    },
+    {
+      "path": "neurons/tests/rest_input_check.gd.uid",
+      "bytes": 20,
+      "sha256": "9873624300a003f97f3063fc734bc4658c295105e03d0c7d2e27e680ae80d126"
+    },
+    {
+      "path": "neurons/tests/search_actions_check.gd",
+      "bytes": 6281,
+      "sha256": "d07875c4f71f93bc3331841ef0647fbb17675cda72c054911a0857bae88e14ff"
+    },
+    {
+      "path": "neurons/tests/search_actions_check.gd.uid",
+      "bytes": 20,
+      "sha256": "bead51ec2894cd79a656d72d4f032abd26630229edf4c05d87633e1da07d1f17"
+    },
+    {
+      "path": "neurons/tests/status_check.gd",
+      "bytes": 8575,
+      "sha256": "eae2ddec97668a14aabe95ae3454986c335e674aa869fcbe7cfa7747e1658c5f"
+    },
+    {
+      "path": "neurons/tests/status_check.gd.uid",
+      "bytes": 20,
+      "sha256": "6c94bee1f11190f25d2e0f5de5c391dd8dd23196e57edfb678062bba552f9d9f"
+    },
+    {
+      "path": "neurons/tests/story_record.gd",
+      "bytes": 3210,
+      "sha256": "dea7f3ddebf4cdd51f3f1633a7ed12c6682b0b438a42c78393e0c0cbd43c762a"
+    },
+    {
+      "path": "neurons/tests/story_record.gd.uid",
+      "bytes": 20,
+      "sha256": "849daea108b21ca835d2a886845f3212d461102e3eea4741b178caa3762c187c"
+    },
+    {
+      "path": "neurons/tests/test_b1_ui_finish.gd",
+      "bytes": 6880,
+      "sha256": "85996090cb3695faac61262b9f25fba5a5c4c0ed3a9143221fb0a11cab639ddb"
+    },
+    {
+      "path": "neurons/tests/test_b1_ui_finish.gd.uid",
+      "bytes": 20,
+      "sha256": "c971b33e32c8b80008f1053ecbe73de1a2e02d2f3ced1176b6ed86782a5c0135"
+    },
+    {
+      "path": "neurons/tests/test_hidden.gd",
+      "bytes": 16510,
+      "sha256": "21558fa290485d01c9e8d0c145e6c09acce59907f954a0544c2a330375b0033c"
+    },
+    {
+      "path": "neurons/tests/test_hidden.gd.uid",
+      "bytes": 19,
+      "sha256": "c99f5a6ccc89b792f5d6c3282cde6920cbc48686a6e41919aa270271414f1069"
+    },
+    {
+      "path": "neurons/tests/test_hospital_records.gd",
+      "bytes": 11937,
+      "sha256": "b5f855f378a04a7c688ce7d347d4c69516950df5bacb9cb8a0c11dd271b5922f"
+    },
+    {
+      "path": "neurons/tests/test_hospital_records.gd.uid",
+      "bytes": 20,
+      "sha256": "fd80e415ee92926789d17ed6ec60bf1a3662f37461dc7d3d1dc1b4c961ad0995"
+    },
+    {
+      "path": "neurons/tests/test_layout.gd",
+      "bytes": 6281,
+      "sha256": "8a5ad9ba3119bf4f5e85257f025560bf34edbf4e201f6128012789fe649a7c39"
+    },
+    {
+      "path": "neurons/tests/test_layout.gd.uid",
+      "bytes": 19,
+      "sha256": "5947932b284eade9e56bc593e9769bd71d3cb38642647570c2c37ab26612fc19"
+    },
+    {
+      "path": "neurons/tests/test_neural.gd",
+      "bytes": 14229,
+      "sha256": "909aa34f6324a857c938e8ea140bb8653332867156e0287e99545ecef2e1abe5"
+    },
+    {
+      "path": "neurons/tests/test_neural.gd.uid",
+      "bytes": 20,
+      "sha256": "e4f8d4563bb4e7f40b8c9005e3c10ac29d6bd21b58630bdef9bbeec9c07e3cf6"
+    },
+    {
+      "path": "neurons/tests/test_opening.gd",
+      "bytes": 7525,
+      "sha256": "7baa4836bfbf0706f83a14849de067a94f3c445f42aeb4d227dcb8c189a96d64"
+    },
+    {
+      "path": "neurons/tests/test_opening.gd.uid",
+      "bytes": 19,
+      "sha256": "bed8d17c11eb513ad3a5258ebcba3be42accb32ed526a8a48a126bfd75497c30"
+    },
+    {
+      "path": "neurons/tests/test_opening_startup.gd",
+      "bytes": 3890,
+      "sha256": "f136c3f496e83c5b420ca950875cae9f9fd16662a4e742e8078be252a083d33a"
+    },
+    {
+      "path": "neurons/tests/test_opening_startup.gd.uid",
+      "bytes": 20,
+      "sha256": "e883c0296b93177942837c5efda53f4fba60386374b6874f5995832bb34e2a95"
+    },
+    {
+      "path": "neurons/tests/test_rules.gd",
+      "bytes": 10586,
+      "sha256": "53136356aaebe8e8fd991f2cc5c182ada1392fd3671f6039c462ea98c3a7df9f"
+    },
+    {
+      "path": "neurons/tests/test_rules.gd.uid",
+      "bytes": 19,
+      "sha256": "322280030510db824ccfde82721737858f7c0c81e48735e473f458241f603a74"
+    },
+    {
+      "path": "neurons/tests/tutorial_check.gd",
+      "bytes": 5790,
+      "sha256": "86c81d38a4efbbbfdf5ed6f2e1019b44efae22b203d56e2cf3b4b58239214230"
+    },
+    {
+      "path": "neurons/tests/tutorial_check.gd.uid",
+      "bytes": 20,
+      "sha256": "33b244aebba2fd709a5d4b2f9b7d6483ca0e2be03af350a01007a850b70d071d"
+    },
+    {
+      "path": "neurons/tests/tutorial_input_check.gd",
+      "bytes": 10507,
+      "sha256": "8bf8281c94f564920e66598decea91c04e219c9563606be6bfe792ebb2ce193c"
+    },
+    {
+      "path": "neurons/tests/tutorial_input_check.gd.uid",
+      "bytes": 19,
+      "sha256": "b5363347c221d88b74d851f62e6fc85951dc61fe347fb5a06f030abf7654d126"
+    },
+    {
+      "path": "neurons/tests/visual_check.gd",
+      "bytes": 7531,
+      "sha256": "ba47ef5f9f92785aed3b1a9f24fd91a0ce00059e50de8b786fd9357af6f1e92b"
+    },
+    {
+      "path": "neurons/tests/visual_check.gd.uid",
+      "bytes": 19,
+      "sha256": "9f18fa80bc167160b320fe9a460c484b3d085dc56563a17087a08266d38792eb"
+    }
+  ],
+  "project_source_sha256": "1d4f2ab8a9839a4d94d02731b3df43b4d8d2fba0459cba14921573ef654444b1"
+}
