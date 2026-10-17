@@ -84,30 +84,55 @@
     },
     {
       "id": "SFX_UI_CONFIRM",
-      "stream": "res://assets/audio/b1_development/sfx_ui_confirm_dev_v001.wav",
+      "stream": "res://assets/audio/audio2_20261017/sfx_ui_confirm_v001_new.wav",
       "channel": "ui",
       "loop": false,
-      "source": "DOCX/早期音乐素材/音频/SFX_UI_CONFIRM_v001.wav",
-      "source_sha256": "419da5726778c5a1e1494ce37ac504a185a5bbb933a9272c965132423e6da2ce",
-      "output_sha256": "f205cf9fdd35edbc0459ef3592dba09838bcab8d98a0b7f8c11f7ce420f23b0e",
-      "license": "用户提供；仅开发播放候选，作者/发布许可待核",
-      "status": "未主观听验；仅链路验证",
+      "source": "DOCX/早期音乐素材/音频2/SFX_UI_CONFIRM_v001.wav",
+      "source_sha256": "31cab845a41ac0d8d3f17ea162c45fac6001959bba2688c409f5b106c57d5c14",
+      "output_sha256": "58698cf0fe71610a327fac3997154df696db4934204142bf2fc163c9c92a0701",
+      "license": "用户提供并指定用途；作者及发布授权信息沿原记录待核",
+      "status": "已按用户指定绑定；未主观听验/最终混音",
       "processing": {
         "codec": "pcm_s16le",
         "trim": "none",
         "channels": "preserve",
-        "tool": "tools/prepare_b1_audio.py"
+        "gain_db": -1,
+        "tool": "tools/prepare_audio2_delivery.py"
       },
-      "analysis": {
-        "sample_rate": 48000,
-        "channels": 2,
-        "bits": 24,
-        "duration": 0.18391666666666667,
-        "peak": 0.9848728179931641,
-        "rms": 0.3206259364108663,
-        "leading_below_minus55_db_seconds": 0.0
-      },
-      "loop_points": "未听验；不默认无缝循环"
+      "usage_contexts": [
+        "ui_confirm"
+      ],
+      "loop_points": "保持原非循环；未确认无缝接缝，不强行循环",
+      "history": [
+        {
+          "id": "SFX_UI_CONFIRM",
+          "stream": "res://assets/audio/b1_development/sfx_ui_confirm_dev_v001.wav",
+          "channel": "ui",
+          "loop": false,
+          "source": "DOCX/早期音乐素材/音频/SFX_UI_CONFIRM_v001.wav",
+          "source_sha256": "419da5726778c5a1e1494ce37ac504a185a5bbb933a9272c965132423e6da2ce",
+          "output_sha256": "f205cf9fdd35edbc0459ef3592dba09838bcab8d98a0b7f8c11f7ce420f23b0e",
+          "license": "用户提供；仅开发播放候选，作者/发布许可待核",
+          "status": "未主观听验；仅链路验证",
+          "processing": {
+            "codec": "pcm_s16le",
+            "trim": "none",
+            "channels": "preserve",
+            "tool": "tools/prepare_b1_audio.py"
+          },
+          "analysis": {
+            "sample_rate": 48000,
+            "channels": 2,
+            "bits": 24,
+            "duration": 0.18391666666666667,
+            "peak": 0.9848728179931641,
+            "rms": 0.3206259364108663,
+            "leading_below_minus55_db_seconds": 0.0
+          },
+          "loop_points": "未听验；不默认无缝循环"
+        }
+      ],
+      "source_filename_note": "用户明确确认：音频2.zip内同名SFX_UI_CONFIRM_v001.wav就是新版；运行副本另存为_new。"
     },
     {
       "id": "SFX_UI_BACK",
@@ -335,9 +360,225 @@
         "duration": 0.7,
         "rate": 48000
       }
+    },
+    {
+      "id": "SFX_KEY",
+      "stream": "res://assets/audio/feedback_20261017/sfx_key_synth_v001.wav",
+      "channel": "world",
+      "loop": false,
+      "source": "tools/prepare_feedback_audio.py",
+      "source_sha256": "46dccf1322dda8c1cf6b7f77c5a0bfde78820e98063bdcde315d377826cdb87a",
+      "output_sha256": "e1b23b6ee60cbc562a58bb51e8aeba1efc292d815c54efa4104425e632ddc924",
+      "license": "本项目离线合成，无第三方录音",
+      "status": "开发候选；未主观听验",
+      "processing": {
+        "seed": 20261017,
+        "rate": 48000,
+        "duration": 0.3
+      }
+    },
+    {
+      "id": "SFX_ITEM_HANDOFF",
+      "stream": "res://assets/audio/feedback_20261017/sfx_item_handoff_synth_v001.wav",
+      "channel": "world",
+      "loop": false,
+      "source": "tools/prepare_feedback_audio.py",
+      "source_sha256": "46dccf1322dda8c1cf6b7f77c5a0bfde78820e98063bdcde315d377826cdb87a",
+      "output_sha256": "60c481dbed93a447c7844fa2d8766e4964e4b755fbc951de36fce68a208001d8",
+      "license": "本项目离线合成，无第三方录音",
+      "status": "开发候选；未主观听验",
+      "processing": {
+        "seed": 20261017,
+        "rate": 48000,
+        "duration": 0.2
+      }
+    },
+    {
+      "id": "SFX_HIT",
+      "stream": "res://assets/audio/feedback_20261017/sfx_hit_synth_v001.wav",
+      "channel": "world",
+      "loop": false,
+      "source": "tools/prepare_feedback_audio.py",
+      "source_sha256": "46dccf1322dda8c1cf6b7f77c5a0bfde78820e98063bdcde315d377826cdb87a",
+      "output_sha256": "2c908e96b870fd45b1afd46f4a74aa28ef8baa364b91526fc3a9e081cc4e7070",
+      "license": "本项目离线合成，无第三方录音",
+      "status": "开发候选；未主观听验",
+      "processing": {
+        "seed": 20261017,
+        "rate": 48000,
+        "duration": 0.24
+      }
+    },
+    {
+      "id": "SFX_UI_SAVE",
+      "stream": "res://assets/audio/feedback_20261017/sfx_ui_save_dev_v001.wav",
+      "channel": "ui",
+      "loop": false,
+      "source": "DOCX/早期音乐素材/音频/SFX_UI_SAVE_v001.wav",
+      "source_sha256": "aa47e83bab2744cabbb060f489994c1214e100ca32ae680fb184eaaea365e44c",
+      "output_sha256": "470c5dd721abfc86370ca79dfefcaeb7263f7245f1eae2ecff43da974114d76b",
+      "license": "用户提供；发布来源授权仍待核",
+      "status": "保留原始时长，仅16bit单声道处理；未主观听验"
+    },
+    {
+      "id": "SFX_UI_REWARD",
+      "stream": "res://assets/audio/feedback_20261017/sfx_ui_reward_dev_v001.wav",
+      "channel": "ui",
+      "loop": false,
+      "source": "DOCX/早期音乐素材/音频/SFX_UI_REWARD_v001.wav",
+      "source_sha256": "0eb28884137e082434fd4efda2d8747fccaeeecc0318fc299e01c67d30d90999",
+      "output_sha256": "8227bf2e9a557343ec8bfa49b1e504ef839c32b38d3577bbc240753ee124c927",
+      "license": "用户提供；发布来源授权仍待核",
+      "status": "保留原始时长，仅16bit单声道处理；未主观听验"
+    },
+    {
+      "id": "MUS_DANGER",
+      "stream": "res://assets/audio/feedback_20261017/mus_danger_dev_v001.ogg",
+      "channel": "music",
+      "loop": false,
+      "source": "DOCX/早期音乐素材/音频2/MUS_DANGER_v001.wav",
+      "source_sha256": "14b8eb0cdbdbc014a54216e208f0c13ffde15c515e167510bd77640ca428387f",
+      "output_sha256": "ab93ab86f90c0f3290fd04d348f2df57f754dd3641fa41efffe720faf0061ffa",
+      "license": "用户提供并指定用途；作者及发布授权信息沿原记录待核",
+      "status": "已按用户指定绑定；未主观听验/最终混音",
+      "processing": {
+        "codec": "vorbis-q5",
+        "trim": "none",
+        "channels": "preserve",
+        "tool": "existing local ffmpeg 7.1",
+        "reuse": "New delivery WAV equals prior source SHA256; existing processed asset retained."
+      },
+      "usage_contexts": [
+        "cortex_battle",
+        "deep_chase",
+        "street_existing",
+        "hidden_street_existing"
+      ],
+      "loop_points": "保持原非循环；未确认无缝接缝，不强行循环"
+    },
+    {
+      "id": "SFX_COMBAT_WINDUP",
+      "stream": "res://assets/audio/feedback_20261017/sfx_combat_windup_synth_v001.wav",
+      "channel": "world",
+      "loop": false,
+      "source": "tools/prepare_feedback_audio.py",
+      "source_sha256": "6f94cc82e7afe1569f6ce18b2f91e89f6c127a9287b03409174f90cf12a26a70",
+      "output_sha256": "5a90ab657d578cfe04a65c3825fc4ae86c5103d7c256c58b8d7cdba8832c3b8c",
+      "license": "本项目离线合成，无第三方录音",
+      "status": "开发候选；未主观听验",
+      "processing": {
+        "seed": 20261017,
+        "rate": 48000,
+        "duration": 0.38
+      }
+    },
+    {
+      "id": "SFX_BED_ROLL",
+      "stream": "res://assets/audio/feedback_20261017/sfx_bed_roll_synth_v001.wav",
+      "channel": "world",
+      "loop": false,
+      "source": "tools/prepare_feedback_audio.py",
+      "source_sha256": "6f94cc82e7afe1569f6ce18b2f91e89f6c127a9287b03409174f90cf12a26a70",
+      "output_sha256": "c0b9c15317202061a501b8360e413238eb4f738122f88a927b098d8acc7b0d5e",
+      "license": "本项目离线合成，无第三方录音",
+      "status": "开发候选；未主观听验",
+      "processing": {
+        "seed": 20261017,
+        "rate": 48000,
+        "duration": 0.65
+      }
+    },
+    {
+      "id": "SFX_RACK_CONTACT",
+      "stream": "res://assets/audio/feedback_20261017/sfx_rack_contact_synth_v001.wav",
+      "channel": "world",
+      "loop": false,
+      "source": "tools/prepare_feedback_audio.py",
+      "source_sha256": "7c46f6bff547e12875949de0b0f40875771352a7df636af6ef11a30ef89f57b8",
+      "output_sha256": "e3ad76f8a7e7230be2416cdb63432f949c65ab0eb01927bb06aa2d27ebcaf5aa",
+      "license": "本项目离线合成，无第三方录音",
+      "status": "开发候选；未主观听验",
+      "processing": {
+        "seed": 20261017,
+        "rate": 48000,
+        "duration": 0.36
+      }
+    },
+    {
+      "id": "MUS_END",
+      "stream": "res://assets/audio/audio2_20261017/mus_ending_e2_v001.ogg",
+      "channel": "music",
+      "loop": false,
+      "source": "DOCX/早期音乐素材/音频2/MUS_ENDING_E2_v001.wav",
+      "source_sha256": "0d0e940ecdc3a1e95cac140466c8382a5e58bd405ab4d76697b04eadd02dd87d",
+      "output_sha256": "a4981367f9ff94ace1446eec41bbdcaae3295372a165db418bf939dadd6047fc",
+      "license": "用户提供并指定用途；作者及发布授权信息沿原记录待核",
+      "status": "已按用户指定绑定；未主观听验/最终混音",
+      "processing": {
+        "codec": "vorbis-q5",
+        "trim": "none",
+        "channels": "preserve",
+        "gain_db": -1,
+        "tool": "tools/prepare_audio2_delivery.py"
+      },
+      "usage_contexts": [
+        "ending_E2",
+        "ending_E3",
+        "origin_planet_epilogue"
+      ],
+      "loop_points": "保持原非循环；未确认无缝接缝，不强行循环",
+      "history": [
+        {
+          "id": "MUS_END",
+          "stream": "res://assets/audio/feedback_20261017/mus_end_dev_v001.ogg",
+          "channel": "music",
+          "loop": false,
+          "source": "DOCX/早期音乐素材/音频/MUS_END_v001.wav",
+          "source_sha256": "93ceea7c551e16f630c34736199df0698859a286bddbc1f13958064c8b65e317",
+          "output_sha256": "d50ed0b6943fec7ace4140ec621876b366b08b28d09d09871be1ebecef28a29c",
+          "license": "用户提供；发布来源授权仍待核",
+          "status": "结局开发播放候选；未主观听验/最终混音",
+          "processing": {
+            "codec": "vorbis-q5",
+            "trim": "none",
+            "channels": "preserve",
+            "tool": "existing local ffmpeg 7.1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "MUS_HOSPITAL",
+      "stream": "res://assets/audio/audio2_20261017/mus_hospital_v001.ogg",
+      "channel": "music",
+      "loop": false,
+      "source": "DOCX/早期音乐素材/音频2/MUS_HOSPITAL_v001.wav",
+      "source_sha256": "65a18421b3fd426204d4f02c230837fab45a060b674d051377bfa6e19a2b25de",
+      "output_sha256": "079422016b535c4d44a4acecec0f224108b60112384aba8cde1b988e5cc9592e",
+      "license": "用户提供并指定用途；作者及发布授权信息沿原记录待核",
+      "status": "已按用户指定绑定；未主观听验/最终混音",
+      "processing": {
+        "codec": "vorbis-q5",
+        "trim": "none",
+        "channels": "preserve",
+        "gain_db": 0,
+        "tool": "tools/prepare_audio2_delivery.py"
+      },
+      "usage_contexts": [
+        "hospital_exploration",
+        "asylum_exploration",
+        "cortex_exploration",
+        "deep_exploration"
+      ],
+      "loop_points": "保持原非循环；未确认无缝接缝，不强行循环"
     }
   ],
   "release_approved": false,
   "listening_verified": false,
-  "contract": "开发链路候选；原件/处理副本分开，来源待核，不代表音频完成"
+  "contract": "开发链路候选；原件/处理副本分开，来源待核，不代表音频完成",
+  "last_delivery": {
+    "source": "音频2.zip",
+    "scope": "2026-10-17 user-selected music and confirmation only",
+    "confirm_replacement_applied": true
+  }
 }

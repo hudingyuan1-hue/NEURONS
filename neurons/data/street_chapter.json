@@ -1,0 +1,1792 @@
+{
+  "sources": [
+    "S1:P476–507/T15–22",
+    "S3:P1581–1948",
+    "S4:T19–21/T24R8/T27R6–9/P292–293",
+    "R1:P15–30"
+  ],
+  "status": "B6 playable implementation trial; full exclusive visual/narrative and all adversarial combinations pending",
+  "actors": [
+    {
+      "id": "father",
+      "identity_id": "CHR_OTHER_NPCS_FATHER",
+      "name": "父亲",
+      "room": "street_plaza",
+      "relation": "enemy",
+      "attack": "sweep",
+      "hp": 80,
+      "position_trial": [
+        3.3,
+        2.1
+      ],
+      "source": "S1:T16R2；S3:P1596–1601（Street行为）",
+      "behavior": "接近后挥瓶；与母亲实际相遇后互攻，不重播第一关崩塌。"
+    },
+    {
+      "id": "warder",
+      "identity_id": "CHR_OTHER_NPCS_N02",
+      "name": "普通护工",
+      "room": "street_plaza",
+      "relation": "enemy",
+      "attack": "belt",
+      "hp": 60,
+      "position_trial": [
+        6.699999999999999,
+        8.9
+      ],
+      "source": "S1:T16R3；S3:P1602–1606（Street行为）",
+      "behavior": "接近挥带；实际接触才结算，不穿过实体障碍。"
+    },
+    {
+      "id": "transporter_hospital",
+      "identity_id": "CHR_OTHER_NPCS_N03",
+      "name": "转运工",
+      "room": "street_plaza",
+      "relation": "enemy",
+      "attack": "sweep",
+      "hp": 60,
+      "position_trial": [
+        10.1,
+        2.1
+      ],
+      "source": "S1:T16R4；S3:P1607–1612（Street行为）",
+      "behavior": "拖袋接近、横向挥击；挥击后停顿，喷泉两侧均可绕开。"
+    },
+    {
+      "id": "register_nurse",
+      "identity_id": "CHR_OTHER_NPCS_N04",
+      "name": "登记护士",
+      "room": "street_plaza",
+      "relation": "neutral",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        3.3,
+        8.9
+      ],
+      "source": "S1:T16R5；S3:P1613–1618（Street行为）",
+      "behavior": "给空白表格连续盖章，展示与腕带不符的编号；不触发重新挂号。"
+    },
+    {
+      "id": "head_nurse",
+      "identity_id": "CHR_OTHER_NPCS_N05",
+      "name": "护士长",
+      "room": "street_plaza",
+      "relation": "enemy",
+      "attack": "",
+      "hp": 60,
+      "position_trial": [
+        6.699999999999999,
+        2.1
+      ],
+      "source": "S1:T16R6；S3:P1619–1625（Street行为）",
+      "behavior": "发现角色后敲板、指向角色；附近医护实际听见并看见指向才响应，不凭空召出护工。"
+    },
+    {
+      "id": "back",
+      "identity_id": "CHR_OTHER_NPCS_N06",
+      "name": "背身人",
+      "room": "street_plaza",
+      "relation": "neutral",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        10.1,
+        8.9
+      ],
+      "source": "S1:T16R7；S3:P1626–1633（Street行为）",
+      "behavior": "接近时转身展示另一组编号；不攻击、不占据入场落点。"
+    },
+    {
+      "id": "nurse",
+      "identity_id": "CHR_OTHER_NPCS_N07",
+      "name": "小护士",
+      "room": "street_side",
+      "relation": "friend",
+      "attack": "bandage",
+      "hp": 40,
+      "position_trial": [
+        3.3,
+        2.1
+      ],
+      "source": "S1:T17R2；S3:P1634–1641（Street行为）",
+      "behavior": "脱离追击后包扎；动作中断不提前治疗，往返不恢复治疗次数。"
+    },
+    {
+      "id": "corner",
+      "identity_id": "CHR_OTHER_NPCS_N08",
+      "name": "角落病友",
+      "room": "street_side",
+      "relation": "friend",
+      "attack": "point",
+      "hp": 40,
+      "position_trial": [
+        6.699999999999999,
+        6.9
+      ],
+      "source": "S1:T17R3；S3:P1642–1647（Street行为）",
+      "behavior": "指示原入口返回主路；不是本身人格，不指向不存在的后门。"
+    },
+    {
+      "id": "wheelchair",
+      "identity_id": "CHR_OTHER_NPCS_N09",
+      "name": "轮椅患者",
+      "room": "street_side",
+      "relation": "friend",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        10.1,
+        2.1
+      ],
+      "source": "S1:T17R4；S3:P1648–1655（Street行为）",
+      "behavior": "靠墙让路、指向原入口；不新增治疗或开门能力。"
+    },
+    {
+      "id": "transport_patient",
+      "identity_id": "CHR_OTHER_NPCS_N10",
+      "name": "被转运患者",
+      "room": "street_side",
+      "relation": "friend",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        3.3,
+        6.9
+      ],
+      "source": "S1:T17R5；S3:P1656–1662（Street行为）",
+      "behavior": "坐在墙边，抬手指向原入口；不当作尸体，不新增治疗能力。"
+    },
+    {
+      "id": "postop",
+      "identity_id": "CHR_OTHER_NPCS_N11",
+      "name": "术后病友",
+      "room": "street_side",
+      "relation": "friend",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        6.699999999999999,
+        2.1
+      ],
+      "source": "S1:T17R6；S3:P1663–1669（Street行为）",
+      "behavior": "见角色靠近便展示敷料与编号，遇追兵沿墙退避；不强制停步观看。"
+    },
+    {
+      "id": "cat",
+      "identity_id": "CHR_OTHER_NPCS_CAT",
+      "name": "黑猫",
+      "room": "street_narrow",
+      "relation": "enemy",
+      "attack": "pounce",
+      "hp": 30,
+      "position_trial": [
+        3.3,
+        2.1
+      ],
+      "source": "S1:T18R2；S3:P1687–1692（Street行为）",
+      "behavior": "伏低后扑击；落点与方向可辨，不承担钥匙阻挡事件。"
+    },
+    {
+      "id": "twitch",
+      "identity_id": "CHR_OTHER_NPCS_N13",
+      "name": "抽动人格",
+      "room": "street_narrow",
+      "relation": "enemy",
+      "attack": "charge",
+      "hp": 60,
+      "position_trial": [
+        6.699999999999999,
+        5.9
+      ],
+      "source": "S1:T18R3；S3:P1693–1698（Street行为）",
+      "behavior": "敲地两次后直线冲撞，撞墙停顿；不瞬间转向。"
+    },
+    {
+      "id": "assistant_asylum",
+      "identity_id": "CHR_OTHER_NPCS_N14",
+      "name": "检查助手",
+      "room": "street_narrow",
+      "relation": "enemy",
+      "attack": "restraint",
+      "hp": 60,
+      "position_trial": [
+        10.1,
+        2.1
+      ],
+      "source": "S1:T18R4；S3:P1699–1704（Street行为）",
+      "behavior": "在较宽位置尝试束缚；抓空后收回束带，不持续封住凹槽出口。"
+    },
+    {
+      "id": "isolation",
+      "identity_id": "CHR_OTHER_NPCS_N15",
+      "name": "隔离护工",
+      "room": "street_narrow",
+      "relation": "enemy",
+      "attack": "isolate",
+      "hp": 60,
+      "position_trial": [
+        3.3,
+        5.9
+      ],
+      "source": "S1:T18R5；S3:P1705–1710（Street行为）",
+      "behavior": "近身抱抓；不生成隔离房、不传送角色，也不堵死避让凹槽。"
+    },
+    {
+      "id": "dislocated",
+      "identity_id": "CHR_OTHER_NPCS_N16",
+      "name": "肢体错位者",
+      "room": "street_narrow",
+      "relation": "enemy",
+      "attack": "grab",
+      "hp": 60,
+      "position_trial": [
+        6.699999999999999,
+        2.1
+      ],
+      "source": "S1:T18R6；S3:P1711–1717（Street行为）",
+      "behavior": "交替伸臂抓取；伸展方向可见，不穿墙、不隔着柜体抓人。"
+    },
+    {
+      "id": "reverse",
+      "identity_id": "CHR_OTHER_NPCS_N17",
+      "name": "反身人格",
+      "room": "street_twisted",
+      "relation": "enemy",
+      "attack": "charge",
+      "hp": 60,
+      "position_trial": [
+        3.3,
+        2.1
+      ],
+      "source": "S1:T19R2；S3:P1718–1722（Street行为）",
+      "behavior": "背对接近、转腰蓄势、反向扑击；可绕行，不改变真实道路。"
+    },
+    {
+      "id": "archivist",
+      "identity_id": "CHR_OTHER_NPCS_N18",
+      "name": "档案员",
+      "room": "street_twisted",
+      "relation": "enemy",
+      "attack": "grab",
+      "hp": 60,
+      "position_trial": [
+        6.699999999999999,
+        9.9
+      ],
+      "source": "S1:T19R3；S3:P1723–1727（Street行为）",
+      "behavior": "接近扑抓；不再收走通关物品，不删除已获信息。"
+    },
+    {
+      "id": "double_face",
+      "identity_id": "CHR_OTHER_NPCS_N19",
+      "name": "双面人格",
+      "room": "street_twisted",
+      "relation": "neutral",
+      "attack": "watch",
+      "hp": 40,
+      "position_trial": [
+        10.1,
+        2.1
+      ],
+      "source": "S1:T19R4；S3:P1728–1734（Street行为）",
+      "behavior": "亲见有效干预后转向镜头；追逐中不强制弹对白，不透视触发。"
+    },
+    {
+      "id": "triage",
+      "identity_id": "CHR_OTHER_NPCS_N20",
+      "name": "导诊护士",
+      "room": "street_twisted",
+      "relation": "neutral",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        3.3,
+        9.9
+      ],
+      "source": "S1:T19R5；S3:P1735–1741（Street行为）",
+      "behavior": "反复指向侧路，夹内保留转运批次；指向不改变实际通路，不强制角色跟随。"
+    },
+    {
+      "id": "pharmacist",
+      "identity_id": "CHR_OTHER_NPCS_N21",
+      "name": "药师",
+      "room": "street_twisted",
+      "relation": "enemy",
+      "attack": "splash",
+      "hp": 60,
+      "position_trial": [
+        6.699999999999999,
+        2.1
+      ],
+      "source": "S1:T19R6；S3:P1742–1747（Street行为）",
+      "behavior": "近距离泼洒杯中液体；先抬手再泼洒，不能直接覆盖整条道路。"
+    },
+    {
+      "id": "ward_nurse",
+      "identity_id": "CHR_OTHER_NPCS_N22",
+      "name": "给药护士",
+      "room": "street_twisted",
+      "relation": "enemy",
+      "attack": "drug",
+      "hp": 60,
+      "position_trial": [
+        10.1,
+        9.9
+      ],
+      "source": "S1:P119,T10R3,T19R7；S3:P1748–1755（Street行为）",
+      "behavior": "伸手控制角色头部；实际接触才进入后续效果，不靠接近直接触发强制服药。"
+    },
+    {
+      "id": "transporter_asylum",
+      "identity_id": "CHR_OTHER_NPCS_N23",
+      "name": "转运工",
+      "room": "street_twisted",
+      "relation": "enemy",
+      "attack": "lateral_bed",
+      "hp": 60,
+      "position_trial": [
+        16.6,
+        4.0
+      ],
+      "source": "S1:T19R8；S3:P1756–1763（Street行为）",
+      "behavior": "推床横向挤压；车体只能占据部分道路，不能封满通路。与第二关转运工分别记录。"
+    },
+    {
+      "id": "speaker",
+      "identity_id": "CHR_OTHER_NPCS_N24",
+      "name": "发言病友",
+      "room": "street_twisted",
+      "relation": "friend",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        16.6,
+        5.4
+      ],
+      "source": "S1:T19R9；S3:P1764–1772（Street行为）",
+      "behavior": "撕下纸条；看见追兵时指示其方向。保留原陈述文字，不新增强制证词播放。"
+    },
+    {
+      "id": "supervisor",
+      "identity_id": "CHR_OTHER_NPCS_N25",
+      "name": "作业督导",
+      "room": "street_twisted",
+      "relation": "enemy",
+      "attack": "grab",
+      "hp": 60,
+      "position_trial": [
+        16.6,
+        6.8
+      ],
+      "source": "S1:T19R10；S3:P1773–1788（Street行为）",
+      "behavior": "张开夹具后近身夹击；夹空后需重新张开，不能持续接触扣血。"
+    },
+    {
+      "id": "dog",
+      "identity_id": "CHR_OTHER_NPCS_DOG",
+      "name": "大黄",
+      "room": "street_maintenance",
+      "relation": "friend",
+      "attack": "guard",
+      "hp": 60,
+      "position_trial": [
+        3.3,
+        2.1
+      ],
+      "source": "S1:T20R2；S3:P1789–1794（Street行为）",
+      "behavior": "靠近护卫；父亲实际命中才触发异化体碎裂，不因出场直接退场。"
+    },
+    {
+      "id": "faceless",
+      "identity_id": "CHR_OTHER_NPCS_N27",
+      "name": "空面人格",
+      "room": "street_maintenance",
+      "relation": "friend",
+      "attack": "cart",
+      "hp": 40,
+      "position_trial": [
+        6.699999999999999,
+        5.9
+      ],
+      "source": "S1:T20R3；S3:P1795–1800（Street行为）",
+      "behavior": "推动检修杂物扩大空间；旁侧原本可通行，不成为退出前置。"
+    },
+    {
+      "id": "treatment_pharmacist",
+      "identity_id": "CHR_OTHER_NPCS_N28",
+      "name": "治疗药师",
+      "room": "street_maintenance",
+      "relation": "neutral",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        10.1,
+        2.1
+      ],
+      "source": "S1:T20R4；S3:P1801–1805（Street行为）",
+      "behavior": "反复核对编号、整理空盒；不给补给，不阻止折返。"
+    },
+    {
+      "id": "cleaner",
+      "identity_id": "CHR_OTHER_NPCS_N29",
+      "name": "保洁员",
+      "room": "street_maintenance",
+      "relation": "neutral",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        3.3,
+        5.9
+      ],
+      "source": "S1:T20R5；S3:P1806–1812（Street行为）",
+      "behavior": "擦除地面痕迹、收走散落标签；不删除已获得信息，不清除实际伤害结果。"
+    },
+    {
+      "id": "labor",
+      "identity_id": "CHR_OTHER_NPCS_N30",
+      "name": "劳动病友",
+      "room": "street_maintenance",
+      "relation": "friend",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        6.699999999999999,
+        2.1
+      ],
+      "source": "S1:T20R6；S3:P1813–1819（Street行为）",
+      "behavior": "抛出随身空盒制造侧向声响；仅影响听见声音且已失去目标的追兵，不无限生成纸盒。"
+    },
+    {
+      "id": "stitched",
+      "identity_id": "CHR_OTHER_NPCS_N31",
+      "name": "缝口人",
+      "room": "street_maintenance",
+      "relation": "enemy",
+      "attack": "grab",
+      "hp": 60,
+      "position_trial": [
+        10.1,
+        5.9
+      ],
+      "source": "S1:T20R7；S3:P1820–1825（Street行为）",
+      "behavior": "先撕扯随身纸页，再伸手抓握角色；撕毁纸张不影响既有线索。"
+    },
+    {
+      "id": "mother",
+      "identity_id": "CHR_OTHER_NPCS_MOTHER",
+      "name": "母亲",
+      "room": "street_node",
+      "relation": "enemy",
+      "attack": "grab",
+      "hp": 80,
+      "position_trial": [
+        3.3,
+        2.1
+      ],
+      "source": "S1:T21R2；S3:P1826–1830（Street行为）",
+      "behavior": "先收臂再合拢夹击；与父亲相遇互攻，可波及角色。"
+    },
+    {
+      "id": "doctor",
+      "identity_id": "CHR_OTHER_NPCS_N33",
+      "name": "检查医生",
+      "room": "street_node",
+      "relation": "enemy",
+      "attack": "sweep",
+      "hp": 60,
+      "position_trial": [
+        6.699999999999999,
+        9.9
+      ],
+      "source": "S1:T21R3；S3:P1831–1835（Street行为）",
+      "behavior": "挥刃攻击，需实际命中；沿核心外围保留避让位置。"
+    },
+    {
+      "id": "assistant",
+      "identity_id": "CHR_OTHER_NPCS_N34",
+      "name": "检查助手",
+      "room": "street_node",
+      "relation": "enemy",
+      "attack": "charge",
+      "hp": 60,
+      "position_trial": [
+        10.1,
+        2.1
+      ],
+      "source": "S1:T21R4；S3:P1836–1841（Street行为）",
+      "behavior": "停步蓄力后推床直线冲撞；撞墙停顿，床不替代中央塌陷核心。"
+    },
+    {
+      "id": "double_head",
+      "identity_id": "CHR_OTHER_NPCS_N35",
+      "name": "双头人格",
+      "room": "street_node",
+      "relation": "neutral",
+      "attack": "sweep",
+      "hp": 60,
+      "position_trial": [
+        3.3,
+        9.9
+      ],
+      "source": "S1:T21R5；S3:P1842–1847（Street行为）",
+      "behavior": "自伤与路过不触发反击；角色攻击实际命中后才共同反击。"
+    },
+    {
+      "id": "psychiatrist",
+      "identity_id": "CHR_OTHER_NPCS_N36",
+      "name": "精神科医生",
+      "room": "street_node",
+      "relation": "enemy",
+      "attack": "drag",
+      "hp": 60,
+      "position_trial": [
+        6.699999999999999,
+        2.1
+      ],
+      "source": "S1:T21R6；S3:P1848–1852（Street行为）",
+      "behavior": "接近后伸手抓握、拖拽；不能隔着核心或栏杆命中。"
+    },
+    {
+      "id": "guard_asylum",
+      "identity_id": "CHR_OTHER_NPCS_N37",
+      "name": "保安",
+      "room": "street_node",
+      "relation": "enemy",
+      "attack": "short_charge",
+      "hp": 60,
+      "position_trial": [
+        10.1,
+        9.9
+      ],
+      "source": "S1:T21R7；S3:P1853–1857（Street行为）",
+      "behavior": "短距离直线冲撞；起步后不瞬间转向，外围步道保留横向避让位置。"
+    },
+    {
+      "id": "director",
+      "identity_id": "CHR_OTHER_NPCS_N38",
+      "name": "治疗主任",
+      "room": "street_node",
+      "relation": "enemy",
+      "attack": "restraint",
+      "hp": 60,
+      "position_trial": [
+        13.6,
+        4.0
+      ],
+      "source": "S1:T21R8；S3:P1858–1863（Street行为）",
+      "behavior": "展开椅架后合拢夹击；实际接触才成立，不直接切入拘禁画面。"
+    },
+    {
+      "id": "blind",
+      "identity_id": "CHR_OTHER_NPCS_N39",
+      "name": "蒙眼人",
+      "room": "street_node",
+      "relation": "neutral",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        13.6,
+        5.4
+      ],
+      "source": "S1:T21R9；S3:P1864–1879（Street行为）",
+      "behavior": "展开布条遮挡局部视线；不让整屏变黑，不遮住全部绕行方向。"
+    },
+    {
+      "id": "skinface",
+      "identity_id": "CHR_OTHER_NPCS_N40",
+      "name": "贴面人格",
+      "room": "street_end",
+      "relation": "enemy",
+      "attack": "sweep",
+      "hp": 60,
+      "position_trial": [
+        3.3,
+        2.1
+      ],
+      "source": "S1:T22R2；S3:P1880–1884（Street行为）",
+      "behavior": "接近横扫、收招；两侧可绕，不要求击败。"
+    },
+    {
+      "id": "self",
+      "identity_id": "CHR_OTHER_NPCS_N41",
+      "name": "本身人格",
+      "room": "street_end",
+      "relation": "enemy",
+      "attack": "grab",
+      "hp": 80,
+      "position_trial": [
+        6.699999999999999,
+        8.9
+      ],
+      "source": "S1:T22R3；S3:P1885–1891（Street行为）",
+      "behavior": "沿用第五关第三层察觉与追击；同一实体，不另增病人分身或强制决斗。",
+      "display_name": "病服人影"
+    },
+    {
+      "id": "guard_hospital",
+      "identity_id": "CHR_OTHER_NPCS_N42",
+      "name": "保安",
+      "room": "street_end",
+      "relation": "enemy",
+      "attack": "push",
+      "hp": 60,
+      "position_trial": [
+        10.1,
+        2.1
+      ],
+      "source": "S1:T22R4；S3:P1892–1898（Street行为）",
+      "behavior": "靠近后抓握、推离出口；不持通关钥匙，不因其存活关闭出口。"
+    },
+    {
+      "id": "archivist_asylum",
+      "identity_id": "CHR_OTHER_NPCS_N43",
+      "name": "档案员",
+      "room": "street_end",
+      "relation": "enemy",
+      "attack": "sweep",
+      "hp": 60,
+      "position_trial": [
+        3.3,
+        8.9
+      ],
+      "source": "S1:T22R5；S3:P1899–1905（Street行为）",
+      "behavior": "靠近挥击，收集落地编号纸；不删除已获得线索、不回收钥匙。"
+    },
+    {
+      "id": "informant",
+      "identity_id": "CHR_OTHER_NPCS_N44",
+      "name": "告密病友",
+      "room": "street_end",
+      "relation": "neutral",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        6.699999999999999,
+        2.1
+      ],
+      "source": "S1:T22R6；S3:P1906–1913（Street行为）",
+      "behavior": "目击角色后向附近敌对医护指示位置；无人接收则不生效，不全图通报。"
+    },
+    {
+      "id": "mimic",
+      "identity_id": "CHR_OTHER_NPCS_N45",
+      "name": "复述者",
+      "room": "street_end",
+      "relation": "neutral",
+      "attack": "",
+      "hp": 40,
+      "position_trial": [
+        10.1,
+        8.9
+      ],
+      "source": "S1:T22R7；S3:P1914–1920（Street行为）",
+      "behavior": "模仿亲眼看见的角色动作；模仿不产生攻击、技能、奖励或额外伤害。"
+    }
+  ],
+  "attacks": {
+    "sweep": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 15,
+      "sp": 0,
+      "reach": 1.2,
+      "width": 0.55,
+      "height": "chest",
+      "travel": 0
+    },
+    "belt": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 15,
+      "sp": 5,
+      "reach": 1.6,
+      "width": 0.6,
+      "height": "waist",
+      "travel": 0
+    },
+    "pounce": {
+      "windup": 0.6,
+      "active": 0.4,
+      "recover": 0.8,
+      "cooldown": 1.5,
+      "hp": 10,
+      "sp": 5,
+      "reach": 0.6,
+      "width": 0.4,
+      "height": "body",
+      "travel": 1.8
+    },
+    "charge": {
+      "windup": 1.2,
+      "active": 0.6,
+      "recover": 0.8,
+      "cooldown": 2,
+      "hp": 20,
+      "sp": 0,
+      "reach": 0.7,
+      "width": 0.5,
+      "height": "body",
+      "travel": 3
+    },
+    "grab": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 10,
+      "sp": 0,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "arm",
+      "travel": 0
+    },
+    "restraint": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 10,
+      "sp": 10,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "body",
+      "travel": 0
+    },
+    "isolate": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 0,
+      "sp": 15,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "body",
+      "travel": 0
+    },
+    "drag": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 10,
+      "sp": 0,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "arm",
+      "travel": 0
+    },
+    "push": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 10,
+      "sp": 10,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "arm",
+      "travel": 0
+    },
+    "short_charge": {
+      "windup": 1.2,
+      "active": 0.6,
+      "recover": 0.8,
+      "cooldown": 2,
+      "hp": 20,
+      "sp": 0,
+      "reach": 0.7,
+      "width": 0.5,
+      "height": "body",
+      "travel": 1.0
+    },
+    "splash": {
+      "windup": 1.0,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 3.0,
+      "hp": 0,
+      "sp": 10,
+      "reach": 2.0,
+      "width": 0.55,
+      "height": "liquid",
+      "travel": 0
+    },
+    "drug": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 0,
+      "sp": 0,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "head",
+      "travel": 0
+    },
+    "lateral_bed": {
+      "windup": 1.2,
+      "active": 0.6,
+      "recover": 0.8,
+      "cooldown": 2,
+      "hp": 20,
+      "sp": 0,
+      "reach": 2.3,
+      "width": 0.9,
+      "height": "body",
+      "travel": 1.0
+    }
+  },
+  "test_parameters": {
+    "note": "Only implementation geometry/perception/speeds below are tunable trials, not newly confirmed creative rules. Attack windows/damage above are S4 values.",
+    "vision_m": 6.0,
+    "hero_vision_m": 5.0,
+    "actor_speed_m_s": 0.85,
+    "hero_speed_m_s": 1.15,
+    "route_recheck_s": 0.3,
+    "dodge_m": 1.25,
+    "spawn_spacing_s": 10.0,
+    "bed_turn_rad_s": 1.8,
+    "bed_push_m": 0.8,
+    "face_turn_s": 0.45,
+    "visible_reaction_wait_s": 1.5,
+    "read_contact_s": 1.2,
+    "rack_settle_s": 0.65,
+    "hearing_m": 6.0,
+    "box_prepare_s": 0.55,
+    "box_flight_s": 0.7,
+    "box_fall_m_s": 3.0,
+    "lateral_coast_deceleration_m_s2": 6.7,
+    "paper_tear_s": 1.2,
+    "empty_box_cycle_s": 3.0,
+    "cleaner_pickup_s": 0.6,
+    "cleaner_wipe_s": 1.5,
+    "cleaner_bag_s": 0.55,
+    "debris_push_m": 0.5,
+    "debris_push_m_s": 0.3
+  },
+  "observations": [],
+  "dialogue": {
+    "nurse": {
+      "speaker": "小护士",
+      "text": "䶺䴔䶳䆐䴒䶵㗊𩇯䵙！",
+      "source": "S3:P1640"
+    },
+    "corner": {
+      "speaker": "角落病友",
+      "text": "㱌䶹䶱䴕䲈䶼䴡䵿䶳䴴䵳！",
+      "source": "S3:P1646"
+    },
+    "double_face": {
+      "speaker": "双面人格",
+      "text": "䶹䶱䴕䲈䶼䴡䵿䶳䴴䵳䶸䴵！",
+      "source": "S3:P1733"
+    },
+    "dog": {
+      "speaker": "大黄",
+      "text": "𩇬䵉䶴䂙䨻䵊䴓㱎㔿𩉻！",
+      "source": "S3:P1794"
+    },
+    "faceless": {
+      "speaker": "空面人格",
+      "text": "𩇬䵉䶴䂙䨻䵊䴓㱎㔿𩉻䶺䴔䶳！",
+      "source": "S3:P1800"
+    }
+  },
+  "rooms": {
+    "street_plaza": {
+      "trial_size_m": [
+        16,
+        11
+      ],
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "中央雕像喷泉",
+          "rect": [
+            6.6,
+            4.15,
+            2.8,
+            2.7
+          ],
+          "height": 1.0,
+          "solid": true
+        },
+        {
+          "id": "street_prop_1",
+          "name": "长椅",
+          "rect": [
+            2.2,
+            8.6,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_2",
+          "name": "壁龛雕像",
+          "rect": [
+            7.2,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_3",
+          "name": "路灯",
+          "rect": [
+            9.65,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_4",
+          "name": "枯树",
+          "rect": [
+            12.100000000000001,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_5",
+          "name": "排水口",
+          "rect": [
+            2.3,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_6",
+          "name": "墙面标识",
+          "rect": [
+            4.75,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_7",
+          "name": "异常组织",
+          "rect": [
+            7.2,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        }
+      ]
+    },
+    "street_side": {
+      "trial_size_m": [
+        10,
+        9
+      ],
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "破损长椅",
+          "rect": [
+            2.3,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 1.0,
+          "solid": true
+        },
+        {
+          "id": "street_prop_1",
+          "name": "壁龛小雕像",
+          "rect": [
+            4.75,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_2",
+          "name": "封闭维护柜",
+          "rect": [
+            7.2,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_3",
+          "name": "旧皮箱",
+          "rect": [
+            9.65,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_4",
+          "name": "木箱",
+          "rect": [
+            12.100000000000001,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_5",
+          "name": "灯具",
+          "rect": [
+            2.3,
+            7.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_6",
+          "name": "管道",
+          "rect": [
+            4.75,
+            7.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_7",
+          "name": "排水口",
+          "rect": [
+            7.2,
+            7.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_8",
+          "name": "异常组织",
+          "rect": [
+            9.65,
+            7.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        }
+      ]
+    },
+    "street_narrow": {
+      "trial_size_m": [
+        18,
+        8
+      ],
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "壁灯",
+          "rect": [
+            2.3,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_1",
+          "name": "长椅",
+          "rect": [
+            4.75,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_2",
+          "name": "管线",
+          "rect": [
+            7.2,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "recess_top_left",
+          "name": "凹槽间墙",
+          "rect": [
+            4.4,
+            0.1,
+            2.6,
+            1.7
+          ],
+          "height": 2,
+          "solid": true
+        },
+        {
+          "id": "recess_top_right",
+          "name": "凹槽间墙",
+          "rect": [
+            10.6,
+            0.1,
+            2.6,
+            1.7
+          ],
+          "height": 2,
+          "solid": true
+        },
+        {
+          "id": "recess_bottom",
+          "name": "侧墙",
+          "rect": [
+            6,
+            6.3,
+            6,
+            1.6
+          ],
+          "height": 2,
+          "solid": true
+        },
+        {
+          "id": "street_extra_6",
+          "name": "维护柜",
+          "rect": [
+            2,
+            1,
+            1,
+            0.55
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_extra_7",
+          "name": "排水口",
+          "rect": [
+            7.8,
+            6.6,
+            0.5,
+            0.4
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_extra_8",
+          "name": "积水",
+          "rect": [
+            8.2,
+            5.6,
+            2,
+            0.4
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_extra_9",
+          "name": "杂物箱",
+          "rect": [
+            15.5,
+            6.4,
+            1,
+            0.55
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_extra_10",
+          "name": "墙面异常组织",
+          "rect": [
+            13.6,
+            0.4,
+            0.5,
+            0.5
+          ],
+          "height": 0.05,
+          "solid": false
+        }
+      ]
+    },
+    "street_twisted": {
+      "trial_size_m": [
+        20,
+        12
+      ],
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "杂货铺",
+          "rect": [
+            2.3,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 1.0,
+          "solid": true
+        },
+        {
+          "id": "street_prop_1",
+          "name": "报刊铺立面",
+          "rect": [
+            4.75,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_2",
+          "name": "长椅",
+          "rect": [
+            16.5,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_3",
+          "name": "箱体",
+          "rect": [
+            9.65,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_4",
+          "name": "枯树",
+          "rect": [
+            12.100000000000001,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_5",
+          "name": "路灯",
+          "rect": [
+            2.3,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_6",
+          "name": "积水",
+          "rect": [
+            4.75,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_7",
+          "name": "排水口",
+          "rect": [
+            7.2,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_8",
+          "name": "栏杆",
+          "rect": [
+            9.65,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_9",
+          "name": "扭曲地面",
+          "rect": [
+            12.100000000000001,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_10",
+          "name": "局部塌陷",
+          "rect": [
+            2.3,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        }
+      ]
+    },
+    "street_maintenance": {
+      "trial_size_m": [
+        12,
+        8
+      ],
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "沿墙管架",
+          "rect": [
+            6.0,
+            2.2,
+            1.0,
+            0.7
+          ],
+          "height": 1.0,
+          "solid": true
+        },
+        {
+          "id": "street_prop_1",
+          "name": "维护柜",
+          "rect": [
+            4.75,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_2",
+          "name": "照明",
+          "rect": [
+            7.2,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_3",
+          "name": "集中成矮堆的检修杂物",
+          "rect": [
+            9.65,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_cleaner_cart",
+          "name": "侧停清洁车",
+          "rect": [
+            1.6,
+            6.1,
+            0.65,
+            0.65
+          ],
+          "height": 0.65,
+          "solid": true,
+          "kind": "cleaner_cart"
+        }
+      ]
+    },
+    "street_node": {
+      "trial_size_m": [
+        17,
+        12
+      ],
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "中央异化塌陷核心",
+          "rect": [
+            7.1,
+            4.65,
+            2.8,
+            2.7
+          ],
+          "height": 1.0,
+          "solid": true
+        },
+        {
+          "id": "street_prop_1",
+          "name": "外围步道",
+          "rect": [
+            4.75,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_2",
+          "name": "异常组织",
+          "rect": [
+            7.2,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_3",
+          "name": "店铺立面",
+          "rect": [
+            9.65,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_4",
+          "name": "长椅",
+          "rect": [
+            12.100000000000001,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_5",
+          "name": "灯具",
+          "rect": [
+            2.3,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_6",
+          "name": "栏杆",
+          "rect": [
+            4.75,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_7",
+          "name": "箱体",
+          "rect": [
+            7.2,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_8",
+          "name": "设备间",
+          "rect": [
+            9.65,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_9",
+          "name": "封闭维修门",
+          "rect": [
+            12.100000000000001,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        }
+      ]
+    },
+    "street_end": {
+      "trial_size_m": [
+        16,
+        11
+      ],
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "检查岗亭",
+          "rect": [
+            2.3,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 1.0,
+          "solid": true
+        },
+        {
+          "id": "street_prop_1",
+          "name": "破损道闸",
+          "rect": [
+            4.75,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_2",
+          "name": "栏杆",
+          "rect": [
+            7.2,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_3",
+          "name": "长椅",
+          "rect": [
+            9.65,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_4",
+          "name": "灯具",
+          "rect": [
+            12.100000000000001,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_5",
+          "name": "积水",
+          "rect": [
+            2.3,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_6",
+          "name": "排水口",
+          "rect": [
+            4.75,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.05,
+          "solid": false
+        },
+        {
+          "id": "street_prop_7",
+          "name": "设备间",
+          "rect": [
+            7.2,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_8",
+          "name": "收束门廊",
+          "rect": [
+            13.5,
+            4.3,
+            1.5,
+            2.4
+          ],
+          "height": 0.03,
+          "solid": false,
+          "kind": "floor"
+        },
+        {
+          "id": "street_prop_9",
+          "name": "出口平台",
+          "rect": [
+            12.100000000000001,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "height": 0.7,
+          "solid": true
+        },
+        {
+          "id": "street_prop_10",
+          "name": "终点门框",
+          "rect": [
+            15.25,
+            4.75,
+            0.3,
+            1.5
+          ],
+          "height": 2.35,
+          "solid": false,
+          "kind": "gate"
+        }
+      ]
+    }
+  },
+  "exit_room": "street_end",
+  "exit_id": "ending_gate",
+  "good_ids": [
+    "dog",
+    "corner",
+    "wheelchair",
+    "transport_patient",
+    "postop",
+    "speaker",
+    "labor"
+  ],
+  "materials": {
+    "source": "S3:P1764–1771/P1801–1812/P1820–1824; contact timing and placement are tunable trials, not new gameplay rewards",
+    "cleaner": {
+      "cart_id": "street_cleaner_cart",
+      "park": [
+        2.6,
+        6.4
+      ]
+    },
+    "surfaces": [
+      {
+        "id": "street_maintenance_label",
+        "kind": "label",
+        "room": "street_maintenance",
+        "pos": [
+          3.3,
+          5.9
+        ],
+        "original_id": "",
+        "number_glyph": null,
+        "source": "S3:P1807; generic fallen label, not a copied earlier original"
+      },
+      {
+        "id": "street_maintenance_scuff",
+        "kind": "scuff",
+        "room": "street_maintenance",
+        "pos": [
+          3.9,
+          5.5
+        ],
+        "original_id": "",
+        "source": "S3:P1807; local ground scuff, not invented prior injury"
+      }
+    ],
+    "faceless": {
+      "prop": "street_prop_3",
+      "source": "S3:P1795–1800; existing maintenance debris only"
+    }
+  }
+}

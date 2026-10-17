@@ -1,0 +1,1 @@
+Stopped after discovering that an unknown entry portal used the east door fallback. This run demonstrates death/return activity only; not final natural-flow acceptance. Original console retained.

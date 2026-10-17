@@ -1,0 +1,472 @@
+{
+  "sources": [
+    "S1:P327–473",
+    "S3:P1285–1588",
+    "S4:P112–118/P143–149/P213–219/P242–247/T18/T20/T24R6–7/T27R5",
+    "S4:T13R6"
+  ],
+  "status": "B5 implementation trial; formal assets and full exclusive event combinations pending",
+  "actors": [
+    {
+      "id": "dog",
+      "name": "大黄",
+      "room": "atrium",
+      "relation": "friend",
+      "attack": "guard",
+      "hp": 60,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_DOG"
+    },
+    {
+      "id": "father",
+      "name": "父亲",
+      "room": "atrium",
+      "relation": "enemy",
+      "attack": "sweep",
+      "hp": 80,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_FATHER"
+    },
+    {
+      "id": "nurse",
+      "name": "小护士",
+      "room": "memory",
+      "relation": "friend",
+      "attack": "bandage",
+      "hp": 40,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N07"
+    },
+    {
+      "id": "archivist",
+      "name": "档案员",
+      "room": "memory",
+      "relation": "enemy",
+      "attack": "grab",
+      "hp": 60,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N18"
+    },
+    {
+      "id": "corner",
+      "name": "角落病友",
+      "room": "visual",
+      "relation": "friend",
+      "attack": "point",
+      "hp": 40,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N08"
+    },
+    {
+      "id": "warder",
+      "name": "普通护工",
+      "room": "visual",
+      "relation": "enemy",
+      "attack": "belt",
+      "hp": 60,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N02"
+    },
+    {
+      "id": "mother",
+      "name": "母亲",
+      "room": "decision",
+      "relation": "enemy",
+      "attack": "grab",
+      "hp": 80,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_MOTHER"
+    },
+    {
+      "id": "cat",
+      "name": "黑猫",
+      "room": "decision",
+      "relation": "enemy",
+      "attack": "pounce",
+      "hp": 30,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_CAT"
+    },
+    {
+      "id": "doctor",
+      "name": "检查医生",
+      "room": "body",
+      "relation": "enemy",
+      "attack": "sweep",
+      "hp": 60,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N33"
+    },
+    {
+      "id": "assistant",
+      "name": "检查助手",
+      "room": "body",
+      "relation": "enemy",
+      "attack": "charge",
+      "hp": 60,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N34"
+    },
+    {
+      "id": "double_head",
+      "name": "双头人格",
+      "room": "bridge",
+      "relation": "neutral",
+      "attack": "sweep",
+      "hp": 60,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N35"
+    },
+    {
+      "id": "twitch",
+      "name": "抽动人格",
+      "room": "rhythm",
+      "relation": "enemy",
+      "attack": "charge",
+      "hp": 60,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N13"
+    },
+    {
+      "id": "faceless",
+      "name": "空面人格",
+      "room": "index",
+      "relation": "friend",
+      "attack": "cart",
+      "hp": 40,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N27"
+    },
+    {
+      "id": "reverse",
+      "name": "反身人格",
+      "room": "switch",
+      "relation": "enemy",
+      "attack": "charge",
+      "hp": 60,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N17"
+    },
+    {
+      "id": "double_face",
+      "name": "双面人格",
+      "room": "identity",
+      "relation": "neutral",
+      "attack": "watch",
+      "hp": 40,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N19"
+    },
+    {
+      "id": "skinface",
+      "name": "贴面人格",
+      "room": "verify",
+      "relation": "enemy",
+      "attack": "sweep",
+      "hp": 60,
+      "probability": 0.55,
+      "identity_id": "CHR_OTHER_NPCS_N40"
+    },
+    {
+      "id": "self",
+      "name": "本身人格",
+      "room": "thalamus",
+      "relation": "enemy",
+      "attack": "grab",
+      "hp": 80,
+      "probability": 1,
+      "identity_id": "CHR_OTHER_NPCS_N41",
+      "display_name": "病服人影"
+    }
+  ],
+  "attacks": {
+    "sweep": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 15,
+      "sp": 0,
+      "reach": 1.2,
+      "width": 0.55,
+      "height": "chest",
+      "travel": 0
+    },
+    "belt": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 15,
+      "sp": 5,
+      "reach": 1.6,
+      "width": 0.6,
+      "height": "waist",
+      "travel": 0
+    },
+    "pounce": {
+      "windup": 0.6,
+      "active": 0.4,
+      "recover": 0.8,
+      "cooldown": 1.5,
+      "hp": 10,
+      "sp": 5,
+      "reach": 0.6,
+      "width": 0.4,
+      "height": "body",
+      "travel": 1.8
+    },
+    "charge": {
+      "windup": 1.2,
+      "active": 0.6,
+      "recover": 0.8,
+      "cooldown": 2,
+      "hp": 20,
+      "sp": 0,
+      "reach": 0.7,
+      "width": 0.5,
+      "height": "body",
+      "travel": 3
+    },
+    "grab": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 10,
+      "sp": 0,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "arm",
+      "travel": 0
+    },
+    "restraint": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 10,
+      "sp": 10,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "body",
+      "travel": 0
+    },
+    "isolate": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 0,
+      "sp": 15,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "body",
+      "travel": 0
+    },
+    "drag": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 10,
+      "sp": 0,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "arm",
+      "travel": 0
+    },
+    "push": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 10,
+      "sp": 10,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "arm",
+      "travel": 0
+    },
+    "short_charge": {
+      "windup": 1.2,
+      "active": 0.6,
+      "recover": 0.8,
+      "cooldown": 2,
+      "hp": 20,
+      "sp": 0,
+      "reach": 0.7,
+      "width": 0.5,
+      "height": "body",
+      "travel": 1.0
+    },
+    "splash": {
+      "windup": 1.0,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 3.0,
+      "hp": 0,
+      "sp": 10,
+      "reach": 2.0,
+      "width": 0.55,
+      "height": "liquid",
+      "travel": 0
+    },
+    "drug": {
+      "windup": 0.8,
+      "active": 0.3,
+      "recover": 0.6,
+      "cooldown": 1.5,
+      "hp": 0,
+      "sp": 0,
+      "reach": 1.2,
+      "width": 0.4,
+      "height": "head",
+      "travel": 0
+    }
+  },
+  "test_parameters": {
+    "note": "Only implementation geometry/perception/speeds below are tunable trials, not newly confirmed creative rules. Attack windows/damage above are S4 values.",
+    "vision_m": 6.0,
+    "hero_vision_m": 5.0,
+    "actor_speed_m_s": 0.85,
+    "hero_speed_m_s": 1.15,
+    "route_recheck_s": 0.3,
+    "dodge_m": 1.25,
+    "spawn_spacing_s": 10.0,
+    "bed_turn_rad_s": 1.8,
+    "bed_push_m": 0.8,
+    "face_turn_s": 0.45,
+    "visible_reaction_wait_s": 1.5,
+    "read_contact_s": 1.2,
+    "rack_settle_s": 0.65,
+    "hearing_m": 6.0
+  },
+  "pulse": {
+    "warning": 1.5,
+    "active": 0.3,
+    "interval": 4.2,
+    "hp": 20,
+    "push_m": 1.0
+  },
+  "cold_speed": 0.8,
+  "dialogue": {
+    "dog": {
+      "speaker": "大黄",
+      "text": "𩇬䵉䶴䂙䨻䵊䴓㱎㔿𩉻！",
+      "source": "S3:P1302"
+    },
+    "nurse": {
+      "speaker": "小护士",
+      "text": "䶺䴔䶳䆐䴒䶵㗊𩇯䵙䲈䶼䴡。",
+      "source": "S3:P1325"
+    },
+    "corner": {
+      "speaker": "角落病友",
+      "text": "㱌䶹䶱䴕䲈䶼䴡䵿䶳䴴䵳！",
+      "source": "S3:P1346"
+    },
+    "faceless": {
+      "speaker": "空面人格",
+      "text": "𩇬䵉䶴䂙䨻䵊䴓㱎㔿𩉻䶺䴔䶳！",
+      "source": "S3:P1453"
+    },
+    "double_face": {
+      "speaker": "双面人格",
+      "text": "䶹䶱䴕䲈䶼䴡䵿䶳䴴䵳䶸䴵！",
+      "source": "S3:P1487"
+    }
+  },
+  "observations": [
+    {
+      "id": "hippocampus_records",
+      "room": "hippocampus",
+      "props": [
+        "记忆陈列",
+        "档案柜"
+      ],
+      "source": "S3:P1528–1533",
+      "description": "衣物保留领标、缝线与伤痕，原始与修订记录分别陈列；具体编号、时间未核，不认定这些伤痕均为角色亲历。",
+      "line": "痕迹还在，记录却改了。"
+    },
+    {
+      "id": "thalamus_records",
+      "room": "thalamus",
+      "props": [
+        "控制台",
+        "监测屏"
+      ],
+      "source": "S3:P1535–1539",
+      "description": "查看编号关联与不同科室的记录结构，原始与修订来源分开；具体编号字形尚未核实，不认定人物同一。",
+      "line": ""
+    },
+    {
+      "id": "cerebellum_records",
+      "room": "cerebellum",
+      "props": [
+        "控制终端"
+      ],
+      "source": "S3:P1541–1545",
+      "description": "训练记录有完成次数字段，伤情栏缺失；具体次数未核。姿态架不是角色曾受约束的证明。",
+      "line": "做了多少次，记得很清楚。伤在哪儿，没有这一栏。"
+    },
+    {
+      "id": "hypothalamus_records",
+      "room": "hypothalamus",
+      "props": [
+        "监测屏"
+      ],
+      "source": "S3:P1547–1552",
+      "description": "监测记录保留身体数据字段，缺本人意见；监护编号字形未知，不补写断食、断水经历。",
+      "line": "身体的数值都在，我说过什么呢？"
+    },
+    {
+      "id": "basal_records",
+      "room": "basal",
+      "props": [
+        "路径终端"
+      ],
+      "source": "S3:P1554–1558",
+      "description": "原始选择分别写同意、拒绝，最终均归为同意；两份记录的编号与时间仍未知，不拼接成角色同一次决定。",
+      "records": [
+        {
+          "record": "A",
+          "original_choice": "同意",
+          "final_stamp": "同意",
+          "identity": null,
+          "time": null
+        },
+        {
+          "record": "B",
+          "original_choice": "拒绝",
+          "final_stamp": "同意",
+          "identity": null,
+          "time": null
+        }
+      ],
+      "line": "写了‘拒绝’，最后还是‘同意’。"
+    },
+    {
+      "id": "amygdala_records",
+      "room": "amygdala",
+      "props": [
+        "监测屏",
+        "情绪记录台"
+      ],
+      "source": "S3:P1560–1565",
+      "description": "警戒和安抚区域均记录行为，却缺本人陈述栏；灯和座椅不治疗，也不使敌人失去目标。",
+      "line": "换了一间房，还是没有让我说话的地方。"
+    },
+    {
+      "id": "brainstem_records",
+      "room": "brainstem",
+      "props": [
+        "生命监测终端",
+        "维生控制台"
+      ],
+      "source": "S3:P1567–1574",
+      "description": "生命体征记录与伤情缺项并存；记录不清除真实伤害，不复活已死亡人物，具体监护编号未核。",
+      "line": "还活着，就可以不写受过什么伤？"
+    }
+  ]
+}

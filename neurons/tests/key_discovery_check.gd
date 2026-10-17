@@ -92,7 +92,7 @@ func choose_last_seed(order:Array) -> String:
 
 func finish_key_check() -> void:
  var file:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
- file.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":true,"cases":cases,"visited_L4_rooms":visited_rooms,
+ file.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":DisplayServer.get_name()!="headless","cases":cases,"visited_L4_rooms":visited_rooms,
   "fixtures":"Fixed v2 roots/seeds; full 10/12/14/16-point groups; initial target priority; paid CONTROL destination; explicit same-point dog contact; historical-style v1 all-empty L1 save. NPC branches disabled. L4 seed selects fifteen misses in the real eight-plus-eight sample, not 62 misses.",
   "scope":"Production world handlers advanced in 0.025s game-time steps; original dialogue advanced automatically. Actual paths, searches, paid SKIN, physical dog delivery, checksummed JSON, old-save migration, rest and doors. Not normal human pacing, natural RNG distribution, all NPC combinations, UI input acceptance or formal art/audio."},"  "));file.close()
  print("KEY_DISCOVERY_CHECK %d passed %d failed"%[passes.size(),failures.size()])
@@ -252,8 +252,13 @@ func _ready() -> void:
  for id in app.completed:
   if not id in original_targets:stayed_in_group=false
  check(stayed_in_group and visited_rooms.has("bridge"),"actual completions stay in initial group while traversing both floors")
+ var old_boundary:Dictionary=app.snapshot_data()
  check(until3(func():return bool(app.session.data.get("cortex_exit_crossed",false)),150),"newly discovered key follows real two-floor route and actual final doorway")
- check(app.session.data.exploration_boundary and app.rules.mode=="exploration","L4 exit remains declared development boundary, not invented ending")
+ check(app.session.data.level==5 and app.room_id=="atrium" and app.rules.mode=="combat" and not app.session.data.exploration_boundary and app.rules.search_limit==0,"actual keyed L4 doorway now enters L5 combat without fake ending or continued key search")
+ old_boundary.room_id="verify";old_boundary.hero_pos=[2.8,.24];old_boundary.route=[];old_boundary.action_phase="autonomy";old_boundary.target_index=-1
+ old_boundary.session.exploration_boundary=true;old_boundary.session.cortex_exit_crossed=true
+ check(app.restore_snapshot(JSON.parse_string(JSON.stringify(old_boundary))) and app.session.data.level==4 and not app.session.data.exploration_boundary and not app.session.data.cortex_exit_crossed,"historical keyed L4 stop resumes without giving L5 unlock on loading")
+ check(until3(func():return int(app.session.data.level)==5,5),"historical stop uses real door action to continue into L5")
  cases.append({"case":"L4_initial16_last_eligible_guarantee","seed":seed,"eligible":original_targets,"fixture_order":order,"completed":app.completed.duplicate(),"key_target":app.session.data.key_target})
  await capture("04_actual_L4_initial_group_exit")
  finish_key_check()

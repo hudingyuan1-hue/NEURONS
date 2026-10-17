@@ -69,11 +69,12 @@ func move(id:String,to:Vector2,delta:float) -> bool:
  return position(id).distance_to(to)<=0.4
 
 func present(id:String) -> bool:
- return enabled and not data.is_empty() and bool(data[id].present)
+ return enabled and app.room_id=="bedroom" and int(app.session.data.level)==1 and not data.is_empty() and bool(data[id].present)
 
 func busy() -> bool:
  if not enabled or data.is_empty():return false
- return present("mother") and not data.mother.phase in ["leave","absent"] or present("father") and not data.father.phase in ["leave","absent","rescued"] or not data.eating.is_empty() or float(data.get("gift_wait",0))>0 or data.get("picking_gift",false)
+ var home_scene:bool=app.room_id=="bedroom" and int(app.session.data.level)==1
+ return present("mother") and not data.mother.phase in ["leave","absent"] or present("father") and not data.father.phase in ["leave","absent","rescued"] or not data.eating.is_empty() or home_scene and (float(data.get("gift_wait",0))>0 or data.get("picking_gift",false))
 
 func blocks_hero() -> bool:
  if not busy():return false
@@ -82,6 +83,7 @@ func blocks_hero() -> bool:
  return true
 
 func world_rate() -> float:
+ if app.room_id!="bedroom" or int(app.session.data.level)!=1:return 1.0
  return float(config.timing.father_world_rate) if present("father") and data.father.phase in ["approach","grab","steady","drag","think","cat_approach"] else 1.0
 
 func collapse_active() -> bool:
@@ -504,6 +506,8 @@ func request_gift() -> bool:
 
 func advance_gift(delta:float) -> void:
  if app.rules.hp<=0 or app.rules.gripped or app.rules.body_busy():return
+ if app.hero_route.is_empty() and app.hero_pos.distance_to(app.layout.door_position())>.05:
+  app.hero_route=app.layout.path(app.hero_pos,app.layout.door_position())
  app.move_hero(delta)
  if app.hero_pos.distance_to(app.layout.door_position())>0.05:return
  data.gift_pick+=delta

@@ -3,6 +3,8 @@ extends RefCounted
 const AsylumMap=preload("res://scripts/core/asylum_map.gd")
 const CortexMap=preload("res://scripts/core/cortex_map.gd")
 const KeyDiscovery=preload("res://scripts/core/key_discovery.gd")
+const StreetMap=preload("res://scripts/core/street_map.gd")
+const CombatMap=preload("res://scripts/core/combat_map.gd")
 const ASYLUM_METRIC_ROOMS=["corridor","activity","group_therapy","quiet","bathroom","double_ward","workshop"]
 const ROOM_POINTS={
  "bedroom":["床","床头柜","靠背椅","书桌","蓝色圆凳与纸箱","杂物箱","衣帽架","衣柜","五层书架","储物柜","立式风扇"],
@@ -179,12 +181,20 @@ func normalize_restored_numbers() -> void:
   if key.is_valid_float() and is_equal_approx(float(key),float(int(float(key)))):key=str(int(float(key)))
   normalized[key]=maxi(int(normalized.get(key,1)),int(data.attempts[raw]))
  data.attempts=normalized
+ var unlocked:Array=[]
+ for value in data.get("unlocked",[]):
+  var level:int=int(value)
+  if level>=1 and level<=6 and level not in unlocked:unlocked.append(level)
+ data.unlocked=unlocked
 
 static func point_names(level:int,room:String) -> Array:
+ if level>=5:return []
  if level==4:return CortexMap.POINTS.get(room,[])
  return AsylumMap.POINTS.get(room,[]) if level==3 else ROOM_POINTS.get(room,[])
 
 func doors(room:String) -> Array:
+ if int(data.level)==6:return StreetMap.doors(room)
+ if int(data.level)==5:return CombatMap.doors(room)
  if int(data.level)==4:return CortexMap.doors(room)
  if int(data.level)==3:return AsylumMap.doors(room)
  var result:Array=GRAPH.get(room,[]).duplicate()
@@ -195,6 +205,8 @@ func has_key() -> bool:
  return data.key_owner=="hero"
 
 func next_room(from:String,to:String) -> String:
+ if int(data.level)==6:return StreetMap.next_room(from,to)
+ if int(data.level)==5:return CombatMap.next_room(from,to)
  if int(data.level)==4:return CortexMap.next_room(from,to)
  if int(data.level)==3:return AsylumMap.next_room(from,to)
  if from==to:return from

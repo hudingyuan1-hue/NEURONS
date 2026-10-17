@@ -1,0 +1,23 @@
+{
+  "failures": [],
+  "passes": [
+    "new attempt has one physical rack and legal approach",
+    "actual rack blocks initial line of sight",
+    "paid skin step plans a finite blocked approach",
+    "planning the path makes no premature sound",
+    "pending real rack contact survives JSON",
+    "body actually reaches rack before one collision sound",
+    "occluded nearby self hears actual source through reachable space",
+    "impact stays on legal side instead of passing through rack",
+    "active rack contact and latch survive JSON",
+    "continuous contact cannot repeat the sound after load",
+    "menu pause freezes rack motion and sound clocks",
+    "a new impact after settling can produce another sound",
+    "internal tinnitus is not an external noise lure",
+    "visible host takes precedence over rack sound",
+    "new real occluded source can be inspected",
+    "heard noise does not cancel launched direction or reveal later host position"
+  ],
+  "rendered": true,
+  "scope": "Production paid SKIN, motion/contact/latch/hearing/LOS/pause/JSON with declared geometry/actor/CONTROL-duration fixtures; not natural full game or subjective sound acceptance."
+}

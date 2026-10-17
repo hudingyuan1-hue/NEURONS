@@ -1,0 +1,6 @@
+{
+  "checks": 384,
+  "failures": 0,
+  "scope": "Headless original neural-rule regression; not GUI play or audio.",
+  "console": "neural_final_console.log"
+}

@@ -1,0 +1,31 @@
+{
+  "attempt": 1,
+  "boundary": true,
+  "elapsed_game_seconds": 57.0999999999993,
+  "failures": [],
+  "hp": 85,
+  "observed_actor_ids": [
+    "dog",
+    "father",
+    "self",
+    "cat",
+    "double_head"
+  ],
+  "passes": [
+    "natural NPC rolls and autonomous host reach actual L5 exit",
+    "no fifteen-second unexplained autonomous stall",
+    "combat never resumes key search or invents L6 implementation"
+  ],
+  "rendered": true,
+  "scope": "ordinary _process after declared direct L5 entry; no RNG seed, NPC, resources, positions, routes, damage or success fixtures after entry; accelerated fixed30 automated window, not human full game or all combinations",
+  "visited": [
+    "atrium",
+    "decision",
+    "bridge",
+    "switch",
+    "verify",
+    "hippocampus",
+    "thalamus",
+    "brainstem"
+  ]
+}

@@ -6,6 +6,7 @@ const FONT_PATH="res://assets/fonts/NotoSansCJKsc-Regular.otf"
 var app
 var records:ScrollContainer
 var record_text:Label
+var edition:Label
 var heading:Label
 var explanation:Label
 var records_button:Button
@@ -57,7 +58,7 @@ func build() -> void:
  var veil:=ColorRect.new();veil.color=Color(0.035,0.055,0.052,0.76);veil.size=Vector2(1280,720);add_child(veil)
  var paper:=Panel.new();paper.position=Vector2(80,105);paper.size=Vector2(1120,515)
  paper.add_theme_stylebox_override("panel",surface(Color("15231f"),Color("738472"),2));add_child(paper)
- label("NEURONS  /  E1",Rect2(120,130,600,40),18,Color("91a58d"))
+ edition=label("NEURONS  /  E1",Rect2(120,130,600,40),18,Color("91a58d"))
  heading=label("宿主胜利",Rect2(120,190,1040,60),40,Color("e0e4ce"))
  explanation=label("结局一 · 幻觉逃脱\n\n广场的出口消退。现实病床上的宿主睁开眼睛。\n本次流程结束。",Rect2(120,275,1010,180),22,Color("c5d0bc"))
  explanation.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
@@ -75,9 +76,13 @@ func build() -> void:
  button("新游戏","EndingNewGame",Rect2(760,540,300,50),func():new_game_requested.emit())
  show_ending()
 
+func main_ending() -> Dictionary:
+ return app.street.data.get("ending",{}) if app!=null and app.street!=null else {}
+
 func sync_from_game() -> void:
  if not _built:build()
  var should_show:bool=app!=null and app.hidden_route!=null and app.hidden_route.data.get("status","")=="ending" and bool(app.hidden_route.data.get("ending",{}).get("complete",false))
+ should_show=should_show or bool(main_ending().get("complete",false))
  if should_show and not visible:
   show_ending()
   records_button.grab_focus()
@@ -86,7 +91,10 @@ func sync_from_game() -> void:
 func show_ending() -> void:
  showing_records=false
  if not _built:return
- heading.text="宿主胜利"
+ var main:Dictionary=main_ending()
+ edition.text="NEURONS  /  "+str(main.get("id","E1"))
+ heading.text="玩家胜利" if main.get("id","")=="E3" else "角色胜利" if main.get("id","")=="E2" else "宿主胜利"
+ if not main.is_empty():explanation.text="结局三 · 玩家接续身体" if main.id=="E3" else "结局二 · 角色接续身体；玩家在来处星球恢复感知"
  explanation.show();records.hide();records_button.show();back_button.hide()
 
 func show_records() -> void:
@@ -103,6 +111,11 @@ func records_text() -> String:
  if app.rules.observations.is_empty():lines.append("本次尚无已见条目。")
  for entry in app.rules.observations:
   lines.append("[%s / %s] %s"%[str(entry.get("category","")),str(entry.get("kind","")),str(entry.get("text",""))])
+ if not main_ending().is_empty():
+  lines[0]=str(main_ending().id)+" · 机构登记自行离院；不覆盖实际伤亡。"
+  for id in app.street.data.actors:
+   var actor:Dictionary=app.street.data.actors[id]
+   if actor.hp<=0:lines.append("实际退场："+str(app.street.spec(id).name))
  var encounters:Array=app.hidden_route.encounter_record()
  if not encounters.is_empty():
   lines.append("");lines.append("实际遭遇的反馈")

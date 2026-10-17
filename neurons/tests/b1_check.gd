@@ -13,8 +13,9 @@ func wait_frames(count:int=3) -> void:
  for i in range(count):await get_tree().process_frame
 
 func hold(seconds:float) -> void:
- var frames:int=ceili(seconds*30.0)
- for i in range(frames):await get_tree().process_frame
+ var elapsed:float=0
+ while elapsed<seconds:
+  await get_tree().process_frame;elapsed+=get_process_delta_time()
 
 func capture(name:String) -> void:
  await wait_frames()
@@ -52,7 +53,8 @@ func _ready() -> void:
  app.home.enabled=false # This suite isolates UI/audio; natural animal tests are separate.
  ready_world()
  await wait_frames()
- check(app.audio.assets.size()==15,"development sound bindings actually load fifteen streams")
+ var expected:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_bindings.json"))
+ check(app.audio.assets.size()==expected.assets.size(),"every declared development audio binding actually loads")
  check(app.audio.channels.music[0].playing,"room music reaches actual AudioStreamPlayer")
  app.open_neuron_menu()
  check(app.menu.nodes.size()==12 and not app.rules.skill_states.GUT.unlocked,"formal entry terminal has twelve nodes; initial tree remains locked")
@@ -99,8 +101,9 @@ func _ready() -> void:
  check(not app.rules.search_active and app.rules.reaction_left>0,"GUT actually interrupts cabinet search")
  await capture("08_gut_interruption")
  await hold(1.3)
+ ready_world()
  app.open_system_page("book");app.menu.book_category="角色";app.menu.refresh_book()
- check(app.menu.book_text.text.contains("身体反应") and app.rules.observations.size()>=3,"observed body reactions enter free character bookmark")
+ check(app.menu.visible and app.menu.panel_mode=="book" and app.menu.pages.book.visible and app.menu.book_text.text.contains("身体反应") and app.rules.observations.size()>=3,"visible character bookmark contains actual observed body reactions")
  await capture("09_book");await hold(0.8)
  app.close_neuron_menu();ready_world()
  await settle_cast("CONTROL")
@@ -122,6 +125,6 @@ func _ready() -> void:
  check(app.rules.skill_states.CONTROL.until>app.rules.world_time,"manual return starts twenty-second cooldown")
  await capture("11_control_ended");await hold(0.7)
  var f:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
- f.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":true,"scope":"formal UI/campaign automation with explicit advanced-tree fixture; no NPC/combat acceptance"},"  "))
+ f.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":DisplayServer.get_name()!="headless","scope":"formal UI/campaign automation with explicit advanced-tree fixture; no NPC/combat acceptance"},"  "))
  print("B1_UI_CHECK %d passed %d failed"%[passes.size(),failures.size()])
  frontend.request_exit(0 if failures.is_empty() else 1)

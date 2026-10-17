@@ -46,6 +46,7 @@ func fixture(dog:bool=false,cat:bool=false) -> void:
  app.paused_manual=true;clear_lines();app.menu.close_menu();app.closing_left=0
 
 func capture(name:String) -> void:
+ if DisplayServer.get_name()=="headless":return
  # Windows can suspend presentation of an occluded test window. Produce an
  # actual viewport frame instead of waiting indefinitely for presentation.
  await frames(2)
@@ -107,7 +108,12 @@ func _ready() -> void:
  check(app.family.data.food_types[item]=="chocolate" and app.rules.owners[item]=="floor","gift weights are fixed on placement; no automatic inventory")
  check(app.rules.neurons==5 and app.rules.plexus==3 and app.session.data.level==1,"door gift does not award resources or unlock level")
  check(app.family.request_gift(),"door gift can be requested through legal interaction")
- check(until(func():return app.family.data.gift.is_empty()),"hero actually walks to door and picks up gift")
+ app.hero_route=PackedVector2Array() # Actual interrupted route, with the gift still on the floor.
+ var picked:bool=until(func():return app.family.data.gift.is_empty())
+ if not picked:
+  var diagnostic:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("gift_failure.json"),FileAccess.WRITE)
+  diagnostic.store_string(JSON.stringify(app.snapshot_data(),"  "));diagnostic.close()
+ check(picked,"hero actually walks to door and picks up gift")
  check(app.rules.owners[item]=="hero" and app.family.data.inventory.has(item),"gift transfers once from floor to hero")
  await capture("02_door_gift")
  fixture()
@@ -154,7 +160,9 @@ func _ready() -> void:
  check(not app.rules.gripped and app.rules.sp>=mini(100,sp+5)-1 and app.family.data.blood_door,"startle buys one real escape and SP, keeps blood-door threat")
  fixture()
  app.family.spawn("father");until(func():return app.rules.gripped)
- app.hero_pos=Vector2(0.905,1.85) # Explicit flush-to-cabinet fixture: next 2cm step is blocked.
+ for prop in app.layout.furniture:
+  var candidate:Vector2=Vector2(prop.rect.end.x+app.layout.body_radius+.005,prop.rect.get_center().y)
+  if app.layout.walkable(candidate) and not app.layout.walkable(candidate+Vector2.LEFT*.02):app.hero_pos=candidate;break
  give_skill("STARTLE");app.hero_facing=Vector2.RIGHT
  sp=app.rules.sp;cast("STARTLE");step(0.05)
  check(app.rules.gripped and app.rules.sp<=sp,"blocked actual backward path grants neither free release nor SP reward")
@@ -179,7 +187,7 @@ func _ready() -> void:
  fixture()
  app.family.spawn("father")
  check(until(func():return app.family.data.hidden_pending),"unrescued father follows real route until hero reaches blood door")
- check(app.hero_pos.distance_to(app.layout.DOOR)<0.13 and app.session.data.level==1,"hidden route is explicit B2 boundary, never fake hospital transfer")
+ check(app.hero_pos.distance_to(app.layout.door_position())<0.13 and app.session.data.level==1 and app.family.data.hidden_pending,"blood-door handoff reaches the current actual doorway without fake hospital transfer")
  await capture("06_blood_door_boundary")
  fixture()
  app.family.spawn("mother");clear_lines();app.family.spawn("father")
@@ -203,6 +211,6 @@ func _ready() -> void:
  app.family.on_node("forced_ordinary",true)
  check(str(app.rng.state)==rng_state,"replayed probability node never rerolls")
  var f:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
- f.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":true,"scope":"formal entry with deterministic parent/animal fixtures; original RNG table retained in production; not human playthrough"},"  "))
+ f.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":DisplayServer.get_name()!="headless","scope":"formal entry with deterministic parent/animal fixtures; original RNG table retained in production; not human playthrough"},"  "))
  print("FAMILY_CHECK %d passed %d failed"%[passes.size(),failures.size()])
  frontend.request_exit(0 if failures.is_empty() else 1)

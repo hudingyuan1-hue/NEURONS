@@ -1,0 +1,1 @@
+Bounded observation stopped after three actual Street deaths and working L5 returns. No final natural-clear claim. Further avoidance now scores the next reachable route waypoint and direct body clearance rather than a line through the central core.

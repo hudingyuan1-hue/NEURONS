@@ -1,0 +1,1 @@
+Stopped after repeated real Street death/return while correcting the proven path obstacle radius mismatch and immediate visible-attack replan. Not a passing natural-clear report.

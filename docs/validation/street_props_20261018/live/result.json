@@ -1,0 +1,18 @@
+{
+  "failures": [],
+  "passes": [
+    "live fixture uses an actually paid successful CONTROL window",
+    "ordinary world process starts the only box preparation",
+    "real Space key holds preparation without early sound",
+    "resuming real input continues into visible box flight",
+    "ordinary motion reaches actual box impact",
+    "real moving seeker hears exactly one actual impact",
+    "second fixture pays for its own CONTROL window",
+    "ordinary process starts visible sideways bed windup",
+    "real Space also holds bed's locked windup",
+    "ordinary moving bed makes one actual twenty-HP contact",
+    "real stopped/retreating bed does not repeat injury"
+  ],
+  "rendered": true,
+  "scope": "Two explicitly selected room/actor/resource fixtures, actual paid CONTROL and Space input, ordinary world process between fixtures. Continuous silent fixed30 recording; not natural full-game or subjective audio acceptance."
+}

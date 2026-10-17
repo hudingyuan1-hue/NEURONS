@@ -1,0 +1,21 @@
+{
+  "failures": [
+    "same process subsequently wipes only the contacted ground scuff"
+  ],
+  "passes": [
+    "live strip scene uses an actually paid CONTROL window",
+    "ordinary world process produces partial tearing",
+    "real Space freezes the same partially damaged strip",
+    "real resume completes only the remaining tear",
+    "live cleaning scene pays for its own CONTROL window",
+    "ordinary movement reaches the floor label and completes actual pickup",
+    "paused hand-held label cannot teleport into the cart bag",
+    "real walk back deposits the one actual label at the cart",
+    "visible empty-box animation never grants a gate key",
+    "live debris scene uses its own paid CONTROL window",
+    "ordinary contact moves the specified debris",
+    "actual debris move finishes and remains in place"
+  ],
+  "rendered": true,
+  "scope": "Three explicit room/cast/position/resource fixtures, each with actually paid CONTROL. Between fixtures ordinary _process and injected real Space pause/resume. Silent code-placeholder movie; not natural all-cast or human art/audio acceptance."
+}

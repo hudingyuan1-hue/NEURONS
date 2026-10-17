@@ -1,6 +1,8 @@
 extends "res://scripts/core/interaction_rules.gd"
 ## Campaign extension. Timing/receipts are independent of sprite frames.
 signal vitality_lost
+signal physical_transfer(event_id:String,item:String,to:String)
+signal achievement_requested(keys:Array,event_id:String)
 const CONFIG_PATH="res://data/skills.json"
 var skill_states:Dictionary={}
 var effects:Dictionary={}
@@ -167,6 +169,7 @@ func apply_pending() -> Dictionary:
  if not result.success:
   result.search_cancelled=false
   _record("skill_resisted" if result.reason!="interrupted" else "skill_interrupted",event_id,{"skill":id})
+  if id=="CONTROL" and result.reason!="interrupted" and not tutorial_demo:achievement_requested.emit(["control_resisted"],event_id+":resisted")
   return result
  var before:bool=search_active
  var conscious:bool=stun_left<=0
@@ -251,6 +254,7 @@ func record_awakening(id:String) -> bool:
  if awakening_receipts.has(id):return false
  awakening_receipts[id]=true
  pending_global_growth+=1
+ if not tutorial_demo:achievement_requested.emit(["first_awakening"],"awakening:"+id)
  return true
 
 func body_busy() -> bool:
@@ -277,6 +281,9 @@ func tick(delta:float) -> Dictionary:
   var whole:int=int(floor(control_fraction_ms+0.000001))
   control_fraction_ms=maxf(0.0,control_fraction_ms-whole)
   control_ms+=whole
+  if control_ms>=120000 and not settled.has("control:120000:achievement") and not tutorial_demo:
+   settled["control:120000:achievement"]="actual_control_time"
+   achievement_requested.emit(["self_erased"],"control:120000")
   var stage:int=3 if control_ms>=120000 else 2 if control_ms>=60000 else 1 if control_ms>=30000 else 0
   if stage!=control_stage:
    control_stage=stage
@@ -319,6 +326,11 @@ func commit_hit(event_id:String,distance:float,line_of_sight:bool,facing:bool,ac
   action.clear()
   if hp<=0:end_control()
  return hit
+
+func commit_transfer(event_id:String,item:String,from:String,to:String,distance:float,line_of_sight:bool,facing:bool,active:bool) -> bool:
+ var committed:bool=super.commit_transfer(event_id,item,from,to,distance,line_of_sight,facing,active)
+ if committed:physical_transfer.emit(event_id,item,to)
+ return committed
 
 func end_control() -> void:
  if control_left<=0:return
@@ -441,12 +453,14 @@ func add_evidence(id:String,skill:String,context:Dictionary,changed:bool) -> voi
 func recognize() -> void:
  if awareness_stage>=3:return
  awareness_stage=3
+ if not tutorial_demo:achievement_requested.emit(["exposed_player"],"awareness:recognized")
  awareness_feedback.append("是你吧？别再碰我了。")
  intervention_lock=mode=="exploration"
  lock_after_serial=public_serial
  trial.clear()
 
 func controlled_execution(kind:String,target:String,contrary:bool=true) -> void:
+ if kind!="navigation":record_control_action(kind,target)
  if tutorial_demo or control_event.is_empty() or control_evidence_receipts.has(control_event):return
  control_evidence_receipts[control_event]=true
  var changed:bool=contrary and (target!=str(control_context.get("target","self")) or kind!=str(control_context.get("action","body")))
@@ -455,3 +469,17 @@ func controlled_execution(kind:String,target:String,contrary:bool=true) -> void:
  var was_aware:bool=awareness_stage==2
  add_evidence(control_event,"CONTROL",context,changed)
  if was_aware and changed and awareness_stage==2:recognize()
+
+func record_control_action(kind:String,target:String) -> void:
+ if tutorial_demo or control_event.is_empty():return
+ var key:String=control_event+":physical_action"
+ if settled.has(key):return
+ # A testing time window, failed submission or preview is not a successful
+ # takeover. Require the real successful reaction and a physical caller.
+ var success:bool=false
+ for fact in facts:
+  if fact.kind=="skill_reacted" and fact.event_id==control_event and fact.get("skill","")=="CONTROL":success=true;break
+ if not success:return
+ settled[key]="controlled_action"
+ _record("controlled_action",key,{"action":kind,"target":target,"control_event":control_event})
+ achievement_requested.emit(["first_control_action"],key)

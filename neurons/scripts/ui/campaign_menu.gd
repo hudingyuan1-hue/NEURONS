@@ -42,6 +42,9 @@ var inspect_closing:float=0.0
 var ui_paused:bool=false
 var tree_action_filter:Callable
 var skill_labels:Dictionary={}
+var inventory_provider:Callable
+var inventory_labels:Dictionary={}
+var inventory_buttons:Dictionary={}
 
 func skill_name(id:String) -> String:
  if rules!=null:return str(rules.spec(id).get("name",id))
@@ -68,7 +71,7 @@ func _build_ui() -> void:
  _coin=_label(self,"",Rect2(790,45,310,34),18,ACCENT)
  _button(self,"关闭 ×",Rect2(1110,39,110,42)).pressed.connect(func():close_requested.emit())
  _status=_label(self,"",Rect2(72,651,1125,46),17,Color("d1bd8d"))
- for key in ["cast","tree","book"]:
+ for key in ["cast","tree","book","inventory"]:
   var page:=Control.new()
   page.size=Vector2(1280,630)
   page.mouse_filter=Control.MOUSE_FILTER_IGNORE
@@ -77,6 +80,7 @@ func _build_ui() -> void:
  build_cast()
  build_tree()
  build_book()
+ build_inventory()
  art_canvas=Node2D.new()
  art_canvas.set_script(load("res://scripts/ui/menu_art.gd"))
  art_canvas.host=self
@@ -130,7 +134,7 @@ func build_tree() -> void:
  box(page,Rect2(70,115,430,480))
  box(page,Rect2(525,115,440,480))
  inspect_panel=box(page,Rect2(985,115,235,480))
- _label(page,"冰柜 / 二维人体比例占位",Rect2(90,132,400,30),17,INK)
+ _label(page,"星仓 · 冰柜内人体预览（占位）",Rect2(90,132,440,30),17,INK)
  _label(page,"螺旋星环 · 连线为实际前置",Rect2(545,132,420,30),16,INK)
  _button(page,"↶ 人体",Rect2(95,531,160,43)).pressed.connect(func():body_angle=(body_angle+3)%4;queue_redraw())
  _button(page,"人体 ↷",Rect2(280,531,160,43)).pressed.connect(func():body_angle=(body_angle+1)%4;queue_redraw())
@@ -201,11 +205,30 @@ func build_book() -> void:
  book_text.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
  book_text.add_theme_color_override("font_color",INK)
  scroll.add_child(book_text)
- var index:int=0
- for pair in [["porridge","食用粥"],["candy","食用糖果"],["chocolate","食用巧克力"],["gift","拾取门口礼物"]]:
+
+func build_inventory() -> void:
+ var page:Control=pages.inventory
+ box(page,Rect2(70,115,1150,480))
+ _label(page,"随身物品",Rect2(100,140,800,32),23,INK)
+ _label(page,"实际取得后入库；使用请求关闭窗口，吞服完成后才结算。",Rect2(100,180,1060,35),17,DIM)
+ var row:int=0
+ for pair in [["porridge","粥"],["candy","糖果"],["chocolate","巧克力"],["gift","门口礼物（尚未取得）"]]:
   var kind:String=pair[0]
-  _button(page,pair[1],Rect2(100+index*265,540,245,40)).pressed.connect(func():food_requested.emit(kind))
-  index+=1
+  inventory_labels[kind]=_label(page,pair[1],Rect2(110,238+row*72,710,36),20,INK)
+  var button:Button=_button(page,"走近拾取" if kind=="gift" else "食用",Rect2(880,232+row*72,280,44))
+  button.pressed.connect(func():food_requested.emit(kind))
+  inventory_buttons[kind]=button
+  row+=1
+ _label(page,"未持有或当前身体无法完成时不可使用；查阅本窗口不消耗物品。",Rect2(100,547,1090,32),16,DIM)
+
+func refresh_inventory() -> void:
+ var contents:Dictionary=inventory_provider.call() if inventory_provider.is_valid() else {}
+ for kind in inventory_labels:
+  var entry:Dictionary=contents.get(kind,{})
+  var name:String={"porridge":"粥","candy":"糖果","chocolate":"巧克力","gift":"门口礼物（尚未取得）"}[kind]
+  inventory_labels[kind].text="%s  × %d"%[name,int(entry.get("count",0))]
+  inventory_buttons[kind].disabled=not bool(entry.get("available",false))
+  inventory_buttons[kind].tooltip_text=str(entry.get("reason","当前没有可用物品"))
 
 func open_menu(neurons_value:int,can_cast:bool,resistance_test:bool=false) -> void:
  open_page("cast")
@@ -223,11 +246,12 @@ func open_page(key:String) -> void:
  for id in pages:pages[id].visible=id==key
  visible=true
  _status.text=""
- title.text={"cast":"神经干预 / CRT","tree":"冰柜与星环","book":"已见信息档案"}[key]
+ title.text={"cast":"神经干预 / CRT","tree":"星仓","book":"已见信息档案","inventory":"物品栏"}[key]
  if key=="tree":
   inspect_panel.hide()
   feedback_requested.emit("SFX_COLD")
  elif key=="book":refresh_book()
+ elif key=="inventory":refresh_inventory()
  refresh_state()
  if art_canvas!=null:art_canvas.queue_redraw()
 
@@ -341,7 +365,7 @@ func tree_action(kind:String) -> void:
  if result.ok and kind in ["unlock","upgrade"]:
   inspect_closing=0.18
   preview_id=selected_id;preview_delay=0.36;preview_left=0.0
- feedback_requested.emit("SFX_UI_CONFIRM" if result.ok else "SFX_UI_DENIED")
+ feedback_requested.emit("SFX_UI_REWARD" if result.ok else "SFX_UI_DENIED")
  tree_result.emit(kind,selected_id,result)
  refresh_state();queue_redraw()
  if not result.ok:describe_tree()

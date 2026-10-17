@@ -2,6 +2,8 @@ extends "res://scripts/world/room_view.gd"
 const Catalog=preload("res://scripts/presentation/asset_catalog.gd")
 const MetricBedroom=preload("res://scripts/world/metric_bedroom_view.gd")
 const MetricInstitution=preload("res://scripts/world/metric_institution_view.gd")
+const CombatView=preload("res://scripts/world/combat_view.gd")
+var combat_view=CombatView.new()
 var catalog=Catalog.new()
 var metric_bedroom=MetricBedroom.new()
 var metric_institution=MetricInstitution.new()
@@ -47,6 +49,7 @@ func draw_hidden_plaza() -> void:
   draw_string(font,Vector2(200,303),str(frame.achievement),HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("e8e8d8"))
 
 func rest_pose() -> Dictionary:
+ if int(app.session.data.level)>=5 or layout.furniture.is_empty():return {"t":0.0,"center":layout.project(app.hero_pos)-Vector2(0,30),"angle":0.0}
  var t:float=clampf((1.2-app.action_left)/0.3,0,1) if app.action_phase=="resting" else 0.0
  var from:Vector2=layout.project(app.hero_pos)+Vector2(0,-30)
  var to:Vector2=layout.project(layout.furniture[0].rect.get_center())+Vector2(0,-float(layout.furniture[0].height))
@@ -683,6 +686,8 @@ func draw_room_overlays() -> void:
   draw_ellipse_blood(portal+Vector2(30,77))
 
 func _draw() -> void:
+ if app!=null and int(app.session.data.level)>=5:
+  combat_view.draw(self,app,catalog);return
  if app!=null and layout!=null and app.metric_institution_room(app.room_id):
   metric_institution.font=font
   metric_institution.draw(self,app,layout,catalog)

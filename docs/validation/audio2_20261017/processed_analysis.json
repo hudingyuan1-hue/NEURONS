@@ -1,0 +1,50 @@
+{
+  "scope": "Numeric decode only, not subjective listening or loop/mix acceptance. -1dB headroom on new ending and UI copies; original UI contains 75 full-scale decoded samples, attenuation does not repair source clipping.",
+  "confirmation_filename_resolution": "User explicitly confirmed the same-named WAV in the archive is the replacement. Changed source hash verified; runtime named _new; originals retained.",
+  "files": [
+    {
+      "id": "SFX_UI_CONFIRM",
+      "path": "neurons/assets/audio/audio2_20261017/sfx_ui_confirm_v001_new.wav",
+      "sha256": "58698cf0fe71610a327fac3997154df696db4934204142bf2fc163c9c92a0701",
+      "seconds": 0.10029166666666667,
+      "decoded_peak": 0.891265869140625,
+      "decoded_rms": 0.21019725501537323,
+      "samples_at_or_above_full_scale": 0,
+      "leading_below_minus55_db_seconds": 0.0,
+      "gain_db": -1
+    },
+    {
+      "id": "MUS_DANGER",
+      "path": "neurons/assets/audio/feedback_20261017/mus_danger_dev_v001.ogg",
+      "sha256": "ab93ab86f90c0f3290fd04d348f2df57f754dd3641fa41efffe720faf0061ffa",
+      "seconds": 220.16633333333334,
+      "decoded_peak": 0.6396733522415161,
+      "decoded_rms": 0.10229429602622986,
+      "samples_at_or_above_full_scale": 0,
+      "leading_below_minus55_db_seconds": 0.16833333333333333,
+      "gain_db": 0
+    },
+    {
+      "id": "MUS_END",
+      "path": "neurons/assets/audio/audio2_20261017/mus_ending_e2_v001.ogg",
+      "sha256": "a4981367f9ff94ace1446eec41bbdcaae3295372a165db418bf939dadd6047fc",
+      "seconds": 85.9941875,
+      "decoded_peak": 0.9076042771339417,
+      "decoded_rms": 0.08806062489748001,
+      "samples_at_or_above_full_scale": 0,
+      "leading_below_minus55_db_seconds": 0.03747916666666667,
+      "gain_db": -1
+    },
+    {
+      "id": "MUS_HOSPITAL",
+      "path": "neurons/assets/audio/audio2_20261017/mus_hospital_v001.ogg",
+      "sha256": "079422016b535c4d44a4acecec0f224108b60112384aba8cde1b988e5cc9592e",
+      "seconds": 271.4721666666667,
+      "decoded_peak": 0.542305052280426,
+      "decoded_rms": 0.062124285846948624,
+      "samples_at_or_above_full_scale": 0,
+      "leading_below_minus55_db_seconds": 0.10629166666666667,
+      "gain_db": 0
+    }
+  ]
+}

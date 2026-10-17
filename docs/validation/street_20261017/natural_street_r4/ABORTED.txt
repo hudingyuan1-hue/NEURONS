@@ -1,0 +1,1 @@
+Actual death snapshot isolated repeated straight-line replanning into transporter near the fountain. Stopped to correct dynamic-body path planning; damage and spawn configuration unchanged.

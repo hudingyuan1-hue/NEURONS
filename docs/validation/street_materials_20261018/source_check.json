@@ -1,0 +1,72 @@
+{
+  "sources": [
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59"
+    },
+    {
+      "path": "tmp/b2_source_intake/S3.txt",
+      "sha256": "8e4c6c6b18f0e5aaa8ad20d8ee7b882804ff3889dde4a2ac01d72a2ad6804a7f",
+      "reuse": "prior verified extraction; targeted S3 P1634–1647/P1733/P1764–1771/P1795–1812/P1820–1824 only"
+    }
+  ],
+  "exact_line_checks": [
+    {
+      "actor": "nurse",
+      "text": "䶺䴔䶳䆐䴒䶵㗊𩇯䵙！",
+      "source": "S3:P1640",
+      "found_in_original_docx": true
+    },
+    {
+      "actor": "corner",
+      "text": "㱌䶹䶱䴕䲈䶼䴡䵿䶳䴴䵳！",
+      "source": "S3:P1646",
+      "found_in_original_docx": true
+    },
+    {
+      "actor": "double_face",
+      "text": "䶹䶱䴕䲈䶼䴡䵿䶳䴴䵳䶸䴵！",
+      "source": "S3:P1733",
+      "found_in_original_docx": true
+    },
+    {
+      "actor": "dog",
+      "text": "𩇬䵉䶴䂙䨻䵊䴓㱎㔿𩉻！",
+      "source": "S3:P1794",
+      "found_in_original_docx": true
+    },
+    {
+      "actor": "faceless",
+      "text": "𩇬䵉䶴䂙䨻䵊䴓㱎㔿𩉻䶺䴔䶳！",
+      "source": "S3:P1800",
+      "found_in_original_docx": true
+    },
+    {
+      "text": "不用再念了。",
+      "found_in_original_docx": true
+    },
+    {
+      "text": "盒子空了，编号还留着。",
+      "found_in_original_docx": true
+    },
+    {
+      "text": "他连标签也收走了。",
+      "found_in_original_docx": true
+    },
+    {
+      "text": "此前所述均不属实",
+      "found_in_original_docx": true
+    }
+  ],
+  "used": "street_materials.gd state/ownership/read/clean/grab preparation; street_chapter.gd corner retreat; street_chapter.json five original lines and trial timings",
+  "not_inferred": [
+    "unknown number/batch glyphs remain null; no match to host",
+    "broken recording wire cannot restore deleted memory",
+    "generic new fallen label is not a duplicate earlier original; original ownership remains authoritative",
+    "principal character and environment remain unapproved code placeholders"
+  ],
+  "new_external_sources": 0,
+  "imagegen_calls": 0,
+  "paid_services": 0,
+  "baseline": "d709b9f8787210cadc90088f31d9cbefbbe5d02e"
+}

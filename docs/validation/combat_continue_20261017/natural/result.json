@@ -1,0 +1,31 @@
+{
+  "attempt": 1,
+  "boundary": true,
+  "elapsed_game_seconds": 61.8333333333324,
+  "failures": [],
+  "hp": 90,
+  "observed_actor_ids": [
+    "self",
+    "mother",
+    "cat",
+    "reverse"
+  ],
+  "passes": [
+    "natural NPC rolls and autonomous host reach actual L5 exit",
+    "no fifteen-second unexplained autonomous stall",
+    "combat never resumes key search or invents L6 implementation",
+    "actual combat scene selects supplied danger music stream"
+  ],
+  "rendered": true,
+  "scope": "ordinary _process after declared direct L5 entry; no RNG seed, NPC, resources, positions, routes, damage or success fixtures after entry; accelerated fixed30 automated window, not human full game or all combinations",
+  "visited": [
+    "atrium",
+    "decision",
+    "bridge",
+    "switch",
+    "verify",
+    "hippocampus",
+    "thalamus",
+    "brainstem"
+  ]
+}

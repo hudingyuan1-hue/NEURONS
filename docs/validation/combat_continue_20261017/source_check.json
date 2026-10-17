@@ -1,0 +1,67 @@
+{
+  "kind": "targeted original XML quotation verification, not new full-document audit",
+  "sources": [
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59"
+    }
+  ],
+  "quotes": [
+    {
+      "id": "dog",
+      "source": "S3:P1302",
+      "exact_original_match": true
+    },
+    {
+      "id": "nurse",
+      "source": "S3:P1325",
+      "exact_original_match": true
+    },
+    {
+      "id": "corner",
+      "source": "S3:P1346",
+      "exact_original_match": true
+    },
+    {
+      "id": "faceless",
+      "source": "S3:P1453",
+      "exact_original_match": true
+    },
+    {
+      "id": "double_face",
+      "source": "S3:P1487",
+      "exact_original_match": true
+    },
+    {
+      "id": "hippocampus_records",
+      "source": "S3:P1528–1533",
+      "exact_original_match": true
+    },
+    {
+      "id": "cerebellum_records",
+      "source": "S3:P1541–1545",
+      "exact_original_match": true
+    },
+    {
+      "id": "hypothalamus_records",
+      "source": "S3:P1547–1552",
+      "exact_original_match": true
+    },
+    {
+      "id": "basal_records",
+      "source": "S3:P1554–1558",
+      "exact_original_match": true
+    },
+    {
+      "id": "amygdala_records",
+      "source": "S3:P1560–1565",
+      "exact_original_match": true
+    },
+    {
+      "id": "brainstem_records",
+      "source": "S3:P1567–1574",
+      "exact_original_match": true
+    }
+  ],
+  "summaries": "Evidence descriptions are source-based summaries; missing identity/time values remain null. No personal injury or identity fabricated."
+}

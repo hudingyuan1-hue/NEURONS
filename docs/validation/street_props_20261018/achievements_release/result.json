@@ -1,0 +1,28 @@
+{
+  "failures": [],
+  "passes": [
+    "new profile and tutorial do not invent actual-event achievements",
+    "tutorial demo awakening, recognition and clock never grant global achievements",
+    "low spirit and standing are neither actual death nor formal awakening",
+    "locked or invalid CONTROL is not resisted takeover",
+    "successful takeover standing alone does not grant actual-action achievement",
+    "real controlled movement grants physical-action achievement",
+    "repeat callbacks do not rewrite achievement or grant resources",
+    "loading pre-action profile cannot roll back independent global union",
+    "valid resisted CONTROL still pays original cost and grants only resisted event",
+    "actual recognize transition grants exposure without altering resource rules",
+    "blocked control interval cannot unlock effective-time achievement",
+    "exact 120000 effective milliseconds grants original self-erasure achievement",
+    "actual collapse handler can grant death, cause and formally registered awakening together",
+    "paused death and repeated awakening do not duplicate global settlement",
+    "failed global write keeps an actual pending event",
+    "pending event survives profile JSON independently of store failure",
+    "pending event retries against restored store without duplicate rewards",
+    "seven new actual-event hooks preserve original twelve definitions and cross-profile global store",
+    "event and ending grant APIs retain their separate whitelists",
+    "older valid saved counters and facts can backfill their global achievements",
+    "saved control intent cannot invent physical action, knowledge or resource rewards"
+  ],
+  "rendered": true,
+  "scope": "Declared resource/recognition/threshold/collapse and write-failure fixtures through real submit, physical move, restore and global-store handlers. No manufactured resource awards, tutorial progress or natural whole-game claim."
+}

@@ -71,6 +71,8 @@ func endpoint() -> String:
   return "actual_attempt_restarted"
  if app.room_id=="hidden_street" or bool(app.family.data.get("hidden_pending",false)):
   return "natural_hidden_route_selected"
+ if int(app.session.data.level)==5 and app.rules.mode=="combat" and bool(app.session.data.get("cortex_exit_crossed",false)):
+  return "combat_chapter_entered"
  if int(app.session.data.level)==4 and bool(app.session.data.get("cortex_exit_crossed",false)) and app.has_key() and app.room_id=="verify":
   return "cortex_keyed_exit_development_boundary"
  if int(app.session.data.level)==2 and bool(app.session.data.exploration_boundary):
@@ -86,6 +88,7 @@ func finish(kind:String,reason:String) -> void:
   write_json("final_snapshot.json",last_snapshot)
   await capture("03_terminal_"+kind)
  var descriptions:Dictionary={
+  "combat_chapter_entered":"Actual L4 key and physical exit led into L5 combat. Not L5 completion, full branch coverage or a game ending.",
   "hospital_stairs_development_boundary":"Legacy L2 development stop observed; current L3 is implemented, not a game ending.",
   "cortex_keyed_exit_development_boundary":"Actual L4 key and completed exit crossing reached; L5 remains unimplemented. This is a development boundary, not an ending.",
   "actual_death":"Actual HP reached zero during the natural route; no revival, resources or route were forced by the driver.",

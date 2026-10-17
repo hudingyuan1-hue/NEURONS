@@ -1,0 +1,1 @@
+Stopped this owned automatic run after observing repeated full-grid rebuild cost in the new bed navigation. Last real progress and console retained. No clear claim. Incremental footprint update implemented before next run.

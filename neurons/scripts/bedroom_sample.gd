@@ -327,7 +327,7 @@ func sync_audio_pause() -> void:
 
 func _process(delta:float) -> void:
  input_lock_frames=maxi(0,input_lock_frames-1)
- if closing_left>0:
+ if closing_left>0 and not paused_manual and not audio_panel.visible:
   closing_left=maxf(0,closing_left-delta)
  sync_audio_pause()
  if not world_paused():

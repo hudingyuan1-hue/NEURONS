@@ -223,6 +223,7 @@ func _ready() -> void:
  check(await await_live(func():return app.room_id=="bedroom" and app.rules.hp==100,5,false),"hidden death actually revives in first bedroom instead of hospital/fourth/sixth level")
  check(app.session.data.cycle==cycle+3 and app.invader_id==invader+1 and app.rules.actual_attempt==attempt+1,"hidden death adds three total cycles, one invader ID and one actual L1 attempt")
  check(app.rules.mode=="exploration" and app.hidden_route.data.is_empty() and app.rules.neurons==5 and app.rules.plexus==0,"revival uses existing 5N floor without hidden scene/unlock cluster rewards")
- check(app.achievements.load_progress().data.unlocked.size()==2 and app.achievements.load_progress().data.receipts.size()==receipt_count,"restoring older profile and dying cannot remove or duplicate earned global E1 achievements")
+ var after_death:Dictionary=app.achievements.load_progress()
+ check(after_death.ok and after_death.data.unlocked.size()==3 and after_death.data.unlocked.has("first_death") and after_death.data.unlocked.hidden_clear==global.data.unlocked.hidden_clear and after_death.data.unlocked.host_wins==global.data.unlocked.host_wins and after_death.data.receipts.size()==receipt_count+1,"older profile fatal contact preserves E1 receipts and adds exactly the original first-death achievement")
  trace("L1_revival");await capture("10_L1_actual_revival")
  await finish_run()

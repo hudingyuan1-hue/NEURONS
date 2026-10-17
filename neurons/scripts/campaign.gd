@@ -40,6 +40,20 @@ const CortexMap=preload("res://scripts/core/cortex_map.gd")
 const CortexLayout=preload("res://scripts/world/cortex_layout.gd")
 const CortexEvents=preload("res://scripts/core/cortex_events.gd")
 const CortexUpperEvents=preload("res://scripts/core/cortex_upper_events.gd")
+const InterventionFeedback=preload("res://scripts/ui/intervention_feedback.gd")
+const ViewControls=preload("res://scripts/presentation/view_controls.gd")
+const CombatMap=preload("res://scripts/core/combat_map.gd")
+const CombatChapter=preload("res://scripts/core/combat_chapter.gd")
+var combat
+const StreetChapter=preload("res://scripts/core/street_chapter.gd")
+const StreetMap=preload("res://scripts/core/street_map.gd")
+var street
+var skip_main_ending:Button
+var intervention_feedback
+var view_controls
+var miniature_button:Button
+var arrival_left:float=0.0
+var arrival_origin:=Vector2.ZERO
 var session=Session.new()
 var store=Store.new()
 var profile:Dictionary={}
@@ -79,6 +93,7 @@ var auto_status_enabled:bool=true
 var hospital
 var hidden_route
 var achievements
+var achievement_retry_left:float=0.0
 var restoring:bool=false
 var opening_ui
 var asylum
@@ -103,6 +118,7 @@ func create_world() -> void:
  previous.remove_child(camera)
  view.add_child(camera)
  previous.queue_free()
+ view_controls=ViewControls.new(self)
 
 func create_ui() -> void:
  var top:=ColorRect.new()
@@ -112,10 +128,11 @@ func create_ui() -> void:
  add_child(top)
  label_at("N E U R O N S",Vector2(28,15),24)
  scenario_label=label_at("",Vector2(365,16),20)
- label_at("程序占位 · 自主探索与人物分支 · 后续关卡待接",Vector2(365,53),13)
+ label_at("当前含程序占位 · 功能试接不代表正式美术",Vector2(365,53),13)
  button_at("暂停",Vector2(1130,42),105,func():paused_manual=not paused_manual)
  button_at("设置",Vector2(900,42),95,toggle_audio_controls)
  button_at("图书",Vector2(795,42),95,func():open_system_page("book"))
+ button_at("物品栏",Vector2(685,42),100,func():open_system_page("inventory"))
  button_at("操作指引",Vector2(1005,42),115,func():open_tutorial(true))
  var footer:=ColorRect.new()
  footer.position=Vector2(0,589)
@@ -130,9 +147,11 @@ func create_ui() -> void:
  button_at("复位视野",Vector2(522,603),130,reset_zoom)
  button_at("降低反馈",Vector2(665,603),130,toggle_effects)
  button_at("图书",Vector2(805,603),100,func():open_system_page("book"))
- button_at("冰柜",Vector2(915,603),100,func():open_system_page("tree"))
+ button_at("星仓",Vector2(915,603),100,func():open_system_page("tree"))
  control_end_button=button_at("交回控制",Vector2(1030,603),125,func():rules.end_control();cancel_control_route())
  control_end_button.hide()
+ miniature_button=button_at("微缩:关",Vector2(1162,603),94,func():view_controls.miniature=not view_controls.miniature)
+ miniature_button.tooltip_text="可关闭的2D移轴景深模拟，非真实光学景深；降低反馈时停用。中键拖动查看，R复位跟随。"
  state_label=label_at("",Vector2(24,649),14)
  event_label=label_at("",Vector2(24,679),13)
  for bounds in [Rect2(16,106,650,34),Rect2(765,106,490,34)]:
@@ -171,6 +190,7 @@ func create_ui() -> void:
  next.pressed.connect(request_dialogue_advance)
  column.add_child(next)
  dialogue_panel.hide()
+ intervention_feedback=InterventionFeedback.new();intervention_feedback.app=self;add_child(intervention_feedback)
 
 func _ready() -> void:
  set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -181,6 +201,7 @@ func _ready() -> void:
  home=HomeAnimals.new(self)
  family=FamilyEvents.new(self)
  hospital=HospitalEvents.new(self)
+ combat=CombatChapter.new(self);street=StreetChapter.new(self)
  hospital.records=HospitalRecords.new(hospital)
  hospital.observations=HospitalObservations.new(hospital)
  asylum=AsylumEvents.new(self)
@@ -196,12 +217,18 @@ func _ready() -> void:
  hidden_route=HiddenStreet.new(self)
  ending_panel=EndingPanel.new(self)
  add_child(ending_panel)
+ skip_main_ending=Button.new();skip_main_ending.text="跳过尾声";skip_main_ending.position=Vector2(1030,155);skip_main_ending.size=Vector2(180,40);skip_main_ending.z_index=35;skip_main_ending.visible=false;add_child(skip_main_ending)
+ skip_main_ending.pressed.connect(func():
+  if paused_manual or menu.visible or audio_panel.visible or street.data.get("ending",{}).is_empty():return
+  street.data.ending.complete=true;street.data.ending.phase="complete";dialogue_queue.clear();show_dialogue())
  ending_panel.return_to_title_requested.connect(request_title_return)
  ending_panel.new_game_requested.connect(func():new_profile_requested=true;request_title_return())
  achievements=Achievements.new();achievements.root=store.root
+ bind_achievement_rules()
  search_actions=SearchActions.new(self)
  menu.rules=rules
  menu.context_provider=skill_context
+ menu.inventory_provider=inventory_contents
  menu.skill_requested.connect(cast_skill)
  menu.feedback_requested.connect(func(id:String):audio.cue_ui(id))
  menu.food_requested.connect(func(kind:String):
@@ -250,7 +277,7 @@ func open_tutorial(guide:bool) -> void:
  add_child(tutorial_ui)
 
 func world_paused() -> bool:
- return opening_ui!=null or tutorial_ui!=null or (hidden_route!=null and hidden_route.blocks_hero()) or super.world_paused()
+ return opening_ui!=null or tutorial_ui!=null or (hidden_route!=null and hidden_route.blocks_hero()) or (street!=null and not street.data.get("ending",{}).is_empty()) or super.world_paused()
 
 func sync_audio_pause() -> void:
  if audio==null:return
@@ -259,9 +286,18 @@ func sync_audio_pause() -> void:
 
 func _process(delta:float) -> void:
  if not campaign_ready:return
+ achievement_retry_left=maxf(0,achievement_retry_left-delta)
+ track_actual_death()
+ flush_event_achievements()
+ if view_controls!=null:view_controls.tick()
  process_requests()
  if not campaign_ready:return
  ending_panel.sync_from_game()
+ if skip_main_ending!=null:skip_main_ending.visible=street!=null and not street.data.get("ending",{}).is_empty() and not street.data.ending.get("complete",false)
+ if street!=null and not street.data.get("ending",{}).is_empty():
+  input_lock_frames=maxi(0,input_lock_frames-1)
+  if closing_left>0 and not paused_manual and not audio_panel.visible:closing_left=maxf(0,closing_left-delta)
+  street.advance_ending(delta);sync_audio_pause();update_ui();view.queue_redraw();return
  if hidden_route!=null and hidden_route.data.get("status","")=="ending":
   input_lock_frames=maxi(0,input_lock_frames-1)
   closing_left=maxf(0,closing_left-delta)
@@ -293,9 +329,68 @@ func _process(delta:float) -> void:
   update_ui();view.queue_redraw();return
  super._process(delta)
  if not world_paused():keep_metric_actor_visible()
+ # Ordinary dialogue freezes the world, not the background soundtrack.
+ # The audio channel itself rejects hard/menu pause starts.
+ audio.cue(gameplay_music_cue(),"music:%d:%d"%[session.data.level,rules.actual_attempt])
  if not world_paused():
-  audio.cue("MUS_ROOM","music:%d:%d"%[session.data.level,rules.actual_attempt])
   if room_id=="bedroom":audio.cue("AMB_FAN","fan:%d"%rules.actual_attempt)
+
+func gameplay_music_cue() -> String:
+ # 2026-10-17 user delivery: exploration shares the hospital recording;
+ # battle/chase shares danger. This selects presentation, never game mode.
+ if room_id=="hidden_street":return "MUS_DANGER"
+ var level:int=int(session.data.level)
+ if level>=5 and rules.mode=="combat":return "MUS_DANGER"
+ if level>=2:return "MUS_HOSPITAL"
+ return "MUS_ROOM"
+
+func bind_achievement_rules() -> void:
+ rules.achievement_requested.connect(queue_event_achievement)
+
+func queue_event_achievement(keys:Array,event_id:String) -> void:
+ if not campaign_ready or rules.tutorial_demo:return
+ var pending:Array=session.data.get("pending_event_achievements",[])
+ var receipt:String="profile:"+str(session.data.get("key_seed_root",profile.get("name","")))+":"+event_id
+ for item in pending:
+  if item.receipt==receipt:return
+ pending.append({"keys":keys.duplicate(),"receipt":receipt})
+ session.data.pending_event_achievements=pending
+ flush_event_achievements()
+
+func flush_event_achievements() -> void:
+ if achievements==null or achievement_retry_left>0:return
+ var pending:Array=session.data.get("pending_event_achievements",[])
+ if pending.is_empty():return
+ var item:Dictionary=pending[0];var result:Dictionary=achievements.grant_event(item["keys"],item.receipt)
+ if result.ok:pending.pop_front()
+ else:
+  achievement_retry_left=2.0
+  status_note="全局成就写入失败，实际事件已保留待重试："+str(result.get("error",""))
+ session.data.pending_event_achievements=pending
+
+func track_actual_death() -> void:
+ if rules.hp>0 or rules.tutorial_demo:return
+ var receipt:String="death:%d:%d:%d:%d"%[session.data.level,invader_id,session.data.cycle,rules.actual_attempt]
+ var known:Dictionary=session.data.get("achievement_deaths",{})
+ if known.has(receipt):return
+ known[receipt]=true;session.data.achievement_deaths=known
+ var keys:Array=["first_death"]
+ if int(session.data.level)==1 and family!=null and family.collapse_active():keys.append("parent_collapse_death")
+ rules._record("actual_death",receipt,{"level":session.data.level,"parent_collapse":"parent_collapse_death" in keys})
+ queue_event_achievement(keys,receipt)
+
+func restore_event_achievements() -> void:
+ # Backfill only unambiguous saved facts/counters, never intent or a preview.
+ # Global progress remains separate: no dialogue, knowledge or resources replay.
+ if rules.tutorial_demo:return
+ var keys:Array=[]
+ if not rules.awakening_receipts.is_empty():keys.append("first_awakening")
+ if rules.awareness_stage>=3:keys.append("exposed_player")
+ if rules.control_ms>=120000:keys.append("self_erased")
+ for fact in rules.facts:
+  if fact.kind=="skill_resisted" and fact.get("skill","")=="CONTROL" and not "control_resisted" in keys:keys.append("control_resisted")
+  if fact.kind=="controlled_action" and not "first_control_action" in keys:keys.append("first_control_action")
+ if not keys.is_empty():queue_event_achievement(keys,"restored-facts:"+JSON.stringify(keys).sha256_text())
 
 func request_title_return() -> void:
  title_requested=true
@@ -307,6 +402,7 @@ func process_requests() -> void:
   save_requested=false
   var result:Dictionary=store.save_snapshot(snapshot_data())
   status_note="已保存（动作、钥匙、随机状态与暂停均保留）" if result.ok else str(result.error)
+  if result.ok:audio.cue_ui("SFX_UI_SAVE")
   if title_requested:
    title_requested=false
    if result.ok:
@@ -326,6 +422,10 @@ func process_requests() -> void:
 
 func bind_status_rules() -> void:
  if not rules.vitality_lost.is_connected(on_vitality_lost):rules.vitality_lost.connect(on_vitality_lost)
+ if not rules.physical_transfer.is_connected(on_physical_transfer):rules.physical_transfer.connect(on_physical_transfer)
+
+func on_physical_transfer(event_id:String,item:String,to:String) -> void:
+ if to=="hero" and item.begins_with("food:"):audio.cue("SFX_ITEM_HANDOFF",event_id)
 
 func on_vitality_lost() -> void:
  if not first_damage:first_damage=true;first_damage_pending=true
@@ -348,7 +448,11 @@ func set_auto_status(value:bool) -> void:
  if auto_status_box!=null:auto_status_box.set_pressed_no_signal(value)
  status_preferences_changed.emit(value)
 
+func active_battle():return street if int(session.data.level)==6 else combat
+
 func room_title(id:String) -> String:
+ if int(session.data.level)==6:return StreetMap.title(id)
+ if int(session.data.level)==5:return CombatMap.title(id)
  if int(session.data.level)==4:return str(CortexMap.ROOM_NAMES.get(id,"异化脑部出口" if id=="combat_exit" else id))
  if int(session.data.level)==3:return str(AsylumMap.ROOM_NAMES.get(id,"第四关出口" if id=="cortex_exit" else id))
  return {"bedroom":"卧室","ward":"小病房","lobby":"候诊区","clinic":"诊室","pharmacy":"药房","office":"医护办公室","stairs":"楼梯","hidden_street":"隐藏Street · 广场"}.get(id,id)
@@ -359,6 +463,8 @@ func advance_dialogue() -> void:
  if cortex!=null and int(session.data.level)==4 and not line.is_empty():cortex.upper_events.on_dialogue_advanced(line)
 
 func layout_for_room(id:String):
+ if int(session.data.level)==6:return street.floor_for(id)
+ if int(session.data.level)==5:return combat.floor_for(id)
  if int(session.data.level)==4:return CortexLayout.new(id)
  if id=="hidden_street":return HiddenLayout.new()
  if id=="bedroom" and int(session.data.get("room_geometry_version",1))>=2:return BedroomLayout.new()
@@ -387,6 +493,7 @@ func enter_room(id:String) -> void:
  var previous:String=room_id
  if not room_id.is_empty():session.data.rooms[room_id]={"drawer":drawer_open.duplicate(true)}
  room_id=id
+ if view_controls!=null:view_controls.reset()
  layout=layout_for_room(id)
  view.layout=layout
  configure_room_viewport()
@@ -397,6 +504,9 @@ func enter_room(id:String) -> void:
   hero_pos=arrival.landing if not restoring and not arrival.is_empty() else layout.get_anchor("spawn")
  if int(session.data.level)==4:
   hero_pos=CortexMap.doorway(id,previous) if not restoring and previous in CortexMap.GRAPH.get(id,[]) else CortexMap.SPAWN
+ if int(session.data.level)>=5:
+  var arrival:Dictionary=layout.portal(previous)
+  hero_pos=arrival.landing if not restoring and not arrival.is_empty() else layout.spawn()
  hero_route=PackedVector2Array()
  target_index=-1
  hero_state="idle"
@@ -413,6 +523,7 @@ func enter_room(id:String) -> void:
  if hospital!=null and not restoring:hospital.on_enter(previous,id)
  if asylum!=null and not restoring:asylum.on_enter(previous,id)
  if cortex!=null and not restoring:cortex.on_enter(previous,id)
+ if int(session.data.level)>=5 and not restoring:active_battle().on_enter(previous,id)
  keep_metric_actor_visible()
 
 func configure_room_viewport() -> void:
@@ -429,6 +540,12 @@ func configure_room_viewport() -> void:
 
 func keep_metric_actor_visible() -> void:
  # A long corridor pans at unchanged actor scale. No new gameplay clock.
+ if view_controls!=null and view_controls.manual_view:return
+ if int(session.data.level)==5:
+  var actor:Vector2=world_viewport.get_canvas_transform()*layout.project(hero_pos)
+  var safe_box:=Rect2(200,285,880,260)
+  var wanted:Vector2=actor.clamp(safe_box.position,safe_box.end)
+  camera.position+=(actor-wanted)/camera.zoom;camera.force_update_scroll();return
  if layout==null or not metric_institution_room(room_id) or not layout.config.get("camera_track",false):return
  var screen:Vector2=world_viewport.get_canvas_transform()*layout.project(hero_pos)
  var safe:=Rect2(200,270,880,270)
@@ -438,7 +555,9 @@ func keep_metric_actor_visible() -> void:
   camera.force_update_scroll()
 
 func reset_zoom() -> void:
+ if view_controls!=null:view_controls.reset()
  super.reset_zoom()
+ configure_room_viewport()
  keep_metric_actor_visible()
 
 func enter_hidden_street() -> void:
@@ -457,6 +576,8 @@ func door_point(id:String) -> Vector2:
  return door_point_for(room_id,id)
 
 func door_point_for(room:String,id:String) -> Vector2:
+ if int(session.data.level)==6:return StreetMap.doorway(room,id)
+ if int(session.data.level)==5:return CombatMap.doorway(room,id)
  return portal_for_room(room,id).at
 
 func portal_for_room(room:String,id:String) -> Dictionary:
@@ -481,8 +602,7 @@ func finish_door_crossing() -> void:
  elif destination=="combat_exit" and session.data.level==4:
   cortex.upper_events.release_all("crossed_exit")
   session.data.cortex_exit_crossed=true
-  session.data.exploration_boundary=true;action_phase="autonomy";hero_state="idle"
-  status_note="已到第四关持钥匙出口；第五关异化战斗待接入，此处不是结局"
+  unlock_combat()
  elif room_id=="bedroom":unlock_hospital()
  else:
   if int(session.data.level)==4 and not cortex_arrival_clear(destination):
@@ -528,6 +648,11 @@ func resolve_completed_key(target:String,receipt:String,finder:String="hero") ->
 
 func advance_world(delta:float) -> void:
  bind_status_rules()
+ if int(session.data.level)>=5:
+  rules.tick(delta);world_visual_time+=delta
+  family.tick(delta)
+  if rules.hp>0:active_battle().tick(delta)
+  return
  if room_id=="hidden_street":
   rules.tick(delta);world_visual_time+=delta
   hidden_route.tick(delta)
@@ -617,6 +742,12 @@ func advance_world(delta:float) -> void:
  if hospital!=null and session.data.level==2 and hospital.blocks_hero():return
  if asylum!=null and session.data.level==3 and asylum.blocks_hero():return
  if cortex!=null and session.data.level==4 and cortex.blocks_hero():return
+ if arrival_left>0:
+  arrival_left=maxf(0,arrival_left-delta)
+  hero_state="idle";hero_route=PackedVector2Array()
+  hero_facing=arrival_origin.rotated(sin((1.8-arrival_left)*TAU/1.8)*0.65)
+  if arrival_left<=0:hero_facing=arrival_origin
+  return
  if action_phase=="cortex_observing":action_phase="autonomy";hero_state="idle"
  if action_phase=="cortex_observation_route":
   advance_cortex_observation_route(delta)
@@ -1056,6 +1187,11 @@ func unlock_hospital() -> void:
  rules.owners["key"]=session.data.key_owner
  hospital.start_attempt()
  enter_room("lobby")
+ if not session.data.receipts.has("hospital_first_arrival"):
+  session.data.receipts.hospital_first_arrival=true
+  arrival_left=1.8;arrival_origin=hero_facing
+  status_note="门外已是陌生的候诊区；宿主停步环顾。"
+  rules.observe("角色","hospital_first_arrival","实际从卧室房门进入候诊区，停步观察陌生环境；尚未确认变化原因。","亲历事实","首次跨过房门")
 
 func unlock_asylum() -> void:
  # S1:P98/S4:T24: same first floor changes; the existing stairs stay open.
@@ -1093,14 +1229,77 @@ func unlock_cortex() -> void:
  cortex.start_attempt({"hospital":hospital.data.duplicate(true),"asylum":asylum.data.duplicate(true)})
  room_id="";enter_room("atrium")
 
+func unlock_combat() -> void:
+ cortex.release_all();cortex.upper_events.release_all("combat_entry")
+ rules.end_control();rules.intervention_lock=false;rules.trial.clear();rules.public_action.clear();rules.body_feedback.clear()
+ rules.cancel_search();rules.action.clear();rules.gripped=false;rules.mode="combat"
+ if not 5 in session.data.unlocked:
+  session.data.unlocked.append(5);rules.neurons+=3;rules.plexus+=2
+ session.data.level=5;session.data.exploration_boundary=false
+ session.data.targets=[];session.data.key_target="";session.data.key_seen=false;session.data.key_owner=""
+ rules.owners.key="";rules.search_attempts=0;rules.search_limit=0;rules.allow_supplemental_search=false
+ if not session.data.attempts.has("5"):session.data.attempts["5"]=1
+ rules.actual_attempt=int(session.data.attempts["5"])
+ completed.clear();deferred_targets.clear();motion.clear();arrival_left=0
+ combat.start();room_id="";enter_room("atrium")
+ status_note="第五关 · 异化战斗；无搜寻、钥匙或清场门槛。角色自主避险，玩家继续神经干预。"
+
+func unlock_street() -> void:
+ combat.data.boundary=true
+ if not 6 in session.data.unlocked:
+  session.data.unlocked.append(6);rules.neurons+=3;rules.plexus+=2
+ if not session.data.attempts.has("6"):session.data.attempts["6"]=1
+ if street.data.is_empty():street.start()
+ session.data.level=6;session.data.street_returning=false;session.data.exploration_boundary=false
+ rules.actual_attempt=int(session.data.attempts["6"]);rules.mode="combat";rules.search_limit=0
+ rules.gripped=false;rules.end_control();rules.action.clear();motion.clear();arrival_left=0
+ room_id="";enter_room("street_plaza")
+ status_note="Street · 固定身份沿真实分段行动；不需钥匙或清场，角色自主避险。"
+
+func restart_street(cycle_increment:int) -> void:
+ session.data.cycle+=cycle_increment;session.data.attempts["6"]=int(session.data.attempts.get("6",1))+1
+ invader_id+=1;profile.invader_id=invader_id;session.data.profile=profile.duplicate(true)
+ rules.actual_attempt=int(session.data.attempts["6"]);rules.next_actual_attempt();rules.end_control()
+ rules.pending_neural.clear();rules.pending_skin.clear();rules.hp=100;rules.sp=100;rules._sp_depleted=false
+ rules.effects.clear();rules.action.clear();rules.gripped=false;rules.hurt_left=0;rules.stun_left=0;rules.reaction_left=0;rules.transitioning=false
+ rules.neurons=maxi(5,rules.neurons);rules.mode="combat";rules.search_limit=0;rules.search_attempts=0
+ street.start() # Register once, inactive until the next real Street crossing.
+ session.data.level=5;session.data.street_returning=true;session.data.exploration_boundary=false;combat.data.boundary=false;combat.data.holder="";combat.data.door_left=-1.0
+ for id in combat.data.actors:
+  var a:Dictionary=combat.data.actors[id]
+  a.follow="";a.route=[];a.goal=[];a.last_seen=[];a.investigation={};a.phase="idle";a.hurt=0
+ combat.data.inspection={};combat.data.face_pending={}
+ death_left=0;motion.clear();hero_route=PackedVector2Array();dialogue_queue.clear();show_dialogue();vitality_panel.clear_transient()
+ room_id="";enter_room("atrium")
+ status_note="Street实际复活：只增加第六关尝试；沿第五关现有快照返程，不复活人物或刷新包扎。"
+
+func restart_combat(cycle_increment:int) -> void:
+ if intervention_feedback!=null:intervention_feedback.remaining=0
+ session.data.cycle+=cycle_increment;session.data.attempts["5"]=int(session.data.attempts.get("5",1))+1
+ invader_id+=1;profile.invader_id=invader_id;session.data.profile=profile.duplicate(true)
+ rules.actual_attempt=int(session.data.attempts["5"]);rules.next_actual_attempt()
+ rules.pending_neural.clear();rules.pending_skin.clear();rules.hp=100;rules.sp=100;rules._sp_depleted=false
+ rules.hurt_left=0;rules.stun_left=0;rules.reaction_left=0;rules.transitioning=false
+ rules.neurons=maxi(5,rules.neurons);rules.mode="combat";rules.search_limit=0;rules.search_attempts=0
+ death_left=0;motion.clear();completed.clear();hero_route=PackedVector2Array();session.data.exploration_boundary=false
+ vitality_panel.clear_transient();combat.start();room_id="";enter_room("atrium")
+ status_note="第五关实际复活：仍在异化中庭，尝试增长一次；不恢复第四关钥匙搜寻。"
+
 func finish_rest() -> void:
  if int(session.data.level)>=4:return
  restart_attempt(1,false)
 
 func restart_attempt(cycle_increment:int,revival:bool) -> void:
+ if intervention_feedback!=null:intervention_feedback.remaining=0
+ if int(session.data.level)==6 or session.data.get("street_returning",false):
+  if revival:restart_street(cycle_increment)
+  return
+ if int(session.data.level)==5:
+  if revival:restart_combat(cycle_increment)
+  return
  if int(session.data.level)>=4 and not revival:return
  # Presentation duration is not an extra mechanical cooldown.
- var mother_unlock:bool=family!=null and not family.data.is_empty() and family.data.mother_rest and not revival
+ var mother_unlock:bool=int(session.data.level)==1 and family!=null and not family.data.is_empty() and family.data.mother_rest and not revival
  session.data.cycle+=cycle_increment
  if revival:
   invader_id+=1;profile.invader_id=invader_id;session.data.profile=profile.duplicate(true)
@@ -1140,8 +1339,9 @@ func apply_cast() -> void:
  var target_before:String=point_id(target_index) if target_index>=0 else ""
  var result:Dictionary=rules.apply_pending()
  if not result.ok:return
+ if intervention_feedback!=null:intervention_feedback.present(result,target_before)
  if not result.success:
-  status_note="抵抗或中断：已付费，原行动保留；%s"%str(result.reason)
+  status_note="%s：%s；已付费，原行动保留"%[str(rules.spec(str(result.id)).name),"施放被中断" if result.reason=="interrupted" else "被抵抗"]
   audio.cue("invalid")
   return
  var id:String=result.id
@@ -1151,6 +1351,7 @@ func apply_cast() -> void:
  if session.data.level==3:asylum.on_skill(result)
  if session.data.level==4:cortex.on_skill(result)
  if room_id=="hidden_street":hidden_route.on_skill(result)
+ if int(session.data.level)>=5:active_battle().on_skill(result)
  # A doorway is not a search. Successful bodily interruptions must also
  # cancel its pending approach/opening/threshold route, before room arrival.
  var door_interrupted:bool=action_phase in ["door","opening","crossing"] and id in ["SKIN","GUT","KNEE","WITHDRAW","STARTLE","FEAR","CONTROL"]
@@ -1172,7 +1373,7 @@ func apply_cast() -> void:
  family.after_motion_started()
  hero_state="scratch" if id=="SKIN" else "hit" if id in ["GUT","TINNITUS"] else "idle"
  rules.observe("角色",str(result.event_id),str(rules.spec(id).name)+"的身体反应已实际发生")
- status_note="%s：实际反应；%s"%[id,"未完成搜寻取消，无收入" if result.search_cancelled else "保留已成立结果"]
+ status_note="%s：实际反应；%s"%[str(rules.spec(id).name),"未完成搜寻取消，无收入；重试重新占用机会" if result.search_cancelled else "保留已成立结果"]
  var cue:String={"SKIN":"SFX_SKIN","GUT":"SFX_GUT","WITHDRAW":"SFX_SEARCH_CLOTH","STARTLE":"SFX_SEARCH_CLOTH","TEMP":"SFX_SEARCH_CLOTH","PORES":"SFX_SEARCH_CLOTH"}.get(id,"")
  if not cue.is_empty():audio.cue(cue,str(result.event_id))
 
@@ -1187,7 +1388,7 @@ func cast_skill(id:String,context:Dictionary) -> void:
   menu._status.text=menu.reason_text(str(result.reason))
   audio.cue("invalid")
   return
- status_note="%s 已提交；反应等待关屏完成"%id
+ status_note="%s 已提交；反应等待关屏完成"%str(rules.spec(id).name)
  close_neuron_menu()
 
 func skill_context() -> Dictionary:
@@ -1199,9 +1400,11 @@ func skill_context() -> Dictionary:
  var medical_rescue:bool=(session.data.level==2 and hospital.data.get("holder","")=="doctor") or (session.data.level==3 and asylum.data.get("holder","") in ["doctor","assistant"])
  var context:Dictionary={"father_rescue":family!=null and family.rescue_context(),"medical_rescue":medical_rescue,"room":room_id,"action":kind,"target":target,"intent_point":[intended.x,intended.y]}
  if room_id=="hidden_street":context.merge(hidden_route.skill_context(),true)
+ if int(session.data.level)>=5:context.merge(active_battle().context(),true)
  return context
 
 func world_rate() -> float:
+ if int(session.data.level)>=5:return 1.0
  if room_id=="hidden_street":return 1.0
  return family.world_rate() if family!=null else 1.0
 
@@ -1215,15 +1418,20 @@ func close_neuron_menu() -> void:
 
 func start_motion(direction:Vector2,distance:float,duration:float=0.0) -> void:
  var endpoint:Vector2=hero_pos
+ var impact:Array=[]
  for i in range(1,ceili(distance/0.02)+1):
   var p:Vector2=hero_pos+direction.normalized()*minf(distance,i*0.02)
-  if not layout.walkable(p) or not layout.clear_segment(endpoint,p,layout.body_radius):break
+  if not layout.walkable(p) or not layout.clear_segment(endpoint,p,layout.body_radius):
+   if int(session.data.level)>=5 and layout.rack_rect.has_area() and layout.segment_hits_rect(endpoint,p,layout.rack_rect.grow(layout.body_radius)):impact=[p.x,p.y]
+   break
   if session.data.level==4 and not cortex_segment_clear(endpoint,p):break
   endpoint=p
  if endpoint.distance_to(hero_pos)<=0.001:
+  if not impact.is_empty():layout.record_rack_contact(hero_pos,Vector2(impact[0],impact[1]))
   hero_route=PackedVector2Array();motion.clear();return
  hero_route=layout.path(hero_pos,endpoint)
  motion={"kind":"neural_step","endpoint":[endpoint.x,endpoint.y],"speed":distance/duration if duration>0 else 1.15}
+ if not impact.is_empty():motion.impact=impact
 
 func move_hero(delta:float) -> void:
  var before:Vector2=hero_pos
@@ -1249,6 +1457,7 @@ func move_hero(delta:float) -> void:
    var intended:Array=rules.control_context.get("intent_point",[before.x,before.y])
    var endpoint:Vector2=hero_route[-1] if not hero_route.is_empty() else hero_pos
    rules.controlled_execution("navigation","floor",endpoint.distance_to(Vector2(float(intended[0]),float(intended[1])))>0.08)
+   if int(session.data.level)<5:rules.record_control_action("navigation","floor")
   footstep_left-=delta
   if footstep_left<=0:
    footstep_serial+=1;footstep_left=0.45
@@ -1289,11 +1498,25 @@ func open_system_page(key:String) -> void:
  menu.open_page(key)
  sync_audio_pause()
 
+func inventory_contents() -> Dictionary:
+ var contents:Dictionary={}
+ if family==null or family.data.is_empty():return contents
+ var able:bool=rules.hp>0 and not rules.body_busy() and not rules.gripped and not family.collapse_active() and family.data.eating.is_empty()
+ for kind in ["porridge","candy","chocolate"]:
+  var count:int=0
+  for id in family.data.inventory:
+   if family.data.food_types.get(id,"")==kind and rules.owners.get(id,"")=="hero":count+=1
+  contents[kind]={"count":count,"available":count>0 and able,"reason":"吞服完成后结算" if count>0 and able else "未持有" if count==0 else "身体当前不能食用"}
+ var gift_count:int=family.data.gift.size() if room_id=="bedroom" and int(session.data.level)==1 else 0
+ contents.gift={"count":gift_count,"available":gift_count>0 and able and not family.data.get("picking_gift",false),"reason":"关闭窗口后实际走近门口拾取；尚未进入库存"}
+ return contents
+
 func world_mouse_position(screen:Vector2) -> Vector2:
  return world_viewport.get_canvas_transform().affine_inverse()*(screen*Vector2(world_viewport.size)/Vector2(1280,720))
 
 func _unhandled_input(event:InputEvent) -> void:
  if input_lock_frames>0 or tutorial_ui!=null or opening_ui!=null:return
+ if view_controls!=null and view_controls.handle(event):get_viewport().set_input_as_handled();return
  if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_X:
   if first_damage and not menu.visible and not audio_panel.visible:vitality_panel.toggle_manual()
   get_viewport().set_input_as_handled();return
@@ -1302,6 +1525,27 @@ func _unhandled_input(event:InputEvent) -> void:
  if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_F and room_id=="hidden_street" and not world_paused():
   rules.begin_kick({"direction":[hero_facing.x,hero_facing.y]},true)
   get_viewport().set_input_as_handled();return
+ if int(session.data.level)>=5 and event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_F and not world_paused():
+  rules.begin_kick({"direction":[hero_facing.x,hero_facing.y]},true)
+  get_viewport().set_input_as_handled();return
+ if int(session.data.level)>=5 and event is InputEventMouseButton and event.pressed and not world_paused():
+  var pixel:Vector2=world_mouse_position(event.position)
+  if view.hero_body_rect().has_point(pixel):
+   if event.button_index==MOUSE_BUTTON_LEFT:open_neuron_menu();return
+   if event.button_index==MOUSE_BUTTON_RIGHT:open_system_page("tree");return
+  if rules.control_left>0 and not rules.body_busy() and not rules.gripped:
+   var point:Vector2=layout.unproject(pixel)
+   if event.button_index==MOUSE_BUTTON_RIGHT:hero_facing=(point-hero_pos).normalized();return
+   if event.button_index==MOUSE_BUTTON_LEFT:
+    if Input.is_key_pressed(KEY_SHIFT) and active_battle().observations.begin(view.furniture_at_pixel(pixel),true):get_viewport().set_input_as_handled();return
+    active_battle().observations.cancel()
+    for to in visible_doors:
+     if pixel.distance_to(layout.project(door_point(str(to))))<=22:
+      active_battle().data.controlled_door=str(to);active_battle().data.door_left=-1.0
+      hero_route=layout.path(hero_pos,door_point(str(to)));controlled_route=true;return
+    active_battle().data.controlled_door="";active_battle().data.door_left=-1.0
+    hero_route=layout.path(hero_pos,point);controlled_route=true;return
+  super._unhandled_input(event);return
  if event is InputEventMouseButton and event.pressed and not world_paused():
   var pixel:Vector2=world_mouse_position(event.position)
   var actor_screen:Vector2=layout.project(hero_pos)
@@ -1402,9 +1646,11 @@ func _unhandled_input(event:InputEvent) -> void:
 
 func update_ui() -> void:
  if not campaign_ready:return
+ if miniature_button!=null:miniature_button.text="微缩:"+("关" if not view_controls.miniature else "低反馈" if reduced_effects else "开")
  control_end_button.visible=rules.control_left>0
  if rules.control_left>0:control_end_button.text="交回 %.1fs"%rules.control_left
  scenario_label.text="第%d关 · %s · 实际尝试%d"%[session.data.level,room_title(room_id),rules.actual_attempt]
+ if session.data.get("street_returning",false):scenario_label.text="第五关返程 · %s · Street尝试%d"%[room_title(room_id),rules.actual_attempt]
  status_label.text="神经元 %d   神经簇 %d    %s #%d"%[rules.neurons,rules.plexus,profile.name,int(profile.invader_id)]
  view.self_modulate=Color.WHITE.lerp(Color("63716b"),float(view.rest_pose().t)*0.6)
  if not family.data.is_empty() and family.data.blood_door:view.self_modulate=view.self_modulate.lerp(Color("aaa0a2"),0.28)
@@ -1413,8 +1659,10 @@ func update_ui() -> void:
  father_prompt.refresh()
  status_visible=vitality_panel.visible
  debug_label.text="钥匙%s · 视野%.2f×"%["已携带" if has_key() else "未取得",ZOOM_STEPS[zoom_index]]
- state_label.text="%s / %s    搜寻 %d/%d    左键身体：神经菜单 · 空格：暂停"%[action_phase,hero_state,rules.search_attempts,rules.search_limit]
+ if session.data.level>=5:debug_label.text="战斗阶段 · 视野%.2f×"%ZOOM_STEPS[zoom_index]
+ state_label.text="已用搜寻机会 %d/%d    左键身体:干预 · 右键身体:星仓 · 中键拖动 · R复位 · 空格暂停"%[rules.search_attempts,rules.search_limit]
  if session.data.level==4:state_label.text="%s / %s    搜寻 %d（初始16，可补查）  掌控：左键查看 / Shift搜寻"%[action_phase,hero_state,rules.search_attempts]
+ if session.data.level>=5:state_label.text="自主避险与逃离 · 无钥匙/搜寻/休息 · 中键查看 · R复位 · 掌控中Shift+左键查看 / F踢击（须已解锁）"
  event_label.text=status_note
 
 func snapshot_data() -> Dictionary:
@@ -1423,6 +1671,9 @@ func snapshot_data() -> Dictionary:
   if int(info.usage)&PROPERTY_USAGE_SCRIPT_VARIABLE:saved_rules[info.name]=rules.get(info.name)
  return {"schema":3,"profile":profile.duplicate(true),"session":session.data.duplicate(true),"rules":saved_rules.duplicate(true),
   "room_id":room_id,"hero_pos":[hero_pos.x,hero_pos.y],"hero_facing":[hero_facing.x,hero_facing.y],
+  "arrival_left":arrival_left,"arrival_origin":[arrival_origin.x,arrival_origin.y],
+  "combat_state":combat.data.duplicate(true),"street_state":street.data.duplicate(true),
+  "view_state":{"manual":view_controls.manual_view,"miniature":view_controls.miniature,"position":[camera.position.x,camera.position.y]},
   "route":Array(hero_route).map(func(p):return [p.x,p.y]),"completed":completed.duplicate(),"target_index":target_index,
   "drawer_open":drawer_open.duplicate(true),"world_visual_time":world_visual_time,"hero_state":hero_state,
   "action_phase":action_phase,"action_left":action_left,"destination":destination,"rng_state":str(rng.state),
@@ -1437,19 +1688,29 @@ func snapshot_data() -> Dictionary:
 func restore_snapshot(data:Dictionary) -> bool:
  if int(data.get("schema",0)) not in [1,2,3] or not data.has("session") or not data.has("rules"):return false
  var proposed:Dictionary=data.session
- if int(proposed.get("level",0)) not in [1,2,3,4]:return false
+ if int(proposed.get("level",0)) not in [1,2,3,4,5,6]:return false
  var saved_room:String=str(data.get("room_id",""))
- if int(proposed.level)==4:
+ if int(proposed.level)==6:
+  if not saved_room in StreetMap.rooms():return false
+ elif int(proposed.level)==5:
+  if not saved_room in CombatMap.rooms():return false
+ elif int(proposed.level)==4:
   if not CortexMap.ROOM_NAMES.has(saved_room):return false
  elif int(proposed.level)==3:
   if not AsylumMap.ROOM_NAMES.has(saved_room):return false
  elif not Session.ROOM_POINTS.has(saved_room) and saved_room!="hidden_street":return false
  restoring=true
+ if intervention_feedback!=null:intervention_feedback.remaining=0
  if opening_ui!=null:opening_ui.queue_free();opening_ui=null
  runtime_generation+=1
  profile=data.profile.duplicate(true)
  invader_id=int(profile.invader_id)
  session.data=data.session.duplicate(true)
+ combat.layouts.clear();combat.data=data.get("combat_state",{}).duplicate(true)
+ street.layouts.clear();street.data=data.get("street_state",{}).duplicate(true)
+ if not street.data.is_empty():street.box.normalize();street.lateral_bed.normalize();street.materials.normalize()
+ if int(session.data.level)==6 and street.data.is_empty():restoring=false;return false
+ if int(session.data.level)==5 and combat.data.is_empty():restoring=false;return false
  # Continue an in-flight legacy action in its original geometry. The next
  # real rest/revival constructs the new room; no saved contact is teleported.
  if not session.data.has("room_geometry_version"):session.data.room_geometry_version=1
@@ -1461,6 +1722,7 @@ func restore_snapshot(data:Dictionary) -> bool:
  search_actions.receipts=data.get("prop_receipts",{}).duplicate(true)
  search_actions.observing_index=int(data.get("observing_index",-1))
  rules=NeuralRules.new()
+ bind_achievement_rules()
  var restored_rules:Dictionary=data.rules.duplicate(true)
  for key in restored_rules:
   if key=="config":continue
@@ -1489,10 +1751,14 @@ func restore_snapshot(data:Dictionary) -> bool:
  # old keyed stair endpoint; normal door logic performs the new transition.
  if int(session.data.level)==3 and room_id=="stairs" and has_key() and bool(session.data.exploration_boundary) and hero_pos.distance_to(AsylumMap.doorway("stairs","cortex_exit"))<=0.06:
   session.data.exploration_boundary=false
+ if int(session.data.level)==4 and room_id=="verify" and has_key() and bool(session.data.get("cortex_exit_crossed",false)) and bool(session.data.exploration_boundary) and hero_pos.distance_to(CortexMap.doorway("verify","combat_exit"))<=0.06:
+  # A historical development stop is not an authored story lock. Resume the
+  # existing physical door action; don't grant L5 rewards merely on loading.
+  session.data.exploration_boundary=false;session.data.cortex_exit_crossed=false
  hero_route=PackedVector2Array()
  for p in data.route:hero_route.append(Vector2(float(p[0]),float(p[1])))
  completed.assign(data.completed)
- if session.migrate_key_discovery(completed,str(data.get("rng_state",""))):
+ if int(session.data.level)<5 and session.migrate_key_discovery(completed,str(data.get("rng_state",""))):
   rules.owners.key=str(session.data.key_owner)
  target_index=int(data.target_index)
  drawer_open=data.drawer_open.duplicate(true)
@@ -1515,6 +1781,15 @@ func restore_snapshot(data:Dictionary) -> bool:
  show_dialogue()
  zoom_index=int(data.zoom_index)
  camera.zoom=Vector2.ONE*BASE_ZOOM*ZOOM_STEPS[zoom_index]
+ arrival_left=maxf(0,float(data.get("arrival_left",0)))
+ var arrival:Array=data.get("arrival_origin",[hero_facing.x,hero_facing.y])
+ arrival_origin=Vector2(float(arrival[0]),float(arrival[1]))
+ var saved_view:Dictionary=data.get("view_state",{})
+ view_controls.miniature=bool(saved_view.get("miniature",false))
+ view_controls.manual_view=bool(saved_view.get("manual",false));view_controls.dragging=false
+ if view_controls.manual_view:
+  var pos:Array=saved_view.get("position",[camera.position.x,camera.position.y])
+  camera.position=Vector2(float(pos[0]),float(pos[1]));view_controls.clamp_camera()
  presentation_id=str(data.get("presentation_id","a"))
  view.catalog.select_set(presentation_id)
  if data.menu_open:menu.open_page(str(data.get("menu_page","cast")))
@@ -1525,4 +1800,5 @@ func restore_snapshot(data:Dictionary) -> bool:
  keep_metric_actor_visible()
  if not bool(profile.get("opening_completed",true)):open_parasite(data.get("opening_state",{}))
  if int(data.schema)==1:status_note="已载入旧版存档；下次保存升级，原有效档单独保留为profile.schema1.json"
+ restore_event_achievements()
  return true

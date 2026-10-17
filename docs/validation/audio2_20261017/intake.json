@@ -1,0 +1,97 @@
+{
+  "archive_sha256": "4ff3fccf33c025cccb7dd898b97204fe83aaf290d4e11a2337cb8303b750cf7b",
+  "archive_entries": [
+    {
+      "path": "音频2/",
+      "bytes": 0
+    },
+    {
+      "path": "音频2/MUS_DANGER_OUTRO_v001.wav",
+      "bytes": 1938930
+    },
+    {
+      "path": "音频2/MUS_DANGER_v001.wav",
+      "bytes": 63408594
+    },
+    {
+      "path": "音频2/MUS_ENDING_E1_v001.wav",
+      "bytes": 7915470
+    },
+    {
+      "path": "音频2/MUS_ENDING_E2_v001.wav",
+      "bytes": 24767016
+    },
+    {
+      "path": "音频2/MUS_HOSPITAL_v001.wav",
+      "bytes": 78184674
+    },
+    {
+      "path": "音频2/MUS_STREET_FINAL_TENSION_v001.wav",
+      "bytes": 34471074
+    },
+    {
+      "path": "音频2/MUS_STREET_FINAL_v001.wav",
+      "bytes": 48298734
+    },
+    {
+      "path": "音频2/SFX_UI_CONFIRM_v001.wav",
+      "bytes": 29574
+    }
+  ],
+  "received": [
+    {
+      "path": "DOCX/早期音乐素材/音频2/MUS_HOSPITAL_v001.wav",
+      "bytes": 78184674,
+      "sha256": "65a18421b3fd426204d4f02c230837fab45a060b674d051377bfa6e19a2b25de",
+      "analysis_rate": 48000,
+      "analysis_channels": 2,
+      "seconds": 271.4721666666667,
+      "peak": 0.5360665321350098,
+      "rms": 0.062108226120471954,
+      "leading_below_minus55_db_seconds": 0.10783333333333334,
+      "trailing_below_minus55_db_seconds": 0.0,
+      "samples_at_full_scale": 0
+    },
+    {
+      "path": "DOCX/早期音乐素材/音频2/MUS_DANGER_v001.wav",
+      "bytes": 63408594,
+      "sha256": "14b8eb0cdbdbc014a54216e208f0c13ffde15c515e167510bd77640ca428387f",
+      "analysis_rate": 48000,
+      "analysis_channels": 2,
+      "seconds": 220.16633333333334,
+      "peak": 0.6503840684890747,
+      "rms": 0.10307948291301727,
+      "leading_below_minus55_db_seconds": 0.1683125,
+      "trailing_below_minus55_db_seconds": 0.0,
+      "samples_at_full_scale": 0,
+      "same_as_previous_source": true
+    },
+    {
+      "path": "DOCX/早期音乐素材/音频2/MUS_ENDING_E2_v001.wav",
+      "bytes": 24767016,
+      "sha256": "0d0e940ecdc3a1e95cac140466c8382a5e58bd405ab4d76697b04eadd02dd87d",
+      "analysis_rate": 48000,
+      "analysis_channels": 2,
+      "seconds": 85.9941875,
+      "peak": 0.9999998807907104,
+      "rms": 0.09871191531419754,
+      "leading_below_minus55_db_seconds": 0.037395833333333336,
+      "trailing_below_minus55_db_seconds": 0.012458333333333333,
+      "samples_at_full_scale": 0
+    },
+    {
+      "path": "DOCX/早期音乐素材/音频2/SFX_UI_CONFIRM_v001.wav",
+      "bytes": 29574,
+      "sha256": "31cab845a41ac0d8d3f17ea162c45fac6001959bba2688c409f5b106c57d5c14",
+      "analysis_rate": 48000,
+      "analysis_channels": 2,
+      "seconds": 0.10029166666666667,
+      "peak": 1.0,
+      "rms": 0.23584400117397308,
+      "leading_below_minus55_db_seconds": 0.0,
+      "trailing_below_minus55_db_seconds": 0.0,
+      "samples_at_full_scale": 75,
+      "same_as_previous_source": false
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 extends RefCounted
 ## R1 global achievements are separate from profile knowledge and resources.
-## Only E1's two keys are wired in B2; the full original twelve-key set is
-## reserved here without claiming that the other ten triggers are implemented.
+## Separate entry points accept only the original keys for their real events.
 const DEFINITIONS={
  "first_death":"寿司","parent_collapse_death":"矛盾的牺牲品","first_awakening":"睁眼",
  "exposed_player":"谁在操作？","first_control_action":"身体借我一下","control_resisted":"夺舍未遂",
  "autonomous_main_clear":"自由意志","hidden_clear":"又短又快真厉害","host_wins":"梦醒时分",
  "character_wins":"反客为主","player_wins":"借壳上市","self_erased":"静音模式"}
 const E1_KEYS=["hidden_clear","host_wins"]
+const EVENT_KEYS=["first_death","parent_collapse_death","first_awakening","exposed_player","first_control_action","control_resisted","self_erased"]
 var root:String="user://profiles"
 
 func path() -> String:
@@ -36,6 +36,21 @@ func grant(keys:Array,event_id:String,source:String) -> Dictionary:
  if event_id.is_empty():return {"ok":false,"error":"缺少实际事件编号"}
  for key in keys:
   if not key in E1_KEYS:return {"ok":false,"error":"该成就触发尚未接入；不能由预览或未知事件解锁"}
+ return _grant_valid(keys,event_id,source)
+
+func grant_main(keys:Array,event_id:String) -> Dictionary:
+ if event_id.is_empty():return {"ok":false,"error":"缺少实际事件编号"}
+ for key in keys:
+  if key not in ["player_wins","character_wins","autonomous_main_clear"]:return {"ok":false,"error":"非Street出口成就"}
+ return _grant_valid(keys,event_id,"R1:P22–30/P50–51；实际Street终点")
+
+func grant_event(keys:Array,event_id:String) -> Dictionary:
+ if event_id.is_empty():return {"ok":false,"error":"缺少实际事件编号"}
+ for key in keys:
+  if key not in EVENT_KEYS:return {"ok":false,"error":"非实际规则事件成就"}
+ return _grant_valid(keys,event_id,"R1:T6R2–7/R13；实际死亡/觉醒/识破/掌控事件")
+
+func _grant_valid(keys:Array,event_id:String,source:String) -> Dictionary:
  var current:Dictionary=load_progress()
  if not current.ok:return current
  var next:Dictionary=current.data.duplicate(true)

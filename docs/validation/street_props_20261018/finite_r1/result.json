@@ -1,0 +1,36 @@
+{
+  "failures": [
+    "bed attack JSON keeps locked sideways direction and distance",
+    "actual carrier kick uses existing contact damage once",
+    "already moving bed decelerates after carrier interruption instead of disappearing",
+    "interrupted bed reaches a physical stationary state",
+    "carrier death leaves the launched physical bed and coast"
+  ],
+  "passes": [
+    "box seeker fixture genuinely loses line of sight behind existing cabinet",
+    "labor starts visible preparation without early sound",
+    "pre-release injury retains the only box with no fabricated impact",
+    "real manual pause holds box preparation",
+    "actual release starts flight without landing sound",
+    "planned throw respects original four metre maximum",
+    "in-flight JSON keeps the same object and unheard impact",
+    "released box survives thrower's death and sounds only on actual landing",
+    "occluded audible seeker investigates while visible pursuer keeps target",
+    "landing sound does not cancel launched attacks or retarget their directions",
+    "box causes no damage, healing, resource or stun effect",
+    "stationary box does not replenish or keep emitting",
+    "final landing preserves the actual return doorway lane",
+    "side-push reserves all original door-to-door routes outside complete sweep",
+    "distinct carrier starts an actual lateral bed attack",
+    "manual pause freezes physical bed windup",
+    "moving side edge makes one original twenty HP contact",
+    "sideways stroke and actual displacement each stay within one metre",
+    "stopped/recovering bed cannot keep crushing for repeated damage",
+    "wall/exit-closing stroke is rejected before launch",
+    "kick into bed body does not count as hitting its distant carrier",
+    "dead carrier's stopped bed remains a real obstacle at saved position",
+    "second transport bed creates no duplicate patient or actor"
+  ],
+  "rendered": true,
+  "scope": "Declared stationary actor/occlusion/contact fixtures through real box, lateral bed, kick, pause and JSON handlers. Not natural full route, all NPC combinations or formal art/audio acceptance."
+}

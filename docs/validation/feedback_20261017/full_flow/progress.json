@@ -1,0 +1,21 @@
+{
+  "body": {},
+  "frame": 11400,
+  "guard": {
+    "done": false,
+    "elapsed": 0.0,
+    "last_room": "",
+    "last_seen": [],
+    "phase": "idle",
+    "target": ""
+  },
+  "hero": [
+    2.71040320396423,
+    0.389596939086914
+  ],
+  "hospital_reading": {},
+  "phase": "door",
+  "room": "verify",
+  "transport": {},
+  "world_time": 364.800000000075
+}

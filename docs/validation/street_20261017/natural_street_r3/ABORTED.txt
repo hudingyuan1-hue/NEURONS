@@ -1,0 +1,1 @@
+Stopped after actual death snapshots proved the dodge goal could be inside another actor. No probability/damage change; corrected body clearance and exit-progress scoring next.

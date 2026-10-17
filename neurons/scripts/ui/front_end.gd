@@ -53,6 +53,20 @@ func _ready() -> void:
   "--fresh-flow-check":"fresh_flow_check",
   "--dialogue-playback-check":"dialogue_playback_check",
   "--key-discovery-check":"key_discovery_check",
+  "--play-feedback-check":"play_feedback_check",
+  "--combat-chapter-check":"combat_chapter_check",
+  "--combat-natural-check":"combat_natural_check",
+  "--combat-detail-check":"combat_detail_check",
+  "--combat-evidence-check":"combat_evidence_check",
+  "--street-chapter-check":"street_chapter_check",
+  "--combat-noise-check":"combat_noise_check",
+  "--audio-delivery-check":"audio_delivery_check",
+  "--street-natural-check":"street_natural_check",
+  "--street-props-check":"street_props_check",
+  "--street-materials-check":"street_materials_check",
+  "--street-materials-live-check":"street_materials_live_check",
+  "--street-props-live-check":"street_props_live_check",
+  "--achievement-events-check":"achievement_events_check",
   "--cortex-check":"cortex_check",
   "--cortex-navigation-check":"cortex_navigation_check",
   "--cortex-events-check":"cortex_events_check",
@@ -118,7 +132,7 @@ func create_title() -> void:
  content.add_child(title)
  message=Label.new()
  message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
- message.text="自主行动与神经干预\n当前开发批次：开场、首关、医院、精神病院两层与隐藏Street；画面使用标注占位，后续关卡继续制作。"
+ message.text="自主逃离与神经干预\n当前可玩：开场、卧室、医院、精神病院、脑部探索、第五关、Street主线与隐藏Street。人物与场景仍有占位；部分人物专属行为及正式音画继续制作。"
  content.add_child(message)
  add_button("继续游戏",continue_game,not store.load_snapshot().ok)
  add_button("建立档案",show_profile)

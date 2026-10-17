@@ -1,0 +1,29 @@
+{
+  "scope": "Targeted existing-source check only; no renewed full audit, external research or formal art production.",
+  "sources": [
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59"
+    },
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第四阶段_数值与完整流程_合并修订版.docx",
+      "sha256": "c3f2e9ba7d0b23d7c0654b546b0fa0ce075a0e885f59f48066280dd0b33eee39"
+    },
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_规则增补与卧室样片规格_R1.docx",
+      "sha256": "201488a3befb6543343f4111fee42012b22b96e81472896974ba0a398677bf44"
+    }
+  ],
+  "adopted": [
+    "S3:P1756–1763 independent side-pushed bed, real contact, inertial stop, remaining lane",
+    "S3:P1813–1819 existing one box, actual impact, occluded audible pursuers only, no direct damage/stun",
+    "S4:P229/T18–21 original damage/windows, <=1m side push, 4m throw and 6m hearing",
+    "R1:P43–51/T6 twelve independent global achievements; actual action, paid resistance and effective ms"
+  ],
+  "exact_quotes_found": [
+    "刚才那一下，把它引开了。",
+    "踢中床体不算踢中转运工。",
+    "盒子实际落地或撞上物体才发声"
+  ],
+  "all_twelve_original_keys_in_R1": true
+}
