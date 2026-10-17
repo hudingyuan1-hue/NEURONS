@@ -1,39 +1,11 @@
 {
-  "failures": [],
-  "passes": [
-    "opening integration uses isolated test save root",
-    "actual title button opens profile entry",
-    "actual new-profile button starts parasite intro before tutorial",
-    "new-profile opening receives current visual preference before initial ready",
-    "real opening reuses actual saved player name and invader ID",
-    "visible opening pause button pauses presentation while entire world remains frozen",
-    "paused opening changes no typing, gameplay, RNG, ownership or fact ledger",
-    "cinematic click over underlying save controls does not pass through",
-    "actual campaign autosave includes incomplete opening and paused subtitle state",
-    "existing save-and-title handler checkpoints covered intro successfully",
-    "real CONTINUE restores middle subtitle through JSON without replaying from start",
-    "restore freezes original world and does not prematurely issue tutorial",
-    "continuation never rerolls name or invader identity",
-    "actual next buttons complete full intro and start one isolated tutorial",
-    "actual sequential intro visits all nine ordered cards",
-    "full intro leaves resources, world clock, identity ledgers and unique key untouched",
-    "completion is saved with no stale opening pending state",
-    "tutorial skip remains independent of opening completion",
-    "legacy-profile fixture is stored through real checksum save",
-    "old profile without opening flag continues without retroactively inserting intro",
-    "legacy continuation neither reissues resources nor rerolls identity"
+  "failures": [
+    "actual title button opens profile entry"
   ],
-  "rendered": true,
+  "passes": [
+    "opening integration uses isolated test save root"
+  ],
+  "rendered": false,
   "scope": "actual new-profile/pause/next/continue/tutorial-skip handlers with injected viewport mouse input; existing save-and-title handler for restart; legacy flag fixture only; placeholder art/no voice acceptance",
-  "visited": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8
-  ]
+  "visited": []
 }
