@@ -1,0 +1,371 @@
+{
+  "baseline": "7ab88f22a246e23feb1c0bac95dd6d77a401446f",
+  "start_snapshot_files_verified": 407,
+  "sources": [
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+      "paragraphs": [
+        {
+          "paragraph": 1596,
+          "text": "1．父亲 敌对"
+        },
+        {
+          "paragraph": 1597,
+          "text": "触发：实际察觉角色后接近；入口落点不直接处于挥瓶命中范围。"
+        },
+        {
+          "paragraph": 1598,
+          "text": "动作：转肩、举起粘连碎瓶的手→固定本次挥击方向→横向挥瓶→收臂恢复。绕喷泉时必须实际转向，不能穿池体命中。"
+        },
+        {
+          "paragraph": 1599,
+          "text": "效果：碎瓶有效接触扣生命，同次挥击对同一对象只结算一次；碰到障碍不能继续隔物命中。有效踢击可打断尚未落下的攻击。"
+        },
+        {
+          "paragraph": 1600,
+          "text": "联动：与母亲实际相遇后，按已有动作衔接进入互攻；不重播第一关崩塌。与大黄的事件仍以实际命中为条件。"
+        },
+        {
+          "paragraph": 1601,
+          "text": "对白：保留原场景对白条件；本次追击不套用第一关邀请出门、血门和持续精神消耗流程。"
+        },
+        {
+          "paragraph": 1742,
+          "text": "21．药师 敌对 第二关身份"
+        },
+        {
+          "paragraph": 1743,
+          "text": "动作：举起掌中编号药杯→倾杯预告泼洒方向→向近处泼出→收手恢复。"
+        },
+        {
+          "paragraph": 1744,
+          "text": "命中：按液体实际经过的局部范围判断；墙体、箱体能够挡住对应部分，不把整条街道直接标成命中区。"
+        },
+        {
+          "paragraph": 1745,
+          "text": "本节效果细化：泼洒命中造成一次精神损失；不等同吞服，不套用口服后的停步药效，也不补写腐蚀、中毒或持续掉血。"
+        },
+        {
+          "paragraph": 1746,
+          "text": "落地：未命中的液体落地后仅保留短暂表现，不与场景积水连接成持续伤害区域。"
+        },
+        {
+          "paragraph": 1747,
+          "text": "药杯状态：按杯中实际剩量消耗；空杯不能继续结算泼洒，往返不补满。杯体固定在掌中，不成为可拾取药物。"
+        },
+        {
+          "paragraph": 1588,
+          "text": "跨段：同一人物保留生命、位置、攻击进度、冷却和事件记录，沿实际连接移动。往返不复制人物、不复活退场者、不刷新治疗。"
+        },
+        {
+          "paragraph": 1589,
+          "text": "攻击调度：窄处错开起手；宽处允许夹击，但保留绕行方向。后到者等待或沿空路绕行，不能与先到者同时封满唯一通路；已经发生的攻击不因调度倒销。"
+        },
+        {
+          "paragraph": 1590,
+          "text": "支道退路：入口允许角色与追兵错身；大型人物无法进入时，在外侧活动，不固定堵口。友方、轮椅、尸体和遗留物均不得永久封死原入口。"
+        },
+        {
+          "paragraph": 1591,
+          "text": "对白与结算：正式对白暂停世界；友好、中立人物对白在脱离追击后触发，同次事件不反复播放。死亡回异化褶皱中庭，保留战斗阶段进度；第一关隐藏 Street 单独记账。"
+        }
+      ],
+      "table_rows": []
+    },
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第四阶段_数值与完整流程_合并修订版.docx",
+      "sha256": "c3f2e9ba7d0b23d7c0654b546b0fa0ce075a0e885f59f48066280dd0b33eee39",
+      "paragraphs": [
+        {
+          "paragraph": 227,
+          "text": "泼洒：1秒预告→0.3秒泼出→0.6秒收招→3秒冷却。"
+        },
+        {
+          "paragraph": 297,
+          "text": "药效按实际吞服／泼洒编号结算；杯接触、吞咽、登记不能各扣一次。"
+        }
+      ],
+      "table_rows": [
+        {
+          "table": 16,
+          "row": 5,
+          "cells": [
+            "Street第二关药师泼洒",
+            "命中精神−10；不扣生命、不产生口服停顿",
+            "携带两次泼洒量"
+          ]
+        },
+        {
+          "table": 19,
+          "row": 9,
+          "cells": [
+            "第二关药师",
+            "0／10",
+            "局部泼洒，最大距离2米"
+          ]
+        }
+      ]
+    }
+  ],
+  "protected_street_fields": {
+    "sources": true,
+    "status": true,
+    "actors": true,
+    "attacks": true,
+    "observations": true,
+    "dialogue": true,
+    "rooms": true,
+    "exit_room": true,
+    "exit_id": true,
+    "good_ids": true,
+    "materials": true,
+    "displays": true
+  },
+  "prior_test_parameters_unchanged": true,
+  "new_test_parameters": {
+    "splash_cup_forward_m": 0.2,
+    "splash_cup_side_m": 0.14,
+    "splash_drop_radius_m": 0.04,
+    "splash_body_radius_m": 0.21,
+    "splash_sample_m": 0.025,
+    "splash_ray_count": 7,
+    "splash_ground_s": 0.75,
+    "splash_release_height_px": 75.0,
+    "splash_ground_height_px": 5.0,
+    "bottle_radius_m": 0.04,
+    "bottle_length_m": 0.24,
+    "bottle_near_m": 0.4,
+    "bottle_shoulder_m": 0.16,
+    "bottle_sample_m": 0.025,
+    "bottle_body_radius_m": 0.21,
+    "bottle_raise_px": 75.0
+  },
+  "protected_files": [
+    {
+      "path": "neurons/data/skills.json",
+      "sha256": "2d69fc3abb4b7be7516db6a4cb17c8988ed6bee23925eea442c0a95cbdf24f68",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/data/key_discovery.json",
+      "sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/data/combat_chapter.json",
+      "sha256": "e1c90c646af4b0e505f00efc4639b4187cc625382159233e29b1e7c90b069185",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/data/cortex_events.json",
+      "sha256": "0c9b273471d2fc2402a3b862d846b751fcf6f72d67bf3dcaaaa45ad1d2308273",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/data/hospital.json",
+      "sha256": "b6ac2dc74d137576919ac4701802726cdba305dc830c806fff7bc9696567fea3",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_chapter.gd",
+      "sha256": "b7de6635e757e3a3ac4bdbc00d850c83fc68c332597c00f340d679d26e4c78d9",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd",
+      "sha256": "4c8ba30b45d733333b288c123e77ec48596720d910894b7a5833f0a1fb73bed7",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "sha256": "2da88ee60a0ef17ad07a41fb871a96f82c87debd12494f4ce25d82a67f31520e",
+      "unchanged_ignoring_git_line_endings": true
+    }
+  ],
+  "original_26_bindings_and_streams_unchanged": [
+    {
+      "id": "MUS_MENU",
+      "path": "neurons/assets/audio/b1_development/mus_menu_dev_v001.ogg",
+      "sha256": "e930c6f512f7e86f9092227e1ee2cc562ab13a3fbe08b41dc4304bfbd7ea4bc6",
+      "unchanged": true
+    },
+    {
+      "id": "MUS_ROOM",
+      "path": "neurons/assets/audio/b1_development/mus_room_dev_v001.ogg",
+      "sha256": "ccfd5ba33a21a8d0b3264913d83853e42c0ad4f029d769155a850c68468a625b",
+      "unchanged": true
+    },
+    {
+      "id": "AMB_FAN",
+      "path": "neurons/assets/audio/b1_development/amb_fan_dev_v001.ogg",
+      "sha256": "a7831facf9a62ccec106e41af0a616dd8479ea71cf2e1cc582ac4648ca0775b2",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_UI_CONFIRM",
+      "path": "neurons/assets/audio/audio2_20261017/sfx_ui_confirm_v001_new.wav",
+      "sha256": "58698cf0fe71610a327fac3997154df696db4934204142bf2fc163c9c92a0701",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_UI_BACK",
+      "path": "neurons/assets/audio/b1_development/sfx_ui_back_dev_v001.wav",
+      "sha256": "09a434d80579709f2084a5ea0e76445ec4fe35be9aa98df6b9f4d5f8247d609e",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_UI_DENIED",
+      "path": "neurons/assets/audio/b1_development/sfx_ui_denied_dev_v001.wav",
+      "sha256": "bdbcd44ec754f9baa57ac7da882edb9b995128692f0326ffffa72b95fe8d9344",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_DOOR_OPEN",
+      "path": "neurons/assets/audio/b1_development/sfx_door_open_dev_v001.wav",
+      "sha256": "37e655a65b6e01938124787eeb5b05a440e5620b2e1982e8adcc27362494f58b",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_DOOR_CLOSE",
+      "path": "neurons/assets/audio/b1_development/sfx_door_close_dev_v001.wav",
+      "sha256": "f1906508a7dc9427b36aedc159597de86d892a2629dc90a54fca7c6d639bb475",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_FOOTSTEP",
+      "path": "neurons/assets/audio/b1_development/sfx_footstep_synth_v001.wav",
+      "sha256": "26679f41862b2cd854a243cc23539142305af415c8fe73cb43b40053a1e057a2",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_SEARCH_CLOTH",
+      "path": "neurons/assets/audio/b1_development/sfx_search_cloth_synth_v001.wav",
+      "sha256": "fe4032f4bcf446dfdf316eaf11f04af82e56530d950cc46f27967ade7486dfe9",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_SEARCH_PAPER",
+      "path": "neurons/assets/audio/b1_development/sfx_search_paper_synth_v001.wav",
+      "sha256": "073c6402f4b8511266dc01200953b98902d975b565ae408d25876576fac09072",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_SKIN",
+      "path": "neurons/assets/audio/b1_development/sfx_skin_synth_v001.wav",
+      "sha256": "0b56cadce32920be7e9a22af9ceb9fe312360b7acf29d8203c09a4c0a345402d",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_GUT",
+      "path": "neurons/assets/audio/b1_development/sfx_gut_synth_v001.wav",
+      "sha256": "4276dd00efd622b9c0acadd9101920248b6ce808bbe7822447a9cfe4952da27a",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_DRAWER",
+      "path": "neurons/assets/audio/b1_development/sfx_drawer_synth_v001.wav",
+      "sha256": "1986a2aa4636204ec2c09b02840572d3149af97f26b94cfeb037ec00a69c8cf5",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_COLD",
+      "path": "neurons/assets/audio/b1_development/sfx_cold_synth_v001.wav",
+      "sha256": "ca04f5c9c25028d87b423b3e7cb34f6ac2173bf12a609e426d6305aea09ce57c",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_KEY",
+      "path": "neurons/assets/audio/feedback_20261017/sfx_key_synth_v001.wav",
+      "sha256": "e1b23b6ee60cbc562a58bb51e8aeba1efc292d815c54efa4104425e632ddc924",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_ITEM_HANDOFF",
+      "path": "neurons/assets/audio/feedback_20261017/sfx_item_handoff_synth_v001.wav",
+      "sha256": "60c481dbed93a447c7844fa2d8766e4964e4b755fbc951de36fce68a208001d8",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_HIT",
+      "path": "neurons/assets/audio/feedback_20261017/sfx_hit_synth_v001.wav",
+      "sha256": "2c908e96b870fd45b1afd46f4a74aa28ef8baa364b91526fc3a9e081cc4e7070",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_UI_SAVE",
+      "path": "neurons/assets/audio/feedback_20261017/sfx_ui_save_dev_v001.wav",
+      "sha256": "470c5dd721abfc86370ca79dfefcaeb7263f7245f1eae2ecff43da974114d76b",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_UI_REWARD",
+      "path": "neurons/assets/audio/feedback_20261017/sfx_ui_reward_dev_v001.wav",
+      "sha256": "8227bf2e9a557343ec8bfa49b1e504ef839c32b38d3577bbc240753ee124c927",
+      "unchanged": true
+    },
+    {
+      "id": "MUS_DANGER",
+      "path": "neurons/assets/audio/feedback_20261017/mus_danger_dev_v001.ogg",
+      "sha256": "ab93ab86f90c0f3290fd04d348f2df57f754dd3641fa41efffe720faf0061ffa",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_COMBAT_WINDUP",
+      "path": "neurons/assets/audio/feedback_20261017/sfx_combat_windup_synth_v001.wav",
+      "sha256": "5a90ab657d578cfe04a65c3825fc4ae86c5103d7c256c58b8d7cdba8832c3b8c",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_BED_ROLL",
+      "path": "neurons/assets/audio/feedback_20261017/sfx_bed_roll_synth_v001.wav",
+      "sha256": "c0b9c15317202061a501b8360e413238eb4f738122f88a927b098d8acc7b0d5e",
+      "unchanged": true
+    },
+    {
+      "id": "SFX_RACK_CONTACT",
+      "path": "neurons/assets/audio/feedback_20261017/sfx_rack_contact_synth_v001.wav",
+      "sha256": "e3ad76f8a7e7230be2416cdb63432f949c65ab0eb01927bb06aa2d27ebcaf5aa",
+      "unchanged": true
+    },
+    {
+      "id": "MUS_END",
+      "path": "neurons/assets/audio/audio2_20261017/mus_ending_e2_v001.ogg",
+      "sha256": "a4981367f9ff94ace1446eec41bbdcaae3295372a165db418bf939dadd6047fc",
+      "unchanged": true
+    },
+    {
+      "id": "MUS_HOSPITAL",
+      "path": "neurons/assets/audio/audio2_20261017/mus_hospital_v001.ogg",
+      "sha256": "079422016b535c4d44a4acecec0f224108b60112384aba8cde1b988e5cc9592e",
+      "unchanged": true
+    }
+  ],
+  "new_audio": {
+    "path": "neurons/assets/audio/street_20261018/sfx_splash_synth_v001.wav",
+    "sha256": "a6a388fa390cde648a49abc9b0bd13244219074b2e4f42b1f73c17816146ca9c",
+    "id": "SFX_SPLASH",
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "duration_seconds": 0.28,
+    "peak_db": -12.041199826559248,
+    "rms_db": -26.9139783694188,
+    "leading_below_minus55_db_seconds": 0.00010416666666666667,
+    "license": "本项目离线合成；无第三方录音/付费服务",
+    "subjective_listening_verified": false
+  },
+  "implemented": {
+    "street_splash.gd": "Real local ray packets, original1s/.3s/.6s/3s and two portions, original0HP/10SP once, partial obstruction, released fluid independent of owner hurt/death/location; brief harmless ground residue, no oral pause/poison/item. One ordinary offline candidate cue at true release, no new NPC hearing rule.",
+    "street_bottle.gd": "Attached actual glass capsule swept inside original reach/width, turned shoulder/fixed direction, local obstacle stop, shared15HP/GUT/once-per-target and actual effective kick; source-specific dog fragmentation still requires true contact, real independent parent targeting preserved."
+  },
+  "limits": [
+    "All figures, cup, droplets and glass remain code placeholders, no formal art/anatomy approval.",
+    "Finite same-frame fatal fixture aligns bodies on the actual glass segment; not evidence of natural crowd timing. Initial .3s maternal cooldown exists only in one independent finite scene to verify both actual contacts, not production difficulty or scripted chain.",
+    "Current packet pause/sound start is instrumented, film is silent and no subjective listening/final mix accepted.",
+    "No full B6/B7, all branches, human normal-speed or dual-machine acceptance."
+  ],
+  "external_sources": 0,
+  "imagegen_calls": 0,
+  "paid_services": 0
+}

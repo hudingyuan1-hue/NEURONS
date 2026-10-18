@@ -1,0 +1,8 @@
+{
+  "scope": "Actual release EXE normal main scene and OS WM_CLOSE, independent save root, Dummy audio; no full EXE gameplay/listening claim",
+  "window_created": true,
+  "close_message_sent": true,
+  "exit_code": 0,
+  "stderr": null,
+  "passed": true
+}

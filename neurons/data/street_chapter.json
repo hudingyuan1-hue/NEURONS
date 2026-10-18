@@ -906,7 +906,169 @@
     "clamp_forearm_length_m": 0.24,
     "clamp_forearm_radius_m": 0.07,
     "clamp_contact_ratio": 0.9,
-    "clamp_capture_radius_m": 0.1
+    "clamp_capture_radius_m": 0.1,
+    "embrace_shoulder_m": 0.23,
+    "embrace_arm_radius_m": 0.05,
+    "embrace_torso_radius_m": 0.21,
+    "embrace_contact_ratio": 0.9,
+    "embrace_start_m": 0.85,
+    "embrace_elbow_forward_m": 0.55,
+    "embrace_elbow_open_m": 0.58,
+    "embrace_elbow_closed_m": 0.46,
+    "embrace_hand_open_forward_m": 0.65,
+    "embrace_hand_open_m": 0.68,
+    "embrace_hand_closed_m": 0.08,
+    "medicine_cup_rest_m": 0.15,
+    "medicine_hand_radius_m": 0.06,
+    "medicine_head_radius_m": 0.16,
+    "medicine_mouth_radius_m": 0.05,
+    "medicine_head_contact_ratio": 0.9,
+    "medicine_start_m": 1.0,
+    "medicine_head_fix_s": 0.2,
+    "medicine_cup_approach_s": 0.55,
+    "medicine_pour_s": 0.8,
+    "medicine_swallow_s": 1.0,
+    "medicine_head_anchor_px": 108,
+    "medicine_mouth_anchor_px": 94,
+    "medicine_cup_rest_px": 70,
+    "splash_cup_forward_m": 0.2,
+    "splash_cup_side_m": 0.14,
+    "splash_drop_radius_m": 0.04,
+    "splash_body_radius_m": 0.21,
+    "splash_sample_m": 0.025,
+    "splash_ray_count": 7,
+    "splash_ground_s": 0.75,
+    "splash_release_height_px": 75.0,
+    "splash_ground_height_px": 5.0,
+    "bottle_radius_m": 0.04,
+    "bottle_length_m": 0.24,
+    "bottle_near_m": 0.4,
+    "bottle_shoulder_m": 0.16,
+    "bottle_sample_m": 0.025,
+    "bottle_body_radius_m": 0.21,
+    "bottle_raise_px": 75.0,
+    "belt_radius_m": 0.025,
+    "belt_body_radius_m": 0.21,
+    "belt_near_m": 0.65,
+    "belt_hand_m": 0.28,
+    "belt_sample_m": 0.025,
+    "belt_waist_px": 61,
+    "restraint_start_m": 1.04,
+    "restraint_extend_ratio": 0.7,
+    "restraint_contact_ratio": 0.96,
+    "restraint_open_m": 0.22,
+    "restraint_closed_m": 0.085,
+    "restraint_band_m": 0.025,
+    "restraint_side_m": 0.15,
+    "restraint_shoulder_m": 0.16,
+    "restraint_wrist_m": 0.18,
+    "restraint_forearm_m": 0.04,
+    "restraint_portal_clear_m": 1.25,
+    "restraint_arm_px": 64,
+    "grasp_start_m": 1.05,
+    "grasp_extend_ratio": 0.7,
+    "grasp_contact_ratio": 0.94,
+    "grasp_tip_inset_m": 0.09,
+    "grasp_capture_m": 0.075,
+    "grasp_shoulder_m": 0.14,
+    "grasp_wrist_m": 0.18,
+    "grasp_hand_radius_m": 0.04,
+    "grasp_guard_turn_s": 0.15,
+    "grasp_hand_height_px": 64,
+    "director_start_m": 0.84,
+    "director_bar_m": 0.035,
+    "director_torso_m": 0.21,
+    "director_contact_slack_m": 0.015,
+    "director_contact_ratio": 0.96,
+    "director_rail_height_px": 59,
+    "director_open_profile": [
+      [
+        0,
+        0.16
+      ],
+      [
+        0.3,
+        0.36
+      ],
+      [
+        0.55,
+        0.36
+      ],
+      [
+        0.7,
+        0.36
+      ]
+    ],
+    "director_closed_profile": [
+      [
+        0,
+        0.16
+      ],
+      [
+        0.35,
+        0.32
+      ],
+      [
+        0.98,
+        0.23
+      ],
+      [
+        1.165,
+        0.08
+      ]
+    ],
+    "director_sample_m": 0.025,
+    "mother_start_m": 0.84,
+    "mother_arm_m": 0.035,
+    "mother_body_m": 0.21,
+    "mother_torso_m": 0.18,
+    "mother_sample_m": 0.025,
+    "mother_close_ratio": 0.96,
+    "mother_open_profile": [
+      [
+        0,
+        0.14
+      ],
+      [
+        0.35,
+        0.34
+      ],
+      [
+        1.16,
+        0.34
+      ]
+    ],
+    "mother_closed_profile": [
+      [
+        0,
+        0.14
+      ],
+      [
+        0.35,
+        0.3
+      ],
+      [
+        1.16,
+        0.14
+      ]
+    ],
+    "mother_heights_px": [
+      66,
+      47
+    ],
+    "sweep_edge_m": 0.035,
+    "sweep_body_m": 0.21,
+    "sweep_near_m": 0.32,
+    "sweep_blade_m": 0.28,
+    "sweep_blade_lane_m": 0.14,
+    "sweep_sample_m": 0.025,
+    "sweep_low_px": 70,
+    "sweep_high_px": 128,
+    "sweep_floor_px": 24,
+    "sweep_high_m": 1.85,
+    "sweep_floor_m": 0.3,
+    "sweep_body_high_m": 1.7,
+    "sweep_body_low_m": 0.35
   },
   "observations": [],
   "dialogue": {

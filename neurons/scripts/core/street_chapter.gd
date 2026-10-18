@@ -20,9 +20,30 @@ const Losses=preload("res://scripts/core/street_losses.gd")
 var losses
 const Clamp=preload("res://scripts/core/street_clamp.gd")
 var clamp
+const Embrace=preload("res://scripts/core/street_embrace.gd")
+var embrace
+const Medicine=preload("res://scripts/core/street_medicine.gd")
+var medicine
+const Splash=preload("res://scripts/core/street_splash.gd")
+var splash
+const Bottle=preload("res://scripts/core/street_bottle.gd")
+var bottle
+const Belt=preload("res://scripts/core/street_belt.gd")
+var belt
+const Restraint=preload("res://scripts/core/street_restraint.gd")
+var restraint
+const GraspMotion=preload("res://scripts/core/street_grasp_motion.gd")
+var grasp_motion
+const Director=preload("res://scripts/core/street_director.gd")
+var director
+const Mother=preload("res://scripts/core/street_mother.gd")
+var mother
+const LocalSweeps=preload("res://scripts/core/street_sweeps.gd")
+var local_sweeps
 
 func _init(owner) -> void:
- super(owner);map=StreetMap;chapter_id=6;box=Box.new(self);lateral_bed=LateralBed.new(self);materials=Materials.new(self);displays=Displays.new(self);archivist=Archivist.new(self);report_signals=Reports.new(self);laundry_bag=LaundryBag.new(self);losses=Losses.new(self);clamp=Clamp.new(self)
+ super(owner);map=StreetMap;chapter_id=6;box=Box.new(self);lateral_bed=LateralBed.new(self);materials=Materials.new(self);displays=Displays.new(self);archivist=Archivist.new(self);report_signals=Reports.new(self);laundry_bag=LaundryBag.new(self);losses=Losses.new(self);clamp=Clamp.new(self);embrace=Embrace.new(self);medicine=Medicine.new(self);splash=Splash.new(self);bottle=Bottle.new(self);belt=Belt.new(self);restraint=Restraint.new(self);grasp_motion=GraspMotion.new(self);director=Director.new(self)
+ mother=Mother.new(self);local_sweeps=LocalSweeps.new(self)
  config=JSON.parse_string(FileAccess.get_file_as_string("res://data/street_chapter.json"))
 
 func floor_for(room:String):
@@ -88,6 +109,31 @@ func tick(delta:float) -> void:
 
 func _actor(id:String,delta:float) -> void:
  var a:Dictionary=data.actors[id]
+ if id=="mother":
+  mother.before_actor();super._actor(id,delta);mother.sync();return
+ if id in LocalSweeps.IDS:
+  local_sweeps.before_actor(id);super._actor(id,delta);local_sweeps.sync(id);return
+ if id=="director":
+  director.before_actor();super._actor(id,delta);director.sync();return
+ if id in GraspMotion.IDS:
+  grasp_motion.before_actor(id)
+  if not data.ending.is_empty():return
+  if a.phase=="grip" and data.holder==id:grasp_motion.tick_hold(id,delta);return
+  super._actor(id,delta);grasp_motion.sync(id);return
+ if id=="assistant_asylum":
+  if restraint.before_actor(delta):return
+  super._actor(id,delta);restraint.sync();return
+ if id=="warder":
+  belt.before_actor();super._actor(id,delta);belt.sync();return
+ if id=="father":
+  bottle.before_actor();super._actor(id,delta);bottle.sync();return
+ if id=="pharmacist":
+  splash.before_actor()
+  if a.portions>0 or a.phase!="idle":super._actor(id,delta)
+  elif a.present and a.hp>0:
+   if a.hurt>0:a.hurt=maxf(0,float(a.hurt)-delta)
+   else:_yield(id,delta)
+  splash.tick(delta);splash.sync();return
  if id=="labor":box.tick(delta);return
  if id=="transporter_asylum":lateral_bed.actor(delta);return
  if id=="transporter_hospital":
@@ -95,6 +141,9 @@ func _actor(id:String,delta:float) -> void:
   super._actor(id,delta);laundry_bag.sync();return
  if id=="dislocated":
   clamp.before_actor();super._actor(id,delta);clamp.sync();return
+ if id=="isolation":
+  embrace.before_actor();super._actor(id,delta);embrace.sync();return
+ if id=="ward_nurse":medicine.before_actor()
  if not a.present:return
  if id=="archivist_asylum" and archivist.actor(delta):return
  if displays.actor(id,delta):return
@@ -102,14 +151,7 @@ func _actor(id:String,delta:float) -> void:
  if id=="stitched" and materials.prepare_stitched(delta):return
  if a.hp<=0:return
  if id=="ward_nurse" and a.phase=="drug_hold":
-  a.elapsed+=delta
-  if data.holder!=id:a.phase="recover";a.elapsed=0;return
-  if a.hurt>0 or app.rules.hurt_left>0 or app.rules.stun_left>0:data.holder="";app.rules.gripped=false;a.phase="recover";a.elapsed=0;return
-  if a.elapsed>=1.0 and float(app.rules.effects.get("DRYMOUTH",0))<=0 and int(a.portions)>0 and app.rules.hp>0:
-   a.portions=0;app.rules.change_sp(-20);app.rules.stun_left=maxf(app.rules.stun_left,1.5)
-   app.rules._record("street_medicine_swallowed",str(a.attack_id)+":swallow",{"sp":-20,"source":"S4:T16R4"})
-   data.holder="";app.rules.gripped=false;data.grip_safe_until=data.clock+.8;a.phase="recover";a.elapsed=0
-  return
+  medicine.tick_hold(delta);return
  if id in ["pharmacist","ward_nurse"] and int(a.portions)<=0 and a.phase=="idle":
   _yield(id,delta);return
  if id in ["head_nurse","informant"]:
@@ -121,33 +163,64 @@ func _actor(id:String,delta:float) -> void:
    _yield(id,delta)
   return
  super._actor(id,delta)
+ if id=="ward_nurse":medicine.sync()
 
 func attack_start_distance(id:String,attack:Dictionary) -> float:
+ if id=="mother":return float(config.test_parameters.mother_start_m)
+ if id in LocalSweeps.IDS:return float(attack.reach)
  # Stop inside actual bag reach, rather than repeatedly swinging from the
  # generic rectangle's extra approach margin with no possible body contact.
  if id=="transporter_hospital":return float(attack.reach)
+ if id=="director":return float(config.test_parameters.director_start_m)
+ if id in GraspMotion.IDS:return float(config.test_parameters.grasp_start_m)
+ if id=="assistant_asylum":return float(config.test_parameters.restraint_start_m)
  if id=="dislocated":return float(config.test_parameters.clamp_start_m)
+ if id=="isolation":return float(config.test_parameters.embrace_start_m)
+ if id=="ward_nurse":return float(config.test_parameters.medicine_start_m)
+ if id=="pharmacist":return float(attack.reach)
+ if id in ["father","warder"]:return float(attack.reach)
  return super.attack_start_distance(id,attack)
 
 func _advance_attack(id:String,delta:float) -> void:
  var a:Dictionary=data.actors[id];var previous:String=str(a.phase)
+ if id=="mother":
+  if a.phase=="attack":
+   mother.prepare(delta);a.elapsed+=delta;mother.resolve_contact()
+   if a.phase=="attack" and a.elapsed>=float(config.attacks.grab.active):a.phase="recover";a.elapsed=0.0
+  else:super._advance_attack(id,delta)
+  mother.sync();return
+ if id in LocalSweeps.IDS:
+  local_sweeps.prepare(id,delta);super._advance_attack(id,delta);local_sweeps.sync(id);return
+ if id=="director":
+  director.prepare(delta);super._advance_attack(id,delta);director.sync();return
+ if id in GraspMotion.IDS:
+  grasp_motion.prepare(id,delta);super._advance_attack(id,delta)
+  if previous=="attack" and a.phase=="grip" and data.holder==id:grasp_motion.begin_hold(id)
+  grasp_motion.sync(id);return
+ if id=="assistant_asylum":
+  restraint.prepare(delta);super._advance_attack(id,delta);restraint.sync();return
+ if id=="warder":
+  belt.prepare(delta);super._advance_attack(id,delta);belt.sync();return
+ if id=="father":
+  bottle.prepare(delta);super._advance_attack(id,delta);bottle.sync();return
  if id=="transporter_hospital":
   laundry_bag.prepare_step(delta);super._advance_attack(id,delta);laundry_bag.finish_step(previous);return
  if id=="dislocated":
   clamp.prepare(delta);super._advance_attack(id,delta);clamp.finish(previous);return
+ if id=="isolation":
+  embrace.prepare(delta);super._advance_attack(id,delta);embrace.finish();return
  if id=="ward_nurse" and previous=="attack":
-  a.elapsed+=delta
-  if a.room==app.room_id and _contains(id,app.hero_pos) and not a.hits.has("hero") and data.holder=="" and a.portions>0:
-   a.hits.hero=true;data.holder=id;data.grip_until=data.clock+1.2;app.rules.gripped=true;a.phase="drug_hold";a.elapsed=0;return
-  if a.elapsed>=.3:a.phase="recover";a.elapsed=0
-  return
+  medicine.advance_head(delta);return
+ if id=="pharmacist":
+  if previous=="attack":
+   a.elapsed+=delta
+   if a.elapsed>=float(config.attacks.splash.active):a.phase="recover";a.elapsed=0
+  else:
+   super._advance_attack(id,delta)
+   if previous=="windup" and a.phase=="attack":splash.launch()
+  splash.sync();return
  super._advance_attack(id,delta)
- if id=="pharmacist" and previous=="windup" and a.phase=="attack":a.portions=maxi(0,int(a.portions)-1)
- if id in ["psychiatrist","guard_hospital"] and a.hits.has("hero") and not a.get("displacement_done",false):
-  a.displacement_done=true
-  var direction:Vector2=vector(a.direction)*(-1 if id=="psychiatrist" else 1)
-  app.hero_pos=app.layout.clipped_step(app.hero_pos,app.hero_pos+direction)
- if previous=="idle" or a.phase=="idle":a.displacement_done=false
+ if id=="ward_nurse":medicine.sync()
 
 func _friend(id:String,delta:float) -> void:
  if id in ["dog","faceless"]:super._friend(id,delta);return
@@ -242,6 +315,16 @@ func _hero(delta:float) -> void:
  for patch in patches:lateral_bed.pop_blocker(space,patch)
 
 func _contains(id:String,target:Vector2) -> bool:
+ if id=="mother":return mother.contains(target)
+ if id in LocalSweeps.IDS:return local_sweeps.contains(id,target)
+ if id=="director":return director.contains(target)
+ if id in GraspMotion.IDS:return grasp_motion.contains(id,target)
+ if id=="assistant_asylum":return restraint.contains(target)
+ if id=="warder":return belt.contains(target)
+ if id=="father":return bottle.contains(target)
+ if id=="pharmacist":return splash.contains(target)
+ if id=="ward_nurse":return medicine.contains(target)
+ if id=="isolation":return embrace.contains(target)
  if id=="dislocated":return clamp.contains(target)
  if id=="transporter_hospital":return laundry_bag.contains(target)
  if id=="transporter_asylum":return lateral_bed.touches(str(data.actors[id].room),target,.21)
@@ -252,6 +335,16 @@ func damage_actor(source:String,target:String,hp:int,receipt:String) -> void:
  super.damage_actor(source,target,hp,receipt)
  if alive and hp>0:materials.add_trace(str(data.actors[target].room),position(target),receipt)
  if target=="dislocated":clamp.before_actor()
+ if target=="isolation":embrace.before_actor()
+ if target=="ward_nurse":medicine.before_actor()
+ if target=="pharmacist":splash.before_actor()
+ if target=="father":bottle.before_actor()
+ if target=="warder":belt.before_actor()
+ if target=="assistant_asylum":restraint.before_actor(0)
+ if target in GraspMotion.IDS:grasp_motion.before_actor(target)
+ if target=="director":director.before_actor()
+ if target=="mother":mother.before_actor()
+ if target in LocalSweeps.IDS:local_sweeps.before_actor(target)
  losses.record(source,target,alive,receipt)
 
 func _damage_hero(receipt:String,hp:int,sp:int,source:String) -> bool:
@@ -266,6 +359,9 @@ func kick_contact() -> void:
  for id in data.actors:
   var a:Dictionary=data.actors[id]
   if int(a.hp)>=int(old[id].hp):continue
+  if id=="director":director.before_actor()
+  if id=="mother":mother.before_actor()
+  if id in LocalSweeps.IDS:local_sweeps.before_actor(id)
   if id=="transporter_asylum":
    var space=floor_for(str(a.room));var b:Dictionary=data.lateral_bed
    var patch:Dictionary=lateral_bed.push_blocker(space,lateral_bed.rect(),{"at":lateral_bed.anchor(vector(b.center),vector(b.axis)),"axis":vector(b.axis)})

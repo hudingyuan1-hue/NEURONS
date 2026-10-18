@@ -1,0 +1,57 @@
+extends "res://tests/street_belt_live_check.gd"
+## Two declared cast/position scenes, actual CONTROL, ordinary AI/process and real keys.
+func _ready() -> void:
+ name="CampaignCheck";frontend=get_parent();folder="res://../docs/validation/street_grasp_20261018/live"
+ for argument in OS.get_cmdline_user_args():
+  if argument.begins_with("--validation-root="):folder=argument.trim_prefix("--validation-root=")
+ DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
+ await frames();await frontend.show_profile();frontend.name_field.text="真实抓腕连续拖拽与门内推离";frontend.overwrite_armed=true;frontend.new_game();await frames();app=frontend.active
+ if app.tutorial_ui!=null:app.tutorial_ui.finish()
+ app.set_process(false);clear_lines();app.paused_manual=true;app.home.enabled=false;app.family.enabled=false;app.unlock_combat();no_actors();app.unlock_street();app.enter_room("street_node");no_street()
+ var a:Dictionary=place("psychiatrist",Vector2(4,4));a.hp=60;a.cooldown=0;a.direction=[1,0];app.street.data.erase("grasp_motion")
+ app.rules.hp=100;app.rules.sp=80;app.hero_pos=Vector2(5.05,4);app.hero_facing=Vector2.RIGHT;var origin:Vector2=app.hero_pos;var body_origin:Vector2=app.street.position("psychiatrist")
+ check(takeover(),"declared psychiatrist/host fixture pays actual CONTROL, without injecting contact, holder or movement")
+ app.input_lock_frames=0;app.paused_manual=false;app.set_process(true)
+ check(await wait_until(func():return a.phase=="attack" and a.elapsed>=.1,2),"ordinary AI raises actual clasp then extends hand before contact")
+ await space_key();await capture("01_actual_reach_before_closure")
+ check(app.rules.hp==100 and not app.rules.gripped and app.hero_pos.is_equal_approx(origin),"real Space before closure shows no charge, false hold or one-metre teleport")
+ await space_key()
+ check(await wait_until(func():return app.street.data.holder=="psychiatrist",1),"ordinary actual clasp closure acquires the single forearm holder")
+ check(app.rules.hp==90 and app.rules.sp==80 and origin.distance_to(app.hero_pos)<.1,"actual acquisition commits original ten HP before bounded movement")
+ var held_gap:Vector2=app.hero_pos-app.street.position("psychiatrist")
+ print("GRASP_LIVE_APPROACH ",JSON.stringify({"initial_carrier":app.street.xy(body_origin),"actual_carrier_at_grip":app.street.xy(app.street.position("psychiatrist")),"held_gap":app.street.xy(held_gap)}))
+ check(await wait_until(func():return app.street.grasp_motion.state("psychiatrist").motion.distance>=.18,.6),"ordinary world ticks physically pull both bodies backward")
+ await click_point(Vector2(846,58));var clock:float=app.street.data.clock;var hero:Vector2=app.hero_pos;var body:Vector2=app.street.position("psychiatrist");var distance:float=app.street.grasp_motion.state("psychiatrist").motion.distance;await frames(8)
+ check(app.menu.visible and app.rules.gripped and hero.is_equal_approx(app.hero_pos) and body.is_equal_approx(app.street.position("psychiatrist")) and is_equal_approx(clock,float(app.street.data.clock)),"actual book click freezes both already-moving bodies and original grip deadline")
+ check((hero-body).is_equal_approx(held_gap) and distance<1 and app.rules.hp==90,"live paired displacement retains actual contact gap after autonomous approach and cannot add drag injury")
+ await capture("02_actual_menu_freezes_partial_pull");await tap_key(KEY_ESCAPE);await space_key()
+ await capture("03_actual_partial_pull_default");var zoom:int=app.zoom_index;await space_key();await pointer_key(MOUSE_BUTTON_WHEEL_UP);await space_key()
+ check(app.zoom_index>zoom,"actual running wheel changes to existing enlarged view during physical pull")
+ await capture("04_actual_partial_pull_zoomed");await space_key();await pointer_key(MOUSE_BUTTON_WHEEL_DOWN)
+ check(app.zoom_index==zoom,"actual wheel returns display size without changing metre movement")
+ check(await wait_until(func():return not app.rules.gripped,2),"actual release point or original deadline ends the same pull")
+ check(origin.distance_to(app.hero_pos)<=1.00001 and app.rules.hp==90 and app.rules.sp==80,"ordinary completed pull stays within original one metre and single ten-HP receipt")
+
+ # Independent guard scene with explicit HP/SP reset and gate-side carrier placement.
+ app.set_process(false);app.paused_manual=true;clear_lines();app.enter_room("street_end");no_street()
+ a=place("guard_hospital",Vector2(6.1,4));a.hp=60;a.cooldown=0;a.direction=[-1,0];app.street.data.erase("grasp_motion");app.street.data.next_attack=0
+ app.rules.hp=100;app.rules.sp=80;app.rules.hurt_left=0;app.rules.stun_left=0;app.hero_pos=Vector2(5.05,4);app.hero_facing=Vector2.LEFT;origin=app.hero_pos
+ check(takeover(),"second declared gate-side guard scene explicitly resets HP/SP and pays separate CONTROL, no hand/hold/motion fields filled")
+ app.input_lock_frames=0;app.paused_manual=false;app.set_process(true)
+ check(await wait_until(func():return app.street.data.holder=="guard_hospital",2),"ordinary guard hand really grasps wrist before side turn")
+ await space_key();clock=app.street.data.clock;await frames(8)
+ check(app.rules.hp==90 and app.rules.sp==70 and app.rules.gripped and app.hero_pos.is_equal_approx(origin) and is_equal_approx(clock,float(app.street.data.clock)),"actual pause during side turn preserves ten/ten injury with no instantaneous push")
+ await capture("05_actual_guard_turn_paused");await space_key()
+ check(await wait_until(func():return app.street.grasp_motion.state("guard_hospital").motion.distance>=.15,.8),"ordinary side turn finishes then actual forward steps move pair toward gate interior")
+ await space_key();hero=app.hero_pos;await frames(8)
+ check(app.paused_manual and hero.is_equal_approx(app.hero_pos) and hero.x<origin.x and origin.distance_to(hero)<1,"real Space freezes actual inward push rather than an outwards gate teleport")
+ await capture("06_actual_guard_inward_push_default");zoom=app.zoom_index;await space_key();await pointer_key(MOUSE_BUTTON_WHEEL_UP);await space_key()
+ check(app.zoom_index>zoom and app.street.data.holder=="guard_hospital","existing enlarged camera preserves current physical guard holder")
+ await capture("07_actual_guard_push_zoomed");await space_key();await pointer_key(MOUSE_BUTTON_WHEEL_DOWN)
+ check(await wait_until(func():return not app.rules.gripped,2),"ordinary bounded guard push actually releases before another grip")
+ await capture("08_actual_guard_release")
+ check(app.rules.hp==90 and app.rules.sp==70 and origin.distance_to(app.hero_pos)<=1.00001 and app.street.data.holder=="","pushing and release preserve original one-contact ten/ten injury and no residual holder")
+ check(await wait_until(func():return a.phase=="idle",1),"same guard completes original recovery and returns to cooldown")
+ var file:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
+ file.store_string(JSON.stringify({"passes":passes,"failures":failures,"rendered":DisplayServer.get_name()!="headless","scope":"Two explicitly placed NPC/host scenes; second resets HP/SP and places guard gate-side. Actual paid CONTROL each, ordinary AI/process, real Book click/Escape/Space/running wheel. Actual preclosure miss, clasp pull10HP/0SP, paired partial movement/menu freeze, inward guard side turn/push10HP10SP, original1m/1.2s release. No hold/trajectory/hit/knowledge injection. Silent fixed30, not human natural crowd/all B6/B7/final art/audio audition."},"  "));file.close()
+ print("STREET_GRASP_LIVE_CHECK %d passed %d failed"%[passes.size(),failures.size()]);app.audio.reset_scene();frontend.request_exit(0 if failures.is_empty() else 1)

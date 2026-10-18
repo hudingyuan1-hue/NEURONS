@@ -1,0 +1,189 @@
+{
+  "sources": [
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+      "paragraphs": [
+        {
+          "paragraph": 1289,
+          "text": "敌人按“实际发现→接近→可见起手→出手→收招”行动。攻击发动后不瞬间改向；同次攻击对同一目标只结算一次，多臂、束带及持续接触不重复扣伤。"
+        },
+        {
+          "paragraph": 1290,
+          "text": "普通敌人受到实际踢击后退开，中断尚未命中的攻击；已造成的伤害保留。转运床按下述专属规则处理。敌人攻击不套用主角神经抗性。"
+        },
+        {
+          "paragraph": 1681,
+          "text": "抓握成立后，由当前人物完成本次动作；其他抓握者不得叠加控制或预约无间隙续抓。施控者死亡、动作被实际打断或到达释放点，立即解除对应抓握。"
+        },
+        {
+          "paragraph": 1682,
+          "text": "缩手只避开尚未成立的手臂抓取；不解除扣头、抱住躯干或已经收紧的束带。普通位移和开心也不解除物理束缚。"
+        },
+        {
+          "paragraph": 1848,
+          "text": "36．精神科医生 敌对 第三关一层身份"
+        },
+        {
+          "paragraph": 1849,
+          "text": "辨识与动作：白大褂覆盖诊断标签，手持固定扣；接近→伸手套向腕臂→实际扣合→向自身后退方向拖拽→松扣恢复。"
+        },
+        {
+          "paragraph": 1850,
+          "text": "效果：固定扣实际收紧扣生命一次，并限制角色自主移动；拖拽期间不连续扣血。扣合前可凭真实缩手、退避或踢中医生避免成立。"
+        },
+        {
+          "paragraph": 1851,
+          "text": "拖拽边界：只沿可走地面移动；遇核心边缘、栏杆或其他实体阻挡即停拖，不能穿物。达到释放点仍须松扣，不因为拖不动就无限控制。"
+        },
+        {
+          "paragraph": 1852,
+          "text": "记录边界：诊断标签只作为可读记录，不因角色看见标签就补写其曾作出某种陈述，也不传送回医院接诊室。"
+        },
+        {
+          "paragraph": 1892,
+          "text": "42．保安 敌对 第二关身份"
+        },
+        {
+          "paragraph": 1893,
+          "text": "辨识：深色制服、增粗前臂，门钥匙嵌在腰部；与异化节点的第三关保安分开。"
+        },
+        {
+          "paragraph": 1894,
+          "text": "动作：伸手抓向腕臂→实际抓稳→侧转身体→朝门内可走方向推离→松手、收臂。"
+        },
+        {
+          "paragraph": 1895,
+          "text": "效果：抓握成立扣生命与精神一次；后续推离只产生真实位移，不再追加一份伤害。抓空不直接进入推离动作。"
+        },
+        {
+          "paragraph": 1896,
+          "text": "位移边界：受到岗亭、栏杆等实体阻挡时，缩短或停止推离；不传送回街道前段，不把角色送进独立拘禁场景。"
+        },
+        {
+          "paragraph": 1897,
+          "text": "物品作用：腰部钥匙只保留辨识，不交付第六关通关钥匙。保安存活、未被击倒或钥匙未取得，都不关闭出口。"
+        },
+        {
+          "paragraph": 1898,
+          "text": "结算边界：推离先发生、角色尚未越过终点时，继续逃离；通关已经提交后，不再接受新的抓握或推离。"
+        }
+      ],
+      "table_rows": []
+    },
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第四阶段_数值与完整流程_合并修订版.docx",
+      "sha256": "c3f2e9ba7d0b23d7c0654b546b0fa0ce075a0e885f59f48066280dd0b33eee39",
+      "paragraphs": [],
+      "table_rows": [
+        {
+          "table": 19,
+          "row": 4,
+          "cells": [
+            "第三关精神科医生",
+            "10／0",
+            "固定后拖拽最多1米、最长1.2秒，随后释放"
+          ]
+        },
+        {
+          "table": 19,
+          "row": 6,
+          "cells": [
+            "第二关保安",
+            "10／10",
+            "抓稳后向门内推离最多1米；不追加推离伤害"
+          ]
+        }
+      ]
+    }
+  ],
+  "external_sources": 0,
+  "imagegen_calls": 0,
+  "paid_services": 0,
+  "baseline": "7ab88f22a246e23feb1c0bac95dd6d77a401446f",
+  "prior_files_verified_at_start": 650,
+  "protected_street_fields": {
+    "sources": true,
+    "status": true,
+    "actors": true,
+    "attacks": true,
+    "observations": true,
+    "dialogue": true,
+    "rooms": true,
+    "exit_room": true,
+    "exit_id": true,
+    "good_ids": true,
+    "materials": true,
+    "displays": true
+  },
+  "protected_files": [
+    {
+      "path": "neurons/data/skills.json",
+      "sha256": "2d69fc3abb4b7be7516db6a4cb17c8988ed6bee23925eea442c0a95cbdf24f68",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/data/key_discovery.json",
+      "sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/data/combat_chapter.json",
+      "sha256": "e1c90c646af4b0e505f00efc4639b4187cc625382159233e29b1e7c90b069185",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/data/cortex_events.json",
+      "sha256": "0c9b273471d2fc2402a3b862d846b751fcf6f72d67bf3dcaaaa45ad1d2308273",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/data/hospital.json",
+      "sha256": "b6ac2dc74d137576919ac4701802726cdba305dc830c806fff7bc9696567fea3",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_chapter.gd",
+      "sha256": "b7de6635e757e3a3ac4bdbc00d850c83fc68c332597c00f340d679d26e4c78d9",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd",
+      "sha256": "4c8ba30b45d733333b288c123e77ec48596720d910894b7a5833f0a1fb73bed7",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "sha256": "2da88ee60a0ef17ad07a41fb871a96f82c87debd12494f4ce25d82a67f31520e",
+      "unchanged_from_previous_delivery": true
+    }
+  ],
+  "prior_test_parameters_unchanged": true,
+  "new_test_parameters": {
+    "grasp_start_m": 1.05,
+    "grasp_extend_ratio": 0.7,
+    "grasp_contact_ratio": 0.94,
+    "grasp_tip_inset_m": 0.09,
+    "grasp_capture_m": 0.075,
+    "grasp_shoulder_m": 0.14,
+    "grasp_wrist_m": 0.18,
+    "grasp_hand_radius_m": 0.04,
+    "grasp_guard_turn_s": 0.15,
+    "grasp_hand_height_px": 64
+  },
+  "original_max_m": 1.0,
+  "original_max_hold_s": 1.2,
+  "all_27_audio_streams_and_bindings_unchanged": true,
+  "adopted": {
+    "wrist": "Actual hand extension/closure and forearm contact before shared original HP/SP/grip, fixed initial direction/solid obstruction, source WITHDRAW boundaries",
+    "motion": "S4:T19R4/R6 original maximum1m/1.2s. Paired actor/host ground steps at existing actor speed; real hand/body paths, collapsed core/furniture/NPC/dead wheelchair block. Obstruction or release point releases the actual holder without extra damage; guard derives inward from real ending-route portal after side turn.",
+    "legacy": "Partial new motion roundtrips in real JSON. Missing old path stays static until original deadline; old teleport out of hand reach releases inconsistent hold without replay/refund. No past trajectory or story record fabricated.",
+    "visual": "Procedural white coat/unknown diagnostic label/clasp and dark guard/thick arm/embedded key, same physical hand anchors and explicit64px display height, no formal art/anatomy/animation approval."
+  },
+  "limits": [
+    "Finite fixtures include declared valid ending threshold and actual ending handler; not natural whole-game gate approach.",
+    "Live two cast/position fixtures use actual CONTROL/process/UI, second HP/SP reset; no held path/contact injected. Silent, not audio audition or human full play.",
+    "All mixed crowds/two simultaneously blocked doors/wheelchair knockback, remaining Street branches and full B7 still pending.",
+    "B3 five missing source content fields unchanged."
+  ]
+}

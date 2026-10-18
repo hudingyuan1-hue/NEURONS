@@ -1,0 +1,28 @@
+{
+  "failures": [],
+  "passes": [
+    "declared psychiatrist/host fixture pays actual CONTROL, without injecting contact, holder or movement",
+    "ordinary AI raises actual clasp then extends hand before contact",
+    "real Space before closure shows no charge, false hold or one-metre teleport",
+    "ordinary actual clasp closure acquires the single forearm holder",
+    "actual acquisition commits original ten HP before bounded movement",
+    "ordinary world ticks physically pull both bodies backward",
+    "actual book click freezes both already-moving bodies and original grip deadline",
+    "live paired displacement retains actual contact gap after autonomous approach and cannot add drag injury",
+    "actual running wheel changes to existing enlarged view during physical pull",
+    "actual wheel returns display size without changing metre movement",
+    "actual release point or original deadline ends the same pull",
+    "ordinary completed pull stays within original one metre and single ten-HP receipt",
+    "second declared gate-side guard scene explicitly resets HP/SP and pays separate CONTROL, no hand/hold/motion fields filled",
+    "ordinary guard hand really grasps wrist before side turn",
+    "actual pause during side turn preserves ten/ten injury with no instantaneous push",
+    "ordinary side turn finishes then actual forward steps move pair toward gate interior",
+    "real Space freezes actual inward push rather than an outwards gate teleport",
+    "existing enlarged camera preserves current physical guard holder",
+    "ordinary bounded guard push actually releases before another grip",
+    "pushing and release preserve original one-contact ten/ten injury and no residual holder",
+    "same guard completes original recovery and returns to cooldown"
+  ],
+  "rendered": true,
+  "scope": "Two explicitly placed NPC/host scenes; second resets HP/SP and places guard gate-side. Actual paid CONTROL each, ordinary AI/process, real Book click/Escape/Space/running wheel. Actual preclosure miss, clasp pull10HP/0SP, paired partial movement/menu freeze, inward guard side turn/push10HP10SP, original1m/1.2s release. No hold/trajectory/hit/knowledge injection. Silent fixed30, not human natural crowd/all B6/B7/final art/audio audition."
+}

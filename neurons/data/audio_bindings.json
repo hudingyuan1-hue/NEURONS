@@ -571,6 +571,30 @@
         "deep_exploration"
       ],
       "loop_points": "保持原非循环；未确认无缝接缝，不强行循环"
+    },
+    {
+      "id": "SFX_SPLASH",
+      "stream": "res://assets/audio/street_20261018/sfx_splash_synth_v001.wav",
+      "channel": "world",
+      "loop": false,
+      "source": "tools/prepare_street_splash_audio.py",
+      "source_sha256": "4105d8a3d10ba60443e1671c35b987cfce1b67d66a98c85af80fdddcafdfd936",
+      "output_sha256": "a6a388fa390cde648a49abc9b0bd13244219074b2e4f42b1f73c17816146ca9c",
+      "license": "本项目离线合成；无第三方录音/付费服务",
+      "status": "普通泼洒短音开发候选；未主观听验/最终混音",
+      "processing": {
+        "seed": 2026101801,
+        "rate": 48000,
+        "duration": 0.28,
+        "channels": 1,
+        "bits": 16,
+        "peak_db": -12.041199826559248,
+        "rms_db": -26.9139783694188,
+        "leading_below_minus55_db_seconds": 0.00010416666666666667
+      },
+      "usage_contexts": [
+        "actual_street_pharmacist_release"
+      ]
     }
   ],
   "release_approved": false,

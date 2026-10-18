@@ -71,15 +71,17 @@ func _ready() -> void:
  check(app.rules.neurons==n,"ordinary return cannot repeat first-room income")
  app.enter_room("street_twisted");no_street();app.rules.control_left=20;app.rules.hp=100;app.rules.sp=100
  contact6("pharmacist");var pharmacist:Dictionary=app.street.data.actors.pharmacist;pharmacist.portions=2
- for i in range(60):app.street._advance_attack("pharmacist",.025)
+ run6(1.5) # Advance actual world-clock liquid as well as the cup action.
  check(app.rules.sp==90 and pharmacist.portions==1,"real first liquid hit consumes one portion and ten spirit only")
  contact6("pharmacist")
- for i in range(60):app.street._advance_attack("pharmacist",.025)
+ run6(1.5)
  check(app.rules.sp==80 and pharmacist.portions==0,"second real pour exhausts the original cup")
  pharmacist.phase="idle";pharmacist.cooldown=0;app.street._actor("pharmacist",.025)
  check(pharmacist.phase=="idle","empty cup cannot begin another attack")
  no_street();contact6("ward_nurse");app.rules.sp=100;app.rules.hp=100;app.rules.control_left=20
- for i in range(34):app.street._advance_attack("ward_nurse",.025)
+ # Actual reaching hand must finish contact inside the original .3s active
+ # window; the former rectangle fixture assumed first-active-frame contact.
+ for i in range(44):app.street._advance_attack("ward_nurse",.025)
  check(app.rules.gripped and app.rules.sp==100,"actual head grip has no premature medicine loss")
  run6(1.05)
  check(app.rules.sp==80 and not app.rules.gripped and app.street.data.actors.ward_nurse.portions==0,"actual swallow pays original spirit loss once and releases head")

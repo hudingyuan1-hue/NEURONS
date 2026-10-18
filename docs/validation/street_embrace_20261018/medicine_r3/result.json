@@ -1,0 +1,33 @@
+{
+  "failures": [],
+  "passes": [
+    "actual hand-to-head contact creates only a head hold, no oral medicine or life damage",
+    "real cup reaches lips and tilts without treating cup contact as swallowing",
+    "one actual poured dose leaves the cup before swallowing, with no premature spirit loss",
+    "real pouring JSON preserves the one dose outside the cup instead of refilling it",
+    "real manual pause freezes poured-but-unswallowed medicine",
+    "only actual swallow commits original twenty SP and 1.5-second pause, then withdraws both hands",
+    "cup contact, pour and swallow create exactly one original drug-effect event",
+    "post-swallow real JSON loads the settled dose",
+    "post-dose save/recovery cannot repay medicine or refill an empty palm cup",
+    "ordinary room return does not refill the same nurse's exhausted cup",
+    "actual interruption before pouring withdraws the full cup and causes no oral medicine effect",
+    "actual interruption after pouring but before swallowing spills that consumed dose without applying or refunding effects",
+    "spilled dose cannot later finish itself or create a replacement serving",
+    "actual nurse death immediately withdraws the established head hold without swallowing",
+    "absent owner releases even though ordinary absent actors stop ticking",
+    "invalid remote head holder releases locally and cannot transport the host",
+    "hand passing beside head cannot acquire the whole forward body rectangle",
+    "real cabinet blocks the reaching hand before any head hold or dose",
+    "WITHDRAW never frees established head fixation or cancels its actual swallow",
+    "combat GUT is ducking, not exploration refusal of this actual oral dose",
+    "actual paid combat DRYMOUTH suppresses voice per S2:T12R7, not swallowing or the original medicine outcome",
+    "prepared hand cannot steal another owner or queue a medicine dose behind them",
+    "hurting a non-owner nurse cannot release a different physical holder",
+    "legacy existing head-hold save reconstructs current cup pose without invented past swallowing",
+    "legacy full cup completes its one actual remaining sequence without duplicate effect",
+    "ordinary autonomous approach reaches actual head and mouth contact then completes its real single dose",
+    "an already empty cup cannot start a new head capture merely by approaching"
+  ],
+  "scope": "Declared one nurse/host/cup fixtures; actual hand contact, real cup approach/pour/swallow/SP-only settled effect and independent interruption, actual paid CONTROL and DRYMOUTH, JSON/manual pause/legacy/head misses/blocker/other owner/empty cup. Timings within original1.2s; no new story, silence skill, natural crowd or formal art acceptance."
+}

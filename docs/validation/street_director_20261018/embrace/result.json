@@ -1,0 +1,33 @@
+{
+  "failures": [],
+  "passes": [
+    "original full preparation opens both arms without pre-paying spirit or control",
+    "two still-open arms do not count as a completed torso enclosure",
+    "both actual padded arms enclose torso before exactly fifteen SP and no HP commit",
+    "real held-embrace JSON preserves sole owner, original deadline and paid receipt",
+    "manual pause freezes the established hold without additional spirit loss",
+    "WITHDRAW and an ordinary route do not undo torso restraint or teleport the host",
+    "moving frame and embrace create no quiet room, detention or ending",
+    "original 1.2-second deadline releases both arms into the existing recovery",
+    "full recovery folds both arms and retains an independent next preparation",
+    "single-side body grazing cannot magnetically become a complete hug",
+    "open arms cannot acquire a torso beyond the original attack reach",
+    "both-arm enclosure follows real direction (-1.0, 0.0)",
+    "both-arm enclosure follows real direction (0.0, -1.0)",
+    "both-arm enclosure follows real direction (0.0, 1.0)",
+    "arm-withdrawal before contact still cannot negate a torso hug under original skill rules",
+    "chest-height ducking does not turn a body-height embrace into a dodge",
+    "blocking only one actual arm prevents a complete enclosure while central torso ray stays clear",
+    "blocked padded arms remain on accepted furniture side rather than clipping through the cabinet",
+    "actual owner hurt releases only its established hug without refunding spirit",
+    "actual holder death releases restraint without another queued pair of arms",
+    "invalid cross-room holder releases locally without changing room topology",
+    "already-prepared embrace cannot steal another holder or pre-pay a queued restraint",
+    "hurting a non-owner hugger cannot release a different established grip",
+    "old existing-grip save loads without the new double-arm pose field",
+    "old hold reconstructs its visual arms without new injury or settlement",
+    "ordinary autonomous approach gets inside actual embrace reach instead of repeating far-away empty hugs",
+    "missed hug fully reopens and folds without inventing a hold, spirit charge or blocked exit"
+  ],
+  "scope": "Declared aligned/one-side/range/four-direction/cabinet/other-holder scenes with actual paid CONTROL. Shared real attack/SP-only settlement/grip deadline, real damage/death/room invalidation, disk/manual pause and legacy save. Trial torso/arm geometry, not final art, natural crowd or full-game acceptance."
+}

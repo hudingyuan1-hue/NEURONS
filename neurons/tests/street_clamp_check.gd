@@ -57,7 +57,8 @@ func _ready() -> void:
  check(a.hp==0 and app.street.data.holder=="" and not app.rules.gripped,"actual holder death immediately releases its own clamp with no queued opposite arm")
  a=arm_scene();clamp_step(1.1);a.room="street_twisted";app.street._actor("dislocated",.025)
  check(not app.rules.gripped and app.street.data.holder=="" and app.room_id=="street_narrow","invalid cross-room hold is released locally without transporting the hero")
- a=arm_scene();var guard:Dictionary=actor_at("guard_hospital",Vector2(8,7));guard.phase="grip";app.street.data.holder="guard_hospital";app.street.data.grip_until=app.street.data.clock+2;app.rules.gripped=true;clamp_step(1.05)
+ # Reachable legacy grip; missing trajectory stays static within original1.2s.
+ a=arm_scene();app.street.data.erase("grasp_motion");var guard:Dictionary=actor_at("guard_hospital",app.hero_pos+Vector2(0,1.05));guard.phase="grip";app.street.data.holder="guard_hospital";app.street.data.grip_until=app.street.data.clock+1.2;app.rules.gripped=true;clamp_step(1.05)
  check(app.street.data.holder=="guard_hospital" and app.rules.hp==100 and not a.hits.has("hero"),"already-launched closing arm cannot steal another holder or queue damage/control behind it")
  app.street.damage_actor("father","dislocated",15,"declared_hurt_non_holder")
  check(app.street.data.holder=="guard_hospital" and app.rules.gripped,"hurting a non-owner clamp cannot release somebody else's established grip")

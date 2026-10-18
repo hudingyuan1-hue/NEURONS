@@ -1,0 +1,250 @@
+{
+  "baseline": "7ab88f22a246e23feb1c0bac95dd6d77a401446f",
+  "sources": [
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+      "paragraphs": [
+        {
+          "paragraph": 1680,
+          "text": "攻击按“可辨起手→实际接触→效果→恢复”结算；同次攻击不因多个肢体、连续接触或跨段重复扣值。"
+        },
+        {
+          "paragraph": 1681,
+          "text": "抓握成立后，由当前人物完成本次动作；其他抓握者不得叠加控制或预约无间隙续抓。施控者死亡、动作被实际打断或到达释放点，立即解除对应抓握。"
+        },
+        {
+          "paragraph": 1682,
+          "text": "缩手只避开尚未成立的手臂抓取；不解除扣头、抱住躯干或已经收紧的束带。普通位移和开心也不解除物理束缚。"
+        },
+        {
+          "paragraph": 1705,
+          "text": "15．隔离护工 敌对 第三关二层身份"
+        },
+        {
+          "paragraph": 1706,
+          "text": "辨识：双臂软垫、变形观察窗框；与广场的普通护工分开。"
+        },
+        {
+          "paragraph": 1707,
+          "text": "动作：接近→张开双臂→向前合拢抱抓→短暂压制→松手退回。"
+        },
+        {
+          "paragraph": 1708,
+          "text": "效果：双臂实际围住角色躯干后，限制移动并造成一次精神损失；本节不额外添加生命伤害。只有单侧擦过，不能直接吸附成完整抱抓。"
+        },
+        {
+          "paragraph": 1709,
+          "text": "边界：窗框随人物动作移动，不成为独立牢门；抱住后不生成安静室、不传送角色、不调用第三关关门拘禁。"
+        },
+        {
+          "paragraph": 1710,
+          "text": "落空：完成合臂后重新张开，留出下一次可避让的起手；不持续张臂堵住凹槽出口。"
+        },
+        {
+          "paragraph": 1748,
+          "text": "22．给药护士 病区护士 敌对 第三关同一身份"
+        },
+        {
+          "paragraph": 1749,
+          "text": "辨识：药杯粘连手指、胸牌翻转；一层给药护士与二层病区护士共用同一人物，不是侧室小护士。"
+        },
+        {
+          "paragraph": 1750,
+          "text": "完整动作：伸手扣向头部→实际固定→另一手将杯口移近嘴部→倾杯→实际吞咽→松手、撤杯。"
+        },
+        {
+          "paragraph": 1751,
+          "text": "分段判定：扣头只成立短暂控制，不直接结算服药；杯口接触、液体洒在脸上，也不能替代吞咽。"
+        },
+        {
+          "paragraph": 1752,
+          "text": "药效：只有实际吞服才沿用既有“精神降低＋短暂停步”；一次给药只结算一次。精神归零与死亡继续服从统一规则。"
+        },
+        {
+          "paragraph": 1753,
+          "text": "中断：扣头前可凭真实退避或踢中护士避开；固定后若护士动作被实际打断，立即撤杯松手。吞服前中断不产生药效，吞服后中断不撤销结果。"
+        },
+        {
+          "paragraph": 1754,
+          "text": "技能边界：缩手不能解除扣头；战斗中的肠胃技能是俯身，不直接套用探索阶段的拒服效果。"
+        },
+        {
+          "paragraph": 1755,
+          "text": "物品状态：杯中确有药液才启动给药；洒空便结束本次动作。空杯、纸面“已服用”及反复进出均不能补算吞服。"
+        }
+      ],
+      "table_rows": []
+    },
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第四阶段_数值与完整流程_合并修订版.docx",
+      "sha256": "c3f2e9ba7d0b23d7c0654b546b0fa0ce075a0e885f59f48066280dd0b33eee39",
+      "paragraphs": [
+        {
+          "paragraph": 228,
+          "text": "给药护士扣头后，移杯、倾杯、吞咽合计不超过1.2秒，随后必须松手；不能等待“吞服成功”为由无限扣头。"
+        },
+        {
+          "paragraph": 297,
+          "text": "药效按实际吞服／泼洒编号结算；杯接触、吞咽、登记不能各扣一次。"
+        }
+      ],
+      "table_rows": [
+        {
+          "table": 16,
+          "row": 4,
+          "cells": [
+            "Street给药护士",
+            "实际吞服后精神−20，停顿1.5秒",
+            "携带一份有效药液"
+          ]
+        },
+        {
+          "table": 19,
+          "row": 7,
+          "cells": [
+            "隔离护工",
+            "0／15",
+            "抱住躯干最长1.2秒；不调用前期关押"
+          ]
+        },
+        {
+          "table": 19,
+          "row": 10,
+          "cells": [
+            "给药护士",
+            "0／20",
+            "只有实际吞服才生效；扣头本身不扣值"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第二阶段_角色玩家规则_合并修订版.docx",
+      "sha256": "d5d0b71bd14fe4605b081404e66b0d13cd2028f0c337969e7127dbc0a817e379",
+      "paragraphs": [
+        {
+          "paragraph": 66,
+          "text": "仍在生效且不会产生新效果的重复施放，显示“效果持续中”，不扣费、不增长抗性。口腔干涩只改变角色实际发声；玩家吐槽、菜单音效和纯内心文字不产生可被NPC听见的声源。"
+        }
+      ],
+      "table_rows": [
+        {
+          "table": 12,
+          "row": 7,
+          "cells": [
+            "低级·口腔干涩",
+            "延缓尚未完成的物品交接，不撤销已获物品",
+            "抑制出声：暂时压低惊叫、求助等声音；脚步和碰撞声仍存在，仅影响具有听觉判定的人物。"
+          ]
+        },
+        {
+          "table": 17,
+          "row": 7,
+          "cells": [
+            "DRYMOUTH口腔干涩",
+            "消耗1神经元。探索模式延缓未完成的物品交接，战斗模式暂时抑制角色出声。角色抿嘴吞咽，脚步与碰撞声仍存在。"
+          ]
+        }
+      ]
+    }
+  ],
+  "protected_street_fields": {
+    "sources": true,
+    "status": true,
+    "actors": true,
+    "attacks": true,
+    "observations": true,
+    "dialogue": true,
+    "rooms": true,
+    "exit_room": true,
+    "exit_id": true,
+    "good_ids": true,
+    "materials": true,
+    "displays": true
+  },
+  "protected_files": [
+    {
+      "path": "neurons/data/skills.json",
+      "sha256": "2d69fc3abb4b7be7516db6a4cb17c8988ed6bee23925eea442c0a95cbdf24f68",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/data/key_discovery.json",
+      "sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/data/audio_bindings.json",
+      "sha256": "86e08c2281270209c188af4e4b8be072420abc2146da7c36da2c2a1e5514635e",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/data/combat_chapter.json",
+      "sha256": "e1c90c646af4b0e505f00efc4639b4187cc625382159233e29b1e7c90b069185",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/data/cortex_events.json",
+      "sha256": "0c9b273471d2fc2402a3b862d846b751fcf6f72d67bf3dcaaaa45ad1d2308273",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/data/hospital.json",
+      "sha256": "b6ac2dc74d137576919ac4701802726cdba305dc830c806fff7bc9696567fea3",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_chapter.gd",
+      "sha256": "b7de6635e757e3a3ac4bdbc00d850c83fc68c332597c00f340d679d26e4c78d9",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd",
+      "sha256": "4c8ba30b45d733333b288c123e77ec48596720d910894b7a5833f0a1fb73bed7",
+      "unchanged_ignoring_git_line_endings": true
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "sha256": "2da88ee60a0ef17ad07a41fb871a96f82c87debd12494f4ce25d82a67f31520e",
+      "unchanged_ignoring_git_line_endings": true
+    }
+  ],
+  "previous_279_runtime_files_verified_except_four_declared_edits": [
+    "neurons/data/street_chapter.json",
+    "neurons/scripts/core/street_chapter.gd",
+    "neurons/scripts/ui/front_end.gd",
+    "neurons/scripts/world/combat_view.gd"
+  ],
+  "new_test_parameters": {
+    "embrace_shoulder_m": 0.23,
+    "embrace_arm_radius_m": 0.05,
+    "embrace_torso_radius_m": 0.21,
+    "embrace_contact_ratio": 0.9,
+    "embrace_start_m": 0.85,
+    "embrace_elbow_forward_m": 0.55,
+    "embrace_elbow_open_m": 0.58,
+    "embrace_elbow_closed_m": 0.46,
+    "embrace_hand_open_forward_m": 0.65,
+    "embrace_hand_open_m": 0.68,
+    "embrace_hand_closed_m": 0.08,
+    "medicine_cup_rest_m": 0.15,
+    "medicine_hand_radius_m": 0.06,
+    "medicine_head_radius_m": 0.16,
+    "medicine_mouth_radius_m": 0.05,
+    "medicine_head_contact_ratio": 0.9,
+    "medicine_start_m": 1.0,
+    "medicine_head_fix_s": 0.2,
+    "medicine_cup_approach_s": 0.55,
+    "medicine_pour_s": 0.8,
+    "medicine_swallow_s": 1.0,
+    "medicine_head_anchor_px": 108,
+    "medicine_mouth_anchor_px": 94,
+    "medicine_cup_rest_px": 70
+  },
+  "adopted": "Both actual padded arms enclose torso, not one-side rectangle; actual head/cup/pour/swallow stages and one consumed dose, interruption and original deadline. Correct old combat DRYMOUTH swallow veto using S2:T12R7/T17R7; suppresses voice only. No skill config/cost/global resistance/key or stage/ending changes.",
+  "limits": "Program-drawn placeholder anatomy; test geometry/stage timings not formal art. Explicit finite/live fixtures separated from natural automatic L5 entry. No voice/music listening, manual all-branch or dual-machine acceptance.",
+  "external_sources": 0,
+  "imagegen_calls": 0,
+  "paid_services": 0
+}

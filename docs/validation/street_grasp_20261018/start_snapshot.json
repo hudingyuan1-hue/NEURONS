@@ -1,0 +1,3256 @@
+{
+  "baseline": "7ab88f22a246e23feb1c0bac95dd6d77a401446f",
+  "verified_files": 650,
+  "files": [
+    {
+      "path": "docs/ART_SPEC.md",
+      "bytes": 25172,
+      "sha256": "6883a86f9366c9500a1f760e8105b43a34133cf548000f15266ccb72531d5c2c"
+    },
+    {
+      "path": "docs/FEATURE_COVERAGE.md",
+      "bytes": 22776,
+      "sha256": "19d30d7d96c97cd0d121c6ce94d24b96ccac4d31b79773743b8018fa3c801bd1"
+    },
+    {
+      "path": "docs/HANDOFF.md",
+      "bytes": 152433,
+      "sha256": "03034d527e2125fe9519b4b59a72caaf4cbfcf14ad47de7e1cd132b8008213ae"
+    },
+    {
+      "path": "docs/PRODUCTION_PLAN.md",
+      "bytes": 66395,
+      "sha256": "18b2b05c81ffa884158a3668644d3f52d248a01b5bfb9d9cc47cfc89a3e135ff"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "bytes": 23317,
+      "sha256": "0e2930bbdf0a4577e24e5699493092999fc20b4f31a54c9f57f0dbcae1237f37"
+    },
+    {
+      "path": "docs/assets.csv",
+      "bytes": 29696,
+      "sha256": "0d93856f1ba660e3bcd17963b31a48d7ea1e79b9199218c55c1e6704c3b47219"
+    },
+    {
+      "path": "neurons/data/audio_bindings.json",
+      "bytes": 24799,
+      "sha256": "60d3860eb779797caf022a873d86a3a14f523d922ca583e541f1338bd45220bc"
+    },
+    {
+      "path": "neurons/data/street_chapter.json",
+      "bytes": 47696,
+      "sha256": "3c4274059077bc7d9fb828989bb4a7ab4303ed3940d3503fdd954cfd3a4e7a21"
+    },
+    {
+      "path": "neurons/scripts/core/street_chapter.gd",
+      "bytes": 18359,
+      "sha256": "67cd5f7448fd3da3e736ca303c2de175d2c6c9a75d791b1c0f275648cbb829b7"
+    },
+    {
+      "path": "neurons/scripts/ui/front_end.gd",
+      "bytes": 15707,
+      "sha256": "f5fc4a4c34f24ff3cf906f1e6525bdc9fe5b6fbfb0b5735c5ad02fb9b5aa18ee"
+    },
+    {
+      "path": "neurons/scripts/world/combat_view.gd",
+      "bytes": 42061,
+      "sha256": "7bf1dfcc4f7cabb9c6e3a792cf97e109fd2c50aa22ec1430b015efe940e43b2f"
+    },
+    {
+      "path": "neurons/tests/street_chapter_check.gd",
+      "bytes": 15018,
+      "sha256": "9081269c2b66e570f543807509f0443d1c79b39a318b59f6f0d60e5dc322610f"
+    },
+    {
+      "path": "neurons/tests/street_losses_check.gd",
+      "bytes": 11611,
+      "sha256": "6f0b6e0524a2241dd6c93b46fef096c5b6e214cd4685d0e929e761ba403bb4cd"
+    },
+    {
+      "path": "tools/check_export.gd",
+      "bytes": 16302,
+      "sha256": "efe8a0f3486693548129b9a4339e5aa3d0f88b7fc43decc4e118403330ca44f2"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/chapter_final/01_ending_registration.png",
+      "bytes": 82063,
+      "sha256": "138cb1622ee17fe6643cb977450e85f4b2dc96a0053c869828e2938cf8e8bae2"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/chapter_final/result.json",
+      "bytes": 3762,
+      "sha256": "e656d54ca71401460e4ee32894d62b0bac3ba9324434c8174ea2fd6cb1e65327"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/displays_final/01_back_and_sheet.png",
+      "bytes": 72129,
+      "sha256": "25d0399fe3b5f0325382204e536d1fc258912a2c7dd9326b52315959ba424256"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/displays_final/02_dressing_read.png",
+      "bytes": 74279,
+      "sha256": "8789a683f6df1e46f1bbc17f62bd50a02a0fc4b2eea0e18fb488abcb9f1d3e8a"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/displays_final/03_band_and_chair.png",
+      "bytes": 78047,
+      "sha256": "8e2e6d4941f20bd8fcf69241fa94d4c370cc14c38d77869bbe287618aad59c11"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/displays_final/04_real_branch_clip.png",
+      "bytes": 80703,
+      "sha256": "94a5c0fc65b836891521aef4aa65ca3644f1afd6b4f65521927102f8643ca72d"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/displays_final/05_mimic_written.png",
+      "bytes": 70435,
+      "sha256": "bf40af51baa5d49449be8f9cacdba820d7362e7c5466f85da9cddd5a5aa9a475"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/displays_final/06_visible_tinnitus_pose.png",
+      "bytes": 73868,
+      "sha256": "f65b4107633514bde223d080d70d64d7238f52639687838b640bf19fce84c655"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/displays_final/06a_informant_old_position.png",
+      "bytes": 81248,
+      "sha256": "4892b747ed5102024bd3f9675c0fb2d5c83a5c662c93f6601ae1435407ed8423"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/displays_final/result.json",
+      "bytes": 4641,
+      "sha256": "15e76f4859d2b5605607b1ee9be1a95d225cc4596774191310bc48d1dddb5167"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/exe_startup/normal_exe_startup.json",
+      "bytes": 262,
+      "sha256": "85454150d1f2a61edb05bc37c446152e4443f4e4fe9911ef8cf3b2fe1f0add1b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/exe_startup/normal_exe_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/exe_startup/normal_exe_stdout.txt",
+      "bytes": 188,
+      "sha256": "963b86b9118608602ac681be7e2544a19df735f084d23f758303f7681401e1b0"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/export_final/01_windows_title.png",
+      "bytes": 57850,
+      "sha256": "27ff151ecee3d81d073fd241c151f7514158aece0de19b4f6d7f45f0206a3522"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/export_final/01b_windows_introduction.png",
+      "bytes": 32234,
+      "sha256": "f34beb846c303f1d3d205f7015f438250ef76177497741916c749f40789d49de"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/export_final/02_windows_tutorial.png",
+      "bytes": 41584,
+      "sha256": "693b939d6ed2cd15bf8c9eddab0a625f21d25b37ff17558dd6da9b0912c10b1b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/export_final/03_windows_freezer.png",
+      "bytes": 86863,
+      "sha256": "ddb0be38af8d1c6f46f4eb996cb6adacdea081f8c0dca3ae9f9028c97a556a6b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/export_final/04_windows_combat.png",
+      "bytes": 92419,
+      "sha256": "6e0f36e1c639f57e35fe823eaab6c141a690561be43c1d5dc6e9f96c917e62e9"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/export_final/05_street_end_direct_room_preview.png",
+      "bytes": 88757,
+      "sha256": "f275a7f4eafc2efa983af1d2d2248f1e359263fd467cea2b7c6c745db2108081"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/export_final/result.json",
+      "bytes": 7723,
+      "sha256": "ffc7ddf780e8f1c90b3422509873ebce8cedb72d52ecc85ccf3b6a6f5eac4bf8"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/finite_r1/01_actual_strip_before_contact.png",
+      "bytes": 76709,
+      "sha256": "5620b4752d8766c77ad558e364d24627cb3692d8b4e6d1de548e0e9eb616c1a4"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/finite_r1/02_actual_waist_hit_paused.png",
+      "bytes": 87548,
+      "sha256": "bd832e6f7a9e68205777e5640e06fbf2c5b9e9b854acd69a20bdca92b9ebc7ba"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/finite_r1/03_actual_belt_stopped_by_cabinet.png",
+      "bytes": 83208,
+      "sha256": "c66e04a705de065bc1faeb4e74a9d1a5c74b18000416c069464533b78192bb3d"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/finite_r1/result.json",
+      "bytes": 3160,
+      "sha256": "60ff3aa1e7c12acb64ea82225f910d214fe898b29c59f333b0cbf0904adfb888"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/finite_r2/01_actual_strip_before_contact.png",
+      "bytes": 76606,
+      "sha256": "5bf7a5d5d64950176ca187534cba61be52755f5eb091dbc75cc4ce3c9576c74b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/finite_r2/02_actual_waist_hit_paused.png",
+      "bytes": 87474,
+      "sha256": "f7778167c3a33cc754cc239242b62fda239691d669c07b9938876888fb20252b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/finite_r2/03_actual_belt_stopped_by_cabinet.png",
+      "bytes": 83152,
+      "sha256": "de8156aea64de0da1895517c4bedeffa7694866647f7b25296cef5160b10e05e"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/finite_r2/result.json",
+      "bytes": 3225,
+      "sha256": "20f31de90f2c3d714828ae9b32238b3f733a8ba40059b9c0b85c467d99af0f10"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/01_actual_menu_freezes_draw.png",
+      "bytes": 71765,
+      "sha256": "972faef7026782ee97bd452d404e4d8ff185f461922034ca85fccbf8f52b0097"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/02_actual_uncoil_default.png",
+      "bytes": 88002,
+      "sha256": "5780cff39c9a4e2e04b63959daa7662c7ad94591662db072e89a764003bff8c4"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/03_actual_waist_sweep_paused.png",
+      "bytes": 87902,
+      "sha256": "fd919c6d25007d05c8d0cbe32457cd462d133ae9b59987bf7135624a893e1a02"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/04_same_strap_zoomed.png",
+      "bytes": 89526,
+      "sha256": "ea160a4d4f40dcac11a85059fce522c79bb209ac060f47208a6cda89bacd070b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/05_actual_open_loop_paused.png",
+      "bytes": 86168,
+      "sha256": "93a7835874bd4b377478758ed9df874924bb2047375dbcf9af4f8a63cb4d0419"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/06_actual_wrist_fixed_default.png",
+      "bytes": 86123,
+      "sha256": "358817ac20f85ac2fa63cdbf8240c84a16a39bcbc3556f455755fcb1435ad098"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/07_actual_wrist_fixed_zoomed.png",
+      "bytes": 88081,
+      "sha256": "dc20425cd2567d71815a8f108f74121c548c3aaa7b03fcc7c1105b83db17ce7c"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/08_actual_loop_release.png",
+      "bytes": 86042,
+      "sha256": "3a50b9a17bc142b408a35a1d036a8123d8f81a3c1b31964e90b6dca756782de5"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/continuous_silent.mp4",
+      "bytes": 266416,
+      "sha256": "f67bf040852f6256f04d29edcba446ddcd082a70e742d0b0399b3ba787756f5b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/result.json",
+      "bytes": 1841,
+      "sha256": "7f1a17d2c7b8fdce43140b2d273aba2b6747bfda60ad68803f045b7eda5b07be"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_final/video_sample.png",
+      "bytes": 246926,
+      "sha256": "d561dd3fd69071ec89dc912210ec7379ae115f20c29e0eb988df46cfe8e1fbb6"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_r1/01_actual_menu_freezes_draw.png",
+      "bytes": 71765,
+      "sha256": "972faef7026782ee97bd452d404e4d8ff185f461922034ca85fccbf8f52b0097"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_r1/02_actual_uncoil_default.png",
+      "bytes": 87620,
+      "sha256": "7fd4250bdce35406e5b6e008665d2390581d6af8a0b25f9db058da96d5061c04"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_r1/03_actual_waist_sweep_paused.png",
+      "bytes": 87517,
+      "sha256": "0bfbed8e65e61548131e390755317f2e2334d1fec3f5d176dba2545999a2acca"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_r1/04_same_strap_zoomed.png",
+      "bytes": 89153,
+      "sha256": "318cba758aae2474fe0b3d693fc692e8641c1aaba470aaf93ab4bdbfa439999d"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_r1/05_actual_open_loop_paused.png",
+      "bytes": 85774,
+      "sha256": "354ead0b6f4a81156f1d4da6fcc93a1e9b35c6f2b4c4aa7a5e1368f25293de04"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_r1/06_actual_wrist_fixed_default.png",
+      "bytes": 85651,
+      "sha256": "a55f5827868185e0a7c61b6ba2fd655b128c5533b5f15129c14962bc11319c13"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_r1/07_actual_wrist_fixed_zoomed.png",
+      "bytes": 87484,
+      "sha256": "25993997c7b6a94533da37a01ab24fe5f6ad6ee623698b9ecea47b0c445198f0"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_r1/08_actual_loop_release.png",
+      "bytes": 85711,
+      "sha256": "d8f201a1d6075ecbfee24c9f090900d41a4399ac1f9d32f681e5a93bd6e3918d"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/live_r1/result.json",
+      "bytes": 1841,
+      "sha256": "7f1a17d2c7b8fdce43140b2d273aba2b6747bfda60ad68803f045b7eda5b07be"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/losses_final/01_actual_loss_during_threat.png",
+      "bytes": 82995,
+      "sha256": "ea02e2c32799c660147bc34f9c5bf01bfb1bcf2ac615217543ba439b5ec56b51"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/losses_final/result.json",
+      "bytes": 2970,
+      "sha256": "04d115944e2158116e4be7a02d0fae834755384418d761e2aaf48e541f439331"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/final.png",
+      "bytes": 95312,
+      "sha256": "36d52bbf0867b7474cbae3b5a5f07da717b04a6ee394c6fffb6daacd31a57f6c"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/result.json",
+      "bytes": 1104,
+      "sha256": "d921ed4f9e90b311249500bb94dd0b9edb5e5c5ffee194f6813d6583eed6ce4d"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_01_atrium.png",
+      "bytes": 96323,
+      "sha256": "03d79193f3ab3ce035610ef7abd4e24d640471eafe5f4b661a162c9f0cec649d"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_02_decision.png",
+      "bytes": 88286,
+      "sha256": "afbdea83f60eb81629b9be51e604c7a2b90608ee85f4c6d961dc8ee80e0a0a97"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_03_bridge.png",
+      "bytes": 86562,
+      "sha256": "97dba97468128de8737d853ad952da695936e742847ba209069241bb4b47daea"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_04_switch.png",
+      "bytes": 86500,
+      "sha256": "bce7c141fad9ac5aa32211da623ab99cdf6ad135ac66bae495a1a477b1708dd5"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_05_verify.png",
+      "bytes": 89550,
+      "sha256": "0d9b42c4723f675d59cbe15ce83eea45875ef3e8dfd954a4b428cf4575cf903f"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_06_hippocampus.png",
+      "bytes": 84992,
+      "sha256": "646790405a62075a74a695fc3e7ec2f18c8640718c170e549c8bea42873b6dac"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_07_thalamus.png",
+      "bytes": 93837,
+      "sha256": "6e00e9410e58f39a8d0b2aa164ee59b5fd98a863f02298565fc8a676b74b3262"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_08_brainstem.png",
+      "bytes": 86918,
+      "sha256": "b9d1a5c40db3ac1cd3ef95875c96b7238b4dccb2463c1f4463a09f79236a2eb3"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_09_street_plaza.png",
+      "bytes": 102619,
+      "sha256": "5e9acc48403c25785674ac4d87af91c06fbd673d8b5acdec260626e0c99ed44a"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_10_street_narrow.png",
+      "bytes": 99237,
+      "sha256": "97e4756656edcf318a070fe23e0882bb5e94b14526d422e42cfde0689df3133d"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_11_street_twisted.png",
+      "bytes": 90821,
+      "sha256": "05bc0f014126db7808c0393b3d34708fc3ad9ec8cd3704cf7f7d93c70a4ce02f"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_12_street_node.png",
+      "bytes": 95233,
+      "sha256": "88bbf3dad7a4ba15e423b9013b7018d3da1e03573cf4a6ec0690f061cda2fa21"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural/visit_13_street_end.png",
+      "bytes": 87721,
+      "sha256": "7e621f1191d73c8a756e09028d0477491003590da93b6548274c9741b8f565be"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/final.png",
+      "bytes": 95218,
+      "sha256": "ab1f1dd4970bc435e036ccdd310281c89251252705d2b6b6b619c9a290bebc94"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/result.json",
+      "bytes": 1104,
+      "sha256": "b3f506986da1d572198140e16b7979d65615c91351ab2c213054f79f0568e128"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_01_atrium.png",
+      "bytes": 91297,
+      "sha256": "b94b7968ae9379bd230bf2855421a43ca7a894abe9aa8b6b375390ec6c8fab39"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_02_decision.png",
+      "bytes": 88363,
+      "sha256": "3d86bafb285d1c776e9bf6475c980b0e1227c7978c0767d88927153baeed8fd0"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_03_bridge.png",
+      "bytes": 86827,
+      "sha256": "cc8acaea117587bf0c4389aec008e6d5869d40a0bc7b83da626c7586468b90ec"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_04_switch.png",
+      "bytes": 86587,
+      "sha256": "e8452fe8ea2c00e1ab8fa2aae59e5cde81f8c98daae62b9f9cf703f597c5367c"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_05_verify.png",
+      "bytes": 89555,
+      "sha256": "fe35c3d046b0dc981c82f8ed8cd3b74d7255a3761d60382be953134c53ad9c52"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_06_hippocampus.png",
+      "bytes": 85071,
+      "sha256": "b57ce1a51b6d32df4f628670f8e3d6d6ef0258340c18aed5c05ab28c8cc93173"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_07_thalamus.png",
+      "bytes": 93674,
+      "sha256": "d145984ee087293d984bbb0673bf9df21921b50ea9cf7bde4e6559c46f2b82d2"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_08_brainstem.png",
+      "bytes": 86837,
+      "sha256": "050d2d5dc934c18d8771954633b5508ade9fbc3f348032febcabaf18702c605c"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_09_street_plaza.png",
+      "bytes": 102753,
+      "sha256": "18cda5c2d991384573396af76307822b08596777e1c1e655974fad9f42c4d297"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_10_street_narrow.png",
+      "bytes": 99135,
+      "sha256": "af8e35a13a4374b40c9f20501673e97922ed61abc78151286aa0356f09a1b29a"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_11_street_twisted.png",
+      "bytes": 90771,
+      "sha256": "500301ad3def1a537642158a7ac24df7af3cbd683bfe5b29cd3ec5b528d19178"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_12_street_node.png",
+      "bytes": 95160,
+      "sha256": "569c60035537667ae6b3acda23fc872f20c01abbe15827642b6d0e7ce91be8ad"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/natural_final/visit_13_street_end.png",
+      "bytes": 87905,
+      "sha256": "4bdf034101f7f9c5f2a687a07d70db8b07343e45d44b765bb080f8574821e1db"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_belt/01_actual_strip_before_contact.png",
+      "bytes": 76230,
+      "sha256": "a776bbf148b6b1c271a7a988d9315c74af3e1bcf9f2c0257820fe41c9b18a8e3"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_belt/02_actual_waist_hit_paused.png",
+      "bytes": 87241,
+      "sha256": "82cf13a41510523c5c86230837c60c4c17599f09bed05bf737d8f06d26566730"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_belt/03_actual_belt_stopped_by_cabinet.png",
+      "bytes": 83073,
+      "sha256": "6a97f6dfacc990e92a878cbd82893cf6c9e1e9c1b19c59f43d36860526b7428c"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_belt/result.json",
+      "bytes": 3225,
+      "sha256": "20f31de90f2c3d714828ae9b32238b3f733a8ba40059b9c0b85c467d99af0f10"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_bottle/01_bottle_local_sweep_before_contact.png",
+      "bytes": 75139,
+      "sha256": "797e16462b70a14b4e8fab3c2d3ecf7f085553278c1f53f42776ce250ceded64"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_bottle/02_actual_bottle_contact.png",
+      "bytes": 86399,
+      "sha256": "1e2fcd5e70b6a40eaef1023b7fc4b4d9eda197f6fe4737e27329554ea6648d14"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_bottle/03_actual_glass_stopped_by_cabinet.png",
+      "bytes": 82034,
+      "sha256": "ffb77d389552e2cb6e833a201fe7483c93652df38e5ee26448a5f41ef17f57b6"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_bottle/result.json",
+      "bytes": 2709,
+      "sha256": "ee18008c7aa70e066cb1588555ce4c79420ad776ac857367b5fea25eb86bb741"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_clamp/01_open_clamp_not_yet_contact.png",
+      "bytes": 80287,
+      "sha256": "e30f7df19d356412fac07de2c5fb9fc5dbbc498f3f09e403b61df4ddd1731d35"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_clamp/02_actual_single_arm_hold.png",
+      "bytes": 90828,
+      "sha256": "f23c4824af260c8c812b6ee5b6133e348c05ce53ef361f2d9c46a0e6cdcea0e4"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_clamp/result.json",
+      "bytes": 2382,
+      "sha256": "2967eb65d935d99757f169e56072b91117fa859d194d3dc9bb2a52a50afd0602"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_embrace/01_both_arms_closing_before_contact.png",
+      "bytes": 76973,
+      "sha256": "e8a08552bf3c8481f0348b2ccf8eef62d9faa90d5052e5c5ac258a4aaa118d89"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_embrace/02_both_arms_actual_torso_hold.png",
+      "bytes": 88324,
+      "sha256": "f618f6cd14bb510de08a3fd117da8d5b07d7d8656938d283f1db9c24ac170a35"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_embrace/03_arms_open_recovery.png",
+      "bytes": 88435,
+      "sha256": "302dd5c02401abdf91aaa1bb16e427c42474bd3332c79ed3fe9308bb9a31beac"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_embrace/result.json",
+      "bytes": 2575,
+      "sha256": "b57cd06ead339e360dfdc0ed9a051627a06da90fdee23ed428fe3583ef4e8a0b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_medicine/01_actual_cup_contact_no_effect.png",
+      "bytes": 79637,
+      "sha256": "279d1dc80ab0a9734212168b1e11f01a4fa2e9e31d3968bdfd659ac35a4c566e"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_medicine/02_actual_swallow_then_withdraw.png",
+      "bytes": 87557,
+      "sha256": "9b81b44e55b5e6b7811c88f9e9ada485ebc11369a18cfa4a3336335ace00880b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_medicine/result.json",
+      "bytes": 3093,
+      "sha256": "a8e9ccc3a352df5733f214bca1d820681fd3efdf86b776479dd3129bf479d652"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_restraint/01_actual_loop_extended_not_fixed.png",
+      "bytes": 80122,
+      "sha256": "d94ff1adafbff419d56d01da16451c7f5ba875650b1ac2e5914b915ec099fd1b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_restraint/02_actual_forearm_fixed_paused.png",
+      "bytes": 90730,
+      "sha256": "d28eea103d5034fa07bdf9e36cfda54f9481d315d85bd12cf440fe2c5155efe8"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_restraint/03_actual_loop_released.png",
+      "bytes": 90420,
+      "sha256": "635e5cd8f3d8abc68cca37cc1c2f948d9093b4a2dcabe93e07cd6edd51861479"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_restraint/04_actual_loop_blocked.png",
+      "bytes": 85633,
+      "sha256": "bde75a1a2a363aa7340701c11d24938b4e5eab25e52a0ddb1e7004fe9248b022"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_restraint/result.json",
+      "bytes": 3218,
+      "sha256": "f384165577ece4745cf7c364118a9d90a784ad900cbfd1f092cce5366296a726"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_splash/01_cup_direction_before_release.png",
+      "bytes": 79239,
+      "sha256": "635aa2a5e4c8862170d5d5b24757d5c365f5a79f8a72bdf61942e201822800ab"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_splash/02_real_liquid_mid_flight.png",
+      "bytes": 87044,
+      "sha256": "489821e4ca14cf3f7f955c34c5c18b56ca93eba413351b31c6354e50661190a6"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_splash/03_short_ground_visual_only.png",
+      "bytes": 86846,
+      "sha256": "9623ea6a20fa921898a8510392f4e7910d8495d4e3db8351ef0712f79612eb7b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_splash/04_actual_cabinet_stops_liquid.png",
+      "bytes": 78335,
+      "sha256": "7660d606a7afafe9b866456abb8e98ee2248e516daba4250190b8c8f947e14db"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/reg_splash/result.json",
+      "bytes": 3487,
+      "sha256": "15bce119057e9bd8eacae4aef428888617c048df70fa092c5721cb1633436640"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_final/01_actual_loop_extended_not_fixed.png",
+      "bytes": 80035,
+      "sha256": "28f8b70461643204876879b8bb3f00599cd4f9f80df23da32bcded053d2df0ce"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_final/02_actual_forearm_fixed_paused.png",
+      "bytes": 90651,
+      "sha256": "4750904cb1db19557d2446319da3d64c69070fda9219a8de8a4b5ab8be394d86"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_final/03_actual_loop_released.png",
+      "bytes": 90344,
+      "sha256": "e5d158481c2b3eb709c70c63e3f387baea03ebe0391e74de2331c47a42c6bafb"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_final/04_actual_loop_blocked.png",
+      "bytes": 85543,
+      "sha256": "b8244be9f4d0246e894f5531355cde5d42b3ab9e4666e84b2c5e3e5fad725819"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_final/result.json",
+      "bytes": 3393,
+      "sha256": "4759f365d1cbe766c457257f8a7b40eea78d616c757b38ee7ee5a59440ddb08e"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_mixed_r1/01_actual_loop_extended_not_fixed.png",
+      "bytes": 79664,
+      "sha256": "dbc34155e1c3e4cb431aa40e0bc0f1616a0687c3c0ecbacc056546bc2b491714"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_mixed_r1/02_actual_forearm_fixed_paused.png",
+      "bytes": 90398,
+      "sha256": "52f2ee8b81e139d2a34125a3f17ea0a860aefdc8a7b4b5cd3ad1ce7834c7ee7b"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_mixed_r1/03_actual_loop_released.png",
+      "bytes": 90194,
+      "sha256": "5755b531fe04bc8495ea13e986e4dfaeeb36ae56609e114abe0789c75c93e07f"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_mixed_r1/04_actual_loop_blocked.png",
+      "bytes": 85362,
+      "sha256": "52ff28aca8def3b9e363f9c4a9e4a114a1af3cb3d80e8cfe844e151474055410"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_mixed_r1/result.json",
+      "bytes": 3218,
+      "sha256": "f384165577ece4745cf7c364118a9d90a784ad900cbfd1f092cce5366296a726"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_r1/01_actual_loop_extended_not_fixed.png",
+      "bytes": 79794,
+      "sha256": "89bc4c25b29379b5fcc290fc8ccf9ef77bedf45fb56ffc167a4b8ee7c30c8e53"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_r1/02_actual_forearm_fixed_paused.png",
+      "bytes": 90441,
+      "sha256": "207707742294bf6cfc20c8b234691c0d237a8928736578af363edcd2d7d60fd6"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_r1/03_actual_loop_released.png",
+      "bytes": 90340,
+      "sha256": "41b00ccae1b3cd23c147014ea0576af7d2fc42159170b0eb91cb72d30fc4a117"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_r1/04_actual_loop_blocked.png",
+      "bytes": 85581,
+      "sha256": "480ea347f5029f63167054b766512429e9530ab00195aa2a14a763315f3fd9a3"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_r1/result.json",
+      "bytes": 2823,
+      "sha256": "010dde3b766c72e1d94bdf2f4b98104982d4755b5882e506aba25cd5de2d575c"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_r2/01_actual_loop_extended_not_fixed.png",
+      "bytes": 79968,
+      "sha256": "0b43f70148d0e7f54c17c0b10cb4f553c1fc5a33b5fd5e1fc45b351949f1145f"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_r2/02_actual_forearm_fixed_paused.png",
+      "bytes": 90583,
+      "sha256": "6c17e0b063dce0460b14c56d8a3b690f6822981898973faaf0af1d1319cd25fb"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_r2/03_actual_loop_released.png",
+      "bytes": 90495,
+      "sha256": "494de92a8999d8f65c02e5531cc482545352e423b3356e097b48ff39709a7d12"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_r2/04_actual_loop_blocked.png",
+      "bytes": 85764,
+      "sha256": "b01b267e16a0f02d46c76cf394dcc47ed82ad2771bf3165c808a470259ab2461"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/restraint_r2/result.json",
+      "bytes": 2821,
+      "sha256": "4f6aa0ee4fddb66e199d835932916340bc87c44c5bcf0fe4a28a34380099726e"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/source_check.json",
+      "bytes": 9070,
+      "sha256": "b69b0e497791ec4fc6bb4d6e5be6a5f03e91817c481413a3156df0d5f6eb83d6"
+    },
+    {
+      "path": "docs/validation/street_belt_20261018/start_snapshot.json",
+      "bytes": 100323,
+      "sha256": "d69ce0ff84858e9367c7ba3b4d413514cf011b7991f1db6aad21b016d66b6220"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/build_manifest.json",
+      "bytes": 130778,
+      "sha256": "8371bc27da13202e29da253c599379f17e49f28fd6fdd58a5245087f545229ba"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/chapter_final/01_ending_registration.png",
+      "bytes": 81992,
+      "sha256": "5a2a5790e69a6c83db02bd0c07dba9eb87549ac3003ff273911351a9f6660599"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/chapter_final/result.json",
+      "bytes": 3764,
+      "sha256": "53093866a4220aa24bf8158c4a65ef4a274baaa516083001daba226307ad0ca9"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/chapter_r1/01_ending_registration.png",
+      "bytes": 82116,
+      "sha256": "dd30a4ea04163fe8d22af39dea8a7129f260a9da552a04b29b70aa0755e0555d"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/chapter_r1/result.json",
+      "bytes": 3762,
+      "sha256": "e656d54ca71401460e4ee32894d62b0bac3ba9324434c8174ea2fd6cb1e65327"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/chapter_release/01_ending_registration.png",
+      "bytes": 82370,
+      "sha256": "00019d14fb8a39616926b842b75831078a48b569461f850ffdb71033c5337592"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/chapter_release/result.json",
+      "bytes": 3762,
+      "sha256": "e656d54ca71401460e4ee32894d62b0bac3ba9324434c8174ea2fd6cb1e65327"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/clamp_release/01_open_clamp_not_yet_contact.png",
+      "bytes": 80406,
+      "sha256": "a9f4d8b8ed4798661f681a642fbe25da2760229b7eca0da4f20255ca1189ade1"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/clamp_release/02_actual_single_arm_hold.png",
+      "bytes": 90956,
+      "sha256": "b8562e23050bffb0a24fdce35c38223c4c68450c642cb3b40a537592e0c0244a"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/clamp_release/result.json",
+      "bytes": 2382,
+      "sha256": "2967eb65d935d99757f169e56072b91117fa859d194d3dc9bb2a52a50afd0602"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/displays_release/01_back_and_sheet.png",
+      "bytes": 72115,
+      "sha256": "930c38ab4bbf4d256f545d57e23f7bef45199547f352bcb4c61c6764ed958128"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/displays_release/02_dressing_read.png",
+      "bytes": 74247,
+      "sha256": "748552655357b6d38ade582897a546a6664a83680807334906445c7a27b839c4"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/displays_release/03_band_and_chair.png",
+      "bytes": 78023,
+      "sha256": "a517f76b35275318ab7c39f6cfdec86f457c6b98f5930edbb73bb8fd4aeade86"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/displays_release/04_real_branch_clip.png",
+      "bytes": 80701,
+      "sha256": "ea3fcc6fcee8234ec077f6e9b7cc5bf8dc6426dd6d4ef7741e22db47e1f140fb"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/displays_release/05_mimic_written.png",
+      "bytes": 70424,
+      "sha256": "9257b4b974da862dd044b5a243de7b7381eb5443aaa69842ff9658f10dc361a2"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/displays_release/06_visible_tinnitus_pose.png",
+      "bytes": 73835,
+      "sha256": "1110189eabda9f08595bc09cb98d01024b1a90e6f6b323cfffbce22893c75b0b"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/displays_release/06a_informant_old_position.png",
+      "bytes": 81228,
+      "sha256": "14fd82ffddc5283f80298fb28ec074138c287ef22b0a9f12296115b604ba8926"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/displays_release/result.json",
+      "bytes": 4641,
+      "sha256": "15e76f4859d2b5605607b1ee9be1a95d225cc4596774191310bc48d1dddb5167"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/exe_startup/normal_exe_startup.json",
+      "bytes": 262,
+      "sha256": "85454150d1f2a61edb05bc37c446152e4443f4e4fe9911ef8cf3b2fe1f0add1b"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/exe_startup/normal_exe_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/exe_startup/normal_exe_stdout.txt",
+      "bytes": 188,
+      "sha256": "963b86b9118608602ac681be7e2544a19df735f084d23f758303f7681401e1b0"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/export_final/01_windows_title.png",
+      "bytes": 57850,
+      "sha256": "27ff151ecee3d81d073fd241c151f7514158aece0de19b4f6d7f45f0206a3522"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/export_final/01b_windows_introduction.png",
+      "bytes": 32234,
+      "sha256": "f34beb846c303f1d3d205f7015f438250ef76177497741916c749f40789d49de"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/export_final/02_windows_tutorial.png",
+      "bytes": 41584,
+      "sha256": "693b939d6ed2cd15bf8c9eddab0a625f21d25b37ff17558dd6da9b0912c10b1b"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/export_final/03_windows_freezer.png",
+      "bytes": 86666,
+      "sha256": "19b2d7f9178df80636faa9155bf8f262a2466d74ed102b0e89228f233fc866d8"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/export_final/04_windows_combat.png",
+      "bytes": 92518,
+      "sha256": "a8b6a4e3ab62902f209a37690aa88bbd24bf09b5cdfef7dd4e66531a6be7a247"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/export_final/05_street_end_direct_room_preview.png",
+      "bytes": 88864,
+      "sha256": "e5b43a6f5f7dab6b5b9a4a517f9d208f0f78e0cd55e039ef1ba763881bce94ee"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/export_final/result.json",
+      "bytes": 7014,
+      "sha256": "09b2c0b64466c5e501ea7ef04c1c846cbad5ed82feb1041ec7b58ee6d62bea94"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r2/01_both_arms_closing_before_contact.png",
+      "bytes": 77469,
+      "sha256": "dcb9f2265de159f478dff22f57d7e71479a27c6da2b64ab7b72f9987c32ef5df"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r2/02_both_arms_actual_torso_hold.png",
+      "bytes": 88663,
+      "sha256": "98a84b13514bebcd7c26dc8a9059adc75ec909acb0c59d561afffd8dc3f2a40e"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r2/03_arms_open_recovery.png",
+      "bytes": 88770,
+      "sha256": "4320330692b555fd05029048cd27ed96aab995d12a034f81e93627d1822b57eb"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r2/result.json",
+      "bytes": 2577,
+      "sha256": "e1e52637267cbe4c8b6c48317f0c7b111a07da91504d385e8c7ce92ec2400fad"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r3/01_both_arms_closing_before_contact.png",
+      "bytes": 77656,
+      "sha256": "c8239010defcf5f29a28045f155144bfe799729e20e3103e4dc5cae441b0c283"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r3/02_both_arms_actual_torso_hold.png",
+      "bytes": 88808,
+      "sha256": "72be917778624d2a696faa587c1871fc0af7ed4dc9b9204874c501300248af79"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r3/03_arms_open_recovery.png",
+      "bytes": 88919,
+      "sha256": "24577c3b43e50b82a30c45c7bb6bbfc1fc0add8f59e3284bb424fe47ad510980"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r3/result.json",
+      "bytes": 2577,
+      "sha256": "e1e52637267cbe4c8b6c48317f0c7b111a07da91504d385e8c7ce92ec2400fad"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r4/01_both_arms_closing_before_contact.png",
+      "bytes": 77332,
+      "sha256": "c46eca3b35fb70d1208c35f0280df01058779dbb4f53579daee800f937c7f417"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r4/02_both_arms_actual_torso_hold.png",
+      "bytes": 88525,
+      "sha256": "072049529e58f3ab26e1c7f6abe0dae82b07c900f9072f608f4a88b481437763"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r4/03_arms_open_recovery.png",
+      "bytes": 88633,
+      "sha256": "e18988e99d39c142f845594a882c7f1225f75603a50d55e88d0c2859e5fba462"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_r4/result.json",
+      "bytes": 2575,
+      "sha256": "b57cd06ead339e360dfdc0ed9a051627a06da90fdee23ed428fe3583ef4e8a0b"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_release/01_both_arms_closing_before_contact.png",
+      "bytes": 77301,
+      "sha256": "dd7740a85104aba3ee75986133d7582b653174728e882a9d6a4987c883a897f1"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_release/02_both_arms_actual_torso_hold.png",
+      "bytes": 88530,
+      "sha256": "33c3ccc6eee50daa6c5d0e04d1f0b637f05f51229de1c494c822ad2b930ace9f"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_release/03_arms_open_recovery.png",
+      "bytes": 88641,
+      "sha256": "5e6c3899d4ad964fc6e24294b010a460e8413d01127de58ee076329b19ef543f"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/finite_release/result.json",
+      "bytes": 2575,
+      "sha256": "b57cd06ead339e360dfdc0ed9a051627a06da90fdee23ed428fe3583ef4e8a0b"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r1/01_two_arms_closing_paused.png",
+      "bytes": 89319,
+      "sha256": "6469b14d755b18e5d2e1bebb98fbe54c9b0e20cd9a36eb85d72ea193772ab4c8"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r1/02_actual_torso_hold_paused.png",
+      "bytes": 89790,
+      "sha256": "7151e6d2e7384cd5017bfcd57ce39dbc7aa003d34841241937bec89885b4b17a"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r1/03_actual_hold_zoomed.png",
+      "bytes": 91995,
+      "sha256": "ba88a72a7914a91a797579fd72a767694260a5c055c4d0f0319dfee8ca7d170f"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r1/04_both_arms_opening.png",
+      "bytes": 90259,
+      "sha256": "d7a4bf5c518db810af26373bb901a73398ae183e5093d4b976bd2a9acc55c705"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r1/result.json",
+      "bytes": 1148,
+      "sha256": "de0df2734f5c32d526928c1152503300d5a6b8f67656f639fa78b5d5fe5cc881"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r2/01_two_arms_closing_paused.png",
+      "bytes": 89223,
+      "sha256": "89b9b028604fc367c33a86648445215bbfa0494b432aef576648da1066fc9e72"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r2/02_actual_torso_hold_paused.png",
+      "bytes": 89694,
+      "sha256": "25696e1536719baa38a1b9a1c8c0a67fb1c4c63ae9b76ccaf55a42471c2956cc"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r2/03_actual_hold_zoomed.png",
+      "bytes": 91906,
+      "sha256": "90803bc1c502e87b8fe4737331bae6db1d428d14b62eb5170531180b01f2733f"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r2/04_both_arms_opening.png",
+      "bytes": 90180,
+      "sha256": "b1e4241e0076a67b1ba5eef4412f86e23808793d693e547582225c0fe4426044"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r2/continuous_silent.mp4",
+      "bytes": 172197,
+      "sha256": "b25d22b53714d1d86e604441c68c49e12848d4b579c6ed5dddbe25cada5c4075"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r2/result.json",
+      "bytes": 1346,
+      "sha256": "380d9f6dd666dab61184f43b88b14b6d5ee38c0bb0e0810cad4370dd57921bb0"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/live_r2/video_sample.png",
+      "bytes": 256930,
+      "sha256": "6be0e39a111a3cd0d9137009c307959d964ffb48e13f483d98567fa10fa3e37e"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/losses_release/01_actual_loss_during_threat.png",
+      "bytes": 80455,
+      "sha256": "b5671d2ce87d1416688791aef0f6bd9f7872a3e39b149834a7cf1ad77c8013db"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/losses_release/result.json",
+      "bytes": 2970,
+      "sha256": "04d115944e2158116e4be7a02d0fae834755384418d761e2aaf48e541f439331"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_final/01_actual_cup_contact_no_effect.png",
+      "bytes": 79778,
+      "sha256": "c12ea2357128bd564735487698052702bc7de48920b46afd28962796f2d5f758"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_final/02_actual_swallow_then_withdraw.png",
+      "bytes": 87662,
+      "sha256": "b1e5bb5eb2cab8b453f2f4abb531e39029691c344552b1358cd6e89f9e72d034"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_final/result.json",
+      "bytes": 3093,
+      "sha256": "a8e9ccc3a352df5733f214bca1d820681fd3efdf86b776479dd3129bf479d652"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_r2/01_actual_head_fixed_full_cup.png",
+      "bytes": 89202,
+      "sha256": "218f7367a658a29e8507d3949de72f1423d6ad486c748b6f04ca12cf86b211fa"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_r2/02_actual_lip_contact_paused.png",
+      "bytes": 88898,
+      "sha256": "b8ea01b34cc834738609ba875e0695f129c87836248f1f6ba0e2ded74214b02f"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_r2/03_cup_contact_zoomed.png",
+      "bytes": 90022,
+      "sha256": "0bfa098986076553807fd7290e4e74f613695272353ab2d69270472fee9b3f99"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_r2/04_poured_not_swallowed_paused.png",
+      "bytes": 90117,
+      "sha256": "585caaf6705d4af708dbec71f4d040e291910ceddbf8c8e7ea3ab7c09020f9bf"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_r2/05_actual_swallow_withdrawal.png",
+      "bytes": 88506,
+      "sha256": "b902d935fea5aa2a29be021b863dd74652dd24f53332fae79e29ce95c24b7bb8"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_r2/result.json",
+      "bytes": 1466,
+      "sha256": "53f578ecb0add62dcbf0366b567b7557ccdad3fa351d59b4d2e900544c9823ae"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_release/01_actual_head_fixed_full_cup.png",
+      "bytes": 89021,
+      "sha256": "cea75c67c5c9cd28f455a1bf57e678edba2d984d129b5c45f41b89df6ea460b0"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_release/02_actual_lip_contact_paused.png",
+      "bytes": 88796,
+      "sha256": "9df92ccdbd74503da8a88e8296181f3befd0accfd9a2d4f318882f099359b1a6"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_release/03_cup_contact_zoomed.png",
+      "bytes": 89862,
+      "sha256": "5e5a3f513279df35a0e0e4c93d6d4e525e31d087cf64d8d7d69fd48aacab45de"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_release/04_poured_not_swallowed_paused.png",
+      "bytes": 89953,
+      "sha256": "15c6740d7eb8cd405a494fcd355cc9a5eccdce083fb8f7bf52b37a8d0f74db18"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_release/05_actual_swallow_withdrawal.png",
+      "bytes": 88321,
+      "sha256": "d58ee365cff6f18b5b2f429b1eca257b06f79d38be2bffaeba393a48785c3fce"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_release/continuous_silent.mp4",
+      "bytes": 165225,
+      "sha256": "5be0f12451cf6b3f38a38f38199cfa8ad039b54bb106bb7946c4b22a1979b814"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_release/result.json",
+      "bytes": 1466,
+      "sha256": "53f578ecb0add62dcbf0366b567b7557ccdad3fa351d59b4d2e900544c9823ae"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_live_release/video_sample.png",
+      "bytes": 236805,
+      "sha256": "e0e926761a41536e9c6a713891f692d808a51dc03ed71220bb2a780822ac5c58"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_r1/01_actual_cup_contact_no_effect.png",
+      "bytes": 79590,
+      "sha256": "21ca0994ffcb94d0ce2f2aaabec215caeac7bd303d35fca337cda24aa9df8eb6"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_r1/02_actual_swallow_then_withdraw.png",
+      "bytes": 87467,
+      "sha256": "0e1ecaf22ccfc4d8eb791c2695c2ab74fe9f30727e4a8bf74c7f49df62c9d927"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_r1/result.json",
+      "bytes": 2721,
+      "sha256": "8df3bf8a3fa70b95792bdc61cf463b540aae1389c2fe629f707a146b91b1a773"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_r2/01_actual_cup_contact_no_effect.png",
+      "bytes": 79594,
+      "sha256": "da1c87d62a30b57e0f51d805e223db14297f902970535fd989e3be82280aecee"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_r2/02_actual_swallow_then_withdraw.png",
+      "bytes": 87454,
+      "sha256": "c849bd5a1d0b16ee91b200379e41cc5d536acb37ad17992b5e359797d4126e04"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_r2/result.json",
+      "bytes": 2721,
+      "sha256": "8df3bf8a3fa70b95792bdc61cf463b540aae1389c2fe629f707a146b91b1a773"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_r3/01_actual_cup_contact_no_effect.png",
+      "bytes": 79567,
+      "sha256": "e0e2357d5be2b27be5af17e5d7d6ffd42a393dc0c8e3082d15e5a69ff52e0e48"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_r3/02_actual_swallow_then_withdraw.png",
+      "bytes": 87446,
+      "sha256": "564901be7795fc29014f941e26a42a068d6f8c34495cde80b689d7f68acf2b0f"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/medicine_r3/result.json",
+      "bytes": 2745,
+      "sha256": "f178b1dc7c52ac393a187ef7ee9e87769274859398510f3314c133e6749b7de8"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/final.png",
+      "bytes": 95446,
+      "sha256": "3be9690c8e5d211e016fd7ddb21081ad77509b7b0072420f84dda62f3bcab494"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/result.json",
+      "bytes": 1104,
+      "sha256": "c37c83a40adbfee8577d5d76b47caead9133e3c0031a3ec305d9b0eeee8fdaf8"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_01_atrium.png",
+      "bytes": 96739,
+      "sha256": "41b3a2892241a6ee1f755a2f1e6740bbe5b2afdc82009d2f49597bb79a60f5d9"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_02_decision.png",
+      "bytes": 88527,
+      "sha256": "7a3ff0cd8ff50fa118843ac9b4fc6e5694be6cc4483156c74000457b20d0855b"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_03_bridge.png",
+      "bytes": 86651,
+      "sha256": "48058b0b6df5e3f342e1287a2a5b25ccd59ec053e401e8a4d468a95588c995d9"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_04_switch.png",
+      "bytes": 86903,
+      "sha256": "af6509b7f9533256dfe7051252fcd451806a35112dd6264f0a4618f2684ed3f9"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_05_verify.png",
+      "bytes": 89591,
+      "sha256": "a315992224316f96f2bc0488b9da665410d92e33260c0a7b9cf37ffb455c6528"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_06_hippocampus.png",
+      "bytes": 85072,
+      "sha256": "03e98b0e0c42d9e548ace30aff47a28326b0a4e312fd97008b5301d3e1320be0"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_07_thalamus.png",
+      "bytes": 93786,
+      "sha256": "72991bd240ee7f4aca6eb90fc7c57352b51976dc9816369bc27447bc8016cfbc"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_08_brainstem.png",
+      "bytes": 87014,
+      "sha256": "1ed646bfd5c127c96a957260a5a9fcad4c4add8f94f147584bad6a5c33b68b18"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_09_street_plaza.png",
+      "bytes": 99290,
+      "sha256": "4abf15ad477c53b319783a394e7b15d77a16f9986badcdd474630de96cb20440"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_10_street_narrow.png",
+      "bytes": 96832,
+      "sha256": "5ece77a870aee747e135f8b9724b02978270c751d5facd16ff1c6ca13fafe90e"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_11_street_twisted.png",
+      "bytes": 90688,
+      "sha256": "aa0e6f3f38fa6b8445f900f974d1107ddb0f3f5b4d42492fa793f36d56edd67c"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_12_street_node.png",
+      "bytes": 95316,
+      "sha256": "422be4368c9e58f0629d324a0a77e7f6a4c0dae3695b3f3307e1fb4a3bbc63c3"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/natural/visit_13_street_end.png",
+      "bytes": 87851,
+      "sha256": "6117b0b482fe64b0197d84d5018eeae590572b9597e02736cca320470a059625"
+    },
+    {
+      "path": "docs/validation/street_embrace_20261018/source_check.json",
+      "bytes": 10291,
+      "sha256": "70a579ec17a2b0b9a4c501fc8549e6545a7fb6a1146ee84a260784695744ef06"
+    },
+    {
+      "path": "docs/validation/street_losses_20261018/build_manifest.json",
+      "bytes": 102705,
+      "sha256": "8bb159d57bdf54ffaee777591601035435635cc0ca0b752f13fe6a1d1355bcc2"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r1/01_bottle_local_sweep_before_contact.png",
+      "bytes": 75357,
+      "sha256": "24be5640dc53262d32e5bd1a4178904ee59136527de248aa0b7ab96c2c0502e2"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r1/02_actual_bottle_contact.png",
+      "bytes": 86605,
+      "sha256": "86af2d2138d1b08665bc10c9d0cc03051d57a7adaef573452e703dd0194b700e"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r1/03_actual_glass_stopped_by_cabinet.png",
+      "bytes": 82214,
+      "sha256": "d55381b7adbabab5c632f1a23198048b64870a7664ede0f9ec713fb9d0e4b183"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r1/result.json",
+      "bytes": 2576,
+      "sha256": "51d239e870bb54f5f6f61fd2dea8ebce00263e9c1c807816d6b8f2147d8cf0ef"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r2/01_bottle_local_sweep_before_contact.png",
+      "bytes": 75147,
+      "sha256": "f588af80b4bef3111f16dd10fb5cfb504aaf69bd5fef95ecad0a2a416b70d6f1"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r2/02_actual_bottle_contact.png",
+      "bytes": 86410,
+      "sha256": "07bcb76b67a361e30754193630d465a98ec8d7d6110850e6ceda78c290003860"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r2/03_actual_glass_stopped_by_cabinet.png",
+      "bytes": 82038,
+      "sha256": "877d5ba0806a8959adf9c667f4da316d69fed7bcf1f8ea083b470e3439240384"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r2/result.json",
+      "bytes": 2576,
+      "sha256": "704da4ece665398af22cc24e8d5696984e2ad46d4c559ab770a79df04302ed98"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r3/01_bottle_local_sweep_before_contact.png",
+      "bytes": 75192,
+      "sha256": "61f144196abb7a4e4ac49052ba1b9542e3c5e8d0123d629fb3f1b08ef24095d6"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r3/02_actual_bottle_contact.png",
+      "bytes": 86450,
+      "sha256": "234d849e6fe84ce8dd6a3251119138fb65220c82ea631256e1b561592844a3fc"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r3/03_actual_glass_stopped_by_cabinet.png",
+      "bytes": 82082,
+      "sha256": "5f04f116ad0e6d172a9628127155e7300c4438482d8869d45ea5737856b0371d"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/bottle_r3/result.json",
+      "bytes": 2709,
+      "sha256": "ee18008c7aa70e066cb1588555ce4c79420ad776ac857367b5fea25eb86bb741"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/build_manifest.json",
+      "bytes": 151766,
+      "sha256": "67044711106bac65837e8110e3b033e269eb88db4dabdc4f2b04c699d3763c7c"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/chapter_r1/01_ending_registration.png",
+      "bytes": 82295,
+      "sha256": "1e19f6833bc1d09f798ec963b38f4926a3d036e2f2770cfda35ad5dc61544d68"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/chapter_r1/result.json",
+      "bytes": 3762,
+      "sha256": "e656d54ca71401460e4ee32894d62b0bac3ba9324434c8174ea2fd6cb1e65327"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/displays_final/01_back_and_sheet.png",
+      "bytes": 72337,
+      "sha256": "7abbec65f9cf2dfb8a8c3534d2ba9ca2bf8adb1575d9183f080b88ef224d7888"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/displays_final/02_dressing_read.png",
+      "bytes": 74628,
+      "sha256": "2b81c51fcaacf5c3f73ee1706718c2bf7b718fdb81bf742991a82b9a8ef91ba1"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/displays_final/03_band_and_chair.png",
+      "bytes": 78327,
+      "sha256": "381bad50f90cd673761bde238745dec0d090695837cd8f19e60dc7b512a7543d"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/displays_final/04_real_branch_clip.png",
+      "bytes": 80973,
+      "sha256": "a67f92cd7fa79571f87fabcf494f4914a05d14c118bd6c77c98bb38bf454624d"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/displays_final/05_mimic_written.png",
+      "bytes": 70718,
+      "sha256": "dc32d5dc75a3ea4950eedb1a2133fa0ecd9a04ec80405370bc5b869583692b5f"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/displays_final/06_visible_tinnitus_pose.png",
+      "bytes": 74226,
+      "sha256": "c38be6ddec1bbbbc3c052bb03a2c377f79de6637919ee4d81f3982af64a23e7f"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/displays_final/06a_informant_old_position.png",
+      "bytes": 81510,
+      "sha256": "a8b0d1f73ce2a2dbeab55134127dcc71b56e0653eb07c018dee980b2b84bbbfc"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/displays_final/result.json",
+      "bytes": 4641,
+      "sha256": "15e76f4859d2b5605607b1ee9be1a95d225cc4596774191310bc48d1dddb5167"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/exe_startup/normal_exe_startup.json",
+      "bytes": 262,
+      "sha256": "85454150d1f2a61edb05bc37c446152e4443f4e4fe9911ef8cf3b2fe1f0add1b"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/exe_startup/normal_exe_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/exe_startup/normal_exe_stdout.txt",
+      "bytes": 188,
+      "sha256": "963b86b9118608602ac681be7e2544a19df735f084d23f758303f7681401e1b0"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_final/01_windows_title.png",
+      "bytes": 57850,
+      "sha256": "27ff151ecee3d81d073fd241c151f7514158aece0de19b4f6d7f45f0206a3522"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_final/01b_windows_introduction.png",
+      "bytes": 32234,
+      "sha256": "f34beb846c303f1d3d205f7015f438250ef76177497741916c749f40789d49de"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_final/02_windows_tutorial.png",
+      "bytes": 41584,
+      "sha256": "693b939d6ed2cd15bf8c9eddab0a625f21d25b37ff17558dd6da9b0912c10b1b"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_final/03_windows_freezer.png",
+      "bytes": 86666,
+      "sha256": "19b2d7f9178df80636faa9155bf8f262a2466d74ed102b0e89228f233fc866d8"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_final/04_windows_combat.png",
+      "bytes": 92483,
+      "sha256": "e25cb143a85dcb13c9e0af3b29d3afb408edcc2e1263a697da3c40bc8dd2bcba"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_final/05_street_end_direct_room_preview.png",
+      "bytes": 88807,
+      "sha256": "58a75f9826557f48460d93721c82a16f0d3181467ec4a1070af6fa78d783c237"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_final/result.json",
+      "bytes": 7463,
+      "sha256": "e5aa70f6ce03c10ad26e863fdcd92d49f08a65b7fb4196e730c8e2862e2fafc8"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_r1/01_windows_title.png",
+      "bytes": 57850,
+      "sha256": "27ff151ecee3d81d073fd241c151f7514158aece0de19b4f6d7f45f0206a3522"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_r1/01b_windows_introduction.png",
+      "bytes": 32234,
+      "sha256": "f34beb846c303f1d3d205f7015f438250ef76177497741916c749f40789d49de"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_r1/02_windows_tutorial.png",
+      "bytes": 41584,
+      "sha256": "693b939d6ed2cd15bf8c9eddab0a625f21d25b37ff17558dd6da9b0912c10b1b"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_r1/03_windows_freezer.png",
+      "bytes": 86666,
+      "sha256": "19b2d7f9178df80636faa9155bf8f262a2466d74ed102b0e89228f233fc866d8"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_r1/04_windows_combat.png",
+      "bytes": 92573,
+      "sha256": "a35407307335d2d87e3a458617229c217fe75b9f8395ac33974d31f61a88dc6c"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_r1/05_street_end_direct_room_preview.png",
+      "bytes": 88667,
+      "sha256": "ceb601f55cf6ffa6934e003ee95352aa72d368cb08a0791d6d34d02231a88b7e"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/export_r1/result.json",
+      "bytes": 7411,
+      "sha256": "93f963a0f6d313dce27cdf9e1905ec7dba38c71f5de278943dc6e9bc1fd3d27e"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_final/01_cup_direction_before_release.png",
+      "bytes": 78944,
+      "sha256": "ece0a96e84149cfcee0bd72371b0fff67a8d8bc13193479f252890e0cd2d53ac"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_final/02_real_liquid_mid_flight.png",
+      "bytes": 86745,
+      "sha256": "4116a9dbb3289f93fd98388a697abf20265a1fc51123d8e94717ab27355a55ca"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_final/03_short_ground_visual_only.png",
+      "bytes": 86541,
+      "sha256": "9add50149e1eab037a53ea27a96cc8517f0c7ef29f77d5431fbfbb43e85ebfd0"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_final/04_actual_cabinet_stops_liquid.png",
+      "bytes": 78078,
+      "sha256": "34f0bba84101098bbb6500b17f8d399ec76c8c0d7603d64a825e441eddb6919d"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_final/result.json",
+      "bytes": 3270,
+      "sha256": "8b814fffa3c1622e39de9b1ceb6b85467f6e1b8a13bf2dce14662e40245c46a6"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_r1/01_cup_direction_before_release.png",
+      "bytes": 79173,
+      "sha256": "62fe27dda1737debfc7e682b0b2f491caead39a428c88c2315a5eaff406d7979"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_r1/02_real_liquid_mid_flight.png",
+      "bytes": 86982,
+      "sha256": "11c3e68801183dff465aee026bce09468490381421045ab5c2156b51f250c38d"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_r1/03_short_ground_visual_only.png",
+      "bytes": 86787,
+      "sha256": "d9a5df8f328ee526a0945ea0e16745def6b5cdef72596ddc2863737b26d0b749"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_r1/04_actual_cabinet_stops_liquid.png",
+      "bytes": 78284,
+      "sha256": "2c1a33032a2bba14101d0bd0aea93190ed49f13e01a328040647c1348e168507"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_r1/result.json",
+      "bytes": 3071,
+      "sha256": "0bd8a40610115993e2fbcc366421d3fa5867036de7d0a78022f426bf9647f74b"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_release/01_cup_direction_before_release.png",
+      "bytes": 79119,
+      "sha256": "be018f79a7833289767e0dfb78e163a36a7942cd84c0de7fdf9fc79ba985df20"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_release/02_real_liquid_mid_flight.png",
+      "bytes": 86925,
+      "sha256": "a8c07d7549994dd919264ced938aa04679cdb725914a1694d4b8ba98abadc5ed"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_release/03_short_ground_visual_only.png",
+      "bytes": 86730,
+      "sha256": "334e2f56eeb9539af1530ea050ea7ad704012e05480e0c86bd55e1679ab3186d"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_release/04_actual_cabinet_stops_liquid.png",
+      "bytes": 78238,
+      "sha256": "d4bdb39429f15d5e0257fdb6c9ca12892c276f996fbb1b9cfb42245ad43f5878"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/finite_release/result.json",
+      "bytes": 3487,
+      "sha256": "15bce119057e9bd8eacae4aef428888617c048df70fa092c5721cb1633436640"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_final/01_actual_menu_freezes_cup.png",
+      "bytes": 71464,
+      "sha256": "93a9a350d1c11e2f4847c7568a13e879b8d900ad3c5f4f47288cf5802df7740f"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_final/02_cup_direction_before_release.png",
+      "bytes": 89401,
+      "sha256": "24e7a8f091e078e7d5fa5931a1d8adfbe641f5c7afb48d8a33649752f7094407"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_final/03_actual_local_liquid_paused.png",
+      "bytes": 88892,
+      "sha256": "553d9c40aaa15c6879be806e680222aae417d6edcc4d2daec43245846874f772"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_final/04_actual_liquid_zoomed.png",
+      "bytes": 90115,
+      "sha256": "09a64a58ee6d9a0286517a2b2b97f5b1bb71f64625ad54d52844165dcc4a2712"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_final/05_actual_ground_drops_only.png",
+      "bytes": 90002,
+      "sha256": "f05a5ef4c95751b27694a9949279f0e784bd6234b9aa1db42f4fcf6c214585ae"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_final/06_actual_bottle_dog_contact_paused.png",
+      "bytes": 95980,
+      "sha256": "76fd2fe7612002f60df5fbc2c7838bdc3bff50e302b9fc4d672e7c181ecdc02f"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_final/07_same_attached_glass_recovery.png",
+      "bytes": 96518,
+      "sha256": "c6d45f0fe8a3663ba445e95c83d1900f19bcb656f23ff3333d5aad072d60735c"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_final/continuous_silent.mp4",
+      "bytes": 237699,
+      "sha256": "53b6e3a73a1552552069a128180eee47bbb4c732ed7c5c0ab8fc7babd0578bd0"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_final/result.json",
+      "bytes": 2284,
+      "sha256": "ee37e3403e128a5ac37ade209b9f80ba7336bc842c188abb00774ae5c5ab1823"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_final/video_sample.png",
+      "bytes": 235577,
+      "sha256": "0efd835136f905fd61593cb5f1afaa6223b4a40e32d76c0b31729a76236772a5"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_r1/01_actual_menu_freezes_cup.png",
+      "bytes": 71464,
+      "sha256": "93a9a350d1c11e2f4847c7568a13e879b8d900ad3c5f4f47288cf5802df7740f"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_r1/02_cup_direction_before_release.png",
+      "bytes": 89696,
+      "sha256": "df67b18434e05717f51ecbf15fb4ada91f6b271a4b51b60fda958e7b2a2777a5"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_r1/03_actual_local_liquid_paused.png",
+      "bytes": 89104,
+      "sha256": "88ef66a5d5ebbd78a8de3be21d44864dce295a60c2e556f6bd7ee5d14edef1d3"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_r1/04_actual_liquid_zoomed.png",
+      "bytes": 90242,
+      "sha256": "34f25f67baf67c9ce690ba39d1b477ab2eac05664728d57b6e8fc95d4e6d50aa"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_r1/05_actual_ground_drops_only.png",
+      "bytes": 90443,
+      "sha256": "a7d94ffb4383cded84dad9b9892315d45ec68d8dad6a40c11ba43688a3504bf5"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_r1/06_actual_bottle_dog_contact_paused.png",
+      "bytes": 96318,
+      "sha256": "41908a669aaf68f0d82bbafbdc83ba8e6fe2cbdc45d17d7a2a4091ce08d07676"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_r1/07_same_attached_glass_recovery.png",
+      "bytes": 96835,
+      "sha256": "9d1efd3a2318e3c3663a8a411b2e3010155bfd4b4fe21a0cec2b0d31eb01e153"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/live_r1/result.json",
+      "bytes": 2050,
+      "sha256": "3482bde343c61d9cf73b58fb4fe878528bc4daaa0e3b53657e4ff4793f46e8f0"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/losses_final/01_actual_loss_during_threat.png",
+      "bytes": 83159,
+      "sha256": "0589d84dfd141b69bac0f0d9802a1b37ee7b7b8c00e6c02daa48876b52b590e1"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/losses_final/result.json",
+      "bytes": 2970,
+      "sha256": "04d115944e2158116e4be7a02d0fae834755384418d761e2aaf48e541f439331"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/losses_r2/01_actual_loss_during_threat.png",
+      "bytes": 83185,
+      "sha256": "bd5f0ddc5e0d509eeea89674ab945a142bef2e3bb5e491aafee6a2061d6ea6e2"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/losses_r2/result.json",
+      "bytes": 2972,
+      "sha256": "aa42178c4c9886e2d466f900b75276148341d6f646a5ebc3bc8b2f7bad0b1eec"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/medicine_final/01_actual_cup_contact_no_effect.png",
+      "bytes": 79892,
+      "sha256": "e1ab251d8bf27aaa29e499c42fb6cd31c27408f78596784e90eebec9a38a9ca4"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/medicine_final/02_actual_swallow_then_withdraw.png",
+      "bytes": 87798,
+      "sha256": "accaf8e71f67e04c6469536f266ff836e1e4e20c3e43fbb45d4f160c69862dec"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/medicine_final/result.json",
+      "bytes": 3093,
+      "sha256": "a8e9ccc3a352df5733f214bca1d820681fd3efdf86b776479dd3129bf479d652"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/final.png",
+      "bytes": 95332,
+      "sha256": "9adec412af8d977b7d4706d2170577ee1e9ae19ff7a33db59bcaf10775423b2a"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/result.json",
+      "bytes": 1104,
+      "sha256": "008697dd5f1af1aa6fa3cd74b6275de91d8e353dac5fffe0173b58d4ea04f3df"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_01_atrium.png",
+      "bytes": 93572,
+      "sha256": "8c2400a99db67972548032c3815ad4ab4583c641932d630426cf8d50503c2bc3"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_02_decision.png",
+      "bytes": 88582,
+      "sha256": "56f746d75a3dbe59c8d73bd29193876e624691545cfdc78c01e39081a33ae780"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_03_bridge.png",
+      "bytes": 86917,
+      "sha256": "8732a968cc3ce49e1afe6dd527b58c1002fb569274afec3bc6a6f8470612f509"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_04_switch.png",
+      "bytes": 83565,
+      "sha256": "caed39ef9b04fa102fbd0188f7c53d5c95ccf999439765b01374c6d136b268b6"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_05_verify.png",
+      "bytes": 89638,
+      "sha256": "df723e7151bf14ed28d65ace426a5524b503314c235d3fc9610bfee9bd26a0cf"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_06_hippocampus.png",
+      "bytes": 85163,
+      "sha256": "c1be82d59c801333ef33d16686774269e92490a44858eda780dacb9736433aa3"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_07_thalamus.png",
+      "bytes": 93716,
+      "sha256": "29e807df2067ce5b3a6b2bfc26628b1f6b598d550be28fabfc966e5917fe5b0d"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_08_brainstem.png",
+      "bytes": 87097,
+      "sha256": "762367e55926749aa9fb4685765d7b7404aea90b04aebe06f45e5bbbce18e56b"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_09_street_plaza.png",
+      "bytes": 100239,
+      "sha256": "747522c1fa6cc6b3eb7da30a7ef2992a733c2abde78c987a61167fcbc2e847a8"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_10_street_narrow.png",
+      "bytes": 97173,
+      "sha256": "01a39b3be658520576316c78579077d47784329276b1863ad7ddcec0f0f9bf86"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_11_street_twisted.png",
+      "bytes": 90865,
+      "sha256": "2ce409d41ebf5d10b74800ad56b967ac99b2fc7153ec8d55ccc7ffc995418479"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_12_street_node.png",
+      "bytes": 95188,
+      "sha256": "8621cbc40cc7f0d72e54c8cf5d838f8a0b8526a736bc05896e70783759cf423b"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/natural/visit_13_street_end.png",
+      "bytes": 87987,
+      "sha256": "c7ba69712983c85ef81fa114e9866cd416eb91582e728d8f0b86053e1a921229"
+    },
+    {
+      "path": "docs/validation/street_splash_20261018/source_check.json",
+      "bytes": 15371,
+      "sha256": "6795bed60aa2c6a67e343820cb4e82b6791e12d7cc6c39153e896fd81fa12594"
+    },
+    {
+      "path": "neurons/assets/audio/street_20261018/sfx_splash_synth_v001.wav",
+      "bytes": 26924,
+      "sha256": "a6a388fa390cde648a49abc9b0bd13244219074b2e4f42b1f73c17816146ca9c"
+    },
+    {
+      "path": "neurons/assets/audio/street_20261018/sfx_splash_synth_v001.wav.import",
+      "bytes": 550,
+      "sha256": "dce53b7bf777041a8d6c749fb9d069f8e583f4575d01204650b8779eefb8ebe0"
+    },
+    {
+      "path": "neurons/scripts/core/street_belt.gd",
+      "bytes": 5773,
+      "sha256": "19bc298a3c7d1683c16cfa49a28419a9371ec4bf604dec4346cbb69b7c205fb1"
+    },
+    {
+      "path": "neurons/scripts/core/street_belt.gd.uid",
+      "bytes": 20,
+      "sha256": "e38a2941163ad5abbc50e4a15634059b07307260161a57b5485e3bab809e1181"
+    },
+    {
+      "path": "neurons/scripts/core/street_bottle.gd",
+      "bytes": 4921,
+      "sha256": "7aeb97b703ca779f188562d2704d588f80d6e1eccae3ebaa302cb26d95c78f2b"
+    },
+    {
+      "path": "neurons/scripts/core/street_bottle.gd.uid",
+      "bytes": 20,
+      "sha256": "10701825e30c9ef1fac2435484b7ff5219814adfc6790ef2b0a92833844adb76"
+    },
+    {
+      "path": "neurons/scripts/core/street_embrace.gd",
+      "bytes": 6183,
+      "sha256": "b0ed86f9d9480c75668d972e6ea04739bbcd03cc8d0d3ce3365dda7b98da42b5"
+    },
+    {
+      "path": "neurons/scripts/core/street_embrace.gd.uid",
+      "bytes": 20,
+      "sha256": "580d50081f87b70559c4b756ada99ea176dd43666d7d995002b29e1f9cca2fd2"
+    },
+    {
+      "path": "neurons/scripts/core/street_medicine.gd",
+      "bytes": 6934,
+      "sha256": "d6befef581a8f3c7ab4f8a80a142b44c057d79181894c329a7891ee61f171528"
+    },
+    {
+      "path": "neurons/scripts/core/street_medicine.gd.uid",
+      "bytes": 20,
+      "sha256": "933f60126edd019497add13ea2ebf3c71b76824bce66e0d12a847f27ca54bcf2"
+    },
+    {
+      "path": "neurons/scripts/core/street_restraint.gd",
+      "bytes": 8093,
+      "sha256": "73d2450ebe4e248c8263fb068585e03867b46339819abc4398a1a0b770f4b3a1"
+    },
+    {
+      "path": "neurons/scripts/core/street_restraint.gd.uid",
+      "bytes": 20,
+      "sha256": "044738d1d9f52d3e79558a7c4ccb116c858539243ea23abad441a9c35ab7782d"
+    },
+    {
+      "path": "neurons/scripts/core/street_splash.gd",
+      "bytes": 6188,
+      "sha256": "9a868edb98d7ccc782feb2d6d192cc5f6ae8edba613f26a65f56232fb67bdad3"
+    },
+    {
+      "path": "neurons/scripts/core/street_splash.gd.uid",
+      "bytes": 19,
+      "sha256": "b693fc47c3162f3a6e6a86bd1180ab9c26fdc015a721534e0e55adf9447fce68"
+    },
+    {
+      "path": "neurons/tests/street_belt_check.gd",
+      "bytes": 9682,
+      "sha256": "f4145ea6ab4faf312f27dfbc54a32b295eea4afd0ea9cc701040fe762e1f0c97"
+    },
+    {
+      "path": "neurons/tests/street_belt_check.gd.uid",
+      "bytes": 19,
+      "sha256": "0b58a10b49425a4e99cb3a055469eb3bee52b4296b9408e8dfa92ae8d5cf68ba"
+    },
+    {
+      "path": "neurons/tests/street_belt_live_check.gd",
+      "bytes": 6710,
+      "sha256": "ea9539b97538b3ac8839ddf05c84e988823b49bf2d108ad837bd498a9986d2f6"
+    },
+    {
+      "path": "neurons/tests/street_belt_live_check.gd.uid",
+      "bytes": 20,
+      "sha256": "ff9d1c6092c29a7fdd974913ffd38c8a0275792822209a0291addb599538cb5b"
+    },
+    {
+      "path": "neurons/tests/street_bottle_check.gd",
+      "bytes": 8838,
+      "sha256": "d4ea99e42d4a8bbbd5f97515f4d471d9a9eebb9b3f37fddac5561b2ae4de032f"
+    },
+    {
+      "path": "neurons/tests/street_bottle_check.gd.uid",
+      "bytes": 20,
+      "sha256": "640ac833413ef38b8732e09b81e313f4fe51672f047d8ede1d733bba2ed3d141"
+    },
+    {
+      "path": "neurons/tests/street_embrace_check.gd",
+      "bytes": 9682,
+      "sha256": "afde67d74812e50896fa182eee39c280cf02d024a8b3ee183350031fc4ebcd62"
+    },
+    {
+      "path": "neurons/tests/street_embrace_check.gd.uid",
+      "bytes": 19,
+      "sha256": "e597a7e24a12c727ff2f8eab3ba2d87e9a2de0a140fb94795d6b8f9c48e0703d"
+    },
+    {
+      "path": "neurons/tests/street_embrace_live_check.gd",
+      "bytes": 4489,
+      "sha256": "7589a38f000b04cb8917adf52a8943aaf5457f28781cf6cad902908fdb19e742"
+    },
+    {
+      "path": "neurons/tests/street_embrace_live_check.gd.uid",
+      "bytes": 20,
+      "sha256": "608f97f9f1bbea5b263fe83dd4fd194f4f1be87bee365f82afab1ff4b96d3c3a"
+    },
+    {
+      "path": "neurons/tests/street_medicine_check.gd",
+      "bytes": 9847,
+      "sha256": "280073e400181ca5839bfa1ce764e2b6bcfb5ef7b2587c07ba1f93b5f1141096"
+    },
+    {
+      "path": "neurons/tests/street_medicine_check.gd.uid",
+      "bytes": 19,
+      "sha256": "48d23556781a8768e044b2e6db896206c96fdf883f98140d1e4aa100ee4a17c2"
+    },
+    {
+      "path": "neurons/tests/street_medicine_live_check.gd",
+      "bytes": 4893,
+      "sha256": "6193a38675f83b92cd2a1b5e6fd50bfe2ae165f70bcbc5cbee42f9f77d463383"
+    },
+    {
+      "path": "neurons/tests/street_medicine_live_check.gd.uid",
+      "bytes": 20,
+      "sha256": "1401f637db4b8f82da8a63f22f32c646e7a44748269c36fed4b7cdb1d73b21c3"
+    },
+    {
+      "path": "neurons/tests/street_restraint_check.gd",
+      "bytes": 11797,
+      "sha256": "dbd4a185f9b7165d535978a751642bcded3bf123467078d238493ead52ac2e18"
+    },
+    {
+      "path": "neurons/tests/street_restraint_check.gd.uid",
+      "bytes": 20,
+      "sha256": "4a0a53eb3cfdb45d9972dbf3b9e675c5e81e1af8bcb870edfe9b27d262bb209e"
+    },
+    {
+      "path": "neurons/tests/street_splash_check.gd",
+      "bytes": 11191,
+      "sha256": "89a65a51a21ff52a731aab72523d3b3f240027ed45395b2ffdf896bd6bd46ae2"
+    },
+    {
+      "path": "neurons/tests/street_splash_check.gd.uid",
+      "bytes": 20,
+      "sha256": "4ea2fd5e9d2d6592f608a85fb06b101cb91bfbc9b26f95b02859896a39d773af"
+    },
+    {
+      "path": "neurons/tests/street_splash_live_check.gd",
+      "bytes": 7459,
+      "sha256": "27525f0f7450792bf6dd407faf46ad6554948a5aa9e57ae4a8ec6d43b2c7220e"
+    },
+    {
+      "path": "neurons/tests/street_splash_live_check.gd.uid",
+      "bytes": 19,
+      "sha256": "0034c1ed5b69a44a7b4dcfc82b4cf9cc25c31d1b1e9bc57eea17781598aae0dc"
+    },
+    {
+      "path": "tools/prepare_street_splash_audio.py",
+      "bytes": 2562,
+      "sha256": "4105d8a3d10ba60443e1671c35b987cfce1b67d66a98c85af80fdddcafdfd936"
+    },
+    {
+      "path": "neurons/.editorconfig",
+      "bytes": 33,
+      "sha256": "3b2c749c8a940905a08f727d8be9017c9568a12421c0aee7e37e9543b3751b1b"
+    },
+    {
+      "path": "neurons/.gitattributes",
+      "bytes": 80,
+      "sha256": "21b01a606c9f85f18bb9230245f00ab104df7409cbb2fe9423f6751ca72ba754"
+    },
+    {
+      "path": "neurons/.gitignore",
+      "bytes": 46,
+      "sha256": "d6194b1a176268740a0b7f153bd4926908b4a0955a9a311181c0200b4329bc94"
+    },
+    {
+      "path": "neurons/assets/audio/audio2_20261017/mus_ending_e2_v001.ogg",
+      "bytes": 1727536,
+      "sha256": "a4981367f9ff94ace1446eec41bbdcaae3295372a165db418bf939dadd6047fc"
+    },
+    {
+      "path": "neurons/assets/audio/audio2_20261017/mus_ending_e2_v001.ogg.import",
+      "bytes": 439,
+      "sha256": "40794be86bcab91020492acc4be1a5678e4934eba9a7addbaea5b9f29d384b29"
+    },
+    {
+      "path": "neurons/assets/audio/audio2_20261017/mus_hospital_v001.ogg",
+      "bytes": 4779355,
+      "sha256": "079422016b535c4d44a4acecec0f224108b60112384aba8cde1b988e5cc9592e"
+    },
+    {
+      "path": "neurons/assets/audio/audio2_20261017/mus_hospital_v001.ogg.import",
+      "bytes": 436,
+      "sha256": "28ccac2fdd9e6b8f74d6cbeca08ee2ad9e3af91e74ffe80be1250c5d2b7b2612"
+    },
+    {
+      "path": "neurons/assets/audio/audio2_20261017/sfx_ui_confirm_v001_new.wav",
+      "bytes": 19370,
+      "sha256": "58698cf0fe71610a327fac3997154df696db4934204142bf2fc163c9c92a0701"
+    },
+    {
+      "path": "neurons/assets/audio/audio2_20261017/sfx_ui_confirm_v001_new.wav.import",
+      "bytes": 555,
+      "sha256": "50538a4a9a398100ccea9bf3512f1472358c633cb86ba0705433890373f6eea8"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/amb_fan_dev_v001.ogg",
+      "bytes": 268959,
+      "sha256": "a7831facf9a62ccec106e41af0a616dd8479ea71cf2e1cc582ac4648ca0775b2"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/amb_fan_dev_v001.ogg.import",
+      "bytes": 432,
+      "sha256": "6108b0c68e906694b5d35aeb11ff54d882cd8f88bf2bd66fcba4908d45a6a52d"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/mus_menu_dev_v001.ogg",
+      "bytes": 2616295,
+      "sha256": "e930c6f512f7e86f9092227e1ee2cc562ab13a3fbe08b41dc4304bfbd7ea4bc6"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/mus_menu_dev_v001.ogg.import",
+      "bytes": 435,
+      "sha256": "71764492184694dc40770ca7b0b812f44fc4d4b2e28504ee67432619ed46db02"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/mus_room_dev_v001.ogg",
+      "bytes": 3119190,
+      "sha256": "ccfd5ba33a21a8d0b3264913d83853e42c0ad4f029d769155a850c68468a625b"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/mus_room_dev_v001.ogg.import",
+      "bytes": 435,
+      "sha256": "00af7569edaa9186cede3fb13181229f0de9595411a6361d30a6b8d54fc07d64"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_cloth_synth_v001.wav",
+      "bytes": 30764,
+      "sha256": "fe4032f4bcf446dfdf316eaf11f04af82e56530d950cc46f27967ade7486dfe9"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_cloth_synth_v001.wav.import",
+      "bytes": 546,
+      "sha256": "0f672614843736aaf863b1f9678e4ccc5b9b45e6cbc25076e208f5e314a726d2"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_cold_synth_v001.wav",
+      "bytes": 67244,
+      "sha256": "ca04f5c9c25028d87b423b3e7cb34f6ac2173bf12a609e426d6305aea09ce57c"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_cold_synth_v001.wav.import",
+      "bytes": 543,
+      "sha256": "bfb8009cf9606cb36793cf2aa088c90bd8fcb5c0f3733bd546a9867cdd89370f"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_door_close_dev_v001.wav",
+      "bytes": 150338,
+      "sha256": "f1906508a7dc9427b36aedc159597de86d892a2629dc90a54fca7c6d639bb475"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_door_close_dev_v001.wav.import",
+      "bytes": 555,
+      "sha256": "cc7e2ff0681e3fe62c808aa9ccc4ad84b4a5de8253402d0fe7cecb9168bc81aa"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_door_open_dev_v001.wav",
+      "bytes": 136358,
+      "sha256": "37e655a65b6e01938124787eeb5b05a440e5620b2e1982e8adcc27362494f58b"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_door_open_dev_v001.wav.import",
+      "bytes": 552,
+      "sha256": "6128dcdd184a1d00c973bfa12fe62fdd60cbee6d0df7793bfe8f1c20b196ad9f"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_drawer_synth_v001.wav",
+      "bytes": 38444,
+      "sha256": "1986a2aa4636204ec2c09b02840572d3149af97f26b94cfeb037ec00a69c8cf5"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_drawer_synth_v001.wav.import",
+      "bytes": 549,
+      "sha256": "10a8fd0684063c2d47418d01e146c5dec590c38864e9b247873d02271584d7ee"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_footstep_synth_v001.wav",
+      "bytes": 21164,
+      "sha256": "26679f41862b2cd854a243cc23539142305af415c8fe73cb43b40053a1e057a2"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_footstep_synth_v001.wav.import",
+      "bytes": 555,
+      "sha256": "9f6f882c2651544a1978f87e795b48f53ed1739fc892c48b143db51ad92112ab"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_gut_synth_v001.wav",
+      "bytes": 115244,
+      "sha256": "4276dd00efd622b9c0acadd9101920248b6ce808bbe7822447a9cfe4952da27a"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_gut_synth_v001.wav.import",
+      "bytes": 539,
+      "sha256": "6faf61fcbae61ee1c9e8cc67dfa00205cf99809e50ec414543c7780dafcb1b9b"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_search_cloth_synth_v001.wav",
+      "bytes": 30764,
+      "sha256": "fe4032f4bcf446dfdf316eaf11f04af82e56530d950cc46f27967ade7486dfe9"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_search_cloth_synth_v001.wav.import",
+      "bytes": 567,
+      "sha256": "c87ed5b89b1d57c12476fb629d5dbf7e5f8ed35e8e0aeaf5157c1abe073da981"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_search_paper_synth_v001.wav",
+      "bytes": 57644,
+      "sha256": "073c6402f4b8511266dc01200953b98902d975b565ae408d25876576fac09072"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_search_paper_synth_v001.wav.import",
+      "bytes": 567,
+      "sha256": "8f9decfd58a3d332d779e0ce6aa1095191f44bed2d3854b989afba6837dfd0ad"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_search_synth_v001.wav",
+      "bytes": 57644,
+      "sha256": "073c6402f4b8511266dc01200953b98902d975b565ae408d25876576fac09072"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_search_synth_v001.wav.import",
+      "bytes": 548,
+      "sha256": "595d6c19aa5aba8eed29756fde8d5cd9ba74c562e68c218bb233b002ec5a5325"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_skin_synth_v001.wav",
+      "bytes": 48044,
+      "sha256": "0b56cadce32920be7e9a22af9ceb9fe312360b7acf29d8203c09a4c0a345402d"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_skin_synth_v001.wav.import",
+      "bytes": 542,
+      "sha256": "b29469b06f982d4670458302c9147eacad0233cbc968d796feaa08b0bd358e6b"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_step_synth_v001.wav",
+      "bytes": 21164,
+      "sha256": "26679f41862b2cd854a243cc23539142305af415c8fe73cb43b40053a1e057a2"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_step_synth_v001.wav.import",
+      "bytes": 542,
+      "sha256": "1de003b24ae0a2388dea70bec9ce0d768e58d6da5d32e39c1cb7eac06c556018"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_ui_back_dev_v001.wav",
+      "bytes": 19370,
+      "sha256": "09a434d80579709f2084a5ea0e76445ec4fe35be9aa98df6b9f4d5f8247d609e"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_ui_back_dev_v001.wav.import",
+      "bytes": 545,
+      "sha256": "13ed32ebf7884dae10b00f63570cc1d234065065b6698f539a24a4fc907bd6ab"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_ui_confirm_dev_v001.wav",
+      "bytes": 35426,
+      "sha256": "f205cf9fdd35edbc0459ef3592dba09838bcab8d98a0b7f8c11f7ce420f23b0e"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_ui_confirm_dev_v001.wav.import",
+      "bytes": 555,
+      "sha256": "bfb493d05ac286cdd7faba5c4c3df65e546f78c547462533ee382571f87c566b"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_ui_denied_dev_v001.wav",
+      "bytes": 71390,
+      "sha256": "bdbcd44ec754f9baa57ac7da882edb9b995128692f0326ffffa72b95fe8d9344"
+    },
+    {
+      "path": "neurons/assets/audio/b1_development/sfx_ui_denied_dev_v001.wav.import",
+      "bytes": 551,
+      "sha256": "788f4152f4e6dfcca4feb8e7025d6c533818cb26cbf259b5646d00e86cf9ff42"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/mus_danger_dev_v001.ogg",
+      "bytes": 3581359,
+      "sha256": "ab93ab86f90c0f3290fd04d348f2df57f754dd3641fa41efffe720faf0061ffa"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/mus_danger_dev_v001.ogg.import",
+      "bytes": 444,
+      "sha256": "5f21171ac285d14fc12a8dfaea36a9b300d64138b698c8a3ae835398897c240f"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/mus_end_dev_v001.ogg",
+      "bytes": 230392,
+      "sha256": "d50ed0b6943fec7ace4140ec621876b366b08b28d09d09871be1ebecef28a29c"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/mus_end_dev_v001.ogg.import",
+      "bytes": 435,
+      "sha256": "35c47ada850269edae899e4b0dbf39623130f322389d107d2a98d6c69fcc4083"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_bed_roll_synth_v001.wav",
+      "bytes": 62444,
+      "sha256": "c0b9c15317202061a501b8360e413238eb4f738122f88a927b098d8acc7b0d5e"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_bed_roll_synth_v001.wav.import",
+      "bytes": 558,
+      "sha256": "cf347cdd2b928e5bf5740b3b82f2b2a31a3f09461d61c6ca7967a7ba57a1c6f3"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_combat_windup_synth_v001.wav",
+      "bytes": 36524,
+      "sha256": "5a90ab657d578cfe04a65c3825fc4ae86c5103d7c256c58b8d7cdba8832c3b8c"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_combat_windup_synth_v001.wav.import",
+      "bytes": 573,
+      "sha256": "23728b35be8831ffa18e80402654eb07425893d972ae240c2ba5402b4b309657"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_hit_synth_v001.wav",
+      "bytes": 23084,
+      "sha256": "2c908e96b870fd45b1afd46f4a74aa28ef8baa364b91526fc3a9e081cc4e7070"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_hit_synth_v001.wav.import",
+      "bytes": 542,
+      "sha256": "8384e9b0256ad037d78599b48b9e1d09401ab7020c90b55555faea5754681326"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_item_handoff_synth_v001.wav",
+      "bytes": 19244,
+      "sha256": "60c481dbed93a447c7844fa2d8766e4964e4b755fbc951de36fce68a208001d8"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_item_handoff_synth_v001.wav.import",
+      "bytes": 570,
+      "sha256": "7b45f352e9084caaceb8cdbe7bc1cfa9f4e62c31d553d23d9ecc643a2148cc44"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_key_synth_v001.wav",
+      "bytes": 28844,
+      "sha256": "e1b23b6ee60cbc562a58bb51e8aeba1efc292d815c54efa4104425e632ddc924"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_key_synth_v001.wav.import",
+      "bytes": 542,
+      "sha256": "b94d54d4cc833aa008f7522f64c06dd240845ea0a67a068a574c943156806ef3"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_rack_contact_synth_v001.wav",
+      "bytes": 34604,
+      "sha256": "e3ad76f8a7e7230be2416cdb63432f949c65ab0eb01927bb06aa2d27ebcaf5aa"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_rack_contact_synth_v001.wav.import",
+      "bytes": 570,
+      "sha256": "c43592fb454dd3bfb7e9c7e32f0ecafa52c186046ceb7fee9729012c184d90b8"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_ui_reward_dev_v001.wav",
+      "bytes": 31020,
+      "sha256": "8227bf2e9a557343ec8bfa49b1e504ef839c32b38d3577bbc240753ee124c927"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_ui_reward_dev_v001.wav.import",
+      "bytes": 555,
+      "sha256": "15ded793e05d8f5397c8887c9ca3af9a548a023c5283c303724311e1b6e1b0d3"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_ui_save_dev_v001.wav",
+      "bytes": 18684,
+      "sha256": "470c5dd721abfc86370ca79dfefcaeb7263f7245f1eae2ecff43da974114d76b"
+    },
+    {
+      "path": "neurons/assets/audio/feedback_20261017/sfx_ui_save_dev_v001.wav.import",
+      "bytes": 549,
+      "sha256": "cd3597f0535760e1f23f8da13b3b8d44841f07b47486e4efa1684bd5f8850b1f"
+    },
+    {
+      "path": "neurons/assets/environment/bedroom_shell_v001.png",
+      "bytes": 214368,
+      "sha256": "745b405878db97c34bcc16756c42eec1609e463326cdfdaf0a54749ac5f26299"
+    },
+    {
+      "path": "neurons/assets/environment/bedroom_shell_v001.png.import",
+      "bytes": 977,
+      "sha256": "989edead27ac9b26f8055fe4f59611d4565d167faa0b80bb2d3d6c1be00b6b2b"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/alarm_clock.png",
+      "bytes": 961,
+      "sha256": "df889fe165fe9c790bf1edc972dbbcabbbcf1b9563a3a13c211c9db65d569652"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/alarm_clock.png.import",
+      "bytes": 975,
+      "sha256": "50b85c0d2556c07eae92e72229343b85a45592b12eebb46f83f6506a82ce4584"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/bed_edge.png",
+      "bytes": 12142,
+      "sha256": "630d3a0ca19b33171bd4f4cd04efa35319e0c2a4ddd3d2a22cd69240e6693935"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/bed_edge.png.import",
+      "bytes": 966,
+      "sha256": "658029334eee840d8ce20ae333f709724147ebcda871c2a39e5c64c1ba3985e9"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/book.png",
+      "bytes": 1294,
+      "sha256": "89af4bf505fa802f856aec973cd27eede74e5766a4285cb26a4706c59ade1c13"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/book.png.import",
+      "bytes": 954,
+      "sha256": "81d1f229e30bc5f3a4ee97f18f797de98e9de8d457bae6dafdae5efb641f6793"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/cabinet_frame.png",
+      "bytes": 5762,
+      "sha256": "16fad66ca7e6cd155f5bdd5bacdfbc1d6f54f601a32766428e208da466ac8e64"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/cabinet_frame.png.import",
+      "bytes": 980,
+      "sha256": "f413cfc6db5d0e6cedeae71b6e142213a47801e63d934cc2aac0827be874087a"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/drawer_face.png",
+      "bytes": 2408,
+      "sha256": "85e8bc788a20a3a3decee1db285fb5ed2ed8d7dd18ec0498780c2483b1874c57"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/drawer_face.png.import",
+      "bytes": 975,
+      "sha256": "335f006229670e9e23bf661f75695ce31efb1f1f1f0e1cf9e21446603c1f7749"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/drawer_tray.png",
+      "bytes": 2433,
+      "sha256": "6230efac56d8a6a45548bf694825d49e6065615f00ad13a1c63def69264785ec"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/drawer_tray.png.import",
+      "bytes": 975,
+      "sha256": "e6d3c833d61af82870e26c6fcecf67391826435066d97bf4b2b45d3e5d816ab7"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/foreground_rail_v002.png",
+      "bytes": 5692,
+      "sha256": "62c3f371b2e88773b851b808d71e21cae36e5ccef9887320382e86ff1946f588"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_trial_v001/foreground_rail_v002.png.import",
+      "bytes": 1001,
+      "sha256": "99c1bb867e50e6c9251c648f94703793126f1ebd0692fe49a2bf0843a06ed64d"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_wood_v001.png",
+      "bytes": 6188,
+      "sha256": "782116e2199df2b264dd298bbc77fa1e07903095278d71ac928970140539b9f5"
+    },
+    {
+      "path": "neurons/assets/environment/bedside_wood_v001.png.import",
+      "bytes": 974,
+      "sha256": "64dca48b9c107542f62afb9bb494d47112f411f71030e6ef683ecb9ebf1f6e4e"
+    },
+    {
+      "path": "neurons/assets/fonts/coverage-source-corpus.json",
+      "bytes": 2305,
+      "sha256": "5214c9acb372f735ed024733e6c2630f41ab990e63821ed3026b1591e422aebf"
+    },
+    {
+      "path": "neurons/assets/fonts/NotoSansCJKsc-Regular.otf",
+      "bytes": 16437364,
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "path": "neurons/assets/fonts/NotoSansCJKsc-Regular.otf.import",
+      "bytes": 800,
+      "sha256": "c9c9e69396c3323717a00e42548b9c4c26df0fa059a1cb7e6223047334c21d9a"
+    },
+    {
+      "path": "neurons/assets/fonts/OFL-NotoSansCJK.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "path": "neurons/assets/fonts/README.md",
+      "bytes": 1805,
+      "sha256": "16635ca481066348dab206b894d792e277eb1481055df4bedaeee60a96ab9c31"
+    },
+    {
+      "path": "neurons/assets/placeholders/host_a.png",
+      "bytes": 11134,
+      "sha256": "7d8a7ad4019b9e178dc99927854b70d92d4c125da86a7ea2e9f6aebbc945c727"
+    },
+    {
+      "path": "neurons/assets/placeholders/host_a.png.import",
+      "bytes": 942,
+      "sha256": "05800303072c5274e44696567fa839d001148223faa4912c6d92fff8932724f1"
+    },
+    {
+      "path": "neurons/assets/placeholders/host_b.png",
+      "bytes": 11469,
+      "sha256": "edbb9cd0c24c5dc44e3fa49de2610708211abe11fac6553f56e310048d030258"
+    },
+    {
+      "path": "neurons/assets/placeholders/host_b.png.import",
+      "bytes": 942,
+      "sha256": "912cb74b88b5bc14ec30d59c71cb91b5a23fc2c0ebe9ab3039e37ead54ea6fb2"
+    },
+    {
+      "path": "neurons/assets/player/player_master_preview_v001.png",
+      "bytes": 13600,
+      "sha256": "18939835c181517bbcde5b4adde19d5348964a51a022663cc6dd32fa9b1d78c5"
+    },
+    {
+      "path": "neurons/assets/player/player_master_preview_v001.png.import",
+      "bytes": 996,
+      "sha256": "da6159ce995a8087725e9b931be73eea73ab1fd2e630e137bb3e57cc7abc0cb8"
+    },
+    {
+      "path": "neurons/data/asylum.json",
+      "bytes": 11068,
+      "sha256": "d642a2569d292b4c3c58cf1185175dad283a9a06c8cb23ad6fe799bf2fb41329"
+    },
+    {
+      "path": "neurons/data/asylum_intake.json",
+      "bytes": 1818,
+      "sha256": "434c74fef4be7b93cbc8dc364ae32a78e2b74489f371bc2d35da0ea438a864cf"
+    },
+    {
+      "path": "neurons/data/asylum_isolation.json",
+      "bytes": 1258,
+      "sha256": "00e983a10a6b965cad147208c9a06830a2f698c2a3b0e8b1b124325e097d708a"
+    },
+    {
+      "path": "neurons/data/asylum_nurse_duty.json",
+      "bytes": 1028,
+      "sha256": "067fb2af686efa190e7d952074ce82c939b999c3eb7538f61744a62fe6e78b36"
+    },
+    {
+      "path": "neurons/data/asylum_observations.json",
+      "bytes": 19239,
+      "sha256": "e793f0320bcf9d453f72c65b1314b143e7b8511de7cd14ef8fd510a46dd8aa88"
+    },
+    {
+      "path": "neurons/data/asylum_records.json",
+      "bytes": 4436,
+      "sha256": "02adf1b6c19abc465500c08ea946f93b0fd6366a90bb168b897ff2d6cba8a9a6"
+    },
+    {
+      "path": "neurons/data/asylum_trace_events.json",
+      "bytes": 5607,
+      "sha256": "dc54db06747312abac9748a4c26afc65064c5867a5b3598565a1882a83e4abf4"
+    },
+    {
+      "path": "neurons/data/asylum_ward_events.json",
+      "bytes": 9654,
+      "sha256": "b8352ca8b3c5d86999cfbf5386cb50a148e71ac6b65aeb325a9f1f5909e49621"
+    },
+    {
+      "path": "neurons/data/combat_chapter.json",
+      "bytes": 11811,
+      "sha256": "e1c90c646af4b0e505f00efc4639b4187cc625382159233e29b1e7c90b069185"
+    },
+    {
+      "path": "neurons/data/cortex_events.json",
+      "bytes": 5141,
+      "sha256": "0c9b273471d2fc2402a3b862d846b751fcf6f72d67bf3dcaaaa45ad1d2308273"
+    },
+    {
+      "path": "neurons/data/cortex_upper_events.json",
+      "bytes": 6241,
+      "sha256": "2d5cb8ff4d7eb09a3771f22eb6ddf4bbdd1177170d03f22eecd65edfe7f587ab"
+    },
+    {
+      "path": "neurons/data/hidden_street.json",
+      "bytes": 2278,
+      "sha256": "6f4e2e014963a83254497f05fb37ef331434750fa9e007bd68a70709963d75af"
+    },
+    {
+      "path": "neurons/data/home_dialogue.json",
+      "bytes": 9947,
+      "sha256": "0b28313c958ad1e2af2a833f12f85438056f8a7891cfe38e2ca352f5b19e307e"
+    },
+    {
+      "path": "neurons/data/home_rules.json",
+      "bytes": 1000,
+      "sha256": "f212202f41948326e8f51eb62b303948f00a150933b5a050646a644ac8c47f30"
+    },
+    {
+      "path": "neurons/data/hospital.json",
+      "bytes": 22220,
+      "sha256": "b6ac2dc74d137576919ac4701802726cdba305dc830c806fff7bc9696567fea3"
+    },
+    {
+      "path": "neurons/data/hospital_observations.json",
+      "bytes": 14561,
+      "sha256": "adcfa3ed3c1b5b62deecc581da8d79c7b98c038eecbb5695b38658f15dc393c5"
+    },
+    {
+      "path": "neurons/data/institution_spaces.json",
+      "bytes": 75665,
+      "sha256": "0828610a0e349605a3ea5de0d49d99965ddb2cafec1486dc2ec52b0188710f16"
+    },
+    {
+      "path": "neurons/data/key_discovery.json",
+      "bytes": 1484,
+      "sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a"
+    },
+    {
+      "path": "neurons/data/opening.json",
+      "bytes": 3456,
+      "sha256": "9f62f504d1bbcfefbd1660c5c402f35df0638b27edce5c658dee9d37c26137ce"
+    },
+    {
+      "path": "neurons/data/presentation.json",
+      "bytes": 2883,
+      "sha256": "a62e0aef4e42f4058375c8997e6f54e6551afb4621f5647e9b9168c2adce70be"
+    },
+    {
+      "path": "neurons/data/room_spaces.json",
+      "bytes": 4062,
+      "sha256": "af98803e3808a58b493dee593620d9167ae3ff5a225e5e463804223a7be4a21c"
+    },
+    {
+      "path": "neurons/data/search_actions.json",
+      "bytes": 9487,
+      "sha256": "e30392d3843921b5f6c2f726cb9daeb32fbbbb14e4f2d1880aa91beac82ff6ce"
+    },
+    {
+      "path": "neurons/data/skills.json",
+      "bytes": 14663,
+      "sha256": "2d69fc3abb4b7be7516db6a4cb17c8988ed6bee23925eea442c0a95cbdf24f68"
+    },
+    {
+      "path": "neurons/data/tutorial_dialogue.json",
+      "bytes": 3986,
+      "sha256": "c859de4355ecd8787fda545093b5abc3ce618486192e37cb062c867c24efb3e5"
+    },
+    {
+      "path": "neurons/export_presets.cfg",
+      "bytes": 557,
+      "sha256": "4b7513c9276d6657778743f44304878c3415ad5bccdcdd5c2469eb6097358ec4"
+    },
+    {
+      "path": "neurons/icon.svg",
+      "bytes": 995,
+      "sha256": "6c80384360a5b269d1054bfb27241258154e2cc8167c522016fdc1820e84e0f8"
+    },
+    {
+      "path": "neurons/icon.svg.import",
+      "bytes": 1013,
+      "sha256": "e6beac0664c0b817f2a933e734a0b474663312bcc5e8087d5621641244430300"
+    },
+    {
+      "path": "neurons/project.godot",
+      "bytes": 732,
+      "sha256": "6796c510e055a71adeb859cf601d0a128c86290e71c9fe26b610e55978ccaa5c"
+    },
+    {
+      "path": "neurons/scenes/bedroom_art_trial.tscn",
+      "bytes": 314,
+      "sha256": "35ac1923c39b558957b50fa460a10227b71f93e166aacc4d56bc193b51c85e7a"
+    },
+    {
+      "path": "neurons/scenes/bedroom_sample.tscn",
+      "bytes": 309,
+      "sha256": "b5cb7205d72104a1d9cd07dcfb82be6824bbe72146013079df161b083038df8f"
+    },
+    {
+      "path": "neurons/scenes/front_end.tscn",
+      "bytes": 284,
+      "sha256": "15293f8ca14797629eb86f4d3c9e02b1978392ea51994d0fa197932da4258fdd"
+    },
+    {
+      "path": "neurons/scripts/bedroom_art_trial.gd",
+      "bytes": 1763,
+      "sha256": "e2e2735b7a67d65beadb5f66dcff873b52e8f62c138cb45dd0885babd7df27d4"
+    },
+    {
+      "path": "neurons/scripts/bedroom_art_trial.gd.uid",
+      "bytes": 20,
+      "sha256": "3759e1f569bfd1e8490a5af1113e0fd28a6dece41cc417a2f1326bb20712a3d5"
+    },
+    {
+      "path": "neurons/scripts/bedroom_sample.gd",
+      "bytes": 28975,
+      "sha256": "4f5859333cfcd82ed8f272c509624a83dc70f592a755a8614145ed8440b0ee72"
+    },
+    {
+      "path": "neurons/scripts/bedroom_sample.gd.uid",
+      "bytes": 20,
+      "sha256": "d315dac00ef710b692d0995762be12d8009bf4520b6bcf251b8783da735bac8f"
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "bytes": 104492,
+      "sha256": "2da88ee60a0ef17ad07a41fb871a96f82c87debd12494f4ce25d82a67f31520e"
+    },
+    {
+      "path": "neurons/scripts/campaign.gd.uid",
+      "bytes": 20,
+      "sha256": "3e1eba0304c58720b137fb15eafc85126938c23f2862cc3211c9e6bed601e752"
+    },
+    {
+      "path": "neurons/scripts/core/achievement_store.gd",
+      "bytes": 5534,
+      "sha256": "c3026ce071e2ca31364f78f50773b14af7d872d12c84a975e023a70b41839ce9"
+    },
+    {
+      "path": "neurons/scripts/core/achievement_store.gd.uid",
+      "bytes": 19,
+      "sha256": "9b77b554e832c13a1f39b48b2f14f366673cee39c5bbf6ebe2f6766090bcccca"
+    },
+    {
+      "path": "neurons/scripts/core/appearance_history.gd",
+      "bytes": 1523,
+      "sha256": "53b7a047df015adaf012140c40817816b81a7898a486b335ba0d3f319111080b"
+    },
+    {
+      "path": "neurons/scripts/core/appearance_history.gd.uid",
+      "bytes": 19,
+      "sha256": "716a4def6f23e6fa8132c932ad9f4dd9e84c9cbc3bb9d1b63a2e39fd23970b3c"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_events.gd",
+      "bytes": 43390,
+      "sha256": "89f4fa76706c572695e9ed8cf12a9a698cc54f5efff2b6545b02fa2d443a8166"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_events.gd.uid",
+      "bytes": 20,
+      "sha256": "a2179a8e2e4e347d5b7bb7f91946f95514aae7976897d009d01e078e4e0c46c7"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_intake.gd",
+      "bytes": 14382,
+      "sha256": "ff89a3f256da3320be2639853a5196e21eea396687e07e73de21362f40e50c1e"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_intake.gd.uid",
+      "bytes": 20,
+      "sha256": "faf232d938c974a8de35fc88dc1535cdd05fcba77700ddb9c78f77b68b292681"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_isolation.gd",
+      "bytes": 21725,
+      "sha256": "158415f6557edb0ef8e40086d56d54471719aa3a4ce5a65388b51e13cdba2817"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_isolation.gd.uid",
+      "bytes": 20,
+      "sha256": "de90687e882365eaa99f9d26784f03a6639d44039e2fe4a7b9bf73e98f2ff222"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_map.gd",
+      "bytes": 3364,
+      "sha256": "8e66db89dec8ec5170ae09f2a90568cc0ae07b0b1533f5cb5baac129105ed8e2"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_map.gd.uid",
+      "bytes": 20,
+      "sha256": "c29e630afe426c5f33e3643f39d0899a30204b38378ef94b515d4fb3ffd36e83"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_nurse_duty.gd",
+      "bytes": 19451,
+      "sha256": "cc6663d28144662da6267a469514bf2eca11743386c9a807fe82782008d39667"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_nurse_duty.gd.uid",
+      "bytes": 20,
+      "sha256": "5500833b11f46e28e4189d08b08779d9707ca30252587470a06666db10e6ab9d"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_observations.gd",
+      "bytes": 16891,
+      "sha256": "bccbd2e9fe45aed8054e8c20131714527365d84d250eb2dbc0264ef0729b18cd"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_observations.gd.uid",
+      "bytes": 20,
+      "sha256": "0f515acceb446fdf0569c8893ed43f618702f92322d5388e5d2b3e4c1d9bfe4a"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_records.gd",
+      "bytes": 25151,
+      "sha256": "32dd25381e279904e5d7123f45baff6176fd45874be6441c536895e27aabe2a4"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_records.gd.uid",
+      "bytes": 20,
+      "sha256": "86dbed9b85ad03b16451f9aa5812bca1065d96e5bea9c1eb59ed3dbc1188f517"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_trace_events.gd",
+      "bytes": 24237,
+      "sha256": "9ed292fa256dfb8ca1b2766684cb72a7216729d5026c19fa3cfd2c4a55d8efe6"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_trace_events.gd.uid",
+      "bytes": 19,
+      "sha256": "cbffa2497b5547ca4446d2a91214995f58d3ce5a8cd0328546aee8c55294fbb5"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_ward_events.gd",
+      "bytes": 66176,
+      "sha256": "6e59fa5f947dfb8f98d1379dc890199847f4d7bf78c3966459d40c25359b39d7"
+    },
+    {
+      "path": "neurons/scripts/core/asylum_ward_events.gd.uid",
+      "bytes": 19,
+      "sha256": "51fc75aa09faef89024da37af9f694fdef0c3f7857e6e75fb129528a372e0827"
+    },
+    {
+      "path": "neurons/scripts/core/bed_body.gd",
+      "bytes": 3455,
+      "sha256": "1a99e49290b6bd4e95d032039f88df661c3074a8ff2fbd7ef1225181028b6b78"
+    },
+    {
+      "path": "neurons/scripts/core/bed_body.gd.uid",
+      "bytes": 20,
+      "sha256": "975f7003736234c801672d25c884a8e23320bc25c451f2d84ccb1b5cc68faa68"
+    },
+    {
+      "path": "neurons/scripts/core/campaign_session.gd",
+      "bytes": 12562,
+      "sha256": "a69e5a1aed724eee3a79b47a6002cd617341e08fcc6c500c5a47003c1f0fd6ed"
+    },
+    {
+      "path": "neurons/scripts/core/campaign_session.gd.uid",
+      "bytes": 20,
+      "sha256": "a01b5cb47ddc4f48da15acbdb09959a4c482b3946190fdd1f48d8334dc4362ac"
+    },
+    {
+      "path": "neurons/scripts/core/combat_chapter.gd",
+      "bytes": 37787,
+      "sha256": "b7de6635e757e3a3ac4bdbc00d850c83fc68c332597c00f340d679d26e4c78d9"
+    },
+    {
+      "path": "neurons/scripts/core/combat_chapter.gd.uid",
+      "bytes": 20,
+      "sha256": "5902982595b12b039b4bece260f0a5febe08ecbb14f8decce9346a3fd4bfcb27"
+    },
+    {
+      "path": "neurons/scripts/core/combat_map.gd",
+      "bytes": 2257,
+      "sha256": "0ec9937f5c8ee2297895b2da3fdd413f74ac949a7502fbb2a3cbab2c044faaa9"
+    },
+    {
+      "path": "neurons/scripts/core/combat_map.gd.uid",
+      "bytes": 20,
+      "sha256": "3bb12a14cd9edde665b7be06cd49d5f87e7b79c2779b8e854c7a808b3ff1b09c"
+    },
+    {
+      "path": "neurons/scripts/core/combat_noises.gd",
+      "bytes": 4110,
+      "sha256": "88636f128c3d484bcbaf1ed2677fcaa675f6da868ef32b771dc1d569397cf1e4"
+    },
+    {
+      "path": "neurons/scripts/core/combat_noises.gd.uid",
+      "bytes": 20,
+      "sha256": "0d17fce9d8d92b4514dd66a8d5effd58f5244dd7d9fe988f92134a8cab4fd3e3"
+    },
+    {
+      "path": "neurons/scripts/core/combat_observations.gd",
+      "bytes": 7187,
+      "sha256": "c2d7471e26314486f1f9d1a323b433bcc93373de8d84ebe678bcb6f22611e8c7"
+    },
+    {
+      "path": "neurons/scripts/core/combat_observations.gd.uid",
+      "bytes": 20,
+      "sha256": "eed15f01c0d9363ac6ac6bd690243f38fe51703d56bed693e7a08a490fa07552"
+    },
+    {
+      "path": "neurons/scripts/core/combat_reactions.gd",
+      "bytes": 6346,
+      "sha256": "2dd329b0e7bd5fa44a2172361540a2912c782f7c77a15ca1c2d9c217c750c4d5"
+    },
+    {
+      "path": "neurons/scripts/core/combat_reactions.gd.uid",
+      "bytes": 20,
+      "sha256": "be089ca9bb4a796de23451eaf6448d66fc02bb9ffc89281f3cebd147877e3a3a"
+    },
+    {
+      "path": "neurons/scripts/core/cortex_events.gd",
+      "bytes": 53322,
+      "sha256": "852ec7a8795d5ef1e558671887cc7b91758b28fef96fbee5d2e6c4225caff0ed"
+    },
+    {
+      "path": "neurons/scripts/core/cortex_events.gd.uid",
+      "bytes": 20,
+      "sha256": "c55b13240a190f82aa1f0a9287676635f8a13d2b45c6759dcbeeddbc47aa5faf"
+    },
+    {
+      "path": "neurons/scripts/core/cortex_map.gd",
+      "bytes": 4277,
+      "sha256": "7042836879b47ed27101facd7c60c02b0300ba4cd76e2ad9926014bebe4ff507"
+    },
+    {
+      "path": "neurons/scripts/core/cortex_map.gd.uid",
+      "bytes": 20,
+      "sha256": "6a6c3e9e73364d1e35c817c67b398473492ba5d783cf8ae448c21f58cb83e5a3"
+    },
+    {
+      "path": "neurons/scripts/core/cortex_upper_events.gd",
+      "bytes": 27865,
+      "sha256": "086b6b333b5096a4ecf315d7c503221d9c2c664b0ed1a7355a9f9b81c09f47eb"
+    },
+    {
+      "path": "neurons/scripts/core/cortex_upper_events.gd.uid",
+      "bytes": 19,
+      "sha256": "dc8800ec29dffb8bf6f4af3dad750fa5e8a307e11970fdd6eb955396ea8e476d"
+    },
+    {
+      "path": "neurons/scripts/core/family_events.gd",
+      "bytes": 32436,
+      "sha256": "0fd56cda692f5142b4fee3ec1367a2181166bd0ad3f3104a3579986273b66ae7"
+    },
+    {
+      "path": "neurons/scripts/core/family_events.gd.uid",
+      "bytes": 19,
+      "sha256": "0d0555698e2d1a8d7fcb7fdf84ba8581e41182f275a54676895ff5c5a6567199"
+    },
+    {
+      "path": "neurons/scripts/core/hidden_street.gd",
+      "bytes": 18879,
+      "sha256": "32d9fc9ed177a77bd020f96c3d89cba271f88fc70061ed2858798d930b32c100"
+    },
+    {
+      "path": "neurons/scripts/core/hidden_street.gd.uid",
+      "bytes": 19,
+      "sha256": "9effd6bf84187868d2945306756c61588f48e96ee035d17411c2357ff13c1938"
+    },
+    {
+      "path": "neurons/scripts/core/home_animals.gd",
+      "bytes": 9424,
+      "sha256": "5cc10d7549cddf826ed4c4d4c70eafae73956a656ff6b98fe94011b5d7e016b3"
+    },
+    {
+      "path": "neurons/scripts/core/home_animals.gd.uid",
+      "bytes": 20,
+      "sha256": "95f8b9ef5b464249aab3ebc4c7e36bc82ed68e17d09813e41055521953dec6de"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_events.gd",
+      "bytes": 50412,
+      "sha256": "6a971ff36db259549ccf19dcb42b834f8a21bbf717942b292fc725127b4c9f5e"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_events.gd.uid",
+      "bytes": 19,
+      "sha256": "86f391204187010948ab5ee33dd2c24b976daf24f0f50b29e1144ddb7a49c482"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_observations.gd",
+      "bytes": 14655,
+      "sha256": "2960ce3f95aba09a26d60252df32a0dd4173b52db66e8db2a0118d05bc17aa7b"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_observations.gd.uid",
+      "bytes": 20,
+      "sha256": "684e8f1276fb6d316dc46fdc5e5374131f6a13fcc75955937ca5787457ea8634"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_records.gd",
+      "bytes": 19625,
+      "sha256": "1e86b376efc7ce0b15fa873e40827a38ec249a2453155ae28009cd0c1121583a"
+    },
+    {
+      "path": "neurons/scripts/core/hospital_records.gd.uid",
+      "bytes": 20,
+      "sha256": "e9157882b709813af4d286742ca9b76558a81a39c54bad5726d758c68ffc172f"
+    },
+    {
+      "path": "neurons/scripts/core/interaction_rules.gd",
+      "bytes": 9494,
+      "sha256": "6b5b13d2c8dea04e479ba2e6a20550848dd1c2c774e2f2f76f1d7334e6ff1f98"
+    },
+    {
+      "path": "neurons/scripts/core/interaction_rules.gd.uid",
+      "bytes": 20,
+      "sha256": "e2607e45027330426934a630562e11de4fda24199d0b8f02eb5638cddd82abea"
+    },
+    {
+      "path": "neurons/scripts/core/key_discovery.gd",
+      "bytes": 4929,
+      "sha256": "d7c20e745e9d37491f9c321083fe2b08fc72efaddd77f63197ff9b485e6c85b8"
+    },
+    {
+      "path": "neurons/scripts/core/key_discovery.gd.uid",
+      "bytes": 20,
+      "sha256": "64a2bad7f733e1057e0425c7fd0968772c1f5163003162077dc53503c466b742"
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd",
+      "bytes": 22671,
+      "sha256": "4c8ba30b45d733333b288c123e77ec48596720d910894b7a5833f0a1fb73bed7"
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd.uid",
+      "bytes": 20,
+      "sha256": "1dffcaba0bff89855af1cedb2dd271ba3eaff1ae630c83ac4bfe40fa051898b7"
+    },
+    {
+      "path": "neurons/scripts/core/save_store.gd",
+      "bytes": 2466,
+      "sha256": "52e717cf6d10c525fdf211880ce9d113d01692f099a599ea4ee983ca2cd12514"
+    },
+    {
+      "path": "neurons/scripts/core/save_store.gd.uid",
+      "bytes": 20,
+      "sha256": "f000bd447057bf9db7c3902b4670cac76c37c8c37cd0ffc1dd4b58a0942d0396"
+    },
+    {
+      "path": "neurons/scripts/core/street_archivist.gd",
+      "bytes": 5627,
+      "sha256": "1f344c11b3b0a51917c8b7704c54b51a3deedc63b5106c8669346370553b0124"
+    },
+    {
+      "path": "neurons/scripts/core/street_archivist.gd.uid",
+      "bytes": 19,
+      "sha256": "35cf3fdf5281231dbccffef3256b3e7045861ff4ca9c99a6803c4bde3e00f3c1"
+    },
+    {
+      "path": "neurons/scripts/core/street_bed_travel.gd",
+      "bytes": 11962,
+      "sha256": "b8223ebde3d78d793f82c777b177f287f3b1af253e0fdb81e8aaf73fd45c5646"
+    },
+    {
+      "path": "neurons/scripts/core/street_bed_travel.gd.uid",
+      "bytes": 20,
+      "sha256": "34b9e44e71908e37d71d29c22b0d7e5395845c0395fef917845b861174a51085"
+    },
+    {
+      "path": "neurons/scripts/core/street_box.gd",
+      "bytes": 6123,
+      "sha256": "cea1076997fc4ce14656949d3a146a8f633f678a9587584a6005eae407e2d24b"
+    },
+    {
+      "path": "neurons/scripts/core/street_box.gd.uid",
+      "bytes": 19,
+      "sha256": "7e52023948a94128e45822a620ed255e7e5039f308da5590b7b0d03285cecce8"
+    },
+    {
+      "path": "neurons/scripts/core/street_chapter.gd.uid",
+      "bytes": 18,
+      "sha256": "de950a566d2a774fe5792921e6fe201f2e8ef159a08f74079615e2e1699fb3d5"
+    },
+    {
+      "path": "neurons/scripts/core/street_clamp.gd",
+      "bytes": 5474,
+      "sha256": "f509694c55392e2258ccc463e686de40ecccca26e6b78ca4fecace72bd82de04"
+    },
+    {
+      "path": "neurons/scripts/core/street_clamp.gd.uid",
+      "bytes": 19,
+      "sha256": "17b3372abeb363c42ea76677f1d5488b91c1e560e3cfdc6c87813c2956452b67"
+    },
+    {
+      "path": "neurons/scripts/core/street_displays.gd",
+      "bytes": 15301,
+      "sha256": "dab108483e4c67b0ddae03d4d2d34e3579c235c989a94f6717ce4baa4c5368f5"
+    },
+    {
+      "path": "neurons/scripts/core/street_displays.gd.uid",
+      "bytes": 20,
+      "sha256": "e62e67e1cf6473e93d1a8454e44b0307c66cf9aff9d229ebb9c803a754f4e3c1"
+    },
+    {
+      "path": "neurons/scripts/core/street_lateral_bed.gd",
+      "bytes": 11853,
+      "sha256": "946cc73e2e9afa50d66ebef08e272a00e996e51a19e2f0d4c1fb39db3f75d43f"
+    },
+    {
+      "path": "neurons/scripts/core/street_lateral_bed.gd.uid",
+      "bytes": 19,
+      "sha256": "b542e6830bec215741ffec92aaa673bada36cc8be291e371547d775592f966c4"
+    },
+    {
+      "path": "neurons/scripts/core/street_laundry_bag.gd",
+      "bytes": 5770,
+      "sha256": "1268827c72f33065e78c17348647f9b06beccf21c89e6ac5df393ee9dec0f4d2"
+    },
+    {
+      "path": "neurons/scripts/core/street_laundry_bag.gd.uid",
+      "bytes": 20,
+      "sha256": "8279856af40b904b81f5e9a2db95e7f5b73d144a9bd44b505687c953a0b8266f"
+    },
+    {
+      "path": "neurons/scripts/core/street_losses.gd",
+      "bytes": 3898,
+      "sha256": "569437ab31ed7a5ad1591d662dfe73116f9a3f430deede2a26054ca0e041608c"
+    },
+    {
+      "path": "neurons/scripts/core/street_losses.gd.uid",
+      "bytes": 20,
+      "sha256": "db42503d7e22d47fc669677bfe7bef5b6b4f237e411411c4cde0d6c728a33df6"
+    },
+    {
+      "path": "neurons/scripts/core/street_map.gd",
+      "bytes": 2248,
+      "sha256": "33ff54268bf6ad4ae85704ac6a32fbbde952e382830de3200eb4c07ca37e298d"
+    },
+    {
+      "path": "neurons/scripts/core/street_map.gd.uid",
+      "bytes": 19,
+      "sha256": "c2e8ff8132a349eab30d1a42df7391ca107427e9c543b754532a251fe9a35b2c"
+    },
+    {
+      "path": "neurons/scripts/core/street_materials.gd",
+      "bytes": 13610,
+      "sha256": "1ae90f6aed9a1ad476c906ffa7f2030ee096fec5b500e0270faa762a3b2b92f4"
+    },
+    {
+      "path": "neurons/scripts/core/street_materials.gd.uid",
+      "bytes": 20,
+      "sha256": "f049c9a846351c4316953145bccd062c9930adcc6b4bc120097427418cb65ff9"
+    },
+    {
+      "path": "neurons/scripts/core/street_reports.gd",
+      "bytes": 10360,
+      "sha256": "a5555d079f3a18f9e1cd8fea85e4b3bd5ccd2153433726bf506e643c0da7f7ad"
+    },
+    {
+      "path": "neurons/scripts/core/street_reports.gd.uid",
+      "bytes": 20,
+      "sha256": "110b01d184d60965a78e87e0b3424f947cce219f56423e893b0b78e69b19dc6c"
+    },
+    {
+      "path": "neurons/scripts/presentation/asset_catalog.gd",
+      "bytes": 3889,
+      "sha256": "46fcc4dbd1319eb535e0d2b85710bd4567f4d8e908b0060dc41f6eea8d766f04"
+    },
+    {
+      "path": "neurons/scripts/presentation/asset_catalog.gd.uid",
+      "bytes": 20,
+      "sha256": "a30a326ef8ca990de2efa7f08811ec0a2e08f01013b4ed5a07cb516334f28f2a"
+    },
+    {
+      "path": "neurons/scripts/presentation/search_actions.gd",
+      "bytes": 5683,
+      "sha256": "bbd7134b228e711cd27fdc50557a9e8c8507bace70d1d4fe8c96142b79772750"
+    },
+    {
+      "path": "neurons/scripts/presentation/search_actions.gd.uid",
+      "bytes": 20,
+      "sha256": "c08887e984307c40117812104d3625a35f2203efc6c2cb5e570d675afb443155"
+    },
+    {
+      "path": "neurons/scripts/presentation/view_controls.gd",
+      "bytes": 3713,
+      "sha256": "6b4ca25267f46b5301fe6eca83b61bd159feb108cb820a8568d43f1d9d2ef84e"
+    },
+    {
+      "path": "neurons/scripts/presentation/view_controls.gd.uid",
+      "bytes": 20,
+      "sha256": "9917095a9cb2b0e36cb7271b7f15ade3b76e85c4eba7625c17b88b8d724fa823"
+    },
+    {
+      "path": "neurons/scripts/ui/body_preview.gd",
+      "bytes": 5605,
+      "sha256": "bf04377fcaa6ba3b15bf9d4a5586d009f489d29ed5342e2b9f3aa45f07910573"
+    },
+    {
+      "path": "neurons/scripts/ui/body_preview.gd.uid",
+      "bytes": 20,
+      "sha256": "be3c7f6455626eb214ade943d2b9e0ee1164c1d492c0b50202bedd204deb51a8"
+    },
+    {
+      "path": "neurons/scripts/ui/campaign_menu.gd",
+      "bytes": 21833,
+      "sha256": "608cc0e95026b772b3ce93541f280019353e3a91408ddc43585b485e5fd096de"
+    },
+    {
+      "path": "neurons/scripts/ui/campaign_menu.gd.uid",
+      "bytes": 20,
+      "sha256": "656aab0bec83c3c9bd408257ed03128c4f93e1e9be3e9f4ae71468a6e213e87d"
+    },
+    {
+      "path": "neurons/scripts/ui/dialogue_playback.gd",
+      "bytes": 4537,
+      "sha256": "ce31ae237fdb2d2fa3d5663592ba19d57b070521e99ea0ff6074bf4a8398f984"
+    },
+    {
+      "path": "neurons/scripts/ui/dialogue_playback.gd.uid",
+      "bytes": 20,
+      "sha256": "9888c19eabe42fe0842cc2714cbb41cb6fa9e4bb9eae3f03c2cfc65be02ae80d"
+    },
+    {
+      "path": "neurons/scripts/ui/ending_panel.gd",
+      "bytes": 6689,
+      "sha256": "d8ce1c6c0f9f9c5be5f3ecb33b607879b8aa6748c4c23cfe802c00f48a8f9135"
+    },
+    {
+      "path": "neurons/scripts/ui/ending_panel.gd.uid",
+      "bytes": 20,
+      "sha256": "af927c6a73931aa720548fdc8281c0efc912eec3492574fa536c34e0598805c8"
+    },
+    {
+      "path": "neurons/scripts/ui/father_prompt.gd",
+      "bytes": 2661,
+      "sha256": "c7d2557b94da7313d39d44ac7500bd1eccbd2c59434971b3ea5a3833544dc000"
+    },
+    {
+      "path": "neurons/scripts/ui/father_prompt.gd.uid",
+      "bytes": 19,
+      "sha256": "2cb7eb550c5cc72213c29226b40c7d26276d35b2b23e3a57ebf207c67507f662"
+    },
+    {
+      "path": "neurons/scripts/ui/feedback_audio.gd",
+      "bytes": 8137,
+      "sha256": "8b5c73dc3680328e96b6c0e11196cbf0646492c8b1c4684933d3f4c672ffd34c"
+    },
+    {
+      "path": "neurons/scripts/ui/feedback_audio.gd.uid",
+      "bytes": 20,
+      "sha256": "8a28774813a926430d16cf957ef9e10ebda54f9ab8bb60bd45a5eb0a08735ee1"
+    },
+    {
+      "path": "neurons/scripts/ui/front_end.gd.uid",
+      "bytes": 19,
+      "sha256": "32038e886e7d3264197cd59bd05e8d3002343fa8b283090391c3a259ade5fa0d"
+    },
+    {
+      "path": "neurons/scripts/ui/intervention_feedback.gd",
+      "bytes": 5313,
+      "sha256": "d539285c8369a3340234d43f2b70178806048e27fffb26020ab0ad2d094188c6"
+    },
+    {
+      "path": "neurons/scripts/ui/intervention_feedback.gd.uid",
+      "bytes": 19,
+      "sha256": "c3452f989c8adcc1c10afd39a5ff0345e2119346372a75669f0f806c297e6d2a"
+    },
+    {
+      "path": "neurons/scripts/ui/menu_art.gd",
+      "bytes": 81,
+      "sha256": "7c797e860d0458f2f9f7be2a085f7807a48b36149f4554692d6517f6af396660"
+    },
+    {
+      "path": "neurons/scripts/ui/menu_art.gd.uid",
+      "bytes": 19,
+      "sha256": "afe45b013e1ae2bb2dab6a9194b5d3a168f14b91da382d06191872db783e9f2b"
+    },
+    {
+      "path": "neurons/scripts/ui/neuron_menu.gd",
+      "bytes": 9259,
+      "sha256": "c73d55679ffe598e1040c2197508f6e8d49bbb843c689fdd4e665f3498459259"
+    },
+    {
+      "path": "neurons/scripts/ui/neuron_menu.gd.uid",
+      "bytes": 20,
+      "sha256": "8b1cb089a66d36ea6a360179565f9b6996a58933db6149cd841dd86e11c232dc"
+    },
+    {
+      "path": "neurons/scripts/ui/opening_flow.gd",
+      "bytes": 11264,
+      "sha256": "c8105ea1a735645705c7332cb79a8e96cd28b14f3cce7cf800ccfb3fb0718449"
+    },
+    {
+      "path": "neurons/scripts/ui/opening_flow.gd.uid",
+      "bytes": 19,
+      "sha256": "20aa88648dda347f1881c2a266cbcb76e44e04936a8577832042a0459c1a2e1a"
+    },
+    {
+      "path": "neurons/scripts/ui/tutorial_overlay.gd",
+      "bytes": 17593,
+      "sha256": "ba84482a4c0e5289fcc49b45c3cf1bbacdfbc4581263130fc47b110d4b613bd4"
+    },
+    {
+      "path": "neurons/scripts/ui/tutorial_overlay.gd.uid",
+      "bytes": 20,
+      "sha256": "8505cd1f567563a35b8d54b95a72625f4e973e2da215983160ba6ba47a8b0f28"
+    },
+    {
+      "path": "neurons/scripts/ui/vitality_panel.gd",
+      "bytes": 5841,
+      "sha256": "b18af996d8a2137e1ac962924caf1ec591d9c2a9b9bc2ce19cd4e79ddaef2cc9"
+    },
+    {
+      "path": "neurons/scripts/ui/vitality_panel.gd.uid",
+      "bytes": 20,
+      "sha256": "2754fed94b88325a9d90003fc2c6a746cc9e8b98821422e06449d40a87a9af54"
+    },
+    {
+      "path": "neurons/scripts/world/asylum_layout.gd",
+      "bytes": 11306,
+      "sha256": "27765cca8709e25239dd9e68667ed37f2eaab01741d1a2200071555e6cbab9a2"
+    },
+    {
+      "path": "neurons/scripts/world/asylum_layout.gd.uid",
+      "bytes": 19,
+      "sha256": "dca480c3fd7500ef750418e4977316a337fa1c4b1ce39497338421dd04095c08"
+    },
+    {
+      "path": "neurons/scripts/world/bedroom_layout.gd",
+      "bytes": 2422,
+      "sha256": "5a85e696d7727d3dc93355b416978d171f734139c7d70d5a02663dc9a320bb2c"
+    },
+    {
+      "path": "neurons/scripts/world/bedroom_layout.gd.uid",
+      "bytes": 20,
+      "sha256": "1a1396695559b0c7ce7b8c1204c873a7bc0f6a4379e162d01a58de022a42c70a"
+    },
+    {
+      "path": "neurons/scripts/world/campaign_view.gd",
+      "bytes": 55048,
+      "sha256": "50a31043e6ee1a4ee8e06afe75b38572fad57685241c1bdd1eaad811d9736387"
+    },
+    {
+      "path": "neurons/scripts/world/campaign_view.gd.uid",
+      "bytes": 19,
+      "sha256": "791872dbba00824d0a40737c3137658d44bb2f5939df747d93e8f59d792c1224"
+    },
+    {
+      "path": "neurons/scripts/world/combat_layout.gd",
+      "bytes": 5167,
+      "sha256": "9c506eec948d18d49182533c4713a6ea373ed6c6d5e6093985b84d652a4f11c7"
+    },
+    {
+      "path": "neurons/scripts/world/combat_layout.gd.uid",
+      "bytes": 20,
+      "sha256": "f0f5faa34f7ef811a3dce9af0adaeddfff068630d6a4a1e1378fd1fef01558b4"
+    },
+    {
+      "path": "neurons/scripts/world/combat_view.gd.uid",
+      "bytes": 19,
+      "sha256": "c8e288e941451ec02be9e07a42327697b33b960090c32825dc1c84384a4d6f6d"
+    },
+    {
+      "path": "neurons/scripts/world/cortex_layout.gd",
+      "bytes": 15296,
+      "sha256": "fd935c4c89da5c739be1b12d431401404e7173c8798372c4fdc8960b6277ea1b"
+    },
+    {
+      "path": "neurons/scripts/world/cortex_layout.gd.uid",
+      "bytes": 20,
+      "sha256": "1327ac72e057b993770c51b845aefd486f7335462a2c7fa43f2f9f2e9b557f33"
+    },
+    {
+      "path": "neurons/scripts/world/hidden_layout.gd",
+      "bytes": 1310,
+      "sha256": "4efe5c1aa825c9f6b22f48a05ee1a1a1eef108fe4991dd774bd713036b6f9b82"
+    },
+    {
+      "path": "neurons/scripts/world/hidden_layout.gd.uid",
+      "bytes": 20,
+      "sha256": "25de7809eb9defcfa3c693a9389206db5942c0eb5b95c1193e708067df8601ab"
+    },
+    {
+      "path": "neurons/scripts/world/institution_layout.gd",
+      "bytes": 6078,
+      "sha256": "e74f19db12c9c7c8e38030e6740e81988618bb0be29f0a4b2780cda092ff4327"
+    },
+    {
+      "path": "neurons/scripts/world/institution_layout.gd.uid",
+      "bytes": 20,
+      "sha256": "1397e4fe57c5e5656b4b1a66245a2d97655f53ff9344395925c07d47879bcf6f"
+    },
+    {
+      "path": "neurons/scripts/world/metric_bedroom_view.gd",
+      "bytes": 36296,
+      "sha256": "dfb2612134a100450ff2e4461508a3b0a9ddc732d140c3fedc997d376fac8aba"
+    },
+    {
+      "path": "neurons/scripts/world/metric_bedroom_view.gd.uid",
+      "bytes": 20,
+      "sha256": "9d3f144bd57f252fbdd30e37e408100e9802963fc19f67c67542cbc0bd933885"
+    },
+    {
+      "path": "neurons/scripts/world/metric_institution_view.gd",
+      "bytes": 37367,
+      "sha256": "48230946be3fd84c629633e2f87f9d46c49ec9d3b104038371acecb78e340a1a"
+    },
+    {
+      "path": "neurons/scripts/world/metric_institution_view.gd.uid",
+      "bytes": 20,
+      "sha256": "718a28ea0c0c0a7d9a22067fbd68c72c3dc1c110dc9e1bc49b0f39aa9d28c4e3"
+    },
+    {
+      "path": "neurons/scripts/world/room_art_trial_view.gd",
+      "bytes": 3747,
+      "sha256": "4e379d314ee5eb1df26254de2e2bf233821c93ecc6db3fe54346833457102a2c"
+    },
+    {
+      "path": "neurons/scripts/world/room_art_trial_view.gd.uid",
+      "bytes": 20,
+      "sha256": "fddb6a912ecbc6d25a6ddc820578d8f4aa09be73cced5836f50322d7abfc1014"
+    },
+    {
+      "path": "neurons/scripts/world/room_layout.gd",
+      "bytes": 11032,
+      "sha256": "7e4781ee5c05e8278907cf784e41e91c0a1f35dbe9b69a95f1a488b507f5f2bf"
+    },
+    {
+      "path": "neurons/scripts/world/room_layout.gd.uid",
+      "bytes": 20,
+      "sha256": "d70b429a5a66214aaeca22b6392df333366c4362fe61cf27aa1fb519e2544a77"
+    },
+    {
+      "path": "neurons/scripts/world/room_view.gd",
+      "bytes": 13895,
+      "sha256": "e15d2790e16c01449839477b64833d8eb8f2aebc19e9be593e9a914871f5c508"
+    },
+    {
+      "path": "neurons/scripts/world/room_view.gd.uid",
+      "bytes": 19,
+      "sha256": "177bf0d98b7eb8778558191a5546494c47c3dad606f498efaff87237a637b894"
+    },
+    {
+      "path": "neurons/scripts/world/street_layout.gd",
+      "bytes": 2606,
+      "sha256": "a3064dda9cce1477e9ccaf5e34286852aa690bad7f06bcc608af1e79cb134e94"
+    },
+    {
+      "path": "neurons/scripts/world/street_layout.gd.uid",
+      "bytes": 20,
+      "sha256": "ea986cdef244524547c0a295a1d7788496e3f76cd4f2724be11ec30d591d33ce"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "sources": [
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+      "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+      "paragraphs": [
+        {
+          "paragraph": 1289,
+          "text": "敌人按“实际发现→接近→可见起手→出手→收招”行动。攻击发动后不瞬间改向；同次攻击对同一目标只结算一次，多臂、束带及持续接触不重复扣伤。"
+        },
+        {
+          "paragraph": 1290,
+          "text": "普通敌人受到实际踢击后退开，中断尚未命中的攻击；已造成的伤害保留。转运床按下述专属规则处理。敌人攻击不套用主角神经抗性。"
+        },
+        {
+          "paragraph": 1681,
+          "text": "抓握成立后，由当前人物完成本次动作；其他抓握者不得叠加控制或预约无间隙续抓。施控者死亡、动作被实际打断或到达释放点，立即解除对应抓握。"
+        },
+        {
+          "paragraph": 1682,
+          "text": "缩手只避开尚未成立的手臂抓取；不解除扣头、抱住躯干或已经收紧的束带。普通位移和开心也不解除物理束缚。"
+        },
+        {
+          "paragraph": 1858,
+          "text": "38．治疗主任 敌对 第三关二层身份"
+        },
+        {
+          "paragraph": 1859,
+          "text": "动作：双臂展开相连椅架→朝前合拢→实际夹住角色→短暂固定→张开释放。"
+        },
+        {
+          "paragraph": 1860,
+          "text": "效果：夹击成立，扣生命与精神一次并限制移动；多处椅架接触不重复结算。夹空后必须重新展开，不能闭合贴身持续扣血。"
+        },
+        {
+          "paragraph": 1861,
+          "text": "空间判定：椅架随人物移动，不在角色身后另生成固定椅；遇实体障碍，不能穿过去完成包围。"
+        },
+        {
+          "paragraph": 1862,
+          "text": "录音器：保留胸前设备运转表现；不自动记录未说出的证词，不恢复已删除录音，也不要求角色照读第三关陈述才能释放。"
+        },
+        {
+          "paragraph": 1863,
+          "text": "中断：动作被实际打断或人物死亡，解除当前固定；不切入独立拘禁画面。"
+        }
+      ],
+      "table_rows": []
+    },
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第四阶段_数值与完整流程_合并修订版.docx",
+      "sha256": "c3f2e9ba7d0b23d7c0654b546b0fa0ce075a0e885f59f48066280dd0b33eee39",
+      "paragraphs": [],
+      "table_rows": [
+        {
+          "table": 19,
+          "row": 5,
+          "cells": [
+            "第三关检查助手、治疗主任",
+            "10／10",
+            "束带／椅架实际收紧，抓握最长1.2秒"
+          ]
+        }
+      ]
+    }
+  ],
+  "external_sources": 0,
+  "imagegen_calls": 0,
+  "paid_services": 0,
+  "baseline": "7ab88f22a246e23feb1c0bac95dd6d77a401446f",
+  "prior_files_verified_at_start": 747,
+  "protected_street_fields": {
+    "sources": true,
+    "status": true,
+    "actors": true,
+    "attacks": true,
+    "observations": true,
+    "dialogue": true,
+    "rooms": true,
+    "exit_room": true,
+    "exit_id": true,
+    "good_ids": true,
+    "materials": true,
+    "displays": true
+  },
+  "protected_files": [
+    {
+      "path": "neurons/data/skills.json",
+      "sha256": "2d69fc3abb4b7be7516db6a4cb17c8988ed6bee23925eea442c0a95cbdf24f68",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/data/key_discovery.json",
+      "sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/data/combat_chapter.json",
+      "sha256": "e1c90c646af4b0e505f00efc4639b4187cc625382159233e29b1e7c90b069185",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/data/cortex_events.json",
+      "sha256": "0c9b273471d2fc2402a3b862d846b751fcf6f72d67bf3dcaaaa45ad1d2308273",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/data/hospital.json",
+      "sha256": "b6ac2dc74d137576919ac4701802726cdba305dc830c806fff7bc9696567fea3",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_chapter.gd",
+      "sha256": "b7de6635e757e3a3ac4bdbc00d850c83fc68c332597c00f340d679d26e4c78d9",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd",
+      "sha256": "4c8ba30b45d733333b288c123e77ec48596720d910894b7a5833f0a1fb73bed7",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "sha256": "2da88ee60a0ef17ad07a41fb871a96f82c87debd12494f4ce25d82a67f31520e",
+      "unchanged_from_previous_delivery": true
+    }
+  ],
+  "prior_test_parameters_unchanged": true,
+  "new_test_parameters": {
+    "director_start_m": 0.84,
+    "director_bar_m": 0.035,
+    "director_torso_m": 0.21,
+    "director_contact_slack_m": 0.015,
+    "director_contact_ratio": 0.96,
+    "director_rail_height_px": 59,
+    "director_open_profile": [
+      [
+        0,
+        0.16
+      ],
+      [
+        0.3,
+        0.36
+      ],
+      [
+        0.55,
+        0.36
+      ],
+      [
+        0.7,
+        0.36
+      ]
+    ],
+    "director_closed_profile": [
+      [
+        0,
+        0.16
+      ],
+      [
+        0.35,
+        0.32
+      ],
+      [
+        0.98,
+        0.23
+      ],
+      [
+        1.165,
+        0.08
+      ]
+    ],
+    "director_sample_m": 0.025
+  },
+  "all_27_audio_streams_and_bindings_unchanged": true,
+  "adopted": {
+    "director": "S3:P1858–1863/S4:T19R5; two attached articulated rails close before true torso contact, original10HP10SP/1.2s sole holder, no independent chair behind host; recorder visual only, no testimony or deleted-record recovery.",
+    "geometry": "Two configured4-node profiles, real bar width/body clearance and bilateral side contacts; blocked rail/changed physical enclosure releases without another hit. Trial metre profiles separate from59px display height.",
+    "kick": "Actual effective carrier knee now synchronizes director geometry in same contact frame; source38th check reproduced old-position geometry until next actor tick, fixed without modifying damage/range.",
+    "doors": "Existing two-door/pending passage behaviour checked with four unique destination bodies, actual body navigation/free side lane, real world/disk/manual pause/crossing.13 assertions; no door/navigation rewrite needed. Source threshold and pending intent are explicit fixtures, not natural simultaneous-crowd acceptance."
+  },
+  "limits": [
+    "All visual rails/arms/recorder are code placeholders; no approved character/anatomy/final art or audio audition.",
+    "Finite external displacement and old invalid rectangular hold are explicit fixtures; not actual bed-kick replay or every crowded-door combination.",
+    "Live has two declared actor/host scenes; second resets HP/SP, one solid obstacle and unlocked existing KNEE, then real F; no contact/held/death/knowledge injections.",
+    "Full B7 human play from opening/all branches/dual-machine, remaining Street attacks/records and five B3 source content fields pending."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "failures": [],
+  "passes": [
+    "declared mother scene resets HP/SP and pays actual CONTROL without a hit/holder/attack-result fixture",
+    "ordinary mother actually approaches/gathers visible arms",
+    "actual book menu freezes gathering before any arm injury",
+    "real resumed multi-arm contact pays one original ten HP",
+    "actual closed torso, rather than mere contact, becomes sole holder",
+    "real Space freezes completed enclosure and preserves one charge",
+    "real running wheel enlarges same attached limbs without changing collision owner",
+    "real wheel restores default view",
+    "ordinary original1.2s opens actual maternal enclosure",
+    "actual complete recovery folds all maternal arms",
+    "multiple arms and recovery cannot repeat original injury",
+    "declared doctor scene resets HP/SP and pays actual CONTROL without a hit/holder/attack-result fixture",
+    "ordinary doctor visibly raises coordinated blades",
+    "actual unpaused F hits doctor's body using original legal knee",
+    "effective knee removes stale blade geometry immediately before any delayed injury",
+    "original hurt recovers without a hidden blade continuing",
+    "declared skinface scene resets HP/SP and pays actual CONTROL without a hit/holder/attack-result fixture",
+    "ordinary skinface raises arm and starts fixed local sweep",
+    "actual arm-path contact pays original fifteen HP without old face/door script",
+    "actual paused sweep has no grip or former face-opening SP fee",
+    "ordinary skinface retraction completes without another health bar or repeated injury",
+    "same completed local sweep cannot settle twice"
+  ],
+  "rendered": true,
+  "scope": "Three declared actor/host poses, each HP/SP reset and actual paid CONTROL; doctor existing KNEE unlocked. Thereafter ordinary _process/AI, actual Book/Escape/Space/running wheel/F, true maternal impact/enclosure/release, effective carrier knee, actual skinface sweep. No contact/holder/damage/knowledge result injection. Silent fixed30, not natural mixed crowds/manual whole-game/final art or audio audition."
+}

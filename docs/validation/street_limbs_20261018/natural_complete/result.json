@@ -1,0 +1,54 @@
+{
+  "attempts": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "5": 1,
+    "6": 1
+  },
+  "complete_ending_requested": true,
+  "elapsed_game_seconds": 154.833333333327,
+  "ending": {
+    "complete": true,
+    "dialogue_sent": true,
+    "elapsed": 2.0,
+    "id": "E2",
+    "phase": "complete",
+    "receipt": "ending:E2:70a16617c99ea2f30bddf3eb917dd490b8afae7dc16b33939eb3402082ac36c6"
+  },
+  "ending_phases": [
+    "registration",
+    "dialogue",
+    "wake",
+    "planet",
+    "complete"
+  ],
+  "failures": [
+    "automatic original dialogue and unskipped epilogue reach actual result panel"
+  ],
+  "hp": 55,
+  "passes": [
+    "natural L5 and Street process reaches real main ending",
+    "no fifteen-second unexplained movement stall",
+    "real L5 doorway unlocks fixed forty-five Street identities",
+    "battle route never returns to key-search gameplay",
+    "actual natural ending visits original dialogue/wake and E2 planet phases without writing completion"
+  ],
+  "rendered": true,
+  "scope": "Declared direct L5 entry (or explicit --street-entry-only); after entry no seed/NPC/resource/position/route/damage fixtures. Optional complete-ending flag waits original auto dialogue/unskipped tail; no completion fields injected. Fixed30 automatic real window, not human pacing or all branches.",
+  "visits": [
+    "atrium",
+    "decision",
+    "bridge",
+    "switch",
+    "verify",
+    "hippocampus",
+    "thalamus",
+    "brainstem",
+    "street_plaza",
+    "street_narrow",
+    "street_twisted",
+    "street_node",
+    "street_end"
+  ]
+}

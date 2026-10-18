@@ -1,0 +1,20 @@
+{
+  "failures": [],
+  "passes": [
+    "one explicit nurse/host scene pays real CONTROL without filling head-hold, poured-dose or effect fields",
+    "ordinary autonomous approach and actual reaching hand establish only head fixation",
+    "head contact alone does not charge oral medicine",
+    "ordinary other hand moves the same cup to the actual mouth before tipping",
+    "real Space freezes lip contact with no premature swallow or dose consumption",
+    "actual running-time wheel magnifies the unfinished cup sequence without changing effect timing",
+    "ordinary tilt sends the one real dose out of the cup",
+    "paused actual pouring is separate from swallowing and cannot refill the cup",
+    "real wheel restores original view scale during the same physical sequence",
+    "ordinary mouth sequence completes one actual swallow",
+    "real swallow alone pays original twenty SP, pauses1.5s and immediately releases head",
+    "same nurse withdraws hands and empty cup through original recovery",
+    "empty cup and completed physical event cannot repeat the oral effect"
+  ],
+  "rendered": true,
+  "scope": "One explicit nurse/host/full cup scene with actual paid CONTROL; ordinary process approach/head grip/other-hand cup/lip contact/pour/actual swallow/SP-only1.5s pause/release/recovery, actual Space and wheel. No attack/hit/hold/pour/effect/knowledge fields filled. Silent fixed30 placeholders, not full natural crowd/human/art/audio acceptance."
+}

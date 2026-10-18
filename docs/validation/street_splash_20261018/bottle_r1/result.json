@@ -1,0 +1,33 @@
+{
+  "failures": [
+    "manual pause freezes actual glass position and cannot replay contact",
+    "actual effective kick damages father and cancels unfinished glass before it lands",
+    "real parent visibility and independent attack handlers produce mutual injury without a dedicated scripted chain",
+    "original production fountain stops bottle/arm movement without deleting its geometry"
+  ],
+  "passes": [
+    "original .8-second turned-shoulder preparation cannot pay broken-glass contact early",
+    "first local sweep segment is not the whole forward body rectangle",
+    "actual broken-glass capsule uses original fifteen-HP shared hit and no SP loss",
+    "real JSON preserves attached glass and an already paid swing receipt",
+    "several glass pieces and remaining sweep segments cannot charge the same victim again",
+    "full original recovery keeps the one attached bottle with its father instead of creating loot",
+    "near-body rectangle overlap outside actual broken glass is not a bottle hit",
+    "original chest-height GUT still avoids actual bottle contact",
+    "arm withdrawal does not erase a chest-height glass swipe",
+    "actual capsule follows fixed original direction (-1.0, 0.0)",
+    "actual capsule follows fixed original direction (0.0, -1.0)",
+    "actual capsule follows fixed original direction (0.0, 1.0)",
+    "host moving around after preparation does not rotate an already-fixed bottle sweep to track them",
+    "actual cabinet stops the same glass sweep instead of continuing behind solid furniture",
+    "blocked glass retracts from its real stopped side without teleporting to the far endpoint",
+    "actually paid CONTROL permits the original legal player kick toward preparing father",
+    "actual body injury cancels a not-yet-contacted glass swing",
+    "dead carrier has no independent attacking glass or new pickup clone",
+    "actual same glass still uses original once-per-target neutral contact and shared damage",
+    "ordinary autonomous approach closes to actual bottle range instead of repeatedly missing at the generic extra margin",
+    "the same production fountain keeps its two actual bypass routes",
+    "legacy missing bottle pose retains existing shared injury without replaying it"
+  ],
+  "scope": "Explicit aligned/flank/four-direction/cabinet/neutral/parent poses with actual paid CONTROL and legal kick, real shared15HP/GUT/once-per-victim/recovery, real JSON/manual pause/old pose and actual production fountain. Trial attached glass/arm geometry, not final art or natural full-game/crowd acceptance."
+}

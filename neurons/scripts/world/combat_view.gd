@@ -29,6 +29,44 @@ func draw(target,owner,catalog) -> void:
   ordered.append({"kind":"prop","data":f,"depth":layout.project((f.rect as Rect2).end).y})
  ordered.append({"kind":"hero","depth":layout.project(app.hero_pos).y})
  if battle.chapter_id==6:
+  var director:Dictionary=battle.data.actors.director;var cage:Dictionary=battle.director.state()
+  if director.present and director.room==app.room_id:
+   for index in range(cage.frames.size()):ordered.append({"kind":"director_rail","index":index,"depth":layout.project((battle.vector(cage.frames[index][1])+battle.vector(cage.frames[index][2]))*.5).y})
+  for grasp_id in battle.grasp_motion.IDS:
+   var carrier:Dictionary=battle.data.actors[grasp_id]
+   if carrier.present and carrier.room==app.room_id:
+    var grasp:Dictionary=battle.grasp_motion.state(str(grasp_id))
+    ordered.append({"kind":"grasp_arm","id":grasp_id,"depth":layout.project(battle.vector(grasp.hand)).y})
+  var restraint:Dictionary=battle.restraint.state();var assistant:Dictionary=battle.data.actors.assistant_asylum
+  if assistant.present and assistant.room==app.room_id and not restraint.pose.is_empty():
+   for index in range(2):ordered.append({"kind":"restraint_arm","index":index,"depth":layout.project(battle.vector(restraint.pose.arms[index][2])).y})
+   ordered.append({"kind":"restraint_loop","depth":layout.project(battle.vector(restraint.pose.center)).y})
+  var strap:Dictionary=battle.belt.state();var warder:Dictionary=battle.data.actors.warder
+  if warder.present and warder.room==app.room_id:
+   for index in range(1,strap.profile.size()):ordered.append({"kind":"warder_belt","index":index,"depth":layout.project((battle.vector(strap.profile[index-1])+battle.vector(strap.profile[index]))*.5).y})
+  var mother:Dictionary=battle.data.actors.mother
+  if mother.present and mother.hp>0 and mother.room==app.room_id:
+   for index in range(battle.mother.state().arms.size()):
+    var arm:Array=battle.mother.state().arms[index]
+    ordered.append({"kind":"mother_arm","index":index,"depth":layout.project((battle.vector(arm[1])+battle.vector(arm[2]))*.5).y})
+  for id in battle.LocalSweeps.IDS:
+   var carrier:Dictionary=battle.data.actors[id];var limbs:Array=battle.local_sweeps.state(id).limbs
+   if carrier.present and carrier.hp>0 and carrier.room==app.room_id:
+    for index in range(limbs.size()):ordered.append({"kind":"local_sweep","id":id,"index":index,"depth":layout.project((battle.vector(limbs[index][1])+battle.vector(limbs[index][2]))*.5).y})
+  var bottle:Dictionary=battle.bottle.state();var father:Dictionary=battle.data.actors.father
+  if father.present and father.room==app.room_id and not bottle.profile.is_empty():ordered.append({"kind":"father_bottle","depth":layout.project((battle.vector(bottle.profile[0])+battle.vector(bottle.profile[1]))*.5).y})
+  for shot_index in range(battle.splash.state().shots.size()):
+   var shot:Dictionary=battle.splash.state().shots[shot_index]
+   if shot.room!=app.room_id:continue
+   for ray_index in range(shot.rays.size()):
+    var ray:Dictionary=shot.rays[ray_index]
+    if float(ray.ground_at)<0:ordered.append({"kind":"splash_ray","shot":shot_index,"ray":ray_index,"depth":layout.project(battle.vector(ray.pos)).y})
+  var embrace:Dictionary=battle.embrace.state()
+  var guard:Dictionary=battle.data.actors.isolation
+  if guard.present and guard.hp>0 and guard.room==app.room_id:
+   for index in range(embrace.arms.size()):
+    var arm:Array=embrace.arms[index]
+    ordered.append({"kind":"embrace_arm","index":index,"depth":layout.project((battle.vector(arm[1])+battle.vector(arm[2]))*.5).y})
   var bag:Dictionary=battle.laundry_bag.state()
   if bag.room==app.room_id and battle.data.actors.transporter_hospital.present:ordered.append({"kind":"laundry_bag","depth":layout.project(battle.vector(bag.center)).y})
   var bed:Dictionary=battle.data.get("lateral_bed",{})
@@ -65,6 +103,16 @@ func draw(target,owner,catalog) -> void:
     canvas.draw_line(center,goal,Color("d9b575"),5)
   elif entry.kind=="box":draw_box(battle.data.box)
   elif entry.kind=="laundry_bag":draw_laundry_bag()
+  elif entry.kind=="embrace_arm":draw_embrace_arm(int(entry.index))
+  elif entry.kind=="splash_ray":draw_splash_ray(int(entry.shot),int(entry.ray))
+  elif entry.kind=="father_bottle":draw_father_bottle()
+  elif entry.kind=="mother_arm":draw_mother_arm(int(entry.index))
+  elif entry.kind=="local_sweep":draw_local_sweep(str(entry.id),int(entry.index))
+  elif entry.kind=="warder_belt":draw_warder_belt(int(entry.index))
+  elif entry.kind=="restraint_arm":draw_restraint_arm(int(entry.index))
+  elif entry.kind=="restraint_loop":draw_restraint_loop()
+  elif entry.kind=="grasp_arm":draw_grasp_arm(str(entry.id))
+  elif entry.kind=="director_rail":draw_director_rail(int(entry.index))
   elif entry.kind=="hero":
    var at:Vector2=layout.project(app.hero_pos)
    var crouch:float=.56 if app.rules.reaction_skill=="GUT" and app.rules.reaction_left>.2 else 1.0
@@ -73,7 +121,7 @@ func draw(target,owner,catalog) -> void:
    canvas.draw_circle(at,17,Color(0,0,0,.25))
    canvas.draw_texture_rect_region(frame.texture,Rect2(at-frame.foot*scale_value,frame.size*scale_value),frame.source)
    draw_known_hand_marks(at,106,true)
-   if battle.chapter_id==6:draw_loss_reaction(at)
+   if battle.chapter_id==6:draw_loss_reaction(at);draw_restraint_wrist(at);draw_grasp_wrist(at)
    if app.hero_state=="tinnitus":
     canvas.draw_line(at+Vector2(12,-52),at+Vector2(22,-80),Color("a7b8b8"),5)
     canvas.draw_line(at+Vector2(22,-80),at+Vector2(9,-91),Color("c4bea8"),4)
@@ -102,6 +150,9 @@ func actor(id:String) -> void:
  if id=="assistant":draw_bed(battle.position(id),battle.vector(a.direction))
  var color:Color=Color("7dafa5") if s.relation=="friend" else Color("c08f82") if a.hostile else Color("a7a9c2")
  if battle.chapter_id==6 and id=="transporter_hospital":color=Color("89918c")
+ if battle.chapter_id==6 and id=="psychiatrist":color=Color("c2c5b7")
+ if battle.chapter_id==6 and id=="doctor":color=Color("c5c7bb")
+ if battle.chapter_id==6 and id=="guard_hospital":color=Color("4d5d6b")
  if battle.chapter_id==6 and id=="wheelchair":draw_chair(at)
  if int(a.hp)<=0:
   if battle.chapter_id==6 and id=="dog" and battle.data.speed_deaths.get("dog",{}).get("source","")=="father":
@@ -135,7 +186,13 @@ func actor(id:String) -> void:
  if id=="dog":canvas.draw_line(at+Vector2(-16,-36),at+Vector2(16,-36),Color("ae4e4b"),5)
  if id=="self":draw_known_hand_marks(at,h)
  if battle.chapter_id==6:draw_material_pose(id,at,h);draw_display_pose(id,at,h);draw_archivist_pose(id,at,h)
- if a.phase in ["windup","attack","recover","grip"] and not (battle.chapter_id==6 and id in ["transporter_hospital","dislocated"]):
+ if battle.chapter_id==6 and id=="mother":
+  canvas.poly([at+Vector2(-12,-85),at+Vector2(12,-85),at+Vector2(19,-32),at+Vector2(-19,-32)],Color("858875"))
+  if a.phase in ["windup","attack","grip"]:
+   for index in range(3):
+    var eye:Vector2=at+Vector2((index-1)*9,-56+abs(index-1)*5)
+    canvas.draw_circle(eye,4,Color("c1baa3"));canvas.draw_circle(eye,1.5,Color("4c4250"))
+ if a.phase in ["windup","attack","recover","grip"] and not (battle.chapter_id==6 and id in ["transporter_hospital","dislocated","isolation","ward_nurse","pharmacist","father","warder","assistant_asylum","psychiatrist","guard_hospital","director","mother","doctor","skinface"]):
   var direction:Vector2=battle.vector(a.direction)
   var attack:Dictionary=battle.config.attacks[str(s.attack)]
   var end:Vector2=app.layout.project(battle.position(id)+direction*float(attack.reach))
@@ -148,6 +205,13 @@ func actor(id:String) -> void:
  text(at-Vector2(0,h+12),str(s.get("display_name",s.name))+" · "+{"idle":"待机","windup":"起手","attack":"出手","recover":"收招","grip":"抓握","display":"展示","point":"指向目视危险" if id=="speaker" else "指路","bandage":"包扎","push":"推车","cloth":"展开黑布","mimic":"模仿","drug_hold":"扣头","box_prepare":"抬盒","bed_turn":"过门转向","bed_travel":"推床随行","bed_retreat":"退离门口","tear":"撕扯随身纸条","paper_hold":"攥住残片","box_flip":"翻起空盒","box_number":"查看编号","box_stow":"整理空盒","cart_park":"走向侧停清洁车","pick_label":"拾取地面标签","wipe":"擦拭接触区域","bag_label":"送入随车污物袋","bag_seal":"封口","walk":"走近痕迹","display_retreat":"受伤后退避","stamp":"盖章","number_show":"展示号码纸","paper_stow":"收回号码纸","number_front":"编号正面","number_turn":"转身","number_back":"另一面编号","chair_aside":"调椅让路","entry_point":"指向原入口","band_raise":"举起自身腕带","protect_photo":"护住照片","protect_body":"收臂护身","dressing_open":"掀开敷料","dressing_show":"露出注销标记","dressing_cover":"按回敷料","branch_point":"指向维护入口","clip_read":"查看转运夹","cloth_raise":"抬起黑布","cloth_close":"收拢黑布","mimic_write":"记录板书写","board_raise":"举板","board_knock":"敲板","paper_approach":"走近落地纸","paper_pick":"接触拾纸","paper_store":"收进内侧文件夹"}.get(str(a.phase),str(a.phase)),14)
 
 func draw_street_surfaces() -> void:
+ for shot in battle.splash.state().shots:
+  if shot.room!=app.room_id:continue
+  for ray in shot.rays:
+   if float(ray.ground_at)<0:continue
+   var left:float=1.0-clampf((float(shot.age)-float(ray.ground_at))/float(battle.config.test_parameters.splash_ground_s),0,1)
+   var at:Vector2=app.layout.project(battle.vector(ray.pos))
+   canvas.draw_set_transform(at,0,Vector2(1,.38));canvas.draw_circle(Vector2.ZERO,4,Color(.48,.61,.64,.55*left));canvas.draw_set_transform(Vector2.ZERO)
  for item in battle.data.get("materials",{}).get("surfaces",{}).values():
   if item.room!=app.room_id or not battle.materials.available(item):continue
   var at:Vector2=app.layout.project(battle.vector(item.pos));var alpha:float=1.0-float(item.progress)
@@ -248,6 +312,35 @@ func draw_display_pose(id:String,at:Vector2,h:float) -> void:
    if a.phase=="board_knock":canvas.draw_arc(hand,11,-.8,.8,12,Color("d8c7a1"),2)
  draw_report_look(id,at,h)
  if id=="dislocated":draw_clamp_pose(at,h)
+ if id=="ward_nurse":draw_medicine_pose(at,h)
+ if id=="pharmacist":draw_splash_cup(at,h)
+ if id=="isolation":
+  # The deformed observation frame follows the guard, never a separate door.
+  var frame:=Rect2(at-Vector2(16,h*.76),Vector2(32,27))
+  canvas.draw_rect(frame,Color("464c53"),false,4)
+  var phase:String=str(battle.embrace.state().phase)
+  text(at-Vector2(0,h+34),{"folded":"软垫双臂收回","arms_raise":"抬起双臂","arms_open":"双臂张开","closing":"合臂围抱","held":"双臂压制躯干","opening":"松手张臂收招"}.get(phase,phase)+"（占位）",11)
+ if id=="director":
+  var state:Dictionary=battle.director.state();var recorder:Vector2=at-Vector2(0,h*.62)
+  canvas.draw_rect(Rect2(recorder-Vector2(9,6),Vector2(18,12)),Color("414d52"));canvas.draw_circle(recorder+Vector2(5,0),2,Color("b59271") if int(battle.data.clock*3)%2==0 else Color("765c50"))
+  text(at-Vector2(0,h+34),{"folded":"椅架收好","rails_raise":"抬起相连椅架","rails_open":"两侧展开","rails_close":"实际合拢","torso_fixed":"椅架夹住躯干","rails_release":"张开释放"}.get(str(state.phase),str(state.phase))+"（占位）",11)
+ if id in battle.grasp_motion.IDS:
+  var grasp:Dictionary=battle.grasp_motion.state(id)
+  if id=="psychiatrist":
+   canvas.draw_rect(Rect2(at+Vector2(12,-h*.59),Vector2(15,11)),Color("b2aa8c"));canvas.draw_line(at+Vector2(15,-h*.56),at+Vector2(23,-h*.56),Color("817d70"),1)
+  else:
+   var key:Vector2=at+Vector2(18,-h*.4);canvas.draw_arc(key,4,0,TAU,12,Color("c1b28e"),2);canvas.draw_line(key+Vector2(0,4),key+Vector2(0,12),Color("c1b28e"),2)
+  text(at-Vector2(0,h+34),{"lowered":"固定扣收好" if id=="psychiatrist" else "前臂收回","clasp_raise":"举起固定扣","hand_raise":"抬手准备","reach":"伸手套腕","close":"实际扣合","turn_inward":"侧转朝门内","pull":"沿地面后拖","push_inward":"向门内推离","open_retract":"松扣收臂","legacy_fixed":"旧档原位固定"}.get(str(grasp.phase),str(grasp.phase))+"（占位）",11)
+ if id=="assistant_asylum":
+  canvas.draw_rect(Rect2(at+Vector2(17,-h*.5),Vector2(15,20)),Color("c2b99b"))
+  text(at-Vector2(0,h+34),{"folded":"收好束带","loop_open":"展开带圈","arm_extend":"伸手套腕","tighten":"实际收紧","fixed":"短暂固定","release_retract":"松开收带"}.get(str(battle.restraint.state().phase),"")+"（占位）",11)
+ if id=="warder":
+  var phase:String=str(battle.belt.state().phase)
+  for side in [-1,1]:
+   var elbow:Vector2=at+Vector2(side*18,-h*.43);var hand:Vector2=app.layout.project(battle.position(id)+battle.belt.direction()*.28)-Vector2(0,float(battle.config.test_parameters.belt_waist_px))
+   canvas.draw_line(at+Vector2(side*13,-h*.65),elbow,Color("a19b88"),6);canvas.draw_line(elbow,hand,Color("a19b88"),6)
+   canvas.draw_line(elbow-Vector2(4,3),elbow+Vector2(4,3),Color("d0bca1"),3)
+  text(at-Vector2(0,h+34),{"wrapped":"双臂缠带","side_draw":"侧身抽带","strap_uncoil":"拉开带端","waist_sweep":"腰腹横扫","strap_retract":"回收束带"}.get(phase,phase)+"（占位）",11)
  if id=="transporter_hospital":
   text(at-Vector2(0,h+34),"灰工服 · 手套 · 污衣袋带（占位）",11)
  if id not in battle.displays.IDS:return
@@ -304,6 +397,168 @@ func draw_display_pose(id:String,at:Vector2,h:float) -> void:
    canvas.draw_line(board-Vector2(12,0),board+Vector2(-12+24*t,0),ink,2)
    canvas.draw_line(at+Vector2(15,-h*.6),board+Vector2(-12+24*t,0),skin,5)
   elif s.get("last_written",false):text(board+Vector2(0,4),"自主行为",10)
+
+func draw_mother_arm(index:int) -> void:
+ var arm:Array=battle.mother.state().arms[index];var height:float=float(battle.config.test_parameters.mother_heights_px[index/2])
+ var shoulder:Vector2=app.layout.project(battle.vector(arm[0]))-Vector2(0,height+10)
+ var elbow:Vector2=app.layout.project(battle.vector(arm[1]))-Vector2(0,height)
+ var hand:Vector2=app.layout.project(battle.vector(arm[2]))-Vector2(0,height)
+ canvas.draw_line(shoulder,elbow,Color("939684") if index<2 else Color("777c71"),7)
+ canvas.draw_line(elbow,hand,Color("b6af98"),6);canvas.draw_circle(hand,4,Color("bfb59d"))
+
+func draw_local_sweep(id:String,index:int) -> void:
+ var s:Dictionary=battle.local_sweeps.state(id);var limb:Array=s.limbs[index];var height:float=float(s.height_px)
+ var shoulder:Vector2=app.layout.project(battle.vector(limb[0]))-Vector2(0,80)
+ var hand:Vector2=app.layout.project(battle.vector(limb[1]))-Vector2(0,height)
+ var tip:Vector2=app.layout.project(battle.vector(limb[2]))-Vector2(0,height)
+ canvas.draw_line(shoulder,hand,Color("b9bcaf") if id=="doctor" else Color("9b8c89"),7)
+ if id=="doctor":
+  canvas.draw_line(hand,tip,Color("d0d6ce"),4);canvas.draw_line(hand,hand+(tip-hand)*.15,Color("595956"),7)
+ else:canvas.draw_line(hand,tip,Color("bdb19d"),6)
+ canvas.draw_circle(hand,4,Color("bdb49e"))
+
+func draw_director_rail(index:int) -> void:
+ var a:Dictionary=battle.data.actors.director;var s:Dictionary=battle.director.state()
+ if index>=s.frames.size():return
+ var frame:Array=s.frames[index];var h:float=0 if a.hp<=0 else float(battle.config.test_parameters.director_rail_height_px);var points:=PackedVector2Array()
+ for p in frame:points.append(app.layout.project(battle.vector(p))-Vector2(0,h))
+ canvas.draw_polyline(points,Color("47535a"),8);canvas.draw_polyline(points,Color("a9b1aa"),4)
+ for j in [1,2]:
+  canvas.draw_circle(points[j],3,Color("d0c6ad"));canvas.draw_line(points[j],points[j]+Vector2(0,18),Color("7f8d8b"),4)
+ if a.hp>0:
+  var shoulder:Vector2=app.layout.project(battle.vector(frame[0]))-Vector2(0,82)
+  canvas.draw_line(shoulder,points[1],Color("b6b39e"),6)
+
+func draw_grasp_arm(id:String) -> void:
+ var a:Dictionary=battle.data.actors[id];var s:Dictionary=battle.grasp_motion.state(id)
+ var hand:Vector2=app.layout.project(battle.vector(s.hand))-Vector2(0,0 if a.hp<=0 else float(battle.config.test_parameters.grasp_hand_height_px))
+ if a.hp>0:
+  var root:Vector2=app.layout.project(battle.grasp_motion.shoulder(id))-Vector2(0,82);var elbow:Vector2=root.lerp(hand,.5)+Vector2(-4,6)
+  canvas.draw_line(root,elbow,Color("b7bdaf") if id=="psychiatrist" else Color("596878"),8);canvas.draw_line(elbow,hand,Color("b5b3a1"),6)
+  if s.phase=="turn_inward":canvas.draw_arc(app.layout.project(battle.position(id))-Vector2(0,75),14,-.8,.8,16,Color("c2b58d"),2)
+ draw_grasp_fingers(id,hand,float(s.open))
+
+func draw_grasp_fingers(id:String,hand:Vector2,opened:float) -> void:
+ if id=="psychiatrist":canvas.draw_arc(hand,5,-.3 if opened>.5 else 0,PI*1.2 if opened>.5 else TAU,16,Color("bfc3b3"),3)
+ else:
+  for i in range(3):canvas.draw_line(hand+Vector2(-3+i*3,-4),hand+Vector2(-4+i*3,lerpf(5,1,opened)),Color("b7b4a0"),2)
+
+func draw_grasp_wrist(at:Vector2) -> void:
+ var id:String=str(battle.data.holder)
+ if id not in battle.grasp_motion.IDS:return
+ var a:Dictionary=battle.data.actors[id];var s:Dictionary=battle.grasp_motion.state(id)
+ if not a.present or a.room!=app.room_id or a.hp<=0:return
+ var hand:Vector2=app.layout.project(battle.vector(s.hand))-Vector2(0,float(battle.config.test_parameters.grasp_hand_height_px))
+ var elbow:Vector2=(at-Vector2(0,77)).lerp(hand,.5)+Vector2(6,5)
+ canvas.draw_line(at-Vector2(0,77),elbow,Color("9eb6be"),6);canvas.draw_line(elbow,hand,Color("bcb9a1"),4);canvas.draw_circle(hand,3,Color("bcb9a1"));draw_grasp_fingers(id,hand,0)
+
+func draw_restraint_wrist(at:Vector2) -> void:
+ var a:Dictionary=battle.data.actors.assistant_asylum;var s:Dictionary=battle.restraint.state()
+ if not a.present or a.hp<=0 or a.room!=app.room_id or a.phase not in ["attack","grip"] or s.pose.is_empty():return
+ var center:Vector2=battle.vector(s.pose.center)
+ if center.distance_to(app.hero_pos)>.5:return
+ var facing:Vector2=app.hero_facing.normalized();var side:=Vector2(-facing.y,facing.x);var wrist:Vector2=app.hero_pos+side*float(battle.config.test_parameters.restraint_wrist_m)
+ var other:Vector2=app.hero_pos-side*float(battle.config.test_parameters.restraint_wrist_m)
+ if other.distance_to(center)<wrist.distance_to(center):wrist=other
+ var height:float=float(battle.config.test_parameters.restraint_arm_px);var hand:Vector2=app.layout.project(wrist)-Vector2(0,height)
+ var shoulder:Vector2=at-Vector2(0,77);var elbow:Vector2=shoulder.lerp(hand,.5)+Vector2(6,5)
+ canvas.draw_line(shoulder,elbow,Color("9eb6be"),6);canvas.draw_line(elbow,hand,Color("bcb9a1"),4);canvas.draw_circle(hand,3,Color("bcb9a1"))
+ draw_restraint_loop_half(1)
+
+func draw_restraint_arm(index:int) -> void:
+ var pose:Dictionary=battle.restraint.state().pose
+ if pose.is_empty():return
+ var points:=PackedVector2Array()
+ for p in pose.arms[index]:points.append(app.layout.project(battle.vector(p))-Vector2(0,float(battle.config.test_parameters.restraint_arm_px)))
+ canvas.draw_polyline(points,Color("a9a99c"),6)
+
+func draw_restraint_loop() -> void:
+ var a:Dictionary=battle.data.actors.assistant_asylum;var pose:Dictionary=battle.restraint.state().pose
+ if pose.is_empty():return
+ var hero_overlap:bool=a.room==app.room_id and battle.vector(pose.center).distance_to(app.hero_pos)<=.5 and a.phase in ["attack","grip"]
+ draw_restraint_loop_half(-1 if hero_overlap else 0)
+
+func draw_restraint_loop_half(part:int) -> void:
+ var pose:Dictionary=battle.restraint.state().pose
+ if pose.is_empty():return
+ var center:Vector2=app.layout.project(battle.vector(pose.center));var height:float=float(battle.config.test_parameters.restraint_arm_px)
+ for i in range(1,pose.loop.size()):
+  var start:Vector2=app.layout.project(battle.vector(pose.loop[i-1]));var end:Vector2=app.layout.project(battle.vector(pose.loop[i]))
+  var front:bool=(start.y+end.y)*.5>=center.y
+  if part==1 and not front or part==-1 and front:continue
+  canvas.draw_line(start-Vector2(0,height),end-Vector2(0,height),Color("5b4e4b"),6);canvas.draw_line(start-Vector2(0,height),end-Vector2(0,height),Color("c5ae88"),3)
+
+func draw_warder_belt(index:int) -> void:
+ var a:Dictionary=battle.data.actors.warder;var s:Dictionary=battle.belt.state()
+ if index>=s.profile.size():return
+ var height:float=0 if a.hp<=0 else float(battle.config.test_parameters.belt_waist_px)
+ var start:Vector2=app.layout.project(battle.vector(s.profile[index-1]))-Vector2(0,height);var end:Vector2=app.layout.project(battle.vector(s.profile[index]))-Vector2(0,height)
+ canvas.draw_line(start,end,Color("5b4e4b"),6);canvas.draw_line(start,end,Color("c5ae88"),3)
+ if index==s.profile.size()-1:canvas.draw_line(end-Vector2(2,3),end+Vector2(2,3),Color("e0cfaa"),2)
+
+func draw_father_bottle() -> void:
+ var a:Dictionary=battle.data.actors.father;var s:Dictionary=battle.bottle.state()
+ if s.profile.is_empty():return
+ var t:float=clampf(float(a.elapsed)/float(battle.config.attacks.sweep.windup),0,1) if a.phase=="windup" else 1.0 if a.phase=="attack" else 1.0-clampf(float(a.elapsed)/float(battle.config.attacks.sweep.recover),0,1) if a.phase=="recover" else 0.0
+ var height:float=0 if a.hp<=0 else lerpf(63,float(battle.config.test_parameters.bottle_raise_px),t)
+ var neck:Vector2=app.layout.project(battle.vector(s.profile[0]))-Vector2(0,height);var tip:Vector2=app.layout.project(battle.vector(s.profile[1]))-Vector2(0,height)
+ var forward:Vector2=(tip-neck).normalized();var side:=Vector2(-forward.y,forward.x)
+ if a.hp>0:
+  var at:Vector2=app.layout.project(battle.position("father"));var shoulder:Vector2=at+Vector2(-12,-84);var elbow:Vector2=shoulder.lerp(neck,.5)-Vector2(0,8 if a.phase=="windup" else 0)
+  canvas.draw_line(shoulder,elbow,Color("a19b88"),6);canvas.draw_line(elbow,neck,Color("a19b88"),6)
+ canvas.draw_line(neck,neck.lerp(tip,.4),Color("6f8980"),5)
+ canvas.poly([neck.lerp(tip,.35)-side*4,tip-side*7,tip-forward*4,tip+side*5,neck.lerp(tip,.35)+side*4],Color("84988b"))
+ canvas.draw_line(tip-side*7,tip-forward*4,Color("c0c8b2"),2);canvas.draw_line(tip-forward*4,tip+side*5,Color("c0c8b2"),2)
+ if a.hp>0:text(app.layout.project(battle.position("father"))-Vector2(0,167),{"lowered":"粘连碎瓶","shoulder_turn":"转肩固定方向","bottle_raise":"举起碎瓶","glass_sweep":"瓶口横扫","arm_retract":"收臂恢复"}.get(str(s.phase),str(s.phase))+"（占位）",11)
+
+func draw_splash_ray(shot_index:int,ray_index:int) -> void:
+ var shot:Dictionary=battle.splash.state().shots[shot_index];var ray:Dictionary=shot.rays[ray_index]
+ var t:float=clampf(float(shot.age)/float(battle.config.attacks.splash.active),0,1)
+ var height:float=lerpf(float(battle.config.test_parameters.splash_release_height_px),float(battle.config.test_parameters.splash_ground_height_px),t)
+ var at:Vector2=app.layout.project(battle.vector(ray.pos))-Vector2(0,height)
+ if not ray.path.is_empty():
+  var last:Vector2=app.layout.project(battle.vector(ray.path[0]))-Vector2(0,lerpf(float(battle.config.test_parameters.splash_release_height_px),float(battle.config.test_parameters.splash_ground_height_px),clampf(float(shot.get("previous_age",0))/float(battle.config.attacks.splash.active),0,1)))
+  canvas.draw_line(last,at,Color("8faeb2"),3)
+ canvas.draw_circle(at,2,Color("b3c4bd"))
+
+func draw_splash_cup(at:Vector2,h:float) -> void:
+ var a:Dictionary=battle.data.actors.pharmacist;var phase:String=str(battle.splash.state().phase)
+ var raised:float=clampf(float(a.elapsed)/float(battle.config.attacks.splash.windup)*2,0,1) if a.phase=="windup" else 1.0 if a.phase=="attack" else 1.0-clampf(float(a.elapsed)/float(battle.config.attacks.splash.recover),0,1) if a.phase=="recover" else 0.0
+ var cup:Vector2=app.layout.project(battle.splash.cup())-Vector2(0,lerpf(h*.48,float(battle.config.test_parameters.splash_release_height_px),raised))
+ canvas.draw_line(at+Vector2(12,-h*.5),cup,Color("b2b7a6"),6)
+ var tilt:float=.65 if phase in ["cup_tip","release"] else 0
+ canvas.poly([cup+Vector2(-7,-5).rotated(tilt),cup+Vector2(7,-5).rotated(tilt),cup+Vector2(4,7).rotated(tilt),cup+Vector2(-4,7).rotated(tilt)],Color("bab79e"))
+ if a.portions>0:canvas.draw_line(cup+Vector2(-4,3-float(a.portions)*2),cup+Vector2(4,3-float(a.portions)*2),Color("8faeb2"),3)
+ # A short mark stands for the still-unspecified cup number, not invented text.
+ canvas.draw_line(cup+Vector2(-2,3),cup+Vector2(2,3),Color("676773"),2)
+ if phase=="cup_tip":
+  var end:Vector2=app.layout.project(battle.position("pharmacist")+battle.splash.direction()*.75)-Vector2(0,float(battle.config.test_parameters.splash_release_height_px))
+  canvas.draw_line(cup,end,Color(.78,.74,.56,.65),2)
+ text(at-Vector2(0,h+34),{"ready":"掌中编号杯 · 字形待定","cup_raise":"抬杯预告","cup_tip":"倾杯预告方向","release":"局部泼出","cup_withdraw":"收回原杯","empty":"杯中已空","lowered":"原杯放下"}.get(phase,phase)+"（占位）",11)
+
+func draw_medicine_pose(at:Vector2,h:float) -> void:
+ var s:Dictionary=battle.medicine.state();var a:Dictionary=battle.data.actors.ward_nurse
+ var head:Vector2=app.layout.project(battle.vector(s.head))-Vector2(0,float(battle.config.test_parameters.medicine_head_anchor_px))
+ var mouth:Vector2=app.layout.project(battle.vector(s.goal))-Vector2(0,float(battle.config.test_parameters.medicine_mouth_anchor_px))
+ var cup:Vector2=app.layout.project(battle.vector(s.cup))-Vector2(0,float(battle.config.test_parameters.medicine_mouth_anchor_px) if a.phase=="drug_hold" else float(battle.config.test_parameters.medicine_cup_rest_px))
+ if a.phase in ["windup","attack","drug_hold","recover"]:
+  canvas.draw_line(at+Vector2(-12,-h*.6),head,Color("abb1a1"),6)
+  canvas.draw_circle(head,5,Color("c4bea8"))
+ canvas.draw_line(at+Vector2(12,-h*.53),cup,Color("b2b7a6"),6)
+ var tilt:float=.65 if s.phase=="pouring" else .35 if s.phase=="cup_tilt" else 0
+ var lip:Vector2=cup+Vector2(8,-5).rotated(tilt);var base:Vector2=cup+Vector2(4,7).rotated(tilt)
+ canvas.poly([cup+Vector2(-8,-5).rotated(tilt),lip,base,cup+Vector2(-4,7).rotated(tilt)],Color("c0ba9f"))
+ if a.portions>0 or s.dose=="pouring":canvas.draw_line(cup-Vector2(5,2),cup+Vector2(5,2),Color("8b9fa4"),3)
+ if s.dose=="pouring" and a.phase=="drug_hold":canvas.draw_line(lip,mouth,Color("8b9fa4"),2)
+ text(at-Vector2(0,h+34),{"ready":"掌中药杯","reach_head":"伸手扣头","head_fixed":"已扣头 · 尚未给药","cup_approach":"移杯靠近嘴部","cup_tilt":"杯口接触 · 倾杯","pouring":"药液送入口中","withdraw_cup":"松手撤杯","lowered":"药杯放下"}.get(str(s.phase),str(s.phase))+"（占位）",11)
+
+func draw_embrace_arm(index:int) -> void:
+ var s:Dictionary=battle.embrace.state();var points:=PackedVector2Array()
+ for p in s.arms[index]:points.append(app.layout.project(battle.vector(p))-Vector2(0,64))
+ if points.size()!=3:return
+ canvas.draw_polyline(points,Color("51575a"),13)
+ canvas.draw_polyline(points,Color("abb2a7"),9)
+ canvas.draw_circle(points[1],7,Color("969e96"));canvas.draw_circle(points[2],5,Color("c5bea7"))
 
 func draw_clamp_pose(at:Vector2,h:float) -> void:
  var s:Dictionary=battle.clamp.state();var shoulder:Vector2=app.layout.project(battle.clamp.shoulder())-Vector2(0,72)

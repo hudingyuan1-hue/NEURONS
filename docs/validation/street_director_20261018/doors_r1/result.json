@@ -1,0 +1,19 @@
+{
+  "failures": [],
+  "passes": [
+    "newly occupied west destination stops already-pending actual crossing without losing intent",
+    "both actual destination mouths are simultaneously occupied by four unique bodies",
+    "same simultaneous setup also blocks east pending crossing without teleport or invented damage",
+    "real JSON preserves all four original bodies and pending blocked destination",
+    "manual pause after restore freezes pending crossing rather than running its retry timer",
+    "one original west blocker really navigates inward at existing speed rather than teleporting or disappearing",
+    "existing1.4m doorway selects an actual side lane after one blocker moves",
+    "same pending west intent resumes ordinary world walking and actually crosses free lane without another click",
+    "actual west landing preserves full body clearance without overlap or new damage",
+    "freeing west does not silently clear the still-blocked opposite destination",
+    "one east blocker really moves within existing destination geometry and speed",
+    "east pending crossing similarly resumes through remaining physical lane",
+    "second actual landing keeps all45 unique identities and no overlap, extra exit or forced injury"
+  ],
+  "scope": "Four explicit stationary destination bodies appear after declared source threshold/intent in original two-door narrow room; actual world retry, disk/manual pause and real blocker _move_actor then source walk/cross/target landing. Source threshold/intent and later switch to opposite door are explicit fixtures, not autonomous choice of both exits or natural mixed crowd/large wheelchair coverage. Existing1.4m apertures/topology/45 identities preserved."
+}

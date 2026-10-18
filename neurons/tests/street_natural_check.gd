@@ -13,12 +13,16 @@ func _ready() -> void:
  for argument in OS.get_cmdline_user_args():
   if argument.begins_with("--natural-limit="):deadline=float(argument.trim_prefix("--natural-limit="))
  var elapsed:float=0;var still:float=0;var last:Vector2=app.hero_pos;var previous:String=app.room_id;var visits:Array=[];var next_log:float=0
- while elapsed<deadline and app.street.data.get("ending",{}).is_empty():
+ var complete_ending:bool="--natural-complete-ending" in OS.get_cmdline_user_args();var ending_phases:Array=[]
+ while elapsed<deadline and (app.street.data.get("ending",{}).is_empty() or (complete_ending and (not app.street.data.ending.get("complete",false) or not app.ending_panel.visible))):
   await get_tree().process_frame
   var delta:float=get_process_delta_time();elapsed+=delta
+  if not app.street.data.get("ending",{}).is_empty():
+   var phase:String=str(app.street.data.ending.phase)
+   if not phase in ending_phases:ending_phases.append(phase);print("STREET_NATURAL_ENDING ",phase)
   if not app.room_id in visits:
    visits.append(app.room_id);print("STREET_VISIT ",app.room_id," hp ",app.rules.hp);await capture("visit_%02d_%s"%[visits.size(),app.room_id])
-  if app.room_id==previous and app.hero_pos.distance_to(last)<.0001 and not app.rules.body_busy() and not app.rules.gripped and not app.world_paused() and app.rules.hp>0:still+=delta
+  if app.street.data.get("ending",{}).is_empty() and app.room_id==previous and app.hero_pos.distance_to(last)<.0001 and not app.rules.body_busy() and not app.rules.gripped and not app.world_paused() and app.rules.hp>0:still+=delta
   else:still=0
   if app.rules.hp<=0:
    var death_file:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("latest_death.json"),FileAccess.WRITE);death_file.store_string(JSON.stringify(app.snapshot_data(),"  "));death_file.close()
@@ -30,8 +34,11 @@ func _ready() -> void:
  check(still<=15,"no fifteen-second unexplained movement stall")
  check(app.session.data.unlocked.has(6) and app.street.data.actors.size()==45,"selected Street entry retains fixed forty-five identities" if "--street-entry-only" in OS.get_cmdline_user_args() else "real L5 doorway unlocks fixed forty-five Street identities")
  check(app.rules.search_attempts==0,"battle route never returns to key-search gameplay")
+ if complete_ending:
+  check(app.street.data.get("ending",{}).get("complete",false) and app.ending_panel.visible,"automatic original dialogue and unskipped epilogue reach actual result panel")
+  check("registration" in ending_phases and "dialogue" in ending_phases and "wake" in ending_phases and (app.street.data.ending.id!="E2" or "planet" in ending_phases),"actual natural ending visits original dialogue/wake and E2 planet phases without writing completion")
  var file:=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("result.json"),FileAccess.WRITE)
- file.store_string(JSON.stringify({"passes":passes,"failures":failures,"elapsed_game_seconds":elapsed,"visits":visits,"hp":app.rules.hp,"attempts":app.session.data.attempts,"ending":app.street.data.get("ending",{}),"rendered":DisplayServer.get_name()!="headless","scope":"Declared direct L5 entry (or explicit --street-entry-only); after entry no seed/NPC/resource/position/route/damage fixtures. Fixed30 automatic real window, not human pacing or all branches."},"  "));file.close()
+ file.store_string(JSON.stringify({"passes":passes,"failures":failures,"elapsed_game_seconds":elapsed,"visits":visits,"hp":app.rules.hp,"attempts":app.session.data.attempts,"ending":app.street.data.get("ending",{}),"ending_phases":ending_phases,"complete_ending_requested":complete_ending,"rendered":DisplayServer.get_name()!="headless","scope":"Declared direct L5 entry (or explicit --street-entry-only); after entry no seed/NPC/resource/position/route/damage fixtures. Optional complete-ending flag waits original auto dialogue/unskipped tail; no completion fields injected. Fixed30 automatic real window, not human pacing or all branches."},"  "));file.close()
  if not failures.is_empty():
   file=FileAccess.open(ProjectSettings.globalize_path(folder).path_join("failure_snapshot.json"),FileAccess.WRITE);file.store_string(JSON.stringify(app.snapshot_data(),"  "));file.close()
  await capture("final")
