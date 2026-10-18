@@ -1,0 +1,265 @@
+{
+  "baseline": "c10ea19535e273cf66c759a8cda909d081cc0ed9",
+  "source": {
+    "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+    "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59"
+  },
+  "actual_original_docx_selected_paragraphs": [
+    {
+      "id": "S3:P1670",
+      "text": "本节登记：角落病友、轮椅患者、被转运患者、术后病友纳入原“前三关善良人物遇害”事件名单。小护士保留当前友好，但不凭本次治疗自动纳入该资格。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1671",
+      "text": "成立条件：有资格者实际死亡，致命伤来自具有攻击性的异化人物或诡异人格。受伤、躲避、离场、角色自行杀死对方，均不替代这个条件。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1672",
+      "text": "去重：同一实际死亡只结算一次；尸体再次受击、往返场景或重播对白不重复触发。不同人物分别记录。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1673",
+      "text": "反馈：确认死亡后登记疯癫反馈；正式对白在安全间隙播放。未亲眼见到过程时，不播放指认凶手或复述杀害过程的台词。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1674",
+      "text": "新增角色对白：[疯癫]“还没完……还没完……”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1675",
+      "text": "效果边界：疯癫不自动回血、恢复精神、解除抓握或取得第四面墙认知；主角同时受到致命伤仍按死亡处理。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1676",
+      "text": "符合资格的实际死亡进入本章6.8强化结算；属性、叠加与继承见该节。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1680",
+      "text": "攻击按“可辨起手→实际接触→效果→恢复”结算；同次攻击不因多个肢体、连续接触或跨段重复扣值。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1681",
+      "text": "抓握成立后，由当前人物完成本次动作；其他抓握者不得叠加控制或预约无间隙续抓。施控者死亡、动作被实际打断或到达释放点，立即解除对应抓握。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1682",
+      "text": "缩手只避开尚未成立的手臂抓取；不解除扣头、抱住躯干或已经收紧的束带。普通位移和开心也不解除物理束缚。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1711",
+      "text": "16．肢体错位者 敌对 第四关一层身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1712",
+      "text": "动作：一侧肩肘抬起→前臂夹具张开→沿可见方向伸抓→扣合→张开、收臂；完成恢复后再换另一侧。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1713",
+      "text": "命中：夹具实际扣住角色腕臂才扣生命一次，并形成短暂夹持。伸出的手臂擦过身体不等于夹具已经扣合。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1714",
+      "text": "连续攻击：左右臂各自具备完整前摇与恢复，不能在一只手尚未释放时用另一只续接控制。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1715",
+      "text": "阻挡：夹具遇墙、柜体即被阻挡，不穿过物件抓人；肢体错位不等于攻击距离无限伸长。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1716",
+      "text": "继承：不要求接触第四关测试台；旧伤仅继承实际受伤结果，不重播第四关一次性夹手事件。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1790",
+      "text": "护卫动作：察觉角色附近的真实威胁→靠近→站到角色与追兵之间→随实际位置调整。保留红项圈与异化残躯，不恢复同步搜寻能力。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1791",
+      "text": "阻挡判定：必须身体实际挡在攻击路径上，才可能承受该次攻击；护卫不提供远程减伤，也不保证同范围内的角色免伤。移动时让出角色退路。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1792",
+      "text": "受伤与碎裂：普通攻击按实际伤害处理；父亲的有效攻击实际命中大黄，才触发异化体碎裂。父亲出现、隔墙挥瓶或攻击落空均不触发。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1793",
+      "text": "继承：本关退场独立记账，不撤销第一关死亡历史，不补播第一关杀狗演出或重复结算其觉醒。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1794",
+      "text": "原对白保留：“𩇬䵉䶴䂙䨻䵊䴓㱎㔿𩉻！”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1932",
+      "text": "遇害事件名单：大黄、角落病友、轮椅患者、被转运患者、术后病友、发言病友、劳动病友，共7个已登记身份。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1933",
+      "text": "成立条件：实际被攻击性异化人物或诡异人格致死；受伤、离场、角色自行击杀不替代该条件。同次死亡只记一次，不同人物分别记账。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1934",
+      "text": "历史与对白：是否目击单独记录；未目击不能播放复述杀害过程的台词。正式对白延后不撤销已经成立的事件，通关也不等待待播对白。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1935",
+      "text": "资格边界：小护士不因当前友好自动入列；空面人格不属于原“前三关善良人物”范围。父母互攻不重复第一关崩塌与觉醒。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1936",
+      "text": "6.8 善良人物遇害与角色强化",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1937",
+      "text": "资格限定为本章已登记的七人；当前友好不自动等于满足资格。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1938",
+      "text": "强化只提升角色移动速度，不增加玩家技能强度、针对抗性或全局抗性，不解锁攻击，不回血、不回精神、不解除抓握。每名合资格人物被攻击性异化人物或诡异人格实际致死，本次Street尝试获得一层；同一身份本次尝试只结算一次，最多三层。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1939",
+      "text": "白盒起始值：每层增加5%基础移速，最多15%；第四阶段可统一调整该幅度与上限。与冷热感加速、冷区减速共同按乘数计算，不改攻击前摇、攻击冷却、掌控时间或碰撞。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1940",
+      "text": "强化于致死结果成立且角色仍存活时生效；角色同时死亡则只记录历史，不把增益带入下一次尝试。未知凶手不影响实际致死来源记录，但角色未见过程时不得说出指认凶手的对白。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1941",
+      "text": "层数跨Street分段保留，死亡、正式结局或离开本次Street尝试时清零；同一角色重生后的新一轮遇害可以重新获得本轮增益，存档历史不重复发成就或正式觉醒。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1942",
+      "text": "达到上限后的其他合资格死亡仍记录各自结果，按语境播放反馈；不继续增速，不返还资源。追击中的疯癫对白延后，增益不等待对白结束。玩家亲手击杀、普通离场、未死亡和无合资格凶手的环境死亡均不产生本效果。",
+      "found_in_original_docx": true
+    }
+  ],
+  "protected_street_config": {
+    "sources": true,
+    "status": true,
+    "actors": true,
+    "attacks": true,
+    "observations": true,
+    "dialogue": true,
+    "rooms": true,
+    "exit_room": true,
+    "exit_id": true,
+    "good_ids": true,
+    "materials": true,
+    "displays": true
+  },
+  "protected_files": [
+    {
+      "path": "neurons/data/skills.json",
+      "sha256": "2d69fc3abb4b7be7516db6a4cb17c8988ed6bee23925eea442c0a95cbdf24f68",
+      "HEAD_sha256": "1892910a62c7b06f9cfef92f57dba12caa14d27409241bc1cc59b14d480b62d8",
+      "same_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/key_discovery.json",
+      "sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "HEAD_sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "same_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/audio_bindings.json",
+      "sha256": "86e08c2281270209c188af4e4b8be072420abc2146da7c36da2c2a1e5514635e",
+      "HEAD_sha256": "c1bfd2df88a87c2eda8b56ec07df425e647afc9703831103f4baca047176fe3b",
+      "same_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/combat_chapter.json",
+      "sha256": "e1c90c646af4b0e505f00efc4639b4187cc625382159233e29b1e7c90b069185",
+      "HEAD_sha256": "9e81daaa5125385a4959eaa968d4f33f13fdfdbcf1cccc1a4f026aeab69a8301",
+      "same_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/cortex_events.json",
+      "sha256": "0c9b273471d2fc2402a3b862d846b751fcf6f72d67bf3dcaaaa45ad1d2308273",
+      "HEAD_sha256": "0c9b273471d2fc2402a3b862d846b751fcf6f72d67bf3dcaaaa45ad1d2308273",
+      "same_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/hospital.json",
+      "sha256": "b6ac2dc74d137576919ac4701802726cdba305dc830c806fff7bc9696567fea3",
+      "HEAD_sha256": "cfae23f47e1a9f29a2be99c75959643d430d52043987ef87e589b1614564c897",
+      "same_ignoring_Git_CRLF_checkout": true
+    }
+  ],
+  "protected_previous_core_files": [
+    {
+      "path": "neurons/scripts/core/combat_chapter.gd",
+      "sha256": "b7de6635e757e3a3ac4bdbc00d850c83fc68c332597c00f340d679d26e4c78d9",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd",
+      "sha256": "4c8ba30b45d733333b288c123e77ec48596720d910894b7a5833f0a1fb73bed7",
+      "unchanged_from_previous_delivery": true
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "sha256": "2da88ee60a0ef17ad07a41fb871a96f82c87debd12494f4ce25d82a67f31520e",
+      "unchanged_from_previous_delivery": true
+    }
+  ],
+  "new_test_parameters": {
+    "loss_feedback_s": 1.0,
+    "clamp_radius_m": 0.17,
+    "clamp_shoulder_m": 0.16,
+    "clamp_close_ratio": 0.6,
+    "clamp_start_m": 1.1,
+    "clamp_wrist_offset_m": 0.18,
+    "clamp_forearm_length_m": 0.24,
+    "clamp_forearm_radius_m": 0.07,
+    "clamp_contact_ratio": 0.9,
+    "clamp_capture_radius_m": 0.1
+  },
+  "implemented": {
+    "street_losses.gd": "actual qualified death, separately witnessed knowledge, unchanged max3 x5% speed, per-death acknowledgement and original general safe-gap line; no health/spirit/resources/grip/awakening changes; simultaneous pending losses share one modal line with individually recorded receipts",
+    "street_clamp.gd": "single selected arm raises/opens/extends/near-closes on explicit forearm profile; shared original ten-HP/grip/deadline/recovery/cooldown; obstruction, no stacked holder, injury/death/locality release; side swaps only after full recovery",
+    "combat_view.gd": "bounded tension pose and father-contact-only existing dog fragments/red collar; selected arm/jaws tied to actual tip and world forearm anchors; no guessed future wounds or final-art approval"
+  },
+  "limits": [
+    "Wrist/forearm/approach and contact ratios are explicitly test geometry/timing profile, not approved final character anatomy.",
+    "New actual Street hand injury does not replay L4 table, source damage or pair an invented old scar.",
+    "Legacy deaths with no pending-reaction field do not retroactively replay unknown past speech.",
+    "Live safe gap explicitly removes already-real attacker between segments and waits real CONTROL expiry; not a natural escape demonstration.",
+    "All crowd/doorway/multi-displacement/death/restart combinations and full B7 human/art/audio acceptance remain unfinished."
+  ],
+  "external_sources": 0,
+  "imagegen_calls": 0,
+  "paid_services": 0
+}

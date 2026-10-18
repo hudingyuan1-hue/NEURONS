@@ -46,7 +46,11 @@ func click(target:Button) -> void:
 
 func capture(name:String) -> void:
  if DisplayServer.get_name()=="headless":return
- await frames(2);await RenderingServer.frame_post_draw
+ # Same actual redraw used by family_check: an occluded Windows window may
+ # suspend frame_post_draw indefinitely while the simulation keeps running.
+ await frames(2)
+ if app!=null and app.get("view")!=null:app.view.queue_redraw()
+ RenderingServer.force_draw(false)
  get_viewport().get_texture().get_image().save_png(ProjectSettings.globalize_path(folder).path_join(name+".png"))
 
 func gameplay() -> Dictionary:

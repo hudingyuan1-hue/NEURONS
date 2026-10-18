@@ -10,9 +10,19 @@ const Materials=preload("res://scripts/core/street_materials.gd")
 var materials
 const Displays=preload("res://scripts/core/street_displays.gd")
 var displays
+const Archivist=preload("res://scripts/core/street_archivist.gd")
+var archivist
+const Reports=preload("res://scripts/core/street_reports.gd")
+var report_signals
+const LaundryBag=preload("res://scripts/core/street_laundry_bag.gd")
+var laundry_bag
+const Losses=preload("res://scripts/core/street_losses.gd")
+var losses
+const Clamp=preload("res://scripts/core/street_clamp.gd")
+var clamp
 
 func _init(owner) -> void:
- super(owner);map=StreetMap;chapter_id=6;box=Box.new(self);lateral_bed=LateralBed.new(self);materials=Materials.new(self);displays=Displays.new(self)
+ super(owner);map=StreetMap;chapter_id=6;box=Box.new(self);lateral_bed=LateralBed.new(self);materials=Materials.new(self);displays=Displays.new(self);archivist=Archivist.new(self);report_signals=Reports.new(self);laundry_bag=LaundryBag.new(self);losses=Losses.new(self);clamp=Clamp.new(self)
  config=JSON.parse_string(FileAccess.get_file_as_string("res://data/street_chapter.json"))
 
 func floor_for(room:String):
@@ -50,6 +60,11 @@ func start() -> void:
  lateral_bed.normalize()
  materials.normalize()
  displays.normalize()
+ archivist.state()
+ report_signals.normalize()
+ laundry_bag.sync()
+ losses.state()
+ clamp.sync()
 
 func on_enter(from:String,room:String) -> void:
  data.route_left=0.0;data.door_left=-1.0;data.destination="";data.controlled_door="";app.controlled_route=false
@@ -69,13 +84,19 @@ func _spawn() -> void:pass
 func tick(delta:float) -> void:
  if not data.ending.is_empty():return
  super.tick(delta)
- if int(app.session.data.level)==chapter_id:materials.tick();displays.tick()
+ if int(app.session.data.level)==chapter_id:materials.tick();displays.tick(delta);archivist.tick();report_signals.tick(delta);losses.tick(delta)
 
 func _actor(id:String,delta:float) -> void:
  var a:Dictionary=data.actors[id]
  if id=="labor":box.tick(delta);return
  if id=="transporter_asylum":lateral_bed.actor(delta);return
+ if id=="transporter_hospital":
+  laundry_bag.sync()
+  super._actor(id,delta);laundry_bag.sync();return
+ if id=="dislocated":
+  clamp.before_actor();super._actor(id,delta);clamp.sync();return
  if not a.present:return
+ if id=="archivist_asylum" and archivist.actor(delta):return
  if displays.actor(id,delta):return
  if materials.actor(id,delta):return
  if id=="stitched" and materials.prepare_stitched(delta):return
@@ -101,8 +122,19 @@ func _actor(id:String,delta:float) -> void:
   return
  super._actor(id,delta)
 
+func attack_start_distance(id:String,attack:Dictionary) -> float:
+ # Stop inside actual bag reach, rather than repeatedly swinging from the
+ # generic rectangle's extra approach margin with no possible body contact.
+ if id=="transporter_hospital":return float(attack.reach)
+ if id=="dislocated":return float(config.test_parameters.clamp_start_m)
+ return super.attack_start_distance(id,attack)
+
 func _advance_attack(id:String,delta:float) -> void:
  var a:Dictionary=data.actors[id];var previous:String=str(a.phase)
+ if id=="transporter_hospital":
+  laundry_bag.prepare_step(delta);super._advance_attack(id,delta);laundry_bag.finish_step(previous);return
+ if id=="dislocated":
+  clamp.prepare(delta);super._advance_attack(id,delta);clamp.finish(previous);return
  if id=="ward_nurse" and previous=="attack":
   a.elapsed+=delta
   if a.room==app.room_id and _contains(id,app.hero_pos) and not a.hits.has("hero") and data.holder=="" and a.portions>0:
@@ -145,49 +177,8 @@ func _yield(id:String,delta:float) -> void:
   var goal:Vector2=position(id)+offset*.7
   if app.layout.walkable(goal):_move_actor(id,goal,delta);return
 
-func _report_receivers(id:String) -> Array:
- var a:Dictionary=data.actors[id];var found:Array=[]
- for other in data.actors:
-  var receiver:Dictionary=data.actors[other]
-  if other==id or not receiver.present or not receiver.hostile or receiver.hp<=0 or receiver.room!=a.room or str(other) in ["father","mother","cat","self","reverse","skinface","twitch"]:continue
-  if position(str(other)).distance_to(position(id))<=6 and can_see(str(a.room),position(str(other)),position(id)):found.append(str(other))
- return found
-
-func _report(id:String,delta:float) -> void:
- var a:Dictionary=data.actors[id]
- a.report_left=maxf(0,float(a.report_left)-delta)
- if a.hurt>0:
-  a.hurt=maxf(0,float(a.hurt)-delta);a.report_elapsed=0;a.report_target=[];a.report_witness=false;a.phase="idle";return
- if a.room!=app.room_id:
-  a.report_witness=false;return
- var receivers:Array=_report_receivers(id)
- if a.report_target.is_empty():
-  if a.report_left>0 or receivers.is_empty() or not can_see(app.room_id,position(id),app.hero_pos) or position(id).distance_to(app.hero_pos)>6:return
-  a.report_target=xy(app.hero_pos);a.report_elapsed=0;a.phase="point"
-  a.report_receiver=str(receivers[0]);a.report_candidates=receivers.duplicate() if id=="head_nurse" else [a.report_receiver];a.report_witness=materials.seen(str(a.room),position(id),6)
-  if id=="head_nurse":app.audio.cue("SFX_DRAWER","board:%d:%d"%[app.rules.actual_attempt,int(data.clock)])
- var receiving:Array=[]
- for other in a.get("report_candidates",[a.get("report_receiver","")]):
-  if str(other) in receivers:receiving.append(str(other))
- if receiving.is_empty():
-  a.report_target=[];a.report_elapsed=0;a.report_witness=false;a.phase="idle";return
- a.report_receiver=str(receiving[0])
- a.direction=xy((vector(a.report_target)-position(id)).normalized()) if id=="head_nurse" else xy((position(str(a.report_receiver))-position(id)).normalized())
- a.report_witness=a.get("report_witness",false) and materials.seen(str(a.room),position(id),6)
- a.report_elapsed+=delta
- if a.report_elapsed<1:return
- # A real receiving actor investigates the reported OLD position. Never overwrite
- # a launched attack, acquire the hero's later position, or inform absent actors.
- for other in receiving:
-  var recipient:Dictionary=data.actors[str(other)]
-  recipient.investigation={"room":a.room,"at":a.report_target.duplicate(),"receipt":"report:"+id}
- a.report_serial=int(a.get("report_serial",0))+1
- var receipt:String="street_report:%d:%s:%d"%[app.rules.actual_attempt,id,a.report_serial]
- var witnessed:bool=a.report_witness and materials.seen(str(a.room),position(str(a.report_receiver)),6)
- data.reports[id]={"receipt":receipt,"at":a.report_target.duplicate(),"receiver":a.report_receiver,"receivers":receiving.duplicate(),"witnessed":witnessed}
- app.rules._record("street_report_received",receipt,{"actor":id,"receiver":a.report_receiver,"room":a.room,"at":a.report_target.duplicate(),"witnessed":witnessed,"source":"S3:P1619–1625/P1906–1913"})
- if id=="informant" and witnessed:app.rules.observe("角色","street_informant_point","实际看见通报者向眼前的敌对医护完成指示；未因此获得对方随后调查的全图位置。","亲历事实","S3:P1906–1913")
- a.report_target=[];a.report_elapsed=0;a.report_left=8;a.report_witness=false;a.phase="idle"
+func _report_receivers(id:String) -> Array:return report_signals.receivers(id)
+func _report(id:String,delta:float) -> void:report_signals.actor(id,delta)
 
 func can_see(room:String,from:Vector2,to:Vector2) -> bool:
  if not super.can_see(room,from,to):return false
@@ -251,6 +242,8 @@ func _hero(delta:float) -> void:
  for patch in patches:lateral_bed.pop_blocker(space,patch)
 
 func _contains(id:String,target:Vector2) -> bool:
+ if id=="dislocated":return clamp.contains(target)
+ if id=="transporter_hospital":return laundry_bag.contains(target)
  if id=="transporter_asylum":return lateral_bed.touches(str(data.actors[id].room),target,.21)
  return super._contains(id,target)
 
@@ -258,15 +251,8 @@ func damage_actor(source:String,target:String,hp:int,receipt:String) -> void:
  var alive:bool=data.actors[target].hp>0
  super.damage_actor(source,target,hp,receipt)
  if alive and hp>0:materials.add_trace(str(data.actors[target].room),position(target),receipt)
- if not alive or data.actors[target].hp>0 or target not in config.good_ids or data.speed_deaths.has(target):return
- var witnessed:bool=data.actors[target].room==app.room_id and position(target).distance_to(app.hero_pos)<=float(config.test_parameters.hero_vision_m) and can_see(app.room_id,app.hero_pos,position(target)) and can_see(app.room_id,app.hero_pos,position(source))
- var old_stacks:int=int(data.speed_stacks)
- data.speed_deaths[target]={"source":source,"receipt":receipt,"witnessed":witnessed}
- if app.rules.hp>0 and not str(spec(source).attack).is_empty():data.speed_stacks=mini(3,int(data.speed_stacks)+1)
- app.rules._record("street_good_death",receipt+":growth",{"target":target,"source":source,"stacks":data.speed_stacks,"qualified":app.rules.hp>0,"witnessed":witnessed})
- if int(data.speed_stacks)>old_stacks:
-  app.status_note="身体的步伐明显加快；已成立的移动变化不会解除抓握或恢复伤情。"
-  app.rules.observe("角色","street_speed:%d:%d"%[app.rules.actual_attempt,data.speed_stacks],"实际感觉步伐加快；未因此自动确定未目击的死者或凶手。","亲历事实","S3:P1934–1942")
+ if target=="dislocated":clamp.before_actor()
+ losses.record(source,target,alive,receipt)
 
 func _damage_hero(receipt:String,hp:int,sp:int,source:String) -> bool:
  var paid:bool=super._damage_hero(receipt,hp,sp,source)
@@ -293,6 +279,7 @@ func exit_crossed() -> void:
  var receipt:String="ending:%s:%s"%[id,str(app.session.data.get("key_seed_root",app.invader_id))]
  app.rules.settled[receipt]=id
  data.boundary=true;data.speed_stacks=0
+ losses.close_attempt()
  data.ending={"id":id,"phase":"registration","elapsed":0.0,"complete":false,"dialogue_sent":false,"receipt":receipt}
  data.pending_ending_achievements=["player_wins" if id=="E3" else "character_wins"]
  var controlled:bool=false

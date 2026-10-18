@@ -9,6 +9,7 @@ var app:
 func _init(owner) -> void:owner_ref=weakref(owner)
 func normalize() -> void:
  if not battle.data.has("displays"):battle.data.displays={"actors":{},"spoken":{}}
+ if not battle.data.displays.has("linen"):battle.data.displays.linen={"read":0.0,"seen":false,"matched":false}
  for id in IDS:
   if not battle.data.displays.actors.has(id):
    battle.data.displays.actors[id]={"elapsed":0.0,"read":{},"near":false,"phase":"idle","front":false,"back":false,"turned":false,"protected_seen":false,"read_seen":false,"sample":{},"serial":0,"action":{},"cooldown":0.0}
@@ -198,9 +199,25 @@ func _mimic(delta:float) -> void:
    app.rules._record("street_mimic_written",str(record.id),{"action":record.kind,"actual_origin":record.origin,"source":"S3:P1916–1919"})
    s.last_written=true;s.action={};s.phase="idle";s.elapsed=0.0;a.phase="idle"
 
-func tick() -> void:
+func linen_reunion(delta:float) -> void:
+ var s:Dictionary=battle.data.displays.linen
+ var visible:bool=app.rules.hp>0 and app.rules.hurt_left<=0 and app.rules.stun_left<=0 and not app.rules.gripped and sees("transporter_hospital",3.0)
+ s.read=float(s.read)+delta if visible else 0.0
+ if visible and float(s.read)+.000001>=float(battle.config.test_parameters.display_read_s):
+  s.seen=true
+  observe("street_linen_porter_seen","实际近处看见灰色工服、手套及绕在前臂的污衣袋带；只记录当前人物外观，不从存根推导曾见其搬运。","S3:P1607–1612")
+  if "hospital_bag_carry_seen" in app.rules.known:
+   s.matched=true
+   observe("street_linen_porter_reunion","与医院实际目击搬运污衣袋的经历对照，认出眼前搬袋人；不依赖编号对应、不新增身份或第四面墙证据。","S3:P1612")
+
+func tick(delta:float=0.0) -> void:
  normalize()
+ linen_reunion(delta)
  if not battle.reactions.safe():return
+ var linen:Dictionary=battle.data.displays.linen
+ var porter:Dictionary=battle.data.actors.transporter_hospital
+ if linen.matched and not battle.data.displays.spoken.has("transporter_hospital") and porter.present and porter.hp>0 and porter.room==app.room_id:
+  battle.data.displays.spoken.transporter_hospital=true;app.add_dialogue("角色 · 低声","是那个搬袋子的人。");return
  for item in [["back",state("back").front and state("back").back,"转过来，还是没有脸。"],["wheelchair",state("wheelchair").protected_seen,"他还护着那张照片。"],["postop",state("postop").read_seen,"人还在，编号却注销了。"],["triage",state("triage").read_seen,"夹子里还有转运批次。"],["mimic",state("mimic").protected_seen,"它在学我。"],["informant",battle.materials.known("street_informant_point"),"在给他们指路。"]]:
   if not item[1] or battle.data.displays.spoken.has(item[0]) or not sees(str(item[0]),4):continue
   battle.data.displays.spoken[item[0]]=true;app.add_dialogue("角色 · 低声",str(item[2]));return

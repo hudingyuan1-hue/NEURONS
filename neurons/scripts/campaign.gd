@@ -1539,6 +1539,7 @@ func _unhandled_input(event:InputEvent) -> void:
    var point:Vector2=layout.unproject(pixel)
    if event.button_index==MOUSE_BUTTON_RIGHT:hero_facing=(point-hero_pos).normalized();return
    if event.button_index==MOUSE_BUTTON_LEFT:
+    if Input.is_key_pressed(KEY_SHIFT) and int(session.data.level)==6 and active_battle().observations.begin_surface(street.materials.surface_at(layout.unproject(pixel)),true):get_viewport().set_input_as_handled();return
     if Input.is_key_pressed(KEY_SHIFT) and active_battle().observations.begin(view.furniture_at_pixel(pixel),true):get_viewport().set_input_as_handled();return
     active_battle().observations.cancel()
     for to in visible_doors:
@@ -1731,6 +1732,8 @@ func restore_snapshot(data:Dictionary) -> bool:
   if key=="facts":rules.facts.assign(restored_rules[key])
   else:rules.set(key,restored_rules[key])
  rules.sync_skin()
+ if not combat.data.is_empty():combat.reactions.refresh_appearance(true)
+ if not street.data.is_empty():street.reactions.refresh_appearance(true)
  rules.allow_supplemental_search=int(session.data.level)==4
  family.restore_state(data.get("family_state",{}))
  hospital.restore(data.get("hospital_state",{}))

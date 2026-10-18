@@ -1,0 +1,9 @@
+{
+  "scope": "Actual Windows release EXE, normal main scene and OS WM_CLOSE; no custom script/project override; Dummy audio, no full gameplay or listening claim",
+  "passed": true,
+  "stderr": null,
+  "close_message_sent": true,
+  "exit_code": 0,
+  "closed_normally": true,
+  "window_created": true
+}

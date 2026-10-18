@@ -1,5 +1,6 @@
 extends RefCounted
 ## Only witnessed actions produce local reactions. Exact source lines, no new lore.
+const Appearance=preload("res://scripts/core/appearance_history.gd")
 var owner_ref:WeakRef
 var combat:
  get:return owner_ref.get_ref()
@@ -11,6 +12,13 @@ func normalize() -> void:
  for key in ["spoken","observed","visible_casts"]:
   if not combat.data.has(key):combat.data[key]={}
  if not combat.data.has("face_pending"):combat.data.face_pending={}
+ refresh_appearance()
+
+func refresh_appearance(force:bool=false) -> void:
+ if combat.data.is_empty():return
+ var previous:Dictionary=combat.data.get("appearance",{})
+ if not force and int(previous.get("fact_count",-1))==app.rules.facts.size():return
+ combat.data.appearance={"fact_count":app.rules.facts.size(),"incidents":Appearance.incidents(app.rules.facts),"marks":Appearance.marks(app.rules.facts)}
 
 func visible(id:String,radius:float=6.0) -> bool:
  var a:Dictionary=combat.data.actors[id]
@@ -39,6 +47,9 @@ func on_skill(result:Dictionary) -> void:
 func tick(delta:float) -> void:
  normalize()
  _face(delta)
+ if visible("self",2.5) and not combat.data.appearance.marks.is_empty():
+  var key:String=("street_seen:" if combat.chapter_id==6 else "combat_seen:")+"existing_hand_mark"
+  app.rules.observe("角色",key,"实际看见旧病服人物手部留下的痕迹，可与自己亲历的夹手损伤对照；未据此证明身份相同，也未推断未发生的伤情或面部位置。","亲历事实","S3:P1520/P1886/P1953")
  for id in ["dog","nurse","corner","faceless","double_face"]:
   if not visible(id,4.0):continue
   var a:Dictionary=combat.data.actors[id]

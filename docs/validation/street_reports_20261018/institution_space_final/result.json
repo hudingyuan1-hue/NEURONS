@@ -1,0 +1,279 @@
+{
+  "failures": [],
+  "passes": [
+    "lobby uses independent large floor and native viewport",
+    "lobby keeps original five connections",
+    "physical route, opening and threshold crossing: lobby -> ward",
+    "arrival is legal: ward",
+    "physical route, opening and threshold crossing: ward -> lobby",
+    "physical route, opening and threshold crossing: lobby -> clinic",
+    "arrival is legal: clinic",
+    "physical route, opening and threshold crossing: clinic -> lobby",
+    "physical route, opening and threshold crossing: lobby -> pharmacy",
+    "arrival is legal: pharmacy",
+    "physical route, opening and threshold crossing: pharmacy -> lobby",
+    "physical route, opening and threshold crossing: lobby -> office",
+    "arrival is legal: office",
+    "physical route, opening and threshold crossing: office -> lobby",
+    "actual autonomous approach reaches lobby:0",
+    "half-contact JSON preserves position and time in lobby",
+    "manual pause holds restored contact in lobby",
+    "real search completes lobby:0",
+    "one reward on reachable floor for lobby:0",
+    "actual autonomous approach reaches lobby:1",
+    "real search completes lobby:1",
+    "one reward on reachable floor for lobby:1",
+    "actual autonomous approach reaches lobby:2",
+    "real search completes lobby:2",
+    "one reward on reachable floor for lobby:2",
+    "actual autonomous approach reaches lobby:3",
+    "real search completes lobby:3",
+    "one reward on reachable floor for lobby:3",
+    "actual autonomous approach reaches lobby:4",
+    "real search completes lobby:4",
+    "one reward on reachable floor for lobby:4",
+    "actual autonomous approach reaches lobby:5",
+    "real search completes lobby:5",
+    "one reward on reachable floor for lobby:5",
+    "actual autonomous approach reaches clinic:0",
+    "half-contact JSON preserves position and time in clinic",
+    "manual pause holds restored contact in clinic",
+    "real search completes clinic:0",
+    "one reward on reachable floor for clinic:0",
+    "actual autonomous approach reaches clinic:1",
+    "real search completes clinic:1",
+    "one reward on reachable floor for clinic:1",
+    "actual autonomous approach reaches clinic:2",
+    "real search completes clinic:2",
+    "one reward on reachable floor for clinic:2",
+    "actual autonomous approach reaches clinic:3",
+    "real search completes clinic:3",
+    "one reward on reachable floor for clinic:3",
+    "actual autonomous approach reaches clinic:4",
+    "real search completes clinic:4",
+    "one reward on reachable floor for clinic:4",
+    "actual autonomous approach reaches clinic:5",
+    "real search completes clinic:5",
+    "one reward on reachable floor for clinic:5",
+    "actual autonomous approach reaches clinic:6",
+    "real search completes clinic:6",
+    "one reward on reachable floor for clinic:6",
+    "actual autonomous approach reaches clinic:7",
+    "real search completes clinic:7",
+    "one reward on reachable floor for clinic:7",
+    "actual autonomous approach reaches pharmacy:0",
+    "half-contact JSON preserves position and time in pharmacy",
+    "manual pause holds restored contact in pharmacy",
+    "real search completes pharmacy:0",
+    "one reward on reachable floor for pharmacy:0",
+    "actual autonomous approach reaches pharmacy:1",
+    "real search completes pharmacy:1",
+    "one reward on reachable floor for pharmacy:1",
+    "actual autonomous approach reaches pharmacy:2",
+    "real search completes pharmacy:2",
+    "one reward on reachable floor for pharmacy:2",
+    "actual autonomous approach reaches pharmacy:3",
+    "real search completes pharmacy:3",
+    "one reward on reachable floor for pharmacy:3",
+    "actual autonomous approach reaches pharmacy:4",
+    "real search completes pharmacy:4",
+    "one reward on reachable floor for pharmacy:4",
+    "actual autonomous approach reaches pharmacy:5",
+    "real search completes pharmacy:5",
+    "one reward on reachable floor for pharmacy:5",
+    "actual autonomous approach reaches pharmacy:6",
+    "real search completes pharmacy:6",
+    "one reward on reachable floor for pharmacy:6",
+    "actual autonomous approach reaches office:0",
+    "half-contact JSON preserves position and time in office",
+    "manual pause holds restored contact in office",
+    "real search completes office:0",
+    "one reward on reachable floor for office:0",
+    "actual autonomous approach reaches office:1",
+    "real search completes office:1",
+    "one reward on reachable floor for office:1",
+    "actual autonomous approach reaches office:2",
+    "real search completes office:2",
+    "one reward on reachable floor for office:2",
+    "actual autonomous approach reaches office:3",
+    "real search completes office:3",
+    "one reward on reachable floor for office:3",
+    "actual autonomous approach reaches office:4",
+    "real search completes office:4",
+    "one reward on reachable floor for office:4",
+    "actual autonomous approach reaches office:5",
+    "real search completes office:5",
+    "one reward on reachable floor for office:5",
+    "actual autonomous approach reaches office:6",
+    "real search completes office:6",
+    "one reward on reachable floor for office:6",
+    "actual autonomous approach reaches office:7",
+    "real search completes office:7",
+    "one reward on reachable floor for office:7",
+    "actual autonomous approach reaches office:8",
+    "real search completes office:8",
+    "one reward on reachable floor for office:8",
+    "actual autonomous approach reaches office:9",
+    "real search completes office:9",
+    "one reward on reachable floor for office:9",
+    "actual autonomous approach reaches office:10",
+    "real search completes office:10",
+    "one reward on reachable floor for office:10",
+    "opened clinic door enters separate threshold movement",
+    "crossing snapshot retains active route without teleport",
+    "paid intervention cancels doorway crossing before room change",
+    "interrupted doorway does not prematurely enter clinic",
+    "physical route, opening and threshold crossing: lobby -> clinic",
+    "interrupted doorway can be reached and crossed again",
+    "actual keyed hospital threshold unlocks asylum",
+    "new asylum appears on the same lower floor before upstairs",
+    "lower-floor transformation keeps its exact geometry",
+    "lower-floor transition survives JSON without repeat unlock",
+    "same corner and physical threshold lead into existing staircase",
+    "stair arrival never repeats first-unlock reward",
+    "physical route, opening and threshold crossing: stairs -> corridor",
+    "new chapter uses the explicitly migrated upper corridor",
+    "physical route, opening and threshold crossing: corridor -> stairs",
+    "physical route, opening and threshold crossing: stairs -> lobby",
+    "physical route, opening and threshold crossing: lobby -> ward",
+    "low-SP asylum path physically reaches the designated bed and rests",
+    "rest keeps proper new ward geometry",
+    "old institutional save retains original geometry and in-flight resting position",
+    "old saved rest completes through production clock",
+    "old chapter rest retains legacy geometry and hospital source provenance"
+  ],
+  "rendered": true,
+  "routes": [
+    {
+      "actual": "ward",
+      "from": "lobby",
+      "hero": [
+        4.44999980926514,
+        1.25
+      ],
+      "level": 2,
+      "toward": "ward"
+    },
+    {
+      "actual": "lobby",
+      "from": "ward",
+      "hero": [
+        1.25,
+        3.65000009536743
+      ],
+      "level": 2,
+      "toward": "lobby"
+    },
+    {
+      "actual": "clinic",
+      "from": "lobby",
+      "hero": [
+        2.40000009536743,
+        4.75
+      ],
+      "level": 2,
+      "toward": "clinic"
+    },
+    {
+      "actual": "lobby",
+      "from": "clinic",
+      "hero": [
+        5.34999990463257,
+        1.25
+      ],
+      "level": 2,
+      "toward": "lobby"
+    },
+    {
+      "actual": "pharmacy",
+      "from": "lobby",
+      "hero": [
+        1.25,
+        5.0
+      ],
+      "level": 2,
+      "toward": "pharmacy"
+    },
+    {
+      "actual": "lobby",
+      "from": "pharmacy",
+      "hero": [
+        10.75,
+        3.54999995231628
+      ],
+      "level": 2,
+      "toward": "lobby"
+    },
+    {
+      "actual": "office",
+      "from": "lobby",
+      "hero": [
+        1.25,
+        3.65000009536743
+      ],
+      "level": 2,
+      "toward": "office"
+    },
+    {
+      "actual": "lobby",
+      "from": "office",
+      "hero": [
+        10.75,
+        5.34999990463257
+      ],
+      "level": 2,
+      "toward": "lobby"
+    },
+    {
+      "actual": "clinic",
+      "from": "lobby",
+      "hero": [
+        2.40000009536743,
+        4.75
+      ],
+      "level": 2,
+      "toward": "clinic"
+    },
+    {
+      "actual": "corridor",
+      "from": "stairs",
+      "hero": [
+        1.25,
+        2.5
+      ],
+      "level": 3,
+      "toward": "corridor"
+    },
+    {
+      "actual": "stairs",
+      "from": "corridor",
+      "hero": [
+        5.75,
+        1.29999995231628
+      ],
+      "level": 3,
+      "toward": "stairs"
+    },
+    {
+      "actual": "lobby",
+      "from": "stairs",
+      "hero": [
+        10.6999998092651,
+        1.25
+      ],
+      "level": 3,
+      "toward": "lobby"
+    },
+    {
+      "actual": "ward",
+      "from": "lobby",
+      "hero": [
+        4.44999980926514,
+        1.25
+      ],
+      "level": 3,
+      "toward": "ward"
+    }
+  ],
+  "scope": "Fixed actor-free geometry fixtures; production movement/search/opening/threshold/JSON and paid interruption. L2 key ownership fixture isolates original unlock then L3 lobby change/stairs/return-to-bed. Legacy v1 fixture preserves original coordinates until actual rest. No all-NPC, normal-speed human, formal art or subjective audio acceptance."
+}

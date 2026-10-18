@@ -174,7 +174,7 @@ func _cleaner(delta:float) -> void:
  battle._move_actor("cleaner",at,delta)
  if battle.position("cleaner").distance_to(at)>.09:a.phase="walk";return
  # All progress requires physical contact. Hurt/death/room departure cannot complete it.
- var label:bool=item.kind=="label"
+ var label:bool=str(item.kind) in ["label","number_paper"]
  a.phase="pick_label" if label else "wipe"
  var duration:float=float(battle.config.test_parameters.cleaner_pickup_s if label else battle.config.test_parameters.cleaner_wipe_s)
  item.progress=minf(1.0,float(item.progress)+delta/duration)
@@ -213,3 +213,18 @@ func prepare_stitched(delta:float) -> bool:
  a.phase="tear";s.tear=minf(float(battle.config.test_parameters.paper_tear_s),float(s.tear)+delta)
  if float(s.tear)+.000001>=float(battle.config.test_parameters.paper_tear_s):a.phase="idle"
  return true
+
+func paper_entry(key:String) -> Dictionary:
+ var item:Dictionary=state().surfaces.get(key,{})
+ if item.is_empty() or item.room!=app.room_id or not battle.archivist.eligible(item):return {}
+ var text:String=str(item.get("readable_text",""));var complete:bool=not text.is_empty()
+ return {"id":key,"room":item.room,"props":[key],"description":text if complete else "实际看清落地标签的编号栏；具体字形未提供，未认定本人身份或取得完整纸面内容。","content_complete":complete,"surface":true,"source":item.source,"records":[]}
+func surface_at(point:Vector2) -> String:
+ for key in state().surfaces:
+  var item:Dictionary=state().surfaces[key]
+  if not paper_entry(str(key)).is_empty() and point.distance_to(battle.vector(item.pos))<.24:return str(key)
+ return ""
+func paper_read(key:String,complete:bool) -> void:
+ var item:Dictionary=state().surfaces.get(key,{})
+ if item.is_empty():return
+ item.seen=true;item.read_complete=complete

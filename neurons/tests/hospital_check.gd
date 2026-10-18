@@ -18,7 +18,10 @@ func check(value:bool,label:String) -> void:
 
 func hospital_fixture(room:String="ward") -> void:
  app.rules=Neural.new();app.menu.rules=app.rules
- app.session=Session.new();app.session.data.unlocked=[1,2];app.session.new_attempt(2,app.rng)
+ app.session=Session.new();app.session.data.unlocked=[1,2]
+ # This historical suite below declares legacy 5.6m-room coordinates, including
+ # (4.4,.35) doorway and (1.25,.24) office door. Do not put them in v2 floors.
+ app.session.data.level=2;app.session.data.institution_geometry_version=1;app.session.new_attempt(2,app.rng)
  app.rules.actual_attempt=1;app.rules.search_limit=12
  app.rules.owners.key=app.session.data.key_owner
  app.home.enabled=false;app.family.enabled=false;app.hospital.enabled=true

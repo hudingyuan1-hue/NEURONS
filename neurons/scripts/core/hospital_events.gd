@@ -519,9 +519,16 @@ func advance_transport(delta:float,existing_trip_only:bool=false) -> void:
     app.rules.owners.hospital_laundry_manifest="porter"
     claim("laundry_order_received","laundry_order_received")
     data.bag="porter";event.phase="exit"
-  elif move("porter",source_portal(room,"lobby").threshold,delta):
-   data.bag="removed";record("bag_stub","污衣袋实际搬离，办公室保留交接存根。")
-   claim("bag_removed","bag_removed");data.transport={}
+  else:
+   var before:Vector2=position("porter")
+   var reached:bool=move("porter",source_portal(room,"lobby").threshold,delta)
+   # A written stub or a remote completed trip is not a witnessed person.
+   if data.bag=="porter" and position("porter").distance_to(before)>.0001 and near("porter",2.0):
+    if claim("bag_carry_seen","hospital_bag_carry_witness",{"actor":"porter","room":room,"at":xy(position("porter"))}):
+     observe("hospital_bag_carry_seen","亲眼看见医院搬运工提起污衣袋后实际搬行；未将交接存根或病患转运袋当作此经历。")
+   if reached:
+    data.bag="removed";record("bag_stub","污衣袋实际搬离，办公室保留交接存根。")
+    claim("bag_removed","bag_removed");data.transport={}
   return
  if not existing_trip_only and not data.body.is_empty() and data.body.actor=="guide":return
  if event.phase=="paperwork":

@@ -1,0 +1,21 @@
+{
+  "failures": [],
+  "passes": [
+    "declared live cast/position fixture uses actually paid CONTROL, no attack or hit flags filled",
+    "ordinary world pursuit really drags the bag and stops inside actual reach",
+    "real Space holds tightener and bag together before any damage",
+    "real resume completes preparation and enters the actual swept bag",
+    "ordinary shared handler makes one real fifteen-HP body contact",
+    "same bag drops into the existing recovery instead of a reverse strike",
+    "real pause during lowering cannot repeat the settled contact",
+    "real recovery finishes regripping before original cooldown",
+    "one complete ordinary swing settles only once",
+    "second declared live report fixture pays its own CONTROL window",
+    "ordinary completed knock/point is followed by actual side adjustment",
+    "real side movement retains actual delivery even when the recipient independently reacquires the host",
+    "real Space freezes finite post-report movement",
+    "resumed finite movement stops without replaying the original report"
+  ],
+  "rendered": true,
+  "scope": "Two explicit NPC/position fixtures (second recipient initial cooldown5s), actually paid CONTROL each, then ordinary _process with actual Space and mouse-wheel inputs. No bag attack/contact/report/hearing/knowledge flags filled; second scene resets hero HP for independent report fixture. Silent fixed30 code placeholders; not natural full-game or subjective art/audio acceptance."
+}

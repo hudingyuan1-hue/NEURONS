@@ -132,9 +132,10 @@ func _ready() -> void:
  receiver.present=true;receiver.room="street_node";advance_actor("head_nurse",1.2)
  check(head.report_target.is_empty(),"report cannot inform actors in another room")
  receiver.room=app.room_id;var second_receiver:Dictionary=actor_at("doctor",Vector2(7,7));second_receiver.hostile=true
+ var point_origin:Vector2=app.street.position("head_nurse")
  advance_actor("head_nurse",1.1)
  check(app.street.data.reports.head_nurse.receivers.size()==2 and receiver.investigation.at==app.street.data.reports.head_nurse.at and second_receiver.investigation.at==receiver.investigation.at,"head nurse can notify both actual existing medical witnesses of the same old position")
- check(app.street.vector(head.direction).dot((app.street.vector(app.street.data.reports.head_nurse.at)-app.street.position("head_nurse")).normalized())>.999,"head nurse points toward the reported host position, distinct from informant turning toward a recipient")
+ check(app.street.vector(head.direction).dot((app.street.vector(app.street.data.reports.head_nurse.at)-point_origin).normalized())>.999,"head nurse points from the actual signal origin toward the reported host position before later side adjustment")
  await capture("06a_informant_old_position")
 
  no_street();app.hero_pos=Vector2(6,5);app.hero_state="idle";actor_at("double_face",Vector2(7,5));var reaction=app.street.reactions

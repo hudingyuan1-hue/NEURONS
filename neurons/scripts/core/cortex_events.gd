@@ -1,6 +1,7 @@
 extends RefCounted
 ## L4 actual actors and lower-floor events. Source facts, knowledge and paper
 ## classifications remain separate; no display art controls settlement.
+const Appearance=preload("res://scripts/core/appearance_history.gd")
 const Map=preload("res://scripts/core/cortex_map.gd")
 var app
 var config:Dictionary={}
@@ -440,10 +441,7 @@ func actual_decisions() -> Array:
   if str(fact.get("kind","")) in ["hospital_medicine_refused","asylum_medicine_refused","asylum_medicine_swallowed","hospital_medicine_swallowed"]:result.append(fact.duplicate(true))
  return result
 func actual_injuries() -> Array:
- var result:Array=[]
- for fact in app.rules.facts:
-  if float(fact.get("hp_damage",0))>0 or str(fact.get("kind",""))=="hit":result.append(fact.duplicate(true))
- return result
+ return Appearance.incidents(app.rules.facts)
 
 func start_playback(id:String,origin:String) -> void:
  if data.paper.source.is_empty():return

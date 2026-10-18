@@ -1,0 +1,30 @@
+{
+  "failures": [],
+  "passes": [
+    "autonomous shared pursuit really drags the one bag with its carrier",
+    "dragged bag and strap cannot cause attack contact",
+    "original windup stops feet while the strap tightens",
+    "real manual pause freezes both attack clock and bag pose",
+    "actual disk JSON restores the partially tightened original bag",
+    "only completed original .8-second windup enters active bag contact",
+    "one early swept bag occupies one side, never simultaneous opposite-side hits",
+    "carrier body and stretched strap are not a second damaging rectangle",
+    "shared settlement commits exactly original fifteen HP once on actual bag contact",
+    "post-contact real JSON preserves the same settled attack receipt",
+    "lowering and regripping after reload cannot repay the contact",
+    "complete original recovery precedes original cooldown and the next approach",
+    "a real miss keeps its fixed swing direction and enters recovery without reverse catch-up",
+    "moving behind after a miss cannot skip the existing recovery/cooldown",
+    "even a coarse active step stops the bag at an actual obstacle and starts full recovery",
+    "blocked bag stays on its last valid side instead of passing through the fountain edge",
+    "existing chest-height GUT avoidance still applies to actual bag contact",
+    "same real bag also uses existing once-per-target neutral contact and damage rules",
+    "actual hurt pauses incomplete shared attack without a phantom contact",
+    "legacy Street JSON without the new bag state remains loadable",
+    "legacy active-attack migration keeps existing hit receipts and cannot replay earlier damage",
+    "death drops only the existing bag at its actual current position with no active hit path",
+    "real JSON preserves the original dropped bag instead of cloning or reattaching it"
+  ],
+  "rendered": true,
+  "scope": "Finite declared cast/alignment and one obstacle-edge fixture; actual inherited autonomous approach, shared fifteen-HP attack, neutral target, GUT, hurt, real disk JSON and manual pause. No seed alteration, formal art, subjective sound or full normal play claim."
+}

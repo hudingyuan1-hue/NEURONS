@@ -1,3 +1,11 @@
+> 2026-10-18本次定向实际核对原S3:P1670–1676/P1680–1682/P1711–1716/P1790–1794/P1932–1942共32段，采用到真实遇害/目击/疯癫反馈、父亲有效命中后的大黄碎裂、单臂腕夹扣合/释放。来源、原攻击/人物/空间/技能/钥匙/音频保护对照见validation/street_losses_20261018/source_check.json。三个共用核心文件与上轮SHA一致；无新检索/Skill安装/生图/付费。
+
+> 2026-10-18本次定向实际核对原S3:P1607–1612/P1619–1624/P1907–1912共18段，用于独立污衣袋实际接触、正常收招与报告后侧移/伤后退避，告密许可/编号条与记录板分开。源DOCX与受保护原身份/攻击/房间/技能/钥匙/音频/医院配置见validation/street_laundry_20261018/source_check.json。原规则不取自旧矩形实现；袋体几何为起测参数，其他人物默认AI距离保持。无新检索/Skill安装/生图/付费。
+
+> 2026-10-18本次定向实际核对原S3:P1607–1612/P1619–1625/P1906–1913共21段；采用到street_reports真实敲板/指向/实际响应、hospital_events真实搬袋目击及street_displays重逢。原actors/attacks/rooms/materials/glyphs/skills/key/audio/hospital配置受保护；原DOCX与哈希见validation/street_reports_20261018/source_check.json。无新增外部检索/安装Skill/生图/付费，源码、夹具、自然主路、人工待验分列HANDOFF。
+
+> 2026-10-18续作定向复用S3:P1140–1148/P1477/P1520/P1716/P1729/P1807–1812/P1886/P1900–1905/P1953，实际原DOCX核对27段；采用在street_archivist、既有地面查看与appearance_history真实事件查询。原actors/attacks/rooms/materials/glyphs、skills/key/audio及战斗/皮层配置不变，保护哈希与Git CRLF差异见validation/street_records_20261018/source_check.json。未新增外部研究/安装Skill/生图/付费；验证可读纸为声明的测试内容，不当作新创作定案。
+
 > 2026-10-18本次仅定向复用S3:P1613–1631/P1648–1668/P1728–1741/P1864–1869/P1906–1921；实际打开原DOCX核对76段，原身份/攻击/房间/技能/钥匙/音频保护对照在validation/street_displays_20261018/source_check.json（Git CRLF检出差异单列）。采用到street_displays、原通报与双面可见反应；未知字形、照片物权、旧伤来源不补造。无新增外部研究/Skill安装/生图/付费，源码/有限夹具/自然运行/人工待验分列HANDOFF。
 
 > 2026-10-18本次接手134bcc2，定向实际回读S3:P1756–1763/P1785对应DOCX段落及现有床/门/导航实现。原45身份、所有攻击数值/房间布置与skills/key_discovery/audio_bindings受保护对照在validation/street_bed_travel_20261018/source_check.json。侧把手/路径栅格/退避等待为明确试验参数，无新剧情/规则数值；沿用已有game-art-2d覆盖规则，无新研究/安装/生成/听验。实际验证另见HANDOFF。

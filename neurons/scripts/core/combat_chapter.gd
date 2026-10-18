@@ -263,7 +263,7 @@ func _actor(id:String,delta:float) -> void:
     var waiting:Vector2=room_space.clipped_step(at,at+direction*.8)
     if waiting.distance_to(target)>distance and waiting.distance_to(at)>.1:_move_actor(id,waiting,delta);break
   return
- if distance>(2.35 if id=="assistant" else float(attack.reach)+.25):
+ if distance>attack_start_distance(id,attack):
   var goal:Vector2=target+(at-target).normalized()*(2.25 if id=="assistant" else .72)
   if floor_for(str(a.room)).walkable(goal):_move_actor(id,goal,delta)
  elif a.cooldown<=0 and (target_id!="hero" or data.clock>=data.next_attack) and (target_id!="hero" or not app.rules.gripped):
@@ -282,6 +282,9 @@ func _actor(id:String,delta:float) -> void:
   if target_id=="hero":data.next_attack=data.clock+.8
   app.audio.cue("SFX_COMBAT_WINDUP",str(a.attack_id)+":windup")
   app.rules._record("combat_attack_started",str(a.attack_id),{"actor":id,"room":a.room,"direction":a.direction})
+
+func attack_start_distance(id:String,attack:Dictionary) -> float:
+ return 2.35 if id=="assistant" else float(attack.reach)+.25
 
 func hero_attack_slots(room:String) -> int:
  var slots:int=0

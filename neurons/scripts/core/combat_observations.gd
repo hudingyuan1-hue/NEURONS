@@ -12,6 +12,9 @@ func normalize() -> void:
   if not combat.data.has(key):combat.data[key]={}
 
 func entry(prop:String) -> Dictionary:
+ if combat.chapter_id==6:
+  var paper:Dictionary=combat.materials.paper_entry(prop)
+  if not paper.is_empty():return paper
  for item in combat.config.get("observations",[]):
   if item.room==app.room_id and prop in item.props:return item
  return {}
@@ -42,6 +45,19 @@ func begin(index:int,controlled:bool=true) -> bool:
  app.status_note="走近查看："+str(prop.name)
  return true
 
+func begin_surface(key:String,controlled:bool=true) -> bool:
+ normalize()
+ if combat.chapter_id!=6 or app.rules.hp<=0 or app.rules.body_busy() or app.rules.gripped or (controlled and app.rules.control_left<=0):return false
+ var item:Dictionary=entry(key)
+ if item.is_empty():return false
+ var surface:Dictionary=combat.materials.state().surfaces[key];var point:Vector2=combat.vector(surface.pos)
+ var at:Vector2=station(Rect2(point-Vector2(.08,.05),Vector2(.16,.1)))
+ if at.x<0:return false
+ cancel();combat.data.inspection={"room":app.room_id,"id":key,"prop":key,"at":combat.xy(at),"phase":"approach","elapsed":0.0,"controlled":controlled,"surface":true}
+ app.hero_route=app.layout.path(app.hero_pos,at);combat.data.controlled_door="";combat.data.door_left=-1.0
+ app.rules.begin_public_action("observe",key,"control" if controlled else "autonomy",app.room_id)
+ app.status_note="走近查看落地纸件。";return true
+
 func cancel() -> void:
  normalize()
  if not combat.data.inspection.is_empty():app.rules.finish_public_action("control" if combat.data.inspection.get("controlled",false) else "autonomy")
@@ -57,10 +73,19 @@ func try_autonomous() -> void:
   # Only something actually close to the autonomous route can attract a look.
   if at.x>=0 and at.distance_to(app.hero_pos)<.65:begin(i,false);return
 
+ if combat.chapter_id==6:
+  for key in combat.materials.state().surfaces:
+   if entry(str(key)).is_empty() or combat.data.inspected.get(str(key),{}).has(str(key)):continue
+   if combat.vector(combat.materials.state().surfaces[key].pos).distance_to(app.hero_pos)<.65:begin_surface(str(key),false);return
+
 func advance(delta:float) -> bool:
  normalize()
  var state:Dictionary=combat.data.inspection
  if state.is_empty():return false
+ if state.get("surface",false):
+  if entry(str(state.prop)).is_empty():cancel();app.hero_route=PackedVector2Array();return false
+  var paper:Dictionary=combat.materials.state().surfaces[str(state.prop)]
+  if state.phase!="approach" and (app.hero_pos.distance_to(combat.vector(paper.pos))>1 or not combat.can_see(app.room_id,app.hero_pos,combat.vector(paper.pos))):cancel();app.hero_route=PackedVector2Array();return false
  if state.room!=app.room_id or app.rules.hp<=0 or app.rules.hurt_left>0 or app.rules.gripped or app.rules.stun_left>0:
   cancel();app.hero_route=PackedVector2Array();return false
  for id in combat.data.actors:
@@ -85,6 +110,7 @@ func advance(delta:float) -> bool:
  if not combat.data.inspected.has(str(item.id)):combat.data.inspected[str(item.id)]={}
  combat.data.inspected[str(item.id)][str(state.prop)]=true
  app.rules._record("combat_evidence_read",record_id,{"source":item.source,"prop":state.prop,"identity_glyph":null,"time_glyph":null,"records":item.get("records",[]).duplicate(true)})
+ if state.get("surface",false):combat.materials.paper_read(str(state.prop),bool(item.get("content_complete",false)))
  app.status_note=str(item.description)
  cancel();app.hero_route=PackedVector2Array();combat.data.route_left=0.0
  return true

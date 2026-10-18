@@ -1,0 +1,205 @@
+{
+  "baseline": "c10ea19535e273cf66c759a8cda909d081cc0ed9",
+  "source": {
+    "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+    "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59"
+  },
+  "verified_prior_extraction": {
+    "path": "tmp/b2_source_intake/S3.txt",
+    "sha256": "8e4c6c6b18f0e5aaa8ad20d8ee7b882804ff3889dde4a2ac01d72a2ad6804a7f"
+  },
+  "targeted_original_paragraphs": [
+    {
+      "id": "S3:P1140",
+      "text": "人物判定与动作",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1141",
+      "text": "待机时反复调整自己的肘、腕位置。角色实际触摸触觉测试台、手进入夹具接触区后，人物才走向侧方手柄。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1142",
+      "text": "动作顺序：看向接触位置→握住手柄→扳动→夹具闭合。接近台子、阅读说明或搜寻其他七点，不触发夹击。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1143",
+      "text": "夹具实际夹住手，才扣生命并中断当前搜寻。本次对应疼痛灯亮起，记录仍显示“无异常”；伤处进入角色实际受伤记录。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1144",
+      "text": "扣合前成功缩手，或惊跳实际带手离开接触区，可以避开。抓挠、腹痛等取消动作，也须手确实撤出后才算躲开。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1145",
+      "text": "毛孔变化、耳鸣停顿、开心或颤抖不自动撤手；不能仅因技能成功就判免伤。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1146",
+      "text": "膝跳须实际命中操作人物。若命中使其在夹具闭合前中止操作，本次夹击取消；不能隔着测试台保证打断，也不撤销已经结算的夹伤。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1147",
+      "text": "一次扣合后固定执行复位、松开，扑空同样复位；本周目不连续重启夹击。角色可以离开或重新完成该点搜寻。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1148",
+      "text": "已夹住时，缩手、开心和完全掌控不能直接解除束缚；释放不要求答话、恢复精神或再次施法。死亡则立即转入死亡结算。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1477",
+      "text": "前脸对应角色当前已确定的外貌；后脸保留实际发生过的相关伤痕。人格自身缝线不倒推成角色曾被缝合的经历。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1520",
+      "text": "身份与出现：沿用第二、三关同一精神病人的编号、缺损领标与实际已有伤痕；不是角落病友，也不因步态相似而等同抽动人格。初始站在丘脑中继核心侧方，不贴入口刷新。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1716",
+      "text": "继承：不要求接触第四关测试台；旧伤仅继承实际受伤结果，不重播第四关一次性夹手事件。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1729",
+      "text": "外貌：前脸对应角色已经成立的当前外貌，后脸保留真实旧伤；不生成未来伤痕或未经发生的变化。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1807",
+      "text": "动作链：看见可处理的地面痕迹、散落标签→将清洁车停在侧边→擦拭或弯腰拾取→将标签收进随车污物袋→重新封口。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1808",
+      "text": "处理范围：只清理实际接触的区域、实际拾起的标签；不一次触发全场清空。人物手中、角色已经取得的物件不能被隔空收走。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1809",
+      "text": "信息与伤害：擦掉血迹不恢复生命，收走标签不删除已知编号；未亲眼看清的内容也不自动补入认知。新伤害产生的新痕迹仍正常保留。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1810",
+      "text": "腕带继承：旧腕带对应既有身份，不复活原死者；对应原件若已被角色取得，不再把同一原件挂出，也不从背包回收。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1811",
+      "text": "中断：受袭后停止当前清理，保留已经擦净、拾走的部分；清洁车不变成冲撞武器。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1812",
+      "text": "新增角色对白：实际目击拾取标签后：“他连标签也收走了。”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1886",
+      "text": "唯一身份：保留旧病服、缺损领标、腕带与真实已有伤痕。若已在本关其他分段活动，沿用其实际位置，不在出口再生成一个。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1900",
+      "text": "辨识：文件夹固定在衣服内侧，手持硬质夹板；与第二关装订钉手指的档案员分开。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1901",
+      "text": "攻击动作：实际察觉并接近角色→举起夹板→沿确定方向挥击→收回。有效命中扣生命一次，不追加抓握或收走背包物品。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1902",
+      "text": "收纸动作：没有正在执行的攻击、附近存在可接近的落地编号纸时，弯腰拾取并收入文件夹；无纸就不执行，不为播放动作凭空生成纸张。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1903",
+      "text": "处理边界：只收实际落地、未被人物持有或角色取得的纸。已读取的信息保留；未看清的部分不会因纸被收走自动补全。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1904",
+      "text": "中断：拾取前受击，纸仍留原处；已经收进文件夹后受击，不自动把纸复制回地面。重新发现角色后恢复接近，不重置攻击冷却。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1905",
+      "text": "新增角色对白：已经读清该纸内容、随后目击其收走时：“收走了，也改不了我看见的。”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1953",
+      "text": "外貌变化使用表情、站姿、呼吸和动作幅度；血迹、破损、伤痕只来自实际伤害和既有衣物状态。休息回血不自动抹掉历史，死亡重生按当前外观记录恢复；不得为表现觉醒凭空加伤。",
+      "found_in_original_docx": true
+    }
+  ],
+  "protected_street_config": {
+    "actors": true,
+    "attacks": true,
+    "rooms": true,
+    "good_ids": true,
+    "dialogue": true,
+    "materials": true,
+    "displays": true
+  },
+  "protected_other_config": [
+    {
+      "path": "neurons/data/skills.json",
+      "worktree_sha256": "2d69fc3abb4b7be7516db6a4cb17c8988ed6bee23925eea442c0a95cbdf24f68",
+      "HEAD_sha256": "1892910a62c7b06f9cfef92f57dba12caa14d27409241bc1cc59b14d480b62d8",
+      "same_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/key_discovery.json",
+      "worktree_sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "HEAD_sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "same_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/audio_bindings.json",
+      "worktree_sha256": "86e08c2281270209c188af4e4b8be072420abc2146da7c36da2c2a1e5514635e",
+      "HEAD_sha256": "c1bfd2df88a87c2eda8b56ec07df425e647afc9703831103f4baca047176fe3b",
+      "same_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/combat_chapter.json",
+      "worktree_sha256": "e1c90c646af4b0e505f00efc4639b4187cc625382159233e29b1e7c90b069185",
+      "HEAD_sha256": "9e81daaa5125385a4959eaa968d4f33f13fdfdbcf1cccc1a4f026aeab69a8301",
+      "same_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/cortex_events.json",
+      "worktree_sha256": "0c9b273471d2fc2402a3b862d846b751fcf6f72d67bf3dcaaaa45ad1d2308273",
+      "HEAD_sha256": "0c9b273471d2fc2402a3b862d846b751fcf6f72d67bf3dcaaaa45ad1d2308273",
+      "same_ignoring_Git_CRLF_checkout": true
+    }
+  ],
+  "implementation": {
+    "street_archivist.gd": "same existing material object, actual movement/contact/lift/folder, launched attack priority, new rediscovery resumes pursuit, unchanged cooldown, no paper spawning",
+    "combat_observations.gd": "existing approach/read handler extended to real floor paper, actual Shift-click/autonomous close-route look, interruption/removal cancel before complete",
+    "appearance_history.gd": "read-only actual positive-HP protagonist facts; anatomical hand marker requires the matching actual clamp-damage receipt; no ID/face/awakening inference",
+    "combat_reactions.gd / combat_view.gd": "actual hand history displayed only on current hero/self hands; close witnessed comparison remains separate from identity/fourth-wall evidence; rest/revival preserve existing facts"
+  },
+  "limits": [
+    "Existing maintenance label keeps null number glyph and incomplete readable content; collector is conditional, not a new authored exit paper",
+    "Finite/live readable text and original ownership are explicit test fixtures, not story additions",
+    "L4 anatomical contact fixture uses real damage/claim handlers; full actual clamp animation additionally verified by cortex-events regression",
+    "Unknown facial positions and unlocalised damage do not receive invented scars",
+    "No claim that same-attempt paper ownership covers every reset/lifecycle/crowd combination"
+  ],
+  "external_sources": 0,
+  "imagegen_calls": 0,
+  "paid_services": 0
+}
