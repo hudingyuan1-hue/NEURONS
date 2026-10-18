@@ -1,0 +1,15 @@
+{
+  "files": [
+    {
+      "path": "exports/street_bed_travel_20261018/NEURONS.exe",
+      "bytes": 109168640,
+      "sha256": "3d19ee4a764e8bb153bfa7f811f98e0dfb0139c9e0c8bc6b76b93d3ed09185bf"
+    },
+    {
+      "path": "exports/street_bed_travel_20261018/NEURONS.pck",
+      "bytes": 32795696,
+      "sha256": "27f4f1965a5047bca385e631f51d4a2c0507938c42e9cbc46e529126ac6b313f"
+    }
+  ],
+  "scope": "82/0 PCK report in this folder predates last Street-camera-only fix; current final build uses export_camera_final evidence"
+}

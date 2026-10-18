@@ -541,7 +541,7 @@ func configure_room_viewport() -> void:
 func keep_metric_actor_visible() -> void:
  # A long corridor pans at unchanged actor scale. No new gameplay clock.
  if view_controls!=null and view_controls.manual_view:return
- if int(session.data.level)==5:
+ if int(session.data.level)>=5:
   var actor:Vector2=world_viewport.get_canvas_transform()*layout.project(hero_pos)
   var safe_box:=Rect2(200,285,880,260)
   var wanted:Vector2=actor.clamp(safe_box.position,safe_box.end)
@@ -576,7 +576,9 @@ func door_point(id:String) -> Vector2:
  return door_point_for(room_id,id)
 
 func door_point_for(room:String,id:String) -> Vector2:
- if int(session.data.level)==6:return StreetMap.doorway(room,id)
+ if int(session.data.level)==6:
+  if room==room_id and street!=null and not street.data.is_empty():return street.hero_doorway(id)
+  return StreetMap.doorway(room,id)
  if int(session.data.level)==5:return CombatMap.doorway(room,id)
  return portal_for_room(room,id).at
 

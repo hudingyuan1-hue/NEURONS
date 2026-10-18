@@ -1,0 +1,44 @@
+{
+  "baseline": "134bcc24e5add4c71db2655d3eb2b64ccd6bd332",
+  "source_path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+  "source_sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+  "targeted_original_paragraphs": [
+    "动作：将推床移到有侧向空间的位置→稳住车体、调整角度→推动车身横向逼近→停止施力→退床恢复。",
+    "人物与物件：推床随同一转运工移动；床上不另生出第二名被转运患者。人死亡后车体留在实际位置，但不能永久封路。",
+    "维护通道内人物、车体与杂物移动时保留返回路径；大型敌人无法进入时，不固定守住唯一入口。"
+  ],
+  "implementation": "Same bed and operator; sampled rigid pose/turn and side grip. Only known adjacent portal followed; no target location bestowed in unseen room. Clear both sides before frame mapping. Blocked/narrow doors withdraw, mid-entry new obstruction reverses physically; real doorway side lane prevents stationary corpse-bed center-lock.",
+  "trial_parameters": {
+    "bed_travel_grip_m": 0.675,
+    "bed_travel_grid_m": 0.2,
+    "bed_travel_staging_m": 2.2,
+    "bed_travel_retreat_m": 1.2,
+    "bed_travel_wait_s": 1.5
+  },
+  "original_actors_attack_values_and_room_layouts_unchanged": true,
+  "protected_files": [
+    {
+      "path": "neurons/data/skills.json",
+      "sha256": "2d69fc3abb4b7be7516db6a4cb17c8988ed6bee23925eea442c0a95cbdf24f68",
+      "same_as_HEAD_ignoring_line_endings": true
+    },
+    {
+      "path": "neurons/data/key_discovery.json",
+      "sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "same_as_HEAD_ignoring_line_endings": true
+    },
+    {
+      "path": "neurons/data/audio_bindings.json",
+      "sha256": "86e08c2281270209c188af4e4b8be072420abc2146da7c36da2c2a1e5514635e",
+      "same_as_HEAD_ignoring_line_endings": true
+    }
+  ],
+  "new_external_sources": 0,
+  "imagegen_calls": 0,
+  "paid_services": 0,
+  "limitations": [
+    "full hostile crowd combinations and both mouths blocked at once are not accepted",
+    "world remains code placeholder; original art, voice and music unchanged",
+    "ordinary travel blocks on contact; only established side attack deals original damage"
+  ]
+}

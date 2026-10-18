@@ -52,6 +52,11 @@ func draw(target,owner,catalog) -> void:
    var bed:Dictionary=battle.data.lateral_bed
    draw_bed(battle.lateral_bed.anchor(battle.vector(bed.center),battle.vector(bed.axis)),battle.vector(bed.axis))
    var center:Vector2=layout.project(battle.vector(bed.center))
+   var carrier:Dictionary=battle.data.actors.transporter_asylum
+   if carrier.hp>0:
+    for side in [-.12,.12]:
+     var rail:Vector2=layout.project(battle.vector(bed.center)-battle.vector(bed.push)*.45+battle.vector(bed.axis)*side)-Vector2(0,48)
+     canvas.draw_line(layout.project(battle.position("transporter_asylum"))-Vector2(0,74),rail,Color("b6b29d"),4)
    text(center-Vector2(0,61),"离院",13)
    if bed.phase in ["windup","attack"]:
     var goal:Vector2=layout.project(battle.vector(bed.center)+battle.vector(bed.push)*(1.0-float(bed.distance)))
@@ -60,10 +65,14 @@ func draw(target,owner,catalog) -> void:
   elif entry.kind=="hero":
    var at:Vector2=layout.project(app.hero_pos)
    var crouch:float=.56 if app.rules.reaction_skill=="GUT" and app.rules.reaction_left>.2 else 1.0
-   var frame:Dictionary=catalog.actor_frame(app.hero_state,app.hero_facing,app.world_visual_time)
+   var frame:Dictionary=catalog.actor_frame("hit" if app.hero_state=="tinnitus" else app.hero_state,app.hero_facing,app.world_visual_time)
    var scale_value:=Vector2(2.1,2.1*crouch)
    canvas.draw_circle(at,17,Color(0,0,0,.25))
    canvas.draw_texture_rect_region(frame.texture,Rect2(at-frame.foot*scale_value,frame.size*scale_value),frame.source)
+   if app.hero_state=="tinnitus":
+    canvas.draw_line(at+Vector2(12,-52),at+Vector2(22,-80),Color("a7b8b8"),5)
+    canvas.draw_line(at+Vector2(22,-80),at+Vector2(9,-91),Color("c4bea8"),4)
+    text(at-Vector2(0,112),"停步 · 侧头捂耳（姿态占位）",14)
   else:actor(str(entry.id))
  if battle.chapter_id==6:draw_main_ending()
  for id in app.visible_doors:
@@ -87,6 +96,7 @@ func actor(id:String) -> void:
  var at:Vector2=app.layout.project(battle.position(id))
  if id=="assistant":draw_bed(battle.position(id),battle.vector(a.direction))
  var color:Color=Color("7dafa5") if s.relation=="friend" else Color("c08f82") if a.hostile else Color("a7a9c2")
+ if battle.chapter_id==6 and id=="wheelchair":draw_chair(at)
  if int(a.hp)<=0:
   canvas.draw_line(at-Vector2(25,6),at+Vector2(25,6),color.darkened(.5),9);return
  var h:float=55 if id in ["cat","dog"] else 133
@@ -112,7 +122,7 @@ func actor(id:String) -> void:
  if id=="corner" and a.phase=="point":canvas.draw_line(at-Vector2(0,65),app.layout.project(battle.position(id)+battle.vector(a.direction)*.8)-Vector2(0,65),color,6)
  if id=="twitch" and a.phase=="windup" and a.get("echo_knee",false):canvas.draw_line(at+Vector2(-10,-30),at+Vector2(-25,-15),Color("d3c2a0"),7)
  if id=="dog":canvas.draw_line(at+Vector2(-16,-36),at+Vector2(16,-36),Color("ae4e4b"),5)
- if battle.chapter_id==6:draw_material_pose(id,at,h)
+ if battle.chapter_id==6:draw_material_pose(id,at,h);draw_display_pose(id,at,h)
  if a.phase in ["windup","attack","recover","grip"]:
   var direction:Vector2=battle.vector(a.direction)
   var attack:Dictionary=battle.config.attacks[str(s.attack)]
@@ -121,7 +131,7 @@ func actor(id:String) -> void:
   canvas.draw_line(at,end,Color(warning,.5),5)
   var reach:float=clampf(float(a.elapsed)/float(attack.windup),0,1) if a.phase=="windup" else 1.0 if a.phase in ["attack","grip"] else .25
   canvas.draw_line(at-Vector2(0,h*.55),at.lerp(end,reach)-Vector2(0,h*.55),warning,7)
- text(at-Vector2(0,h+12),str(s.get("display_name",s.name))+" · "+{"idle":"待机","windup":"起手","attack":"出手","recover":"收招","grip":"抓握","display":"展示","point":"指向目视危险" if id=="speaker" else "指路","bandage":"包扎","push":"推车","cloth":"展开黑布","mimic":"模仿","drug_hold":"扣头","box_prepare":"抬盒","tear":"撕扯随身纸条","paper_hold":"攥住残片","box_flip":"翻起空盒","box_number":"查看编号","box_stow":"整理空盒","cart_park":"走向侧停清洁车","pick_label":"拾取地面标签","wipe":"擦拭接触区域","bag_label":"送入随车污物袋","bag_seal":"封口","walk":"走近痕迹"}.get(str(a.phase),str(a.phase)),14)
+ text(at-Vector2(0,h+12),str(s.get("display_name",s.name))+" · "+{"idle":"待机","windup":"起手","attack":"出手","recover":"收招","grip":"抓握","display":"展示","point":"指向目视危险" if id=="speaker" else "指路","bandage":"包扎","push":"推车","cloth":"展开黑布","mimic":"模仿","drug_hold":"扣头","box_prepare":"抬盒","bed_turn":"过门转向","bed_travel":"推床随行","bed_retreat":"退离门口","tear":"撕扯随身纸条","paper_hold":"攥住残片","box_flip":"翻起空盒","box_number":"查看编号","box_stow":"整理空盒","cart_park":"走向侧停清洁车","pick_label":"拾取地面标签","wipe":"擦拭接触区域","bag_label":"送入随车污物袋","bag_seal":"封口","walk":"走近痕迹","display_retreat":"受伤后退避","stamp":"盖章","number_show":"展示号码纸","paper_stow":"收回号码纸","number_front":"编号正面","number_turn":"转身","number_back":"另一面编号","chair_aside":"调椅让路","entry_point":"指向原入口","band_raise":"举起自身腕带","protect_photo":"护住照片","protect_body":"收臂护身","dressing_open":"掀开敷料","dressing_show":"露出注销标记","dressing_cover":"按回敷料","branch_point":"指向维护入口","clip_read":"查看转运夹","cloth_raise":"抬起黑布","cloth_close":"收拢黑布","mimic_write":"记录板书写"}.get(str(a.phase),str(a.phase)),14)
 
 func draw_street_surfaces() -> void:
  for item in battle.data.get("materials",{}).get("surfaces",{}).values():
@@ -198,3 +208,72 @@ func draw_gate(prop:Dictionary) -> void:
  var a:Vector2=center+Vector2(0,-.85);var b:Vector2=center+Vector2(0,.85)
  for at in [a,b]:canvas.prism(Rect2(at-Vector2(.1,.1),Vector2(.2,.2)),h,Color("adaca0"))
  canvas.draw_line(app.layout.project(a)-Vector2(0,h),app.layout.project(b)-Vector2(0,h),Color("c8c6af"),12)
+
+func draw_chair(at:Vector2) -> void:
+ var footprint:Rect2=battle.displays.chair_rect(battle.position("wheelchair"));var points:Array=[]
+ for p in [footprint.position,Vector2(footprint.end.x,footprint.position.y),footprint.end,Vector2(footprint.position.x,footprint.end.y)]:points.append(app.layout.project(p))
+ canvas.poly(points,Color("4e555e"))
+ for side in [-1,1]:
+  canvas.draw_arc(at+Vector2(side*24,-17),19,0,TAU,24,Color("b0b1a4"),4)
+  canvas.draw_line(at+Vector2(side*18,-54),at+Vector2(side*23,-16),Color("858f8f"),5)
+ canvas.draw_line(at+Vector2(-19,-23),at+Vector2(19,-23),Color("9fa49a"),5)
+
+func draw_display_pose(id:String,at:Vector2,h:float) -> void:
+ if id in ["informant","head_nurse"] and battle.data.actors[id].phase=="point":
+  var a:Dictionary=battle.data.actors[id]
+  canvas.draw_rect(Rect2(at+Vector2(-17,-h*.6),Vector2(22,26)),Color("c2b99b"))
+  canvas.draw_line(at+Vector2(13,-h*.55),app.layout.project(battle.position(id)+battle.vector(a.direction)*.85)-Vector2(0,h*.55),Color("b9af97"),6)
+ if id not in battle.displays.IDS:return
+ var a:Dictionary=battle.data.actors[id];var s:Dictionary=battle.displays.state(id)
+ var paper:Color=Color("cdc2a1");var ink:Color=Color("5e5960");var skin:Color=Color("b9af97")
+ if id=="register_nurse":
+  var sheet:Vector2=at+Vector2(27,-h*(.58 if a.phase=="number_show" else .32))
+  canvas.draw_rect(Rect2(sheet-Vector2(13,10),Vector2(26,20)),paper)
+  canvas.draw_line(at+Vector2(13,-h*.5),sheet,skin,5)
+  if a.phase=="stamp":canvas.draw_rect(Rect2(sheet+Vector2(-5,-18),Vector2(9,12)),Color("864e53"))
+  if a.phase=="number_show":text(sheet+Vector2(0,4),"编号待核",9)
+ elif id=="back":
+  var top:Vector2=at-Vector2(0,h*.57)
+  canvas.draw_rect(Rect2(top-Vector2(13,7),Vector2(26,14)),paper)
+  text(top+Vector2(0,4),"面B" if s.turned else "面A",10)
+  if a.phase=="number_turn":canvas.draw_arc(at-Vector2(0,h*.85),16,0,float(s.elapsed)/float(battle.config.test_parameters.face_turn_s)*TAU,20,ink,3)
+ elif id in ["wheelchair","transport_patient"]:
+  var protect:bool=a.phase in ["protect_photo","protect_body"]
+  var hand:Vector2=at+Vector2(3 if protect else 27,-h*(.55 if protect else .47))
+  canvas.draw_line(at+Vector2(12,-h*.53),hand,skin,6)
+  if id=="wheelchair":
+   canvas.draw_rect(Rect2(hand-Vector2(10,9),Vector2(20,18)),paper)
+   canvas.draw_circle(hand+Vector2(0,-2),4,ink)
+   if protect:canvas.draw_line(at+Vector2(-12,-h*.5),hand+Vector2(7,4),skin,6)
+  else:
+   canvas.draw_line(at+Vector2(-16,-h*.25),at+Vector2(14,-h*.18),paper,5)
+   canvas.draw_arc(hand,7,0,TAU,16,paper,3)
+  if a.phase=="entry_point":canvas.draw_line(hand,app.layout.project(battle.position(id)+battle.vector(a.direction)*.65)-Vector2(0,h*.5),skin,5)
+ elif id=="postop":
+  var mark:Vector2=at+Vector2(9,-h*.52)
+  canvas.draw_rect(Rect2(mark-Vector2(12,10),Vector2(24,20)),Color("705d63") if a.phase=="dressing_show" else paper)
+  canvas.draw_line(at+Vector2(-13,-h*.55),mark+Vector2(-9,-12 if a.phase=="dressing_show" else 0),skin,5)
+  if a.phase=="dressing_show":text(mark+Vector2(0,4),"注销",11)
+ elif id=="triage":
+  canvas.draw_line(at+Vector2(-13,-h*.88),at+Vector2(13,-h*.88),Color("96525b"),4)
+  canvas.draw_rect(Rect2(at+Vector2(-12,-h*.59),Vector2(24,25)),paper)
+  if a.phase=="clip_read":text(at-Vector2(0,h*.4),"批次栏",10)
+  elif a.phase=="branch_point":canvas.draw_line(at-Vector2(0,h*.5),app.layout.project(battle.position(id)+battle.vector(a.direction)*.8)-Vector2(0,h*.5),skin,6)
+ elif id=="blind":
+  canvas.draw_line(at+Vector2(-12,-h*.88),at+Vector2(12,-h*.88),Color("2a2a36"),6)
+  if a.phase in ["cloth","cloth_raise","cloth_close"]:
+   var left:Vector2=app.layout.project(battle.position(id)+Vector2(-.6,.2));var right:Vector2=app.layout.project(battle.position(id)+Vector2(.6,1.2))
+   var raised:float=1.0 if a.phase=="cloth" else clampf(float(s.elapsed)/.3,0,1) if a.phase=="cloth_raise" else 1.0-clampf(float(s.elapsed)/.3,0,1)
+   canvas.poly([left-Vector2(0,12+90*raised),right-Vector2(0,12+90*raised),right-Vector2(0,12),left-Vector2(0,12)],Color("292a37"))
+   canvas.draw_line(at-Vector2(0,h*.55),left-Vector2(0,12+90*raised),skin,5)
+ elif id=="mimic":
+  var board:Vector2=at-Vector2(0,h*.43)
+  canvas.draw_rect(Rect2(board-Vector2(19,14),Vector2(38,28)),paper)
+  if a.phase=="mimic":
+   var offset:Vector2=Vector2(22,-h*.85) if a.get("mimic","") in ["tinnitus","give","scratch"] else Vector2(29,-h*.4)
+   canvas.draw_line(at+Vector2(12,-h*.58),at+offset,skin,6)
+  elif a.phase=="mimic_write":
+   var t:float=clampf(float(s.elapsed)/float(battle.config.test_parameters.mimic_write_s),0,1)
+   canvas.draw_line(board-Vector2(12,0),board+Vector2(-12+24*t,0),ink,2)
+   canvas.draw_line(at+Vector2(15,-h*.6),board+Vector2(-12+24*t,0),skin,5)
+  elif s.get("last_written",false):text(board+Vector2(0,4),"自主行为",10)

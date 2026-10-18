@@ -1,0 +1,20 @@
+{
+  "failures": [
+    "same carrier and bed enter target only after the actual portal sweep"
+  ],
+  "passes": [
+    "live real-door demonstration pays for CONTROL, without directly setting follow or destination",
+    "real mouse command walks, opens and crosses existing door",
+    "actual last sight and host door crossing produce the real follow request",
+    "ordinary process begins rigid bed turning",
+    "existing close/room click-protection finishes before the pause key",
+    "real Space freezes partial travel pose and operator",
+    "real middle drag views current-room entry while host remains autonomous",
+    "resuming ordinary process reaches actual source doorway sweep",
+    "entry is rendered in the host's real current room",
+    "ordinary remaining movement finishes inside the target room",
+    "actual trip retains unique object and all original identities"
+  ],
+  "rendered": true,
+  "scope": "Declared near-door source pose/cast/HP and 30s initial carrier cooldown fixture to isolate transport. Actual paid CONTROL, viewport mouse door command, Space and middle drag. No direct follow/destination/room/position modifications after start; ordinary process throughout. Silent placeholder recording, not natural full game or human/art/audio acceptance."
+}

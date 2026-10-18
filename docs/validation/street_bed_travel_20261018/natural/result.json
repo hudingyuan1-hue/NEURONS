@@ -1,0 +1,43 @@
+{
+  "attempts": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "5": 1,
+    "6": 1
+  },
+  "elapsed_game_seconds": 149.033333333327,
+  "ending": {
+    "complete": false,
+    "dialogue_sent": false,
+    "elapsed": 0.0,
+    "id": "E2",
+    "phase": "registration",
+    "receipt": "ending:E2:c118b98a890944ece3e1f95b02f2411c39826a26158b56b1766b39d2800dd756"
+  },
+  "failures": [],
+  "hp": 35,
+  "passes": [
+    "natural L5 and Street process reaches real main ending",
+    "no fifteen-second unexplained movement stall",
+    "real L5 doorway unlocks fixed forty-five Street identities",
+    "battle route never returns to key-search gameplay"
+  ],
+  "rendered": true,
+  "scope": "Declared direct L5 entry (or explicit --street-entry-only); after entry no seed/NPC/resource/position/route/damage fixtures. Fixed30 automatic real window, not human pacing or all branches.",
+  "visits": [
+    "atrium",
+    "decision",
+    "bridge",
+    "switch",
+    "verify",
+    "hippocampus",
+    "thalamus",
+    "brainstem",
+    "street_plaza",
+    "street_narrow",
+    "street_twisted",
+    "street_node",
+    "street_end"
+  ]
+}

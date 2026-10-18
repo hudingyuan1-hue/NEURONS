@@ -1,12 +1,14 @@
 extends RefCounted
 ## S3:P1756–1763: independent side-pushed bed, not the assistant's charge.
 const CARRIER="transporter_asylum"
+const Travel=preload("res://scripts/core/street_bed_travel.gd")
+var travel
 var owner_ref:WeakRef
 var battle:
  get:return owner_ref.get_ref()
 var app:
  get:return battle.app
-func _init(owner) -> void:owner_ref=weakref(owner)
+func _init(owner) -> void:owner_ref=weakref(owner);travel=Travel.new(self)
 func v(a:Array) -> Vector2:return battle.vector(a)
 func xy(p:Vector2) -> Array:return battle.xy(p)
 func anchor(center:Vector2,axis:Vector2) -> Vector2:return center-axis*battle.Bed.OFFSET
@@ -14,6 +16,7 @@ func anchor(center:Vector2,axis:Vector2) -> Vector2:return center-axis*battle.Be
 func normalize() -> void:
  if not battle.data.get("lateral_bed",{}).is_empty():
   if not battle.data.lateral_bed.has("id"):battle.data.lateral_bed.id="street_asylum_transport_bed"
+  if not battle.data.lateral_bed.has("travel"):battle.data.lateral_bed.travel={}
   return
  var a:Dictionary=battle.data.actors[CARRIER]
  var push:=Vector2.RIGHT;var center:Vector2=battle.position(CARRIER)+push*.8
@@ -67,14 +70,15 @@ func lane_clear(center:Vector2,axis:Vector2,push:Vector2) -> bool:
  pop_blocker(space,state)
  return clear
 
-func _people_clear(center:Vector2,axis:Vector2,operator:Vector2) -> bool:
+func _people_clear(center:Vector2,axis:Vector2,operator:Vector2,room:String="") -> bool:
  var b:Dictionary=battle.data.lateral_bed
+ if room.is_empty():room=str(b.room)
  var other_bed:Dictionary=battle.data.actors.assistant
- if other_bed.present and other_bed.room==b.room and battle.Bed.overlaps_rect(anchor(center,axis),axis,battle.bed_rect(battle.position("assistant"),v(other_bed.direction))):return false
- if b.room==app.room_id and (battle.Bed.touches(anchor(center,axis),axis,app.hero_pos,.23) or operator.distance_to(app.hero_pos)<.43):return false
+ if other_bed.present and other_bed.room==room and battle.Bed.overlaps_rect(anchor(center,axis),axis,battle.bed_rect(battle.position("assistant"),v(other_bed.direction))):return false
+ if room==app.room_id and (battle.Bed.touches(anchor(center,axis),axis,app.hero_pos,.23) or operator.distance_to(app.hero_pos)<.43):return false
  for id in battle.data.actors:
   var a:Dictionary=battle.data.actors[id]
-  if id!=CARRIER and a.present and a.hp>0 and a.room==b.room:
+  if id!=CARRIER and a.present and a.hp>0 and a.room==room:
    if battle.Bed.touches(anchor(center,axis),axis,battle.position(str(id)),.25) or operator.distance_to(battle.position(str(id)))<.43:return false
  return true
 
@@ -91,7 +95,8 @@ func _orient(toward:Vector2,delta:float) -> bool:
  var b:Dictionary=battle.data.lateral_bed;var at:Vector2=battle.position(CARRIER)
  var current:Vector2=v(b.push);var wanted:Vector2=(toward-at).normalized()
  var push:Vector2=current.rotated(clampf(current.angle_to(wanted),-1.8*delta,1.8*delta));var axis:=Vector2(-push.y,push.x)
- var center:Vector2=at+push*.8
+ var offset:float=move_toward(v(b.center).distance_to(at),.8,delta*.2)
+ var center:Vector2=at+push*offset
  var sweep:Dictionary=battle.Bed.sweep(battle.floor_for(str(b.room)),anchor(v(b.center),v(b.axis)),anchor(center,axis),v(b.axis),axis)
  if not sweep.complete:return false
  for pose in sweep.poses:
@@ -114,6 +119,7 @@ func actor(delta:float) -> void:
   a.hurt=maxf(0,float(a.hurt)-delta);return
  if a.hp<=0:
   if b.phase=="windup":_recover(false)
+  b.travel={};a.follow=""
   return # Stationary corpse/bed stay at their actual separate positions.
  if a.hurt>0:
   a.hurt=maxf(0,float(a.hurt)-delta)
@@ -128,12 +134,12 @@ func actor(delta:float) -> void:
  a.cooldown=maxf(0,float(a.cooldown)-delta)
  if battle.position(CARRIER).distance_to(v(b.operator))>.08:
   battle._move_actor(CARRIER,v(b.operator),delta);return
+ if not travel.phase().is_empty():travel.tick(delta);return
  var visible:bool=a.room==app.room_id and battle.position(CARRIER).distance_to(app.hero_pos)<=6 and battle.can_see(str(a.room),battle.position(CARRIER),app.hero_pos)
  if not visible:
-  if not str(a.follow).is_empty():
-   a.follow="" # Its current lateral pose cannot fit a normal 1.4m mouth.
-   _translate(-v(b.push)*minf(.5,delta*.8))
+  travel.tick(delta)
   return
+ a.follow=""
  a.last_seen=xy(app.hero_pos);a.last_seen_at=battle.data.clock
  if not b.seen_sign and battle.position(CARRIER).distance_to(app.hero_pos)<=3 and battle.can_see(app.room_id,app.hero_pos,v(b.center)):
   b.seen_sign=true

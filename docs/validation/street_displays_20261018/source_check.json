@@ -1,0 +1,437 @@
+{
+  "source": {
+    "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+    "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59"
+  },
+  "reuse": {
+    "path": "tmp/b2_source_intake/S3.txt",
+    "sha256": "8e4c6c6b18f0e5aaa8ad20d8ee7b882804ff3889dde4a2ac01d72a2ad6804a7f"
+  },
+  "targeted_original_paragraphs": [
+    {
+      "id": "S3:P1613",
+      "text": "4．登记护士 中立 第三关一层身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1614",
+      "text": "动作：托住空白表格→用固定在手掌的印章盖印→举起编号纸展示→放回手中，继续盖章。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1615",
+      "text": "判定：角色必须实际看清纸面编号，并与现场可见腕带核对，才确认不符。未看清腕带时，只取得纸面信息。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1616",
+      "text": "效果：展示不替角色重新挂号，不更改角色编号、阵营或通行资格；编号纸不成为必交物品。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1617",
+      "text": "受袭：中断盖章、退避；不新增印章攻击或召集保安能力。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1618",
+      "text": "新增角色对白：确认与自身腕带不符后：“这不是我腕带上的号码。”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1619",
+      "text": "5．护士长 敌对 第三关二层身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1620",
+      "text": "触发链：实际看见角色→举起记录板敲击→伸手指向角色最后看见的位置。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1621",
+      "text": "接收条件：附近已有的敌对医护，必须在本次动作中实际听见敲板并看见指向，才能接收位置提示。小护士、登记护士不会因为同属医护就改变阵营。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1622",
+      "text": "响应：接收者转向、检查被指位置；必须再实际发现角色，才能持续追踪。角色已经离开时，指向不能提供实时坐标。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1623",
+      "text": "打断：敲板、指向尚未完成便受击，中断未完成部分；已经被接收的信息不倒销。无人接收时，本次通知不产生追兵。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1624",
+      "text": "效果：通知本身不扣血、不锁门、不召出新护工。护士长随后沿侧边调整位置，不另加记录板近战招式。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1625",
+      "text": "新增角色对白：实际看见其指向并看到附近敌人响应后：“她在指我的位置。”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1626",
+      "text": "6．背身人 中立 第四关一层身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1627",
+      "text": "站位与动作：位于侧边可绕行处；角色接近后，身体转向，展示另一面的编号，面部仍不完整。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1628",
+      "text": "判定：前后两组编号必须分别实际看见；同一人物转身不生成第二个身份，也不把编号转移给角色。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1629",
+      "text": "效果：不攻击、不扣精神、不强制停步。持续贴近只保持当前朝向，不无限转圈。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1630",
+      "text": "受袭：中断展示并避让；本节不新增反击。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1631",
+      "text": "新增角色对白：完整看过两面后：“转过来，还是没有脸。”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1648",
+      "text": "9．轮椅患者 友好 第二关身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1649",
+      "text": "辨识：病服、拖地束带、家属照片；不与第三关被推床转运的患者合并。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1650",
+      "text": "动作：看见角色接近→调整轮椅朝向→向墙侧移动→停稳后指向原入口；遇危险收手护住照片。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1651",
+      "text": "通行判定：轮椅按真实宽度移动和转弯；位置不足时先停下，不穿过长椅、墙体或其他人物。预留位置保证让路无需角色推车。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1652",
+      "text": "效果：只让路、指路，不提供治疗、开门或载乘能力；拖地束带不新增绊倒伤害。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1653",
+      "text": "物件继承：照片只作辨识，不交付第二份可携带原物；前关若实际遗失，保留遗失记录，不补写“已经找回”。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1654",
+      "text": "若照片原件已进入第三关遗物袋，本关外形可显示异化记忆投影；保持原件去向，不能取得第二张实体照片。“护住照片”的反馈只描述当前可见动作，不声称已找回原物。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1655",
+      "text": "新增角色对白：实际看见其护住照片后：“他还护着那张照片。”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1656",
+      "text": "10．被转运患者 友好 第三关二层身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1657",
+      "text": "辨识：裹着床单、残留束带，手持自身编号腕带；作为活人处理，不按场景尸体布置。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1658",
+      "text": "动作：靠墙坐着→察觉角色→举起腕带→抬手指向原入口；危险靠近时收臂护住身体。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1659",
+      "text": "效果：腕带提供身份核对，手势提供返回方向；不要求角色救起、背走或取走腕带才能离开。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1660",
+      "text": "受袭：真实命中造成伤害，中断手势；坐姿不赋予无敌。人物及床单不横占唯一出口。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1661",
+      "text": "继承：第三关原腕带若曾实际脱落，其去向记录保留；当前异化呈现不能追溯改成“从未脱落”。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1662",
+      "text": "新增角色对白：只有此前确实见过转运并核对编号时：“床上那个人，是你。”否则不播放。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1663",
+      "text": "11．术后病友 友好 第三关二层身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1664",
+      "text": "触发：角色接近且没有正在迫近的攻击时，病友转身面向角色，扶住敷料，展示其边缘下的注销编号。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1665",
+      "text": "动作：展示→等待短暂观察→按回敷料；看见追兵则立即收回动作，沿墙退避。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1666",
+      "text": "效果：角色实际看清编号才取得当前证据。未看完、主动离开或被打断，均不自动获得完整内容，也不强迫重新观看。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1667",
+      "text": "伤情：展示本身不扣血，不凭空扩大旧伤。病服、敷料和编号保持同一人物关联，不把注销等同死亡。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1668",
+      "text": "新增角色对白：看清编号并确认眼前病友仍活着后：“人还在，编号却注销了。”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1728",
+      "text": "19．双面人格 中立 第四关双面人",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1729",
+      "text": "外貌：前脸对应角色已经成立的当前外貌，后脸保留真实旧伤；不生成未来伤痕或未经发生的变化。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1730",
+      "text": "触发：亲眼看见一次成功神经干预造成的身体反应，后脸才转向镜头。被抵抗、菜单预览、隔墙施技或角色普通受伤均不触发。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1731",
+      "text": "细分：完全掌控须实际执行可见动作；只有接管、没有动作时，不触发。耳鸣须确实出现可见侧头停步，不能因读取内部技能状态而获知。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1732",
+      "text": "动作与次数：每次有效施放最多尝试一次转头；已经朝向镜头则保持注视，不反复转圈。转头被受击打断，不排队补演。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1733",
+      "text": "原乱码保留：“䶹䶱䴕䲈䶼䴡䵿䶳䴴䵳䶸䴵！”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1734",
+      "text": "效果：不复制技能，不自动提供觉醒或第四面墙证据；受袭后退避，不新增反击。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1735",
+      "text": "20．导诊护士 中立 第二关身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1736",
+      "text": "辨识：红框眼镜嵌入眼周，号码夹遮住胸牌，夹内保留转运批次。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1737",
+      "text": "动作：位于能看见维护通道入口的位置→抬手指向该支道→收手查看号码夹→再次指示。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1738",
+      "text": "路线判定：只指向真实存在的入口，不把维护通道变成通往节点后方的捷径；角色可以忽略指引继续沿主路前进。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1739",
+      "text": "观察：号码夹实际打开、批次可见时才能读取；未看清不自动得到整份转运记录。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1740",
+      "text": "效果：不办理新的转运，不扣血、不强制跟随。当前中立不删除此前实际参与转运的记录。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1741",
+      "text": "新增角色对白：看清夹内信息后：“夹子里还有转运批次。”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1864",
+      "text": "39．蒙眼人 中立 第四关一层身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1865",
+      "text": "触发与动作：听见附近真实脚步后停步，抬臂展开从眼部延伸出的黑布，短暂维持，再收回。持续接近不反复刷新展开时长。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1866",
+      "text": "遮挡范围：只遮住布面实际覆盖的局部；不让整屏变黑，不同时遮尽两侧绕行方向，也不生成新的实体墙。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1867",
+      "text": "双方视线：布面实际挡住视线时，角色与追兵都不能继续通过该处取得目视信息；追兵转为检查最后目击位置。尚未挡住的位置仍正常可见。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1868",
+      "text": "攻击关系：失去视线不撤销已经启动的攻击；布条不提供额外护盾，攻击仍按真实轨迹与接触结算。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1869",
+      "text": "信息继承：遮挡前已经看见的内容保留；不重播第四关修改影像，不删除线索，不自动触发看向镜头或第四面墙认知。受袭则中断展开、退避，不新增反击。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1906",
+      "text": "44．告密病友 中立 第三关二层身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1907",
+      "text": "辨识：颈部挂离室许可，手中攥编号条；与发言病友、劳动病友分开。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1908",
+      "text": "报告链：亲眼看见角色→转向附近已有的敌对医护→举手指向→对方实际看见并接收提示→对方检查被指位置。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1909",
+      "text": "接收限制：附近无人接收、接收者被遮挡或报告动作被提前打断，本次报告不生效。不能全图通报、凭空召人或使中立医护自动转为敌对。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1910",
+      "text": "追踪限制：只提供当时目击的位置与方向；角色转入遮挡后，报告不能继续更新精确位置。接收者已经追逐时，不因再次指示重置攻击。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1911",
+      "text": "物品与记录：离室许可不是角色的通关凭证；持有许可也不等于本次报告已经完成。编号条沿用既有归属，不自动改成角色编号。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1912",
+      "text": "效果：报告本身不扣血、不锁门。受到攻击则中断动作、退避，不新增直接反击。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1913",
+      "text": "新增角色对白：实际看见完整指示后：“在给他们指路。”",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1914",
+      "text": "45．复述者 中立 第四关一层身份",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1915",
+      "text": "观察条件：模仿亲眼看清的角色动作，包括普通停步、转身、抬手，以及成功干预造成的可见身体反应；不读取菜单、鼠标或隔墙动作。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1916",
+      "text": "动作流程：在当前站位完成一次短模仿→在胸前记录板写下“自主行为”。未完成书写，不提前生成完整条目。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1917",
+      "text": "效果边界：模仿踢击不产生攻击伤害；模仿移动不复制位移效果；不施放技能、不获得资源、不替角色完成互动。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1918",
+      "text": "记录含义：“自主行为”是人物写下的标注，不改变角色实际控制来源。普通自主动作不会因此被反记成玩家干预。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1919",
+      "text": "中断与次数：同一次观察只模仿一次；受击中断后不排队补演。持续观察时只处理新的清楚动作，不积压整段行动。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1920",
+      "text": "认知边界：不因模仿自动增加第四面墙证据；已经成立的干预证据也不重复记账。",
+      "found_in_original_docx": true
+    },
+    {
+      "id": "S3:P1921",
+      "text": "新增角色对白：实际看到对应模仿后：“它在学我。”",
+      "found_in_original_docx": true
+    }
+  ],
+  "protected_original_config": {
+    "actors": true,
+    "attacks": true,
+    "rooms": true,
+    "good_ids": true,
+    "dialogue": true
+  },
+  "protected_files": [
+    {
+      "path": "neurons/data/skills.json",
+      "worktree_sha256": "2d69fc3abb4b7be7516db6a4cb17c8988ed6bee23925eea442c0a95cbdf24f68",
+      "HEAD_sha256": "1892910a62c7b06f9cfef92f57dba12caa14d27409241bc1cc59b14d480b62d8",
+      "byte_identical_to_HEAD": false,
+      "unchanged_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/key_discovery.json",
+      "worktree_sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "HEAD_sha256": "a141aa7333951a486423bd62ffb7553d8a0c2ebe68175eda67dfcfd2eb2abc6a",
+      "byte_identical_to_HEAD": true,
+      "unchanged_ignoring_Git_CRLF_checkout": true
+    },
+    {
+      "path": "neurons/data/audio_bindings.json",
+      "worktree_sha256": "86e08c2281270209c188af4e4b8be072420abc2146da7c36da2c2a1e5514635e",
+      "HEAD_sha256": "c1bfd2df88a87c2eda8b56ec07df425e647afc9703831103f4baca047176fe3b",
+      "byte_identical_to_HEAD": false,
+      "unchanged_ignoring_Git_CRLF_checkout": true
+    }
+  ],
+  "adoption": {
+    "register/back/patients/triage": "street_displays.gd actual exposure/read/hurt/old-save state; unknown glyphs remain null",
+    "blind": "actual nearby footsteps/finite local cloth; stopped during hold, not a physical wall/global screen effect",
+    "mimic": "visible action -> in-place copy -> completed board entry; institutional classification preserves actual origin",
+    "reports": "existing visible living hostile medical receivers only, original-position snapshot; no launched attack reset",
+    "double_face": "TINNITUS requires rendered stopped head/ear pose; internal effect alone insufficient"
+  },
+  "limits": [
+    "No authored number glyphs, photograph reclamation or former patient identity matches invented",
+    "No anatomical injury locations inferred from HP or unrelated archive photographs",
+    "Remaining injury-recognition and archivist/material ownership branches not completed by these displays"
+  ],
+  "external_sources": 0,
+  "imagegen_calls": 0,
+  "paid_services": 0
+}

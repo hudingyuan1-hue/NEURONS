@@ -1,0 +1,30 @@
+[
+  {
+    "crossed": true,
+    "phase": "",
+    "room": "street_node",
+    "steps": 519,
+    "valid": true
+  },
+  {
+    "crossed": true,
+    "phase": "",
+    "room": "street_twisted",
+    "steps": 425,
+    "valid": true
+  },
+  {
+    "crossed": true,
+    "phase": "",
+    "room": "street_maintenance",
+    "steps": 493,
+    "valid": true
+  },
+  {
+    "crossed": true,
+    "phase": "",
+    "room": "street_twisted",
+    "steps": 425,
+    "valid": true
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "failures": [
+    "JSON reload keeps same partial rotation and pending destination",
+    "autonomous host physically approaches side lane and crosses existing door without collision bypass"
+  ],
+  "passes": [
+    "actual per-step body/bed/rotation limits and portal-only coordinate mapping: street_twisted→street_node",
+    "same carrier and bed complete existing doorway: street_twisted→street_node",
+    "ordinary transport makes no attack damage or extra patient: street_node",
+    "actual per-step body/bed/rotation limits and portal-only coordinate mapping: street_node→street_twisted",
+    "same carrier and bed complete existing doorway: street_node→street_twisted",
+    "ordinary transport makes no attack damage or extra patient: street_twisted",
+    "actual per-step body/bed/rotation limits and portal-only coordinate mapping: street_twisted→street_maintenance",
+    "same carrier and bed complete existing doorway: street_twisted→street_maintenance",
+    "ordinary transport makes no attack damage or extra patient: street_maintenance",
+    "actual per-step body/bed/rotation limits and portal-only coordinate mapping: street_maintenance→street_twisted",
+    "same carrier and bed complete existing doorway: street_maintenance→street_twisted",
+    "ordinary transport makes no attack damage or extra patient: street_twisted",
+    "actual manual pause freezes in-progress turn",
+    "restored partial turn follows remaining route without bed respawn",
+    "occupied destination causes real withdrawal, never teleporting through a person",
+    "blocked large carrier finishes away from the return doorway",
+    "declared narrow-mouth fixture rejects actual combined bed/operator width and withdraws",
+    "fixture reaches real door-crossing sweep before death",
+    "death leaves stationary traveling bed at its actual pose, without posthumous locomotion",
+    "dead bed at door center still leaves a real body-width lane inside the same aperture",
+    "actual rotated-footprint navigation reaches remaining door lane after carrier death"
+  ],
+  "rendered": true,
+  "scope": "Four clear-floor/cast/pose fixtures through real follow requests, exact transport sweeps, manual pause/JSON, blocked and temporarily narrower portal fixtures, actual death and autonomous side-lane exit. Not all crowd combinations, natural all-game/human/formal art/audio acceptance."
+}

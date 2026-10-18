@@ -8,9 +8,11 @@ const LateralBed=preload("res://scripts/core/street_lateral_bed.gd")
 var lateral_bed
 const Materials=preload("res://scripts/core/street_materials.gd")
 var materials
+const Displays=preload("res://scripts/core/street_displays.gd")
+var displays
 
 func _init(owner) -> void:
- super(owner);map=StreetMap;chapter_id=6;box=Box.new(self);lateral_bed=LateralBed.new(self);materials=Materials.new(self)
+ super(owner);map=StreetMap;chapter_id=6;box=Box.new(self);lateral_bed=LateralBed.new(self);materials=Materials.new(self);displays=Displays.new(self)
  config=JSON.parse_string(FileAccess.get_file_as_string("res://data/street_chapter.json"))
 
 func floor_for(room:String):
@@ -47,6 +49,7 @@ func start() -> void:
  box.normalize()
  lateral_bed.normalize()
  materials.normalize()
+ displays.normalize()
 
 func on_enter(from:String,room:String) -> void:
  data.route_left=0.0;data.door_left=-1.0;data.destination="";data.controlled_door="";app.controlled_route=false
@@ -66,13 +69,14 @@ func _spawn() -> void:pass
 func tick(delta:float) -> void:
  if not data.ending.is_empty():return
  super.tick(delta)
- if int(app.session.data.level)==chapter_id:materials.tick()
+ if int(app.session.data.level)==chapter_id:materials.tick();displays.tick()
 
 func _actor(id:String,delta:float) -> void:
  var a:Dictionary=data.actors[id]
  if id=="labor":box.tick(delta);return
  if id=="transporter_asylum":lateral_bed.actor(delta);return
  if not a.present:return
+ if displays.actor(id,delta):return
  if materials.actor(id,delta):return
  if id=="stitched" and materials.prepare_stitched(delta):return
  if a.hp<=0:return
@@ -93,9 +97,6 @@ func _actor(id:String,delta:float) -> void:
   if a.hurt>0:a.hurt=maxf(0,float(a.hurt)-delta);return
   if a.room==app.room_id:
    a.phase="display"
-   if id=="blind":a.cloth_clock=fmod(float(a.cloth_clock)+delta,10.0);a.phase="cloth" if a.cloth_clock>=0 and a.cloth_clock<4 else "idle"
-   if id=="mimic" and data.clock-float(a.get("mimic_last",-10))>=3 and can_see(str(a.room),position(id),app.hero_pos) and position(id).distance_to(app.hero_pos)<6:
-    if app.hero_state in ["walk","hit","scratch","give"]:a.mimic=app.hero_state;a.mimic_last=data.clock;a.phase="mimic"
    _yield(id,delta)
   return
  super._actor(id,delta)
@@ -144,43 +145,110 @@ func _yield(id:String,delta:float) -> void:
   var goal:Vector2=position(id)+offset*.7
   if app.layout.walkable(goal):_move_actor(id,goal,delta);return
 
+func _report_receivers(id:String) -> Array:
+ var a:Dictionary=data.actors[id];var found:Array=[]
+ for other in data.actors:
+  var receiver:Dictionary=data.actors[other]
+  if other==id or not receiver.present or not receiver.hostile or receiver.hp<=0 or receiver.room!=a.room or str(other) in ["father","mother","cat","self","reverse","skinface","twitch"]:continue
+  if position(str(other)).distance_to(position(id))<=6 and can_see(str(a.room),position(str(other)),position(id)):found.append(str(other))
+ return found
+
 func _report(id:String,delta:float) -> void:
  var a:Dictionary=data.actors[id]
  a.report_left=maxf(0,float(a.report_left)-delta)
- if a.hurt>0:a.hurt=maxf(0,float(a.hurt)-delta);a.report_elapsed=0;a.report_target=[];return
- if a.room!=app.room_id:return
+ if a.hurt>0:
+  a.hurt=maxf(0,float(a.hurt)-delta);a.report_elapsed=0;a.report_target=[];a.report_witness=false;a.phase="idle";return
+ if a.room!=app.room_id:
+  a.report_witness=false;return
+ var receivers:Array=_report_receivers(id)
  if a.report_target.is_empty():
-  if a.report_left>0 or not can_see(app.room_id,position(id),app.hero_pos) or position(id).distance_to(app.hero_pos)>6:return
+  if a.report_left>0 or receivers.is_empty() or not can_see(app.room_id,position(id),app.hero_pos) or position(id).distance_to(app.hero_pos)>6:return
   a.report_target=xy(app.hero_pos);a.report_elapsed=0;a.phase="point"
+  a.report_receiver=str(receivers[0]);a.report_candidates=receivers.duplicate() if id=="head_nurse" else [a.report_receiver];a.report_witness=materials.seen(str(a.room),position(id),6)
   if id=="head_nurse":app.audio.cue("SFX_DRAWER","board:%d:%d"%[app.rules.actual_attempt,int(data.clock)])
+ var receiving:Array=[]
+ for other in a.get("report_candidates",[a.get("report_receiver","")]):
+  if str(other) in receivers:receiving.append(str(other))
+ if receiving.is_empty():
+  a.report_target=[];a.report_elapsed=0;a.report_witness=false;a.phase="idle";return
+ a.report_receiver=str(receiving[0])
+ a.direction=xy((vector(a.report_target)-position(id)).normalized()) if id=="head_nurse" else xy((position(str(a.report_receiver))-position(id)).normalized())
+ a.report_witness=a.get("report_witness",false) and materials.seen(str(a.room),position(id),6)
  a.report_elapsed+=delta
  if a.report_elapsed<1:return
- for other in data.actors:
-  var b:Dictionary=data.actors[other]
-  if other==id or not b.hostile or b.hp<=0 or b.room!=a.room or str(other) in ["father","mother","cat","self","reverse","skinface","twitch"]:continue
-  if position(other).distance_to(position(id))<=6 and can_see(str(a.room),position(other),position(id)):
-   b.investigation={"room":a.room,"at":a.report_target.duplicate(),"receipt":"report:"+id}
- a.report_target=[];a.report_elapsed=0;a.report_left=8;a.phase="idle"
+ # A real receiving actor investigates the reported OLD position. Never overwrite
+ # a launched attack, acquire the hero's later position, or inform absent actors.
+ for other in receiving:
+  var recipient:Dictionary=data.actors[str(other)]
+  recipient.investigation={"room":a.room,"at":a.report_target.duplicate(),"receipt":"report:"+id}
+ a.report_serial=int(a.get("report_serial",0))+1
+ var receipt:String="street_report:%d:%s:%d"%[app.rules.actual_attempt,id,a.report_serial]
+ var witnessed:bool=a.report_witness and materials.seen(str(a.room),position(str(a.report_receiver)),6)
+ data.reports[id]={"receipt":receipt,"at":a.report_target.duplicate(),"receiver":a.report_receiver,"receivers":receiving.duplicate(),"witnessed":witnessed}
+ app.rules._record("street_report_received",receipt,{"actor":id,"receiver":a.report_receiver,"room":a.room,"at":a.report_target.duplicate(),"witnessed":witnessed,"source":"S3:P1619–1625/P1906–1913"})
+ if id=="informant" and witnessed:app.rules.observe("角色","street_informant_point","实际看见通报者向眼前的敌对医护完成指示；未因此获得对方随后调查的全图位置。","亲历事实","S3:P1906–1913")
+ a.report_target=[];a.report_elapsed=0;a.report_left=8;a.report_witness=false;a.phase="idle"
 
 func can_see(room:String,from:Vector2,to:Vector2) -> bool:
  if not super.can_see(room,from,to):return false
  var blind:Dictionary=data.get("actors",{}).get("blind",{})
- if not blind.is_empty() and blind.hp>0 and blind.room==room and blind.phase=="cloth":
+ if not blind.is_empty() and blind.present and blind.hp>0 and blind.room==room and blind.phase=="cloth":
   if floor_for(room).segment_hits_rect(from,to,Rect2(position("blind")-Vector2(.6,.2),Vector2(1.2,1.0))):return false
  return true
 
 func move_hero(delta:float) -> void:super.move_hero(delta*(1+.05*int(data.speed_stacks)))
 
 func bed_blocks(room:String,point:Vector2,radius:float,exclude:String="") -> bool:
- return super.bed_blocks(room,point,radius,exclude) or (exclude!="transporter_asylum" and lateral_bed.touches(room,point,radius))
+ return super.bed_blocks(room,point,radius,exclude) or (exclude!="transporter_asylum" and lateral_bed.touches(room,point,radius)) or displays.blocks(room,point,radius,exclude)
+
+func _entry_point(from:String,to:String,offset:float) -> Vector2:
+ var entry:Dictionary=floor_for(to).portal(from);var inward:Vector2=entry.inward
+ return Vector2(entry.landing)+Vector2(-inward.y,inward.x)*offset
+
+func _landing_clear(from:String,to:String,offset:float) -> bool:
+ if to not in map.rooms():return true
+ var point:Vector2=_entry_point(from,to,offset)
+ if not floor_for(to).walkable(point) or bed_blocks(to,point,.21):return false
+ for id in data.actors:
+  var a:Dictionary=data.actors[id]
+  if a.present and a.hp>0 and a.room==to and point.distance_to(position(str(id)))<.43:return false
+ return true
+
+func hero_portal(to:String) -> Dictionary:
+ var portal:Dictionary=app.layout.portal(to).duplicate()
+ if portal.is_empty():return portal
+ var inward:Vector2=portal.inward;var tangent:=Vector2(-inward.y,inward.x)
+ var side:float=maxf(0,float(portal.width_m)*.5-app.layout.body_radius-.02)
+ for offset in [0.0,-side,side,-side*.5,side*.5]:
+  var shift:Vector2=tangent*float(offset);var free:bool=true
+  for key in ["at","threshold","landing"]:
+   var point:Vector2=Vector2(portal[key])+shift
+   if not app.layout.walkable(point) or bed_blocks(app.room_id,point,.21):free=false;break
+   for id in data.actors:
+    var a:Dictionary=data.actors[id]
+    if a.present and a.hp>0 and a.room==app.room_id and point.distance_to(position(str(id)))<.43:free=false;break
+  if not free or not _landing_clear(app.room_id,to,-float(offset)):continue
+  for key in ["at","threshold","landing"]:portal[key]=Vector2(portal[key])+shift
+  portal.lane_offset=float(offset);return portal
+ return portal # Every real lane is occupied: wait, never bypass the collision.
+
+func cross_door(to:String) -> void:
+ var mouth:Dictionary=app.layout.portal(to);var outward:Vector2=-Vector2(mouth.inward)
+ var offset:float=(app.hero_pos-Vector2(mouth.at)).dot(Vector2(-outward.y,outward.x))
+ if not _landing_clear(app.room_id,to,offset):data.door_left=.1;return
+ var from:String=app.room_id;var entry:Vector2=_entry_point(from,to,offset)
+ app.enter_room(to);app.hero_pos=entry;app.keep_metric_actor_visible()
 
 func _hero(delta:float) -> void:
  lateral_bed.normalize()
- if not data.actors.transporter_asylum.present or data.lateral_bed.room!=app.room_id:super._hero(delta);return
- var space=app.layout;var bed:Dictionary=data.lateral_bed
- var patch:Dictionary=lateral_bed.push_blocker(space,lateral_bed.rect(),{"at":lateral_bed.anchor(vector(bed.center),vector(bed.axis)),"axis":vector(bed.axis)})
+ var patches:Array=[];var space=app.layout
+ if displays.chair_present(app.room_id):patches.append(lateral_bed.push_blocker(space,displays.chair_rect(position("wheelchair"))))
+ if data.actors.transporter_asylum.present and data.lateral_bed.room==app.room_id:
+  var bed:Dictionary=data.lateral_bed
+  patches.append(lateral_bed.push_blocker(space,lateral_bed.rect(),{"at":lateral_bed.anchor(vector(bed.center),vector(bed.axis)),"axis":vector(bed.axis)}))
  super._hero(delta)
- lateral_bed.pop_blocker(space,patch)
+ patches.reverse()
+ for patch in patches:lateral_bed.pop_blocker(space,patch)
 
 func _contains(id:String,target:Vector2) -> bool:
  if id=="transporter_asylum":return lateral_bed.touches(str(data.actors[id].room),target,.21)
@@ -204,6 +272,20 @@ func _damage_hero(receipt:String,hp:int,sp:int,source:String) -> bool:
  var paid:bool=super._damage_hero(receipt,hp,sp,source)
  if paid and hp>0:materials.add_trace(app.room_id,app.hero_pos,receipt)
  return paid
+
+func kick_contact() -> void:
+ var old:Dictionary={}
+ for id in data.actors:old[id]={"hp":data.actors[id].hp,"pos":data.actors[id].pos.duplicate()}
+ super.kick_contact()
+ for id in data.actors:
+  var a:Dictionary=data.actors[id]
+  if int(a.hp)>=int(old[id].hp):continue
+  if id=="transporter_asylum":
+   var space=floor_for(str(a.room));var b:Dictionary=data.lateral_bed
+   var patch:Dictionary=lateral_bed.push_blocker(space,lateral_bed.rect(),{"at":lateral_bed.anchor(vector(b.center),vector(b.axis)),"axis":vector(b.axis)})
+   a.pos=xy(space.clipped_step(vector(old[id].pos),vector(a.pos)))
+   lateral_bed.pop_blocker(space,patch)
+  materials.add_trace(str(a.room),position(str(id)),str(app.rules.action.id)+":"+str(id))
 
 func exit_crossed() -> void:
  if app.rules.hp<=0 or not data.ending.is_empty():return

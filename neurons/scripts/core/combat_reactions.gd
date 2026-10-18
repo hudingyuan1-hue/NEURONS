@@ -72,7 +72,7 @@ func _face(delta:float) -> void:
   var id:String=str(pending.skill)
   var moved:bool=app.hero_pos.distance_to(combat.vector(pending.at))>.025
   var turned:bool=absf(app.hero_facing.angle_to(combat.vector(pending.facing)))>.12
-  var actual:bool=moved or (id in ["GUT","WITHDRAW"] and app.rules.reaction_skill==id and app.rules.reaction_left>0) or (id=="KNEE" and not app.rules.action.is_empty()) or (id=="TINNITUS" and float(app.rules.effects.get("TINNITUS",0))>0) or (id=="PORES" and turned)
+  var actual:bool=moved or (id in ["GUT","WITHDRAW"] and app.rules.reaction_skill==id and app.rules.reaction_left>0) or (id=="KNEE" and not app.rules.action.is_empty()) or (id=="TINNITUS" and app.hero_state=="tinnitus") or (id=="PORES" and turned)
   if id=="CONTROL":actual=app.rules.control_left>0 and (moved or (not app.rules.action.is_empty() and app.rules.action.get("controlled",false)))
   if not actual:
    if pending.age>float(combat.config.test_parameters.visible_reaction_wait_s):combat.data.face_pending={}

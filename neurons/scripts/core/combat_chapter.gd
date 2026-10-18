@@ -432,6 +432,10 @@ func move_hero(delta:float) -> void:
   app.layout.movable_blockers=previous;app.layout.rebuild_grid()
  if app.controlled_route and app.rules.control_left>0 and app.hero_pos.distance_to(before)>.0001:app.rules.record_control_action("navigation","floor")
 
+func hero_portal(to:String) -> Dictionary:return app.layout.portal(to)
+func hero_doorway(to:String) -> Vector2:return hero_portal(to).at
+func cross_door(to:String) -> void:app.enter_room(to)
+
 func _hero(delta:float) -> void:
  if data.boundary:return
  if data.get("control_was_active",false) and app.rules.control_left<=0 and float(data.door_left)<0:
@@ -450,7 +454,9 @@ func _hero(delta:float) -> void:
     app.motion.clear()
   return
  if observations.advance(delta):return
- if app.rules.body_busy() or app.rules.gripped:app.hero_state="hit";return
+ if app.rules.body_busy() or app.rules.gripped:
+  app.hero_state="tinnitus" if float(app.rules.effects.get("TINNITUS",0))>0 and app.rules.hurt_left<=0 and app.rules.stun_left<=0 and not app.rules.gripped else "hit"
+  return
  if not app.family.data.eating.is_empty():app.hero_state="eat";return
  var nurse:Dictionary=data.actors.nurse
  if app.rules.control_left<=0 and nurse.present and nurse.hp>0 and nurse.room==app.room_id and nurse.phase=="bandage":app.hero_state="idle";return
@@ -458,17 +464,20 @@ func _hero(delta:float) -> void:
   data.door_left=maxf(0,float(data.door_left)-delta);app.hero_state="give"
   if data.door_left<=0:
    var to:String=str(data.destination)
-   var threshold:Vector2=app.layout.portal(to).threshold
+   var threshold:Vector2=hero_portal(to).threshold
    if app.hero_pos.distance_to(threshold)>.035:
     if app.hero_route.is_empty():app.hero_route=app.layout.path(app.hero_pos,threshold)
     move_hero(delta);return
    if to==str(config.get("exit_id","street_exit")):exit_crossed()
-   else:app.enter_room(to)
+   else:cross_door(to)
   return
  if app.rules.control_left>0:
-  move_hero(delta*app.layout.speed_factor(app.hero_pos))
   var chosen:String=str(data.get("controlled_door",""))
-  if not chosen.is_empty() and app.hero_pos.distance_to(map.doorway(app.room_id,chosen))<.04:
+  if not chosen.is_empty():
+   var point:Vector2=hero_doorway(chosen)
+   if (app.hero_route.is_empty() and app.hero_pos.distance_to(point)>.04) or (not app.hero_route.is_empty() and app.hero_route[-1].distance_to(point)>.05):app.hero_route=app.layout.path(app.hero_pos,point)
+  move_hero(delta*app.layout.speed_factor(app.hero_pos))
+  if not chosen.is_empty() and app.hero_pos.distance_to(hero_doorway(chosen))<.04:
    data.destination=chosen;data.door_left=.6;data.controlled_door="";app.hero_route=PackedVector2Array()
   return
  observations.try_autonomous()
@@ -476,7 +485,7 @@ func _hero(delta:float) -> void:
  data.route_left=maxf(0,float(data.route_left)-delta)
  var exit_room:String=str(config.get("exit_room","brainstem"))
  var to:String=str(config.get("exit_id","street_exit")) if app.room_id==exit_room else map.next_room(app.room_id,exit_room)
- var goal:Vector2=map.doorway(app.room_id,to)
+ var goal:Vector2=hero_doorway(to)
  var evade:bool=false
  if app.room_id=="brainstem" and pulse_phase() in ["warning","active"] and app.layout.pulse_zone.grow(.21).has_point(app.hero_pos):
   var zone:Rect2=app.layout.pulse_zone
