@@ -1,0 +1,2 @@
+{"fact":{"actor":"dog","event_id":"combat_line:1:dog","kind":"combat_line_spoken","source":"S3:P1794","time":0.0333333333333333},"observed_room":"street_maintenance","street_s":0.0333333333333333}
+{"fact":{"actor":"pharmacist","direction":[0.172799319028854,-0.984957039356232],"event_id":"combat:6:1:pharmacist:1","kind":"combat_attack_started","room":"street_twisted","time":1.13333333333333},"observed_room":"street_twisted","street_s":4.36666666666666}

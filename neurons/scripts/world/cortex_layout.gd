@@ -3,6 +3,10 @@ extends "res://scripts/world/room_layout.gd"
 ## Search names/actions/completion lines: exact S3:T35–39/T41–46; seven seconds S4:T6R5.
 ## No observation, event, consent, reward, healing or rest is inferred by this layout.
 const CortexMap=preload("res://scripts/core/cortex_map.gd")
+const NeuralDisplay=preload("res://scripts/world/spatial_presentation.gd")
+const SpatialGeometry=preload("res://scripts/world/spatial_geometry.gd")
+const SpatialRevision=preload("res://scripts/world/spatial_revision.gd")
+var spatial_revision:int=SpatialRevision.CURRENT
 const ACTIONS={
  "atrium":[
   ["蹲下，沿底座裂隙拨开碎屑、摸查内侧；不触动整个核心。","裂隙里没有。","low","S3:T35R2"],
@@ -178,11 +182,27 @@ const FOOTPRINTS={
 var room_id:String="atrium"
 var walls:Array[Rect2]=[]
 var decor:Array[Dictionary]=[]
+var metric_spec:Dictionary={}
 
-func _init(room:String="atrium") -> void:
+func _init(room:String="atrium",spatial_version:int=1,revision:int=SpatialRevision.CURRENT) -> void:
+ spatial_revision=revision
  room_id=room
  furniture=[]
  movable_blockers.clear()
+ if spatial_version>=2:
+  geometry_version=2;body_radius=.21
+  metric_spec=CortexMap.space_spec(room,revision)
+  bounds_size=vector(metric_spec.size_m)
+  for item:Dictionary in metric_spec.furniture:
+   var index:int=furniture.size()
+   var built:Dictionary=metric_item(item)
+   var spec:Array=ACTIONS[room][index]
+   built.data={"action":spec[0],"failure_hero":spec[1],"failure_player":"","pose":spec[2],"source":spec[3],"search_seconds":7.0,"completion_lines_only":true,"rest_point":false,"presentation_id":"cortex_prop:%s:%d"%[room,index]}
+   furniture.append(built)
+  for item:Dictionary in metric_spec.get("decor",[]):decor.append(metric_item(item))
+  for item:Dictionary in metric_spec.get("partitions",[]):walls.append(rectangle(item.rect_m))
+  super._init()
+  return
  for shape in FOOTPRINTS.get(room,[]):
   var index:int=furniture.size()
   var spec:Array=ACTIONS[room][index]
@@ -216,26 +236,86 @@ func _init(room:String="atrium") -> void:
   add_decor("switch_fixed_frame","固定门框特征",Rect2(.2,.55,.12,.3),"frame",28,false)
  super._init()
 
+func vector(value:Array) -> Vector2:return Vector2(float(value[0]),float(value[1]))
+func rectangle(value:Array) -> Rect2:return Rect2(float(value[0]),float(value[1]),float(value[2]),float(value[3]))
+
+func metric_item(item:Dictionary) -> Dictionary:
+ var value:Dictionary=item.duplicate(true)
+ value.rect=rectangle(item.rect_m);value.at=vector(item.stand_m)
+ value.height=float(item.height_m)*78.0;value.color=Color("8c817f") if room_id in CortexMap.FIRST_ROOMS else Color("899894")
+ if item.has("collision_rects_m"):
+  value.collision_rects=[]
+  for rect:Array in item.collision_rects_m:value.collision_rects.append(rectangle(rect))
+ elif not item.get("solid",true):value.collision_rects=[]
+ return value
+
+func metric_point(old:Vector2) -> Vector2:
+ if geometry_version<2:return old
+ return Vector2(old.x/5.6*world_size().x,old.y/3.8*world_size().y)
+
+func spawn() -> Vector2:
+ return vector(metric_spec.spawn_m) if geometry_version>=2 else CortexMap.SPAWN
+
+func portal(toward:String) -> Dictionary:
+ if geometry_version>=2:
+  for value:Dictionary in metric_spec.portals:
+   if str(value.toward)!=toward:continue
+   var result:Dictionary=value.duplicate(true)
+   for key:String in ["at","threshold","landing","inward"]:result[key]=vector(value[key+"_m"] if key!="inward" else value.inward)
+   if value.has("wall_point_m"):result.wall_point=vector(value.wall_point_m)
+   return result
+  return {}
+ var at:Vector2=CortexMap.doorway(room_id,toward)
+ if at.x<0:return {}
+ var inward:Vector2=Vector2.RIGHT if at.x<.5 else Vector2.LEFT if at.x>5.1 else Vector2.DOWN if at.y<.5 else Vector2.UP
+ return {"toward":toward,"at":at,"threshold":at-inward*.1,"landing":at+inward*.3,"inward":inward,"wall":"west" if inward==Vector2.RIGHT else "east" if inward==Vector2.LEFT else "north" if inward==Vector2.DOWN else "south","width_m":1.0,"height_m":2.2}
+
+func space_spec() -> Dictionary:
+ if geometry_version>=2:return metric_spec.duplicate(true)
+ return {"chapter":4,"room_id":room_id,"geometry_version":1,"size_m":[SIZE.x,SIZE.y],"status":"legacy save geometry; use version2 for new template production"}
+
+func project(p:Vector2) -> Vector2:
+ return NeuralDisplay.project(p,Vector2(70,200)) if geometry_version>=2 else super.project(p)
+
+func unproject(p:Vector2) -> Vector2:
+ if geometry_version<2:return super.unproject(p)
+ return NeuralDisplay.unproject(p,Vector2(70,200))
+
 func add_decor(id:String,label:String,rect:Rect2,kind:String,height:float,solid:bool) -> void:
  decor.append({"id":id,"name":label,"rect":rect,"at":rect.get_center(),"kind":kind,"height":height,"color":Color("7c8a81"),"solid":solid})
 
 func collision_rects(item:Dictionary) -> Array:
  return item.get("collision_rects",[item.rect])
 
-func walkable(p:Vector2,radius:float=RADIUS) -> bool:
- if not Rect2(Vector2(radius,radius),SIZE-Vector2.ONE*radius*2).has_point(p):return false
+func walkable(p:Vector2,radius:float=-1.0) -> bool:
+ if radius<0.0:radius=body_radius
+ if not p.is_finite():return false
+ if geometry_version>=2:
+  if not SpatialGeometry.inside_floor(metric_spec,world_size(),p,radius):return false
+ elif not Rect2(Vector2(radius,radius),world_size()-Vector2.ONE*radius*2).has_point(p):return false
  for item in furniture:
   for rect in collision_rects(item):
-   if (rect as Rect2).grow(radius).has_point(p):return false
+   if footprint_contains((rect as Rect2).grow(radius),p):return false
  for rect in walls:
-  if rect.grow(radius).has_point(p):return false
+  if footprint_contains(rect.grow(radius),p):return false
  for item in decor:
-  if item.solid and (item.rect as Rect2).grow(radius).has_point(p):return false
+  if item.solid and footprint_contains((item.rect as Rect2).grow(radius),p):return false
  for rect in movable_blockers:
-  if rect.grow(radius).has_point(p):return false
+  if footprint_contains(rect.grow(radius),p):return false
  return true
 
 func clear_segment(a:Vector2,b:Vector2,radius:float=0.0) -> bool:
+ if geometry_version>=2:
+  if not walkable(a,radius) or not walkable(b,radius):return false
+  if not SpatialGeometry.segment_inside_floor(metric_spec,world_size(),a,b,radius):return false
+  for item:Dictionary in furniture:
+   for rect:Rect2 in collision_rects(item):
+    if segment_hits_rect(a,b,rect.grow(radius)):return false
+  for rect:Rect2 in walls+movable_blockers:
+   if segment_hits_rect(a,b,rect.grow(radius)):return false
+  for item:Dictionary in decor:
+   if item.solid and segment_hits_rect(a,b,(item.rect as Rect2).grow(radius)):return false
+  return true
  var steps:int=maxi(2,ceili(a.distance_to(b)/0.03))
  for i in range(steps+1):
   if not walkable(a.lerp(b,float(i)/steps),radius):return false
@@ -247,7 +327,7 @@ func geometry_issues() -> Array:
  for item in furniture:
   targets.append({"id":item.id,"at":item.at})
   if not walkable(item.at):issues.append("blocked search stand "+str(item.id))
- for door in CortexMap.doors(room_id):targets.append({"id":"door:"+str(door),"at":CortexMap.doorway(room_id,str(door))})
+ for door in CortexMap.doors(room_id):targets.append({"id":"door:"+str(door),"at":portal(str(door)).at})
  for target in targets:
   for origin in targets:
    if target.id==origin.id:continue
@@ -256,6 +336,6 @@ func geometry_issues() -> Array:
    if route.is_empty():issues.append("no route %s -> %s"%[origin.id,target.id]);continue
    var previous:Vector2=origin.at
    for step in route:
-    if not clear_segment(previous,step,RADIUS):issues.append("blocked segment %s -> %s"%[origin.id,target.id]);break
+    if not clear_segment(previous,step,body_radius):issues.append("blocked segment %s -> %s"%[origin.id,target.id]);break
     previous=step
  return issues

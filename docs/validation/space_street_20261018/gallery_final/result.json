@@ -1,0 +1,21 @@
+{
+  "rendered": true,
+  "scope": "Paused explicit room/camera fixtures to inspect actual current spatial viewer. Not a natural route, human balance, attack or audio acceptance. No NPC/resource/rule edits after normal chapter setup except declared hidden entry/level selection.",
+  "shots": [
+    "street_plaza_default",
+    "street_plaza_overview",
+    "street_side_default",
+    "street_side_overview",
+    "street_narrow_default",
+    "street_narrow_overview",
+    "street_twisted_default",
+    "street_twisted_overview",
+    "street_maintenance_default",
+    "street_maintenance_overview",
+    "street_node_default",
+    "street_node_overview",
+    "street_end_default",
+    "street_end_overview",
+    "hidden_street_default"
+  ]
+}

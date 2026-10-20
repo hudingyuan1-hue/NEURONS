@@ -1,0 +1,471 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 4,
+      "elapsed": 0.0333333333333333,
+      "ending": {},
+      "gripped": false,
+      "hp": 100,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 5,
+      "paused": true,
+      "phase": "autonomy",
+      "pos": [
+        1.70000004768372,
+        1.70000004768372
+      ],
+      "pose": "idle",
+      "room": "bedroom",
+      "route_points": 0,
+      "search_active": false,
+      "search_count": 0,
+      "search_elapsed": 0.0,
+      "sp": 100,
+      "target": -1,
+      "world_time": 0.0
+    }
+  ],
+  "coverage_missing_levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "elapsed_simulation_seconds": 126.466666666662,
+  "ending": {
+    "complete": true,
+    "elapsed": 4.13333333333333,
+    "id": "E1",
+    "phase": "complete"
+  },
+  "ending_phases": [
+    "E1:plaza",
+    "E1:bed",
+    "E1:complete"
+  ],
+  "failures": [],
+  "level_segments": [
+    {
+      "duration": 126.433333333329,
+      "entered": 0.0333333333333333,
+      "left": 126.466666666662,
+      "level": 1
+    }
+  ],
+  "maximum_unexplained_still_seconds": 7.13333333333332,
+  "opening_manual_auto_button_needed": false,
+  "passes": [
+    "entire route uses isolated saves",
+    "real new profile starts at L1",
+    "default automatic dialogue preference is enabled",
+    "fresh profile displays the real opening",
+    "new-profile opening defaults to automatic playback",
+    "actual tutorial Skip enters autonomous campaign",
+    "ordinary new-profile process reaches an unskipped complete ending and result panel",
+    "no fifteen-second unexplained autonomous stall",
+    "actual autonomous searches settled through production receipts"
+  ],
+  "reason": "complete_ending",
+  "rendered": true,
+  "room_transitions": [
+    {
+      "at": [
+        1.70000004768372,
+        1.70000004768372
+      ],
+      "elapsed": 0.0333333333333333,
+      "from": "",
+      "level": 1,
+      "to": "bedroom"
+    },
+    {
+      "at": [
+        0.63702803850174,
+        3.34008169174194
+      ],
+      "elapsed": 106.466666666663,
+      "from": "bedroom",
+      "level": 1,
+      "to": "hidden_street"
+    }
+  ],
+  "scope": "Actual new-profile UI, automatic intro/dialogue (visible Auto click only if the recorded default is off), real tutorial Skip; ordinary _process thereafter. No seed/NPC/resource/key/route/position/level/death/completion writes. Fixed30 simulation may accelerate wall time; not human-paced acceptance, all branches or audio listening. Hidden E1 remains a genuine alternative and is reported with missing main-route coverage rather than forced into L2.",
+  "search_completions": [
+    {
+      "attempt": 1,
+      "elapsed": 36.5333333333338,
+      "fact": {
+        "already_completed": false,
+        "event_id": "search:1:1",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bedroom:0",
+        "time": 4.03333333333333
+      },
+      "level": 1,
+      "room": "bedroom"
+    },
+    {
+      "attempt": 1,
+      "elapsed": 47.6333333333332,
+      "fact": {
+        "already_completed": false,
+        "event_id": "search:1:2",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bedroom:1",
+        "time": 9.26666666666664
+      },
+      "level": 1,
+      "room": "bedroom"
+    }
+  ],
+  "timeline": [
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 4,
+      "elapsed": 0.0333333333333333,
+      "ending": {},
+      "gripped": false,
+      "hp": 100,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 5,
+      "paused": true,
+      "phase": "autonomy",
+      "pos": [
+        1.70000004768372,
+        1.70000004768372
+      ],
+      "pose": "idle",
+      "room": "bedroom",
+      "route_points": 0,
+      "search_active": false,
+      "search_count": 0,
+      "search_elapsed": 0.0,
+      "sp": 100,
+      "target": -1,
+      "world_time": 0.0
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 0,
+      "elapsed": 32.533333333334,
+      "ending": {},
+      "gripped": false,
+      "hp": 100,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 5,
+      "paused": false,
+      "phase": "autonomy",
+      "pos": [
+        1.70000004768372,
+        1.70000004768372
+      ],
+      "pose": "search",
+      "room": "bedroom",
+      "route_points": 0,
+      "search_active": true,
+      "search_count": 0,
+      "search_elapsed": 0.0,
+      "sp": 100,
+      "target": 0,
+      "world_time": 0.0333333333333333
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 2,
+      "elapsed": 36.5333333333338,
+      "ending": {},
+      "gripped": false,
+      "hp": 100,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 6,
+      "paused": true,
+      "phase": "autonomy",
+      "pos": [
+        1.70000004768372,
+        1.70000004768372
+      ],
+      "pose": "idle",
+      "room": "bedroom",
+      "route_points": 0,
+      "search_active": false,
+      "search_count": 1,
+      "search_elapsed": 4.0,
+      "sp": 100,
+      "target": -1,
+      "world_time": 4.03333333333333
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 0,
+      "elapsed": 42.4333333333335,
+      "ending": {},
+      "gripped": false,
+      "hp": 100,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 6,
+      "paused": false,
+      "phase": "autonomy",
+      "pos": [
+        1.73814308643341,
+        1.69618570804596
+      ],
+      "pose": "walk",
+      "room": "bedroom",
+      "route_points": 2,
+      "search_active": false,
+      "search_count": 1,
+      "search_elapsed": 4.0,
+      "sp": 100,
+      "target": 1,
+      "world_time": 4.06666666666666
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 0,
+      "elapsed": 43.6333333333334,
+      "ending": {},
+      "gripped": false,
+      "hp": 100,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 6,
+      "paused": false,
+      "phase": "autonomy",
+      "pos": [
+        2.92352032661438,
+        1.25230157375336
+      ],
+      "pose": "search",
+      "room": "bedroom",
+      "route_points": 1,
+      "search_active": true,
+      "search_count": 1,
+      "search_elapsed": 0.0,
+      "sp": 100,
+      "target": 1,
+      "world_time": 5.26666666666666
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 2,
+      "elapsed": 47.6333333333332,
+      "ending": {},
+      "gripped": false,
+      "hp": 100,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 7,
+      "paused": true,
+      "phase": "autonomy",
+      "pos": [
+        2.92352032661438,
+        1.25230157375336
+      ],
+      "pose": "idle",
+      "room": "bedroom",
+      "route_points": 1,
+      "search_active": false,
+      "search_count": 2,
+      "search_elapsed": 4.0,
+      "sp": 100,
+      "target": -1,
+      "world_time": 9.26666666666664
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 2,
+      "elapsed": 106.466666666663,
+      "ending": {},
+      "gripped": false,
+      "hp": 100,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 7,
+      "paused": true,
+      "phase": "autonomy",
+      "pos": [
+        0.63702803850174,
+        3.34008169174194
+      ],
+      "pose": "walk",
+      "room": "hidden_street",
+      "route_points": 2,
+      "search_active": false,
+      "search_count": 2,
+      "search_elapsed": 4.0,
+      "sp": 92,
+      "target": -1,
+      "world_time": 17.7500000000002
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 2,
+      "elapsed": 113.233333333329,
+      "ending": {},
+      "gripped": false,
+      "hp": 85,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 7,
+      "paused": true,
+      "phase": "autonomy",
+      "pos": [
+        1.90100312232971,
+        2.35940957069397
+      ],
+      "pose": "hit",
+      "room": "hidden_street",
+      "route_points": 0,
+      "search_active": false,
+      "search_count": 2,
+      "search_elapsed": 4.0,
+      "sp": 92,
+      "target": -1,
+      "world_time": 19.7833333333336
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 0,
+      "elapsed": 118.533333333329,
+      "ending": {},
+      "gripped": false,
+      "hp": 85,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 7,
+      "paused": false,
+      "phase": "autonomy",
+      "pos": [
+        1.92543506622314,
+        2.3889479637146
+      ],
+      "pose": "walk",
+      "room": "hidden_street",
+      "route_points": 3,
+      "search_active": false,
+      "search_count": 2,
+      "search_elapsed": 4.0,
+      "sp": 92,
+      "target": -1,
+      "world_time": 20.0500000000003
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 0,
+      "elapsed": 122.399999999996,
+      "ending": {
+        "complete": false,
+        "elapsed": 0.0,
+        "id": "E1",
+        "phase": "plaza"
+      },
+      "gripped": false,
+      "hp": 85,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 7,
+      "paused": true,
+      "phase": "autonomy",
+      "pos": [
+        5.10046482086182,
+        0.399818062782288
+      ],
+      "pose": "walk",
+      "room": "hidden_street",
+      "route_points": 0,
+      "search_active": false,
+      "search_count": 2,
+      "search_elapsed": 4.0,
+      "sp": 92,
+      "target": -1,
+      "world_time": 23.9166666666672
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 0,
+      "elapsed": 124.399999999996,
+      "ending": {
+        "complete": false,
+        "elapsed": 2.0,
+        "id": "E1",
+        "phase": "bed"
+      },
+      "gripped": false,
+      "hp": 85,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 7,
+      "paused": true,
+      "phase": "autonomy",
+      "pos": [
+        5.10046482086182,
+        0.399818062782288
+      ],
+      "pose": "walk",
+      "room": "hidden_street",
+      "route_points": 0,
+      "search_active": false,
+      "search_count": 2,
+      "search_elapsed": 4.0,
+      "sp": 92,
+      "target": -1,
+      "world_time": 23.9166666666672
+    },
+    {
+      "attempt": 1,
+      "cycle": 1,
+      "dialogue_lines": 0,
+      "elapsed": 126.433333333329,
+      "ending": {
+        "complete": true,
+        "elapsed": 4.03333333333333,
+        "id": "E1",
+        "phase": "complete"
+      },
+      "gripped": false,
+      "hp": 85,
+      "key_owner": "",
+      "level": 1,
+      "neurons": 7,
+      "paused": true,
+      "phase": "autonomy",
+      "pos": [
+        5.10046482086182,
+        0.399818062782288
+      ],
+      "pose": "walk",
+      "room": "hidden_street",
+      "route_points": 0,
+      "search_active": false,
+      "search_count": 2,
+      "search_elapsed": 4.0,
+      "sp": 92,
+      "target": -1,
+      "world_time": 23.9166666666672
+    }
+  ],
+  "visited_levels": [
+    1
+  ]
+}

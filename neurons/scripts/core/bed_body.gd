@@ -3,6 +3,7 @@ extends RefCounted
 const HALF_LENGTH=0.95
 const HALF_WIDTH=0.45
 const OFFSET=0.85
+const Geometry=preload("res://scripts/world/spatial_geometry.gd")
 
 static func facing(direction:Vector2) -> Vector2:
  return direction.normalized() if direction.length_squared()>.000001 else Vector2.RIGHT
@@ -32,18 +33,50 @@ static func overlaps_rect(at:Vector2,direction:Vector2,rect:Rect2) -> bool:
   if absf(diff.dot(axis))>a+b:return false
  return true
 
-static func clear(space,at:Vector2,direction:Vector2,portals:Array=[]) -> bool:
+static func contained(space,at:Vector2,direction:Vector2,portals:Array=[]) -> bool:
  if not at.is_finite() or not direction.is_finite():return false
  var size:Vector2=space.world_size()
- for p in polygon(at,direction):
-  if p.x>=.15 and p.y>=.15 and p.x<=size.x-.15 and p.y<=size.y-.15:continue
+ var spec:Dictionary=space.space_spec() if space.has_method("space_spec") else {}
+ var bed:PackedVector2Array=polygon(at,direction)
+ var samples:=PackedVector2Array()
+ for i in range(bed.size()):
+  var a:Vector2=bed[i];var b:Vector2=bed[(i+1)%bed.size()]
+  var steps:int=ceili(a.distance_to(b)/.08)
+  for step in range(steps+1):samples.append(a.lerp(b,float(step)/steps))
+ samples.append(at+facing(direction)*OFFSET)
+ # An enclosed void can fit between all four bed corners: test its boundary too.
+ for hole:PackedVector2Array in Geometry.floor_holes(spec,size):
+  for point:Vector2 in hole:
+   if Geometry2D.is_point_in_polygon(point,bed):return false
+ for p:Vector2 in samples:
+  if Geometry.inside_floor(spec,size,p,.025 if spec.has("floor_polygon_m") else .15):continue
   var opening:bool=false
   for portal in portals:
    var mouth:Vector2=portal.at;var inward:Vector2=portal.inward;var offset:Vector2=p-mouth
    if offset.dot(inward)<=.35 and offset.dot(inward)>=-2.5 and absf(offset.cross(inward))<=float(portal.get("width_m",1.2))*.5-.03:opening=true;break
   if not opening:return false
+ return true
+
+static func clear(space,at:Vector2,direction:Vector2,portals:Array=[]) -> bool:
+ if not contained(space,at,direction,portals):return false
  for f in space.furniture:
-  if overlaps_rect(at,direction,(f.rect as Rect2).grow(.025)):return false
+  if not f.get("solid",true) or not f.get("collision",true):continue
+  for rect:Rect2 in f.get("collision_rects",[f.rect]):
+   if overlaps_rect(at,direction,rect.grow(.025)):return false
+ # Layouts may keep architectural partitions and solid decorative pieces in
+ # separate collections. The bed uses the same real footprints as people;
+ # a non-solid rug or the bounding box around two seat banks is not a wall.
+ for property:Dictionary in space.get_property_list():
+  if str(property.name) in ["walls","static_walls"]:
+   for value in space.get(property.name):
+    if value is Dictionary and (not value.get("solid",true) or not value.get("collision",true)):continue
+    var rect:Rect2=value.rect if value is Dictionary else value
+    if overlaps_rect(at,direction,rect.grow(.025)):return false
+  elif str(property.name)=="decor":
+   for f:Dictionary in space.get("decor"):
+    if not f.get("solid",true) or not f.get("collision",true):continue
+    for rect:Rect2 in f.get("collision_rects",[f.rect]):
+     if overlaps_rect(at,direction,rect.grow(.025)):return false
  for rect in space.movable_blockers:
   if overlaps_rect(at,direction,rect.grow(.025)):return false
  return true

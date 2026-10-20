@@ -1,0 +1,8 @@
+{
+  "asset_id": "CHR_OTHER_NPCS_N33",
+  "source_path": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N33_v001.png",
+  "tool": "built_in_image_gen",
+  "prompt": "EDIT TARGET: supplied CHR_OTHER_NPCS_N33_v001.png. Isolate the exact adult woman hospital doctor with dark bun and stern attentive face, white long coat over a dark teal shirt and dark trousers, both hands and both black shoes as one complete game character on genuine transparent alpha. Technical preparation only: preserve this particular face, age, hairstyle, clothes, pose, body proportions, oblique overhead exploration view, colors and hand-painted brushwork. Remove only neutral gray background and any floor/shadow, including spaces between arms, body and legs. White coat, clothes and shoes must remain opaque. Entire hair and both shoes inside generous clear margins. No redesign, beautification, changed expression, new props, new anatomy, relighting, outline, rim, floor, fog or text. The supplied user drawing is authoritative.",
+  "generated_path": "C:\\Users\\23623\\.codex\\generated_images\\01a13afd-29cd-7b90-b2e9-586f1ffdee3b\\exec-72632c58-9168-41e7-b57e-63c8dbf706f8.png",
+  "purpose": "Approved exact character technical alpha preparation. No aesthetic redesign; preserve identity, source pose, clothes, view and painterly marks."
+}

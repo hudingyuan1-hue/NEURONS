@@ -1,0 +1,32 @@
+{
+  "tool": "built_in_image_gen",
+  "prompt": "Refine the attached 4-by-4 square texture atlas (image 1) for a hand-painted 2D narrative game. Images 2 and 3 are approved PAINTERLY STYLE references only, not room/layout targets. Keep EXACTLY the same 4 columns, 4 rows and material positions of image 1, flush equal cells. The previous textures contain too much photographic microtexture and too much busy wear. Simplify dramatically: at least 75% of each cell should be calm, broad, cleanly grouped painted color; visible dry-brush decisions should be selective and medium-sized, with fewer large coherent shapes, matching the room references' broad grey-violet shadows and dusty ochre/light plaster planes. Remove all stippled noise, fine grains, fine fabric weave and dense tiny cracks. DO NOT make a realistic PBR texture library. Each cell is a FLAT ORTHOGRAPHIC MATERIAL SWATCH, not a model, room, object or perspective surface. No shadows, lighting pools, bevels, borders, text or labels. Row 1: warm subdued old floorboards, calm grey-beige plaster with only 3 or 4 broad softly irregular worn patches (no yellow mottling across the whole area), cream-grey ceramic 3x3 tile surface with very thin quiet grout and mostly smooth tile centers, muted sage-grey painted plaster with only one or two broad worn patches. Row 2: calm muted grey-lilac cortical surface with just 3 or 4 gently flowing broad fiber strata and large quiet gaps (no tangled webs, holes or rings), pale grey-ivory white-matter broad parallel fiber bands with large quiet areas (no tangled braid), worn dark grey-blue street paving with mostly broad flat stone faces and subtle narrow joints, calm charcoal asphalt in broad painted planes and only a few large scuffs. Row 3: subdued walnut furniture wood with very sparse long soft streaks, calm teal-grey painted metal with only a few selective edge scuffs, plain warm ivory CLOTH painted in broad soft values without visible weave, quiet ochre-grey paper without visible fine grains. Row 4: simple flat grey-brown bark in a few long dark/light masses without photographic relief, quiet dull tarnished brass without shiny speckling, calm blue-green opaque glass swatch with 3 broad translucent-looking paint patches and no reflections, calm warm grey concrete with one or two sparse fine marks. Perfect square grid alignment at 25%, 50%, 75%. Cohesive restrained 2D painterly palette, broad paint marks, no black framing, no copied room furniture. Exactly one atlas image.\n",
+  "transparent_background": false,
+  "generated_original_path": "C:\\Users\\23623\\.codex\\generated_images\\01a154b7-b1d3-7a72-928d-69239c6a387f\\exec-b8a1ed3d-aaad-4603-8092-75fc4171da84.png",
+  "master_copy_path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\materials\\painterly_material_atlas_v002.png",
+  "master_sha256": "7620126a15c103f42f5362100b4c60229855ec9e5753309565414d353c82a616",
+  "edit_target": {
+    "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\materials\\painterly_material_atlas_v001.png",
+    "sha256": "b5fadae119f6f6d844b78ad3255719ac068cb544163c56e2616a338d985cb8ec"
+  },
+  "references": [
+    {
+      "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\ENV_ROOM_L1_ROOM_BASE_v001.png",
+      "sha256": "4c19f3c82c3f01ced00b2e535ee8fbd1188a7473ab1c880bd82de864d0f1d6d6",
+      "role": "painterly palette / brush grouping only; not room-layout authority"
+    },
+    {
+      "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\dc3eba99-ce86-428f-81ef-e84724936df1.png",
+      "sha256": "14a83b229eb892ecc640e28b8a0828d199968a496ed3e06e2f39efdbe6295e7c",
+      "role": "painterly palette / brush grouping only; not room-layout authority"
+    }
+  ],
+  "processing": "Exact original master copy and deterministic pixel crops only; no material repaint, background keying or geometry generation.",
+  "crop_count": 16,
+  "production_enabled": false,
+  "pixel_size": [
+    1254,
+    1254
+  ],
+  "prior_master_preserved": "res://assets/production/materials/painterly_material_atlas_v001.png"
+}

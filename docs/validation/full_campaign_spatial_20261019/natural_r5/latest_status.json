@@ -1,0 +1,27 @@
+{
+  "attempt": 1,
+  "cycle": 1,
+  "dialogue_lines": 0,
+  "elapsed": 930.033333333147,
+  "ending": {},
+  "gripped": false,
+  "hp": 65,
+  "key_owner": "",
+  "level": 6,
+  "neurons": 73,
+  "paused": false,
+  "phase": "autonomy",
+  "pos": [
+    7.26166486740112,
+    5.49991798400879
+  ],
+  "pose": "walk",
+  "room": "street_end",
+  "route_points": 1,
+  "search_active": false,
+  "search_count": 40,
+  "search_elapsed": 6.99999999999998,
+  "sp": 100,
+  "target": -1,
+  "world_time": 704.000000000017
+}

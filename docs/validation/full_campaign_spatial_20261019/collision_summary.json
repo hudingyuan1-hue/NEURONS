@@ -1,0 +1,127 @@
+{
+  "scope": "Targeted shared collision regression only. Production files were inspected, never edited by this verification task; no all-branch, difficulty or formal-art claim.",
+  "results": [
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/collision_final_r2/result.json",
+      "passes": 25,
+      "failures": [],
+      "engine_errors": [],
+      "stderr_empty": true,
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\tmp\\resume_20261015\\runtime\\godot472\\Godot_v4.7.2-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons",
+        "--script",
+        "res://tests/shared_collision_compat_20261019.gd",
+        "--",
+        "--validation-root=res://../docs/validation/full_campaign_spatial_20261019/collision_final_r2"
+      ]
+    },
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/collision_bedroom_logged/result.json",
+      "passes": 182,
+      "failures": [],
+      "engine_errors": [],
+      "stderr_empty": true,
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\tmp\\resume_20261015\\runtime\\godot472\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons",
+        "--",
+        "--metric-bedroom-check",
+        "--save-root=res://../tmp/full_campaign_spatial_20261019/collision_bedroom_logged_save",
+        "--validation-root=res://../docs/validation/full_campaign_spatial_20261019/collision_bedroom_logged"
+      ]
+    },
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/collision_bed_travel_logged/result.json",
+      "passes": 36,
+      "failures": [],
+      "engine_errors": [],
+      "stderr_empty": true,
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\tmp\\resume_20261015\\runtime\\godot472\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons",
+        "--",
+        "--street-bed-travel-check",
+        "--save-root=res://../tmp/full_campaign_spatial_20261019/collision_bed_travel_logged_save",
+        "--validation-root=res://../docs/validation/full_campaign_spatial_20261019/collision_bed_travel_logged"
+      ]
+    },
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/collision_clamp_logged/result.json",
+      "passes": 23,
+      "failures": [],
+      "engine_errors": [],
+      "stderr_empty": true,
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\tmp\\resume_20261015\\runtime\\godot472\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons",
+        "--",
+        "--street-clamp-check",
+        "--save-root=res://../tmp/full_campaign_spatial_20261019/collision_clamp_logged_save",
+        "--validation-root=res://../docs/validation/full_campaign_spatial_20261019/collision_clamp_logged"
+      ]
+    },
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/collision_combat_detail_logged/result.json",
+      "passes": 34,
+      "failures": [],
+      "engine_errors": [],
+      "stderr_empty": true,
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\tmp\\resume_20261015\\runtime\\godot472\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons",
+        "--",
+        "--combat-detail-check",
+        "--save-root=res://../tmp/full_campaign_spatial_20261019/collision_combat_detail_logged_save",
+        "--validation-root=res://../docs/validation/full_campaign_spatial_20261019/collision_combat_detail_logged"
+      ]
+    }
+  ],
+  "failures_preserved": [
+    {
+      "path": "collision_r1/result.json",
+      "cause": "Three legacy-v1 segment cases still used the enclosing rectangle/ignored solid and collision; BedBody did not inspect Institution static_walls; Combat v3 did not honour collision=false."
+    },
+    {
+      "path": "collision_final/result.json",
+      "cause": "First static_walls addition cast Dictionary to Rect2 and emitted SCRIPT ERROR. The aborted bool returned false so a negative assertion appeared to pass. Marked invalid, engine error retained; positive clear-side assertion and external stderr scan added."
+    },
+    {
+      "path": "collision_bed_travel_r1/result.json",
+      "cause": "Legacy narrow-door fixture changed portal_width_m but new portal accessor did not read it. Root restored existing trial-width API; same true narrow-door expectation now passes, default1.4m unchanged."
+    }
+  ],
+  "runtime_final_sha": [
+    {
+      "path": "neurons/scripts/world/room_layout.gd",
+      "sha256": "ea2d1f0a2258f39aad32c6522b5dae856daca99e2e1acde955e4c22331cf29ef"
+    },
+    {
+      "path": "neurons/scripts/core/bed_body.gd",
+      "sha256": "3b38cdcc3e786c92d68f7e0519b5779ab17decd8fcb8da4e07595d7f1a668be9"
+    },
+    {
+      "path": "neurons/scripts/world/combat_layout.gd",
+      "sha256": "8e28e677a93ceea7352c9d2e1db1af80f5a9ab2e2f5d4d216bdd245685021694"
+    },
+    {
+      "path": "neurons/scripts/world/street_layout.gd",
+      "sha256": "0a861c144e434603b93091c75999c6872941c97e96d53eb1817aa1f117581a40"
+    }
+  ],
+  "additional_test": "neurons/tests/shared_collision_compat_20261019.gd",
+  "final_status": "All five selected final runs exit0 with no assertion failures, no SCRIPT ERROR/ERROR lines and empty stderr. Final logs and exact command argument arrays are preserved per result.",
+  "git_writes": 0,
+  "production_edits_by_verifier": 0
+}

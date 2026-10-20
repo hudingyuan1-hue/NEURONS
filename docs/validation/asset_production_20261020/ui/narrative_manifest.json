@@ -1,0 +1,1124 @@
+{
+  "schema": 1,
+  "scope": "UI/narrative presentation only; no actor/world/rule state mutation or unknown identity inference",
+  "textures": {
+    "ENDING_HOSPITAL_BASE": {
+      "asset_id": "ENDING_HOSPITAL_BASE",
+      "texture": "res://assets/production/narrative/ENDING_HOSPITAL_BASE_9cab8d8f8e43.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\开场\\ENDING_HOSPITAL_BASE_v002.png",
+      "sha256": "9cab8d8f8e4380f344d94e17485faa59c71ee735133cd805dec9400163c03de7",
+      "pixel_size": [
+        1671,
+        941
+      ],
+      "mode": "RGB",
+      "role": "user_named_narrative_source",
+      "pixels_changed": false
+    },
+    "ENDING_HOST_BODY_REFERENCE": {
+      "asset_id": "ENDING_HOST_BODY_REFERENCE",
+      "texture": "res://assets/production/narrative/ENDING_HOST_BODY_REFERENCE_ff18b1266690.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\开场\\ENDING_HOST_BODY_REFERENCE_v002.png",
+      "sha256": "ff18b12666908dbc2faa6d090f7fc7791f1dd56d25edeafc234b9858ceb1cb09",
+      "pixel_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "role": "user_named_narrative_source",
+      "pixels_changed": false
+    },
+    "ENDING_HOST_EYES": {
+      "asset_id": "ENDING_HOST_EYES",
+      "texture": "res://assets/production/narrative/ENDING_HOST_EYES_7837ba05c71b.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\开场\\ENDING_HOST_EYES__CLOSED_v006.png",
+      "sha256": "7837ba05c71bc7f7c15f12aab6910eeb7fa49758b5eb05a974d459353a349d3f",
+      "pixel_size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "role": "user_named_narrative_source",
+      "pixels_changed": false
+    },
+    "SLIDE_A02": {
+      "asset_id": "SLIDE_A02",
+      "texture": "res://assets/production/narrative/SLIDE_A02_811dff99c192.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\开场\\SLIDE_A02_v002.png",
+      "sha256": "811dff99c192474466f2b408eddfd9e766d4b58d922c9bb8bb6d9f8b5a43d855",
+      "pixel_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "role": "user_named_narrative_source",
+      "pixels_changed": false
+    },
+    "SLIDE_A03": {
+      "asset_id": "SLIDE_A03",
+      "texture": "res://assets/production/narrative/SLIDE_A03_e28f2f91dc99.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\开场\\SLIDE_A03_v002.png",
+      "sha256": "e28f2f91dc990a54a8ed79a836b49eba4627da99454239b096ef54caea886cea",
+      "pixel_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "role": "user_named_narrative_source",
+      "pixels_changed": false
+    },
+    "SLIDE_A04": {
+      "asset_id": "SLIDE_A04",
+      "texture": "res://assets/production/narrative/SLIDE_A04_d88ba44244af.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\开场\\SLIDE_A04_v002.png",
+      "sha256": "d88ba44244afc9b29a392559c46ba332cf7e6596e38629efaf9ad4a07744c485",
+      "pixel_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "role": "user_named_narrative_source",
+      "pixels_changed": false
+    },
+    "SLIDE_A06": {
+      "asset_id": "SLIDE_A06",
+      "texture": "res://assets/production/narrative/SLIDE_A06_cdd0d8763a8e.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\开场\\SLIDE_A06_v002.png",
+      "sha256": "cdd0d8763a8ecbdbb929c15223fe6c6214e22c88e228f7c7fe48ae940695ac1c",
+      "pixel_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "role": "user_named_narrative_source",
+      "pixels_changed": false
+    },
+    "SLIDE_B04": {
+      "asset_id": "SLIDE_B04",
+      "texture": "res://assets/production/narrative/SLIDE_B04_d29ac2fd01db.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\开场\\SLIDE_B04_v002.png",
+      "sha256": "d29ac2fd01db39b0296392dc9d5e43007d3d00f70d1f390ccb038875b539c324",
+      "pixel_size": [
+        560,
+        315
+      ],
+      "mode": "RGB",
+      "role": "user_named_narrative_source",
+      "pixels_changed": false
+    },
+    "SLIDE_B05": {
+      "asset_id": "SLIDE_B05",
+      "texture": "res://assets/production/narrative/SLIDE_B05_2e298da6b153.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\开场\\SLIDE_B05_v002.png",
+      "sha256": "2e298da6b153927c5816cc34270754db7cbc38f977c107c74a7c020e4d8073c0",
+      "pixel_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "role": "user_named_narrative_source",
+      "pixels_changed": false
+    },
+    "UI_EVIDENCE_FAMILY_PHOTO": {
+      "asset_id": "UI_EVIDENCE_FAMILY_PHOTO",
+      "texture": "res://assets/production/narrative/UI_EVIDENCE_FAMILY_PHOTO_a30a4ede70f2.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\开场\\UI_EVIDENCE_FAMILY_PHOTO_v002.png",
+      "sha256": "a30a4ede70f2a94b7e38caca4141b4c96564cf217e65123b8fa32d6a4d9a32a3",
+      "pixel_size": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "role": "user_named_narrative_source",
+      "pixels_changed": false
+    },
+    "APPROVED_ROOM_STYLE": {
+      "asset_id": "APPROVED_ROOM_STYLE",
+      "texture": "res://assets/production/narrative/APPROVED_ROOM_STYLE_4c19f3c82c3f.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\ENV_ROOM_L1_ROOM_BASE_v001.png",
+      "sha256": "4c19f3c82c3f01ced00b2e535ee8fbd1188a7473ab1c880bd82de864d0f1d6d6",
+      "pixel_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "role": "user_reference_preserved",
+      "pixels_changed": false
+    },
+    "PLAYER_MASTER": {
+      "asset_id": "PLAYER_MASTER",
+      "texture": "res://assets/production/narrative/PLAYER_MASTER_1b7413cc31a4.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_PLAYER_MASTER_2D_v001.png",
+      "sha256": "1b7413cc31a496b27275219215dbd50dc961106ad625361c7d5b6aeb618d3475",
+      "pixel_size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "role": "user_reference_preserved",
+      "pixels_changed": false
+    },
+    "PLAYER_FRONT": {
+      "asset_id": "PLAYER_FRONT",
+      "texture": "res://assets/production/narrative/PLAYER_FRONT_9d78f2d84a94.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_PLAYER_TURN__FRONT_v005.png",
+      "sha256": "9d78f2d84a9424a0b669e133f4ee24492ac0fa4fd17b7c243582478b45ed2745",
+      "pixel_size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "role": "user_reference_preserved",
+      "pixels_changed": false
+    },
+    "PLAYER_BACK": {
+      "asset_id": "PLAYER_BACK",
+      "texture": "res://assets/production/narrative/PLAYER_BACK_ecfd0fcfeec3.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_PLAYER_TURN__BACK_v005.png",
+      "sha256": "ecfd0fcfeec35d424cd4564cd86e9be213f94bda9350a4dae1fa17311eb0f41d",
+      "pixel_size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "role": "user_reference_preserved",
+      "pixels_changed": false
+    },
+    "PLAYER_SIDE": {
+      "asset_id": "PLAYER_SIDE",
+      "texture": "res://assets/production/narrative/PLAYER_SIDE_07c9f4d2f366.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_PLAYER_TURN__SIDE_v005.png",
+      "sha256": "07c9f4d2f366e28d82b27b8410112da656b463dae846f32a3af6d77b830a6b56",
+      "pixel_size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "role": "user_reference_preserved",
+      "pixels_changed": false
+    },
+    "PLAYER_WAVE": {
+      "asset_id": "PLAYER_WAVE",
+      "texture": "res://assets/production/narrative/PLAYER_WAVE_2c3f7ab99205.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\动作\\CHR_PLAYER_ACT_WAVE__wave__P02_v005.png",
+      "sha256": "2c3f7ab99205723887a66fefe8df7c988c6c91c7195b12332f082a36dcbfe49c",
+      "pixel_size": [
+        1145,
+        1374
+      ],
+      "mode": "RGBA",
+      "role": "user_reference_preserved",
+      "pixels_changed": false
+    },
+    "E2_ORIGIN_GROUND": {
+      "asset_id": "E2_ORIGIN_GROUND",
+      "texture": "res://assets/production/narrative/E2_ORIGIN_GROUND_2d335b0cd675.png",
+      "source": "C:\\Users\\23623\\.codex\\generated_images\\01a154b9-0ced-70d3-84e6-031e88a14a7b\\exec-d87d601e-1ce3-4c34-a75c-0a1f2a2e2873.png",
+      "sha256": "2d335b0cd6754de673066bd6ea0b3b55e4ca7b01ad8be6e05da4cd23a108ee8f",
+      "pixel_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "role": "codex_generated_from_named_references",
+      "pixels_changed": false
+    },
+    "ENDING_HOSPITAL_RESTING": {
+      "asset_id": "ENDING_HOSPITAL_RESTING",
+      "texture": "res://assets/production/narrative/ENDING_HOSPITAL_RESTING_7d0024fe202e.png",
+      "source": "C:\\Users\\23623\\.codex\\generated_images\\01a154b9-0ced-70d3-84e6-031e88a14a7b\\exec-6f2e3bc8-de51-48c5-8c84-6704e60c75d3.png",
+      "sha256": "7d0024fe202edd7edc5321542678c69a3b9f2323ec2c665d956a75ba58e99ad0",
+      "pixel_size": [
+        1671,
+        941
+      ],
+      "mode": "RGB",
+      "role": "codex_generated_from_named_references",
+      "pixels_changed": false
+    },
+    "INTRO_HOST_SLEEP": {
+      "asset_id": "INTRO_HOST_SLEEP",
+      "texture": "res://assets/production/narrative/INTRO_HOST_SLEEP_63cd8b743aea.png",
+      "source": "C:\\Users\\23623\\.codex\\generated_images\\01a154b9-0ced-70d3-84e6-031e88a14a7b\\exec-cba81cef-4242-45f2-beb8-b001f2d3a324.png",
+      "sha256": "63cd8b743aeaa53c6968aa25b7c41d8fe49bb99a2d52929c9af816120229c737",
+      "pixel_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "role": "codex_generated_from_named_references",
+      "pixels_changed": false
+    },
+    "INTRO_HOST_WAKE": {
+      "asset_id": "INTRO_HOST_WAKE",
+      "texture": "res://assets/production/narrative/INTRO_HOST_WAKE_317533f229d3.png",
+      "source": "C:\\Users\\23623\\.codex\\generated_images\\01a154b9-0ced-70d3-84e6-031e88a14a7b\\exec-ebe02ec6-4cec-4066-b33c-48ed8dd26278.png",
+      "sha256": "317533f229d368d9cc5b4f7ef191fb118b9d40157ebe1338fb71abb7115df280",
+      "pixel_size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "role": "codex_generated_from_named_references",
+      "pixels_changed": false
+    }
+  },
+  "portraits": {
+    "CHR_HUNTER": {
+      "asset_id": "CHR_HUNTER",
+      "texture": "res://assets/production/narrative/portraits/CHR_HUNTER_2d9fa536b107.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_HUNTER_v001.png",
+      "sha256": "2d9fa536b10753b52d9098ce1ef665b504f854cdda9fc31d2b8ba39289aaa77f",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_HUNTER_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_CAT": {
+      "asset_id": "CHR_OTHER_NPCS_CAT",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_CAT_a185080e259e.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_CAT\\CHR_OTHER_NPCS_CAT_cutout_a185080e259e.png",
+      "sha256": "a185080e259ea63141c41ad3961abf4d95f4ad4d12765d76521bff569006e11a",
+      "pixel_size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_CAT_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_DOG": {
+      "asset_id": "CHR_OTHER_NPCS_DOG",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_DOG_41263e39388c.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_DOG\\CHR_OTHER_NPCS_DOG_cutout_41263e39388c.png",
+      "sha256": "41263e39388cd57176c009e54442f0193b519130c07376722182bc4258745ae5",
+      "pixel_size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_DOG_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_FATHER": {
+      "asset_id": "CHR_OTHER_NPCS_FATHER",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_FATHER_ac7e0bba1771.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_FATHER\\CHR_OTHER_NPCS_FATHER_normal_reference_cutout_v001.png",
+      "sha256": "ac7e0bba17717c4f911da3ee68a23d3384b71ab1bfb477834ff6c3200980a532",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_FATHER_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting.",
+      "normalized_rect": [
+        0.28,
+        0,
+        0.4,
+        0.38
+      ]
+    },
+    "CHR_OTHER_NPCS_MOTHER": {
+      "asset_id": "CHR_OTHER_NPCS_MOTHER",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_MOTHER_d865fd9d0963.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_MOTHER\\CHR_OTHER_NPCS_MOTHER_normal_reference_cutout_v001.png",
+      "sha256": "d865fd9d09635466026ac74c4054761c685f5ab520752d1c231d9731ce8e5b2e",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_MOTHER_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting.",
+      "normalized_rect": [
+        0.28,
+        0,
+        0.4,
+        0.38
+      ]
+    },
+    "CHR_OTHER_NPCS_N02": {
+      "asset_id": "CHR_OTHER_NPCS_N02",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N02_220cdaf763cd.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N02_v002.png",
+      "sha256": "220cdaf763cd3237246106aee9cd433fab9e7b6561f1ea49d640efce4c560bc3",
+      "pixel_size": [
+        1025,
+        1534
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "named_candidate_technical_preparation",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N02_v002.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N03": {
+      "asset_id": "CHR_OTHER_NPCS_N03",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N03_e17f21ee56cf.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_N03\\CHR_OTHER_NPCS_N03_normal_reference_cutout_v001.png",
+      "sha256": "e17f21ee56cff601bf9a3237a73974cc9ea8082f9a1bfbb3eabc066330f274c7",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N03_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting.",
+      "normalized_rect": [
+        0.28,
+        0,
+        0.4,
+        0.38
+      ]
+    },
+    "CHR_OTHER_NPCS_N04": {
+      "asset_id": "CHR_OTHER_NPCS_N04",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N04_bcbd42840519.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_N04\\CHR_OTHER_NPCS_N04_normal_reference_cutout_v001.png",
+      "sha256": "bcbd42840519d0f440507ee5542da481de3fcacf36d5693bcd119c9d101d8a1a",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N04_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting.",
+      "normalized_rect": [
+        0.28,
+        0,
+        0.4,
+        0.38
+      ]
+    },
+    "CHR_OTHER_NPCS_N05": {
+      "asset_id": "CHR_OTHER_NPCS_N05",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N05_bd72356cd907.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_N05\\CHR_OTHER_NPCS_N05_cutout_bd72356cd907.png",
+      "sha256": "bd72356cd90701e40e460e1d614627d9b3f26fa9f8b125d8aa62db8f3af45e87",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N05_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N06": {
+      "asset_id": "CHR_OTHER_NPCS_N06",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N06_3b5a3b18f087.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N06_v001.png",
+      "sha256": "3b5a3b18f08788e34468bd090900d901ac09c048c74e15ec004caa964b0f49ae",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N06_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N07": {
+      "asset_id": "CHR_OTHER_NPCS_N07",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N07_267521bd4cae.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_N07\\CHR_OTHER_NPCS_N07_cutout_267521bd4cae.png",
+      "sha256": "267521bd4cae46307ed526cf643f63b3e95307c032bc8d6c7d13788637ba2484",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N07_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N08": {
+      "asset_id": "CHR_OTHER_NPCS_N08",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N08_030fadf9ca93.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N08_v001.png",
+      "sha256": "030fadf9ca930a66dc7b398a75e179d67b22d3c87daa61de7b35eb9665504894",
+      "pixel_size": [
+        1312,
+        1199
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N08_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N09": {
+      "asset_id": "CHR_OTHER_NPCS_N09",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N09_bae05b20fe04.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N09_v001.png",
+      "sha256": "bae05b20fe04b2f7d481260bb6ae97c5d3387c079e7a5cc8a83ff46b18df024c",
+      "pixel_size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N09_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N10": {
+      "asset_id": "CHR_OTHER_NPCS_N10",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N10_90779679183f.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N10_v001.png",
+      "sha256": "90779679183f8a6bc33efd3603d190b90831010689e5fbdf5f1ea820110f0c2d",
+      "pixel_size": [
+        1374,
+        1145
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N10_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N11": {
+      "asset_id": "CHR_OTHER_NPCS_N11",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N11_abfd84aa4159.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N11_v001.png",
+      "sha256": "abfd84aa415926e921f6942a25d731de4da995d8378afce19c63babdcbe830a0",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N11_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N13": {
+      "asset_id": "CHR_OTHER_NPCS_N13",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N13_d0c32c49e6b1.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N13_v001.png",
+      "sha256": "d0c32c49e6b17507f12953691be78810b48f821fc23b36a657e73e1670c99b8f",
+      "pixel_size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N13_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N14": {
+      "asset_id": "CHR_OTHER_NPCS_N14",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N14_2c3b35ce613b.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N14_v001.png",
+      "sha256": "2c3b35ce613bdcc47c0c6fc71bf06eed8f67a89a741a724fbb6cff4de9a51473",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N14_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N15": {
+      "asset_id": "CHR_OTHER_NPCS_N15",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N15_9b505d54a256.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N15_v001.png",
+      "sha256": "9b505d54a256667d75db22852564ced4ce055b93a01a709253fe8d0c94b9836f",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N15_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N16": {
+      "asset_id": "CHR_OTHER_NPCS_N16",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N16_db702b0020f9.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N16_v001.png",
+      "sha256": "db702b0020f976030c84cf23fd1d6426f2ee93006302a99961e532d2cd789742",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N16_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N17": {
+      "asset_id": "CHR_OTHER_NPCS_N17",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N17_90a0b2625586.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N17_v001.png",
+      "sha256": "90a0b2625586dabcb40e78b84761a0aee2fa960dfbb6d1ddb01847aed6303a91",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N17_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N18": {
+      "asset_id": "CHR_OTHER_NPCS_N18",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N18_29ef25dee7e8.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N18_v001.png",
+      "sha256": "29ef25dee7e819059be79e656c1da21bcfa5b9955aea43b7dfd625d3cd0a9523",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N18_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N19": {
+      "asset_id": "CHR_OTHER_NPCS_N19",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N19_082e9fed5d79.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N19_v001.png",
+      "sha256": "082e9fed5d79eea6db1686f275777c83f41a127d120f5e203ab6084da9573a8e",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N19_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N20": {
+      "asset_id": "CHR_OTHER_NPCS_N20",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N20_9854b954a41c.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_N20\\CHR_OTHER_NPCS_N20_cutout_9854b954a41c.png",
+      "sha256": "9854b954a41cf1ddd1052f89e45578c56dfca3bcc7c19712cfddeb2d83da2234",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N20_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N21": {
+      "asset_id": "CHR_OTHER_NPCS_N21",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N21_e48be78511ec.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N21_v001.png",
+      "sha256": "e48be78511ec057392b824379745a1eb75c768b6ae9fc25ae01825543de418a3",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N21_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N22": {
+      "asset_id": "CHR_OTHER_NPCS_N22",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N22_637cba4a175f.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N22_v001.png",
+      "sha256": "637cba4a175f7c486262c47cb09620590f0de7c66d133aeacda50d96c9b3ca12",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N22_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N23": {
+      "asset_id": "CHR_OTHER_NPCS_N23",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N23_0bd08fae17c8.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N23_v001.png",
+      "sha256": "0bd08fae17c80f3bf366c77aa30a92a8daa805a5ed7017e0e94f22d12c6ce233",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N23_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N24": {
+      "asset_id": "CHR_OTHER_NPCS_N24",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N24_c27035f8d441.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N24_v001.png",
+      "sha256": "c27035f8d44178e64ba1e54a261395a472d0658e3b36688cb05a6e1548d3d2c5",
+      "pixel_size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N24_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N25": {
+      "asset_id": "CHR_OTHER_NPCS_N25",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N25_59426e755e36.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N25_v001.png",
+      "sha256": "59426e755e362696e58ccee8e6dae9fe0c583723ab455b82785e95523fcec052",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N25_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N27": {
+      "asset_id": "CHR_OTHER_NPCS_N27",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N27_e4117b440fca.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N27_v001.png",
+      "sha256": "e4117b440fca92ff3120074842708c6f620b44fc9c6fcfeb414fd01203986309",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N27_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N28": {
+      "asset_id": "CHR_OTHER_NPCS_N28",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N28_3ed7e42f7d1e.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N28_v001.png",
+      "sha256": "3ed7e42f7d1ef7b69c3663f1ddf995137e7db55526a7bc82b23bcd00063cbefc",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N28_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N29": {
+      "asset_id": "CHR_OTHER_NPCS_N29",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N29_6bc4812a44c8.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N29_v001.png",
+      "sha256": "6bc4812a44c81b921b3ef13c804bb67bd0015382c03bf785f5055c4f44146ed7",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N29_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N30": {
+      "asset_id": "CHR_OTHER_NPCS_N30",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N30_b2368ac0d83b.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N30_v001.png",
+      "sha256": "b2368ac0d83b698fff44083782fac15445b6ffb91b69e5dc977ee88aee198208",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N30_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N31": {
+      "asset_id": "CHR_OTHER_NPCS_N31",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N31_643059821fea.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N31_v001.png",
+      "sha256": "643059821fea77efe86d6f99ef5f7e5de54a9d8112075fbe333b906ad91ac552",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N31_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N33": {
+      "asset_id": "CHR_OTHER_NPCS_N33",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N33_1beb1854697b.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_N33\\CHR_OTHER_NPCS_N33_cutout_1beb1854697b.png",
+      "sha256": "1beb1854697bc5c3553eb25e9681150d844936a80f243f7d3d5b935328028963",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N33_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N34": {
+      "asset_id": "CHR_OTHER_NPCS_N34",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N34_81eec1a62abf.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N34_v001.png",
+      "sha256": "81eec1a62abfbd3272d4b574eee6cf39b54572449211515c9c1b177170e6ed07",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N34_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N35": {
+      "asset_id": "CHR_OTHER_NPCS_N35",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N35_82ea6b78e2bf.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N35_v001.png",
+      "sha256": "82ea6b78e2bfd997a46abd3f5cba1502b249ce00b28ebc08dcbcbd6daf4fd84d",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N35_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N36": {
+      "asset_id": "CHR_OTHER_NPCS_N36",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N36_e58f747f1a7d.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N36_v001.png",
+      "sha256": "e58f747f1a7d9ec297ee3a9e7d5d33c5b59e210cc5bd67c46dfa3fd8945b92f7",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N36_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N37": {
+      "asset_id": "CHR_OTHER_NPCS_N37",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N37_005b20fca2f9.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N37_v001.png",
+      "sha256": "005b20fca2f99b6261b43fa3082270431ad971bccf13e87d78254c881b144b5a",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N37_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N38": {
+      "asset_id": "CHR_OTHER_NPCS_N38",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N38_c605c5128157.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N38_v001.png",
+      "sha256": "c605c512815767e9b55eaf4b9b1a2eec0381c1eef3d3342b1cbf485bbd2bd0cc",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N38_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N39": {
+      "asset_id": "CHR_OTHER_NPCS_N39",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N39_7d27d57085d4.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N39_v001.png",
+      "sha256": "7d27d57085d4d22706ab6a06c3085415b1a794e691cdc6079d67ee95939e1222",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N39_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N40": {
+      "asset_id": "CHR_OTHER_NPCS_N40",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N40_e16a3fcdee7d.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N40_v001.png",
+      "sha256": "e16a3fcdee7db262d4ed16ed39e3207f962780803d48e69dee906ecd9a418b93",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N40_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N42": {
+      "asset_id": "CHR_OTHER_NPCS_N42",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N42_2617de86ba65.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N42_v001.png",
+      "sha256": "2617de86ba65347a9aa6f5528b0b896f83d1608cc324257b565c27a7e5226f95",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N42_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N43": {
+      "asset_id": "CHR_OTHER_NPCS_N43",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N43_babd599800fb.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N43_v001.png",
+      "sha256": "babd599800fb1a03d73e0e2bfdd1b0bc7ebc3810c7e798f5ebc9437ada13f9d1",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N43_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N44": {
+      "asset_id": "CHR_OTHER_NPCS_N44",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N44_4652e72adf01.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N44_v001.png",
+      "sha256": "4652e72adf014b289d44dbde3de2472a96ced0294c535445287e03943bb90be8",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N44_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    },
+    "CHR_OTHER_NPCS_N45": {
+      "asset_id": "CHR_OTHER_NPCS_N45",
+      "texture": "res://assets/production/narrative/portraits/CHR_OTHER_NPCS_N45_c900f9fb38f9.png",
+      "source": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N45_v001.png",
+      "sha256": "c900f9fb38f9ac81d02af03b30a18a1c15e5662628193d1d4e70ad39bc0cdcae",
+      "pixel_size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB",
+      "role": "existing_normal_identity_portrait",
+      "pixels_changed": false,
+      "source_approval": "original_approved_hash",
+      "selected_source": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N45_v001.png",
+      "alpha_policy": "Use existing true alpha or show unchanged source in a paper picture frame; no white-threshold matting."
+    }
+  },
+  "observation_actor_aliases": {
+    "dog": "CHR_OTHER_NPCS_DOG",
+    "father": "CHR_OTHER_NPCS_FATHER",
+    "nurse": "CHR_OTHER_NPCS_N07",
+    "archivist": "CHR_OTHER_NPCS_N18",
+    "corner": "CHR_OTHER_NPCS_N08",
+    "warder": "CHR_OTHER_NPCS_N02",
+    "mother": "CHR_OTHER_NPCS_MOTHER",
+    "cat": "CHR_OTHER_NPCS_CAT",
+    "doctor": "CHR_OTHER_NPCS_N33",
+    "assistant": "CHR_OTHER_NPCS_N34",
+    "double_head": "CHR_OTHER_NPCS_N35",
+    "twitch": "CHR_OTHER_NPCS_N13",
+    "faceless": "CHR_OTHER_NPCS_N27",
+    "reverse": "CHR_OTHER_NPCS_N17",
+    "double_face": "CHR_OTHER_NPCS_N19",
+    "skinface": "CHR_OTHER_NPCS_N40",
+    "self": "CHR_OTHER_NPCS_N41",
+    "transporter_hospital": "CHR_OTHER_NPCS_N03",
+    "register_nurse": "CHR_OTHER_NPCS_N04",
+    "head_nurse": "CHR_OTHER_NPCS_N05",
+    "back": "CHR_OTHER_NPCS_N06",
+    "wheelchair": "CHR_OTHER_NPCS_N09",
+    "transport_patient": "CHR_OTHER_NPCS_N10",
+    "postop": "CHR_OTHER_NPCS_N11",
+    "assistant_asylum": "CHR_OTHER_NPCS_N14",
+    "isolation": "CHR_OTHER_NPCS_N15",
+    "dislocated": "CHR_OTHER_NPCS_N16",
+    "triage": "CHR_OTHER_NPCS_N20",
+    "pharmacist": "CHR_OTHER_NPCS_N21",
+    "ward_nurse": "CHR_OTHER_NPCS_N22",
+    "transporter_asylum": "CHR_OTHER_NPCS_N23",
+    "speaker": "CHR_OTHER_NPCS_N24",
+    "supervisor": "CHR_OTHER_NPCS_N25",
+    "treatment_pharmacist": "CHR_OTHER_NPCS_N28",
+    "cleaner": "CHR_OTHER_NPCS_N29",
+    "labor": "CHR_OTHER_NPCS_N30",
+    "stitched": "CHR_OTHER_NPCS_N31",
+    "psychiatrist": "CHR_OTHER_NPCS_N36",
+    "guard_asylum": "CHR_OTHER_NPCS_N37",
+    "director": "CHR_OTHER_NPCS_N38",
+    "blind": "CHR_OTHER_NPCS_N39",
+    "guard_hospital": "CHR_OTHER_NPCS_N42",
+    "archivist_asylum": "CHR_OTHER_NPCS_N43",
+    "informant": "CHR_OTHER_NPCS_N44",
+    "mimic": "CHR_OTHER_NPCS_N45"
+  },
+  "portrait_missing": {
+    "CHR_OTHER_NPCS_N41": "Registry only has normal BACK and altered references; do not invent a normal front face or silently substitute altered."
+  },
+  "card_bindings": {
+    "opening_crisis": "SLIDE_A02",
+    "opening_city": "SLIDE_A02",
+    "opening_country": "SLIDE_A03",
+    "opening_sea": "SLIDE_A04",
+    "opening_accident": "SLIDE_A06",
+    "opening_invasion": "SLIDE_A02",
+    "opening_room": "APPROVED_ROOM_STYLE",
+    "opening_logo": "APPROVED_ROOM_STYLE",
+    "intro_name": "PLAYER_BACK",
+    "intro_id": "PLAYER_BACK",
+    "intro_denial": "PLAYER_WAVE",
+    "intro_turn": "PLAYER_FRONT",
+    "intro_parasite": "PLAYER_FRONT",
+    "intro_sleep": "INTRO_HOST_SLEEP",
+    "intro_motive": "INTRO_HOST_SLEEP",
+    "intro_wake": "INTRO_HOST_WAKE"
+  },
+  "regions": {
+    "ENDING_EYES_CLOSED": {
+      "texture": "ENDING_HOST_EYES",
+      "normalized_rect": [
+        0,
+        0,
+        0.5,
+        1
+      ]
+    },
+    "ENDING_EYES_OPEN": {
+      "texture": "ENDING_HOST_EYES",
+      "normalized_rect": [
+        0.5,
+        0,
+        0.5,
+        1
+      ]
+    },
+    "PLAYER_PROFILE": {
+      "texture": "PLAYER_MASTER",
+      "normalized_rect": [
+        0.38,
+        0.38,
+        0.3,
+        0.56
+      ]
+    },
+    "TITLE_DOOR": {
+      "texture": "APPROVED_ROOM_STYLE",
+      "normalized_rect": [
+        0.55,
+        0,
+        0.45,
+        1
+      ]
+    }
+  },
+  "reserved_sources": {
+    "SLIDE_B04": "Original user source preserved. Actual image is an orbital rock, not the source-required surface view. No automatic substitution into opening or E2 ground.",
+    "SLIDE_B05": "Spacecraft kept out of opening per opening.json revision. No invented new epilogue beat.",
+    "ENDING_HOST_BODY_REFERENCE": "Identity/support reference; opaque source is not pasted onto the hospital bed.",
+    "UI_EVIDENCE_FAMILY_PHOTO": "Only show after exact hospital_family_photo_seen observation; never infer depicted identities/relationships."
+  }
+}

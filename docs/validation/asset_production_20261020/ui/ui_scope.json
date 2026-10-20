@@ -1,0 +1,847 @@
+{
+  "scope": "actual native UI first pass; no world/rule/form changes; no formal art acceptance",
+  "items": [
+    {
+      "id": "UI_DESIGN_ATTEMPT_FEEDBACK",
+      "name": "休息、死亡与新尝试反馈",
+      "group": "游戏HUD",
+      "actual_source": [
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "partial_existing_visuals",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "休息完成",
+        "死亡演出中",
+        "实际复活",
+        "新尝试",
+        "Street返程",
+        "降低动效"
+      ],
+      "evidence": null,
+      "remaining": "现有真实事件文字已继承统一样式；专属有限过渡尚未逐关视觉验收。"
+    },
+    {
+      "id": "UI_DESIGN_FOUNDATION",
+      "name": "UI视觉规范与部件母版",
+      "group": "共用规范",
+      "actual_source": [
+        "neurons/scripts/ui/front_end.gd",
+        "neurons/scripts/ui/campaign_menu.gd",
+        "neurons/scripts/ui/menu_art.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "正常",
+        "信息",
+        "重点",
+        "警示",
+        "禁止/不可用",
+        "键盘焦点",
+        "降低界面动效"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_TITLE",
+      "name": "主标题与主菜单",
+      "group": "开始与存档",
+      "actual_source": [
+        "neurons/scripts/ui/front_end.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "有有效档",
+        "无有效档",
+        "悬停/焦点",
+        "退出前停留"
+      ],
+      "evidence": "01_title.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_PROFILE",
+      "name": "玩家档案建立",
+      "group": "开始与存档",
+      "actual_source": [
+        "neurons/scripts/ui/front_end.gd"
+      ],
+      "first_pass_status": "partial_existing_visuals",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "输入中",
+        "空姓名",
+        "达到长度限制",
+        "已有存档等待覆盖确认"
+      ],
+      "evidence": "02_profile.png",
+      "remaining": "姓名、编号、空值和覆盖原语义保留；已认可玩家身份预览待角色资产接入，不采用旧否决图。"
+    },
+    {
+      "id": "UI_DESIGN_SAVE_CONFIRM",
+      "name": "存档、覆盖与失败反馈",
+      "group": "开始与存档",
+      "actual_source": [
+        "neurons/scripts/ui/front_end.gd",
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "覆盖待确认",
+        "保存成功",
+        "读取失败",
+        "保存失败且当前游戏保留",
+        "设置保存失败但本次有效",
+        "旧档升级说明"
+      ],
+      "evidence": "07g_save_failure.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_PAUSE",
+      "name": "暂停与常用系统入口",
+      "group": "暂停与设置",
+      "actual_source": [
+        "neurons/scripts/campaign.gd",
+        "neurons/scripts/bedroom_sample.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "世界运行",
+        "手动暂停",
+        "子页面打开",
+        "返回游戏"
+      ],
+      "evidence": "04_pause.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_SETTINGS",
+      "name": "声音与界面设置",
+      "group": "暂停与设置",
+      "actual_source": [
+        "neurons/scripts/ui/front_end.gd",
+        "neurons/scripts/bedroom_sample.gd",
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "默认值",
+        "调整中",
+        "静音",
+        "开/关",
+        "保存成功",
+        "写入失败本次有效"
+      ],
+      "evidence": "05_campaign_settings.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_HUD_RESOURCES",
+      "name": "资源、身份与章节HUD",
+      "group": "游戏HUD",
+      "actual_source": [
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "探索",
+        "战斗",
+        "返程",
+        "资源变化",
+        "长姓名"
+      ],
+      "evidence": "03b_dialogue.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_HUD_VITALITY",
+      "name": "生命精神与X键状态面板",
+      "group": "游戏HUD",
+      "actual_source": [
+        "neurons/scripts/ui/vitality_panel.gd",
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "关闭",
+        "手动展开",
+        "受伤后自动展开",
+        "提示已读",
+        "低生命/低精神",
+        "降低动效"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_HUD_SEARCH",
+      "name": "搜寻、观察与活动进度",
+      "group": "游戏HUD",
+      "actual_source": [
+        "neurons/scripts/ui/intervention_feedback.gd",
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "自主搜寻中",
+        "掌控搜寻中",
+        "完成",
+        "被打断",
+        "不可接近",
+        "无剩余机会",
+        "可补查"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_HUD_CONTROL",
+      "name": "掌控与战斗状态反馈",
+      "group": "游戏HUD",
+      "actual_source": [
+        "neurons/scripts/campaign.gd",
+        "neurons/scripts/ui/intervention_feedback.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "自主",
+        "掌控中",
+        "即将结束",
+        "已交回",
+        "探索",
+        "战斗"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_VIEW_TOOLS",
+      "name": "视野与操作辅助控件",
+      "group": "游戏HUD",
+      "actual_source": [
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "正常跟随",
+        "手动查看",
+        "已缩放",
+        "复位",
+        "微缩开/关",
+        "降低反馈停用"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_CRT_SHELL",
+      "name": "神经终端CRT整页",
+      "group": "神经干预",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd",
+        "neurons/scripts/ui/neuron_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "初开",
+        "已选节点",
+        "悬停预览",
+        "待执行",
+        "降低效果"
+      ],
+      "evidence": "06_cast.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_SKILL_ICONS",
+      "name": "十二神经节点图标",
+      "group": "神经干预",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd",
+        "neurons/scripts/ui/body_preview.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "锁定",
+        "可用",
+        "悬停",
+        "选中",
+        "冷却",
+        "不可用"
+      ],
+      "evidence": "06_cast.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_CRT_DESCRIPTION",
+      "name": "技能说明与费用可用性",
+      "group": "神经干预",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "可提交",
+        "未解锁",
+        "冷却",
+        "余额不足",
+        "抵制干预",
+        "身体不可执行",
+        "效果持续",
+        "前置不足",
+        "未观察"
+      ],
+      "evidence": "06_cast.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_DIRECTION_PICKER",
+      "name": "方向选择与取消",
+      "group": "神经干预",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "等待方向",
+        "方向焦点",
+        "取消",
+        "提交被拒绝",
+        "已提交"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_CAST_FEEDBACK",
+      "name": "干预结果与反馈卡",
+      "group": "神经干预",
+      "actual_source": [
+        "neurons/scripts/ui/intervention_feedback.gd",
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "已生效",
+        "被抵抗",
+        "施放被打断",
+        "搜寻已中断",
+        "无可见效果"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_TREE_SHELL",
+      "name": "星仓与冰柜整页",
+      "group": "星仓成长",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd",
+        "neurons/scripts/ui/body_preview.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "默认",
+        "选择节点",
+        "人体旋转",
+        "星环旋转",
+        "返回星环"
+      ],
+      "evidence": "06_tree.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_BODY_PREVIEW",
+      "name": "冰柜人体与技能反应预览",
+      "group": "星仓成长",
+      "actual_source": [
+        "neurons/scripts/ui/body_preview.gd",
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "partial_existing_visuals",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "正/背/两侧",
+        "默认",
+        "12技能反应",
+        "返回静止",
+        "降低动效"
+      ],
+      "evidence": "07_tree_inspect.png",
+      "remaining": "四向与12种反应仍是原有程序人体；需后续使用主角实际分层，不能称正式人物验收。"
+    },
+    {
+      "id": "UI_DESIGN_TREE_SPIRAL",
+      "name": "螺旋星环与前置连线",
+      "group": "星仓成长",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "锁定",
+        "可解锁",
+        "已解锁",
+        "选中",
+        "前置未满足",
+        "旋转避让"
+      ],
+      "evidence": "06_tree.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_TREE_INSPECT",
+      "name": "节点检查、解锁与升级",
+      "group": "星仓成长",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "未解锁",
+        "可解锁",
+        "前置不足",
+        "神经簇不足",
+        "已解锁",
+        "可升级",
+        "成功/失败",
+        "返回中"
+      ],
+      "evidence": "07_tree_inspect.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_TREE_EXCHANGE",
+      "name": "兑换与应急重连反馈",
+      "group": "星仓成长",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "可用",
+        "余额不足",
+        "条件不符",
+        "完成",
+        "失败"
+      ],
+      "evidence": "07_tree_inspect.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_BOOK_SHELL",
+      "name": "图书与分类浏览",
+      "group": "图书与物品",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "分类选中",
+        "有记录",
+        "空记录",
+        "长列表",
+        "参数未解锁/已解锁"
+      ],
+      "evidence": "06_book.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_BOOK_EVIDENCE",
+      "name": "亲历事实与机构记录条目",
+      "group": "图书与物品",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd",
+        "neurons/scripts/ui/ending_panel.gd"
+      ],
+      "first_pass_status": "partial_existing_visuals",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "事实",
+        "机构记录",
+        "其他已知来源",
+        "空状态",
+        "长来源",
+        "新条目提示"
+      ],
+      "evidence": "06_book.png",
+      "remaining": "事实/机构来源文本完整保留；尚未将全部来源种类做成独立卡片层级。"
+    },
+    {
+      "id": "UI_DESIGN_BOOK_DETAILS",
+      "name": "参数明细解锁与内容",
+      "group": "图书与物品",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "未解锁",
+        "余额不足",
+        "解锁成功",
+        "已开启",
+        "无可显示数据"
+      ],
+      "evidence": "06_book.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_INVENTORY",
+      "name": "随身物品与使用状态",
+      "group": "图书与物品",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd",
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "未持有",
+        "已持有",
+        "可食用",
+        "身体不可用",
+        "礼物尚未取得",
+        "使用请求中",
+        "完成"
+      ],
+      "evidence": "06_inventory.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_DIALOGUE",
+      "name": "正式对白与说话人界面",
+      "group": "对白与演出",
+      "actual_source": [
+        "neurons/scripts/ui/dialogue_playback.gd",
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "自动阅读",
+        "手动继续",
+        "完整显示",
+        "语音尚未结束",
+        "菜单暂停后恢复",
+        "长句"
+      ],
+      "evidence": "03b_dialogue.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_OPENING_OVERLAY",
+      "name": "开场与尾声字幕控件",
+      "group": "对白与演出",
+      "actual_source": [
+        "neurons/scripts/ui/opening_flow.gd",
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "打字中",
+        "完整显示",
+        "自动开/关",
+        "暂停/继续",
+        "可跳过",
+        "转场"
+      ],
+      "evidence": "07c_opening_controls.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_TUTORIAL",
+      "name": "操作教学与练习引导",
+      "group": "对白与演出",
+      "actual_source": [
+        "neurons/scripts/ui/tutorial_overlay.gd",
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "partial_existing_visuals",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "说明中",
+        "等待指定操作",
+        "不可跳步",
+        "暂停",
+        "允许跳过",
+        "练习结束",
+        "只读操作指南"
+      ],
+      "evidence": "07b_guide.png",
+      "remaining": "真实教学操作、隔离练习和遮罩保留，面板/按钮已改；演示身体与家具仍待正式角色接入。"
+    },
+    {
+      "id": "UI_DESIGN_FATHER_GUIDANCE",
+      "name": "思考与救援提示卡",
+      "group": "对白与演出",
+      "actual_source": [
+        "neurons/scripts/ui/father_prompt.gd",
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "思考",
+        "救援",
+        "节点可查看",
+        "节点不可用",
+        "提示消退"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_ENDING",
+      "name": "E1–E3结局界面",
+      "group": "结局与记录",
+      "actual_source": [
+        "neurons/scripts/ui/ending_panel.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "E1",
+        "E2",
+        "E3",
+        "记录入口焦点",
+        "返回/新游戏"
+      ],
+      "evidence": "07d_ending_E1.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_RUN_RECORDS",
+      "name": "本次记录与结果阅读",
+      "group": "结局与记录",
+      "actual_source": [
+        "neurons/scripts/ui/ending_panel.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "有记录",
+        "空记录",
+        "长列表",
+        "隐藏遭遇有/无",
+        "返回结局"
+      ],
+      "evidence": "07e_ending_records_empty.png",
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_TRANSITIONS",
+      "name": "页面切换与场景过渡",
+      "group": "通用交互部件",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd",
+        "neurons/scripts/ui/opening_flow.gd",
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "partial_existing_visuals",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "打开",
+        "关闭",
+        "过渡中",
+        "读取完成/失败",
+        "降低动效"
+      ],
+      "evidence": null,
+      "remaining": "保留原关屏、淡变和降低动效语义；全部关卡转场的正式视觉仍待组合通玩。"
+    },
+    {
+      "id": "UI_DESIGN_BUTTONS",
+      "name": "按钮、图标按钮与焦点",
+      "group": "通用交互部件",
+      "actual_source": [
+        "neurons/scripts/ui/front_end.gd",
+        "neurons/scripts/ui/campaign_menu.gd",
+        "neurons/scripts/ui/ending_panel.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "正常",
+        "悬停",
+        "按下",
+        "禁用",
+        "选中",
+        "键盘焦点"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_PANELS_TABS_SCROLL",
+      "name": "面板、页签与滚动阅读部件",
+      "group": "通用交互部件",
+      "actual_source": [
+        "neurons/scripts/ui/campaign_menu.gd",
+        "neurons/scripts/ui/ending_panel.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "页签默认/悬停/选中/禁用",
+        "列表默认/选中",
+        "滚动顶部/中部/底部",
+        "空列表"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_INPUTS_SLIDERS",
+      "name": "输入、开关与滑条部件",
+      "group": "通用交互部件",
+      "actual_source": [
+        "neurons/scripts/ui/front_end.gd",
+        "neurons/scripts/bedroom_sample.gd",
+        "neurons/scripts/ui/campaign_menu.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "输入/焦点/错误",
+        "开/关",
+        "滑条默认/悬停/拖动/禁用",
+        "最小/最大"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_TOOLTIPS_NOTICES",
+      "name": "提示、错误与有限通知部件",
+      "group": "通用交互部件",
+      "actual_source": [
+        "neurons/scripts/ui/intervention_feedback.gd",
+        "neurons/scripts/ui/campaign_menu.gd",
+        "neurons/scripts/ui/front_end.gd",
+        "neurons/scripts/campaign.gd"
+      ],
+      "first_pass_status": "native_first_pass_integrated",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "信息",
+        "成功",
+        "警示",
+        "失败/拒绝",
+        "等待",
+        "空状态"
+      ],
+      "evidence": null,
+      "remaining": "原生控件与共享视觉已接入；本批不替代全部状态人工通玩验收。"
+    },
+    {
+      "id": "UI_DESIGN_POINTER_KEYS",
+      "name": "鼠标指向、按键示意与热区",
+      "group": "通用交互部件",
+      "actual_source": [
+        "neurons/scripts/campaign.gd",
+        "neurons/scripts/ui/tutorial_overlay.gd",
+        "neurons/scripts/ui/vitality_panel.gd"
+      ],
+      "first_pass_status": "partial_existing_visuals",
+      "formal_art_accepted": false,
+      "required_states_preserved": [
+        "可查看",
+        "可提交",
+        "不可用",
+        "拖动查看",
+        "按键按下",
+        "键盘焦点"
+      ],
+      "evidence": null,
+      "remaining": "按钮手形、可见键盘焦点及X键图块已改；世界热区光标分类尚未改写。"
+    }
+  ],
+  "item_count": 38,
+  "files": [
+    {
+      "path": "neurons/scripts/ui/ui_style.gd",
+      "sha256": "38d149ef8299ead8f377346a0fdf5b0fc81583c7c93a39966aa46ff2f85c29c0"
+    },
+    {
+      "path": "neurons/scripts/ui/ui_paint.gd",
+      "sha256": "d8da20261e2d98a9f19ad6350770c7eb2585bceeaf87cee1cc6e7cb7fec3c628"
+    },
+    {
+      "path": "neurons/scripts/ui/ui_presentation.gd",
+      "sha256": "d26595105118c681588803c9b045b1cdb42214c7284177cbacdff33bebe3b46f"
+    },
+    {
+      "path": "neurons/scripts/ui/front_end.gd",
+      "sha256": "9c8e3b8f1ed1730a307593011634ebb6977e403b8297fef060052a273e1003ec"
+    },
+    {
+      "path": "neurons/scripts/ui/neuron_menu.gd",
+      "sha256": "c4c35184942782eb54369e97c51e6c4e27c27cd588d7834b80e91a325b3b2a20"
+    },
+    {
+      "path": "neurons/scripts/ui/campaign_menu.gd",
+      "sha256": "1de30f67903fa0215c9e8c8abca99fe8d55dfc853ec0f8e44ca2aee52e468163"
+    },
+    {
+      "path": "neurons/scripts/ui/vitality_panel.gd",
+      "sha256": "46bdd556cd567216bf3693c9d95b5cda1bf506221a93e04ce63b802b23f15c75"
+    },
+    {
+      "path": "neurons/scripts/ui/father_prompt.gd",
+      "sha256": "b085477944bff1edf7355ac81df94d1fdd87a26b5030aeabde44c8b51c9055f1"
+    },
+    {
+      "path": "neurons/scripts/ui/intervention_feedback.gd",
+      "sha256": "fe1543a321e967495c8e5a541c159eafd28c9924fdb950dab4db4ec9bdf10575"
+    },
+    {
+      "path": "neurons/scripts/ui/ending_panel.gd",
+      "sha256": "ba3c9671a2e17bc9fadbb9e007b99f502469e65a43dc493b7f664c21ab28447b"
+    },
+    {
+      "path": "neurons/scripts/ui/opening_flow.gd",
+      "sha256": "2034e1cf94f40e2e1437b3d6e08e931d6f4d3be4318c093930cd6599a6fe35b8"
+    },
+    {
+      "path": "neurons/scripts/ui/tutorial_overlay.gd",
+      "sha256": "b62f286bf7432cbe55c419662a2c27596916b2fcb9bd9be5ce98629f1661a87a"
+    }
+  ],
+  "guardrails": [
+    "原版素材不覆盖",
+    "存档语义不变",
+    "菜单/对白冻结世界",
+    "模态控件真实可点击且不穿透",
+    "hover不改变选中/不付费",
+    "字体、数字、按钮均由Godot真实控件显示"
+  ],
+  "verification": {
+    "driver": "neurons/tests/ui_visual_20261020.gd",
+    "result": "result.json",
+    "gpu": "gpu.log"
+  }
+}

@@ -2,6 +2,9 @@ extends "res://scripts/world/room_layout.gd"
 ## L1 geometry v2: metre-based whitebox, not an approved art layout.
 ## Repeated _init calls rebuild navigation without resetting moved furniture.
 const SPACE_DATA_PATH:String="res://data/room_spaces.json"
+const Presentation=preload("res://scripts/world/spatial_presentation.gd")
+const SpatialRevision=preload("res://scripts/world/spatial_revision.gd")
+var spatial_revision:int=SpatialRevision.CURRENT
 var config:Dictionary={}
 var projection_origin:=Vector2(180,270)
 var projection_x:float=96.0
@@ -12,9 +15,10 @@ var door_width_m:float=0.95
 var door_height_m:float=2.15
 var _configured:bool=false
 
-func _init() -> void:
+func _init(revision:int=SpatialRevision.CURRENT) -> void:
  if not _configured:
-  var document:Variant=JSON.parse_string(FileAccess.get_file_as_string(SPACE_DATA_PATH))
+  spatial_revision=revision
+  var document:Variant=SpatialRevision.document("room_spaces.json",revision)
   assert(document is Dictionary and document.has("rooms"),"Missing room-space configuration")
   config=document.rooms.bedroom.duplicate(true)
   geometry_version=int(config.geometry_version)
@@ -25,7 +29,7 @@ func _init() -> void:
   cat_exit_anchor=_v2(config.anchors.cat_exit)
   projection_origin=_v2(config.projection.origin_px)
   projection_x=float(config.projection.x_px_per_m)
-  projection_depth=_v2(config.projection.depth_px_per_m)
+  projection_depth=Presentation.DEPTH_BASIS
   height_pixels_per_m=float(config.projection.height_px_per_m)
   wall_thickness_m=float(config.wall.thickness_m)
   door_width_m=float(config.door.clear_width_m)
@@ -43,12 +47,10 @@ func _init() -> void:
  rebuild_grid()
 
 func project(point:Vector2) -> Vector2:
- return projection_origin+Vector2(projection_x*point.x+projection_depth.x*point.y,projection_depth.y*point.y)
+ return Presentation.project(point,projection_origin)
 
 func unproject(point:Vector2) -> Vector2:
- var local:=point-projection_origin
- var depth:float=local.y/projection_depth.y
- return Vector2((local.x-projection_depth.x*depth)/projection_x,depth)
+ return Presentation.unproject(point,projection_origin)
 
 func project_at_height(point:Vector2,height_m:float) -> Vector2:
  return project(point)-Vector2(0,height_m*height_pixels_per_m)

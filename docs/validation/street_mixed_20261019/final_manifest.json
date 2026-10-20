@@ -1,0 +1,155 @@
+{
+  "status": "frozen; bounded mixed encounter verified, not all-crowd human/B7 acceptance",
+  "sources_sha256": {
+    "neurons/scripts/core/street_belt.gd": "b00d32bde090273c7cbd7ae788162514141a5457e18698f286c125a94534ecd2",
+    "neurons/scripts/core/street_mother.gd": "9a2a798a379f12c6df18ed44b698f5b45e2eb080b99d35691ae1a49c03546de2",
+    "neurons/scripts/world/room_layout.gd": "c783b8d1138341ab68555aba33a92cf88644530fca66b093a53fcbeeef2ef01c",
+    "neurons/scripts/core/combat_chapter.gd": "3cc73f914b628481a71413b4ae6334b627a8b3913e14cc5f1a65a04a5e59e67b"
+  },
+  "changes": {
+    "street_belt.gd": "Exact transient collision/pose/config-keyed target-independent windup prediction; continuous clear-segment fast path, original blocked samples retained.",
+    "street_mother.gd": "Same precise transient windup-arm geometry caching and continuous clear-segment fast path; actual enclosure and contact handlers unchanged.",
+    "room_layout.gd": "Local temporary movable AABB grid push/pop; solid mask computed by unchanged walkable and restored exactly.",
+    "combat_chapter.gd": "Blocked hero detour uses local temporary original assistant bed AABB instead of two whole-room grid rebuilds."
+  },
+  "final_checks": {
+    "r3": {
+      "passes": 18,
+      "failures": [],
+      "stderr_error_or_warning_lines": []
+    },
+    "cache_equivalence": {
+      "passes": 47,
+      "failures": [],
+      "stderr_error_or_warning_lines": []
+    },
+    "mother_equivalence": {
+      "passes": 47,
+      "failures": [],
+      "stderr_error_or_warning_lines": []
+    },
+    "mask_equivalence_r2": {
+      "passes": 48,
+      "failures": [],
+      "stderr_error_or_warning_lines": []
+    },
+    "regression_belt": {
+      "passes": 37,
+      "failures": [],
+      "stderr_error_or_warning_lines": []
+    },
+    "regression_limbs": {
+      "passes": 68,
+      "failures": [],
+      "stderr_error_or_warning_lines": []
+    },
+    "regression_bed_travel": {
+      "passes": 36,
+      "failures": [],
+      "stderr_error_or_warning_lines": []
+    },
+    "perf_final_full": {
+      "passes": 3,
+      "failures": [],
+      "stderr_error_or_warning_lines": []
+    }
+  },
+  "performance": {
+    "before_no_evidence_collection": {
+      "actual_fps": 2.52273076956443,
+      "collection": "Only Time.get_ticks_usec once per frame, no actor scans, signature JSON, screenshots or timeline in loop. Ordinary enabled app._process; same ten-body fixture as first run.",
+      "frames": 98,
+      "hp": 100,
+      "room_end": "street_twisted",
+      "room_start": "street_twisted",
+      "wall_seconds": 38.846793
+    },
+    "first_same_98_frames_after_wall_seconds": 2.574932,
+    "final_full_encounter": {
+      "actual_fps": 31.5196158057617,
+      "collection": "Only Time.get_ticks_usec once per frame, no actor scans, signature JSON, screenshots or timeline in loop. Ordinary enabled app._process; same ten-body fixture as first run.",
+      "frames": 749,
+      "hp": 40,
+      "room_end": "street_node",
+      "room_start": "street_twisted",
+      "wall_seconds": 23.76298
+    },
+    "p50_seconds": 0.021451,
+    "p95_seconds": 0.055639,
+    "max_seconds": 0.437579,
+    "over_100ms_frames": [
+      {
+        "frame": 0,
+        "seconds": 0.437579
+      },
+      {
+        "frame": 748,
+        "seconds": 0.161326
+      }
+    ],
+    "remaining_limits": "Initial cold Street layout frame 437.58ms; next-room entry final frame161.33ms. Middle encounter has no >100ms frame. Timed on this machine with fixed30 game-time delta, actual GPU frames, simple placeholders; not universal FPS or formal-asset performance acceptance."
+  },
+  "same_actual_outcome": {
+    "hero_coordinates_exact_equal": true,
+    "final_hp": 40,
+    "room": "street_node",
+    "four_combat_receipts_with_source_HP_SP_eventid_and_time_exact_equal": true,
+    "damage_facts": [
+      {
+        "event_id": "combat:6:1:assistant:3",
+        "hp_damage": 20,
+        "kind": "combat_hit",
+        "room": "street_twisted",
+        "source": "assistant",
+        "sp_damage": 0,
+        "time": 8.53333333333331
+      },
+      {
+        "event_id": "combat:6:1:mother:4",
+        "hp_damage": 10,
+        "kind": "combat_hit",
+        "room": "street_twisted",
+        "source": "mother",
+        "sp_damage": 0,
+        "time": 9.36666666666664
+      },
+      {
+        "event_id": "combat:6:1:assistant:6",
+        "hp_damage": 20,
+        "kind": "combat_hit",
+        "room": "street_twisted",
+        "source": "assistant",
+        "sp_damage": 0,
+        "time": 13.3666666666666
+      },
+      {
+        "event_id": "combat:6:1:director:8",
+        "hp_damage": 10,
+        "kind": "combat_hit",
+        "room": "street_twisted",
+        "source": "director",
+        "sp_damage": 10,
+        "time": 15.8333333333333
+      }
+    ]
+  },
+  "preserved_failures": [
+    {
+      "folder": "r1",
+      "issue": "Two finite assertions incorrectly compared pre-JSON float32 Vector2 components as exact Arrays with post-JSON float64 parsed decimals. Runtime rigid geometry unchanged. R3 uses <1e-5m point tolerance plus separate actual collision assertions. Original19pass2fail record retained."
+    },
+    {
+      "folder": "r2",
+      "issue": "Runner log-file res:// path is not accepted by Godot Windows logger; finite logic18/0, logger errors. R3 uses absolute log filename and clean stderr."
+    },
+    {
+      "folder": "mask_equivalence",
+      "issue": "Test incorrectly requested atrium portal choice rather than source decision, causing SCRIPT ERROR despite exit0. Invalid run not counted. Corrected mask_equivalence_r2 covers all3layouts12poses48/0 with clean stderr."
+    },
+    {
+      "folder": "perf_hot",
+      "issue": "Real production ~4.3-4.8sec frames during repeated belt prediction, confirmed without per-frame scans/JSON/screenshot overhead. Fixed and preserved."
+    }
+  ],
+  "fixtures_and_limits": "First finite batch explicitly casts14 identities over3street segments, including initially dead wheelchair/lateral-bed carrier and an original assistant bed. Live batch explicitly starts10identities in one actual source segment; after setup ordinary_process only, no seed/route/position/damage/ending writes. Initial deaths are occupancy fixtures, not death-event evidence. Real JSON/manual-pause and same pending intent recovery verified. Artificially impossible full entrances are not called soft-locks. All45 identities retained but all45 simultaneous source schedules, other untested combinations, human manual play/formal art/audio and full B7 remain unaccepted."
+}

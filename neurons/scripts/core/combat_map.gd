@@ -2,7 +2,7 @@ extends RefCounted
 ## S1:P327–473. Existing cortical links, then the seven deep structures.
 const Cortex=preload("res://scripts/core/cortex_map.gd")
 const DEEP=["hippocampus","thalamus","cerebellum","hypothalamus","basal","amygdala","brainstem"]
-const DEEP_NAMES={"hippocampus":"海马回廊","thalamus":"丘脑中继厅","cerebellum":"小脑折列室","hypothalamus":"下丘脑温控室","basal":"基底核选动环","amygdala":"杏仁核双室","brainstem":"脑干脉冲井","street_exit":"Street入口（后续开发边界）"}
+const DEEP_NAMES={"hippocampus":"海马回廊","thalamus":"丘脑中继厅","cerebellum":"小脑折列室","hypothalamus":"下丘脑温控室","basal":"基底核选动环","amygdala":"杏仁核双室","brainstem":"脑干脉冲井","street_exit":"Street入口"}
 const DEEP_GRAPH={"hippocampus":["verify","thalamus"],"thalamus":["hippocampus","cerebellum","hypothalamus","basal","amygdala","brainstem"],"cerebellum":["thalamus","amygdala"],"hypothalamus":["thalamus","basal"],"basal":["thalamus","hypothalamus"],"amygdala":["thalamus","cerebellum"],"brainstem":["thalamus","street_exit"]}
 const SIZE=Vector2(11.2,7.6)
 
@@ -14,7 +14,20 @@ static func doors(id:String) -> Array:
  if id=="verify":result[result.find("combat_exit")]="hippocampus"
  return result
 
-static func doorway(room:String,to:String) -> Vector2:
+const SpatialRevision=preload("res://scripts/world/spatial_revision.gd")
+static func space_spec(room:String,revision:int=SpatialRevision.CURRENT) -> Dictionary:
+ return SpatialRevision.document("neural_spaces.json",revision).get("rooms",{}).get("L5:"+room,{}).duplicate(true)
+
+static func world_size(room:String,version:int=2,revision:int=SpatialRevision.CURRENT) -> Vector2:
+ if version<3:return SIZE
+ var size:Array=space_spec(room,revision).get("size_m",[SIZE.x,SIZE.y])
+ return Vector2(float(size[0]),float(size[1]))
+
+static func doorway(room:String,to:String,version:int=2,revision:int=SpatialRevision.CURRENT) -> Vector2:
+ if version>=3:
+  for portal:Dictionary in space_spec(room,revision).get("portals",[]):
+   if str(portal.toward)==to:return Vector2(float(portal.at_m[0]),float(portal.at_m[1]))
+  return Vector2(-1,-1)
  if Cortex.DOOR_POSITIONS.has(room):return Cortex.doorway(room,"combat_exit" if room=="verify" and to=="hippocampus" else to)*2.0
  var index:int=doors(room).find(to)
  if index<0:return Vector2(-1,-1)

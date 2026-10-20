@@ -1,0 +1,840 @@
+{
+  "schema": 1,
+  "enabled": false,
+  "policy": [
+    "Exact stable role mapping, including distinct L2/L3 doctors, nurses and assistants.",
+    "No missing face or back view is invented from a different identity.",
+    "A numbered authored pose is not assumed to be animation frame order.",
+    "Prepared pixels are not automatically a completed motion or physical contact.",
+    "Revised altered drawings are used as delivered, without a new aesthetic review."
+  ],
+  "bindings": {
+    "1": {
+      "father": "CHR_OTHER_NPCS_FATHER",
+      "mother": "CHR_OTHER_NPCS_MOTHER",
+      "dog": "CHR_OTHER_NPCS_DOG",
+      "cat": "CHR_OTHER_NPCS_CAT"
+    },
+    "2": {
+      "guide": "CHR_OTHER_NPCS_N20",
+      "wheelchair": "CHR_OTHER_NPCS_N09",
+      "porter": "CHR_OTHER_NPCS_N03",
+      "doctor": "CHR_OTHER_NPCS_N33",
+      "assistant": "CHR_OTHER_NPCS_N34",
+      "archivist": "CHR_OTHER_NPCS_N18",
+      "guard": "CHR_OTHER_NPCS_N42",
+      "nurse": "CHR_OTHER_NPCS_N07",
+      "pharmacist": "CHR_OTHER_NPCS_N21",
+      "patient": "CHR_OTHER_NPCS_N41"
+    },
+    "3": {
+      "ordinary_orderly": "CHR_OTHER_NPCS_N02",
+      "registration_nurse": "CHR_OTHER_NPCS_N04",
+      "doctor": "CHR_OTHER_NPCS_N36",
+      "assistant": "CHR_OTHER_NPCS_N14",
+      "pharmacist": "CHR_OTHER_NPCS_N28",
+      "med_nurse": "CHR_OTHER_NPCS_N22",
+      "archivist": "CHR_OTHER_NPCS_N43",
+      "guard": "CHR_OTHER_NPCS_N37",
+      "patient": "CHR_OTHER_NPCS_N41",
+      "head_nurse": "CHR_OTHER_NPCS_N05",
+      "porter": "CHR_OTHER_NPCS_N23",
+      "transport_patient": "CHR_OTHER_NPCS_N10",
+      "postop_patient": "CHR_OTHER_NPCS_N11",
+      "informer": "CHR_OTHER_NPCS_N44",
+      "therapist": "CHR_OTHER_NPCS_N38",
+      "speaker": "CHR_OTHER_NPCS_N24",
+      "isolation_orderly": "CHR_OTHER_NPCS_N15",
+      "cleaner": "CHR_OTHER_NPCS_N29",
+      "corner_patient": "CHR_OTHER_NPCS_N08",
+      "supervisor": "CHR_OTHER_NPCS_N25",
+      "labor_patient": "CHR_OTHER_NPCS_N30"
+    },
+    "4": {
+      "backward": "CHR_OTHER_NPCS_N06",
+      "stitched": "CHR_OTHER_NPCS_N31",
+      "blindfold": "CHR_OTHER_NPCS_N39",
+      "repeater": "CHR_OTHER_NPCS_N45",
+      "misaligned": "CHR_OTHER_NPCS_N16",
+      "dual_head": "CHR_OTHER_NPCS_N35",
+      "twitch": "CHR_OTHER_NPCS_N13",
+      "faceless": "CHR_OTHER_NPCS_N27",
+      "reverse": "CHR_OTHER_NPCS_N17",
+      "face_press": "CHR_OTHER_NPCS_N40",
+      "double_face": "CHR_OTHER_NPCS_N19"
+    },
+    "hidden": {
+      "hunter": "CHR_HUNTER"
+    },
+    "5": {
+      "dog": "CHR_OTHER_NPCS_DOG",
+      "father": "CHR_OTHER_NPCS_FATHER",
+      "nurse": "CHR_OTHER_NPCS_N07",
+      "archivist": "CHR_OTHER_NPCS_N18",
+      "corner": "CHR_OTHER_NPCS_N08",
+      "warder": "CHR_OTHER_NPCS_N02",
+      "mother": "CHR_OTHER_NPCS_MOTHER",
+      "cat": "CHR_OTHER_NPCS_CAT",
+      "doctor": "CHR_OTHER_NPCS_N33",
+      "assistant": "CHR_OTHER_NPCS_N34",
+      "double_head": "CHR_OTHER_NPCS_N35",
+      "twitch": "CHR_OTHER_NPCS_N13",
+      "faceless": "CHR_OTHER_NPCS_N27",
+      "reverse": "CHR_OTHER_NPCS_N17",
+      "double_face": "CHR_OTHER_NPCS_N19",
+      "skinface": "CHR_OTHER_NPCS_N40",
+      "self": "CHR_OTHER_NPCS_N41"
+    },
+    "6": {
+      "father": "CHR_OTHER_NPCS_FATHER",
+      "warder": "CHR_OTHER_NPCS_N02",
+      "transporter_hospital": "CHR_OTHER_NPCS_N03",
+      "register_nurse": "CHR_OTHER_NPCS_N04",
+      "head_nurse": "CHR_OTHER_NPCS_N05",
+      "back": "CHR_OTHER_NPCS_N06",
+      "nurse": "CHR_OTHER_NPCS_N07",
+      "corner": "CHR_OTHER_NPCS_N08",
+      "wheelchair": "CHR_OTHER_NPCS_N09",
+      "transport_patient": "CHR_OTHER_NPCS_N10",
+      "postop": "CHR_OTHER_NPCS_N11",
+      "cat": "CHR_OTHER_NPCS_CAT",
+      "twitch": "CHR_OTHER_NPCS_N13",
+      "assistant_asylum": "CHR_OTHER_NPCS_N14",
+      "isolation": "CHR_OTHER_NPCS_N15",
+      "dislocated": "CHR_OTHER_NPCS_N16",
+      "reverse": "CHR_OTHER_NPCS_N17",
+      "archivist": "CHR_OTHER_NPCS_N18",
+      "double_face": "CHR_OTHER_NPCS_N19",
+      "triage": "CHR_OTHER_NPCS_N20",
+      "pharmacist": "CHR_OTHER_NPCS_N21",
+      "ward_nurse": "CHR_OTHER_NPCS_N22",
+      "transporter_asylum": "CHR_OTHER_NPCS_N23",
+      "speaker": "CHR_OTHER_NPCS_N24",
+      "supervisor": "CHR_OTHER_NPCS_N25",
+      "dog": "CHR_OTHER_NPCS_DOG",
+      "faceless": "CHR_OTHER_NPCS_N27",
+      "treatment_pharmacist": "CHR_OTHER_NPCS_N28",
+      "cleaner": "CHR_OTHER_NPCS_N29",
+      "labor": "CHR_OTHER_NPCS_N30",
+      "stitched": "CHR_OTHER_NPCS_N31",
+      "mother": "CHR_OTHER_NPCS_MOTHER",
+      "doctor": "CHR_OTHER_NPCS_N33",
+      "assistant": "CHR_OTHER_NPCS_N34",
+      "double_head": "CHR_OTHER_NPCS_N35",
+      "psychiatrist": "CHR_OTHER_NPCS_N36",
+      "guard_asylum": "CHR_OTHER_NPCS_N37",
+      "director": "CHR_OTHER_NPCS_N38",
+      "blind": "CHR_OTHER_NPCS_N39",
+      "skinface": "CHR_OTHER_NPCS_N40",
+      "self": "CHR_OTHER_NPCS_N41",
+      "guard_hospital": "CHR_OTHER_NPCS_N42",
+      "archivist_asylum": "CHR_OTHER_NPCS_N43",
+      "informant": "CHR_OTHER_NPCS_N44",
+      "mimic": "CHR_OTHER_NPCS_N45"
+    }
+  },
+  "assets": {
+    "CHR_FATHER_L1_COLLAPSE": {
+      "identity_id": "CHR_OTHER_NPCS_FATHER",
+      "state": "collapse",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_FATHER/CHR_FATHER_L1_COLLAPSE_source_v002_ace1da548db0.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        342,
+        21,
+        814,
+        1363
+      ],
+      "body_height_px": 1342,
+      "foot_anchor_px": [
+        578.0,
+        1363
+      ],
+      "sha256": "ace1da548db0dd7af0db032b06e80a0abb840a55cfc3032d51193b94a44cf370",
+      "original_sha256": "ace1da548db0dd7af0db032b06e80a0abb840a55cfc3032d51193b94a44cf370",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_CAT": {
+      "identity_id": "CHR_OTHER_NPCS_CAT",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_CAT/CHR_OTHER_NPCS_CAT_cutout_a185080e259e.png",
+      "canvas_px": [
+        1448,
+        1086
+      ],
+      "bbox_px": [
+        155,
+        27,
+        1349,
+        1070
+      ],
+      "body_height_px": 1043,
+      "foot_anchor_px": [
+        752.0,
+        1070
+      ],
+      "sha256": "a185080e259ea63141c41ad3961abf4d95f4ad4d12765d76521bff569006e11a",
+      "original_sha256": "6e852052931cf49afdb5499cd6dd09bc83aa7c61bfd85a4c6365b2c17573e275",
+      "source_approval": "original_approved_hash",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": false,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_DOG": {
+      "identity_id": "CHR_OTHER_NPCS_DOG",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_DOG/CHR_OTHER_NPCS_DOG_cutout_41263e39388c.png",
+      "canvas_px": [
+        1536,
+        1024
+      ],
+      "bbox_px": [
+        275,
+        18,
+        1328,
+        992
+      ],
+      "body_height_px": 974,
+      "foot_anchor_px": [
+        801.5,
+        992
+      ],
+      "sha256": "41263e39388cd57176c009e54442f0193b519130c07376722182bc4258745ae5",
+      "original_sha256": "8f5a15dc0032f47ea64e401bbf7ca78b7c804e0f5c965d27a22a153b637e436b",
+      "source_approval": "original_approved_hash",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": false,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_FATHER_ALTERED": {
+      "identity_id": "CHR_OTHER_NPCS_FATHER",
+      "state": "altered",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_FATHER/CHR_OTHER_NPCS_FATHER_ALTERED_source_v002_6c7bba86a2e2.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        338,
+        12,
+        783,
+        1372
+      ],
+      "body_height_px": 1360,
+      "foot_anchor_px": [
+        560.5,
+        1372
+      ],
+      "sha256": "6c7bba86a2e25ac29cf248e2b6a0df33bd079b668ea32c9d3d0043aa0d55da77",
+      "original_sha256": "6c7bba86a2e25ac29cf248e2b6a0df33bd079b668ea32c9d3d0043aa0d55da77",
+      "source_approval": "user_revised_no_aesthetic_reevaluation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_FATHER": {
+      "identity_id": "CHR_OTHER_NPCS_FATHER",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_FATHER/CHR_OTHER_NPCS_FATHER_normal_reference_cutout_v001.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        352,
+        34,
+        751,
+        1356
+      ],
+      "body_height_px": 1322,
+      "foot_anchor_px": [
+        551.5,
+        1356
+      ],
+      "sha256": "ac7e0bba17717c4f911da3ee68a23d3384b71ab1bfb477834ff6c3200980a532",
+      "original_sha256": "2a279871199cc28b1cb42d70e2cf56ac9e089d48ae49065db95870a575f7b648",
+      "source_approval": "original_approved_hash",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": false,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_MOTHER": {
+      "identity_id": "CHR_OTHER_NPCS_MOTHER",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_MOTHER/CHR_OTHER_NPCS_MOTHER_normal_reference_cutout_v001.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        345,
+        21,
+        765,
+        1381
+      ],
+      "body_height_px": 1360,
+      "foot_anchor_px": [
+        555.0,
+        1381
+      ],
+      "sha256": "d865fd9d09635466026ac74c4054761c685f5ab520752d1c231d9731ce8e5b2e",
+      "original_sha256": "7ee1e1fc53cfd945bd6be0e680673e3895cc71c2df08b3a70332dac9d15a3abf",
+      "source_approval": "original_approved_hash",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": false,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N03_BACK": {
+      "identity_id": "CHR_OTHER_NPCS_N03",
+      "state": "normal",
+      "direction": "back_reference",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N03/CHR_OTHER_NPCS_N03_BACK_source_v002_02224d12fedb.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        362,
+        16,
+        752,
+        1326
+      ],
+      "body_height_px": 1310,
+      "foot_anchor_px": [
+        557.0,
+        1326
+      ],
+      "sha256": "02224d12fedb3b81d72523571d4268ed7a8235f6c696bd78f2ca76dd230a47ec",
+      "original_sha256": "02224d12fedb3b81d72523571d4268ed7a8235f6c696bd78f2ca76dd230a47ec",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N03": {
+      "identity_id": "CHR_OTHER_NPCS_N03",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N03/CHR_OTHER_NPCS_N03_normal_reference_cutout_v001.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        318,
+        17,
+        772,
+        1356
+      ],
+      "body_height_px": 1339,
+      "foot_anchor_px": [
+        545.0,
+        1356
+      ],
+      "sha256": "e17f21ee56cff601bf9a3237a73974cc9ea8082f9a1bfbb3eabc066330f274c7",
+      "original_sha256": "b61eafb558269c642d19999a587be6fb507cd8c035d74af45d8c6fa04241ebd4",
+      "source_approval": "original_approved_hash",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": false,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N04": {
+      "identity_id": "CHR_OTHER_NPCS_N04",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N04/CHR_OTHER_NPCS_N04_normal_reference_cutout_v001.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        371,
+        35,
+        770,
+        1338
+      ],
+      "body_height_px": 1303,
+      "foot_anchor_px": [
+        570.5,
+        1338
+      ],
+      "sha256": "bcbd42840519d0f440507ee5542da481de3fcacf36d5693bcd119c9d101d8a1a",
+      "original_sha256": "f23ce310d1c10c437ea2bf53e20e0955aaef7eb8e7396afea5af0c448b61208f",
+      "source_approval": "original_approved_hash",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": false,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N05": {
+      "identity_id": "CHR_OTHER_NPCS_N05",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N05/CHR_OTHER_NPCS_N05_cutout_bd72356cd907.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        357,
+        23,
+        764,
+        1334
+      ],
+      "body_height_px": 1311,
+      "foot_anchor_px": [
+        560.5,
+        1334
+      ],
+      "sha256": "bd72356cd90701e40e460e1d614627d9b3f26fa9f8b125d8aa62db8f3af45e87",
+      "original_sha256": "8cef027d79aa8c19f221b7efbbcc84e12e45da17da1d74d39279cbe00c6fca96",
+      "source_approval": "original_approved_hash",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": false,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N07": {
+      "identity_id": "CHR_OTHER_NPCS_N07",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N07/CHR_OTHER_NPCS_N07_cutout_267521bd4cae.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        362,
+        11,
+        765,
+        1392
+      ],
+      "body_height_px": 1381,
+      "foot_anchor_px": [
+        563.5,
+        1392
+      ],
+      "sha256": "267521bd4cae46307ed526cf643f63b3e95307c032bc8d6c7d13788637ba2484",
+      "original_sha256": "2dac38925dbf6bc3fbd16f0e2aec86ca4f6109c61c500e095ba056d678def533",
+      "source_approval": "original_approved_hash",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": false,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N20": {
+      "identity_id": "CHR_OTHER_NPCS_N20",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N20/CHR_OTHER_NPCS_N20_cutout_9854b954a41c.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        327,
+        17,
+        896,
+        1386
+      ],
+      "body_height_px": 1369,
+      "foot_anchor_px": [
+        611.5,
+        1386
+      ],
+      "sha256": "9854b954a41cf1ddd1052f89e45578c56dfca3bcc7c19712cfddeb2d83da2234",
+      "original_sha256": "82c04a57aa7a859ffad0fac4fa19d9dda1857f2dbc9505b15e75393de01b4b31",
+      "source_approval": "original_approved_hash",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": false,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N33": {
+      "identity_id": "CHR_OTHER_NPCS_N33",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N33/CHR_OTHER_NPCS_N33_cutout_1beb1854697b.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        342,
+        22,
+        772,
+        1369
+      ],
+      "body_height_px": 1347,
+      "foot_anchor_px": [
+        557.0,
+        1369
+      ],
+      "sha256": "1beb1854697bc5c3553eb25e9681150d844936a80f243f7d3d5b935328028963",
+      "original_sha256": "7f766f17bfa2a20b587e018d75ccf00bd5e2cff96053ace458aca1b0f3b0f3b9",
+      "source_approval": "original_approved_hash",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": false,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N19_ALTERED": {
+      "identity_id": "CHR_OTHER_NPCS_N19",
+      "state": "altered",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N19/CHR_OTHER_NPCS_N19_ALTERED_source_v002_2f2dd4224d60.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        373,
+        17,
+        757,
+        1380
+      ],
+      "body_height_px": 1363,
+      "foot_anchor_px": [
+        565.0,
+        1380
+      ],
+      "sha256": "2f2dd4224d60d6eea06698219309ac07654944da74274166089f5b7cc4f21459",
+      "original_sha256": "2f2dd4224d60d6eea06698219309ac07654944da74274166089f5b7cc4f21459",
+      "source_approval": "user_revised_no_aesthetic_reevaluation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P01": {
+      "identity_id": "CHR_OTHER_NPCS_FATHER",
+      "state": "altered",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_FATHER/CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P01_source_v005_d356aa6c1bf8.png",
+      "canvas_px": [
+        1089,
+        1444
+      ],
+      "bbox_px": [
+        201,
+        18,
+        943,
+        1399
+      ],
+      "body_height_px": 1381,
+      "foot_anchor_px": [
+        572.0,
+        1399
+      ],
+      "sha256": "d356aa6c1bf83ca6ff5d73dcf0cdf8efb4201a392d86164f34ff4fcf51076990",
+      "original_sha256": "d356aa6c1bf83ca6ff5d73dcf0cdf8efb4201a392d86164f34ff4fcf51076990",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P02": {
+      "identity_id": "CHR_OTHER_NPCS_FATHER",
+      "state": "altered",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_FATHER/CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P02_source_v005_97ad52fd5780.png",
+      "canvas_px": [
+        1089,
+        1445
+      ],
+      "bbox_px": [
+        21,
+        28,
+        1071,
+        1426
+      ],
+      "body_height_px": 1398,
+      "foot_anchor_px": [
+        546.0,
+        1426
+      ],
+      "sha256": "97ad52fd5780119fcdb3bd338b33cc738ed67a88c88a5604e300eb9430c7c763",
+      "original_sha256": "97ad52fd5780119fcdb3bd338b33cc738ed67a88c88a5604e300eb9430c7c763",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P03": {
+      "identity_id": "CHR_OTHER_NPCS_FATHER",
+      "state": "altered",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_FATHER/CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P03_source_v005_9b8b2811cc47.png",
+      "canvas_px": [
+        1089,
+        1444
+      ],
+      "bbox_px": [
+        200,
+        20,
+        946,
+        1424
+      ],
+      "body_height_px": 1404,
+      "foot_anchor_px": [
+        573.0,
+        1424
+      ],
+      "sha256": "9b8b2811cc47c8082ed0f50cbb663197b1caf5e13ab0f8b0eb8d77b35a720fa0",
+      "original_sha256": "9b8b2811cc47c8082ed0f50cbb663197b1caf5e13ab0f8b0eb8d77b35a720fa0",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_FATHER_ACTION_FIRST__carry_pose__P01": {
+      "identity_id": "CHR_OTHER_NPCS_FATHER",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_FATHER/CHR_OTHER_NPCS_FATHER_ACTION_FIRST__carry_pose__P01_source_v005_c4c312afcec3.png",
+      "canvas_px": [
+        1089,
+        1444
+      ],
+      "bbox_px": [
+        347,
+        37,
+        798,
+        1384
+      ],
+      "body_height_px": 1347,
+      "foot_anchor_px": [
+        572.5,
+        1384
+      ],
+      "sha256": "c4c312afcec3535837053e9694c02c67ddc9df2ac45ed6d0df28d71408dca1b4",
+      "original_sha256": "c4c312afcec3535837053e9694c02c67ddc9df2ac45ed6d0df28d71408dca1b4",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_FATHER_ACTION_FIRST__lead_pose__P02": {
+      "identity_id": "CHR_OTHER_NPCS_FATHER",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_FATHER/CHR_OTHER_NPCS_FATHER_ACTION_FIRST__lead_pose__P02_source_v005_d19ec3c57874.png",
+      "canvas_px": [
+        1089,
+        1445
+      ],
+      "bbox_px": [
+        245,
+        25,
+        952,
+        1393
+      ],
+      "body_height_px": 1368,
+      "foot_anchor_px": [
+        598.5,
+        1393
+      ],
+      "sha256": "d19ec3c57874a03c9cf216a18789cd0fdf41e0667779db4e4b4cfb31e50cc066",
+      "original_sha256": "d19ec3c57874a03c9cf216a18789cd0fdf41e0667779db4e4b4cfb31e50cc066",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_FATHER_ACTION_FIRST__release__P02": {
+      "identity_id": "CHR_OTHER_NPCS_FATHER",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_FATHER/CHR_OTHER_NPCS_FATHER_ACTION_FIRST__release__P02_source_v005_388de8dfabdc.png",
+      "canvas_px": [
+        1123,
+        1401
+      ],
+      "bbox_px": [
+        350,
+        34,
+        752,
+        1314
+      ],
+      "body_height_px": 1280,
+      "foot_anchor_px": [
+        551.0,
+        1314
+      ],
+      "sha256": "388de8dfabdcf3cce8242be9219d598b587ab26aca99c5e50a15a133d4499ed5",
+      "original_sha256": "388de8dfabdcf3cce8242be9219d598b587ab26aca99c5e50a15a133d4499ed5",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P01": {
+      "identity_id": "CHR_OTHER_NPCS_N02",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N02/CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P01_source_v005_98c9a8bab25b.png",
+      "canvas_px": [
+        1025,
+        1534
+      ],
+      "bbox_px": [
+        289,
+        32,
+        825,
+        1479
+      ],
+      "body_height_px": 1447,
+      "foot_anchor_px": [
+        557.0,
+        1479
+      ],
+      "sha256": "98c9a8bab25bc4a5bf3c91f60e9b0feefb8a75dd7713fab71de04c580716102c",
+      "original_sha256": "98c9a8bab25bc4a5bf3c91f60e9b0feefb8a75dd7713fab71de04c580716102c",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N03_ACTION_ALTERED__event__P03": {
+      "identity_id": "CHR_OTHER_NPCS_N03",
+      "state": "altered",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N03/CHR_OTHER_NPCS_N03_ACTION_ALTERED__event__P03_source_v008_77abebbb7f97.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        135,
+        36,
+        1089,
+        1355
+      ],
+      "body_height_px": 1319,
+      "foot_anchor_px": [
+        612.0,
+        1355
+      ],
+      "sha256": "77abebbb7f976bfab8dbe79ca0800252fd539ce6c4f97159446bbde65251a455",
+      "original_sha256": "77abebbb7f976bfab8dbe79ca0800252fd539ce6c4f97159446bbde65251a455",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N05_ACTION_ALTERED__event__P01": {
+      "identity_id": "CHR_OTHER_NPCS_N05",
+      "state": "altered",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N05/CHR_OTHER_NPCS_N05_ACTION_ALTERED__event__P01_source_v008_29a201472909.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        378,
+        14,
+        769,
+        1388
+      ],
+      "body_height_px": 1374,
+      "foot_anchor_px": [
+        573.5,
+        1388
+      ],
+      "sha256": "29a201472909c6a7e94b8ab1362e4f997d97b5b4166ac2cbe89032493cb0bbfa",
+      "original_sha256": "29a201472909c6a7e94b8ab1362e4f997d97b5b4166ac2cbe89032493cb0bbfa",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    },
+    "CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P01": {
+      "identity_id": "CHR_OTHER_NPCS_N06",
+      "state": "normal",
+      "direction": "reference_view",
+      "texture": "res://assets/production/characters/CHR_OTHER_NPCS_N06/CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P01_source_v005_22c4aa72b57b.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "bbox_px": [
+        363,
+        15,
+        767,
+        1355
+      ],
+      "body_height_px": 1340,
+      "foot_anchor_px": [
+        565.0,
+        1355
+      ],
+      "sha256": "22c4aa72b57b47abc488df549b363ae11df8304886ce6d390da30f45857a41c0",
+      "original_sha256": "22c4aa72b57b47abc488df549b363ae11df8304886ce6d390da30f45857a41c0",
+      "source_approval": "named_candidate_technical_preparation",
+      "source_original_unchanged": true,
+      "source_alpha_exact_copy": true,
+      "render_ready": false,
+      "motion_ready": false,
+      "note": "Prepared transparent source; binding/contact and motion must be verified separately. No aesthetic reassessment."
+    }
+  },
+  "heights_m": {
+    "CHR_OTHER_NPCS_FATHER": 1.78,
+    "CHR_OTHER_NPCS_MOTHER": 1.62,
+    "CHR_OTHER_NPCS_DOG": 0.7,
+    "CHR_OTHER_NPCS_CAT": 0.48
+  }
+}

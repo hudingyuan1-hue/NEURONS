@@ -69,6 +69,7 @@ func try_autonomous() -> void:
  for i in range(app.layout.furniture.size()):
   var prop:Dictionary=app.layout.furniture[i];var item:Dictionary=entry(str(prop.id))
   if item.is_empty() or combat.data.inspected.get(str(item.id),{}).has(str(prop.id)):continue
+  if skip_known_static(item,str(prop.id)):continue
   var at:Vector2=station(prop.rect)
   # Only something actually close to the autonomous route can attract a look.
   if at.x>=0 and at.distance_to(app.hero_pos)<.65:begin(i,false);return
@@ -77,6 +78,16 @@ func try_autonomous() -> void:
   for key in combat.materials.state().surfaces:
    if entry(str(key)).is_empty() or combat.data.inspected.get(str(key),{}).has(str(key)):continue
    if combat.vector(combat.materials.state().surfaces[key].pos).distance_to(app.hero_pos)<.65:begin_surface(str(key),false);return
+
+func skip_known_static(item:Dictionary,prop:String) -> bool:
+ # S3:T59R5: a role that already chose escape need not stop again for the
+ # same static original on a later return. New surface instances still pass
+ # through their own live availability/ownership and actual-reading nodes.
+ if item.get("surface",false) or app.character_presentation==null or not app.character_presentation.view_state().get("prioritize_escape",false):return false
+ var receipt:String="combat_evidence:"+str(item.id)+":"+prop
+ for observation in app.rules.observations:
+  if str(observation.get("id",""))==receipt and str(observation.get("kind",""))=="亲历事实":return true
+ return false
 
 func advance(delta:float) -> bool:
  normalize()

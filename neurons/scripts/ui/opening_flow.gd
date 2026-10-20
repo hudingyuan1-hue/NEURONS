@@ -5,6 +5,8 @@ signal completed(sequence:String,skipped:bool)
 signal state_changed(state:Dictionary)
 const DATA_PATH="res://data/opening.json"
 const DialogueDisplay=preload("res://scripts/ui/dialogue_playback.gd")
+const UIStyle=preload("res://scripts/ui/ui_style.gd")
+const NarrativeArt=preload("res://scripts/ui/narrative_art.gd")
 var data:Dictionary={}
 var sequence_key:String=""
 var context:Dictionary={}
@@ -33,17 +35,17 @@ func _init() -> void:
 func _ready() -> void:
  data=JSON.parse_string(FileAccess.get_file_as_string(DATA_PATH))
  set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
- theme=Theme.new();theme.default_font=load("res://assets/fonts/NotoSansCJKsc-Regular.otf");theme.default_font_size=20
+ theme=UIStyle.theme_for()
  var bg:=ColorRect.new();bg.size=Vector2(1280,720);bg.color=Color("101b20");bg.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(bg)
  art_canvas=Node2D.new();art_canvas.set_script(load("res://scripts/ui/menu_art.gd"));art_canvas.host=self;add_child(art_canvas)
- var status:=label("演出占位 · 正式画面与语音待交付",Rect2(45,25,900,35),15,Color("aab3a5"))
+ var status:=label("NEURONS / 序幕",Rect2(45,25,900,35),15,Color("c4c8b5"))
  status.mouse_filter=Control.MOUSE_FILTER_IGNORE
  progress=label("",Rect2(1080,25,150,35),16,Color("b4c6b6"))
  var plate:=Panel.new();plate.position=Vector2(35,475);plate.size=Vector2(1210,210)
  plate.mouse_filter=Control.MOUSE_FILTER_IGNORE
  plate.add_theme_stylebox_override("panel",style(Color("172a2b")));add_child(plate)
- speaker=label("",Rect2(60,487,1100,30),18,Color("b8cba8"))
- caption=label("",Rect2(60,526,1150,100),22,Color("e2dfc7"));caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+ speaker=label("",Rect2(60,487,1100,30),17,UIStyle.TEAL)
+ caption=label("",Rect2(60,526,1150,100),22,UIStyle.INK);caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
  next_button=button("继续 / 完整显示",Rect2(1030,632,190,38),advance)
  auto_button=button("自动：关",Rect2(680,632,150,38),toggle_auto)
  pause_button=button("暂停演出",Rect2(850,632,160,38),toggle_pause)
@@ -51,13 +53,13 @@ func _ready() -> void:
  refresh()
 
 func style(color:Color) -> StyleBoxFlat:
- var s:=StyleBoxFlat.new();s.bg_color=color;s.border_color=Color("6f8d83");s.set_border_width_all(1);s.set_corner_radius_all(4);return s
+ return UIStyle.surface("paper")
 
 func label(text:String,bounds:Rect2,font_size:int,color:Color) -> Label:
  var l:=Label.new();l.text=text;l.position=bounds.position;l.size=bounds.size;l.add_theme_font_size_override("font_size",font_size);l.add_theme_color_override("font_color",color);l.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(l);return l
 
 func button(text:String,bounds:Rect2,callback:Callable) -> Button:
- var b:=Button.new();b.text=text;b.position=bounds.position;b.size=bounds.size;b.add_theme_font_size_override("font_size",16);b.add_theme_stylebox_override("normal",style(Color("253b35")));b.pressed.connect(callback);add_child(b);return b
+ var b:=Button.new();b.text=text;b.position=bounds.position;b.size=bounds.size;b.add_theme_font_size_override("font_size",16);UIStyle.style_button(b);b.pressed.connect(callback);add_child(b);return b
 
 func cards() -> Array:
  return data.get("sequences",{}).get(sequence_key,{}).get("cards",[])
@@ -181,6 +183,17 @@ func draw_art(canvas:Node2D) -> void:
  var panel:=Rect2(80,120,1120,335)
  canvas.draw_rect(panel,Color("17292d"))
  if visual=="black":canvas.draw_rect(panel,Color("080d10"));return
+ var supplied:Texture2D=NarrativeArt.card(str(current_card().get("id","")))
+ if supplied!=null:
+  var player_picture:bool=str(NarrativeArt.data().card_bindings.get(str(current_card().id),"")).begins_with("PLAYER_")
+  if player_picture:
+   canvas.draw_style_box(UIStyle.surface("paper"),Rect2(430,55,420,420))
+   NarrativeArt.paint(canvas,supplied,Rect2(445,70,390,390),false)
+  else:
+   canvas.draw_rect(panel,Color("101b20"))
+   NarrativeArt.paint(canvas,supplied,Rect2(80,70,1120,390),false)
+  if visual=="logo":canvas.draw_string(theme.default_font,Vector2(90,440),"NEURONS",HORIZONTAL_ALIGNMENT_LEFT,-1,42,UIStyle.PAPER_LIGHT)
+  return
  if visual in ["city","country","sea","crisis"]:
   canvas.draw_rect(Rect2(80,120,1120,188),Color("3f4c50"))
   if visual in ["city","crisis"]:
@@ -192,23 +205,19 @@ func draw_art(canvas:Node2D) -> void:
   else:
    for i in range(5):canvas.draw_line(Vector2(90,310+i*22),Vector2(1190,310+i*22),Color("4f6569"),3)
   canvas.draw_circle(Vector2(875,237),55,Color("a89f7c"));canvas.draw_line(Vector2(885,160),Vector2(900,350),Color("7e7565"),6)
-  canvas.draw_string(theme.default_font,Vector2(105,428),"危机画面占位 · 城市 / 乡村 / 海面",HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("bec7b5"))
  elif visual=="laboratory":
   canvas.draw_rect(Rect2(220,210,830,150),Color("3e5555"))
   for i in range(6):
    var p:=Vector2(300+i*128,245+(i%2)*53)
    canvas.draw_circle(p,15,Color("9cae8f"))
    if i<5:canvas.draw_line(p,p+Vector2(128,53 if i%2==0 else -53),Color("809b89"),2)
-  canvas.draw_string(theme.default_font,Vector2(105,428),"实验室神经元画面占位",HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("bec7b5"))
  elif visual in ["back","gesture","turn"]:
   canvas.draw_line(Vector2(90,380),Vector2(1190,380),Color("53665e"),3)
   canvas.draw_rect(Rect2(575,240,130,140),Color("293b3e"))
-  canvas.draw_string(theme.default_font,Vector2(420,218),"玩家形象待定 · 本轮仅演出位置标记",HORIZONTAL_ALIGNMENT_LEFT,-1,19,Color("bec7b5"))
  elif visual in ["bedroom","sleep","wake","logo"]:
   canvas.draw_colored_polygon(PackedVector2Array([Vector2(155,310),Vector2(520,165),Vector2(1100,300),Vector2(735,433)]),Color("52615e"))
   canvas.draw_rect(Rect2(375,262,360,105),Color("799090"))
   canvas.draw_rect(Rect2(395,264,70,40),Color("a6b5a4"))
   if visual in ["sleep","wake"]:
    canvas.draw_rect(Rect2(462,276 if visual=="sleep" else 221,175 if visual=="sleep" else 42,43 if visual=="sleep" else 101),Color("83a5b4"))
-   canvas.draw_string(theme.default_font,Vector2(150,425),"卧室与角色演出占位",HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("d1dac5"))
   if visual=="logo":canvas.draw_string(theme.default_font,Vector2(420,306),"N E U R O N S",HORIZONTAL_ALIGNMENT_LEFT,-1,42,Color("dee5ce"))

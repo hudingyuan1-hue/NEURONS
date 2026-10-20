@@ -1,0 +1,5 @@
+{
+  "checks": 18,
+  "failures": [],
+  "scope": "Memory fixture checks bridge invariants only; no production visual approval."
+}

@@ -40,15 +40,22 @@ const Mother=preload("res://scripts/core/street_mother.gd")
 var mother
 const LocalSweeps=preload("res://scripts/core/street_sweeps.gd")
 var local_sweeps
+const HandGrips=preload("res://scripts/core/street_hand_grips.gd")
+var hand_grips
+const DoubleHead=preload("res://scripts/core/street_double_head.gd")
+var double_head
+const DoubleFaceRetreat=preload("res://scripts/core/street_double_face_retreat.gd")
+var double_face_retreat
 
 func _init(owner) -> void:
  super(owner);map=StreetMap;chapter_id=6;box=Box.new(self);lateral_bed=LateralBed.new(self);materials=Materials.new(self);displays=Displays.new(self);archivist=Archivist.new(self);report_signals=Reports.new(self);laundry_bag=LaundryBag.new(self);losses=Losses.new(self);clamp=Clamp.new(self);embrace=Embrace.new(self);medicine=Medicine.new(self);splash=Splash.new(self);bottle=Bottle.new(self);belt=Belt.new(self);restraint=Restraint.new(self);grasp_motion=GraspMotion.new(self);director=Director.new(self)
- mother=Mother.new(self);local_sweeps=LocalSweeps.new(self)
+ mother=Mother.new(self);local_sweeps=LocalSweeps.new(self);hand_grips=HandGrips.new(self);double_head=DoubleHead.new(self)
+ double_face_retreat=DoubleFaceRetreat.new(self)
  config=JSON.parse_string(FileAccess.get_file_as_string("res://data/street_chapter.json"))
 
 func floor_for(room:String):
  if not layouts.has(room):
-  layouts[room]=StreetFloor.new(room)
+  layouts[room]=StreetFloor.new(room,int(data.get("spatial_revision",1)))
   for prop in layouts[room].furniture:
    var saved:Array=data.get("prop_rects",{}).get(room,{}).get(str(prop.id),[])
    if saved.size()==4:prop.rect=Rect2(saved[0],saved[1],saved[2],saved[3])
@@ -109,6 +116,12 @@ func tick(delta:float) -> void:
 
 func _actor(id:String,delta:float) -> void:
  var a:Dictionary=data.actors[id]
+ if id=="double_face" and double_face_retreat.actor_step(delta):return
+ if id=="double_head":double_head.before_actor();super._actor(id,delta);double_head.sync();return
+ if id in HandGrips.IDS:
+  hand_grips.before_actor(id)
+  if id=="stitched" and materials.prepare_stitched(delta):hand_grips.sync(id);return
+  super._actor(id,delta);hand_grips.sync(id);return
  if id=="mother":
   mother.before_actor();super._actor(id,delta);mother.sync();return
  if id in LocalSweeps.IDS:
@@ -166,6 +179,8 @@ func _actor(id:String,delta:float) -> void:
  if id=="ward_nurse":medicine.sync()
 
 func attack_start_distance(id:String,attack:Dictionary) -> float:
+ if id=="double_head":return float(attack.reach)
+ if id in HandGrips.IDS:return float(config.test_parameters.hand_grip_start_m)
  if id=="mother":return float(config.test_parameters.mother_start_m)
  if id in LocalSweeps.IDS:return float(attack.reach)
  # Stop inside actual bag reach, rather than repeatedly swinging from the
@@ -183,6 +198,11 @@ func attack_start_distance(id:String,attack:Dictionary) -> float:
 
 func _advance_attack(id:String,delta:float) -> void:
  var a:Dictionary=data.actors[id];var previous:String=str(a.phase)
+ if id=="double_head":double_head.prepare(delta);super._advance_attack(id,delta);double_head.sync();return
+ if id in HandGrips.IDS:
+  hand_grips.prepare(id,delta);super._advance_attack(id,delta)
+  if previous=="attack" and a.phase=="grip" and data.holder==id:hand_grips.begin_hold(id)
+  hand_grips.sync(id);return
  if id=="mother":
   if a.phase=="attack":
    mother.prepare(delta);a.elapsed+=delta;mother.resolve_contact()
@@ -239,7 +259,7 @@ func _friend(id:String,delta:float) -> void:
    if a.hp>0 and a.hostile and a.room==app.room_id and can_see(app.room_id,position(other),app.hero_pos) and position(other).distance_to(app.hero_pos)<6:return
   super._friend(id,delta);return
  var a:Dictionary=data.actors[id];a.phase="point" if id=="corner" else "display"
- var entry:String=str(map.doors(app.room_id)[0]);a.direction=xy((map.doorway(app.room_id,entry)-position(id)).normalized())
+ var entry:String=str(map.doors(app.room_id)[0]);a.direction=xy((floor_for(app.room_id).portal(entry).at-position(id)).normalized())
  _yield(id,delta)
 
 func _yield(id:String,delta:float) -> void:
@@ -301,7 +321,10 @@ func cross_door(to:String) -> void:
  var offset:float=(app.hero_pos-Vector2(mouth.at)).dot(Vector2(-outward.y,outward.x))
  if not _landing_clear(app.room_id,to,offset):data.door_left=.1;return
  var from:String=app.room_id;var entry:Vector2=_entry_point(from,to,offset)
+ var origin:String="controlled" if app.controlled_route or app.rules.control_left>0 else "autonomous"
  app.enter_room(to);app.hero_pos=entry;app.keep_metric_actor_visible()
+ data.presentation_action_serial=int(data.get("presentation_action_serial",0))+1
+ app.character_presentation.normal_action_completed("street_door:%d:%d"%[app.rules.actual_attempt,data.presentation_action_serial],"door",app.room_id,{"origin":origin,"from_room":from,"toward":to})
 
 func _hero(delta:float) -> void:
  lateral_bed.normalize()
@@ -315,6 +338,8 @@ func _hero(delta:float) -> void:
  for patch in patches:lateral_bed.pop_blocker(space,patch)
 
 func _contains(id:String,target:Vector2) -> bool:
+ if id=="double_head":return double_head.contains(target)
+ if id in HandGrips.IDS:return hand_grips.contains(id,target)
  if id=="mother":return mother.contains(target)
  if id in LocalSweeps.IDS:return local_sweeps.contains(id,target)
  if id=="director":return director.contains(target)
@@ -332,7 +357,9 @@ func _contains(id:String,target:Vector2) -> bool:
 
 func damage_actor(source:String,target:String,hp:int,receipt:String) -> void:
  var alive:bool=data.actors[target].hp>0
+ var before_hp:int=int(data.actors[target].hp)
  super.damage_actor(source,target,hp,receipt)
+ if target=="double_face" and int(data.actors[target].hp)<before_hp:double_face_retreat.injured(source)
  if alive and hp>0:materials.add_trace(str(data.actors[target].room),position(target),receipt)
  if target=="dislocated":clamp.before_actor()
  if target=="isolation":embrace.before_actor()
@@ -345,6 +372,8 @@ func damage_actor(source:String,target:String,hp:int,receipt:String) -> void:
  if target=="director":director.before_actor()
  if target=="mother":mother.before_actor()
  if target in LocalSweeps.IDS:local_sweeps.before_actor(target)
+ if target in HandGrips.IDS:hand_grips.before_actor(target)
+ if target=="double_head":double_head.before_actor()
  losses.record(source,target,alive,receipt)
 
 func _damage_hero(receipt:String,hp:int,sp:int,source:String) -> bool:
@@ -359,9 +388,12 @@ func kick_contact() -> void:
  for id in data.actors:
   var a:Dictionary=data.actors[id]
   if int(a.hp)>=int(old[id].hp):continue
+  if id=="double_face":double_face_retreat.injured("hero")
   if id=="director":director.before_actor()
   if id=="mother":mother.before_actor()
   if id in LocalSweeps.IDS:local_sweeps.before_actor(id)
+  if id in HandGrips.IDS:hand_grips.before_actor(id)
+  if id=="double_head":double_head.before_actor()
   if id=="transporter_asylum":
    var space=floor_for(str(a.room));var b:Dictionary=data.lateral_bed
    var patch:Dictionary=lateral_bed.push_blocker(space,lateral_bed.rect(),{"at":lateral_bed.anchor(vector(b.center),vector(b.axis)),"axis":vector(b.axis)})

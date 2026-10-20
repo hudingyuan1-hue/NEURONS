@@ -1,0 +1,13 @@
+{
+  "failures": [],
+  "passes": [
+    "01_E2_body_before_wake: draw leaves source ending and scene ownership untouched",
+    "02_E2_body_awake_connection_break: draw leaves source ending and scene ownership untouched",
+    "03_E2_external_before_perception: draw leaves source ending and scene ownership untouched",
+    "04_E2_external_perception: draw leaves source ending and scene ownership untouched",
+    "05_E3_body_player_view: draw leaves source ending and scene ownership untouched",
+    "unsupported E3 planet phase creates no new map/actor"
+  ],
+  "rendered": true,
+  "scope": "Independent pure2D drawing samples from declared ending phase/elapsed fixtures. Read-only helper, no campaign completion or new gameplay; unknown external-body appearance remains elementary geometry, not formal identity/species design."
+}

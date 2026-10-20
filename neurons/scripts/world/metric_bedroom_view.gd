@@ -2,7 +2,12 @@ extends RefCounted
 ## Metric L1 presentation only. No navigation, event or ownership mutation.
 ## Draw coordinates are world pixels; the caller's Camera2D owns zoom.
 const SHELL = preload("res://assets/environment/bedroom_shell_v001.png")
-const HEIGHT_PIXELS := 78.0
+const Presentation=preload("res://scripts/world/spatial_presentation.gd")
+const Architecture=preload("res://scripts/world/architectural_surface.gd")
+const Materials=preload("res://scripts/world/spatial_materials.gd")
+const SpatialProp=preload("res://scripts/world/spatial_prop.gd")
+const ProductionProps=preload("res://scripts/world/production_props.gd")
+const HEIGHT_PIXELS := Presentation.HEIGHT_PIXELS
 const HERO_HEIGHT := 1.75 * HEIGHT_PIXELS
 const ATLAS_BODY_HEIGHT := 57.0 # Existing placeholder: head y15, foot y72.
 const INK := Color("354447")
@@ -11,9 +16,52 @@ var app
 var layout
 var catalog
 var font:Font = ThemeDB.fallback_font
+var _prop_material:String="furniture_wood"
 
 static func _height(f:Dictionary) -> float:
  return float(f.get("height_m",float(f.get("height",40.0))/HEIGHT_PIXELS))*HEIGHT_PIXELS
+
+static func architecture_pieces(room_layout) -> Array:
+ # Full drawing union, used by both render passes and the exported locator.
+ # Pieces are construction inputs; their internal seams are never inked.
+ var size:Vector2=room_layout.world_size()
+ var t:float=float(room_layout.config.wall.thickness_m)
+ var full:float=float(room_layout.config.wall.height_m)
+ var low:float=minf(full,Presentation.NEAR_CUT_HEIGHT_M)
+ var door:Dictionary=room_layout.config.door
+ var da:float=float(door.center_m[0])-float(door.clear_width_m)*.5
+ var db:float=da+float(door.clear_width_m)
+ var dh:float=float(door.height_m)
+ var result:Array=[]
+ for rect in [Rect2(0,-t,da,t),Rect2(db,-t,size.x-db,t)]:
+  result.append({"rect":rect,"height_m":full,"group":"far"})
+ if full>dh:result.append({"rect":Rect2(da,-t,db-da,t),"bottom_m":dh,"height_m":full-dh,"group":"far"})
+ result.append({"rect":Rect2(size.x,0,t,size.y),"height_m":full,"group":"far"})
+ for segment:Dictionary in Presentation.wall_display_segments("west",size.y,full):
+  result.append({"rect":Rect2(-t,float(segment.start),t,float(segment.end)-float(segment.start)),"height_m":float(segment.height_m),"group":"near"})
+ var window:Dictionary=room_layout.config.window
+ var wa:float=float(window.center_m[0])-float(window.width_m)*.5
+ var wb:float=wa+float(window.width_m)
+ var view:Dictionary=Presentation.window_display("south",float(window.width_m),float(window.sill_height_m),float(window.opening_height_m))
+ var sill:float=float(view.sill_height_m)
+ var top:float=sill+float(view.opening_height_m)
+ var cap:float=minf(full,float(view.wall_cap_height_m))
+ var side_width:float=.12
+ var left:float=maxf(0,wa-side_width);var right:float=minf(size.x,wb+side_width)
+ for rect in [Rect2(0,size.y,left,t),Rect2(right,size.y,size.x-right,t)]:
+  if rect.size.x>0:result.append({"rect":rect,"height_m":low,"group":"near"})
+ for rect in [Rect2(left,size.y,wa-left,t),Rect2(wb,size.y,right-wb,t)]:
+  if rect.size.x>0:result.append({"rect":rect,"height_m":cap,"group":"near"})
+ result.append({"rect":Rect2(wa,size.y,wb-wa,t),"height_m":sill,"group":"near"})
+ if cap>top:result.append({"rect":Rect2(wa,size.y,wb-wa,t),"bottom_m":top,"height_m":cap-top,"group":"near"})
+ # Only the exterior thickness cells are closed. Net floor size and all
+ # original openings/positions are unchanged.
+ for c in [{"at":Vector2(-t,-t),"h":full,"g":"far"},{"at":Vector2(size.x,-t),"h":full,"g":"far"},{"at":Vector2(-t,size.y),"h":low,"g":"near"},{"at":Vector2(size.x,size.y),"h":low,"g":"near"}]:
+  result.append({"rect":Rect2(c.at,Vector2(t,t)),"height_m":c.h,"group":c.g})
+ return result
+
+func _architecture(near:bool) -> void:
+ Architecture.draw(canvas,layout,architecture_pieces(layout),{"group":"near" if near else "far","top":Color("c3beaa"),"west":Color("8d9488"),"south":Color("b4b8a7"),"edge":Color("747c72"),"edge_width":.7})
 
 static func _find(layout_value,id:String) -> Dictionary:
  for f in layout_value.furniture:
@@ -27,7 +75,8 @@ static func _projected_face(layout_value,rect:Rect2,height:float) -> PackedVecto
 static func _prism_faces(layout_value,rect:Rect2,height:float,bottom:float=0.0) -> Array:
  var base:PackedVector2Array=_projected_face(layout_value,rect,bottom)
  var top:PackedVector2Array=_projected_face(layout_value,rect,bottom+height)
- return [top,PackedVector2Array([base[1],base[2],top[2],top[1]]),PackedVector2Array([base[2],base[3],top[3],top[2]])]
+ # The shared oblique basis exposes WEST and SOUTH vertical faces.
+ return [top,PackedVector2Array([base[0],base[3],top[3],top[0]]),PackedVector2Array([base[2],base[3],top[3],top[2]])]
 
 static func _stroke_face(a:Vector2,b:Vector2,width:float) -> PackedVector2Array:
  var offset:Vector2=(b-a).normalized().orthogonal()*width*0.5
@@ -88,9 +137,9 @@ static func furniture_at_pixel(layout_value,pixel:Vector2) -> int:
  var ordered:Array=[]
  for index in range(layout_value.furniture.size()):
   var f:Dictionary=layout_value.furniture[index]
-  ordered.append({"index":index,"depth":layout_value.project((f.rect as Rect2).end).y,"faces":_furniture_faces(layout_value,f)})
+  ordered.append({"index":index,"depth":Presentation.footprint_depth(layout_value,f.rect),"faces":_furniture_faces(layout_value,f)})
   for moved:Rect2 in _moved_box_rects(layout_value,f):
-   ordered.append({"index":index,"depth":layout_value.project(moved.end).y,"faces":_prism_faces(layout_value,moved,float(f.get("upper_height_m",0.45))*HEIGHT_PIXELS)})
+   ordered.append({"index":index,"depth":Presentation.footprint_depth(layout_value,moved),"faces":_prism_faces(layout_value,moved,float(f.get("upper_height_m",0.45))*HEIGHT_PIXELS)})
  ordered.sort_custom(func(a,b):return float(a.depth)>float(b.depth) if not is_equal_approx(float(a.depth),float(b.depth)) else int(a.index)>int(b.index))
  for entry in ordered:
   for face in entry.faces:
@@ -138,6 +187,9 @@ static func _cabinet_transform(app_value,layout_value,catalog_value) -> Dictiona
   "shift":Vector2(float(spec.travel[0]),float(spec.travel[1]))*scale_value*float(app_value.drawer_open.get("bedside",0.0))}
 
 static func bedside_handle(app_value,layout_value,catalog_value) -> Vector2:
+ var item:Dictionary=_find(layout_value,"bedside")
+ if not item.is_empty() and ProductionProps.available(layout_value,item):
+  return ProductionProps.handle(layout_value,item,float(app_value.drawer_open.get("bedside",0)))
  var transform:Dictionary=_cabinet_transform(app_value,layout_value,catalog_value)
  var handle:Array=transform.spec.handle
  return transform.origin+Vector2(float(handle[0]),float(handle[1]))*float(transform.scale)+transform.shift
@@ -169,7 +221,7 @@ func draw(target:Node2D,owner,room_layout,asset_catalog) -> void:
  canvas.draw_set_transform(Vector2.ZERO)
  _surfaces()
  var ordered:Array=[]
- for f in layout.furniture:ordered.append({"kind":"furniture","value":f,"depth":layout.project((f.rect as Rect2).end).y})
+ for f in layout.furniture:ordered.append({"kind":"furniture","value":f,"depth":Presentation.footprint_depth(layout,f.rect)})
  if str(app.action_phase)!="resting":ordered.append({"kind":"actor","value":"hero","depth":layout.project(app.hero_pos).y})
  if app.home!=null:
   for a in app.home.actors():
@@ -182,7 +234,7 @@ func draw(target:Node2D,owner,room_layout,asset_catalog) -> void:
  if not box.is_empty() and box_state.has("upper_shift"):
   var offset:Array=box_state.upper_shift
   var moved:=Rect2((box.rect as Rect2).position+Vector2(float(offset[0]),float(offset[1])),(box.rect as Rect2).size)
-  ordered.append({"kind":"box","value":moved,"depth":layout.project(moved.end).y})
+  ordered.append({"kind":"box","value":moved,"depth":Presentation.footprint_depth(layout,moved)})
  if app.family!=null and not app.family.data.get("gift",{}).is_empty():
   var index:int=0
   for id in app.family.data.gift:
@@ -227,17 +279,10 @@ func _surfaces() -> void:
  var p:Array=_surface_rect(Rect2(Vector2.ZERO,size))
  _poly([p[0]+Vector2(-10,10),p[1]+Vector2(10,10),p[2]+Vector2(12,18),p[3]+Vector2(-10,18)],Color("1c272a"))
  # Crop only floor material: none of the old image's silhouette or walls.
- _textured(p,[Vector2(190,175),Vector2(430,175),Vector2(430,285),Vector2(190,285)],Color("ddd0ba"))
- var wall_h:float=float(layout.config.wall.height_m)*HEIGHT_PIXELS
- var top0:Vector2=p[0]-Vector2(0,wall_h)
- var top1:Vector2=p[1]-Vector2(0,wall_h)
- _textured([p[0],p[1],top1,top0],[Vector2(120,116),Vector2(470,116),Vector2(470,56),Vector2(120,56)],Color("d7d5c7"))
+ if not Materials.floor(canvas,layout,PackedVector2Array([Vector2.ZERO,Vector2(size.x,0),size,Vector2(0,size.y)]),Color("ddd0ba")):
+  _textured(p,[Vector2(190,175),Vector2(430,175),Vector2(430,285),Vector2(190,285)],Color("ddd0ba"))
+ _architecture(false)
  canvas.draw_line(p[0]-Vector2(0,8),p[1]-Vector2(0,8),Color("7e8173"),5)
- canvas.draw_line(top0,top1,Color("c3c5b4"),7)
- # Thin cutaway side wall is geometry, not the old room's painted side.
- var thickness:float=float(layout.config.wall.thickness_m)
- _prism(Rect2(-thickness,0,thickness,size.y),0.48*HEIGHT_PIXELS,Color("9fa795"))
- _prism(Rect2(size.x,0,thickness,size.y),0.48*HEIGHT_PIXELS,Color("959e91"))
  var door_bottom:Vector2=layout.project(Vector2(float(layout.config.door.center_m[0]),0))
  var door_rect:Rect2=_door_rect(layout)
  canvas.draw_rect(door_rect.grow(5),Color("494e47"))
@@ -255,55 +300,62 @@ func _surfaces() -> void:
 
 func _front_edges() -> void:
  var size:Vector2=layout.world_size()
- # Cutaway foreground preserves the source window position and dimensions.
- # Its low-alpha face lets actual foreground feet/actions remain visible.
  var spec:Dictionary=layout.config.window
  var half:float=float(spec.width_m)*0.5
  var center:float=float(spec.center_m[0])
  var start:float=center-half
  var end:float=center+half
- var sill:float=float(spec.sill_height_m)*HEIGHT_PIXELS
- var opening:float=float(spec.opening_height_m)*HEIGHT_PIXELS
+ var view:Dictionary=Presentation.window_display("south",float(spec.width_m),float(spec.sill_height_m),float(spec.opening_height_m))
+ var sill:float=float(view.sill_height_m)*HEIGHT_PIXELS
+ var opening:float=float(view.opening_height_m)*HEIGHT_PIXELS
  var thickness:float=float(layout.config.wall.thickness_m)
  var y:float=size.y
- for r in [Rect2(0,y,start,thickness),Rect2(end,y,size.x-end,thickness)]:_prism(r,0.24*HEIGHT_PIXELS,Color("9da493"))
- var low_a:Vector2=layout.project(Vector2(start,y))-Vector2(0,0.24*HEIGHT_PIXELS)
- var low_b:Vector2=layout.project(Vector2(end,y))-Vector2(0,0.24*HEIGHT_PIXELS)
- canvas.draw_line(low_a,low_b,Color("91b2b2"),4)
- for endpoint in [low_a,low_b]:canvas.draw_line(endpoint,endpoint-Vector2(0,9),Color("bac8b9"),4)
- var show_reference:bool=canvas.get("debug_geometry")==true
- if app.home!=null and app.home.present("cat") and str(app.home.data.cat.phase)=="leave":show_reference=true
- if not show_reference:return
- var a:Vector2=layout.project(Vector2(start,y))-Vector2(0,sill)
- var b:Vector2=layout.project(Vector2(end,y))-Vector2(0,sill)
+ _architecture(true)
+ # Only the actual recess and slim frame are additional geometry. The wall
+ # below and beside the opening is already one continuous union surface.
+ var a:Vector2=layout.project(Vector2(start,y+thickness*.52))-Vector2(0,sill)
+ var b:Vector2=layout.project(Vector2(end,y+thickness*.52))-Vector2(0,sill)
+ var ao:Vector2=layout.project(Vector2(start,y+thickness))-Vector2(0,sill)
+ var bo:Vector2=layout.project(Vector2(end,y+thickness))-Vector2(0,sill)
+ _poly([ao,bo,b,a],Color("c7bc9b"))
+ _poly([ao,a,a-Vector2(0,opening),ao-Vector2(0,opening)],Color("7d887c"))
+ _poly([bo,b,b-Vector2(0,opening),bo-Vector2(0,opening)],Color("7d887c"))
  _poly([a,b,b-Vector2(0,opening),a-Vector2(0,opening)],Color(0.52,0.69,0.71,0.12))
- canvas.draw_line(a,b,Color(0.82,0.85,0.77,0.55),4)
- canvas.draw_line(a-Vector2(0,opening),b-Vector2(0,opening),Color(0.82,0.85,0.77,0.35),3)
- for t in [0.0,0.5,1.0]:canvas.draw_line(a.lerp(b,t),a.lerp(b,t)-Vector2(0,opening),Color(0.77,0.8,0.73,0.35),3)
+ canvas.draw_line(a,b,Color("aaa98e"),2)
+ canvas.draw_line(a-Vector2(0,opening),b-Vector2(0,opening),Color("aaa98e"),2)
+ for t in [0.0,0.5,1.0]:canvas.draw_line(a.lerp(b,t),a.lerp(b,t)-Vector2(0,opening),Color("aaa98e"),2)
 
-func _prism(rect:Rect2,h:float,color:Color,bottom:float=0.0) -> void:
+func _prism(rect:Rect2,h:float,color:Color,bottom:float=0.0,material:String="") -> void:
+ if Materials.enabled():
+  Materials.prop_face(canvas,layout,SpatialProp._quad(rect),bottom+h,color,_prop_material if material.is_empty() else material,bottom)
+  return
  var ground:Array=_surface_rect(rect,bottom)
  var top:Array=_surface_rect(rect,bottom+h)
- _poly([ground[1],ground[2],top[2],top[1]],color.darkened(0.23))
+ _poly([ground[0],ground[3],top[3],top[0]],color.darkened(0.23))
  _poly([ground[2],ground[3],top[3],top[2]],color.darkened(0.12))
  _poly(top,color)
  canvas.draw_polyline(PackedVector2Array([top[0],top[1],top[2],top[3],top[0]]),color.lightened(0.10),1.0)
 
 func _furniture(f:Dictionary) -> void:
+ _prop_material=Materials.prop_id(str(f.get("kind",f.id)),str(f.get("name","")))
  var r:Rect2=f.rect
  var h:float=_height(f)
  var color:Color=f.color
  var at:Vector2=layout.project(r.get_center())
  var props:Dictionary=_state(str(f.id))
  # Reveal a genuinely occluding tall prop without changing physical size.
- var bounds:=Rect2(layout.project(r.position)-Vector2(0,h),Vector2(96*r.size.x+30*r.size.y,h+56*r.size.y))
- if h>100 and layout.project(r.end).y>layout.project(app.hero_pos).y and bounds.intersects(hero_body_rect(app,layout)):
+ var bounds:Rect2=Presentation.prism_bounds(layout,r,h)
+ if h>100 and Presentation.footprint_depth(layout,r)>layout.project(app.hero_pos).y and bounds.intersects(hero_body_rect(app,layout)):
   color.a=0.38
+ if str(f.id)!="bedside" and _production_furniture(f,color,props):return
  match str(f.id):
   "bedside":_bedside(f)
   "bed":
-   _prism(r,h-12,Color("826e55"));_prism(r.grow(-0.035),12,Color("9aaeb0"),h-12)
-   _prism(Rect2(r.position+Vector2(0.06,0.05),Vector2(0.42,r.size.y-0.1)),8,Color("d6d4bb"),h)
+   if Materials.enabled():
+    var bed_item:Dictionary=f.duplicate();bed_item.kind="bed";SpatialProp.draw(canvas,layout,bed_item,color)
+   else:
+    _prism(r,h-12,Color("826e55"));_prism(r.grow(-0.035),12,Color("9aaeb0"),h-12)
+    _prism(Rect2(r.position+Vector2(0.06,0.05),Vector2(0.42,r.size.y-0.1)),8,Color("d6d4bb"),h)
    if props.get("bedding_lifted",false):
     var edge:Vector2=layout.project(r.end)-Vector2(0,h)
     _poly([edge,edge+Vector2(-39,0),edge+Vector2(-28,-21),edge+Vector2(-3,-8)],Color("b1c0b7"))
@@ -374,8 +426,29 @@ func _furniture(f:Dictionary) -> void:
     if props.get("label_viewed",false):canvas.draw_rect(Rect2(cloth+Vector2(12,3),Vector2(10,4)),Color("d9d5bc"))
  _label(at+Vector2(-22,18),str(f.name),Color("d2d1b9"),12)
 
+func _production_furniture(f:Dictionary,color:Color,props:Dictionary) -> bool:
+ var state:Dictionary=props.duplicate();state.world_visual_time=float(app.world_visual_time)
+ if not ProductionProps.draw(canvas,layout,f,state,color.a):return false
+ var r:Rect2=f.rect;var h:float=_height(f);var at:Vector2=layout.project(r.get_center())
+ # Existing independently moving contents remain owned by the actual action
+ # state. They are not baked into a new furniture or background image.
+ if str(f.id)=="desk":
+  for i in range(3):
+   var paper:Vector2=layout.project(r.position+Vector2(.14+i*.32,.20))-Vector2(0,h+3)
+   paper.x+=8 if int(props.get("desk_shift",0))>i else 0
+   _poly([paper,paper+Vector2(23,0),paper+Vector2(28,11),paper+Vector2(5,11)],[Color("c5b59a"),Color("758d8e"),Color("d9d1b6")][i])
+ elif str(f.id)=="rack":
+  _poly([at+Vector2(-19,-h+13),at+Vector2(21,-h+13),at+Vector2(30,-h+44),at+Vector2(18,-h+49),at+Vector2(16,-18),at+Vector2(-15,-18),at+Vector2(-19,-h+47),at+Vector2(-30,-h+42)],Color("d1d4c7"))
+  if str(app.action_phase)=="observe_cuff":canvas.draw_line(at+Vector2(18,-h+48),at+Vector2(36,-h+36),Color("e0dec8"),8)
+ elif str(f.id)=="bed" and str(app.action_phase)=="resting":_resting()
+ _label(at+Vector2(-22,18),str(f.name),Color("d2d1b9"),12)
+ return true
+
 func _bedside(f:Dictionary) -> void:
- if catalog.current.is_empty():_prism(f.rect,_height(f),f.color);return
+ var painted:bool=ProductionProps.draw(canvas,layout,f,{"open":float(app.drawer_open.get("bedside",0))})
+ if catalog.current.is_empty():
+  if not painted:_prism(f.rect,_height(f),f.color)
+  return
  var transform:Dictionary=_cabinet_transform(app,layout,catalog)
  var origin:Vector2=transform.origin
  var scale_value:float=transform.scale
@@ -384,18 +457,19 @@ func _bedside(f:Dictionary) -> void:
  var tint:=Color(str(spec.tint))
  var size:=Vector2(float(spec.canvas[0]),float(spec.canvas[1]))*scale_value
  # Feet fill only the physical base gap introduced by the trial art's ratio.
- _prism(f.rect,maxf(5.0,_height(f)-30.0*scale_value+5.0),Color("695f4b"))
- canvas.draw_texture_rect(catalog.texture(spec.body),Rect2(origin,size),false,tint)
- if shift.length()>0.01:
+ if not painted:
+  _prism(f.rect,maxf(5.0,_height(f)-30.0*scale_value+5.0),Color("695f4b"))
+  canvas.draw_texture_rect(catalog.texture(spec.body),Rect2(origin,size),false,tint)
+ if not painted and shift.length()>0.01:
   var a:Vector2=origin+Vector2(55.1742,11.8642)*scale_value
   var b:Vector2=origin+Vector2(66.3666,30.4515)*scale_value
   canvas.draw_polygon(PackedVector2Array([a,b,b+shift,a+shift]),PackedColorArray([tint]),PackedVector2Array([Vector2(0,0),Vector2(1,0),Vector2(1,1),Vector2(0,1)]),catalog.texture(spec.tray))
- canvas.draw_texture_rect(catalog.texture(spec.drawer),Rect2(origin+shift,size),false,tint)
+ if not painted:canvas.draw_texture_rect(catalog.texture(spec.drawer),Rect2(origin+shift,size),false,tint)
  var props:Dictionary=_state("bedside")
  for entry in [["book","book_shift"],["clock","clock_shift"]]:
   var delta:Array=props.get(entry[1],[0,0])
   if spec.has(entry[0]):canvas.draw_texture_rect(catalog.texture(spec[entry[0]]),Rect2(origin+Vector2(float(delta[0]),float(delta[1]))*scale_value,size),false,tint)
- canvas.draw_texture_rect(catalog.texture(spec.front),Rect2(origin,size),false,tint)
+ if not painted:canvas.draw_texture_rect(catalog.texture(spec.front),Rect2(origin,size),false,tint)
 
 func _label(at:Vector2,value:String,color:Color=Color("d8ded0"),size:int=13) -> void:
  canvas.draw_string(font,at,value,HORIZONTAL_ALIGNMENT_LEFT,-1,size,color)
@@ -472,7 +546,8 @@ func _hero() -> void:
  var crouch:float=0.68 if app.hero_state=="search" and app.search_actions!=null and app.search_actions.pose=="low" else 1.0
  var scale2:=Vector2(scale_value,scale_value*crouch)
  canvas.draw_circle(at,18,Color(0.05,0.07,0.08,0.28))
- if contact_pose:
+ var production:bool=app.get("production_actors")!=null and app.production_actors.draw_hero(canvas,at,HERO_HEIGHT)
+ if contact_pose and not production:
   _actor_piece(frame,at,scale2,Rect2(0,0,64,32))
   _actor_piece(frame,at,scale2,Rect2(0,50,64,30))
   var tone:=Color("8cacbb") if str(catalog.active_set)=="a" else Color("829e9b")
@@ -483,26 +558,26 @@ func _hero() -> void:
   if app.hero_state=="search" and app.target_index>=0:hand_side=1 if _search_hand(layout.furniture[app.target_index]).x>=at.x else -1
   elif bool(family_pose.get("held",false)):hand_side=1 if _father_contact(family_pose).x>=at.x else -1
   canvas.draw_line(at+Vector2(-hand_side*14,-top+4),at+Vector2(-hand_side*25,-HERO_HEIGHT*0.42*crouch),tone,7)
- else:canvas.draw_texture_rect_region(frame.texture,Rect2(at-frame.foot*scale2,frame.size*scale2),frame.source)
+ elif not production:canvas.draw_texture_rect_region(frame.texture,Rect2(at-frame.foot*scale2,frame.size*scale2),frame.source)
  var forward:Vector2=(layout.project(app.hero_pos+app.hero_facing)-at).normalized()
  canvas.draw_line(at,at+forward*24,Color("e3bb7d"),2)
  if app.hero_state=="search" and app.target_index>=0:
   var f:Dictionary=layout.furniture[app.target_index]
   var hand:Vector2=_search_hand(f)
   var shoulder:Vector2=at+Vector2(17 if hand.x>=at.x else -17,-HERO_HEIGHT*0.70*crouch)
-  canvas.draw_line(shoulder,hand,Color("90b6c0"),7);canvas.draw_circle(hand,4,Color("d6c8ac"))
+  if not production:canvas.draw_line(shoulder,hand,Color("90b6c0"),7);canvas.draw_circle(hand,4,Color("d6c8ac"))
  if app.family!=null:
   var pose:Dictionary=family_pose
   if bool(pose.get("held",false)):
    var hand:Vector2=_father_contact(pose)
-   canvas.draw_line(at+Vector2(17 if hand.x>=at.x else -17,-HERO_HEIGHT*0.70),hand,Color("a8c7cc"),7)
+   if not production:canvas.draw_line(at+Vector2(17 if hand.x>=at.x else -17,-HERO_HEIGHT*0.70),hand,Color("a8c7cc"),7)
    _label(at+Vector2(-27,32),"被抓握 · 带行" if pose.phase=="drag" else "被抓握 · 转身",Color("edc8a5"),12)
   if app.hero_state=="eat" and not app.family.data.get("eating",{}).is_empty():
    var eating:Dictionary=app.family.data.eating
    var t:float=clampf(float(eating.elapsed)/float(app.family.config.timing.eat),0,1)
    var reach:float=clampf(t/0.30,0,1) if t<0.78 else clampf((1-t)/0.22,0,1)
    var hand:Vector2=(at+Vector2(27,-HERO_HEIGHT*0.37)).lerp(at+Vector2(12,-HERO_HEIGHT*0.86),reach)
-   canvas.draw_line(at+Vector2(16,-HERO_HEIGHT*0.68),hand,Color("9dbec5"),7)
+   if not production:canvas.draw_line(at+Vector2(16,-HERO_HEIGHT*0.68),hand,Color("9dbec5"),7)
    _food(hand,str(app.family.data.food_types.get(str(eating.item),"porridge")))
   elif not app.family.data.get("inventory",[]).is_empty():
    var held_slot:int=0
@@ -533,6 +608,7 @@ func _search_hand(f:Dictionary) -> Vector2:
 
 func _resting() -> void:
  var pose:Dictionary=_rest_pose(app,layout)
+ if app.get("production_actors")!=null and app.production_actors.draw_resting(canvas,pose.center,float(pose.angle),HERO_HEIGHT):return
  var frame:Dictionary=catalog.actor_frame("idle",app.hero_facing,0.0)
  var scale_value:float=HERO_HEIGHT/ATLAS_BODY_HEIGHT
  canvas.draw_set_transform(pose.center,float(pose.angle))

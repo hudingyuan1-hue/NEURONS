@@ -1,0 +1,99 @@
+{
+  "scope": "L1 bedroom plus all 13 institution room types; pure2D spatial display correction and furniture/action/portal contracts. Not all-NPC natural play or formal aesthetic approval.",
+  "changes": [
+    "Preserved existing geometry versions, topology, dimensions, event rules and save migration.",
+    "Four complete-height exterior walls are separate from near-wall alpha; no shin-high architectural cutaway.",
+    "Bedroom source window is always represented with actual sill, opening and lintel; east/south wall visibility keeps action contacts readable.",
+    "Three legacy window surfaces in clinic, office and stairs are now real wall-mounted windows; all 11 institution windows declare sill and opening heights.",
+    "All furniture footprint/approach/height remain shared with real runtime layout; source-scale 2 contract made explicit."
+  ],
+  "source": {
+    "path": "DOCX/AI整理后文档/NEURONS_第一阶段_空间物品人员_合并修订版.docx",
+    "sha256": "986cf8367f87d82df28583db45b745b1619afaab3533d291dcb92e0d632e307e",
+    "paragraphs_read": [
+      "16-20",
+      "34-42",
+      "92-103",
+      "147-174",
+      "165-216"
+    ]
+  },
+  "files": [
+    {
+      "path": "neurons/scripts/world/metric_bedroom_view.gd",
+      "sha256": "1d88073bf9532c98a73378a0c9231066fc7c1287fdff8d799e7f658271fcfdbf"
+    },
+    {
+      "path": "neurons/scripts/world/metric_institution_view.gd",
+      "sha256": "8c0615acfe648e6c3d2a76be1c8aec76e3d7685a6c0ae27bad71a57a2c3d7937"
+    },
+    {
+      "path": "neurons/data/room_spaces.json",
+      "sha256": "e5cdd3ae78e8a9d4883582459e34db6313374d637cade733fdba3950b81006f0"
+    },
+    {
+      "path": "neurons/data/institution_spaces.json",
+      "sha256": "5b6fa17cd6b75680d024f6cb43f61bd5a4e069392fe887c16dde4ac32602952c"
+    },
+    {
+      "path": "neurons/tests/institution_shell_contract_20261018.gd",
+      "sha256": "ff6dc30c9d1ffaed47901aa10df9580c5c286efdf122983174b655cef1cad851"
+    }
+  ],
+  "verification": [
+    {
+      "path": "docs/validation/spatial_institution_20261018/contract_final/result.json",
+      "passed": 227,
+      "failed": 0,
+      "scope": "Runtime-layout projection, original source search/action approaches, all real portal paths and full-wall visibility contract. No normal-play, formal-art or subjective aesthetic acceptance."
+    },
+    {
+      "path": "docs/validation/spatial_institution_20261018/bedroom_r1/result.json",
+      "passed": 182,
+      "failed": 0,
+      "scope": "GPU presentation and fixed-step production handlers, not a normal-speed human playthrough. Geometry fixtures disable unrelated NPCs and key discovery. Legacy v1 fixtures originate from current runtime in schema2 shape, then perform real half-search/moved-box JSON continuation and physical return/rest into v2. Father v1/v2 fixtures select initial presence only and preserve real timed approach/grab/stabilization/drag through JSON. The inherited step driver clears dialogue to isolate mechanics; dialogue pace, random encounters, hidden ending, formal art and subjective listening are not accepted by this suite."
+    },
+    {
+      "path": "docs/validation/spatial_institution_20261018/institution_final/result.json",
+      "passed": 140,
+      "failed": 0,
+      "scope": "Fixed actor-free geometry fixtures; production movement/search/opening/threshold/JSON and paid interruption. L2 key ownership fixture isolates original unlock then L3 lobby change/stairs/return-to-bed. Legacy v1 fixture preserves original coordinates until actual rest. No all-NPC, normal-speed human, formal art or subjective audio acceptance."
+    },
+    {
+      "path": "docs/validation/spatial_institution_20261018/asylum_r1/result.json",
+      "passed": 255,
+      "failed": 0,
+      "scope": "Versioned L3 upper-room trials, original seven corridor links and 44 original search contacts; source-bound NPC/report/nurse/bed/therapy/work cases use declared initial actor/key/scheduling fixtures, production clocks and disk JSON. Optional continuous recording uses ordinary process and actual keyboard/mouse after declared actors/skill fixture. Not natural full playthrough, formal art or audio acceptance."
+    }
+  ],
+  "visual_review": {
+    "actual_native_screenshots_reviewed": 14,
+    "revised_windows_reviewed": [
+      "institution_final/room_clinic.png",
+      "institution_final/room_office.png",
+      "institution_final/03_actual_staircase.png"
+    ],
+    "notes": "Rooms retain full logical structure, doors and wall windows. Large rooms retain native actor scale and follow/pan rather than shrinking actors to fit. Existing furniture/art remains placeholder; no formal drawing or aesthetic approval."
+  },
+  "failure_retained": "First standalone invocation hit an added-line indentation parse error at metric_bedroom_view.gd:240; corrected before all successful runtime suites. First screenshots also exposed three old windows rendered as floor blocks; corrected and reran institution suite.",
+  "remaining_outside_ownership": [
+    "Shared exporter must treat window height_m as sill, using sill_height_m/opening_height_m; wall_mount windows belong to architecture/window layers, not ordinary floor props.",
+    "Shared exporter must use complete wall.height_m and thickness_m, not runtime display.near_alpha.",
+    "Normal human-paced whole-game play, formal art compositing and B7 cross-computer approval remain separate."
+  ],
+  "git_write_operations": 0,
+  "imagegen_calls": 0,
+  "original_art_modified": false,
+  "visible_face_calibration": {
+    "reason": "Affine projection kernel toward viewer = (-30/96,1,56/78): visible WEST/SOUTH/TOP; near WEST/SOUTH; rear NORTH/EAST. Prior east/south prism face was mathematically inconsistent.",
+    "changes": "Both runtime prism rendering and elevated hit faces corrected; all dimensions, object/action positions, geometry versions, rules and save handling unchanged. wall.display.near_sides corrected in both data files.",
+    "result": "visible_faces_final/result.json:15/0",
+    "actual_screenshots_reviewed": [
+      "visible_faces_final/L1_bedroom.png",
+      "visible_faces_final/L2_ward.png",
+      "visible_faces_final/L2_clinic.png"
+    ],
+    "failure_retained": "Standalone inspector initially failed because its async show_profile lacked await; corrected driver only. driver_failure_r1.json retained.",
+    "note": "Earlier navigation/natural evidence remains movement/rule evidence. Only these three final screenshots are claimed to show the corrected visible faces."
+  }
+}

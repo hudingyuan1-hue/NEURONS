@@ -1,0 +1,15 @@
+{
+  "started_utc": "2026-10-19T11:03:33.9020630Z",
+  "pid": 47748,
+  "arguments": [
+    "--path",
+    "C:/Users/23623/Documents/GitHub/NEURONS/neurons",
+    "--disable-vsync",
+    "--fixed-fps",
+    "30",
+    "--",
+    "--street-mixed-crowd-check",
+    "--save-root=res://../tmp/campaign_reaudit_20261019/mixed_full_r1",
+    "--validation-root=res://../docs/validation/campaign_reaudit_20261019/mixed_crowd/full_r1"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "cases": [
+    {
+      "angle": 0.0,
+      "fixture": "Street nested rigid occupancy",
+      "grid_cells": 24321,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 185
+    },
+    {
+      "angle": 0.41,
+      "fixture": "Street nested rigid occupancy",
+      "grid_cells": 24321,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 185
+    },
+    {
+      "angle": 1.18,
+      "fixture": "Street nested rigid occupancy",
+      "grid_cells": 24321,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 185
+    },
+    {
+      "angle": 1.5707963267949,
+      "fixture": "Street nested rigid occupancy",
+      "grid_cells": 24321,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 185
+    },
+    {
+      "angle": 0.0,
+      "fixture": "legacy L5 geometry v2",
+      "grid_cells": 8701,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 2
+    },
+    {
+      "angle": 0.41,
+      "fixture": "legacy L5 geometry v2",
+      "grid_cells": 8701,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 2
+    },
+    {
+      "angle": 1.18,
+      "fixture": "legacy L5 geometry v2",
+      "grid_cells": 8701,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 2
+    },
+    {
+      "angle": 1.5707963267949,
+      "fixture": "legacy L5 geometry v2",
+      "grid_cells": 8701,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 2
+    },
+    {
+      "angle": 0.0,
+      "fixture": "current L5 geometry v3",
+      "grid_cells": 8393,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 2
+    },
+    {
+      "angle": 0.41,
+      "fixture": "current L5 geometry v3",
+      "grid_cells": 8393,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 2
+    },
+    {
+      "angle": 1.18,
+      "fixture": "current L5 geometry v3",
+      "grid_cells": 8393,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 2
+    },
+    {
+      "angle": 1.5707963267949,
+      "fixture": "current L5 geometry v3",
+      "grid_cells": 8393,
+      "mask_equal": true,
+      "path_equal": true,
+      "path_points": 2
+    }
+  ],
+  "scope": "Full-grid old/new temporary assistant-bed AABB masks and exact routes; includes already-patched oriented lateral bed plus dead-wheelchair footprint; legacy L5 v2 and current v3. No static/body geometry or navigation rules changed."
+}

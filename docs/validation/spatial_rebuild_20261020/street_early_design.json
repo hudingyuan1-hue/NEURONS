@@ -1,0 +1,122 @@
+{
+  "scope": "L1–L3 audit; L6 and hidden contour reconstruction",
+  "source_document": "C:/Users/23623/Downloads/关卡 周目 环境(1).docx",
+  "images_reviewed": [
+    2,
+    4,
+    8,
+    9,
+    14,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "street_rooms": {
+    "street_plaza": {
+      "size_m": [
+        16,
+        11
+      ],
+      "shape": "入口窄口向带喷泉的多边广场张开，沿街立面错落退进；喷泉两侧可以绕行。",
+      "source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        "street_narrow",
+        "street_side"
+      ]
+    },
+    "street_side": {
+      "size_m": [
+        7,
+        13
+      ],
+      "shape": "北侧唯一入口进入竖长服务侧室，窄入口约2米，随后向下伸长并分两处错落壁龛，底端封闭。外围约7×13米是本房可用范围，长轴与北入单口沿源图46，不保留旧10×9米近方形占位。",
+      "source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        "street_plaza"
+      ]
+    },
+    "street_narrow": {
+      "size_m": [
+        18,
+        8
+      ],
+      "shape": "连续细长通道，两侧交错壁龛与退让口袋；通行主脊贯通，墙体属于建筑边界而非摆在路中的巨型方柜。",
+      "source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        "street_plaza",
+        "street_twisted"
+      ]
+    },
+    "street_twisted": {
+      "size_m": [
+        20,
+        12
+      ],
+      "shape": "街道在中段错移并分出北侧维护支路，宽窄变化和转折产生遮蔽，东端重新收束；非随机新增迷宫。",
+      "source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        "street_narrow",
+        "street_node",
+        "street_maintenance"
+      ]
+    },
+    "street_maintenance": {
+      "size_m": [
+        12,
+        8
+      ],
+      "shape": "主路旁的单口维护巷，墙边管架和清洁车占边，小检修湾让行，末端封闭。",
+      "source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        "street_twisted"
+      ]
+    },
+    "street_node": {
+      "size_m": [
+        17,
+        12
+      ],
+      "shape": "塌陷核心周围的异形节点与外围绕行地带，沿街立面有凹凸进退，两端连接保持。",
+      "source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        "street_twisted",
+        "street_end"
+      ]
+    },
+    "street_end": {
+      "size_m": [
+        16,
+        11
+      ],
+      "shape": "检查收束街段，两侧凹进岗亭和设备湾，路面逐渐汇向东端门廊及终点。",
+      "source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        "street_node",
+        "ending_gate"
+      ]
+    }
+  },
+  "preserved": [
+    "Street graph and stable prop IDs",
+    "45 actor identities and source event causality",
+    "HP/damage/attack timing/skills/key/ending rules",
+    "Hidden encounter E1 real threshold",
+    "No new length inflation"
+  ],
+  "technical_notes": [
+    "Three giant narrow-street wall-block IDs retained with render=false/solid=false; actual architecture now follows continuous contour.",
+    "All generated furniture envelopes explicitly cease being visible rectangular silhouettes.",
+    "Street node central collapse is a real polygon void; route stays around it.",
+    "Self-audit corrected side-room proportions from 10×9 to document-led 7×13; furniture keeps real size, five friendly spawn anchors explicitly repositioned. Other Street bounding dimensions retained only where source outline/proportions support them; main route is not extended for playtime inflation."
+  ],
+  "early_audit": {
+    "L1": "Document image2 necessary 11 searches, north door and south cat window retained. Do not borrow sample furniture positions.",
+    "L2": "Ward south daylight window and washbasin restored; original north door kept. Lobby ward/pharmacy portals moved to north per overview image8.",
+    "L3": "Ward phase override is south door, north protective daylight window, north-south bed, sink and fixed chair/storage per image9. Legacy extra furniture IDs remain non-rendered/non-colliding. Door observation hatch remains bound to the real portal and is not conflated with daylight window.",
+    "upper_floor": "Image14/16–22 revealed prior north/south reversal. Corrected workshop/double/bathroom/quiet to north side of corridor and activity/group to south, reciprocal portals, south entrances for north rooms, daylight windows, central U nurse station, parallel open shower bays and independent group chairs. Distinct source dimensions retained; ordinary rooms are not arbitrarily distorted."
+  }
+}

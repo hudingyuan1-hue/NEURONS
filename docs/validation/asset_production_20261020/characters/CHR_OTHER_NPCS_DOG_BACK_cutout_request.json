@@ -1,0 +1,9 @@
+{
+  "asset_id": "CHR_OTHER_NPCS_DOG_BACK",
+  "source_path": "DOCX/最终素材/人物/CHR_OTHER_NPCS_DOG_BACK_v001.png",
+  "source_sha256": "c1405ef67b4d57ab08b9e0cb5c78035fa495ba780694a92cb239f5d81a3a4fc4",
+  "tool": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. Technical image edit, one existing game character sprite. The attached image is the exact edit target, not a loose style reference. Change only the empty gray/beige background to genuine PNG alpha transparency. Preserve the exact character identity, face, expression, hair silhouette, hair strands, skin colors, clothes and all small accessories, brushwork, body proportions, pose, view direction, original composition and canvas aspect ratio. Do not redraw, beautify, reinterpret, add animation or invent missing limbs/supports. Keep white/light clothes and shoes fully opaque; do not treat them as background. Keep intentional worn or held accessories already present, but add no new object. Remove only the background and external floor/drop shadow, with no halo or gray matte. Retain natural semi-transparent anti-aliased edge pixels and tiny hair details. No ground plane, no background color, no checkerboard graphic, no new shadow, no text or watermark. Output one clean full-body transparent RGBA sprite, keeping the source pose and its existing margins. Asset identity for bookkeeping only: CHR_OTHER_NPCS_DOG_BACK; authored state: normal; authored view: back_reference. These labels do not request any visual change.",
+  "generated_path": null
+}

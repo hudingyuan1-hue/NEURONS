@@ -1,0 +1,73 @@
+{
+  "source": [
+    "S3:T17R5",
+    "S3:T59R2–5",
+    "S3:P1950–1957"
+  ],
+  "changed_files": [
+    "neurons/scripts/core/character_presentation.gd",
+    "neurons/scripts/core/hospital_observations.gd",
+    "neurons/data/hospital_observations.json",
+    "neurons/scripts/core/combat_observations.gd",
+    "neurons/tests/character_presentation_check.gd",
+    "neurons/tests/hospital_observation_check.gd"
+  ],
+  "implemented": [
+    "Separate session-persistent initial/steady/cold/unsparing presentation; one stage at most per genuinely completed action; no awakening, awareness, damage or resource mutation.",
+    "Exact steady/cold/escape-priority and hospital/therapy reflection lines, dispatched only at a safe normal gap after original exclusive or loss feedback.",
+    "T17R5 authored relation requires actual complete reads of the four original case pages; all concrete case-number glyphs remain null. Single/missing/mixed-case/conflicting-number records cannot establish it.",
+    "Actual same-episode original/retraction hearing, not hearsay or cross-attempt one-sided memory, supplies the therapy reflection and one asylum contradiction class.",
+    "Cold requires two independent source-specified contradiction classes; unsparing requires any one actual witnessed eligible Street death, acknowledged original loss reaction and later genuine autonomous exitward endpoint/crossing.",
+    "Stage3 autonomous scheduling skips already-known stable static originals during a later L5 return; new originals, dynamic fallen labels, CONTROL-directed reading and prior-stage behavior are preserved."
+  ],
+  "latest_suites": [
+    {
+      "path": "integrated_actual_gpu_r5/result.json",
+      "passes": 80,
+      "failures": 0,
+      "actual_gpu": true,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "notes": "Real campaign completed-search and successful Street cross-door callbacks; separate legacy fully evidenced old midgame at/threshold/half-open/after-cross disk saves; one ordinary crossing advances at most one stage; final gate first interior arrival counts once and neither saved threshold nor actual ending repeats it. No fabricated hospital number."
+    },
+    {
+      "path": "hospital_relation_r1/result.json",
+      "passes": 33,
+      "failures": 0,
+      "actual_gpu": true,
+      "notes": "Source-related case originals, missing/mixed/conflicting negatives, legacy saved reads, actual controlled viewport input and physical-read interruption regression."
+    }
+  ],
+  "screenshots": [
+    "integrated_actual_gpu_r5/01_therapy_reflection.png",
+    "integrated_actual_gpu_r5/02_cold_after_actual_search_callback.png",
+    "integrated_actual_gpu_r5/03_unsparing_after_actual_street_callback.png"
+  ],
+  "review": {
+    "latest_logs_have_script_errors": false,
+    "source_number_glyphs_modified": false,
+    "prior_evidence_preserved": true,
+    "formal_art_accepted": false,
+    "human_natural_rng_playthrough": false,
+    "formal_audio_listened": false
+  },
+  "remaining_limits": [
+    "This audit did not identify a further source-certain ready-to-implement major Street chain beyond the completed presentation and repeat-read behavior. Existing exclusive item/action modules should not be redone from historic gap tables.",
+    "The alternate steady-entry route requiring a false record about the protagonist same actual injury is not inferred from generic damage or a different patient scar page. It needs a source-bound own-injury/false-record comparison; other proved steady-entry routes already work.",
+    "Normal-time human play, all simultaneous crowd/lifecycle combinations, formal stance/animation and final B7 acceptance remain unclaimed."
+  ],
+  "door_regression": {
+    "trace": "integrated_actual_gpu_r5/legacy_door_trace.json",
+    "ordinary_stages": [
+      "at 0",
+      "threshold 0",
+      "actual cross 1",
+      "restore after cross 1"
+    ],
+    "final_gate_stages": [
+      "first interior at 1",
+      "restored threshold 1",
+      "real ending 1"
+    ],
+    "preserved_failure": "integrated_actual_gpu_r4/result.json: 77 passed, 3 failed on final at observer omission when production stopped within its unchanged 4cm arrival tolerance. Parent corrected observer dispatch in the existing arrival branch; all old evidence remains."
+  }
+}

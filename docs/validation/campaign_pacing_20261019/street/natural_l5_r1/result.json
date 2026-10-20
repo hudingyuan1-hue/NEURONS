@@ -1,0 +1,2733 @@
+{
+  "all_seven_rooms": [
+    {
+      "actually_visited": true,
+      "branch": false,
+      "configured_actors": [
+        {
+          "attack": "sweep",
+          "id": "father",
+          "relation": "enemy"
+        },
+        {
+          "attack": "belt",
+          "id": "warder",
+          "relation": "enemy"
+        },
+        {
+          "attack": "sweep",
+          "id": "transporter_hospital",
+          "relation": "enemy"
+        },
+        {
+          "attack": "",
+          "id": "register_nurse",
+          "relation": "neutral"
+        },
+        {
+          "attack": "",
+          "id": "head_nurse",
+          "relation": "enemy"
+        },
+        {
+          "attack": "",
+          "id": "back",
+          "relation": "neutral"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(15.52, 5.5)",
+          "height_m": 2.2,
+          "inward": "(-1.0, 0.0)",
+          "landing": "(15.14, 5.5)",
+          "threshold": "(15.75, 5.5)",
+          "toward": "street_narrow",
+          "wall": "east",
+          "wall_point": "(16.0, 5.5)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(5.6, 0.48)",
+          "height_m": 2.2,
+          "inward": "(0.0, 1.0)",
+          "landing": "(5.6, 0.86)",
+          "threshold": "(5.6, 0.25)",
+          "toward": "street_side",
+          "wall": "north",
+          "wall_point": "(5.6, 0.0)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_plaza",
+      "size_m": [
+        16.0,
+        11.0
+      ],
+      "static_portal_routes": [
+        {
+          "from": "street_narrow",
+          "route_points": 3,
+          "static_route_m": 11.2227716445923,
+          "toward": "street_side"
+        }
+      ],
+      "visits": [
+        {
+          "active_s": 14.8,
+          "actual_actor_hits": [],
+          "actual_hero_hits": [],
+          "availability_reasons_s": {
+            "SKIN:available": 14.0
+          },
+          "available_skill_s": {
+            "SKIN": 14.0
+          },
+          "body_busy_s": 0.0,
+          "damage_to_hero_hp": 0,
+          "damage_to_hero_sp": 0,
+          "distance_m": 15.6537969205529,
+          "door_intent_s": 0.8,
+          "elapsed_s": 14.7999999999992,
+          "entered_s": 0.0,
+          "entry_clusters": 7,
+          "entry_hp": 85,
+          "entry_neurons": 20,
+          "exit_hp": 85,
+          "exit_neurons": 21,
+          "facts": [
+            {
+              "fact": {
+                "actor": "head_nurse",
+                "event_id": "street_report:1:head_nurse:1:knock",
+                "heard_by": [
+                  "transporter_hospital"
+                ],
+                "kind": "street_board_knocked",
+                "room": "street_plaza",
+                "source": "S3:P1620–1621",
+                "time": 66.4666666666655
+              },
+              "observed_room": "street_plaza",
+              "street_s": 0.833333333333286
+            },
+            {
+              "fact": {
+                "actor": "head_nurse",
+                "at": [
+                  2.32624936103821,
+                  5.5
+                ],
+                "event_id": "street_report:1:head_nurse:1",
+                "kind": "street_report_received",
+                "receivers": [
+                  "transporter_hospital"
+                ],
+                "room": "street_plaza",
+                "source": "S3:P1621/P1908–1910",
+                "time": 67.1999999999988,
+                "witnessed": false
+              },
+              "observed_room": "street_plaza",
+              "street_s": 1.56666666666658
+            },
+            {
+              "fact": {
+                "actor": "warder",
+                "direction": [
+                  -0.334692150354385,
+                  -0.942327499389648
+                ],
+                "event_id": "combat:6:1:warder:1",
+                "kind": "combat_attack_started",
+                "room": "street_plaza",
+                "time": 68.8999999999987
+              },
+              "observed_room": "street_plaza",
+              "street_s": 3.26666666666648
+            }
+          ],
+          "forced_or_pose_displacement_m": 0.0287496112287045,
+          "gripped_s": 0.0,
+          "hostile_visible_s": 14.0,
+          "hostile_windup_or_active_s": 1.0,
+          "left_s": 14.7999999999992,
+          "moving_s": 14.2,
+          "paused_s": 0.0,
+          "room": "street_plaza",
+          "route_blocked_s": 0.0,
+          "visible_actors": {
+            "back": {
+              "attack": "",
+              "first_s": 4.53333333333308,
+              "last_s": 12.5333333333326,
+              "minimum_distance_m": 1.78154098987579,
+              "relation": "neutral",
+              "visible_s": 7.75
+            },
+            "father": {
+              "attack": "sweep",
+              "first_s": 0.0,
+              "last_s": 9.59999999999945,
+              "minimum_distance_m": 1.68570220470428,
+              "relation": "enemy",
+              "visible_s": 8.25
+            },
+            "head_nurse": {
+              "attack": "",
+              "first_s": 2.39999999999986,
+              "last_s": 4.26666666666642,
+              "minimum_distance_m": 4.65239572525024,
+              "relation": "enemy",
+              "visible_s": 2.0
+            },
+            "register_nurse": {
+              "attack": "",
+              "first_s": 0.0,
+              "last_s": 7.19999999999959,
+              "minimum_distance_m": 3.0412323474884,
+              "relation": "neutral",
+              "visible_s": 7.0
+            },
+            "warder": {
+              "attack": "belt",
+              "first_s": 1.06666666666661,
+              "last_s": 14.6666666666658,
+              "minimum_distance_m": 0.813081383705139,
+              "relation": "enemy",
+              "visible_s": 13.0
+            }
+          },
+          "walking_m": 15.6250473093241
+        }
+      ]
+    },
+    {
+      "actually_visited": false,
+      "branch": true,
+      "configured_actors": [
+        {
+          "attack": "bandage",
+          "id": "nurse",
+          "relation": "friend"
+        },
+        {
+          "attack": "point",
+          "id": "corner",
+          "relation": "friend"
+        },
+        {
+          "attack": "",
+          "id": "wheelchair",
+          "relation": "friend"
+        },
+        {
+          "attack": "",
+          "id": "transport_patient",
+          "relation": "friend"
+        },
+        {
+          "attack": "",
+          "id": "postop",
+          "relation": "friend"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 4.5)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 4.5)",
+          "threshold": "(0.25, 4.5)",
+          "toward": "street_plaza",
+          "wall": "west",
+          "wall_point": "(0.0, 4.5)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_side",
+      "size_m": [
+        10.0,
+        9.0
+      ],
+      "static_portal_routes": [],
+      "visits": []
+    },
+    {
+      "actually_visited": true,
+      "branch": false,
+      "configured_actors": [
+        {
+          "attack": "pounce",
+          "id": "cat",
+          "relation": "enemy"
+        },
+        {
+          "attack": "charge",
+          "id": "twitch",
+          "relation": "enemy"
+        },
+        {
+          "attack": "restraint",
+          "id": "assistant_asylum",
+          "relation": "enemy"
+        },
+        {
+          "attack": "isolate",
+          "id": "isolation",
+          "relation": "enemy"
+        },
+        {
+          "attack": "grab",
+          "id": "dislocated",
+          "relation": "enemy"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 4.0)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 4.0)",
+          "threshold": "(0.25, 4.0)",
+          "toward": "street_plaza",
+          "wall": "west",
+          "wall_point": "(0.0, 4.0)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(17.52, 4.0)",
+          "height_m": 2.2,
+          "inward": "(-1.0, 0.0)",
+          "landing": "(17.14, 4.0)",
+          "threshold": "(17.75, 4.0)",
+          "toward": "street_twisted",
+          "wall": "east",
+          "wall_point": "(18.0, 4.0)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_narrow",
+      "size_m": [
+        18.0,
+        8.0
+      ],
+      "static_portal_routes": [
+        {
+          "from": "street_plaza",
+          "route_points": 2,
+          "static_route_m": 16.8899993896484,
+          "toward": "street_twisted"
+        }
+      ],
+      "visits": [
+        {
+          "active_s": 15.2666666666666,
+          "actual_actor_hits": [],
+          "actual_hero_hits": [],
+          "availability_reasons_s": {
+            "SKIN:available": 14.25
+          },
+          "available_skill_s": {
+            "SKIN": 14.25
+          },
+          "body_busy_s": 0.0,
+          "damage_to_hero_hp": 0,
+          "damage_to_hero_sp": 0,
+          "distance_m": 16.8283907175064,
+          "door_intent_s": 0.8,
+          "elapsed_s": 15.2666666666658,
+          "entered_s": 14.7999999999992,
+          "entry_clusters": 7,
+          "entry_hp": 85,
+          "entry_neurons": 21,
+          "exit_hp": 85,
+          "exit_neurons": 22,
+          "facts": [
+            {
+              "fact": {
+                "event_id": "explored:6:street_narrow",
+                "kind": "scene_first_explored",
+                "level": 6,
+                "neurons": 1,
+                "room": "street_narrow",
+                "time": 80.4333333333313
+              },
+              "observed_room": "street_narrow",
+              "street_s": 14.7999999999992
+            },
+            {
+              "fact": {
+                "actor": "dislocated",
+                "direction": [
+                  -0.687510132789612,
+                  0.726174831390381
+                ],
+                "event_id": "combat:6:1:dislocated:2",
+                "kind": "combat_attack_started",
+                "room": "street_narrow",
+                "time": 83.1999999999978
+              },
+              "observed_room": "street_narrow",
+              "street_s": 17.5666666666657
+            },
+            {
+              "fact": {
+                "actor": "twitch",
+                "direction": [
+                  0.210453480482101,
+                  -0.977603852748871
+                ],
+                "event_id": "combat:6:1:twitch:3",
+                "kind": "combat_attack_started",
+                "room": "street_narrow",
+                "time": 83.9999999999978
+              },
+              "observed_room": "street_narrow",
+              "street_s": 18.3666666666656
+            },
+            {
+              "fact": {
+                "actor": "assistant_asylum",
+                "direction": [
+                  -0.348444283008575,
+                  0.937329530715942
+                ],
+                "event_id": "combat:6:1:assistant_asylum:4",
+                "kind": "combat_attack_started",
+                "room": "street_narrow",
+                "time": 86.6999999999976
+              },
+              "observed_room": "street_narrow",
+              "street_s": 21.0666666666655
+            }
+          ],
+          "forced_or_pose_displacement_m": 0.0287494659423828,
+          "gripped_s": 0.0,
+          "hostile_visible_s": 14.25,
+          "hostile_windup_or_active_s": 3.75,
+          "left_s": 30.066666666665,
+          "moving_s": 14.6666666666666,
+          "paused_s": 0.0,
+          "room": "street_narrow",
+          "route_blocked_s": 0.0,
+          "visible_actors": {
+            "assistant_asylum": {
+              "attack": "restraint",
+              "first_s": 18.399999999999,
+              "last_s": 29.866666666665,
+              "minimum_distance_m": 0.965721547603607,
+              "relation": "enemy",
+              "visible_s": 11.0
+            },
+            "cat": {
+              "attack": "pounce",
+              "first_s": 14.9333333333325,
+              "last_s": 25.8666666666652,
+              "minimum_distance_m": 0.998322129249573,
+              "relation": "enemy",
+              "visible_s": 10.5
+            },
+            "dislocated": {
+              "attack": "grab",
+              "first_s": 15.4666666666658,
+              "last_s": 29.866666666665,
+              "minimum_distance_m": 0.775900959968567,
+              "relation": "enemy",
+              "visible_s": 13.75
+            },
+            "isolation": {
+              "attack": "isolate",
+              "first_s": 14.9333333333325,
+              "last_s": 25.3333333333319,
+              "minimum_distance_m": 0.998050153255463,
+              "relation": "enemy",
+              "visible_s": 10.0
+            },
+            "twitch": {
+              "attack": "charge",
+              "first_s": 15.7333333333324,
+              "last_s": 29.866666666665,
+              "minimum_distance_m": 0.869347095489502,
+              "relation": "enemy",
+              "visible_s": 13.5
+            }
+          },
+          "walking_m": 16.799641251564
+        }
+      ]
+    },
+    {
+      "actually_visited": true,
+      "branch": false,
+      "configured_actors": [
+        {
+          "attack": "charge",
+          "id": "reverse",
+          "relation": "enemy"
+        },
+        {
+          "attack": "grab",
+          "id": "archivist",
+          "relation": "enemy"
+        },
+        {
+          "attack": "watch",
+          "id": "double_face",
+          "relation": "neutral"
+        },
+        {
+          "attack": "",
+          "id": "triage",
+          "relation": "neutral"
+        },
+        {
+          "attack": "splash",
+          "id": "pharmacist",
+          "relation": "enemy"
+        },
+        {
+          "attack": "drug",
+          "id": "ward_nurse",
+          "relation": "enemy"
+        },
+        {
+          "attack": "lateral_bed",
+          "id": "transporter_asylum",
+          "relation": "enemy"
+        },
+        {
+          "attack": "",
+          "id": "speaker",
+          "relation": "friend"
+        },
+        {
+          "attack": "grab",
+          "id": "supervisor",
+          "relation": "enemy"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 6.0)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 6.0)",
+          "threshold": "(0.25, 6.0)",
+          "toward": "street_narrow",
+          "wall": "west",
+          "wall_point": "(0.0, 6.0)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(19.52, 6.0)",
+          "height_m": 2.2,
+          "inward": "(-1.0, 0.0)",
+          "landing": "(19.14, 6.0)",
+          "threshold": "(19.75, 6.0)",
+          "toward": "street_node",
+          "wall": "east",
+          "wall_point": "(20.0, 6.0)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(7.0, 0.48)",
+          "height_m": 2.2,
+          "inward": "(0.0, 1.0)",
+          "landing": "(7.0, 0.86)",
+          "threshold": "(7.0, 0.25)",
+          "toward": "street_maintenance",
+          "wall": "north",
+          "wall_point": "(7.0, 0.0)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_twisted",
+      "size_m": [
+        20.0,
+        12.0
+      ],
+      "static_portal_routes": [
+        {
+          "from": "street_narrow",
+          "route_points": 2,
+          "static_route_m": 18.8899993896484,
+          "toward": "street_node"
+        },
+        {
+          "from": "street_narrow",
+          "route_points": 3,
+          "static_route_m": 8.53201496601105,
+          "toward": "street_maintenance"
+        },
+        {
+          "from": "street_node",
+          "route_points": 3,
+          "static_route_m": 13.4458703994751,
+          "toward": "street_maintenance"
+        }
+      ],
+      "visits": [
+        {
+          "active_s": 20.6000000000002,
+          "actual_actor_hits": [],
+          "actual_hero_hits": [],
+          "availability_reasons_s": {
+            "SKIN:available": 19.25
+          },
+          "available_skill_s": {
+            "SKIN": 19.25
+          },
+          "body_busy_s": 0.0,
+          "damage_to_hero_hp": 0,
+          "damage_to_hero_sp": 0,
+          "distance_m": 22.184682905674,
+          "door_intent_s": 0.8,
+          "elapsed_s": 20.5999999999988,
+          "entered_s": 30.066666666665,
+          "entry_clusters": 7,
+          "entry_hp": 85,
+          "entry_neurons": 22,
+          "exit_hp": 85,
+          "exit_neurons": 23,
+          "facts": [
+            {
+              "fact": {
+                "event_id": "explored:6:street_twisted",
+                "kind": "scene_first_explored",
+                "level": 6,
+                "neurons": 1,
+                "room": "street_twisted",
+                "time": 95.6999999999971
+              },
+              "observed_room": "street_twisted",
+              "street_s": 30.066666666665
+            },
+            {
+              "fact": {
+                "actor": "pharmacist",
+                "direction": [
+                  0.0684651732444763,
+                  0.997653484344482
+                ],
+                "event_id": "combat:6:1:pharmacist:5",
+                "kind": "combat_attack_started",
+                "room": "street_twisted",
+                "time": 99.8999999999969
+              },
+              "observed_room": "street_twisted",
+              "street_s": 34.2666666666647
+            },
+            {
+              "fact": {
+                "event_id": "combat:6:1:pharmacist:5:pour",
+                "kind": "street_splash_released",
+                "remaining": 1,
+                "room": "street_twisted",
+                "source": "S3:P1747/S4:T16R5",
+                "time": 100.899999999997
+              },
+              "observed_room": "street_twisted",
+              "street_s": 35.2666666666647
+            },
+            {
+              "fact": {
+                "actor": "supervisor",
+                "direction": [
+                  -0.93054062128067,
+                  -0.366188645362854
+                ],
+                "event_id": "combat:6:1:supervisor:6",
+                "kind": "combat_attack_started",
+                "room": "street_twisted",
+                "time": 107.066666666663
+              },
+              "observed_room": "street_twisted",
+              "street_s": 41.433333333331
+            },
+            {
+              "fact": {
+                "actor": "ward_nurse",
+                "direction": [
+                  0.819748222827911,
+                  -0.572724044322968
+                ],
+                "event_id": "combat:6:1:ward_nurse:7",
+                "kind": "combat_attack_started",
+                "room": "street_twisted",
+                "time": 109.33333333333
+              },
+              "observed_room": "street_twisted",
+              "street_s": 43.6999999999975
+            },
+            {
+              "fact": {
+                "actor": "pharmacist",
+                "direction": [
+                  0.940862655639648,
+                  0.33878830075264
+                ],
+                "event_id": "combat:6:1:pharmacist:8",
+                "kind": "combat_attack_started",
+                "room": "street_twisted",
+                "time": 110.166666666663
+              },
+              "observed_room": "street_twisted",
+              "street_s": 44.5333333333308
+            },
+            {
+              "fact": {
+                "actor": "supervisor",
+                "direction": [
+                  -0.883143186569214,
+                  0.469103544950485
+                ],
+                "event_id": "combat:6:1:supervisor:9",
+                "kind": "combat_attack_started",
+                "room": "street_twisted",
+                "time": 111.066666666663
+              },
+              "observed_room": "street_twisted",
+              "street_s": 45.4333333333308
+            },
+            {
+              "fact": {
+                "event_id": "combat:6:1:pharmacist:8:pour",
+                "kind": "street_splash_released",
+                "remaining": 0,
+                "room": "street_twisted",
+                "source": "S3:P1747/S4:T16R5",
+                "time": 111.166666666663
+              },
+              "observed_room": "street_twisted",
+              "street_s": 45.5333333333307
+            },
+            {
+              "fact": {
+                "actor": "transporter_asylum",
+                "direction": [
+                  0.204346835613251,
+                  0.978899657726288
+                ],
+                "event_id": "street_lateral:1:10",
+                "kind": "combat_attack_started",
+                "room": "street_twisted",
+                "time": 112.099999999996
+              },
+              "observed_room": "street_twisted",
+              "street_s": 46.466666666664
+            }
+          ],
+          "forced_or_pose_displacement_m": 0.0287500154227018,
+          "gripped_s": 0.0,
+          "hostile_visible_s": 19.25,
+          "hostile_windup_or_active_s": 6.5,
+          "left_s": 50.6666666666638,
+          "moving_s": 19.6666666666668,
+          "paused_s": 0.0,
+          "room": "street_twisted",
+          "route_blocked_s": 0.333333333333333,
+          "visible_actors": {
+            "archivist": {
+              "attack": "grab",
+              "first_s": 31.9999999999982,
+              "last_s": 50.3999999999971,
+              "minimum_distance_m": 1.03933393955231,
+              "relation": "enemy",
+              "visible_s": 17.5
+            },
+            "assistant_asylum": {
+              "attack": "restraint",
+              "first_s": 33.8666666666647,
+              "last_s": 45.5999999999974,
+              "minimum_distance_m": 4.21859788894653,
+              "relation": "enemy",
+              "visible_s": 3.75
+            },
+            "dislocated": {
+              "attack": "grab",
+              "first_s": 44.5333333333308,
+              "last_s": 44.7999999999975,
+              "minimum_distance_m": 4.88806486129761,
+              "relation": "enemy",
+              "visible_s": 0.5
+            },
+            "double_face": {
+              "attack": "watch",
+              "first_s": 35.4666666666647,
+              "last_s": 40.533333333331,
+              "minimum_distance_m": 4.00233554840088,
+              "relation": "neutral",
+              "visible_s": 5.0
+            },
+            "pharmacist": {
+              "attack": "splash",
+              "first_s": 31.9999999999982,
+              "last_s": 47.7333333333306,
+              "minimum_distance_m": 1.99090027809143,
+              "relation": "enemy",
+              "visible_s": 15.0
+            },
+            "reverse": {
+              "attack": "charge",
+              "first_s": 30.1333333333316,
+              "last_s": 50.3999999999971,
+              "minimum_distance_m": 1.83637011051178,
+              "relation": "enemy",
+              "visible_s": 18.0
+            },
+            "speaker": {
+              "attack": "",
+              "first_s": 39.7333333333311,
+              "last_s": 50.3999999999971,
+              "minimum_distance_m": 0.974143028259277,
+              "relation": "friend",
+              "visible_s": 10.25
+            },
+            "supervisor": {
+              "attack": "grab",
+              "first_s": 39.4666666666644,
+              "last_s": 50.3999999999971,
+              "minimum_distance_m": 0.478698015213013,
+              "relation": "enemy",
+              "visible_s": 10.5
+            },
+            "transporter_asylum": {
+              "attack": "lateral_bed",
+              "first_s": 39.7333333333311,
+              "last_s": 50.3999999999971,
+              "minimum_distance_m": 1.33781945705414,
+              "relation": "enemy",
+              "visible_s": 10.25
+            },
+            "triage": {
+              "attack": "",
+              "first_s": 30.1333333333316,
+              "last_s": 34.6666666666647,
+              "minimum_distance_m": 4.00170087814331,
+              "relation": "neutral",
+              "visible_s": 4.5
+            },
+            "ward_nurse": {
+              "attack": "drug",
+              "first_s": 34.9333333333313,
+              "last_s": 50.3999999999971,
+              "minimum_distance_m": 0.707519888877869,
+              "relation": "enemy",
+              "visible_s": 14.75
+            }
+          },
+          "walking_m": 22.1559328902513
+        }
+      ]
+    },
+    {
+      "actually_visited": false,
+      "branch": true,
+      "configured_actors": [
+        {
+          "attack": "guard",
+          "id": "dog",
+          "relation": "friend"
+        },
+        {
+          "attack": "cart",
+          "id": "faceless",
+          "relation": "friend"
+        },
+        {
+          "attack": "",
+          "id": "treatment_pharmacist",
+          "relation": "neutral"
+        },
+        {
+          "attack": "",
+          "id": "cleaner",
+          "relation": "neutral"
+        },
+        {
+          "attack": "",
+          "id": "labor",
+          "relation": "friend"
+        },
+        {
+          "attack": "grab",
+          "id": "stitched",
+          "relation": "enemy"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 4.0)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 4.0)",
+          "threshold": "(0.25, 4.0)",
+          "toward": "street_twisted",
+          "wall": "west",
+          "wall_point": "(0.0, 4.0)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_maintenance",
+      "size_m": [
+        12.0,
+        8.0
+      ],
+      "static_portal_routes": [],
+      "visits": []
+    },
+    {
+      "actually_visited": true,
+      "branch": false,
+      "configured_actors": [
+        {
+          "attack": "grab",
+          "id": "mother",
+          "relation": "enemy"
+        },
+        {
+          "attack": "sweep",
+          "id": "doctor",
+          "relation": "enemy"
+        },
+        {
+          "attack": "charge",
+          "id": "assistant",
+          "relation": "enemy"
+        },
+        {
+          "attack": "sweep",
+          "id": "double_head",
+          "relation": "neutral"
+        },
+        {
+          "attack": "drag",
+          "id": "psychiatrist",
+          "relation": "enemy"
+        },
+        {
+          "attack": "short_charge",
+          "id": "guard_asylum",
+          "relation": "enemy"
+        },
+        {
+          "attack": "restraint",
+          "id": "director",
+          "relation": "enemy"
+        },
+        {
+          "attack": "",
+          "id": "blind",
+          "relation": "neutral"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 6.0)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 6.0)",
+          "threshold": "(0.25, 6.0)",
+          "toward": "street_twisted",
+          "wall": "west",
+          "wall_point": "(0.0, 6.0)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(16.52, 6.0)",
+          "height_m": 2.2,
+          "inward": "(-1.0, 0.0)",
+          "landing": "(16.14, 6.0)",
+          "threshold": "(16.75, 6.0)",
+          "toward": "street_end",
+          "wall": "east",
+          "wall_point": "(17.0, 6.0)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_node",
+      "size_m": [
+        17.0,
+        12.0
+      ],
+      "static_portal_routes": [
+        {
+          "from": "street_twisted",
+          "route_points": 4,
+          "static_route_m": 16.4389510154724,
+          "toward": "street_end"
+        }
+      ],
+      "visits": [
+        {
+          "active_s": 17.7666666666667,
+          "actual_actor_hits": [],
+          "actual_hero_hits": [
+            {
+              "fact": {
+                "event_id": "combat:6:1:assistant:13",
+                "hp_damage": 20,
+                "kind": "combat_hit",
+                "room": "street_node",
+                "source": "assistant",
+                "sp_damage": 0,
+                "time": 123.966666666662
+              },
+              "observed_room": "street_node",
+              "street_s": 58.33333333333
+            }
+          ],
+          "availability_reasons_s": {
+            "SKIN:available": 16.5,
+            "SKIN:body_unavailable": 0.25
+          },
+          "available_skill_s": {
+            "SKIN": 16.5
+          },
+          "body_busy_s": 0.266666666666667,
+          "damage_to_hero_hp": 20,
+          "damage_to_hero_sp": 0,
+          "distance_m": 17.1120898965746,
+          "door_intent_s": 0.8,
+          "elapsed_s": 17.7666666666657,
+          "entered_s": 50.6666666666638,
+          "entry_clusters": 7,
+          "entry_hp": 85,
+          "entry_neurons": 23,
+          "exit_hp": 65,
+          "exit_neurons": 24,
+          "facts": [
+            {
+              "fact": {
+                "event_id": "explored:6:street_node",
+                "kind": "scene_first_explored",
+                "level": 6,
+                "neurons": 1,
+                "room": "street_node",
+                "time": 116.299999999996
+              },
+              "observed_room": "street_node",
+              "street_s": 50.6666666666638
+            },
+            {
+              "fact": {
+                "actor": "psychiatrist",
+                "direction": [
+                  0.380263566970825,
+                  0.924878180027008
+                ],
+                "event_id": "combat:6:1:psychiatrist:12",
+                "kind": "combat_attack_started",
+                "room": "street_node",
+                "time": 121.299999999996
+              },
+              "observed_room": "street_node",
+              "street_s": 55.6666666666635
+            },
+            {
+              "fact": {
+                "actor": "assistant",
+                "direction": [
+                  -0.80357700586319,
+                  0.595200777053833
+                ],
+                "event_id": "combat:6:1:assistant:13",
+                "kind": "combat_attack_started",
+                "room": "street_node",
+                "time": 122.733333333329
+              },
+              "observed_room": "street_node",
+              "street_s": 57.0999999999968
+            },
+            {
+              "fact": {
+                "event_id": "combat:6:1:assistant:13",
+                "hp_damage": 20,
+                "kind": "combat_hit",
+                "room": "street_node",
+                "source": "assistant",
+                "sp_damage": 0,
+                "time": 123.966666666662
+              },
+              "observed_room": "street_node",
+              "street_s": 58.33333333333
+            },
+            {
+              "fact": {
+                "event_id": "bed_travel:1:13:cannot_fit_retreat",
+                "kind": "street_bed_travel_finished",
+                "reason": "cannot_fit_retreat",
+                "room": "street_twisted",
+                "time": 126.399999999995,
+                "to": "street_node"
+              },
+              "observed_room": "street_node",
+              "street_s": 60.7666666666632
+            },
+            {
+              "fact": {
+                "actor": "director",
+                "direction": [
+                  -0.976134181022644,
+                  0.217168301343918
+                ],
+                "event_id": "combat:6:1:director:14",
+                "kind": "combat_attack_started",
+                "room": "street_node",
+                "time": 127.466666666662
+              },
+              "observed_room": "street_node",
+              "street_s": 61.8333333333298
+            }
+          ],
+          "forced_or_pose_displacement_m": 0.0772350765764713,
+          "gripped_s": 0.0,
+          "hostile_visible_s": 16.75,
+          "hostile_windup_or_active_s": 3.25,
+          "left_s": 68.4333333333295,
+          "moving_s": 15.8,
+          "paused_s": 0.0,
+          "room": "street_node",
+          "route_blocked_s": 0.3,
+          "visible_actors": {
+            "archivist": {
+              "attack": "grab",
+              "first_s": 55.7333333333302,
+              "last_s": 59.4666666666633,
+              "minimum_distance_m": 4.3286714553833,
+              "relation": "enemy",
+              "visible_s": 2.5
+            },
+            "assistant": {
+              "attack": "charge",
+              "first_s": 55.7333333333302,
+              "last_s": 68.2666666666628,
+              "minimum_distance_m": 1.76271569728851,
+              "relation": "enemy",
+              "visible_s": 12.0
+            },
+            "blind": {
+              "attack": "",
+              "first_s": 60.5333333333299,
+              "last_s": 68.2666666666628,
+              "minimum_distance_m": 0.464526444673538,
+              "relation": "neutral",
+              "visible_s": 5.75
+            },
+            "director": {
+              "attack": "restraint",
+              "first_s": 59.7333333333299,
+              "last_s": 68.2666666666628,
+              "minimum_distance_m": 0.483102321624756,
+              "relation": "enemy",
+              "visible_s": 8.25
+            },
+            "doctor": {
+              "attack": "sweep",
+              "first_s": 52.799999999997,
+              "last_s": 58.6666666666633,
+              "minimum_distance_m": 1.47738289833069,
+              "relation": "enemy",
+              "visible_s": 5.75
+            },
+            "double_head": {
+              "attack": "sweep",
+              "first_s": 50.6666666666638,
+              "last_s": 55.4666666666635,
+              "minimum_distance_m": 4.00085067749023,
+              "relation": "neutral",
+              "visible_s": 4.75
+            },
+            "guard_asylum": {
+              "attack": "short_charge",
+              "first_s": 62.1333333333298,
+              "last_s": 68.2666666666628,
+              "minimum_distance_m": 3.21027183532715,
+              "relation": "enemy",
+              "visible_s": 6.0
+            },
+            "mother": {
+              "attack": "grab",
+              "first_s": 50.6666666666638,
+              "last_s": 65.5999999999963,
+              "minimum_distance_m": 1.23581552505493,
+              "relation": "enemy",
+              "visible_s": 12.5
+            },
+            "psychiatrist": {
+              "attack": "drag",
+              "first_s": 52.799999999997,
+              "last_s": 68.2666666666628,
+              "minimum_distance_m": 0.966599881649017,
+              "relation": "enemy",
+              "visible_s": 14.75
+            },
+            "supervisor": {
+              "attack": "grab",
+              "first_s": 52.5333333333303,
+              "last_s": 65.5999999999963,
+              "minimum_distance_m": 1.66552400588989,
+              "relation": "enemy",
+              "visible_s": 10.0
+            },
+            "ward_nurse": {
+              "attack": "drug",
+              "first_s": 55.1999999999969,
+              "last_s": 59.4666666666633,
+              "minimum_distance_m": 3.85740566253662,
+              "relation": "enemy",
+              "visible_s": 4.25
+            }
+          },
+          "walking_m": 17.0348548199981
+        }
+      ]
+    },
+    {
+      "actually_visited": true,
+      "branch": false,
+      "configured_actors": [
+        {
+          "attack": "sweep",
+          "id": "skinface",
+          "relation": "enemy"
+        },
+        {
+          "attack": "grab",
+          "id": "self",
+          "relation": "enemy"
+        },
+        {
+          "attack": "push",
+          "id": "guard_hospital",
+          "relation": "enemy"
+        },
+        {
+          "attack": "sweep",
+          "id": "archivist_asylum",
+          "relation": "enemy"
+        },
+        {
+          "attack": "",
+          "id": "informant",
+          "relation": "neutral"
+        },
+        {
+          "attack": "",
+          "id": "mimic",
+          "relation": "neutral"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 5.5)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 5.5)",
+          "threshold": "(0.25, 5.5)",
+          "toward": "street_node",
+          "wall": "west",
+          "wall_point": "(0.0, 5.5)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(15.52, 5.5)",
+          "height_m": 2.2,
+          "inward": "(-1.0, 0.0)",
+          "landing": "(15.14, 5.5)",
+          "threshold": "(15.75, 5.5)",
+          "toward": "ending_gate",
+          "wall": "east",
+          "wall_point": "(16.0, 5.5)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_end",
+      "size_m": [
+        16.0,
+        11.0
+      ],
+      "static_portal_routes": [
+        {
+          "from": "street_node",
+          "route_points": 2,
+          "static_route_m": 14.8900003433228,
+          "toward": "ending_gate"
+        }
+      ],
+      "visits": [
+        {
+          "active_s": 13.5333333333333,
+          "actual_actor_hits": [],
+          "actual_hero_hits": [],
+          "availability_reasons_s": {
+            "SKIN:available": 12.75
+          },
+          "available_skill_s": {
+            "SKIN": 12.75
+          },
+          "body_busy_s": 0.0,
+          "damage_to_hero_hp": 0,
+          "damage_to_hero_sp": 0,
+          "distance_m": 14.8351122140884,
+          "door_intent_s": 0.8,
+          "elapsed_s": 13.4999999999992,
+          "entered_s": 68.4333333333295,
+          "entry_clusters": 7,
+          "entry_hp": 65,
+          "entry_neurons": 24,
+          "exit_hp": 65,
+          "exit_neurons": 24,
+          "facts": [
+            {
+              "fact": {
+                "event_id": "explored:6:street_end",
+                "kind": "scene_first_explored",
+                "level": 6,
+                "neurons": 1,
+                "room": "street_end",
+                "time": 134.066666666662
+              },
+              "observed_room": "street_end",
+              "street_s": 68.4333333333295
+            },
+            {
+              "fact": {
+                "actor": "informant",
+                "at": [
+                  1.93333256244659,
+                  5.4998517036438
+                ],
+                "event_id": "street_report:1:informant:1",
+                "kind": "street_report_received",
+                "receivers": [
+                  "guard_hospital"
+                ],
+                "room": "street_end",
+                "source": "S3:P1621/P1908–1910",
+                "time": 135.999999999995,
+                "witnessed": false
+              },
+              "observed_room": "street_end",
+              "street_s": 70.3666666666627
+            }
+          ],
+          "forced_or_pose_displacement_m": 0.0287504196166992,
+          "gripped_s": 0.0,
+          "hostile_visible_s": 12.75,
+          "hostile_windup_or_active_s": 0.0,
+          "left_s": 81.9333333333287,
+          "moving_s": 12.9333333333333,
+          "paused_s": 0.0,
+          "room": "street_end",
+          "route_blocked_s": 0.0,
+          "visible_actors": {
+            "archivist_asylum": {
+              "attack": "sweep",
+              "first_s": 68.5333333333295,
+              "last_s": 81.866666666662,
+              "minimum_distance_m": 1.637002825737,
+              "relation": "enemy",
+              "visible_s": 12.75
+            },
+            "guard_hospital": {
+              "attack": "push",
+              "first_s": 71.9999999999959,
+              "last_s": 81.866666666662,
+              "minimum_distance_m": 1.14642369747162,
+              "relation": "enemy",
+              "visible_s": 9.5
+            },
+            "informant": {
+              "attack": "",
+              "first_s": 70.6666666666627,
+              "last_s": 76.533333333329,
+              "minimum_distance_m": 3.49991273880005,
+              "relation": "neutral",
+              "visible_s": 5.75
+            },
+            "mimic": {
+              "attack": "",
+              "first_s": 73.3333333333292,
+              "last_s": 79.4666666666622,
+              "minimum_distance_m": 3.30267429351807,
+              "relation": "neutral",
+              "visible_s": 6.0
+            },
+            "self": {
+              "attack": "grab",
+              "first_s": 69.8666666666627,
+              "last_s": 81.866666666662,
+              "minimum_distance_m": 1.22194218635559,
+              "relation": "enemy",
+              "visible_s": 11.5
+            },
+            "skinface": {
+              "attack": "sweep",
+              "first_s": 68.5333333333295,
+              "last_s": 81.866666666662,
+              "minimum_distance_m": 1.76015686988831,
+              "relation": "enemy",
+              "visible_s": 12.75
+            }
+          },
+          "walking_m": 14.8063617944717
+        }
+      ]
+    }
+  ],
+  "clusters": 7,
+  "elapsed_simulation_s": 147.599999999994,
+  "ending": {
+    "complete": false,
+    "dialogue_sent": false,
+    "elapsed": 0.0,
+    "id": "E2",
+    "phase": "registration",
+    "receipt": "ending:E2:2cfd083552296d3f8f0b536c1c8f88c44592aed41a82f29a4a2a3d5faac00923"
+  },
+  "entry_fixture": "L5_atrium",
+  "events": [
+    {
+      "clusters": 7,
+      "control_ms": 0,
+      "destination": "",
+      "door_left_s": -1.0,
+      "elapsed_s": 65.6666666666655,
+      "ending": {},
+      "gripped": false,
+      "hp": 85,
+      "level": 6,
+      "neurons": 20,
+      "paused": false,
+      "pos_m": [
+        1.29999995231628,
+        5.5
+      ],
+      "pose": "idle",
+      "room": "street_plaza",
+      "route_points": 0,
+      "sp": 100,
+      "street_clock_s": 0.0,
+      "street_s": 0.0,
+      "world_s": 65.6333333333322
+    },
+    {
+      "fact": {
+        "actor": "head_nurse",
+        "event_id": "street_report:1:head_nurse:1:knock",
+        "heard_by": [
+          "transporter_hospital"
+        ],
+        "kind": "street_board_knocked",
+        "room": "street_plaza",
+        "source": "S3:P1620–1621",
+        "time": 66.4666666666655
+      },
+      "observed_room": "street_plaza",
+      "street_s": 0.833333333333286
+    },
+    {
+      "fact": {
+        "actor": "head_nurse",
+        "at": [
+          2.32624936103821,
+          5.5
+        ],
+        "event_id": "street_report:1:head_nurse:1",
+        "kind": "street_report_received",
+        "receivers": [
+          "transporter_hospital"
+        ],
+        "room": "street_plaza",
+        "source": "S3:P1621/P1908–1910",
+        "time": 67.1999999999988,
+        "witnessed": false
+      },
+      "observed_room": "street_plaza",
+      "street_s": 1.56666666666658
+    },
+    {
+      "fact": {
+        "actor": "warder",
+        "direction": [
+          -0.334692150354385,
+          -0.942327499389648
+        ],
+        "event_id": "combat:6:1:warder:1",
+        "kind": "combat_attack_started",
+        "room": "street_plaza",
+        "time": 68.8999999999987
+      },
+      "observed_room": "street_plaza",
+      "street_s": 3.26666666666648
+    },
+    {
+      "clusters": 7,
+      "control_ms": 0,
+      "destination": "",
+      "door_left_s": -1.0,
+      "elapsed_s": 80.4666666666647,
+      "ending": {},
+      "gripped": false,
+      "hp": 85,
+      "level": 6,
+      "neurons": 21,
+      "paused": false,
+      "pos_m": [
+        0.860000014305115,
+        4.00028467178345
+      ],
+      "pose": "idle",
+      "room": "street_narrow",
+      "route_points": 0,
+      "sp": 100,
+      "street_clock_s": 14.8,
+      "street_s": 14.7999999999992,
+      "world_s": 80.4333333333313
+    },
+    {
+      "fact": {
+        "event_id": "explored:6:street_narrow",
+        "kind": "scene_first_explored",
+        "level": 6,
+        "neurons": 1,
+        "room": "street_narrow",
+        "time": 80.4333333333313
+      },
+      "observed_room": "street_narrow",
+      "street_s": 14.7999999999992
+    },
+    {
+      "fact": {
+        "actor": "dislocated",
+        "direction": [
+          -0.687510132789612,
+          0.726174831390381
+        ],
+        "event_id": "combat:6:1:dislocated:2",
+        "kind": "combat_attack_started",
+        "room": "street_narrow",
+        "time": 83.1999999999978
+      },
+      "observed_room": "street_narrow",
+      "street_s": 17.5666666666657
+    },
+    {
+      "fact": {
+        "actor": "twitch",
+        "direction": [
+          0.210453480482101,
+          -0.977603852748871
+        ],
+        "event_id": "combat:6:1:twitch:3",
+        "kind": "combat_attack_started",
+        "room": "street_narrow",
+        "time": 83.9999999999978
+      },
+      "observed_room": "street_narrow",
+      "street_s": 18.3666666666656
+    },
+    {
+      "fact": {
+        "actor": "assistant_asylum",
+        "direction": [
+          -0.348444283008575,
+          0.937329530715942
+        ],
+        "event_id": "combat:6:1:assistant_asylum:4",
+        "kind": "combat_attack_started",
+        "room": "street_narrow",
+        "time": 86.6999999999976
+      },
+      "observed_room": "street_narrow",
+      "street_s": 21.0666666666655
+    },
+    {
+      "clusters": 7,
+      "control_ms": 0,
+      "destination": "",
+      "door_left_s": -1.0,
+      "elapsed_s": 95.7333333333305,
+      "ending": {},
+      "gripped": false,
+      "hp": 85,
+      "level": 6,
+      "neurons": 22,
+      "paused": false,
+      "pos_m": [
+        0.860000014305115,
+        6.00000047683716
+      ],
+      "pose": "idle",
+      "room": "street_twisted",
+      "route_points": 0,
+      "sp": 100,
+      "street_clock_s": 30.0666666666673,
+      "street_s": 30.066666666665,
+      "world_s": 95.6999999999971
+    },
+    {
+      "fact": {
+        "event_id": "explored:6:street_twisted",
+        "kind": "scene_first_explored",
+        "level": 6,
+        "neurons": 1,
+        "room": "street_twisted",
+        "time": 95.6999999999971
+      },
+      "observed_room": "street_twisted",
+      "street_s": 30.066666666665
+    },
+    {
+      "fact": {
+        "actor": "pharmacist",
+        "direction": [
+          0.0684651732444763,
+          0.997653484344482
+        ],
+        "event_id": "combat:6:1:pharmacist:5",
+        "kind": "combat_attack_started",
+        "room": "street_twisted",
+        "time": 99.8999999999969
+      },
+      "observed_room": "street_twisted",
+      "street_s": 34.2666666666647
+    },
+    {
+      "fact": {
+        "event_id": "combat:6:1:pharmacist:5:pour",
+        "kind": "street_splash_released",
+        "remaining": 1,
+        "room": "street_twisted",
+        "source": "S3:P1747/S4:T16R5",
+        "time": 100.899999999997
+      },
+      "observed_room": "street_twisted",
+      "street_s": 35.2666666666647
+    },
+    {
+      "fact": {
+        "actor": "supervisor",
+        "direction": [
+          -0.93054062128067,
+          -0.366188645362854
+        ],
+        "event_id": "combat:6:1:supervisor:6",
+        "kind": "combat_attack_started",
+        "room": "street_twisted",
+        "time": 107.066666666663
+      },
+      "observed_room": "street_twisted",
+      "street_s": 41.433333333331
+    },
+    {
+      "fact": {
+        "actor": "ward_nurse",
+        "direction": [
+          0.819748222827911,
+          -0.572724044322968
+        ],
+        "event_id": "combat:6:1:ward_nurse:7",
+        "kind": "combat_attack_started",
+        "room": "street_twisted",
+        "time": 109.33333333333
+      },
+      "observed_room": "street_twisted",
+      "street_s": 43.6999999999975
+    },
+    {
+      "fact": {
+        "actor": "pharmacist",
+        "direction": [
+          0.940862655639648,
+          0.33878830075264
+        ],
+        "event_id": "combat:6:1:pharmacist:8",
+        "kind": "combat_attack_started",
+        "room": "street_twisted",
+        "time": 110.166666666663
+      },
+      "observed_room": "street_twisted",
+      "street_s": 44.5333333333308
+    },
+    {
+      "fact": {
+        "actor": "supervisor",
+        "direction": [
+          -0.883143186569214,
+          0.469103544950485
+        ],
+        "event_id": "combat:6:1:supervisor:9",
+        "kind": "combat_attack_started",
+        "room": "street_twisted",
+        "time": 111.066666666663
+      },
+      "observed_room": "street_twisted",
+      "street_s": 45.4333333333308
+    },
+    {
+      "fact": {
+        "event_id": "combat:6:1:pharmacist:8:pour",
+        "kind": "street_splash_released",
+        "remaining": 0,
+        "room": "street_twisted",
+        "source": "S3:P1747/S4:T16R5",
+        "time": 111.166666666663
+      },
+      "observed_room": "street_twisted",
+      "street_s": 45.5333333333307
+    },
+    {
+      "fact": {
+        "actor": "transporter_asylum",
+        "direction": [
+          0.204346835613251,
+          0.978899657726288
+        ],
+        "event_id": "street_lateral:1:10",
+        "kind": "combat_attack_started",
+        "room": "street_twisted",
+        "time": 112.099999999996
+      },
+      "observed_room": "street_twisted",
+      "street_s": 46.466666666664
+    },
+    {
+      "clusters": 7,
+      "control_ms": 0,
+      "destination": "",
+      "door_left_s": -1.0,
+      "elapsed_s": 116.333333333329,
+      "ending": {},
+      "gripped": false,
+      "hp": 85,
+      "level": 6,
+      "neurons": 23,
+      "paused": false,
+      "pos_m": [
+        0.860000014305115,
+        6.00018215179443
+      ],
+      "pose": "idle",
+      "room": "street_node",
+      "route_points": 0,
+      "sp": 100,
+      "street_clock_s": 50.6666666666664,
+      "street_s": 50.6666666666638,
+      "world_s": 116.299999999996
+    },
+    {
+      "fact": {
+        "event_id": "explored:6:street_node",
+        "kind": "scene_first_explored",
+        "level": 6,
+        "neurons": 1,
+        "room": "street_node",
+        "time": 116.299999999996
+      },
+      "observed_room": "street_node",
+      "street_s": 50.6666666666638
+    },
+    {
+      "fact": {
+        "actor": "psychiatrist",
+        "direction": [
+          0.380263566970825,
+          0.924878180027008
+        ],
+        "event_id": "combat:6:1:psychiatrist:12",
+        "kind": "combat_attack_started",
+        "room": "street_node",
+        "time": 121.299999999996
+      },
+      "observed_room": "street_node",
+      "street_s": 55.6666666666635
+    },
+    {
+      "fact": {
+        "actor": "assistant",
+        "direction": [
+          -0.80357700586319,
+          0.595200777053833
+        ],
+        "event_id": "combat:6:1:assistant:13",
+        "kind": "combat_attack_started",
+        "room": "street_node",
+        "time": 122.733333333329
+      },
+      "observed_room": "street_node",
+      "street_s": 57.0999999999968
+    },
+    {
+      "fact": {
+        "event_id": "combat:6:1:assistant:13",
+        "hp_damage": 20,
+        "kind": "combat_hit",
+        "room": "street_node",
+        "source": "assistant",
+        "sp_damage": 0,
+        "time": 123.966666666662
+      },
+      "observed_room": "street_node",
+      "street_s": 58.33333333333
+    },
+    {
+      "fact": {
+        "event_id": "bed_travel:1:13:cannot_fit_retreat",
+        "kind": "street_bed_travel_finished",
+        "reason": "cannot_fit_retreat",
+        "room": "street_twisted",
+        "time": 126.399999999995,
+        "to": "street_node"
+      },
+      "observed_room": "street_node",
+      "street_s": 60.7666666666632
+    },
+    {
+      "fact": {
+        "actor": "director",
+        "direction": [
+          -0.976134181022644,
+          0.217168301343918
+        ],
+        "event_id": "combat:6:1:director:14",
+        "kind": "combat_attack_started",
+        "room": "street_node",
+        "time": 127.466666666662
+      },
+      "observed_room": "street_node",
+      "street_s": 61.8333333333298
+    },
+    {
+      "clusters": 7,
+      "control_ms": 0,
+      "destination": "",
+      "door_left_s": -1.0,
+      "elapsed_s": 134.099999999995,
+      "ending": {},
+      "gripped": false,
+      "hp": 65,
+      "level": 6,
+      "neurons": 24,
+      "paused": false,
+      "pos_m": [
+        0.860000014305115,
+        5.49983835220337
+      ],
+      "pose": "idle",
+      "room": "street_end",
+      "route_points": 0,
+      "sp": 100,
+      "street_clock_s": 68.433333333332,
+      "street_s": 68.4333333333295,
+      "world_s": 134.066666666662
+    },
+    {
+      "fact": {
+        "event_id": "explored:6:street_end",
+        "kind": "scene_first_explored",
+        "level": 6,
+        "neurons": 1,
+        "room": "street_end",
+        "time": 134.066666666662
+      },
+      "observed_room": "street_end",
+      "street_s": 68.4333333333295
+    },
+    {
+      "fact": {
+        "actor": "informant",
+        "at": [
+          1.93333256244659,
+          5.4998517036438
+        ],
+        "event_id": "street_report:1:informant:1",
+        "kind": "street_report_received",
+        "receivers": [
+          "guard_hospital"
+        ],
+        "room": "street_end",
+        "source": "S3:P1621/P1908–1910",
+        "time": 135.999999999995,
+        "witnessed": false
+      },
+      "observed_room": "street_end",
+      "street_s": 70.3666666666627
+    }
+  ],
+  "hp": 65,
+  "interventions_applied": 0,
+  "limitations": [
+    "Declared direct chapter entry does not carry the full L1-L4 earned skill profile.",
+    "Unvisited branches have static portal distances only, not invented natural traversal duration.",
+    "Available skill times are opportunities, not enacted paid interventions.",
+    "No human or subjective audio/art acceptance claimed."
+  ],
+  "max_unexplained_still_s": 0.833333333333333,
+  "neurons": 24,
+  "player_goal": "Prevent the autonomous host escaping. More NPC damage is not automatically greater player difficulty.",
+  "pre_street_s": 65.6666666666655,
+  "reason": "actual_ending_registration",
+  "rendered": true,
+  "rules_unchanged": true,
+  "sampling_interval_s": 0.25,
+  "segments": [
+    {
+      "active_s": 14.8,
+      "actual_actor_hits": [],
+      "actual_hero_hits": [],
+      "availability_reasons_s": {
+        "SKIN:available": 14.0
+      },
+      "available_skill_s": {
+        "SKIN": 14.0
+      },
+      "body_busy_s": 0.0,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "distance_m": 15.6537969205529,
+      "door_intent_s": 0.8,
+      "elapsed_s": 14.7999999999992,
+      "entered_s": 0.0,
+      "entry_clusters": 7,
+      "entry_hp": 85,
+      "entry_neurons": 20,
+      "exit_hp": 85,
+      "exit_neurons": 21,
+      "facts": [
+        {
+          "fact": {
+            "actor": "head_nurse",
+            "event_id": "street_report:1:head_nurse:1:knock",
+            "heard_by": [
+              "transporter_hospital"
+            ],
+            "kind": "street_board_knocked",
+            "room": "street_plaza",
+            "source": "S3:P1620–1621",
+            "time": 66.4666666666655
+          },
+          "observed_room": "street_plaza",
+          "street_s": 0.833333333333286
+        },
+        {
+          "fact": {
+            "actor": "head_nurse",
+            "at": [
+              2.32624936103821,
+              5.5
+            ],
+            "event_id": "street_report:1:head_nurse:1",
+            "kind": "street_report_received",
+            "receivers": [
+              "transporter_hospital"
+            ],
+            "room": "street_plaza",
+            "source": "S3:P1621/P1908–1910",
+            "time": 67.1999999999988,
+            "witnessed": false
+          },
+          "observed_room": "street_plaza",
+          "street_s": 1.56666666666658
+        },
+        {
+          "fact": {
+            "actor": "warder",
+            "direction": [
+              -0.334692150354385,
+              -0.942327499389648
+            ],
+            "event_id": "combat:6:1:warder:1",
+            "kind": "combat_attack_started",
+            "room": "street_plaza",
+            "time": 68.8999999999987
+          },
+          "observed_room": "street_plaza",
+          "street_s": 3.26666666666648
+        }
+      ],
+      "forced_or_pose_displacement_m": 0.0287496112287045,
+      "gripped_s": 0.0,
+      "hostile_visible_s": 14.0,
+      "hostile_windup_or_active_s": 1.0,
+      "left_s": 14.7999999999992,
+      "moving_s": 14.2,
+      "paused_s": 0.0,
+      "room": "street_plaza",
+      "route_blocked_s": 0.0,
+      "visible_actors": {
+        "back": {
+          "attack": "",
+          "first_s": 4.53333333333308,
+          "last_s": 12.5333333333326,
+          "minimum_distance_m": 1.78154098987579,
+          "relation": "neutral",
+          "visible_s": 7.75
+        },
+        "father": {
+          "attack": "sweep",
+          "first_s": 0.0,
+          "last_s": 9.59999999999945,
+          "minimum_distance_m": 1.68570220470428,
+          "relation": "enemy",
+          "visible_s": 8.25
+        },
+        "head_nurse": {
+          "attack": "",
+          "first_s": 2.39999999999986,
+          "last_s": 4.26666666666642,
+          "minimum_distance_m": 4.65239572525024,
+          "relation": "enemy",
+          "visible_s": 2.0
+        },
+        "register_nurse": {
+          "attack": "",
+          "first_s": 0.0,
+          "last_s": 7.19999999999959,
+          "minimum_distance_m": 3.0412323474884,
+          "relation": "neutral",
+          "visible_s": 7.0
+        },
+        "warder": {
+          "attack": "belt",
+          "first_s": 1.06666666666661,
+          "last_s": 14.6666666666658,
+          "minimum_distance_m": 0.813081383705139,
+          "relation": "enemy",
+          "visible_s": 13.0
+        }
+      },
+      "walking_m": 15.6250473093241
+    },
+    {
+      "active_s": 15.2666666666666,
+      "actual_actor_hits": [],
+      "actual_hero_hits": [],
+      "availability_reasons_s": {
+        "SKIN:available": 14.25
+      },
+      "available_skill_s": {
+        "SKIN": 14.25
+      },
+      "body_busy_s": 0.0,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "distance_m": 16.8283907175064,
+      "door_intent_s": 0.8,
+      "elapsed_s": 15.2666666666658,
+      "entered_s": 14.7999999999992,
+      "entry_clusters": 7,
+      "entry_hp": 85,
+      "entry_neurons": 21,
+      "exit_hp": 85,
+      "exit_neurons": 22,
+      "facts": [
+        {
+          "fact": {
+            "event_id": "explored:6:street_narrow",
+            "kind": "scene_first_explored",
+            "level": 6,
+            "neurons": 1,
+            "room": "street_narrow",
+            "time": 80.4333333333313
+          },
+          "observed_room": "street_narrow",
+          "street_s": 14.7999999999992
+        },
+        {
+          "fact": {
+            "actor": "dislocated",
+            "direction": [
+              -0.687510132789612,
+              0.726174831390381
+            ],
+            "event_id": "combat:6:1:dislocated:2",
+            "kind": "combat_attack_started",
+            "room": "street_narrow",
+            "time": 83.1999999999978
+          },
+          "observed_room": "street_narrow",
+          "street_s": 17.5666666666657
+        },
+        {
+          "fact": {
+            "actor": "twitch",
+            "direction": [
+              0.210453480482101,
+              -0.977603852748871
+            ],
+            "event_id": "combat:6:1:twitch:3",
+            "kind": "combat_attack_started",
+            "room": "street_narrow",
+            "time": 83.9999999999978
+          },
+          "observed_room": "street_narrow",
+          "street_s": 18.3666666666656
+        },
+        {
+          "fact": {
+            "actor": "assistant_asylum",
+            "direction": [
+              -0.348444283008575,
+              0.937329530715942
+            ],
+            "event_id": "combat:6:1:assistant_asylum:4",
+            "kind": "combat_attack_started",
+            "room": "street_narrow",
+            "time": 86.6999999999976
+          },
+          "observed_room": "street_narrow",
+          "street_s": 21.0666666666655
+        }
+      ],
+      "forced_or_pose_displacement_m": 0.0287494659423828,
+      "gripped_s": 0.0,
+      "hostile_visible_s": 14.25,
+      "hostile_windup_or_active_s": 3.75,
+      "left_s": 30.066666666665,
+      "moving_s": 14.6666666666666,
+      "paused_s": 0.0,
+      "room": "street_narrow",
+      "route_blocked_s": 0.0,
+      "visible_actors": {
+        "assistant_asylum": {
+          "attack": "restraint",
+          "first_s": 18.399999999999,
+          "last_s": 29.866666666665,
+          "minimum_distance_m": 0.965721547603607,
+          "relation": "enemy",
+          "visible_s": 11.0
+        },
+        "cat": {
+          "attack": "pounce",
+          "first_s": 14.9333333333325,
+          "last_s": 25.8666666666652,
+          "minimum_distance_m": 0.998322129249573,
+          "relation": "enemy",
+          "visible_s": 10.5
+        },
+        "dislocated": {
+          "attack": "grab",
+          "first_s": 15.4666666666658,
+          "last_s": 29.866666666665,
+          "minimum_distance_m": 0.775900959968567,
+          "relation": "enemy",
+          "visible_s": 13.75
+        },
+        "isolation": {
+          "attack": "isolate",
+          "first_s": 14.9333333333325,
+          "last_s": 25.3333333333319,
+          "minimum_distance_m": 0.998050153255463,
+          "relation": "enemy",
+          "visible_s": 10.0
+        },
+        "twitch": {
+          "attack": "charge",
+          "first_s": 15.7333333333324,
+          "last_s": 29.866666666665,
+          "minimum_distance_m": 0.869347095489502,
+          "relation": "enemy",
+          "visible_s": 13.5
+        }
+      },
+      "walking_m": 16.799641251564
+    },
+    {
+      "active_s": 20.6000000000002,
+      "actual_actor_hits": [],
+      "actual_hero_hits": [],
+      "availability_reasons_s": {
+        "SKIN:available": 19.25
+      },
+      "available_skill_s": {
+        "SKIN": 19.25
+      },
+      "body_busy_s": 0.0,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "distance_m": 22.184682905674,
+      "door_intent_s": 0.8,
+      "elapsed_s": 20.5999999999988,
+      "entered_s": 30.066666666665,
+      "entry_clusters": 7,
+      "entry_hp": 85,
+      "entry_neurons": 22,
+      "exit_hp": 85,
+      "exit_neurons": 23,
+      "facts": [
+        {
+          "fact": {
+            "event_id": "explored:6:street_twisted",
+            "kind": "scene_first_explored",
+            "level": 6,
+            "neurons": 1,
+            "room": "street_twisted",
+            "time": 95.6999999999971
+          },
+          "observed_room": "street_twisted",
+          "street_s": 30.066666666665
+        },
+        {
+          "fact": {
+            "actor": "pharmacist",
+            "direction": [
+              0.0684651732444763,
+              0.997653484344482
+            ],
+            "event_id": "combat:6:1:pharmacist:5",
+            "kind": "combat_attack_started",
+            "room": "street_twisted",
+            "time": 99.8999999999969
+          },
+          "observed_room": "street_twisted",
+          "street_s": 34.2666666666647
+        },
+        {
+          "fact": {
+            "event_id": "combat:6:1:pharmacist:5:pour",
+            "kind": "street_splash_released",
+            "remaining": 1,
+            "room": "street_twisted",
+            "source": "S3:P1747/S4:T16R5",
+            "time": 100.899999999997
+          },
+          "observed_room": "street_twisted",
+          "street_s": 35.2666666666647
+        },
+        {
+          "fact": {
+            "actor": "supervisor",
+            "direction": [
+              -0.93054062128067,
+              -0.366188645362854
+            ],
+            "event_id": "combat:6:1:supervisor:6",
+            "kind": "combat_attack_started",
+            "room": "street_twisted",
+            "time": 107.066666666663
+          },
+          "observed_room": "street_twisted",
+          "street_s": 41.433333333331
+        },
+        {
+          "fact": {
+            "actor": "ward_nurse",
+            "direction": [
+              0.819748222827911,
+              -0.572724044322968
+            ],
+            "event_id": "combat:6:1:ward_nurse:7",
+            "kind": "combat_attack_started",
+            "room": "street_twisted",
+            "time": 109.33333333333
+          },
+          "observed_room": "street_twisted",
+          "street_s": 43.6999999999975
+        },
+        {
+          "fact": {
+            "actor": "pharmacist",
+            "direction": [
+              0.940862655639648,
+              0.33878830075264
+            ],
+            "event_id": "combat:6:1:pharmacist:8",
+            "kind": "combat_attack_started",
+            "room": "street_twisted",
+            "time": 110.166666666663
+          },
+          "observed_room": "street_twisted",
+          "street_s": 44.5333333333308
+        },
+        {
+          "fact": {
+            "actor": "supervisor",
+            "direction": [
+              -0.883143186569214,
+              0.469103544950485
+            ],
+            "event_id": "combat:6:1:supervisor:9",
+            "kind": "combat_attack_started",
+            "room": "street_twisted",
+            "time": 111.066666666663
+          },
+          "observed_room": "street_twisted",
+          "street_s": 45.4333333333308
+        },
+        {
+          "fact": {
+            "event_id": "combat:6:1:pharmacist:8:pour",
+            "kind": "street_splash_released",
+            "remaining": 0,
+            "room": "street_twisted",
+            "source": "S3:P1747/S4:T16R5",
+            "time": 111.166666666663
+          },
+          "observed_room": "street_twisted",
+          "street_s": 45.5333333333307
+        },
+        {
+          "fact": {
+            "actor": "transporter_asylum",
+            "direction": [
+              0.204346835613251,
+              0.978899657726288
+            ],
+            "event_id": "street_lateral:1:10",
+            "kind": "combat_attack_started",
+            "room": "street_twisted",
+            "time": 112.099999999996
+          },
+          "observed_room": "street_twisted",
+          "street_s": 46.466666666664
+        }
+      ],
+      "forced_or_pose_displacement_m": 0.0287500154227018,
+      "gripped_s": 0.0,
+      "hostile_visible_s": 19.25,
+      "hostile_windup_or_active_s": 6.5,
+      "left_s": 50.6666666666638,
+      "moving_s": 19.6666666666668,
+      "paused_s": 0.0,
+      "room": "street_twisted",
+      "route_blocked_s": 0.333333333333333,
+      "visible_actors": {
+        "archivist": {
+          "attack": "grab",
+          "first_s": 31.9999999999982,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 1.03933393955231,
+          "relation": "enemy",
+          "visible_s": 17.5
+        },
+        "assistant_asylum": {
+          "attack": "restraint",
+          "first_s": 33.8666666666647,
+          "last_s": 45.5999999999974,
+          "minimum_distance_m": 4.21859788894653,
+          "relation": "enemy",
+          "visible_s": 3.75
+        },
+        "dislocated": {
+          "attack": "grab",
+          "first_s": 44.5333333333308,
+          "last_s": 44.7999999999975,
+          "minimum_distance_m": 4.88806486129761,
+          "relation": "enemy",
+          "visible_s": 0.5
+        },
+        "double_face": {
+          "attack": "watch",
+          "first_s": 35.4666666666647,
+          "last_s": 40.533333333331,
+          "minimum_distance_m": 4.00233554840088,
+          "relation": "neutral",
+          "visible_s": 5.0
+        },
+        "pharmacist": {
+          "attack": "splash",
+          "first_s": 31.9999999999982,
+          "last_s": 47.7333333333306,
+          "minimum_distance_m": 1.99090027809143,
+          "relation": "enemy",
+          "visible_s": 15.0
+        },
+        "reverse": {
+          "attack": "charge",
+          "first_s": 30.1333333333316,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 1.83637011051178,
+          "relation": "enemy",
+          "visible_s": 18.0
+        },
+        "speaker": {
+          "attack": "",
+          "first_s": 39.7333333333311,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 0.974143028259277,
+          "relation": "friend",
+          "visible_s": 10.25
+        },
+        "supervisor": {
+          "attack": "grab",
+          "first_s": 39.4666666666644,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 0.478698015213013,
+          "relation": "enemy",
+          "visible_s": 10.5
+        },
+        "transporter_asylum": {
+          "attack": "lateral_bed",
+          "first_s": 39.7333333333311,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 1.33781945705414,
+          "relation": "enemy",
+          "visible_s": 10.25
+        },
+        "triage": {
+          "attack": "",
+          "first_s": 30.1333333333316,
+          "last_s": 34.6666666666647,
+          "minimum_distance_m": 4.00170087814331,
+          "relation": "neutral",
+          "visible_s": 4.5
+        },
+        "ward_nurse": {
+          "attack": "drug",
+          "first_s": 34.9333333333313,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 0.707519888877869,
+          "relation": "enemy",
+          "visible_s": 14.75
+        }
+      },
+      "walking_m": 22.1559328902513
+    },
+    {
+      "active_s": 17.7666666666667,
+      "actual_actor_hits": [],
+      "actual_hero_hits": [
+        {
+          "fact": {
+            "event_id": "combat:6:1:assistant:13",
+            "hp_damage": 20,
+            "kind": "combat_hit",
+            "room": "street_node",
+            "source": "assistant",
+            "sp_damage": 0,
+            "time": 123.966666666662
+          },
+          "observed_room": "street_node",
+          "street_s": 58.33333333333
+        }
+      ],
+      "availability_reasons_s": {
+        "SKIN:available": 16.5,
+        "SKIN:body_unavailable": 0.25
+      },
+      "available_skill_s": {
+        "SKIN": 16.5
+      },
+      "body_busy_s": 0.266666666666667,
+      "damage_to_hero_hp": 20,
+      "damage_to_hero_sp": 0,
+      "distance_m": 17.1120898965746,
+      "door_intent_s": 0.8,
+      "elapsed_s": 17.7666666666657,
+      "entered_s": 50.6666666666638,
+      "entry_clusters": 7,
+      "entry_hp": 85,
+      "entry_neurons": 23,
+      "exit_hp": 65,
+      "exit_neurons": 24,
+      "facts": [
+        {
+          "fact": {
+            "event_id": "explored:6:street_node",
+            "kind": "scene_first_explored",
+            "level": 6,
+            "neurons": 1,
+            "room": "street_node",
+            "time": 116.299999999996
+          },
+          "observed_room": "street_node",
+          "street_s": 50.6666666666638
+        },
+        {
+          "fact": {
+            "actor": "psychiatrist",
+            "direction": [
+              0.380263566970825,
+              0.924878180027008
+            ],
+            "event_id": "combat:6:1:psychiatrist:12",
+            "kind": "combat_attack_started",
+            "room": "street_node",
+            "time": 121.299999999996
+          },
+          "observed_room": "street_node",
+          "street_s": 55.6666666666635
+        },
+        {
+          "fact": {
+            "actor": "assistant",
+            "direction": [
+              -0.80357700586319,
+              0.595200777053833
+            ],
+            "event_id": "combat:6:1:assistant:13",
+            "kind": "combat_attack_started",
+            "room": "street_node",
+            "time": 122.733333333329
+          },
+          "observed_room": "street_node",
+          "street_s": 57.0999999999968
+        },
+        {
+          "fact": {
+            "event_id": "combat:6:1:assistant:13",
+            "hp_damage": 20,
+            "kind": "combat_hit",
+            "room": "street_node",
+            "source": "assistant",
+            "sp_damage": 0,
+            "time": 123.966666666662
+          },
+          "observed_room": "street_node",
+          "street_s": 58.33333333333
+        },
+        {
+          "fact": {
+            "event_id": "bed_travel:1:13:cannot_fit_retreat",
+            "kind": "street_bed_travel_finished",
+            "reason": "cannot_fit_retreat",
+            "room": "street_twisted",
+            "time": 126.399999999995,
+            "to": "street_node"
+          },
+          "observed_room": "street_node",
+          "street_s": 60.7666666666632
+        },
+        {
+          "fact": {
+            "actor": "director",
+            "direction": [
+              -0.976134181022644,
+              0.217168301343918
+            ],
+            "event_id": "combat:6:1:director:14",
+            "kind": "combat_attack_started",
+            "room": "street_node",
+            "time": 127.466666666662
+          },
+          "observed_room": "street_node",
+          "street_s": 61.8333333333298
+        }
+      ],
+      "forced_or_pose_displacement_m": 0.0772350765764713,
+      "gripped_s": 0.0,
+      "hostile_visible_s": 16.75,
+      "hostile_windup_or_active_s": 3.25,
+      "left_s": 68.4333333333295,
+      "moving_s": 15.8,
+      "paused_s": 0.0,
+      "room": "street_node",
+      "route_blocked_s": 0.3,
+      "visible_actors": {
+        "archivist": {
+          "attack": "grab",
+          "first_s": 55.7333333333302,
+          "last_s": 59.4666666666633,
+          "minimum_distance_m": 4.3286714553833,
+          "relation": "enemy",
+          "visible_s": 2.5
+        },
+        "assistant": {
+          "attack": "charge",
+          "first_s": 55.7333333333302,
+          "last_s": 68.2666666666628,
+          "minimum_distance_m": 1.76271569728851,
+          "relation": "enemy",
+          "visible_s": 12.0
+        },
+        "blind": {
+          "attack": "",
+          "first_s": 60.5333333333299,
+          "last_s": 68.2666666666628,
+          "minimum_distance_m": 0.464526444673538,
+          "relation": "neutral",
+          "visible_s": 5.75
+        },
+        "director": {
+          "attack": "restraint",
+          "first_s": 59.7333333333299,
+          "last_s": 68.2666666666628,
+          "minimum_distance_m": 0.483102321624756,
+          "relation": "enemy",
+          "visible_s": 8.25
+        },
+        "doctor": {
+          "attack": "sweep",
+          "first_s": 52.799999999997,
+          "last_s": 58.6666666666633,
+          "minimum_distance_m": 1.47738289833069,
+          "relation": "enemy",
+          "visible_s": 5.75
+        },
+        "double_head": {
+          "attack": "sweep",
+          "first_s": 50.6666666666638,
+          "last_s": 55.4666666666635,
+          "minimum_distance_m": 4.00085067749023,
+          "relation": "neutral",
+          "visible_s": 4.75
+        },
+        "guard_asylum": {
+          "attack": "short_charge",
+          "first_s": 62.1333333333298,
+          "last_s": 68.2666666666628,
+          "minimum_distance_m": 3.21027183532715,
+          "relation": "enemy",
+          "visible_s": 6.0
+        },
+        "mother": {
+          "attack": "grab",
+          "first_s": 50.6666666666638,
+          "last_s": 65.5999999999963,
+          "minimum_distance_m": 1.23581552505493,
+          "relation": "enemy",
+          "visible_s": 12.5
+        },
+        "psychiatrist": {
+          "attack": "drag",
+          "first_s": 52.799999999997,
+          "last_s": 68.2666666666628,
+          "minimum_distance_m": 0.966599881649017,
+          "relation": "enemy",
+          "visible_s": 14.75
+        },
+        "supervisor": {
+          "attack": "grab",
+          "first_s": 52.5333333333303,
+          "last_s": 65.5999999999963,
+          "minimum_distance_m": 1.66552400588989,
+          "relation": "enemy",
+          "visible_s": 10.0
+        },
+        "ward_nurse": {
+          "attack": "drug",
+          "first_s": 55.1999999999969,
+          "last_s": 59.4666666666633,
+          "minimum_distance_m": 3.85740566253662,
+          "relation": "enemy",
+          "visible_s": 4.25
+        }
+      },
+      "walking_m": 17.0348548199981
+    },
+    {
+      "active_s": 13.5333333333333,
+      "actual_actor_hits": [],
+      "actual_hero_hits": [],
+      "availability_reasons_s": {
+        "SKIN:available": 12.75
+      },
+      "available_skill_s": {
+        "SKIN": 12.75
+      },
+      "body_busy_s": 0.0,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "distance_m": 14.8351122140884,
+      "door_intent_s": 0.8,
+      "elapsed_s": 13.4999999999992,
+      "entered_s": 68.4333333333295,
+      "entry_clusters": 7,
+      "entry_hp": 65,
+      "entry_neurons": 24,
+      "exit_hp": 65,
+      "exit_neurons": 24,
+      "facts": [
+        {
+          "fact": {
+            "event_id": "explored:6:street_end",
+            "kind": "scene_first_explored",
+            "level": 6,
+            "neurons": 1,
+            "room": "street_end",
+            "time": 134.066666666662
+          },
+          "observed_room": "street_end",
+          "street_s": 68.4333333333295
+        },
+        {
+          "fact": {
+            "actor": "informant",
+            "at": [
+              1.93333256244659,
+              5.4998517036438
+            ],
+            "event_id": "street_report:1:informant:1",
+            "kind": "street_report_received",
+            "receivers": [
+              "guard_hospital"
+            ],
+            "room": "street_end",
+            "source": "S3:P1621/P1908–1910",
+            "time": 135.999999999995,
+            "witnessed": false
+          },
+          "observed_room": "street_end",
+          "street_s": 70.3666666666627
+        }
+      ],
+      "forced_or_pose_displacement_m": 0.0287504196166992,
+      "gripped_s": 0.0,
+      "hostile_visible_s": 12.75,
+      "hostile_windup_or_active_s": 0.0,
+      "left_s": 81.9333333333287,
+      "moving_s": 12.9333333333333,
+      "paused_s": 0.0,
+      "room": "street_end",
+      "route_blocked_s": 0.0,
+      "visible_actors": {
+        "archivist_asylum": {
+          "attack": "sweep",
+          "first_s": 68.5333333333295,
+          "last_s": 81.866666666662,
+          "minimum_distance_m": 1.637002825737,
+          "relation": "enemy",
+          "visible_s": 12.75
+        },
+        "guard_hospital": {
+          "attack": "push",
+          "first_s": 71.9999999999959,
+          "last_s": 81.866666666662,
+          "minimum_distance_m": 1.14642369747162,
+          "relation": "enemy",
+          "visible_s": 9.5
+        },
+        "informant": {
+          "attack": "",
+          "first_s": 70.6666666666627,
+          "last_s": 76.533333333329,
+          "minimum_distance_m": 3.49991273880005,
+          "relation": "neutral",
+          "visible_s": 5.75
+        },
+        "mimic": {
+          "attack": "",
+          "first_s": 73.3333333333292,
+          "last_s": 79.4666666666622,
+          "minimum_distance_m": 3.30267429351807,
+          "relation": "neutral",
+          "visible_s": 6.0
+        },
+        "self": {
+          "attack": "grab",
+          "first_s": 69.8666666666627,
+          "last_s": 81.866666666662,
+          "minimum_distance_m": 1.22194218635559,
+          "relation": "enemy",
+          "visible_s": 11.5
+        },
+        "skinface": {
+          "attack": "sweep",
+          "first_s": 68.5333333333295,
+          "last_s": 81.866666666662,
+          "minimum_distance_m": 1.76015686988831,
+          "relation": "enemy",
+          "visible_s": 12.75
+        }
+      },
+      "walking_m": 14.8063617944717
+    }
+  ],
+  "sp": 100,
+  "street_s": 81.9333333333287,
+  "street_wall_s": 60.136,
+  "wall_s": 89.502
+}

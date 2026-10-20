@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-18T16:04:43.518411+00:00",
+  "scope": "Street seven scenes and independent hidden plaza; no source-supported missing independent branch room",
+  "sources": [
+    {
+      "path": "DOCX/AI整理后文档/NEURONS_第一阶段_空间物品人员_合并修订版.docx",
+      "sha256": "986cf8367f87d82df28583db45b745b1619afaab3533d291dcb92e0d632e307e",
+      "actually_read": "S1:P14–37, P476–507, P511 (DOCX paragraphs read directly)",
+      "topology": "P476 five main segments, side branch at plaza/narrow junction, maintenance at twisted/node junction; both one-mouth return. Existing scene ownership retained. P477 no independent recess/equipment/shop scenes. P24–26 hidden fragment is separate L1 route."
+    }
+  ],
+  "changes": [
+    "Preserve Street7 room bounds, source graph, all actor/save coordinates, 1.4m portal widths, attack/damage/key/ending/music rules.",
+    "Authoritative street_spaces.json read by runtime layouts and shared template export. All seven scenes plus separate hidden fragment carry full logical wall/portal/metre/furniture/approach contract.",
+    "Side-room previously out-of-bounds cases moved into existing10m room. Narrow bench and drain formerly inside solid architectural mass moved into existing recess/visible floor.",
+    "Lamps, facade, trees, statues and bench height categories corrected independently from source gameplay data.",
+    "Hidden5.6x3.8 saved metre anchors and collisions retained; projection96/30/56/78 and exact geometry2 path shared with measured rooms.",
+    "Old hidden route tests now verify actual hit/evade feedback against unique hunter-hit receipts and exact HP; original failure evidence preserved rather than faking an obligatory evade."
+  ],
+  "verification": {
+    "final_contract": "contract_approaches_final/result.json,264passed/0failed actual layouts/complete apertures/metre anchors/reachable furniture approaches and swept movement.",
+    "street_window": "chapter_window/result.json54/0 actual window; all45 actor starts/fullbody paths plus E2/E3 mechanics. Final new hands also Street54/0 at street_hand_grips_20261019/chapter.",
+    "natural": "natural/result.json6passed/0failed: declared directStreet entry; then actual_process with no seed/NPC/position/resource/route/damage fixtures;92.4game seconds E2 complete HP70. Headless, not human visual/balance acceptance.",
+    "hidden_window": "hidden_final/result.json57/0 actual window full father→independent hidden→JSON/pause→E1 unskipped tail/title/new profile plus real fatal hit/revival. Actualhit/evade receipts and exact15HP damage matched, no guaranteed no-hit assertion.",
+    "hidden_rules": "hidden_rules_final/hidden_rules.json69/0. All original negative hit/line-of-sight/exit/ending tests retained.",
+    "preserved_failures": [
+      "contract_approaches/result.json262/2 before real bench/drain fix",
+      "chapter/result.json53/1 skipbutton and hidden/result.json3/1 intro click in headless; actualwindow correct through corresponding inputs."
+    ],
+    "natural_window": "natural_window/result.json6/0 directStreet through E2 actual window; final new hands natural6/0,92.6667game secondsHP80 separate folder. Not all branches or human balance.",
+    "gallery": "gallery_r2 contains15actualGPU fixture captures covering7Street default/overview andhidden. All7 overview plushidden inspected. Parent later corrected shared visible prism faces to WEST/SOUTH/TOP; final hand live_r3 covers new sharedmath on current Street; parent global renderer final56-room pass remains separate evidence."
+  },
+  "limitations": [
+    "No human normal-speed balance acceptance. No large crowd/all combat combinations. Current Street elapsed value does not prove too short or balanced.",
+    "Formal art, source imagery and human music unchanged. No new scene identities beyond source or Git writes."
+  ],
+  "files": [
+    {
+      "path": "neurons/scripts/world/street_layout.gd",
+      "sha256": "c41e5682d73553217970fa708d601b820d95a03c88fb4b548668c79b699db241"
+    },
+    {
+      "path": "neurons/scripts/world/hidden_layout.gd",
+      "sha256": "eac0726c2c3001f6bbc637868e3c41485771c8a5bef4589f356738dee4203e9d"
+    },
+    {
+      "path": "neurons/scripts/core/street_map.gd",
+      "sha256": "1f46f15ba5d3059664636e97c50d7b5bce5ec76eacbd2d8b1902f1f86c02e067"
+    },
+    {
+      "path": "neurons/data/street_spaces.json",
+      "sha256": "78506865f6e970380b1e7f5497097ab227fa3bf6b26417ef4ed4e4ce47441363"
+    },
+    {
+      "path": "neurons/tests/street_space_contract_check.gd",
+      "sha256": "44ee4d452d7f279b4f49be7bd1fb575f23d7968279f5b1be1c7ee6fc9e9bfbfc"
+    }
+  ]
+}

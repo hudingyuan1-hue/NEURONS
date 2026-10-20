@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEURONS visual cutout rig configuration",
+  "type": "object",
+  "required": [
+    "schema",
+    "default",
+    "rigs"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "default": {
+      "type": "string"
+    },
+    "rigs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "id",
+          "enabled",
+          "directions"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "body_height_px": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "canvas_px": {
+            "$ref": "#/$defs/vector"
+          },
+          "foot_anchor_px": {
+            "$ref": "#/$defs/vector"
+          },
+          "stride_m": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "walk_pelvis_drop_fraction": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.15
+          },
+          "directions": {
+            "type": "object",
+            "propertyNames": {
+              "enum": [
+                "D0",
+                "D1",
+                "D2",
+                "D3"
+              ]
+            },
+            "additionalProperties": {
+              "type": "object",
+              "required": [
+                "atlas",
+                "bones",
+                "parts"
+              ],
+              "properties": {
+                "atlas": {
+                  "type": "string"
+                },
+                "bones": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object",
+                    "required": [
+                      "rest_px"
+                    ],
+                    "properties": {
+                      "parent": {
+                        "type": "string"
+                      },
+                      "rest_px": {
+                        "$ref": "#/$defs/vector"
+                      }
+                    }
+                  }
+                },
+                "parts": {
+                  "type": "array",
+                  "minItems": 15,
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "bone",
+                      "region_px",
+                      "pivot_px"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "bone": {
+                        "type": "string"
+                      },
+                      "region_px": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "minItems": 4,
+                        "maxItems": 4
+                      },
+                      "pivot_px": {
+                        "$ref": "#/$defs/vector"
+                      },
+                      "offset_px": {
+                        "$ref": "#/$defs/vector"
+                      },
+                      "z_index": {
+                        "type": "integer"
+                      },
+                      "scale": {
+                        "$ref": "#/$defs/vector"
+                      },
+                      "rotation_degrees": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "vector": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

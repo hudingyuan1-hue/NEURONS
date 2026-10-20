@@ -1,0 +1,11 @@
+{
+  "file": "exports\\spatial_templates_20261019\\NEURONS_Windows_空间修订.zip",
+  "bytes": 70645711,
+  "sha256": "0dc4283a302a983d9c305a278eb671dc4fc1b5050539f6fa14eb0a0fb7f12ac9",
+  "members": [
+    "NEURONS.exe",
+    "NEURONS.pck",
+    "README.txt"
+  ],
+  "scope": "Portable Windows pair; normal EXE startup/exit and matching-engine PCK checks recorded separately; not second-device execution."
+}

@@ -1,0 +1,34 @@
+{
+  "asset_id": "CHR_OTHER_NPCS_CAT",
+  "source_path": "DOCX/最终素材/人物/CHR_OTHER_NPCS_CAT_v001.png",
+  "tool": "built_in_image_gen",
+  "prompt": "EDIT TARGET: supplied CHR_OTHER_NPCS_CAT_v001.png. Technical production preparation only: isolate the exact black cat, yellow eyes, whiskers, raised curved tail and four separate complete paws on genuine transparent alpha. Preserve the exact approved drawing's identity, coat shapes and colors, painterly brushwork, pose, overhead oblique game view and proportions. Remove only neutral gray background and any floor shadow; preserve light fur and thin whiskers. The background visible between limbs and beneath the belly must also be transparent. Keep entire ears, tail tip, nose and all paws within transparent margins. No new pose, redesign, relighting, props, floor, glow, rim, graphic outline or text. This is a cutout of the same source for Godot, not a new animal.",
+  "generated_path": "C:/Users/23623/.codex/generated_images/01a13afd-29cd-7b90-b2e9-586f1ffdee3b/exec-d5590e13-5e11-40a8-8203-c2de0382da2a.png",
+  "purpose": "Exact source identity technical transparent preparation. Alpha-on-dark/light inspection is animal_alpha_review.jpg; RGB under alpha=0 is invisible, not a halo.",
+  "variant_note": "Complete thin whiskers and paws checked.",
+  "registered_at": "2026-10-20T07:37:46.945976+08:00",
+  "source_sha256": "6e852052931cf49afdb5499cd6dd09bc83aa7c61bfd85a4c6365b2c17573e275",
+  "output_sha256": "a185080e259ea63141c41ad3961abf4d95f4ad4d12765d76521bff569006e11a",
+  "production_texture": "res://assets/production/characters/CHR_OTHER_NPCS_CAT/CHR_OTHER_NPCS_CAT_cutout_a185080e259e.png",
+  "pixel_size": [
+    1448,
+    1086
+  ],
+  "alpha_bbox": [
+    155,
+    27,
+    1349,
+    1070
+  ],
+  "alpha_bbox_threshold": 8,
+  "transparent_fraction": 0.6811172837621969,
+  "ground_anchor_px": [
+    752.0,
+    1070
+  ],
+  "source_original_unchanged": true,
+  "generated_pixels_unchanged": true,
+  "identity_view_pose_technical_comparison": "checked; no aesthetic reassessment",
+  "runtime_binding_enabled": false,
+  "status": "transparent_source_prepared_pending_runtime_contact_and_motion"
+}

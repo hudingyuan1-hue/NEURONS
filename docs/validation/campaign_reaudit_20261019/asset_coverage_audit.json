@@ -1,0 +1,393 @@
+{
+  "created_at": "2026-10-19T19:54:47.840320+08:00",
+  "sources": {
+    "deliverables\\generation_forms_20261019\\data\\non_scene_items.json": "7a42f9670b829d3b9a7339ac45d02d3d535646eb87a82c9c70d57fd912fb1c68",
+    "deliverables\\generation_forms_20261019\\data\\scene_items.json": "4b9946dfa159c24024802fbcb46079fb969e6749b761bc1f32c7d04682173c31"
+  },
+  "runtime_spaces": 56,
+  "scene_rows_including_tutorial": 57,
+  "non_scene_rows": 522,
+  "roles": {
+    "human": 134,
+    "codex": 183,
+    "defer": 2,
+    "conditional": 203
+  },
+  "codex_effect_families": 23,
+  "user_examples_existing_mapping": {
+    "dog_fracture": [
+      "VIS_DOG_SHATTER"
+    ],
+    "clamp_grasp_drag": [
+      "VIS_PAIR_CONTACT"
+    ],
+    "thrown_box_bag_paper": [
+      "VIS_MOVING_OBJECTS"
+    ],
+    "medication_and_spill": [
+      "VIS_MEDICINE"
+    ],
+    "first_level_dog_terminal": [
+      "VIS_DOG_L1_REMAINS"
+    ]
+  },
+  "effects": [
+    {
+      "id": "VIS_DOG_L1_REMAINS",
+      "name": "第一关大黄事件结果",
+      "scope": "L1仅狗/父亲专属分支",
+      "method": "人工1张贴地残留；Codex负责切换、过渡、项圈与原物位置",
+      "manual": "新增明确人工项：CHR_DOG_L1_REMAINS，1图。",
+      "prompt": "",
+      "reuse": [
+        "CHR_DOG_L1_REMAINS",
+        "CHR_OTHER_NPCS_DOG"
+      ],
+      "acceptance": "第一关按原剧情结果，不能改套后期实际命中规则；残留/项圈不重复生成钥匙。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_DOG_SHATTER",
+      "name": "异化大黄：真实命中后碎裂与残留",
+      "scope": "L5/L6父亲实际命中",
+      "method": "先沿异化母图分片/局部重绘，做散落和落地残留；红项圈独立保留",
+      "manual": "优先Codex加工；碎片内形/落地轮廓无法合格时，补1张散落终态参考，不新增完整怪物。",
+      "prompt": "同一异化大黄母图的碎裂后散落终态，原红项圈清楚，残块保留原躯体色块与纹理方向；同一斜俯视与尺度，浅灰纯底，无人物和背景。",
+      "reuse": [
+        "CHR_OTHER_NPCS_DOG_ALTERED",
+        "CHR_OTHER_NPCS_DOG_ACTION_ALTERED"
+      ],
+      "acceptance": "只有真实命中才碎裂；两关均需可辨识异化残躯，不以几何三角或消失代替；暂停与重返保留结果。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_NPC_HURT_DOWN",
+      "name": "普通人物受击、倒下与死后原物",
+      "scope": "L2—L6相关人物",
+      "method": "各自母图派生少量受击/失去支撑姿态；普通血迹统一制作；轮椅/床/袋/纸分离",
+      "manual": "不为45人各订整套死亡序列；复杂多臂/坐卧无法变形时补对应终态关键图。",
+      "prompt": "",
+      "reuse": [
+        "CHR_MAIN_HURT_D0",
+        "CHR_OTHER_NPCS_N09_ALTERED",
+        "CHR_OTHER_NPCS_N10_ALTERED"
+      ],
+      "acceptance": "人体比例和地面支撑可信；活人/独立死者不混身份；原椅/床/物件留下，死亡不删除实体碰撞。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_HERO_ZERO",
+      "name": "主角受击、失神与死亡状态",
+      "scope": "各关；与首关崩塌分别处理",
+      "method": "优先现有受击/坐卧姿态加工，独立表情、倾倒/恢复过渡与UI",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "CHR_MAIN_HURT_D0",
+        "CHR_MAIN_SLEEP_WAKE"
+      ],
+      "acceptance": "失神不是死亡，休息不是受伤倒地；不把站姿整图横转当所有卧姿，不擅自添致命伤口。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_MADNESS",
+      "name": "遇害后的短暂疯癫反应",
+      "scope": "首关原事件/Street安全间隙",
+      "method": "复用主角脸与姿态；缺表情时补已列单图，Codex加有限呼吸/手抖",
+      "manual": "已有合格表情优先复用；本次在原头面部动作中增加条件关键姿势，不新建整套角色。",
+      "prompt": "",
+      "reuse": [
+        "CHR_MAIN_FACE_REACT_D0",
+        "CHR_MAIN_FACE_REACT_D1"
+      ],
+      "acceptance": "不永久改人格、强添伤口或额外回血/觉醒；低反馈关闭抖动，受控手保持接触。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_HAND_MARKS",
+      "name": "真实手伤、敷料与既往伤痕辨认",
+      "scope": "L3夹手/L4检查/L5—L6认人",
+      "method": "同一手/腕表面贴片与姿态，随身体锚点移动；记录与可见痕迹分开",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "CHR_MAIN_HURT_D0",
+        "CHR_OTHER_NPCS_N41"
+      ],
+      "acceptance": "只画真实发生的部位，不从HP、衣服染血或机构记录推生新伤；手伤不画到脸上。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_PARENT_COLLAPSE",
+      "name": "首关父母抽搐、异化与场景崩塌",
+      "scope": "L1专属崩塌",
+      "method": "既有两份独立剪影/关键图；Codex做分层变形、崩塌遮罩、UI失色与转场",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "CHR_FATHER_L1_COLLAPSE",
+        "CHR_MOTHER_L1_COLLAPSE",
+        "ENV_ROOM_L1_ROOM_BASE"
+      ],
+      "acceptance": "先到者与后到者顺序清楚，场景变化与原句同步；不可只用全屏黑掉，也不复用L5互攻冒充。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_PARENT_FIGHT",
+      "name": "后期父母相遇互攻与受击",
+      "scope": "L5/L6真实相遇",
+      "method": "复用各自攻击/受击和实际站位，不额外订整张双人图",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "CHR_OTHER_NPCS_FATHER_ACTION_ALTERED",
+        "CHR_OTHER_NPCS_MOTHER_ACTION_ALTERED"
+      ],
+      "acceptance": "真实接触可波及角色；不重播第一关崩塌、不叠成新结局。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_CAT_HOLD",
+      "name": "抱猫、驱猫与猫狗互殴",
+      "scope": "L1组合事件",
+      "method": "猫新增条件托持单图；其他复用低伏/扒动/抓挠/跳窗，配对位置由Codex控制",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "CHR_OTHER_NPCS_CAT_ACTION_FIRST",
+        "CHR_OTHER_NPCS_DOG_ACTION_FIRST",
+        "CHR_OTHER_NPCS_FATHER_ACTION_FIRST"
+      ],
+      "acceptance": "被抱不保留四脚踩空的站姿；互殴不误伤主角；驱猫不误结受惊抓伤。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_PAIR_CONTACT",
+      "name": "抓腕、带行、扣头、抱躯干与多臂围合",
+      "scope": "父亲/护工/保安/后期夹持人物",
+      "method": "按接触类型复用准备/接触/持有/释放姿势；母图与接触器具分层",
+      "manual": "复杂围合的关键图不足再补，不能用一条万能直臂替所有类型。",
+      "prompt": "",
+      "reuse": [
+        "CHR_MAIN_LED_REFERENCE",
+        "CHR_OTHER_NPCS_N16_ACTION_ALTERED",
+        "CHR_OTHER_NPCS_N22_ACTION_ALTERED",
+        "CHR_OTHER_NPCS_N15_ACTION_ALTERED"
+      ],
+      "acceptance": "必须看得出真正包住腕臂/头/躯干；轮廓不能只擦过却宣告抓住，释放后双方姿态一致。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_MEDICINE",
+      "name": "配药、递杯、拒服、泼洒与杯液状态",
+      "scope": "L2/L3药房，L6药师/护士",
+      "method": "同一杯与局部液面；Codex做液面变化、短促飞溅/皮肤接触，复用动作",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "ENV_SMALL_PROPS_MEDICINE_CUP",
+        "CHR_MAIN_EAT_D0",
+        "CHR_OTHER_NPCS_N21_ACTION_ALTERED",
+        "CHR_OTHER_NPCS_N22_ACTION_ALTERED"
+      ],
+      "acceptance": "泼到脸/杯口接触不等于吞服；杯与剩余液体唯一，动作中断不凭空喝完。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_BANDAGE",
+      "name": "查看伤处、包扎过程与完成后的敷料",
+      "scope": "L2小护士/L5—L6照护",
+      "method": "绷带用共用条带/贴片；人物手位用已列关键图，Codex加工固定状态",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "CHR_OTHER_NPCS_N07_ACTION_FIRST",
+        "CHR_OTHER_NPCS_N07_ACTION_ALTERED"
+      ],
+      "acceptance": "完成才有最终敷料/治疗，打断保留实际材料与进度，不反复长出新绷带。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_CHAIR_BED",
+      "name": "轮椅/推床转向、患者与持物分层",
+      "scope": "L2转运/L3推床/L5—L6床体",
+      "method": "家具原图与必要转向视图，身体/床单/脚踏板/手把独立；Codex统一锚点",
+      "manual": "已列轮椅与推床项补必要朝向差异，先做实际暴露的新侧面，不默认八方向。",
+      "prompt": "",
+      "reuse": [
+        "ENV_SMALL_PROPS_WHEELCHAIR",
+        "ENV_SMALL_PROPS_STRETCHER",
+        "ENV_SMALL_PROPS_BEDSHEET",
+        "CHR_OTHER_NPCS_N09_ACTION_FIRST",
+        "CHR_OTHER_NPCS_N10_ACTION_FIRST"
+      ],
+      "acceptance": "不能整图平面旋转代替地面转弯；患者手抓床沿/门框与车体同速，鞋/照片只留一份。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_BODY_TRANSPORT",
+      "name": "独立死者、遮盖布与搬运板状态",
+      "scope": "L3卫生间与清理事件",
+      "method": "独立死者沿原人工项；遮盖布/原板/遗物按实际状态加工",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "ENV_EVENT_BODY_UNKNOWN",
+        "ENV_SMALL_PROPS_COVER_CLOTH",
+        "ENV_SMALL_PROPS_TRANSPORT_BOARD",
+        "ENV_SMALL_PROPS_SOILED_BIN",
+        "ENV_SMALL_PROPS_RELIC_BAG"
+      ],
+      "acceptance": "死者不套活病友；覆盖前后、上板前后位置一致，移走后完整底图，遗物去向不复制。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_MOVING_OBJECTS",
+      "name": "袋体、纸盒、标签、纸页与车体状态",
+      "scope": "L2搬袋；L3作业；L5/L6原物",
+      "method": "原母图派生受力/折叠/撕裂/封口状态，字形由代码；真正移动与碰撞独立",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "ENV_SMALL_PROPS_LAUNDRY_BAG",
+        "ENV_SMALL_PROPS_PACKING_BOX",
+        "ENV_SMALL_PROPS_PAPER",
+        "ENV_SMALL_PROPS_CLIPBOARD",
+        "CHR_OTHER_NPCS_N03_ACTION_ALTERED",
+        "CHR_OTHER_NPCS_N30_ACTION_ALTERED",
+        "CHR_OTHER_NPCS_N31_ACTION_FIRST"
+      ],
+      "acceptance": "手持/地面/箱袋内只有一个原物；落地影跟真实高度，物件移走无残影，破损不自动修复。 搬袋原物只指LAUNDRY_BAG；密封污物袋和遗物袋不得替换其身份。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_FURNITURE_STATES",
+      "name": "开柜、抽屉内侧、门窗活动与取物后空位",
+      "scope": "各关搜寻与事件",
+      "method": "主体按原表；Codex补内面/遮挡/门扇与轴；复杂形变才补图",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "ENV_BEDSIDE",
+        "ENV_BEDSIDE_OPEN",
+        "ENV_DOOR",
+        "ENV_DOOR_OPEN",
+        "ENV_STORAGE"
+      ],
+      "acceptance": "开闭同一外框，手摸实际把手；内外空间完整，不能靠两张不匹配图硬切。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_SCREEN_RECORDS",
+      "name": "原始影像、面部遮罩、核验镜面与真实记录",
+      "scope": "L2—L4线索/L6重逢与阅读",
+      "method": "已列内容图需原事实核定；Codex复用人物/物件重现既有片段、UI字段和局部遮罩",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "UI_EVIDENCE_FAMILY_PHOTO",
+        "UI_EVIDENCE_REHAB_PHOTO",
+        "UI_RECORD_34",
+        "UI_REHAB_WORK_ART"
+      ],
+      "acceptance": "不同患者不拼成同一经历；未看见面部不先认识；遮罩保留原转运动作，不直接黑掉整段影像。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_CLOTH_MIMIC",
+      "name": "局部黑布、转脸、原位模仿与书写",
+      "scope": "L4/L5/L6对应人格",
+      "method": "布沿母图分层/遮罩；转脸复用两面；模仿按其自身身体派生已有短动作",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "CHR_OTHER_NPCS_N39_ALTERED",
+        "CHR_OTHER_NPCS_N19_ACTION_ALTERED",
+        "CHR_OTHER_NPCS_N45_ACTION_FIRST",
+        "CHR_OTHER_NPCS_N45_ACTION_ALTERED"
+      ],
+      "acceptance": "实际看到的动作才模仿，有限黑布不全屏遮路；笔落完才有记录，不复制技能伤害。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_ENV_ALTER",
+      "name": "建筑/家具/人物的阶段异化与完整底图",
+      "scope": "L2/L3同构；L4/L5血肉化；L6",
+      "method": "关键有机形体沿人工状态图，普通色光/污迹/小幅运动Codex处理",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "ENV_ROOM_L2_WARD_ASYLUM",
+        "ENV_ROOM_L4_ATRIUM_ALTERED",
+        "CHR_OTHER_NPCS_FATHER_ALTERED"
+      ],
+      "acceptance": "同构不等于仅加旧化滤镜；血肉结构不能只红染，深部圣洁反差保留；固定通路与活动件独立。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_LOCAL_EFFECTS",
+      "name": "冷区、脉冲、预警、受击与地面血迹",
+      "scope": "技能/战斗/环境",
+      "method": "Codex统一绘制遮罩/Shader/少量图形；必要主体受击沿已有图",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "CHR_MAIN_HURT_D0",
+        "CHR_MAIN_COMBAT_REACTIONS"
+      ],
+      "acceptance": "预警、接触与结果时钟一致；不额外造成伤害/无敌/扣费；低反馈关闭闪烁抖动但不丢必要危险信息。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_BLOOD_DOOR",
+      "name": "血门、失色、虚化与专属转场",
+      "scope": "L1父亲救援/崩塌/隐藏路线",
+      "method": "原门结构配代码血迹/色光/局部变形与转场",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "ENV_DOOR",
+        "ENV_ROOM_L1_ROOM_BASE"
+      ],
+      "acceptance": "不能新增出口、提前送错关或遮掉可干预过程；文字与危险目标保持清楚。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_UI_FEEDBACK",
+      "name": "CRT、星仓/冰柜、星环、图书与玩家演出",
+      "scope": "开场/教程/菜单/成长",
+      "method": "Codex代码主题、图标、Shader、二维投影与玩家母图派生；文字实时绘制",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "CHR_PLAYER_MASTER_2D",
+        "CHR_PLAYER_ACT_UNEASY"
+      ],
+      "acceptance": "保留原旋转/阅读关系，菜单与世界分时钟；不能把已可用UI一律要求人工重画。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    },
+    {
+      "id": "VIS_STORY_ENDING",
+      "name": "开场插画、现实宿主、眼部与星球尾声",
+      "scope": "开场/E1/E2/E3/尾声",
+      "method": "已有人工项；Codex负责字卡、视点接续、眼部切换、连接中断与合成",
+      "manual": "不追加人工素材；现有母图加工不足时再列明确差异",
+      "prompt": "",
+      "reuse": [
+        "SLIDE_A02",
+        "SLIDE_A03",
+        "SLIDE_A04",
+        "SLIDE_A06",
+        "ENDING_HOSPITAL_BASE",
+        "ENDING_HOST_BODY_REFERENCE",
+        "ENDING_HOST_EYES",
+        "SLIDE_B04"
+      ],
+      "acceptance": "三结局共用同一身体/病床，星球只在尾声；叙事透视与世界机位分开，画面不变成细节堆满的概念图。",
+      "status": "沿最新程序占位继续加工；功能运行不等于正式画面验收。"
+    }
+  ],
+  "new_manual_art_orders": 0,
+  "new_manual_music_orders": 0,
+  "acceptance": "Coverage is not approved sprites or animation. RGB mothers retained. Current 182-check combination uses transparent placeholder atlas and layered bedside art in corrected metric geometry; formal painterly combination unaccepted. Active user asset folder changes, so no partial file count is a frozen delivery."
+}

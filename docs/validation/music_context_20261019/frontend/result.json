@@ -1,0 +1,41 @@
+{
+  "failures": [
+    "per-frame same music does not restart",
+    "zero music level mutes without restarting or stopping its cursor"
+  ],
+  "observed": {
+    "MUS_DANGER_length_s": 220.16633605957,
+    "MUS_END_length_s": 85.9941864013672,
+    "MUS_HOSPITAL_length_s": 271.47216796875,
+    "MUS_MENU_length_s": 158.402618408203,
+    "MUS_ROOM_length_s": 191.047058105469
+  },
+  "passes": [
+    "all existing delivered bindings load without adding manual music",
+    "source binding remains non-looping MUS_MENU",
+    "source binding remains non-looping MUS_ROOM",
+    "source binding remains non-looping MUS_HOSPITAL",
+    "source binding remains non-looping MUS_DANGER",
+    "source binding remains non-looping MUS_END",
+    "sustained exploration music starts",
+    "actual exploration playback cursor advances",
+    "battle context can crossfade from exploration",
+    "crossfade retains both real players with bounded gains",
+    "hard pause freezes playback and crossfade clock",
+    "dialogue freezes world while background playback and fade continue",
+    "return to exploration is not rejected by old once-only receipt",
+    "return transition completes with exactly one active soundtrack",
+    "restoring volume keeps the same playback",
+    "JSON restore retains both cursors, target and current fade gains",
+    "restored hard pause preserves the unfinished fade",
+    "restored music finishes its fade and continues",
+    "legacy playback snapshot upgrades without a duplicate start",
+    "short sustained-music fixture starts",
+    "sustained role passes the recording end without frame-driven restarts",
+    "ending remains an independent one-shot cue",
+    "ending finishes once and cannot become a sustained loop",
+    "non-music event receipts still suppress duplicate sounds",
+    "scene reset removes all music and transition state"
+  ],
+  "scope": "Actual AudioStreamPlayer loading, playback cursors, controlled short-stream end, crossfade, pause, volume and JSON checks. Not subjective listening, seam quality, final mixing or a natural full game playthrough."
+}

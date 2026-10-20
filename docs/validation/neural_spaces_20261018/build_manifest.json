@@ -1,0 +1,35 @@
+{
+  "time_local": "2026-10-19T00:12:38",
+  "source": {
+    "path": "DOCX\\AI整理后文档\\NEURONS_第一阶段_空间物品人员_合并修订版.docx",
+    "sha256": "986cf8367f87d82df28583db45b745b1619afaab3533d291dcb92e0d632e307e",
+    "actual_range_read": "S1:P219-473; topology, 62 search targets, 11 shared cortical rooms, 7 deep structures and their distinct passage features"
+  },
+  "files": {
+    "neurons/data/neural_spaces.json": "dd9f4609704c26f31c8cb907e89aae72a29281be664846499c018e197853c914",
+    "neurons/scripts/core/cortex_map.gd": "7497b75ee351cdfa88d3b3798ed38d8723d2190bff4066c6f6efadf9e01d9190",
+    "neurons/scripts/core/combat_map.gd": "dfa8d306e2b0f24e928bcb6ca7d904ce7d9487a088479ae1376264f4e64b6f5c",
+    "neurons/scripts/world/cortex_layout.gd": "e80f19851e72964d9605b2ec105cc3a9a0e0de413cb36b35a189a2f59d1cdbb1",
+    "neurons/scripts/world/combat_layout.gd": "38907d009730fe1d03c15358fb0a29790ffc29a11232d85d74ab50133401e5c6",
+    "neurons/scripts/world/combat_view.gd": "68d7aa40d1ddf7a0d06de871370e4726a4e95fe090becbb77af16ef3d65f000d",
+    "neurons/tests/neural_spatial_check.gd": "17763662be00ad6337591902260f0d4bd90387ea4a4aa07b57853d9935861e74",
+    "neurons/tests/neural_spatial_render.gd": "4abf43d28fefbdbc07e15145ea6cdc68bc839b822cb8e32f296f3c7b82208700"
+  },
+  "results": {
+    "real_godot_layouts": 29,
+    "geometry_failures": 0,
+    "legacy_and_radius_assertions": 7,
+    "representative_godot_pngs": 8
+  },
+  "scope": "Per-room data, collision/navigation/doors, calibrated projection and metre furniture. Render evidence uses actual Godot primitives and shared architecture renderer, with explicit manual figure; not autonomous gameplay, all encounter combinations, formal art, human pacing or audio approval. Main campaign integration and exported generation templates belong to root task.",
+  "remaining": [
+    "Root real campaign traversal/new-save/legacy-save checks",
+    "All source-backed NPC combinations and whole B7 remain separate",
+    "Human final art and audio listening not accepted"
+  ],
+  "notes": [
+    "L4 v1 default and L5 v2 default kept for saved attempts. New L4 v2 / L5 v3 selected by campaign. No attack rules/body scaling.",
+    "L-shaped rhythm volume remains collision-only; thin independent walls and floor polygon prevent interpreting the excluded region as wall thickness.",
+    "Failed initial layouts preserved in geometry_result_r1; later fixture error (logical excluded region treated as interactable furniture) preserved in r3. r2 predates actual-threshold assertions."
+  ]
+}

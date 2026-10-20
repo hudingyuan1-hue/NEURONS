@@ -22,7 +22,7 @@ func vector(a:Array) -> Vector2:return Vector2(float(a[0]),float(a[1]))
 func xy(p:Vector2) -> Array:return [p.x,p.y]
 func floor_for(room:String):
  if not layouts.has(room):
-  layouts[room]=Floor.new(room,int(data.get("geometry_version",1))>=2)
+  layouts[room]=Floor.new(room,int(data.get("geometry_version",1))>=2,int(data.get("geometry_version",2)),int(data.get("spatial_revision",1)))
   if data.has("prop_rects"):
    for id in data.prop_rects.get(room,{}):
     for f in layouts[room].furniture:
@@ -37,10 +37,16 @@ func spec(id:String) -> Dictionary:
 func position(id:String) -> Vector2:return vector(data.actors[id].pos)
 func start() -> void:
  layouts.clear()
- data={"version":1,"geometry_version":2,"clock":0.0,"actors":{},"last_left":{},"last_spawn":{},"next_attack":0.0,"grip_until":0.0,"holder":"","grip_safe_until":0.0,"serial":0,"pulse_clock":0.0,"pulse_receipts":{},"route_left":0.0,"door_left":-1.0,"destination":"","boundary":false,"bandage_elapsed":0.0,"bandage_done":false,"cart_shift":0.0,"prop_rects":{}}
+ data={"version":1,"geometry_version":3 if chapter_id==5 else 2,"clock":0.0,"actors":{},"last_left":{},"last_spawn":{},"next_attack":0.0,"grip_until":0.0,"holder":"","grip_safe_until":0.0,"serial":0,"pulse_clock":0.0,"pulse_receipts":{},"route_left":0.0,"door_left":-1.0,"destination":"","boundary":false,"bandage_elapsed":0.0,"bandage_done":false,"cart_shift":0.0,"prop_rects":{}}
+ data.spatial_revision=2
+ if app!=null and app.get("session")!=null:app.session.data.spatial_revision=2
  for s in config.actors:
   data.actors[s.id]={"room":s.room,"pos":xy(Vector2(1.2,1.2)),"hp":s.hp,"present":s.id=="self","pending":false,"checks":0,"phase":"idle","elapsed":0.0,"cooldown":0.0,"direction":[1.0,0.0],"route":[],"goal":[],"last_seen":[],"last_seen_at":-100.0,"follow":"","attack_id":"","hits":{},"hostile":s.relation=="enemy","hurt":0.0,"face_turned":false,"attack_target":"hero"}
- data.actors.self.pos=xy(Vector2(7.3,4.8))
+ var self_at:=Vector2(7.3,4.8)
+ if chapter_id==5 and int(data.geometry_version)>=3:
+  var positions:Dictionary=floor_for(str(data.actors.self.room)).space_spec().get("actor_stands_m",{})
+  if positions.has("self"):self_at=vector(positions.self)
+ data.actors.self.pos=xy(self_at)
  reactions.normalize();observations.normalize();noises.normalize()
 
 func on_enter(from:String,room:String) -> void:
@@ -54,7 +60,7 @@ func on_enter(from:String,room:String) -> void:
    if not a.present or a.hp<=0 or a.room!=from or map.deep(from)!=map.deep(room):continue
    if spec(str(id)).relation=="friend" and str(id)!="dog":continue
    if float(data.clock)-float(a.last_seen_at)>.5:continue
-   var doorway:Vector2=map.doorway(from,room)
+   var doorway:Vector2=floor_for(from).portal(room).at
    if doorway.x>=0 and not a.last_seen.is_empty() and vector(a.last_seen).distance_to(doorway)<1.2:a.follow=room
  var receipt:String="explored:%d:"%chapter_id+room
  if not app.session.data.receipts.has(receipt):
@@ -160,9 +166,7 @@ func bed_portals(room:String) -> Array:
  for to in map.doors(room):portals.append(floor_for(room).portal(str(to)))
  return portals
 func bed_neighbor_clear(room:String,at:Vector2,direction:Vector2) -> bool:
- var size:Vector2=floor_for(room).world_size()
- var rect:Rect2=Bed.bounds(at,direction)
- if rect.position.x>=.15 and rect.position.y>=.15 and rect.end.x<=size.x-.15 and rect.end.y<=size.y-.15:return true
+ if Bed.contained(floor_for(room),at,direction):return true
  for to in map.doors(room):
   var mouth:Dictionary=floor_for(room).portal(str(to))
   if (at-mouth.at).length()>2.3 or direction.dot(-Vector2(mouth.inward))<.7:continue
@@ -384,8 +388,8 @@ func _friend(id:String,delta:float) -> void:
   var suggested:String="atrium"
   for enemy in data.actors:
    var b:Dictionary=data.actors[enemy]
-   if b.present and b.hp>0 and b.room==app.room_id and b.hostile and b.phase in ["windup","attack"] and _contains(enemy,map.doorway(app.room_id,"atrium")):suggested="memory";break
-  a.point_to=suggested;a.phase="point";a.direction=xy((map.doorway(app.room_id,suggested)-position(id)).normalized())
+   if b.present and b.hp>0 and b.room==app.room_id and b.hostile and b.phase in ["windup","attack"] and _contains(enemy,floor_for(app.room_id).portal("atrium").at):suggested="memory";break
+  a.point_to=suggested;a.phase="point";a.direction=xy((floor_for(app.room_id).portal(suggested).at-position(id)).normalized())
  elif id=="nurse":
   if data.bandage_done or app.rules.hp>=100 or app.rules.hp<=0:return
   var unsafe:bool=app.rules.gripped or app.rules.hurt_left>0
@@ -417,6 +421,7 @@ func _friend(id:String,delta:float) -> void:
 
 func move_hero(delta:float) -> void:
  var before:Vector2=app.hero_pos
+ var had_route:bool=not app.hero_route.is_empty()
  var endpoint:Vector2=app.hero_route[-1] if not app.hero_route.is_empty() else before
  app.move_hero(delta*float(config.test_parameters.hero_speed_m_s)/1.15)
  var bodies:Array=[];var blocked:bool=false
@@ -429,15 +434,38 @@ func move_hero(delta:float) -> void:
  if blocked:
   app.hero_pos=before
   var bed:Dictionary=data.actors.assistant
-  var previous:Array[Rect2]=app.layout.movable_blockers.duplicate()
-  if bed.present and bed.room==app.room_id:app.layout.movable_blockers.append(bed_rect(position("assistant"),vector(bed.direction)))
-  app.layout.rebuild_grid();app.hero_route=app.layout.path_around_bodies(before,endpoint,bodies)
-  app.layout.movable_blockers=previous;app.layout.rebuild_grid()
+  var patch:Dictionary={}
+  if bed.present and bed.room==app.room_id:patch=app.layout.push_movable_blocker(bed_rect(position("assistant"),vector(bed.direction)))
+  app.hero_route=app.layout.path_around_bodies(before,endpoint,bodies)
+  if not patch.is_empty():app.layout.pop_movable_blocker(patch)
  if app.controlled_route and app.rules.control_left>0 and app.hero_pos.distance_to(before)>.0001:app.rules.record_control_action("navigation","floor")
+ # Observe completion only after body/bed collision rollback has resolved.
+ # A canceled/replanned route or controlled destination is not escape evidence.
+ if had_route and not blocked and app.hero_route.is_empty() and app.hero_pos.distance_to(endpoint)<=.04 and app.hero_pos.distance_to(before)>.000001 and presentation_navigation_complete(endpoint):
+  data.presentation_action_serial=int(data.get("presentation_action_serial",0))+1
+  var toward:String=str(config.get("exit_id","street_exit")) if app.room_id==str(config.get("exit_room","brainstem")) else map.next_room(app.room_id,str(config.get("exit_room","brainstem")))
+  app.character_presentation.normal_action_completed("battle_navigation:%d:%d:%d"%[app.rules.actual_attempt,chapter_id,data.presentation_action_serial],"navigation",app.room_id,{"origin":"controlled" if app.controlled_route or app.rules.control_left>0 else "autonomous","from_position":xy(before),"toward":toward})
+
+func presentation_navigation_complete(endpoint:Vector2) -> bool:
+ # Door approach, threshold step and room entry are one door action. Only
+ # successful cross_door completes it. The final gate is observed in the
+ # production arrival branch, which also accepts its existing 4cm tolerance.
+ for to in app.visible_doors:
+  var portal:Dictionary=hero_portal(str(to))
+  if portal.is_empty():continue
+  var at:Vector2=portal.at;var threshold:Vector2=portal.get("threshold",at)
+  if endpoint.distance_to(at)<=.04 or endpoint.distance_to(threshold)<=.04:
+   return false
+ return true
 
 func hero_portal(to:String) -> Dictionary:return app.layout.portal(to)
 func hero_doorway(to:String) -> Vector2:return hero_portal(to).at
-func cross_door(to:String) -> void:app.enter_room(to)
+func cross_door(to:String) -> void:
+ var from:String=app.room_id
+ var origin:String="controlled" if app.controlled_route or app.rules.control_left>0 else "autonomous"
+ app.enter_room(to)
+ data.presentation_action_serial=int(data.get("presentation_action_serial",0))+1
+ app.character_presentation.normal_action_completed("battle_door:%d:%d:%d"%[app.rules.actual_attempt,chapter_id,data.presentation_action_serial],"door",app.room_id,{"origin":origin,"from_room":from,"toward":to})
 
 func _hero(delta:float) -> void:
  if data.boundary:return
@@ -543,8 +571,14 @@ func _hero(delta:float) -> void:
    var body:Dictionary=data.actors[other]
    if body.present and body.hp>0 and body.room==app.room_id and position(other).distance_to(app.hero_pos)<=float(config.test_parameters.hero_vision_m) and can_see(app.room_id,app.hero_pos,position(other)):bodies.append({"pos":position(other),"radius":.47})
   app.hero_route=app.layout.path_around_bodies(app.hero_pos,goal,bodies);data.hero_goal=xy(goal);data.route_left=float(config.test_parameters.route_recheck_s)
+ var before_exit_step:Vector2=app.hero_pos
  move_hero(delta*app.layout.speed_factor(app.hero_pos))
- if not evade and app.hero_pos.distance_to(goal)<.04:data.destination=to;data.door_left=.6;app.hero_route=PackedVector2Array()
+ if not evade and app.hero_pos.distance_to(goal)<.04:
+  app.hero_route=PackedVector2Array()
+  if to==str(config.get("exit_id","street_exit")):
+   data.presentation_action_serial=int(data.get("presentation_action_serial",0))+1
+   app.character_presentation.normal_action_completed("battle_exit_arrival:%d:%d:%d"%[app.rules.actual_attempt,chapter_id,data.presentation_action_serial],"navigation",app.room_id,{"origin":"autonomous","from_position":xy(before_exit_step),"toward":to})
+  data.destination=to;data.door_left=.6
 
 func exit_crossed() -> void:
  app.unlock_street()

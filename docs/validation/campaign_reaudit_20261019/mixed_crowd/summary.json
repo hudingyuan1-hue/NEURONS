@@ -1,0 +1,63 @@
+{
+  "scope": "New fourteen-identity dual-door/rigid-body finite recovery and separate ten-body ordinary-process passage. Initial object deaths are explicit occupancy fixtures, never claimed as actual attack/death events. Real disk/pause/movement/crossing retained. Not old four-body retest, final art/audio, all crowds or B7.",
+  "methods": {
+    "actual_gpu": true,
+    "fixed_game_delta_seconds": 0.03333333333333333,
+    "frame_measurement": "Time.get_ticks_usec once per frame; not human tempo acceptance",
+    "production_modified": false,
+    "test_fixtures_modified": false
+  },
+  "main": {
+    "passes": 23,
+    "failures": [],
+    "elapsed_game_seconds": 24.9666666666671,
+    "hp": 40,
+    "room": "street_node",
+    "max_simultaneous_attackers": 2,
+    "unexplained_still_seconds": 0.0
+  },
+  "performance": {
+    "actual_fps": 29.8953077498417,
+    "frames": 749,
+    "hp": 40,
+    "room_end": "street_node",
+    "room_start": "street_twisted",
+    "wall_seconds": 25.054099,
+    "passes": 3,
+    "failures": [],
+    "p50_ms": 22.963,
+    "p95_ms": 57.446999999999996,
+    "maximum_ms": 446.16299999999995,
+    "over_100ms_frames": [
+      {
+        "frame": 0,
+        "seconds": 0.446163
+      },
+      {
+        "frame": 748,
+        "seconds": 0.185591
+      }
+    ]
+  },
+  "stderr": {
+    "full_r1": "",
+    "performance_r1": ""
+  },
+  "processes": [
+    {
+      "exited": true,
+      "pid": 47748,
+      "exit_code": 0
+    },
+    {
+      "exit_code": 0,
+      "exited": true,
+      "pid": 48992
+    }
+  ],
+  "limitations": [
+    "Fourteen-body dual-mouth occupancy plus one explicitly placed ten-body ordinary-process passage only; not all forty-five-person simultaneous combinations.",
+    "Initial deaths are occupancy fixtures rather than newly proved attack/death events.",
+    "Actual frame rates depend on this machine and run. No final art, human full play or B7 acceptance claimed."
+  ]
+}

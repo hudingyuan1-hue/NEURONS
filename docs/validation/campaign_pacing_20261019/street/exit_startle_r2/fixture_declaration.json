@@ -1,0 +1,12 @@
+{
+  "after_entry": "Only ordinary _process and read-only observations, plus any explicitly recorded real input in recorded_inputs.json; no direct RNG/NPC/resource/skill/route/position/HP/ending changes or manual game ticks.",
+  "entry": "actual_checkpoint:res://../docs/validation/campaign_pacing_20261019/street/exit_baseline_r1/initial_entry_fixture.json",
+  "entry_actions": [
+    "actual new-profile handler",
+    "finish already-known tutorial for isolated chapter measurement",
+    "clear initial L1 dialogue before chapter fixture",
+    "production restore_snapshot of untouched saved checkpoint"
+  ],
+  "frame_sample": "Distance accumulated every actual process frame. Visible actor and available skill durations sampled at 0.25s and therefore approximate to one sample; crossing teleports excluded from metres.",
+  "scope": "Automatic autonomous host baseline or explicitly recorded real-input comparison, not human-paced acceptance. NPC obstruction is passive benefit to the opposing player, measured separately from player input opportunities."
+}

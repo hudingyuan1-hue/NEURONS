@@ -1,0 +1,317 @@
+{
+  "checks": {
+    "share_.html": true,
+    "share_.zip": true,
+    "zip_crc": true,
+    "zip_page": true,
+    "zip_png_count": true,
+    "source_game_unchanged": true,
+    "windows_keep_source_positions": true,
+    "functional_high_window_preserved": true,
+    "per_room_material_preserved": true,
+    "no_opening_height_conflict": true
+  },
+  "scope": "Form/ZIP and source-preservation audit only. Locator examples inspected separately; no generated art or game runtime validation this revision.",
+  "html_bytes": 13005363,
+  "zip_bytes": 10855871,
+  "drawing_windows": [
+    {
+      "id": "L1_bedroom",
+      "windows": [
+        {
+          "physical": {
+            "wall": "south",
+            "start": 4.5,
+            "end": 5.800000000000001,
+            "sill": 0.9,
+            "opening": 1.15
+          },
+          "drawing": {
+            "wall": "south",
+            "start": 4.5,
+            "end": 5.800000000000001,
+            "sill": 0.6,
+            "opening": 0.4420000000000003,
+            "mode": "low_near_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L2_clinic",
+      "windows": [
+        {
+          "physical": {
+            "wall": "north",
+            "start": 4.19999980926514,
+            "end": 5.799999833107,
+            "sill": 1.1,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "north",
+            "start": 4.19999980926514,
+            "end": 5.799999833107,
+            "sill": 1.1,
+            "opening": 0.833333333333333,
+            "mode": "full_far_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L2_office",
+      "windows": [
+        {
+          "physical": {
+            "wall": "north",
+            "start": 2.40000009536743,
+            "end": 3.60000014305115,
+            "sill": 1.1,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "north",
+            "start": 2.40000009536743,
+            "end": 3.60000014305115,
+            "sill": 1.1,
+            "opening": 0.833333333333333,
+            "mode": "full_far_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L3_clinic",
+      "windows": [
+        {
+          "physical": {
+            "wall": "north",
+            "start": 4.19999980926514,
+            "end": 5.799999833107,
+            "sill": 1.1,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "north",
+            "start": 4.19999980926514,
+            "end": 5.799999833107,
+            "sill": 1.1,
+            "opening": 0.833333333333333,
+            "mode": "full_far_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L3_office",
+      "windows": [
+        {
+          "physical": {
+            "wall": "north",
+            "start": 2.40000009536743,
+            "end": 3.60000014305115,
+            "sill": 1.1,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "north",
+            "start": 2.40000009536743,
+            "end": 3.60000014305115,
+            "sill": 1.1,
+            "opening": 0.833333333333333,
+            "mode": "full_far_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L3_stairs",
+      "windows": [
+        {
+          "physical": {
+            "wall": "west",
+            "start": 1.29999995231628,
+            "end": 2.69999992847442,
+            "sill": 1.15,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "west",
+            "start": 1.29999995231628,
+            "end": 2.69999992847442,
+            "sill": 0.6,
+            "opening": 0.4759999918937677,
+            "mode": "low_near_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L3_activity",
+      "windows": [
+        {
+          "physical": {
+            "wall": "west",
+            "start": 2.29999995231628,
+            "end": 3.5,
+            "sill": 1.15,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "west",
+            "start": 2.29999995231628,
+            "end": 3.5,
+            "sill": 0.6,
+            "opening": 0.4080000162124648,
+            "mode": "low_near_window"
+          }
+        },
+        {
+          "physical": {
+            "wall": "east",
+            "start": 1.79999995231628,
+            "end": 3.0,
+            "sill": 1.15,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "east",
+            "start": 1.79999995231628,
+            "end": 3.0,
+            "sill": 1.15,
+            "opening": 0.833333333333333,
+            "mode": "full_far_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L3_group_therapy",
+      "windows": [
+        {
+          "physical": {
+            "wall": "west",
+            "start": 4.90000009536743,
+            "end": 6.20000004768371,
+            "sill": 1.2,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "west",
+            "start": 4.90000009536743,
+            "end": 6.20000004768371,
+            "sill": 0.6,
+            "opening": 0.44199998378753513,
+            "mode": "low_near_window"
+          }
+        },
+        {
+          "physical": {
+            "wall": "east",
+            "start": 4.80000019073486,
+            "end": 6.1000001430511395,
+            "sill": 1.2,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "east",
+            "start": 4.80000019073486,
+            "end": 6.1000001430511395,
+            "sill": 1.2,
+            "opening": 0.833333333333333,
+            "mode": "full_far_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L3_quiet",
+      "windows": [
+        {
+          "physical": {
+            "wall": "east",
+            "start": 3.45000004768372,
+            "end": 4.65000009536744,
+            "sill": 1.55,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "east",
+            "start": 3.45000004768372,
+            "end": 4.65000009536744,
+            "sill": 1.55,
+            "opening": 0.833333333333333,
+            "mode": "full_far_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L3_bathroom",
+      "windows": [
+        {
+          "physical": {
+            "wall": "west",
+            "start": 5.25,
+            "end": 6.45000004768372,
+            "sill": 1.55,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "west",
+            "start": 5.25,
+            "end": 6.45000004768372,
+            "sill": 1.55,
+            "opening": 0.833333333333333,
+            "mode": "functional_high_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L3_double_ward",
+      "windows": [
+        {
+          "physical": {
+            "wall": "south",
+            "start": 3.29999995231628,
+            "end": 4.69999992847442,
+            "sill": 1.2,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "south",
+            "start": 3.29999995231628,
+            "end": 4.69999992847442,
+            "sill": 0.6,
+            "opening": 0.47599999189376757,
+            "mode": "low_near_window"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L3_workshop",
+      "windows": [
+        {
+          "physical": {
+            "wall": "west",
+            "start": 3.70000004768372,
+            "end": 5.10000002384186,
+            "sill": 1.2,
+            "opening": 0.833333333333333
+          },
+          "drawing": {
+            "wall": "west",
+            "start": 3.70000004768372,
+            "end": 5.10000002384186,
+            "sill": 0.6,
+            "opening": 0.47599999189376757,
+            "mode": "low_near_window"
+          }
+        }
+      ]
+    }
+  ]
+}

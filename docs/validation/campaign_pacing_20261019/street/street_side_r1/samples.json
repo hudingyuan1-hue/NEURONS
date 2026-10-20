@@ -1,0 +1,157 @@
+[
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 0.0333333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      0.860000014305115,
+      4.5
+    ],
+    "pose": "idle",
+    "room": "street_side",
+    "route_points": 0,
+    "sp": 100,
+    "street_clock_s": 0.0,
+    "street_s": 0.0,
+    "visible_actors": [
+      "nurse",
+      "transport_patient"
+    ],
+    "world_s": 0.0
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 0.3,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      0.553333163261414,
+      4.5
+    ],
+    "pose": "walk",
+    "room": "street_side",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.266666666666667,
+    "street_s": 0.266666666666667,
+    "visible_actors": [
+      "nurse",
+      "transport_patient"
+    ],
+    "world_s": 0.266666666666667
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "street_plaza",
+    "door_left_s": 0.366666666666667,
+    "elapsed_s": 0.566666666666667,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      0.514999806880951,
+      4.5
+    ],
+    "pose": "give",
+    "room": "street_side",
+    "route_points": 0,
+    "sp": 100,
+    "street_clock_s": 0.533333333333333,
+    "street_s": 0.533333333333333,
+    "visible_actors": [
+      "nurse",
+      "transport_patient"
+    ],
+    "world_s": 0.533333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "street_plaza",
+    "door_left_s": 0.1,
+    "elapsed_s": 0.833333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      0.514999806880951,
+      4.5
+    ],
+    "pose": "give",
+    "room": "street_side",
+    "route_points": 0,
+    "sp": 100,
+    "street_clock_s": 0.8,
+    "street_s": 0.8,
+    "visible_actors": [
+      "nurse",
+      "transport_patient"
+    ],
+    "world_s": 0.8
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "street_plaza",
+    "door_left_s": 0.0,
+    "elapsed_s": 1.1,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      0.32333317399025,
+      4.5
+    ],
+    "pose": "walk",
+    "room": "street_side",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 1.06666666666667,
+    "street_s": 1.06666666666667,
+    "visible_actors": [
+      "nurse",
+      "transport_patient"
+    ],
+    "world_s": 1.06666666666667
+  }
+]

@@ -1,0 +1,13 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS visual overrides preserve hp
+PASS visual overrides preserve sp
+PASS visual overrides preserve neurons
+PASS visual overrides preserve world_time
+PASS visual overrides preserve rng
+PASS visual overrides preserve targets
+PASS visual overrides preserve owners
+PASS eight original bedroom IDs use calibrated painted layers
+PASS global furniture switch remains off pending combination review
+PASS global material switch remains off pending painting review

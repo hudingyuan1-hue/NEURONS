@@ -22,7 +22,8 @@
         "source_scale": 2,
         "note": "Camera may follow; do not shrink people and furniture to fit the whole room on screen"
       },
-      "wall": {"thickness_m": 0.15, "height_m": 2.55},
+      "wall": {"thickness_m": 0.15, "height_m": 2.55, "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}},
+      "asset_template": {"coordinate_unit": "metre", "ground_anchor": "footprint_center", "action_anchor": "approach_m is the actor standing point, not the furniture pivot or hand contact", "layers": ["architecture", "furniture", "movable_props", "foreground_occluders"], "background_under_movable_props": "Complete material, no baked-in silhouette", "geometry_status": "Runtime spatial contract; formal drawing and normal-play acceptance are separate"},
       "door": {"wall": "north", "center_m": [5.3, 0], "clear_width_m": 0.95, "height_m": 2.15},
       "window": {"wall": "south", "center_m": [5.15, 4.8], "width_m": 1.3, "sill_height_m": 0.9, "opening_height_m": 1.15, "use": "Existing cat exit, not an extra search point"},
       "anchors": {"door": [5.3, 0.3], "bed": [1.7, 1.7], "cat_exit": [5.15, 4.5], "dog_idle": [3.2, 2.05], "animal_encounter": [3.45, 2.1]},

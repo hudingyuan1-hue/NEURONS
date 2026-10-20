@@ -1,0 +1,7 @@
+{
+  "pid": 13028,
+  "owned_windows_sent_wm_close": 5,
+  "exit_code": null,
+  "exited": true,
+  "scope": "Actual exported EXE startup and WM_CLOSE to its own hidden windows; initial CloseMainWindow cannot select a hidden main window"
+}

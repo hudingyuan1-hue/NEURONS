@@ -1,0 +1,125 @@
+{
+  "cases": [
+    {
+      "blocked": false,
+      "case": "actual open windup",
+      "fresh_cached_seconds": 0.000318,
+      "legacy_sweep_seconds": 0.003285,
+      "points": 4,
+      "warm_seconds": 0.000131
+    },
+    {
+      "blocked": false,
+      "case": "sub-cell source move",
+      "fresh_cached_seconds": 0.000299,
+      "legacy_sweep_seconds": 0.00332,
+      "points": 4,
+      "warm_seconds": 0.000142
+    },
+    {
+      "blocked": false,
+      "case": "actual turn",
+      "fresh_cached_seconds": 0.000289,
+      "legacy_sweep_seconds": 0.003359,
+      "points": 4,
+      "warm_seconds": 0.000171
+    },
+    {
+      "blocked": false,
+      "case": "sub-cell furniture move",
+      "fresh_cached_seconds": 0.000291,
+      "legacy_sweep_seconds": 0.003299,
+      "points": 4,
+      "warm_seconds": 0.000143
+    },
+    {
+      "blocked": false,
+      "case": "disabled solid footprint",
+      "fresh_cached_seconds": 0.000276,
+      "legacy_sweep_seconds": 0.002989,
+      "points": 4,
+      "warm_seconds": 0.000127
+    },
+    {
+      "blocked": false,
+      "case": "disabled collision footprint",
+      "fresh_cached_seconds": 0.000279,
+      "legacy_sweep_seconds": 0.003006,
+      "points": 4,
+      "warm_seconds": 0.000126
+    },
+    {
+      "blocked": false,
+      "case": "compound footprint change",
+      "fresh_cached_seconds": 0.000299,
+      "legacy_sweep_seconds": 0.003397,
+      "points": 4,
+      "warm_seconds": 0.000132
+    },
+    {
+      "blocked": false,
+      "case": "temporary rotated bed",
+      "fresh_cached_seconds": 0.001143,
+      "legacy_sweep_seconds": 0.001518,
+      "points": 4,
+      "warm_seconds": 0.000126
+    },
+    {
+      "blocked": false,
+      "case": "rotated bed removed",
+      "fresh_cached_seconds": 0.000287,
+      "legacy_sweep_seconds": 0.003317,
+      "points": 4,
+      "warm_seconds": 0.000125
+    },
+    {
+      "blocked": false,
+      "case": "temporary wheelchair footprint",
+      "fresh_cached_seconds": 0.000332,
+      "legacy_sweep_seconds": 0.003526,
+      "points": 4,
+      "warm_seconds": 0.000136
+    },
+    {
+      "blocked": false,
+      "case": "wall-edge original stop sample",
+      "fresh_cached_seconds": 0.000409,
+      "legacy_sweep_seconds": 0.001233,
+      "points": 4,
+      "warm_seconds": 0.000125
+    },
+    {
+      "blocked": false,
+      "case": "attack geometry parameter",
+      "fresh_cached_seconds": 0.000402,
+      "legacy_sweep_seconds": 0.001262,
+      "points": 4,
+      "warm_seconds": 0.000134
+    },
+    {
+      "blocked": false,
+      "case": "sampling parameter",
+      "fresh_cached_seconds": 0.000394,
+      "legacy_sweep_seconds": 0.001166,
+      "points": 4,
+      "warm_seconds": 0.000141
+    },
+    {
+      "blocked": false,
+      "case": "source room and layout change",
+      "fresh_cached_seconds": 0.000396,
+      "legacy_sweep_seconds": 0.101272,
+      "points": 4,
+      "warm_seconds": 0.000109
+    },
+    {
+      "blocked": false,
+      "case": "restored layout instance",
+      "fresh_cached_seconds": 0.000396,
+      "legacy_sweep_seconds": 0.104547,
+      "points": 4,
+      "warm_seconds": 0.000126
+    }
+  ],
+  "reference": "Test-only exact pre-optimization clipped and uncached contains; actual attack state/prepare/receipts unchanged."
+}

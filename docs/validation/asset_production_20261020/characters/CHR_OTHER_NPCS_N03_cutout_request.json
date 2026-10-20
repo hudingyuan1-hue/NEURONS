@@ -1,0 +1,11 @@
+{
+  "asset_id": "CHR_OTHER_NPCS_N03",
+  "mode": "built_in_image_gen_background_extraction",
+  "source_path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N03_v001.png",
+  "source_project_path": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N03_v001.png",
+  "source_sha256": "b61eafb558269c642d19999a587be6fb507cd8c035d74af45d8c6fa04241ebd4",
+  "prompt": "Use case: background-extraction. Asset type: NEURONS full-body NPC sprite source. Input image 1 is the edit target. Remove ONLY the warm grey background and any cast shadow outside the figure, producing a genuinely transparent alpha background. Keep the same person, exact face, hair, costume, clothing colors, body proportions, pose, hands and feet, original oblique viewing angle and original painterly brushwork. Do not redesign, beautify, change expression or relight the person. Preserve internal clothing highlights and the thin hair silhouette; white fabric must stay opaque, never be mistaken for background. Keep the entire head and both shoes, preserving the portrait canvas and figure placement. No environment, floor, glow, drop shadow, checkerboard, text, extra props or extra characters. Keep his dark hair and stubble, grey work uniform, blank badge, pale protective gloves and dark shoes. The gloves stay opaque.",
+  "transparent_background": true,
+  "original_unchanged": true,
+  "status": "requested_not_yet_generated"
+}

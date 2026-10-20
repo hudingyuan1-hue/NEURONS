@@ -1,0 +1,65 @@
+[
+  {
+    "actor": "nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.42426657676697,
+    "phase": "idle",
+    "room": "street_side",
+    "street_s": 0.0
+  },
+  {
+    "actor": "corner",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.36974096298218,
+    "phase": "idle",
+    "room": "street_side",
+    "street_s": 0.0
+  },
+  {
+    "actor": "wheelchair",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 8.32427787780762,
+    "phase": "idle",
+    "room": "street_side",
+    "street_s": 0.0
+  },
+  {
+    "actor": "transport_patient",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.28109765052795,
+    "phase": "idle",
+    "room": "street_side",
+    "street_s": 0.0
+  },
+  {
+    "actor": "postop",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.44465684890747,
+    "phase": "idle",
+    "room": "street_side",
+    "street_s": 0.0
+  },
+  {
+    "actor": "corner",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.65663957595825,
+    "phase": "point",
+    "room": "street_side",
+    "street_s": 0.266666666666667
+  },
+  {
+    "actor": "transport_patient",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.50640082359314,
+    "phase": "band_raise",
+    "room": "street_side",
+    "street_s": 0.266666666666667
+  }
+]

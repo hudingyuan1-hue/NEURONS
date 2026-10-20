@@ -1,0 +1,55 @@
+{
+  "asset_id": "CHR_OTHER_NPCS_N04",
+  "mode": "RGBA",
+  "source_path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_N04_v001.png",
+  "source_project_path": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N04_v001.png",
+  "source_sha256": "f23ce310d1c10c437ea2bf53e20e0955aaef7eb8e7396afea5af0c448b61208f",
+  "prompt": "Use case: background-extraction. Asset type: NEURONS full-body NPC sprite source. Input image 1 is the edit target. Remove ONLY the warm grey background and any cast shadow outside the figure, producing a genuinely transparent alpha background. Keep the same person, exact face, hair, costume, clothing colors, body proportions, pose, hands and feet, original oblique viewing angle and original painterly brushwork. Do not redesign, beautify, change expression or relight the person. Preserve internal clothing highlights and the thin hair silhouette; white fabric must stay opaque, never be mistaken for background. Keep the entire head and both shoes, preserving the portrait canvas and figure placement. No environment, floor, glow, drop shadow, checkerboard, text, extra props or extra characters. Keep her white nurse cap, dark hair bun, blue nurse uniform with white collar/cuffs/pocket edges, blank badge and white shoes. All white uniform parts stay intact and opaque.",
+  "transparent_background": true,
+  "original_unchanged": true,
+  "status": "generated_and_technical_preview_checked_not_runtime_bound",
+  "generated_original_path": "C:\\Users\\23623\\.codex\\generated_images\\01a154b7-b1d3-7a72-928d-69239c6a387f\\exec-b4756421-c820-427d-b588-dd2b3f5b88be.png",
+  "output_path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\characters\\CHR_OTHER_NPCS_N04\\CHR_OTHER_NPCS_N04_normal_reference_cutout_v001.png",
+  "production_texture": "res://assets/production/characters/CHR_OTHER_NPCS_N04/CHR_OTHER_NPCS_N04_normal_reference_cutout_v001.png",
+  "output_sha256": "bcbd42840519d0f440507ee5542da481de3fcacf36d5693bcd119c9d101d8a1a",
+  "pixel_size": [
+    1122,
+    1402
+  ],
+  "alpha_bbox": [
+    371,
+    35,
+    770,
+    1338
+  ],
+  "alpha_bbox_threshold": 8,
+  "raw_nonzero_alpha_bbox": [
+    55,
+    32,
+    1070,
+    1370
+  ],
+  "transparent_fraction": 0.801284,
+  "antialias_fraction": 0.198107,
+  "near_invisible_alpha_1_to_7_fraction": 0.007264,
+  "alpha_edge_note": "Raw tool output retains sparse near-invisible alpha 1-7 pixels outside the subject. PNG pixels are unchanged; anchor uses alpha >=8 bounds. Check fringes during final rig/contact compositing.",
+  "same_canvas_as_source": true,
+  "source_opaque_rgb_mean_absolute_difference": [
+    13.261807504852877,
+    13.500192020333207,
+    22.818680436270196
+  ],
+  "ground_anchor_px": [
+    570.5,
+    1338
+  ],
+  "ground_anchor_policy": "Initial full-body footprint reference from meaningful alpha >=8 bounds; actual contact and individual foot/body-part anchors require rig/runtime preview.",
+  "visual_review": {
+    "entire_head_and_both_shoes": true,
+    "same_identity_costume_pose_and_view": true,
+    "white_clothes_gloves_cap_shoes_preserved": true,
+    "no_visible_floor_or_cast_shadow": true,
+    "source_painterly_style_retained_not_pixel_identical": true
+  },
+  "runtime_binding_enabled": false
+}

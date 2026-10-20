@@ -1,0 +1,87 @@
+{
+  "time_local": "2026-10-19T00:47:26",
+  "ownership": "Only new spatial_neural_sequence_check.gd and unique evidence authored by this agent in this phase; frozen spatial production data not edited. Root owns runtime integration and flag registration.",
+  "files_at_report": {
+    "neurons/tests/spatial_neural_sequence_check.gd": "e78689cdf570e22d0c356e58c5785a57394380b6a015898ae606a821d905de44",
+    "neurons/scripts/core/cortex_events.gd": "544196544b4f845d39051fa7805b199333ae540f518ee0829c5446fe76447aa5",
+    "neurons/scripts/core/combat_chapter.gd": "9cd8f70d888b399ce94797aa0df296c9eede380c68aaf1bd64070c54d18c954a",
+    "neurons/scripts/campaign.gd": "2b74d831760bfb07dc8d18864068bd3f33d0cc19def52eda42af268937620fe5",
+    "neurons/data/neural_spaces.json": "dd9f4609704c26f31c8cb907e89aae72a29281be664846499c018e197853c914"
+  },
+  "results": {
+    "sequence_finite_r1": {
+      "passes": 264,
+      "failures": 0,
+      "rendered": false,
+      "png_count": 0,
+      "door_crossings": 15,
+      "world_seconds": 735.024999999605,
+      "finite_search_count": 62
+    },
+    "sequence_finite_gpu": {
+      "passes": 264,
+      "failures": 0,
+      "rendered": true,
+      "png_count": 3,
+      "door_crossings": 15,
+      "world_seconds": 735.024999999605,
+      "finite_search_count": 62
+    },
+    "sequence_natural_r1": {
+      "passes": 7,
+      "failures": 0,
+      "rendered": true,
+      "png_count": 18,
+      "elapsed_game_seconds": 236.599999999989,
+      "visits": [
+        "L4:atrium",
+        "L4:visual",
+        "L4:memory",
+        "L4:body",
+        "L4:decision",
+        "L4:bridge",
+        "L4:switch",
+        "L4:verify",
+        "L5:atrium",
+        "L5:decision",
+        "L5:bridge",
+        "L5:switch",
+        "L5:verify",
+        "L5:hippocampus",
+        "L5:thalamus",
+        "L5:brainstem",
+        "L6:street_plaza"
+      ],
+      "deaths": [],
+      "hp": 85,
+      "level": 6,
+      "still_seconds": 0.0,
+      "finite_search_count": 0,
+      "l4_search_attempts_max": 8
+    },
+    "sequence_contact_r1": {
+      "passes": 7,
+      "failures": 0,
+      "rendered": true,
+      "png_count": 3,
+      "elapsed_game_seconds": 19.0666666666668,
+      "hp": 90,
+      "finite_search_count": 0
+    }
+  },
+  "scope": "Finite 62-point actual movement/search/contact/settlement and real JSON save separated from ordinary-process autonomous chain and one ordinary-process true clamp contact. No source rule or seed/resource/ownership/damage/completion fixtures after the natural run starts. Not final art/audio, human pacing, all endings or all NPC combinations.",
+  "observed_images": [
+    "sequence_natural_r1/natural_final.png",
+    "sequence_natural_r1/natural_04_body.png",
+    "sequence_natural_r1/natural_08_verify.png",
+    "sequence_natural_r1/natural_16_brainstem.png",
+    "sequence_contact_r1/contact_actual_grip.png",
+    "sequence_contact_r1/contact_final.png"
+  ],
+  "sequence_notes": [
+    "Natural-only r1 passed before contact-only driver addition; observe_natural gameplay behavior unchanged by that addition. GPU finite and contact run use final driver.",
+    "Headless finite_r1 reported two ObjectDB exit leaks; final GPU finite exited normally without leak warning. No unsupported final-art or leak-free full-campaign claim.",
+    "Natural route sampled eight actual searches before key, then successful L5 pursuit/battle and Street entrance. Did not visit all optional branches. Finite coverage reached all eleven L4 rooms and all62 points.",
+    "Prism visible-face projection mismatch independently identified after this evidence was captured: observer kernel west/south/above; root owns uniform renderer correction. Existing sequence gameplay paths/contact settlement remain valid; screenshots are explicitly before that visual-only correction."
+  ]
+}

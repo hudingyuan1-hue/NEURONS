@@ -1,0 +1,27 @@
+{
+  "tool": "built_in_image_gen",
+  "prompt": "Create a production material atlas for the pure-2D hand-painted game NEURONS. The attached two room paintings are STYLE references ONLY: take their restrained grey-violet shadows, dusty warm ochres, uneven large painterly color masses, selective dry gouache/oil-like brush edges, quiet lived-in material wear, and limited detail concentrated at meaningful seams. Do not reproduce any room, perspective, architecture, objects, person, cast shadows, lighting pools, camera or layout from the references. Deliver ONE SQUARE atlas, exactly FOUR equal columns by FOUR equal rows, 16 equally sized SQUARE texture cells flush together; no outer border, no margin, no cell border, absolutely no text or symbols. Every cell is an orthographic FRONT-ON flat material swatch filling its entire square, no perspective, no bevel, no thickness, no vignette and no photographic/PBR highlights. Neutral even illumination with subtle broad painted value variation only. Crisp but painterly, suitable to map onto arbitrary 2D floor/wall polygons. Material cells in reading order: row 1 cell 1 aged warm chestnut/pine floorboards laid horizontally with staggered ends and selective wear, 2 dusty grey-beige old plaster with broad sparse ochre flaked patches and soft irregular edges, 3 muted cream-grey institutional ceramic floor tiles in a straight orthogonal grid with fine subdued grout, 4 desaturated sage-grey institutional painted plaster with a few broad worn areas; row 2 cell 1 abstract low-saturation grey-lilac cortical fiber surface with gently curving lamina and wide calm gaps, no organs or gore, 2 creamy pale grey white-matter fiber ribbons in gently flowing parallel strands without anatomy/gore, 3 old dark grey-blue street paving stones with irregular believable joints and broad worn planes, 4 charcoal grey asphalt with sparse broad scuffs, no road markings; row 3 cell 1 walnut-brown furniture wood grain with long subtle streaks and no board gaps, 2 dull teal-grey painted metal with small selective scuffs and no rivets/panels, 3 warm ivory coarse woven cloth with broad gentle undulation but no garment or folds into an object, 4 aged ochre-grey cardboard/paper fibers without text/stamps; row 4 cell 1 dusty grey-brown tree bark surface with irregular elongated ridges, 2 dull tarnished brass with soft muted warm highlights no specular shine, 3 smoky translucent-looking blue-green flat glass material painted opaque with subtle broad patches no reflections of rooms or objects, 4 aged warm grey concrete with sparse shallow hairline marks. Each cell must remain a simple readable painted surface, not high-frequency random noise. Adjacent cell boundaries must align perfectly at 25%, 50%, 75% of both dimensions. Large-scale flat hand-painted color grouping, no game UI, no black outlines framing cells, no 3D models, no brick building fragments, no figures, no doors or windows, no separate objects.\n",
+  "transparent_background": false,
+  "generated_original_path": "C:\\Users\\23623\\.codex\\generated_images\\01a154b7-b1d3-7a72-928d-69239c6a387f\\exec-14612fc4-9308-4353-8258-f9b97a139611.png",
+  "master_copy_path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\materials\\painterly_material_atlas_v001.png",
+  "master_sha256": "b5fadae119f6f6d844b78ad3255719ac068cb544163c56e2616a338d985cb8ec",
+  "references": [
+    {
+      "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\ENV_ROOM_L1_ROOM_BASE_v001.png",
+      "sha256": "4c19f3c82c3f01ced00b2e535ee8fbd1188a7473ab1c880bd82de864d0f1d6d6",
+      "role": "painterly palette / brush grouping only; not room-layout authority"
+    },
+    {
+      "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\dc3eba99-ce86-428f-81ef-e84724936df1.png",
+      "sha256": "14a83b229eb892ecc640e28b8a0828d199968a496ed3e06e2f39efdbe6295e7c",
+      "role": "painterly palette / brush grouping only; not room-layout authority"
+    }
+  ],
+  "processing": "Exact original master copy and deterministic pixel crops only; no material repaint, background keying or geometry generation.",
+  "crop_count": 16,
+  "production_enabled": false,
+  "pixel_size": [
+    1254,
+    1254
+  ]
+}

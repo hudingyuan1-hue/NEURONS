@@ -1,0 +1,8 @@
+{
+  "asset_id": "CHR_OTHER_NPCS_N05",
+  "source_path": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N05_v001.png",
+  "tool": "built_in_image_gen",
+  "prompt": "EDIT TARGET: supplied CHR_OTHER_NPCS_N05_v001 full body head-nurse drawing. Production preparation ONLY, not a redesign. Remove its neutral gray background and floor/shadow, giving genuine transparent alpha. Preserve this exact adult woman's face, age, bun, cream navy-trim nurse cap, long dark navy belted uniform, complete hands, stockings, shoes, proportions, pose, high oblique exploration view, painterly brushwork and all colors. Keep the complete hair, cap and both shoes within generous transparent margins. Do not beautify, alter clothing, add props, change expression or relight. White/cream cap and collars are opaque, do not mistake them for background. No floor, no cast shadow, no rim, no glow, no outline or text. This is the same approved drawing isolated for Godot 2D scene compositing; no additional body or pose.",
+  "generated_path": "C:/Users/23623/.codex/generated_images/01a13afd-29cd-7b90-b2e9-586f1ffdee3b/exec-5387444e-ad60-41b9-85ac-8c45e061b8ab.png",
+  "purpose": "Preserve user drawing; transparent technical preparation only."
+}

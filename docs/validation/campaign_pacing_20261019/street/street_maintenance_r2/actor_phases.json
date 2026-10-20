@@ -1,0 +1,101 @@
+[
+  {
+    "actor": "dog",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.07824635505676,
+    "phase": "idle",
+    "room": "street_maintenance",
+    "street_s": 0.0
+  },
+  {
+    "actor": "faceless",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.26766300201416,
+    "phase": "idle",
+    "room": "street_maintenance",
+    "street_s": 0.0
+  },
+  {
+    "actor": "treatment_pharmacist",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.35626029968262,
+    "phase": "idle",
+    "room": "street_maintenance",
+    "street_s": 0.0
+  },
+  {
+    "actor": "cleaner",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.07824635505676,
+    "phase": "idle",
+    "room": "street_maintenance",
+    "street_s": 0.0
+  },
+  {
+    "actor": "labor",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.40652799606323,
+    "phase": "idle",
+    "room": "street_maintenance",
+    "street_s": 0.0
+  },
+  {
+    "actor": "stitched",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.35626029968262,
+    "phase": "idle",
+    "room": "street_maintenance",
+    "street_s": 0.0
+  },
+  {
+    "actor": "faceless",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.30810022354126,
+    "phase": "walk",
+    "room": "street_maintenance",
+    "street_s": 0.266666666666667
+  },
+  {
+    "actor": "treatment_pharmacist",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.39371013641357,
+    "phase": "box_flip",
+    "room": "street_maintenance",
+    "street_s": 0.266666666666667
+  },
+  {
+    "actor": "cleaner",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.09967756271362,
+    "phase": "cart_park",
+    "room": "street_maintenance",
+    "street_s": 0.266666666666667
+  },
+  {
+    "actor": "treatment_pharmacist",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.69356632232666,
+    "phase": "box_number",
+    "room": "street_maintenance",
+    "street_s": 4.0
+  },
+  {
+    "actor": "cleaner",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.19062852859497,
+    "phase": "walk",
+    "room": "street_maintenance",
+    "street_s": 4.0
+  }
+]

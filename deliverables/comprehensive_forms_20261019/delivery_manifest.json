@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "kind": "comprehensive_art_form_delivery",
+  "items": 640,
+  "counts_by_category": {
+    "家具与物品": 199,
+    "人物母图": 163,
+    "动作": 146,
+    "开场与结局": 14,
+    "场景": 57,
+    "UI与功能界面": 38,
+    "通用效果与接入": 23
+  },
+  "counts_by_review": {
+    "candidate": 154,
+    "codex": 140,
+    "pending": 180,
+    "deferred": 2,
+    "accepted": 113,
+    "partial": 4,
+    "user_supplied": 42,
+    "blocked": 5
+  },
+  "files_matched": 345,
+  "original579_retained": true,
+  "effects23_retained": true,
+  "source_art_and_game_unchanged_during_form_build": true,
+  "source_art_and_game_unchanged": true,
+  "legacy_entry_banners": [
+    "01_美术资产表_可分享.html",
+    "02_声音资产状态_可分享.html"
+  ],
+  "runtime_contract_sha256": "03525eb8af370c7381bf79561a0030cf27bc1feadfdff9cfd6ccf42884b6492c",
+  "scene_contract_sha256": "0150ddb257aef141a66952a106f1ead1d3a34c2aaeee472955d476820f9b1a9f",
+  "protected_files_checked": 1111,
+  "entry": "C:\\Users\\23623\\Desktop\\NEW\\最终表单\\03_全项目美术资产总表_含已有素材_可分享.html",
+  "ui": "C:\\Users\\23623\\Desktop\\NEW\\最终表单\\04_UI与功能界面表_可分享.html",
+  "game_changes": false,
+  "images_generated": false,
+  "inventory_snapshot": {
+    "count": 345,
+    "path": "data/inventory_snapshot.json",
+    "sha256": "03ca2704792f285b37e3a35308ecb4ae009e749cea03da3248664a52c2aaab31",
+    "captured_at": "2026-10-20T02:52:32+08:00"
+  },
+  "approval_baseline": "data/approval_baseline.json",
+  "browser_verified": false,
+  "vector_pose_guides": 32,
+  "sha256": {
+    "03_全项目美术资产总表_含已有素材_可分享.html": "2c4bc814054c5f67825e4f2ca24d074659da2be692445eeee11dd1eba7b4c10f",
+    "04_UI与功能界面表_可分享.html": "f793da2993b390d1b86ab2f8a8707087162f7dd959c55bf3da74b992c9c158ff"
+  },
+  "ui_generation_refresh": {
+    "updated_at": "2026-10-20T08:55:41.223765+08:00",
+    "functional_items": 38,
+    "image_orders": 8,
+    "expected_png": 19,
+    "shared_layers": 7,
+    "individual_node_icons": 12,
+    "source": "tmp/play_feedback_20261020/source.txt P134,P267–340,P523–545,P617–640",
+    "no_dialogue_frame_for_opening": true,
+    "non_ui_unchanged": true,
+    "backup": "C:\\Users\\23623\\Desktop\\NEW\\最终表单\\历史\\UI生成说明修订前_20261020_085540"
+  },
+  "previous_verification_checks": 4730
+}

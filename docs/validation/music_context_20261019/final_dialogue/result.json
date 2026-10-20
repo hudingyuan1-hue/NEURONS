@@ -1,0 +1,29 @@
+{
+  "failures": [],
+  "passes": [
+    "normal dialogue defaults to automatic and settings reflect the mode",
+    "Chinese primary node labels preserve twelve stable skill IDs and thirteen CRT code styles",
+    "freezer inspection explains prerequisites and unlock currency in Chinese",
+    "runtime resource balances use Chinese names",
+    "display formatting normalizes punctuation and ellipsis without corrupting emoticons or authored unusual glyphs",
+    "silent reading duration depends on text length, not render frame count",
+    "source dialogue stays unchanged while the rendered line uses half-width punctuation",
+    "dialogue freezes gameplay but lets already playing scene sound continue",
+    "dialogue cannot start a new gameplay sound while its action clock is frozen",
+    "already playing music and ambience continue across dialogue",
+    "manual pause freezes background audio and dialogue reading time together",
+    "automatic dialogue advances after readable real time without a Continue click",
+    "in-game manual dialogue setting persists through the shared front-end preferences file",
+    "manual dialogue mode does not advance after its reading duration",
+    "manual Continue action advances the actual dialogue queue",
+    "an available registered voice starts on the voice channel",
+    "manual Continue cannot truncate an unfinished available voice",
+    "paused unfinished voice remains in the real audio snapshot",
+    "JSON preserves dialogue reading time and original line data",
+    "paused JSON voice restores its playback cursor without replaying the line",
+    "automatic mode waits for voice even after short subtitle reading time has elapsed",
+    "automatic mode advances after actual voice playback finishes",
+    "settings pause all non-interface channels according to manual pause policy"
+  ],
+  "scope": "Actual process seconds, world/audio cursors, manual/automatic queue, JSON and display punctuation. Temporary in-memory silent streams; no final speech or subjective listening claim."
+}

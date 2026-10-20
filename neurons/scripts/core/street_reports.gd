@@ -27,7 +27,7 @@ func _side(id:String,delta:float) -> void:
   var goal:=Vector2(at.x,1.05 if at.y<size.y*.5 else size.y-1.05)
   if not floor.walkable(goal):return
   for to in battle.map.doors(str(a.room)):
-   if goal.distance_to(battle.map.doorway(str(a.room),str(to)))<1.2:return
+   if goal.distance_to(floor.portal(str(to)).at)<1.2:return
   a.report_side_goal=battle.xy(goal)
  battle._move_actor(id,battle.vector(a.report_side_goal),delta)
 func actor(id:String,delta:float) -> void:

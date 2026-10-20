@@ -1,0 +1,13 @@
+{
+  "failures": [],
+  "passes": [
+    "ordinary complete bed fits floor",
+    "bed cannot project through unbroken boundary",
+    "real doorway permits swept bed extension",
+    "bed cannot pass doorway narrower than its sides",
+    "void enclosed between four legal corners still blocks bed",
+    "concave missing floor blocks bed edge between legal corners",
+    "bed sweep stops before crossing real hole",
+    "original furniture collision remains effective"
+  ]
+}

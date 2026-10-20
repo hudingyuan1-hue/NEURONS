@@ -1,0 +1,27 @@
+{
+  "attempt": 1,
+  "cycle": 1,
+  "dialogue_lines": 0,
+  "elapsed": 180.033333333326,
+  "ending": {},
+  "gripped": true,
+  "hp": 100,
+  "key_owner": "",
+  "level": 1,
+  "neurons": 13,
+  "paused": false,
+  "phase": "autonomy",
+  "pos": [
+    3.31083202362061,
+    2.89395356178284
+  ],
+  "pose": "idle",
+  "room": "bedroom",
+  "route_points": 0,
+  "search_active": false,
+  "search_count": 8,
+  "search_elapsed": 4.0,
+  "sp": 92,
+  "target": -1,
+  "world_time": 48.9833333333331
+}

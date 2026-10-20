@@ -1,0 +1,17 @@
+{
+  "fixture": "Actual performance snapshot after 98 ordinary process frames, no actor/route edits.",
+  "method_seconds": {
+    "actor:assistant": 0.000047,
+    "actor:back": 0.000073,
+    "actor:director": 0.000052,
+    "actor:mother": 0.000247,
+    "actor:postop": 0.000166,
+    "actor:register_nurse": 0.00005,
+    "actor:speaker": 0.000171,
+    "actor:transporter_asylum": 0.000018,
+    "actor:warder": 0.000841,
+    "actor:wheelchair": 0.000022,
+    "full_tick": 2.426676,
+    "hero": 2.372476
+  }
+}

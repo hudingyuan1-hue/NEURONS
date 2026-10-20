@@ -256,7 +256,11 @@ func test_natural_escape() -> void:
   if module.data.status!="active":break
  check(seen_living and module.data.status=="ending" and app.rules.hp>0,"zero-resource autonomous body evades a live hunter to the real exit")
  check(module.data.hunter.hp==60 and app.rules.sp==100,"natural autonomous escape does not require attacks, resource purchase or mental damage")
- check(module.data.feedback_receipts.has("saw") and module.data.feedback_receipts.has("evaded"),"natural pursuit presents both actual sight and real evade feedback")
+ var actual_hunter_hits:int=0
+ for receipt in app.rules.settled:
+  if app.rules.settled[receipt]=="hunter_hit":actual_hunter_hits+=1
+ var actual_feedback:Array=module.data.feedback_receipts.keys()+module.data.get("ending_feedback",[])
+ check(module.data.feedback_receipts.has("saw") and app.rules.hp==100-actual_hunter_hits*int(module.config.rules.attack_hp_damage) and ((actual_hunter_hits>0 and "hit" in actual_feedback) or (actual_hunter_hits==0 and "evaded" in actual_feedback)),"natural pursuit sight and hit/evade feedback match unique contact receipts and exact damage")
  pair=fresh();app=pair.app;module=pair.module
  stationary(pair,Vector2(1.7,0.9),Vector2(1,0.9));force_attack(pair)
  app.rules.loading=true

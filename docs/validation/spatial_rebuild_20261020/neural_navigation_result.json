@@ -1,0 +1,542 @@
+{
+  "checks": 1643,
+  "failures": [],
+  "rooms": [
+    {
+      "room": "L4:atrium",
+      "shape": "以皮层核心为中心的四向褶皱中庭，中央可绕行环带，四个短颈通道；外缘是宽大连续脑回，不是四面直墙。",
+      "size_m": [
+        10.8,
+        9.6
+      ],
+      "targets": {
+        "atrium:0": 4.28,
+        "atrium:1": 6.15,
+        "atrium:2": 3.26,
+        "door:body": 6.02,
+        "door:decision": 8.79,
+        "door:memory": 0.38,
+        "door:visual": 6.14
+      }
+    },
+    {
+      "room": "L4:memory",
+      "shape": "横向舒展的记忆弧室，档案架顺后侧弧壁，查阅桌居中、右侧为照片和影音角，前侧保留休息角。",
+      "size_m": [
+        11.0,
+        7.2
+      ],
+      "targets": {
+        "door:atrium": 0.38,
+        "door:visual": 5.72,
+        "memory:0": 5.01,
+        "memory:1": 4.49,
+        "memory:2": 4.9,
+        "memory:3": 5.02,
+        "memory:4": 3.77,
+        "memory:5": 2.78,
+        "memory:6": 2.48
+      }
+    },
+    {
+      "room": "L4:visual",
+      "shape": "以宽弧形影像屏为后壁焦点的扇形影像厅，弧形两排座椅保留中间和两侧通道。",
+      "size_m": [
+        10.4,
+        8.4
+      ],
+      "targets": {
+        "door:atrium": 0.38,
+        "door:memory": 5.26,
+        "visual:0": 2.21,
+        "visual:1": 7.08,
+        "visual:2": 7.8,
+        "visual:3": 4.69,
+        "visual:4": 5.05,
+        "visual:5": 3.51
+      }
+    },
+    {
+      "room": "L4:decision",
+      "shape": "前后内凹的宽肾形意象决策室，中心弯曲会议桌，后侧行动指令板和两端工作设施。",
+      "size_m": [
+        10.8,
+        7.6
+      ],
+      "targets": {
+        "decision:0": 3.47,
+        "decision:1": 4.82,
+        "decision:2": 5.61,
+        "decision:3": 1.82,
+        "decision:4": 5.76,
+        "decision:5": 4.51,
+        "decision:6": 3.26,
+        "door:atrium": 0.38,
+        "door:bridge": 7.7
+      }
+    },
+    {
+      "room": "L4:body",
+      "shape": "椭圆身体感知厅，中央宽阔身体映射地面，模型与身体定位板在后侧，镜屏在右后，检查与触觉台分居两侧。",
+      "size_m": [
+        10.8,
+        8.0
+      ],
+      "targets": {
+        "body:0": 2.33,
+        "body:1": 3.03,
+        "body:2": 4.57,
+        "body:3": 6.74,
+        "body:4": 6.92,
+        "body:5": 5.25,
+        "body:6": 3.34,
+        "body:7": 2.72,
+        "door:atrium": 0.38
+      }
+    },
+    {
+      "room": "L4:bridge",
+      "shape": "左右端扩展、中央收窄的哑铃形胼胝桥，中央控制节点稍外展，桥下为不可行走的纤维背景；不是大房间画一条光带。",
+      "size_m": [
+        15.0,
+        6.4
+      ],
+      "targets": {
+        "bridge:0": 6.49,
+        "bridge:1": 2.41,
+        "bridge:2": 11.79,
+        "bridge:3": 12.01,
+        "door:decision": 0.38,
+        "door:index": 2.23,
+        "door:rhythm": 2.23,
+        "door:switch": 13.33
+      }
+    },
+    {
+      "room": "L4:rhythm",
+      "shape": "有入口宽区、连续S形转折和中段上伸等待支颈的节律通路，路外明确没有地面；沿路外置脉冲仪和接驳节点。",
+      "size_m": [
+        15.0,
+        8.0
+      ],
+      "targets": {
+        "door:bridge": 0.38,
+        "door:identity": 14.34,
+        "rhythm:0": 0.97,
+        "rhythm:1": 4.11,
+        "rhythm:2": 6.9,
+        "rhythm:3": 11.72
+      }
+    },
+    {
+      "room": "L4:index",
+      "shape": "圆阔索引档案厅，中央近圆终端，档案柜沿弧墙排列，左右环形绕行通道清楚。",
+      "size_m": [
+        10.4,
+        9.0
+      ],
+      "targets": {
+        "door:bridge": 0.38,
+        "door:switch": 4.58,
+        "index:0": 7.35,
+        "index:1": 6.81,
+        "index:2": 6.82,
+        "index:3": 4.32,
+        "index:4": 2.27,
+        "index:5": 3.45
+      }
+    },
+    {
+      "room": "L4:switch",
+      "shape": "三臂Y形切换分岔，西侧来路在中央节点分成东北与东南两支；三臂之间是纤维空隙而非整块房间地面。",
+      "size_m": [
+        13.0,
+        10.0
+      ],
+      "targets": {
+        "door:bridge": 11.66,
+        "door:index": 0.38,
+        "door:verify": 8.8,
+        "switch:0": 3.77,
+        "switch:1": 1.66,
+        "switch:2": 9.41
+      }
+    },
+    {
+      "room": "L4:verify",
+      "shape": "横向胶囊形核验出口，中央两侧控制台和清楚的贯穿通道，后侧薄屏、前侧长椅与边缘设备。",
+      "size_m": [
+        12.0,
+        6.8
+      ],
+      "targets": {
+        "door:combat_exit": 10.26,
+        "door:identity": 7.87,
+        "door:switch": 0.38,
+        "verify:0": 3.11,
+        "verify:1": 7.38,
+        "verify:2": 4.04,
+        "verify:3": 9.16,
+        "verify:4": 8.53,
+        "verify:5": 5.01,
+        "verify:6": 1.68
+      }
+    },
+    {
+      "room": "L4:identity",
+      "shape": "左右对称但外墙连续起伏的身份核查弧室，双面身份镜居中，两侧核验台各自独立，后侧档案柜对应。",
+      "size_m": [
+        12.0,
+        7.2
+      ],
+      "targets": {
+        "door:rhythm": 0.38,
+        "door:verify": 10.69,
+        "identity:0": 1.75,
+        "identity:1": 2.67,
+        "identity:2": 4.72,
+        "identity:3": 7.45,
+        "identity:4": 2.51,
+        "identity:5": 8.23,
+        "identity:6": 8.92
+      }
+    },
+    {
+      "room": "L5:atrium",
+      "shape": "以皮层核心为中心的四向褶皱中庭，中央可绕行环带，四个短颈通道；外缘是宽大连续脑回，不是四面直墙。",
+      "size_m": [
+        10.8,
+        9.6
+      ],
+      "targets": {
+        "atrium:0": 4.28,
+        "atrium:1": 6.15,
+        "atrium:2": 3.26,
+        "door:body": 6.02,
+        "door:decision": 8.79,
+        "door:memory": 0.38,
+        "door:visual": 6.14
+      }
+    },
+    {
+      "room": "L5:memory",
+      "shape": "横向舒展的记忆弧室，档案架顺后侧弧壁，查阅桌居中、右侧为照片和影音角，前侧保留休息角。",
+      "size_m": [
+        11.0,
+        7.2
+      ],
+      "targets": {
+        "door:atrium": 0.38,
+        "door:visual": 5.72,
+        "memory:0": 5.01,
+        "memory:1": 4.49,
+        "memory:2": 4.9,
+        "memory:3": 5.02,
+        "memory:4": 3.77,
+        "memory:5": 2.78,
+        "memory:6": 2.48
+      }
+    },
+    {
+      "room": "L5:visual",
+      "shape": "以宽弧形影像屏为后壁焦点的扇形影像厅，弧形两排座椅保留中间和两侧通道。",
+      "size_m": [
+        10.4,
+        8.4
+      ],
+      "targets": {
+        "door:atrium": 0.38,
+        "door:memory": 5.26,
+        "visual:0": 2.21,
+        "visual:1": 7.08,
+        "visual:2": 7.8,
+        "visual:3": 4.69,
+        "visual:4": 5.05,
+        "visual:5": 3.51
+      }
+    },
+    {
+      "room": "L5:decision",
+      "shape": "前后内凹的宽肾形意象决策室，中心弯曲会议桌，后侧行动指令板和两端工作设施。",
+      "size_m": [
+        10.8,
+        7.6
+      ],
+      "targets": {
+        "decision:0": 3.47,
+        "decision:1": 4.82,
+        "decision:2": 5.61,
+        "decision:3": 1.82,
+        "decision:4": 5.76,
+        "decision:5": 4.51,
+        "decision:6": 3.26,
+        "door:atrium": 0.38,
+        "door:bridge": 7.7
+      }
+    },
+    {
+      "room": "L5:body",
+      "shape": "椭圆身体感知厅，中央宽阔身体映射地面，模型与身体定位板在后侧，镜屏在右后，检查与触觉台分居两侧。",
+      "size_m": [
+        10.8,
+        8.0
+      ],
+      "targets": {
+        "body:0": 2.33,
+        "body:1": 3.03,
+        "body:2": 4.57,
+        "body:3": 6.74,
+        "body:4": 6.92,
+        "body:5": 5.25,
+        "body:6": 3.34,
+        "body:7": 2.72,
+        "door:atrium": 0.38
+      }
+    },
+    {
+      "room": "L5:bridge",
+      "shape": "左右端扩展、中央收窄的哑铃形胼胝桥，中央控制节点稍外展，桥下为不可行走的纤维背景；不是大房间画一条光带。",
+      "size_m": [
+        15.0,
+        6.4
+      ],
+      "targets": {
+        "bridge:0": 6.49,
+        "bridge:1": 2.41,
+        "bridge:2": 11.79,
+        "bridge:3": 12.01,
+        "door:decision": 0.38,
+        "door:index": 2.23,
+        "door:rhythm": 2.23,
+        "door:switch": 13.33
+      }
+    },
+    {
+      "room": "L5:rhythm",
+      "shape": "有入口宽区、连续S形转折和中段上伸等待支颈的节律通路，路外明确没有地面；沿路外置脉冲仪和接驳节点。",
+      "size_m": [
+        15.0,
+        8.0
+      ],
+      "targets": {
+        "door:bridge": 0.38,
+        "door:identity": 14.34,
+        "rhythm:0": 0.97,
+        "rhythm:1": 4.11,
+        "rhythm:2": 6.9,
+        "rhythm:3": 11.72
+      }
+    },
+    {
+      "room": "L5:index",
+      "shape": "圆阔索引档案厅，中央近圆终端，档案柜沿弧墙排列，左右环形绕行通道清楚。",
+      "size_m": [
+        10.4,
+        9.0
+      ],
+      "targets": {
+        "door:bridge": 0.38,
+        "door:switch": 4.58,
+        "index:0": 7.35,
+        "index:1": 6.81,
+        "index:2": 6.82,
+        "index:3": 4.32,
+        "index:4": 2.27,
+        "index:5": 3.45
+      }
+    },
+    {
+      "room": "L5:switch",
+      "shape": "三臂Y形切换分岔，西侧来路在中央节点分成东北与东南两支；三臂之间是纤维空隙而非整块房间地面。",
+      "size_m": [
+        13.0,
+        10.0
+      ],
+      "targets": {
+        "door:bridge": 11.66,
+        "door:index": 0.38,
+        "door:verify": 8.8,
+        "switch:0": 3.77,
+        "switch:1": 1.66,
+        "switch:2": 9.41
+      }
+    },
+    {
+      "room": "L5:verify",
+      "shape": "横向胶囊形核验出口，中央两侧控制台和清楚的贯穿通道，后侧薄屏、前侧长椅与边缘设备。",
+      "size_m": [
+        12.0,
+        6.8
+      ],
+      "targets": {
+        "door:hippocampus": 10.26,
+        "door:identity": 7.87,
+        "door:switch": 0.38,
+        "verify:0": 3.11,
+        "verify:1": 7.38,
+        "verify:2": 4.04,
+        "verify:3": 9.16,
+        "verify:4": 8.53,
+        "verify:5": 5.01,
+        "verify:6": 1.68
+      }
+    },
+    {
+      "room": "L5:identity",
+      "shape": "左右对称但外墙连续起伏的身份核查弧室，双面身份镜居中，两侧核验台各自独立，后侧档案柜对应。",
+      "size_m": [
+        12.0,
+        7.2
+      ],
+      "targets": {
+        "door:rhythm": 0.38,
+        "door:verify": 10.69,
+        "identity:0": 1.75,
+        "identity:1": 2.67,
+        "identity:2": 4.72,
+        "identity:3": 7.45,
+        "identity:4": 2.51,
+        "identity:5": 8.23,
+        "identity:6": 8.92
+      }
+    },
+    {
+      "room": "L5:hippocampus",
+      "shape": "海马回廊为环绕内侧记忆岛的回环空间，中央下方核心陈列与两侧弯曲档案设施形成可绕行航迹。",
+      "size_m": [
+        14.0,
+        10.0
+      ],
+      "targets": {
+        "door:thalamus": 9.81,
+        "door:verify": 0.38,
+        "memory_clothes_rack": 5.34,
+        "时光装置": 4.61,
+        "档案柜": 5.43,
+        "航迹地图": 6.83,
+        "记录终端": 6.75,
+        "记忆胶囊": 6.32,
+        "记忆陈列": 9.28,
+        "陈列墙": 4.33
+      }
+    },
+    {
+      "room": "L5:thalamus",
+      "shape": "中央中继核心与放射连杆构成多向中继厅，环形绕行带外有方向性短颈，不是矩形大房间。",
+      "size_m": [
+        14.0,
+        13.0
+      ],
+      "targets": {
+        "door:amygdala": 8.41,
+        "door:basal": 8.3,
+        "door:brainstem": 11.17,
+        "door:cerebellum": 12.23,
+        "door:hippocampus": 0.38,
+        "door:hypothalamus": 11.95,
+        "中继核心": 9.24,
+        "控制台": 5.62,
+        "电缆接点": 7.69,
+        "监测屏": 3.86,
+        "维护面板": 7.89,
+        "设备柜": 5.52
+      }
+    },
+    {
+      "room": "L5:cerebellum",
+      "shape": "横向长条小脑折列室，中央多列弯曲薄折叶形成连续校准阵列，前后两条纵向通道相通，两端展开操作区。",
+      "size_m": [
+        19.0,
+        7.6
+      ],
+      "targets": {
+        "door:amygdala": 17.89,
+        "door:thalamus": 0.38,
+        "储物柜": 2.39,
+        "姿态架": 15.58,
+        "工具柜": 4.74,
+        "平衡平台": 11.46,
+        "折叶阵列": 10.19,
+        "控制终端": 2.45,
+        "校准机械臂": 6.94
+      }
+    },
+    {
+      "room": "L5:hypothalamus",
+      "shape": "中间贯通控制走廊连接左冷却、右加热两翼，左右机组向中心打开，冷暖分区来自实际设备及灯光。",
+      "size_m": [
+        15.0,
+        9.2
+      ],
+      "targets": {
+        "door:basal": 7.88,
+        "door:thalamus": 0.38,
+        "传感器": 6.01,
+        "冷却管路与液罐": 4.03,
+        "加热装置": 4.15,
+        "温控台": 4.95,
+        "监测屏": 7.11,
+        "维护设备": 8.08,
+        "设备柜": 6.59,
+        "阀组": 6.95
+      }
+    },
+    {
+      "room": "L5:basal",
+      "shape": "外圈环形选动通道围绕中央选择核心和内环屏障，四个缺口通向中心，通道的环状结构真实参与绕行。",
+      "size_m": [
+        13.0,
+        12.0
+      ],
+      "targets": {
+        "door:hypothalamus": 11.7,
+        "door:thalamus": 0.38,
+        "动作选择核心": 5.67,
+        "机械臂": 3.02,
+        "校准台": 6.46,
+        "测试舱": 8.49,
+        "状态屏": 3.35,
+        "维护区": 6.11,
+        "路径终端": 9.32
+      }
+    },
+    {
+      "room": "L5:amygdala",
+      "shape": "两个圆阔情绪室以短窄切换通道相连，左室警觉偏暖、右室安抚偏冷；外轮廓本身是双室，不是方房间中插一道直墙。",
+      "size_m": [
+        16.0,
+        9.0
+      ],
+      "targets": {
+        "door:cerebellum": 14.26,
+        "door:thalamus": 0.38,
+        "低刺激灯": 4.65,
+        "安抚座椅": 2.65,
+        "封抑柜": 9.98,
+        "情绪记录台": 3.91,
+        "监测屏": 12.08,
+        "观察位": 12.0,
+        "警报灯": 12.93,
+        "隔离储柜": 2.23
+      }
+    },
+    {
+      "room": "L5:brainstem",
+      "shape": "下沉圆形脉冲井与周边环形检修走道，中央发光核心位于井中，护栏沿圆弧连续，四周设备分布在走道外缘。",
+      "size_m": [
+        12.0,
+        12.0
+      ],
+      "targets": {
+        "door:street_exit": 11.59,
+        "door:thalamus": 0.38,
+        "导管接口": 2.76,
+        "检修平台": 9.46,
+        "生命监测终端": 5.21,
+        "维生控制台": 5.42,
+        "脉冲核心与护栏": 9.39
+      }
+    }
+  ],
+  "scope": "Actual Godot metre geometry, static floor/void collision, standing targets and portal routes. Does not assert whole-game pacing or formal art acceptance."
+}

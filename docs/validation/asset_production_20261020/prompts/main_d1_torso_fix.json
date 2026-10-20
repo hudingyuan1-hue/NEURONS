@@ -1,0 +1,6 @@
+{
+  "prompt": "Precise local edit of this transparent cutout parts atlas, not a new composition. Keep the 4x4 cell positions, transparency, all15 parts, their views, colors, existing brushwork and sizes unchanged. Edit ONLY the torso in row1 column2. This is a back-view SLEEVELESS cutout torso component that will have separately animated arms: remove the baked-in hanging sleeve and white cuff currently along its screen-right side, and any upper-arm volume on either side. Repaint a continuous pajama shirt back panel from the two shoulder armhole roots down to the original shirt hem, with natural side seams, narrow open armhole boundaries and solid painted joint overlap behind the armholes. Keep the collar and back center seam; no front buttons or pocket. No arms/hands/cuffs attached to the torso. Do not move or resize the torso, head or any other parts. Do not add text, grids, shadows or background. Genuine transparent PNG.",
+  "reference": "neurons/assets/production/characters/main/CHR_MAIN_BLUE_D1_PARTS_v001.png",
+  "method": "built-in image_gen",
+  "transparent_background": true
+}

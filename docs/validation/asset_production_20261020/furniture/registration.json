@@ -1,0 +1,1759 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "status": "first_bedroom_group_gpu_pending",
+  "slots": {
+    "bedroom:bed": {
+      "asset_id": "ENV_BED",
+      "original_id": "bed",
+      "original_kind": "bed",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        0.35,
+        0.35,
+        2.05,
+        1.0
+      ],
+      "world_dimensions_m": [
+        2.05,
+        1.0,
+        0.55
+      ],
+      "sprite": "bed",
+      "layers": [
+        "bed",
+        "bed_blanket"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_sprite_calibrated_pending_combination_gpu",
+      "runtime_binding_prepared": true
+    },
+    "bedroom:bedside": {
+      "asset_id": "ENV_BEDSIDE_OPEN",
+      "original_id": "bedside",
+      "original_kind": "drawer",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        2.65,
+        0.4,
+        0.55,
+        0.5
+      ],
+      "world_dimensions_m": [
+        0.55,
+        0.5,
+        0.6
+      ],
+      "sprite": "bedside",
+      "layers": [
+        "bedside",
+        "bedside_drawer",
+        "bedside_book",
+        "bedside_clock"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_sprite_calibrated_pending_combination_gpu",
+      "runtime_binding_prepared": true
+    },
+    "bedroom:desk": {
+      "asset_id": "ENV_DESK_OPEN",
+      "original_id": "desk",
+      "original_kind": "desk",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        0.35,
+        3.9,
+        1.65,
+        0.6
+      ],
+      "world_dimensions_m": [
+        1.65,
+        0.6,
+        0.76
+      ],
+      "sprite": "desk",
+      "layers": [
+        "desk",
+        "desk_paper"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_sprite_calibrated_pending_combination_gpu",
+      "runtime_binding_prepared": true
+    },
+    "bedroom:chair": {
+      "asset_id": "ENV_CHAIR",
+      "original_id": "chair",
+      "original_kind": "chair",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        1.0,
+        2.95,
+        0.55,
+        0.55
+      ],
+      "world_dimensions_m": [
+        0.55,
+        0.55,
+        1.05
+      ],
+      "sprite": "chair",
+      "layers": [
+        "chair"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_sprite_calibrated_pending_combination_gpu",
+      "runtime_binding_prepared": true
+    },
+    "bedroom:fan": {
+      "asset_id": "ENV_FAN",
+      "original_id": "fan",
+      "original_kind": "fan",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        3.5,
+        0.35,
+        0.45,
+        0.45
+      ],
+      "world_dimensions_m": [
+        0.45,
+        0.45,
+        1.35
+      ],
+      "sprite": "fan",
+      "layers": [
+        "fan_rotor",
+        "fan"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_sprite_calibrated_pending_combination_gpu",
+      "runtime_binding_prepared": true
+    },
+    "bedroom:rack": {
+      "asset_id": "ENV_COATRACK",
+      "original_id": "rack",
+      "original_kind": "rack",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        4.2,
+        0.45,
+        0.5,
+        0.5
+      ],
+      "world_dimensions_m": [
+        0.5,
+        0.5,
+        1.75
+      ],
+      "sprite": "rack",
+      "layers": [
+        "rack",
+        "rack_coat"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_sprite_calibrated_pending_combination_gpu",
+      "runtime_binding_prepared": true
+    },
+    "bedroom:books": {
+      "asset_id": "ENV_BOOKSHELF",
+      "original_id": "books",
+      "original_kind": "books",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        5.65,
+        2.0,
+        0.45,
+        0.75
+      ],
+      "world_dimensions_m": [
+        0.45,
+        0.75,
+        1.6
+      ],
+      "sprite": "books",
+      "layers": [
+        "books"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_sprite_calibrated_pending_combination_gpu",
+      "runtime_binding_prepared": true
+    },
+    "bedroom:wardrobe": {
+      "asset_id": "ENV_WARDROBE_OPEN",
+      "original_id": "wardrobe",
+      "original_kind": "wardrobe",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        5.5,
+        3.05,
+        0.6,
+        1.4
+      ],
+      "world_dimensions_m": [
+        0.6,
+        1.4,
+        2.05
+      ],
+      "sprite": "wardrobe",
+      "layers": [
+        "wardrobe"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_sprite_calibrated_pending_combination_gpu",
+      "runtime_binding_prepared": true
+    },
+    "bedroom:stool": {
+      "asset_id": "ENV_STOOL",
+      "original_id": "stool",
+      "original_kind": "stool",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        2.35,
+        4.0,
+        0.4,
+        0.4
+      ],
+      "world_dimensions_m": [
+        0.4,
+        0.4,
+        0.45
+      ],
+      "sprite": "stool",
+      "layers": [
+        "stool",
+        "stool_parcel"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_source_backed_up_integration_deferred_for_current_user_priority",
+      "runtime_binding_prepared": false
+    },
+    "bedroom:box": {
+      "asset_id": "ENV_TRUNK_OPEN",
+      "original_id": "box",
+      "original_kind": "box",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        3.1,
+        3.95,
+        0.6,
+        0.6
+      ],
+      "world_dimensions_m": [
+        0.6,
+        0.6,
+        0.9
+      ],
+      "sprite": "box_lower",
+      "layers": [
+        "box_lower",
+        "box_upper"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_source_backed_up_integration_deferred_for_current_user_priority",
+      "runtime_binding_prepared": false
+    },
+    "bedroom:storage": {
+      "asset_id": "ENV_STORAGE_OPEN",
+      "original_id": "storage",
+      "original_kind": "drawer",
+      "source_geometry": "neurons/data/room_spaces.json:rooms.bedroom.furniture",
+      "world_rect_m": [
+        5.45,
+        0.95,
+        0.65,
+        0.8
+      ],
+      "world_dimensions_m": [
+        0.65,
+        0.8,
+        1.4
+      ],
+      "sprite": "storage",
+      "layers": [
+        "storage"
+      ],
+      "state_owner": "app/search_actions/drawer_open/world_visual_time",
+      "mechanics_changed": false,
+      "status": "painted_source_backed_up_integration_deferred_for_current_user_priority",
+      "runtime_binding_prepared": false
+    }
+  },
+  "sprites": {
+    "bed": {
+      "id": "bed",
+      "texture": "res://assets/production/furniture/bed_v001.png",
+      "sha256": "4ad47af71fc1919e06f5827aa29aa740613ed53e5e0520f4ee62fe6ef54415b4",
+      "atlas": "a",
+      "atlas_region_px": [
+        16,
+        130,
+        640,
+        490
+      ],
+      "pixel_size": [
+        624,
+        360
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        34,
+        50,
+        606,
+        324
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.55366,
+      "near_invisible_alpha_1_7_fraction": 0.02701,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "top_plane",
+        "source_plane_px": [
+          [
+            74,
+            112
+          ],
+          [
+            539,
+            87
+          ],
+          [
+            111,
+            225
+          ]
+        ],
+        "plane_height_m": 0.55,
+        "ground_anchor_px": [
+          318,
+          267
+        ]
+      }
+    },
+    "bedside": {
+      "id": "bedside",
+      "texture": "res://assets/production/furniture/bedside_v001.png",
+      "sha256": "1643d6f3e44a0b7a1265062c4625a8b9b9b975f7a25344e7002e69fa522baaef",
+      "atlas": "a",
+      "atlas_region_px": [
+        640,
+        130,
+        986,
+        500
+      ],
+      "pixel_size": [
+        346,
+        370
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        41,
+        55,
+        278,
+        338
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.50725,
+      "near_invisible_alpha_1_7_fraction": 0.02189,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "prism_faces",
+        "source_top_px": [
+          [
+            42,
+            72
+          ],
+          [
+            232,
+            55
+          ],
+          [
+            277,
+            158
+          ],
+          [
+            83,
+            175
+          ]
+        ],
+        "source_west_px": [
+          [
+            42,
+            72
+          ],
+          [
+            83,
+            175
+          ],
+          [
+            83,
+            338
+          ],
+          [
+            42,
+            254
+          ]
+        ],
+        "source_south_px": [
+          [
+            83,
+            175
+          ],
+          [
+            277,
+            158
+          ],
+          [
+            277,
+            320
+          ],
+          [
+            83,
+            338
+          ]
+        ],
+        "ground_anchor_px": [
+          159,
+          285
+        ]
+      }
+    },
+    "desk": {
+      "id": "desk",
+      "texture": "res://assets/production/furniture/desk_v001.png",
+      "sha256": "6578a4c2b387c7b160129b3fb60e3f976dd7d44da58ddb131d64f969adc7560b",
+      "atlas": "a",
+      "atlas_region_px": [
+        988,
+        130,
+        1536,
+        500
+      ],
+      "pixel_size": [
+        548,
+        370
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        25,
+        54,
+        508,
+        330
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.67127,
+      "near_invisible_alpha_1_7_fraction": 0.04741,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "desk_parts",
+        "source_plane_px": [
+          [
+            25,
+            84
+          ],
+          [
+            466,
+            54
+          ],
+          [
+            62,
+            173
+          ]
+        ],
+        "tabletop_polygon_px": [
+          [
+            25,
+            84
+          ],
+          [
+            466,
+            54
+          ],
+          [
+            508,
+            140
+          ],
+          [
+            507,
+            157
+          ],
+          [
+            61,
+            184
+          ],
+          [
+            25,
+            102
+          ]
+        ],
+        "leg_parts": [
+          {
+            "source_rect_px": [
+              42,
+              133,
+              15,
+              125
+            ],
+            "world_fraction": [
+              0.07,
+              0.12
+            ]
+          },
+          {
+            "source_rect_px": [
+              428,
+              136,
+              18,
+              99
+            ],
+            "world_fraction": [
+              0.93,
+              0.12
+            ]
+          },
+          {
+            "source_rect_px": [
+              78,
+              172,
+              17,
+              158
+            ],
+            "world_fraction": [
+              0.07,
+              0.88
+            ]
+          },
+          {
+            "source_rect_px": [
+              475,
+              151,
+              19,
+              157
+            ],
+            "world_fraction": [
+              0.93,
+              0.88
+            ]
+          }
+        ],
+        "ground_anchor_px": [
+          275,
+          286
+        ]
+      }
+    },
+    "chair": {
+      "id": "chair",
+      "texture": "res://assets/production/furniture/chair_v001.png",
+      "sha256": "b1b17c75872e2bac7effac6a4605d8c622565d9857bde231c1fd59628ff97723",
+      "atlas": "a",
+      "atlas_region_px": [
+        80,
+        500,
+        470,
+        960
+      ],
+      "pixel_size": [
+        390,
+        460
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        95,
+        28,
+        302,
+        375
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.74099,
+      "near_invisible_alpha_1_7_fraction": 0.05142,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "height_anchor",
+        "ground_anchor_px": [
+          192,
+          328
+        ],
+        "top_y_px": 28
+      }
+    },
+    "bedside_drawer": {
+      "id": "bedside_drawer",
+      "texture": "res://assets/production/furniture/bedside_drawer_v001.png",
+      "sha256": "4d0b7996c017a24b92b7a7334303f801859cf372dd3e5ea4ad891085f7bd9cfe",
+      "atlas": "a",
+      "atlas_region_px": [
+        500,
+        550,
+        980,
+        915
+      ],
+      "pixel_size": [
+        480,
+        365
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        58,
+        58,
+        447,
+        290
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.52086,
+      "near_invisible_alpha_1_7_fraction": 0.05471,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "drawer_component",
+        "source_top_px": [
+          [
+            62,
+            82
+          ],
+          [
+            360,
+            62
+          ],
+          [
+            444,
+            171
+          ],
+          [
+            104,
+            195
+          ]
+        ],
+        "source_west_px": [
+          [
+            62,
+            82
+          ],
+          [
+            104,
+            195
+          ],
+          [
+            104,
+            290
+          ],
+          [
+            62,
+            170
+          ]
+        ],
+        "source_south_px": [
+          [
+            104,
+            195
+          ],
+          [
+            444,
+            171
+          ],
+          [
+            444,
+            263
+          ],
+          [
+            104,
+            290
+          ]
+        ],
+        "drawer_count": 3,
+        "open_drawer_index": 1,
+        "travel_m": 0.28,
+        "attachment": "bedside"
+      }
+    },
+    "bed_blanket": {
+      "id": "bed_blanket",
+      "texture": "res://assets/production/furniture/bed_blanket_v001.png",
+      "sha256": "c313211b8361685d756fb51ad990dcb9a1ce9ea30ff395c59cce701d4f818c9f",
+      "atlas": "a",
+      "atlas_region_px": [
+        990,
+        540,
+        1536,
+        940
+      ],
+      "pixel_size": [
+        546,
+        400
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        17,
+        79,
+        514,
+        283
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.64142,
+      "near_invisible_alpha_1_7_fraction": 0.03477,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "top_plane",
+        "source_plane_px": [
+          [
+            57,
+            104
+          ],
+          [
+            416,
+            79
+          ],
+          [
+            82,
+            231
+          ]
+        ],
+        "rect_fraction": [
+          0.33,
+          0,
+          0.67,
+          1
+        ],
+        "height_offset_m": 0.035,
+        "attachment": "bed_top"
+      }
+    },
+    "fan": {
+      "id": "fan",
+      "texture": "res://assets/production/furniture/fan_v001.png",
+      "sha256": "0bc2a1f2d39b3d8fc56b3f83e23d18c7f3f33e117f632cacb9698e87e84d9583",
+      "atlas": "b",
+      "atlas_region_px": [
+        100,
+        10,
+        470,
+        500
+      ],
+      "pixel_size": [
+        370,
+        490
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        65,
+        43,
+        272,
+        454
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.71727,
+      "near_invisible_alpha_1_7_fraction": 0.05926,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "height_anchor",
+        "ground_anchor_px": [
+          175,
+          420
+        ],
+        "top_y_px": 43,
+        "rotor_center_px": [
+          175,
+          149
+        ],
+        "rotor_diameter_source_px": 178
+      }
+    },
+    "rack": {
+      "id": "rack",
+      "texture": "res://assets/production/furniture/rack_v001.png",
+      "sha256": "56ab6e34bd1d298a2b042300d8bc6df42823ca8a93a86f68775b05d8e13c3247",
+      "atlas": "b",
+      "atlas_region_px": [
+        600,
+        0,
+        940,
+        500
+      ],
+      "pixel_size": [
+        340,
+        500
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        82,
+        27,
+        238,
+        478
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.86924,
+      "near_invisible_alpha_1_7_fraction": 0.03579,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "height_anchor",
+        "ground_anchor_px": [
+          160,
+          426
+        ],
+        "top_y_px": 27
+      }
+    },
+    "books": {
+      "id": "books",
+      "texture": "res://assets/production/furniture/books_v001.png",
+      "sha256": "b34978f5a72b93986d414f3d1b9573e14504e4c21ba0ab000ed0120bdab9dc0a",
+      "atlas": "b",
+      "atlas_region_px": [
+        1090,
+        0,
+        1430,
+        500
+      ],
+      "pixel_size": [
+        340,
+        500
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        100,
+        21,
+        272,
+        490
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.5731,
+      "near_invisible_alpha_1_7_fraction": 0.02515,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "prism_faces",
+        "source_top_px": [
+          [
+            100,
+            34
+          ],
+          [
+            177,
+            21
+          ],
+          [
+            271,
+            108
+          ],
+          [
+            194,
+            124
+          ]
+        ],
+        "source_west_px": [
+          [
+            100,
+            34
+          ],
+          [
+            194,
+            124
+          ],
+          [
+            194,
+            489
+          ],
+          [
+            100,
+            393
+          ]
+        ],
+        "source_south_px": [
+          [
+            194,
+            124
+          ],
+          [
+            271,
+            108
+          ],
+          [
+            272,
+            473
+          ],
+          [
+            194,
+            489
+          ]
+        ],
+        "ground_anchor_px": [
+          183,
+          442
+        ]
+      }
+    },
+    "wardrobe": {
+      "id": "wardrobe",
+      "texture": "res://assets/production/furniture/wardrobe_v001.png",
+      "sha256": "b7e8d2913a779cfc830ff59af4f7cc95e47bbc3961edc6e6ea8e0f90747dec9a",
+      "atlas": "b",
+      "atlas_region_px": [
+        100,
+        500,
+        470,
+        1024
+      ],
+      "pixel_size": [
+        370,
+        524
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        70,
+        10,
+        285,
+        482
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.52765,
+      "near_invisible_alpha_1_7_fraction": 0.02524,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "prism_faces",
+        "source_top_px": [
+          [
+            72,
+            33
+          ],
+          [
+            180,
+            10
+          ],
+          [
+            281,
+            95
+          ],
+          [
+            176,
+            128
+          ]
+        ],
+        "source_west_px": [
+          [
+            72,
+            33
+          ],
+          [
+            176,
+            128
+          ],
+          [
+            176,
+            480
+          ],
+          [
+            72,
+            385
+          ]
+        ],
+        "source_south_px": [
+          [
+            176,
+            128
+          ],
+          [
+            281,
+            95
+          ],
+          [
+            283,
+            446
+          ],
+          [
+            176,
+            480
+          ]
+        ],
+        "ground_anchor_px": [
+          176,
+          433
+        ]
+      }
+    },
+    "fan_rotor": {
+      "id": "fan_rotor",
+      "texture": "res://assets/production/furniture/fan_rotor_v001.png",
+      "sha256": "b8410c260d0d10b8aa9e924884813c43f2badc5eb035d0cd06b4136698a176c8",
+      "atlas": "b",
+      "atlas_region_px": [
+        550,
+        530,
+        1010,
+        960
+      ],
+      "pixel_size": [
+        460,
+        430
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        78,
+        44,
+        394,
+        369
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.77643,
+      "near_invisible_alpha_1_7_fraction": 0.02583,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "rotor_component",
+        "pivot_px": [
+          218,
+          204
+        ],
+        "diameter_px": 322,
+        "attachment": "fan_cage"
+      }
+    },
+    "wardrobe_open": {
+      "id": "wardrobe_open",
+      "texture": "res://assets/production/furniture/wardrobe_open_v001.png",
+      "sha256": "5682ca8d9b63341d64a57fa5960287ffbae01a4fc960c4c0aabf0beac9742f95",
+      "atlas": "b",
+      "atlas_region_px": [
+        1090,
+        490,
+        1500,
+        1024
+      ],
+      "pixel_size": [
+        410,
+        534
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        51,
+        22,
+        324,
+        489
+      ],
+      "raw_alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.52119,
+      "near_invisible_alpha_1_7_fraction": 0.0214,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "reserved_open_variant",
+        "ground_anchor_px": [
+          192,
+          431
+        ],
+        "top_y_px": 22,
+        "attachment": "wardrobe",
+        "binding_note": "Preserved separate variant; hinge-plane calibration pending. Do not automatically replace actual closed doors with an uncalibrated full-image warp."
+      }
+    },
+    "stool": {
+      "id": "stool",
+      "texture": "res://assets/production/furniture/stool_v001.png",
+      "sha256": "b3f02116b07c6d8a43cdd92081b39d9a7ee6b8a01affaa92ab9bb24217af1d42",
+      "atlas": "c",
+      "atlas_region_px": [
+        80,
+        100,
+        390,
+        400
+      ],
+      "pixel_size": [
+        310,
+        300
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        64,
+        34,
+        275,
+        278
+      ],
+      "raw_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.62498,
+      "near_invisible_alpha_1_7_fraction": 0.04565,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "height_anchor",
+        "ground_anchor_px": [
+          168,
+          246
+        ],
+        "top_y_px": 36
+      }
+    },
+    "stool_parcel": {
+      "id": "stool_parcel",
+      "texture": "res://assets/production/furniture/stool_parcel_v001.png",
+      "sha256": "8ba91b053b77af2675e6581d2448a66af3cfc970ce8945a6c7d414018a42e560",
+      "atlas": "c",
+      "atlas_region_px": [
+        480,
+        100,
+        790,
+        395
+      ],
+      "pixel_size": [
+        310,
+        295
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        42,
+        32,
+        265,
+        251
+      ],
+      "raw_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.51207,
+      "near_invisible_alpha_1_7_fraction": 0.03652,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "prism_faces",
+        "source_top_px": [
+          [
+            41,
+            51
+          ],
+          [
+            206,
+            33
+          ],
+          [
+            266,
+            99
+          ],
+          [
+            100,
+            118
+          ]
+        ],
+        "source_west_px": [
+          [
+            41,
+            51
+          ],
+          [
+            100,
+            118
+          ],
+          [
+            100,
+            252
+          ],
+          [
+            40,
+            179
+          ]
+        ],
+        "source_south_px": [
+          [
+            100,
+            118
+          ],
+          [
+            266,
+            99
+          ],
+          [
+            266,
+            233
+          ],
+          [
+            100,
+            252
+          ]
+        ],
+        "attachment": "stool_seat"
+      }
+    },
+    "box_lower": {
+      "id": "box_lower",
+      "texture": "res://assets/production/furniture/box_lower_v001.png",
+      "sha256": "4b5b62906251e32a8ea4ea57d35c2374801ddde2dbb4e0027d8253d597db6ff2",
+      "atlas": "c",
+      "atlas_region_px": [
+        845,
+        40,
+        1230,
+        400
+      ],
+      "pixel_size": [
+        385,
+        360
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        34,
+        43,
+        341,
+        336
+      ],
+      "raw_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.4436,
+      "near_invisible_alpha_1_7_fraction": 0.02053,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "prism_faces",
+        "source_top_px": [
+          [
+            40,
+            71
+          ],
+          [
+            232,
+            45
+          ],
+          [
+            337,
+            171
+          ],
+          [
+            143,
+            198
+          ]
+        ],
+        "source_west_px": [
+          [
+            40,
+            71
+          ],
+          [
+            143,
+            198
+          ],
+          [
+            142,
+            338
+          ],
+          [
+            39,
+            241
+          ]
+        ],
+        "source_south_px": [
+          [
+            143,
+            198
+          ],
+          [
+            337,
+            171
+          ],
+          [
+            331,
+            310
+          ],
+          [
+            142,
+            338
+          ]
+        ]
+      }
+    },
+    "box_upper": {
+      "id": "box_upper",
+      "texture": "res://assets/production/furniture/box_upper_v001.png",
+      "sha256": "8d732aa64d4248974a774ac67701303dd7d3a6597ba16a97b16a04b7f4dad2a6",
+      "atlas": "c",
+      "atlas_region_px": [
+        25,
+        460,
+        470,
+        880
+      ],
+      "pixel_size": [
+        445,
+        420
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        55,
+        56,
+        400,
+        365
+      ],
+      "raw_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.50422,
+      "near_invisible_alpha_1_7_fraction": 0.02134,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "prism_faces",
+        "source_top_px": [
+          [
+            52,
+            90
+          ],
+          [
+            305,
+            58
+          ],
+          [
+            404,
+            183
+          ],
+          [
+            125,
+            215
+          ]
+        ],
+        "source_west_px": [
+          [
+            52,
+            90
+          ],
+          [
+            125,
+            215
+          ],
+          [
+            119,
+            365
+          ],
+          [
+            54,
+            255
+          ]
+        ],
+        "source_south_px": [
+          [
+            125,
+            215
+          ],
+          [
+            404,
+            183
+          ],
+          [
+            404,
+            329
+          ],
+          [
+            119,
+            365
+          ]
+        ],
+        "attachment": "box_lower"
+      }
+    },
+    "storage": {
+      "id": "storage",
+      "texture": "res://assets/production/furniture/storage_v001.png",
+      "sha256": "024f3a41c1fbb95ea9a6b4530a19268e27ba0ddd67bd13c834147ce1c2201b37",
+      "atlas": "c",
+      "atlas_region_px": [
+        510,
+        410,
+        805,
+        885
+      ],
+      "pixel_size": [
+        295,
+        475
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        40,
+        33,
+        257,
+        434
+      ],
+      "raw_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.42961,
+      "near_invisible_alpha_1_7_fraction": 0.03297,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "prism_faces",
+        "source_top_px": [
+          [
+            41,
+            50
+          ],
+          [
+            172,
+            32
+          ],
+          [
+            253,
+            116
+          ],
+          [
+            100,
+            140
+          ]
+        ],
+        "source_west_px": [
+          [
+            100,
+            140
+          ],
+          [
+            253,
+            116
+          ],
+          [
+            253,
+            413
+          ],
+          [
+            101,
+            434
+          ]
+        ],
+        "source_south_px": [
+          [
+            41,
+            50
+          ],
+          [
+            100,
+            140
+          ],
+          [
+            101,
+            434
+          ],
+          [
+            41,
+            361
+          ]
+        ],
+        "front_plane_policy": "Drawer fronts follow the existing west operation face; neutral side wood is reprojected separately."
+      }
+    },
+    "rack_coat": {
+      "id": "rack_coat",
+      "texture": "res://assets/production/furniture/rack_coat_v001.png",
+      "sha256": "36f6193e5765d1b176ea5d559c0638ac7910ad77fd53c7326019ac08670aa432",
+      "atlas": "c",
+      "atlas_region_px": [
+        870,
+        390,
+        1220,
+        920
+      ],
+      "pixel_size": [
+        350,
+        530
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        51,
+        40,
+        301,
+        482
+      ],
+      "raw_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.551,
+      "near_invisible_alpha_1_7_fraction": 0.02596,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "attachment_height",
+        "attachment_anchor_px": [
+          185,
+          43
+        ],
+        "bottom_y_px": 482,
+        "physical_height_m": 1.35,
+        "right_cuff_px": [
+          297,
+          319
+        ],
+        "attachment": "rack_hooks"
+      }
+    },
+    "bedside_book": {
+      "id": "bedside_book",
+      "texture": "res://assets/production/furniture/bedside_book_v001.png",
+      "sha256": "e5d077f50918fd4dcba99ca752dc52949ce6cd77d6dd787bf793ae155361f7e4",
+      "atlas": "c",
+      "atlas_region_px": [
+        55,
+        955,
+        420,
+        1220
+      ],
+      "pixel_size": [
+        365,
+        265
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        50,
+        62,
+        312,
+        227
+      ],
+      "raw_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.63778,
+      "near_invisible_alpha_1_7_fraction": 0.02091,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "top_plane",
+        "source_plane_px": [
+          [
+            51,
+            76
+          ],
+          [
+            243,
+            63
+          ],
+          [
+            99,
+            186
+          ]
+        ],
+        "attachment": "bedside_top"
+      }
+    },
+    "bedside_clock": {
+      "id": "bedside_clock",
+      "texture": "res://assets/production/furniture/bedside_clock_v001.png",
+      "sha256": "88ee49f725f69947f08d1f41d1de5b7358a9e77c733e7f3810d5596d3cd20e67",
+      "atlas": "c",
+      "atlas_region_px": [
+        525,
+        960,
+        760,
+        1210
+      ],
+      "pixel_size": [
+        235,
+        250
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        52,
+        51,
+        188,
+        202
+      ],
+      "raw_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.70853,
+      "near_invisible_alpha_1_7_fraction": 0.02094,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "height_anchor",
+        "ground_anchor_px": [
+          120,
+          196
+        ],
+        "top_y_px": 54,
+        "physical_height_m": 0.22,
+        "attachment": "bedside_top"
+      }
+    },
+    "desk_paper": {
+      "id": "desk_paper",
+      "texture": "res://assets/production/furniture/desk_paper_v001.png",
+      "sha256": "a1d38db88fa21d5fa0fc901beab71657c031d8de21b6c22469f2bf983e95006a",
+      "atlas": "c",
+      "atlas_region_px": [
+        860,
+        940,
+        1240,
+        1240
+      ],
+      "pixel_size": [
+        380,
+        300
+      ],
+      "meaningful_alpha_threshold": 16,
+      "alpha_bbox": [
+        44,
+        60,
+        335,
+        243
+      ],
+      "raw_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.65876,
+      "near_invisible_alpha_1_7_fraction": 0.02368,
+      "processing": "Exact rectangular crop only; alpha and painted source pixels unchanged.",
+      "runtime_binding_enabled": false,
+      "calibration": {
+        "mode": "top_plane",
+        "source_plane_px": [
+          [
+            58,
+            86
+          ],
+          [
+            226,
+            61
+          ],
+          [
+            116,
+            220
+          ]
+        ],
+        "attachment": "desk_top"
+      }
+    }
+  },
+  "state_policy": "Application keeps all existing action phases, contact settlement and item ownership. This registry supplies drawing layers and contact-pixel locations only.",
+  "original_atlases": {
+    "a": {
+      "generated_original_path": "C:\\Users\\23623\\.codex\\generated_images\\01a154b7-b1d3-7a72-928d-69239c6a387f\\exec-d83f9eb4-fdbd-46dd-a699-b59ff196c663.png",
+      "master_copy_path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\furniture\\bedroom_furniture_atlas_a_v001.png",
+      "sha256": "bfc70cc646bbe0faee7adca4d6dd1af2befa3aef5924bf612c2538478e60790c",
+      "prompt": "Create production-ready transparent furniture sprite layers for the pure-2D narrative game NEURONS. Image 1 is an ORIENTATION/SCALE/REGISTRATION guide with a 3-column by 2-row grid of six items. Images 2 and 3 are approved PAINTING/VIEWPOINT style references only: dusty warm wood against grey-violet shadows, broad restrained hand-painted gouache/oil-like color masses, expressive selective brush edges, believable everyday joinery and quiet wear. Do not copy their room layout or add any room. Replace the primitive-looking guide silhouettes with complete, beautifully painted usable furniture sprites, maintaining each item's same cell, apparent footprint, oblique camera, long-axis direction, approximate size and bottom registration. Treat the guide only as orientation/scale support, not the final surface or aesthetic. Preserve open spaces between legs and cabinet shelves. All objects use the SAME fixed oblique three-quarter elevated camera: world horizontal axes nearly horizontal gently rising right, depth running down-right; visible west and south faces. No frontal UI icons, no top-down, no diamond-isometric redesign, no room floor. Exactly three equal columns, two equal rows, isolated non-touching sprites and truly transparent empty background, no text/grid/borders/shadows. Cell order: TOP LEFT a low ordinary worn wooden single bed, long axis running left-right exactly as the guide, headboard at the LEFT end, simple sturdy thin frame and four feet, a cream mattress and one soft used pillow, NO blanket; TOP MIDDLE a small warm dark-wood bedside cabinet CARCASS, visible top and two side walls with three EMPTY open drawer bays, no drawer fronts or movable objects; TOP RIGHT a simple old wooden writing desk with thin rounded-edge top, four true legs, believable modest joinery and side apron, EMPTY surface with no book/lamp/paper; BOTTOM LEFT a separate matching wooden chair with thin seat, gently shaped backrest, four independent legs and clear negative space; BOTTOM MIDDLE ONE open wooden drawer tray with its front panel and restrained brass pull, internal tray sidewalls visible, perspective and wood matching the bedside carcass, no cabinet, no other drawers; BOTTOM RIGHT ONE subdued grey-blue soft bed blanket resting in the exact same plane/orientation as the bed guide, a separate detachable layer with a couple of broad fabric creases and a small draped near edge, no bed/mattress/pillow underneath. Painterly internal form shading only; no cast shadow or ground reflection beyond each sprite, no props baked onto furniture, no person, no glow, no sparkles, no unrelated objects, no photographic/PBR finish, no dense random texture. Preserve all full item edges and feet with generous transparent cell margins. Warm muted local illumination consistent across all six layers, no spotlight.\n",
+      "tool": "built_in_image_gen",
+      "transparent_background": true,
+      "references": [
+        {
+          "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\docs\\validation\\asset_production_20261020\\furniture\\atlas_a_geometry_guide.png",
+          "sha256": "498e6ca92f1ffb6f00f299bdd1bae419c3f615779d73af4854fff6a2b9d7b32a",
+          "role": "geometry orientation/scale only"
+        },
+        {
+          "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\ENV_ROOM_L1_ROOM_BASE_v001.png",
+          "sha256": "4c19f3c82c3f01ced00b2e535ee8fbd1188a7473ab1c880bd82de864d0f1d6d6",
+          "role": "approved painterly style/camera only; no placement copying"
+        },
+        {
+          "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\dc3eba99-ce86-428f-81ef-e84724936df1.png",
+          "sha256": "14a83b229eb892ecc640e28b8a0828d199968a496ed3e06e2f39efdbe6295e7c",
+          "role": "approved painterly style/camera only; no placement copying"
+        }
+      ]
+    },
+    "b": {
+      "generated_original_path": "C:\\Users\\23623\\.codex\\generated_images\\01a154b7-b1d3-7a72-928d-69239c6a387f\\exec-645614ae-83ae-4833-a74c-70f0e1dcb2b2.png",
+      "master_copy_path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\furniture\\bedroom_furniture_atlas_b_v001.png",
+      "sha256": "f90ddbd06c3f618edda260e35e201365b7a56ece7dcd0f36377131457e7f3377",
+      "prompt": "Create production-ready transparent furniture sprite layers for the pure-2D narrative game NEURONS. Image 1 is an ORIENTATION/SCALE/REGISTRATION guide containing 3 columns by 2 rows. Images 2 and 3 are approved STYLE/CAMERA references only: dusty warm browns, quiet grey-violet shadows, restrained painterly oil/gouache color masses, selective irregular brush edges, believable worn household materials. Do not reproduce a room or any furniture placement. Paint complete expressive usable furniture from the guide, preserving each item's grid cell, apparent footprint, long-axis direction, scale and registration. The guide is not the final aesthetic: replace its rigid flat primitive appearance with real joinery, rounded everyday forms and selective painterly detail. Same fixed elevated oblique camera for every item, horizontal direction gently rising right and depth down-right; show the left-facing WEST and front SOUTH surfaces. No frontal icons or top-down. Exactly THREE equal columns and TWO equal rows, no grids/borders/labels, transparent negative space. Cells in reading order: TOP LEFT an old grey-teal metal standing electric fan BODY with a slender pole, round weighted foot and complete fine-wire safety cage, EMPTY cage with no fan blades/rotor inside (rotor is a separate layer below), exact orientation and size of the guide; TOP MIDDLE an EMPTY warm brown wooden standing coat rack with a rounded mast, branching curved hooks and three stable feet, no clothes/bags/coat; TOP RIGHT a narrow old wooden BOOKCASE whose opening faces LEFT as the guide, long footprint depth extending DOWN-RIGHT, genuine open shelves and varied muted book spines inside, believable side boards and thin shelves with empty gaps rather than a solid rectangular box; BOTTOM LEFT a plain worn tall wooden WARDROBE with two CLOSED subtly raised-panel doors, restrained small pulls, visible left-facing front, narrow depth side face, simple plinth, no clothes or objects outside; BOTTOM MIDDLE the detached THREE metal fan blades plus small central hub ONLY, oriented and scaled for the fan body's cage, no cage/stand/floor, with transparent empty space between the three curved blades, internal paint shading but no motion blur; BOTTOM RIGHT the SAME wardrobe with doors OPEN enough to reveal its EMPTY interior and hanging rail, same identity/dimensions/registration/perspective/wood as the closed wardrobe, no clothes or loose objects. Every sprite must be fully visible, separated from neighbours by generous transparent margins. True alpha background with no floor, environment, cast shadows, checkerboard, person, labels, glow, extra objects or photographic shine. Use broad calm painterly forms and limited selected wear, not all-over procedural scratches or uniform high-frequency noise.\n",
+      "tool": "built_in_image_gen",
+      "transparent_background": true,
+      "references": [
+        {
+          "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\docs\\validation\\asset_production_20261020\\furniture\\atlas_b_geometry_guide.png",
+          "sha256": "53bcf5db7fc3af93ea3af8d45f3b697a560787d33c2d017a04f260aef735ce07",
+          "role": "geometry orientation/scale only"
+        },
+        {
+          "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\ENV_ROOM_L1_ROOM_BASE_v001.png",
+          "sha256": "4c19f3c82c3f01ced00b2e535ee8fbd1188a7473ab1c880bd82de864d0f1d6d6",
+          "role": "approved painterly style/camera only; no placement copying"
+        },
+        {
+          "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\dc3eba99-ce86-428f-81ef-e84724936df1.png",
+          "sha256": "14a83b229eb892ecc640e28b8a0828d199968a496ed3e06e2f39efdbe6295e7c",
+          "role": "approved painterly style/camera only; no placement copying"
+        }
+      ]
+    },
+    "c": {
+      "generated_original_path": "C:\\Users\\23623\\.codex\\generated_images\\01a154b7-b1d3-7a72-928d-69239c6a387f\\exec-143094b9-0f29-4b1e-ac3a-139a74469f21.png",
+      "master_copy_path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons\\assets\\production\\furniture\\bedroom_furniture_atlas_c_v001.png",
+      "sha256": "d52413079a656d111ea87d7540ac1a70bb49277fac2f123c56c62e035572ef5e",
+      "prompt": "Create a production-ready transparent sprite atlas of nine separate household furniture/prop layers for the pure-2D painterly narrative game NEURONS. Image 1 is ONLY an orientation/size-registration guide laid out in THREE equal columns and THREE equal rows. Images 2 and 3 are approved painterly camera/style references; do not copy their room or placements. Render the guide items into complete believable painted objects matching the previously produced warm worn wooden furniture: broad quiet brown/ochre forms, grey-violet shadows, selective expressive brush edges, dusty blue painted metal, no photographic PBR gloss or random scratch noise. Keep SAME grid positions and elevated oblique camera, with horizontal axis gently rising to the right and depth down-right. These are world sprites, never frontal UI inventory icons. Exactly nine non-touching sprites, no floor, room, environment, cast shadow, halo, checkerboard, text, grid or border; truly transparent alpha outside each object and through gaps. Reading order: TOP LEFT one small round dusty-blue painted metal stool with a thin round seat and four separate slender legs, EMPTY top and no parcel; TOP MIDDLE one small closed faded ochre cardboard parcel for that stool, believable thin folded flaps, subtle seams and one simple blank tape strip, no text or symbols, no stool underneath; TOP RIGHT one square-ish squat muted blue-grey PLASTIC storage crate with closed fitted lid, rounded real corners, recessed side grip handles and subtle strengthening ribs, not a featureless cube; MIDDLE LEFT one closed ordinary larger worn cardboard shipping box with believable folded top flaps, sparse creasing, tape and a soft minor dent, no markings; MIDDLE MIDDLE a tall narrow worn warm-wood THREE-DRAWER chest, exact orientation/footprint of the guide, all drawers CLOSED, restrained small brass pulls and a simple foot plinth, drawer proportions suitable for the actual long cabinet shape rather than a cube; MIDDLE RIGHT one EMPTY off-white LONG LAB COAT hanging naturally from its collar, gentle three-quarter orientation and visible folded fabric, real collar/lapels/buttons/pockets/sleeves/cuffs, absolutely no body/head/hands/person/hanger/stand, a dark empty neck opening, natural asymmetric drape not a flat T-shirt icon; BOTTOM LEFT one small worn CLOSED BOOK with a muted teal-grey hard cover, warm paper edges visible, no title or letters, same oblique plane as furniture tops; BOTTOM MIDDLE one small old ROUND DESK CLOCK with muted brass-grey body, small standing feet, plain cream dial with simple tick marks and two dark hands, no numerals/letters, angled in the same elevated oblique view; BOTTOM RIGHT one thin loose blank PAPER DOCUMENT STACK with three offset sheets, warm ivory/grey paper, subtle curled corner, only a few faint illegible graphite traces and no readable writing/stamps. Do not combine any two objects or bake movable contents into furniture. Keep generous transparent margins and every foot/coat cuff/box edge fully visible. Restrained painterly local light consistent with the approved room references, no spotlight or surrounding glow.\n",
+      "tool": "built_in_image_gen",
+      "transparent_background": true,
+      "references": [
+        {
+          "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\docs\\validation\\asset_production_20261020\\furniture\\atlas_c_geometry_guide.png",
+          "sha256": "7db6382fe206efbd91fa1c31a6a3423aacf90475f2b98f14035f175c989b9762",
+          "role": "geometry orientation/scale only"
+        },
+        {
+          "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\ENV_ROOM_L1_ROOM_BASE_v001.png",
+          "sha256": "4c19f3c82c3f01ced00b2e535ee8fbd1188a7473ab1c880bd82de864d0f1d6d6",
+          "role": "approved painterly style/camera only; no placement copying"
+        },
+        {
+          "path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\新建文件夹\\dc3eba99-ce86-428f-81ef-e84724936df1.png",
+          "sha256": "14a83b229eb892ecc640e28b8a0828d199968a496ed3e06e2f39efdbe6295e7c",
+          "role": "approved painterly style/camera only; no placement copying"
+        }
+      ]
+    }
+  },
+  "runtime_3d": false,
+  "geometry_or_ids_modified": false
+}

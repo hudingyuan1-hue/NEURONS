@@ -42,12 +42,49 @@ func capture(name:String) -> void:
  await frames(2);RenderingServer.force_draw(false)
  root.get_texture().get_image().save_png(folder.path_join(name+".png"))
 
+func check_spatial_rebuild() -> void:
+ # Keep the existing release assertions; these specifically exercise dynamic
+ # history resources and real floor/void collision from the exported pack.
+ var history_manifest=JSON.parse_string(FileAccess.get_file_as_string("res://data/space_history_20261019/manifest.json"))
+ check(history_manifest is Dictionary and int(history_manifest.get("revision",0))==1,"exported original metric history has its revision manifest")
+ for filename:String in ["room_spaces.json","institution_spaces.json","neural_spaces.json","street_spaces.json"]:
+  var path:String="res://data/space_history_20261019/"+filename
+  var history=JSON.parse_string(FileAccess.get_file_as_string(path))
+  check(history is Dictionary and history.has("rooms"),"original metric JSON loads from PCK: "+filename)
+  if history_manifest is Dictionary:
+   check(FileAccess.get_sha256(path)==str(history_manifest.get("sha256",{}).get(filename,"")),"original metric PCK history matches preserved SHA256: "+filename)
+ var revision=load("res://scripts/world/spatial_revision.gd")
+ check(revision!=null and revision.CURRENT==2 and revision.LEGACY==1,"exported independent spatial revision loader resolves")
+ var street_script=load("res://scripts/world/street_layout.gd")
+ var side_old=street_script.new("street_side",1)
+ var side_new=street_script.new("street_side",2)
+ check(side_old.world_size()==Vector2(10,9) and side_new.world_size()==Vector2(7,13),"old side-room save stays10x9 while source-rebuilt side is7x13")
+ check(side_old.spatial_revision==1 and side_new.spatial_revision==2,"exported Street construction retains selected layout identity")
+ check(side_old.portal("street_plaza").at!=side_new.portal("street_plaza").at,"exported old and new side-room door coordinates resolve independently")
+ var cortex_script=load("res://scripts/world/cortex_layout.gd")
+ var branch=cortex_script.new("switch",2,2)
+ var bridge=cortex_script.new("bridge",2,2)
+ var atrium_old=cortex_script.new("atrium",2,1)
+ var atrium_new=cortex_script.new("atrium",2,2)
+ check(branch.space_spec().get("floor_polygon_m",[]).size()>4 and not branch.walkable(Vector2(1,1)) and not branch.walkable(Vector2(11,2)),"exported Y branch has real outside floor exclusion")
+ check(not bridge.walkable(Vector2(6,.8)) and bridge.walkable(bridge.furniture[0].at),"exported dumbbell bridge neck excludes the surrounding void")
+ check(atrium_old.world_size()==Vector2(10.8,7.6) and atrium_new.world_size()==Vector2(10.8,9.6),"exported old/new cortical metric sizes stay separate")
+ check(atrium_new.portal("memory").wall=="south" and atrium_new.portal("body").wall=="west","exported atrium links follow source cardinal directions")
+ var pulse=load("res://scripts/world/combat_layout.gd").new("brainstem",true,3,2)
+ var north:Vector2=pulse.portal("thalamus").at;var south:Vector2=pulse.portal("street_exit").at
+ check(not pulse.walkable(Vector2(6,6)) and not pulse.clear_segment(north,south,.21),"exported pulse pit cannot be walked or shortcut across")
+ check(not pulse.path(north,south).is_empty(),"exported pulse ring retains an actual route around the pit")
+ var quiet=load("res://scripts/world/institution_layout.gd").new("quiet",3,2)
+ check(quiet.space_spec().get("floor_polygon_m",[]).size()==6 and not quiet.walkable(Vector2(5.5,.3)),"exported quiet room retains its actual northeast setback")
+ side_old=null;side_new=null;branch=null;bridge=null;atrium_old=null;atrium_new=null;pulse=null;quiet=null
+
 func run_check() -> void:
  check(OS.has_feature("windows"),"package validation runs on target Windows platform")
  check(not FileAccess.file_exists("res://tests/test_rules.gd"),"test scripts are excluded from shipped pack")
  check(not DirAccess.dir_exists_absolute("res://DOCX"),"source documents are not shipped")
- for name in ["skills","home_rules","home_dialogue","tutorial_dialogue","search_actions","presentation","audio_bindings","hospital","hospital_observations","hidden_street","opening","asylum","asylum_records","asylum_ward_events","asylum_trace_events","asylum_isolation","asylum_observations","asylum_nurse_duty","asylum_intake","cortex_events","cortex_upper_events","key_discovery","room_spaces","institution_spaces","combat_chapter","street_chapter"]:
+ for name in ["skills","home_rules","home_dialogue","tutorial_dialogue","search_actions","presentation","audio_bindings","hospital","hospital_observations","hidden_street","opening","asylum","asylum_records","asylum_ward_events","asylum_trace_events","asylum_isolation","asylum_observations","asylum_nurse_duty","asylum_intake","cortex_events","cortex_upper_events","key_discovery","room_spaces","institution_spaces","neural_spaces","street_spaces","combat_chapter","street_chapter"]:
   check(JSON.parse_string(FileAccess.get_file_as_string("res://data/%s.json"%name)) is Dictionary,"dynamic JSON is in PCK: "+name)
+ check_spatial_rebuild()
  var corridor_layout=load("res://scripts/world/institution_layout.gd").new("corridor",3)
  var activity_layout=load("res://scripts/world/institution_layout.gd").new("activity",3)
  check(corridor_layout.world_size()==Vector2(16,5) and corridor_layout.furniture.size()==4 and corridor_layout.portals.size()==7,"exported corridor resolves new dimensions, original four searches and seven portals")
@@ -62,6 +99,12 @@ func run_check() -> void:
  check(versions_ok,"exported fresh L3 activates exactly seven intended versioned upper rooms; stairs uses existing base version")
  corridor_layout=null;activity_layout=null;package_session=null
  var bindings=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_bindings.json"))
+ var loop_data=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_loop_variants.json"))
+ check(loop_data is Dictionary and loop_data.get("variants",[]).size()==3,"exported package contains the three independent continuous loop mappings")
+ if loop_data is Dictionary:
+  for entry in loop_data.get("variants",[]):
+   var loop_stream=load(str(entry.stream))
+   check(loop_stream is AudioStream and absf(loop_stream.get_length()-float(entry.decoded_ogg_analysis.duration_s))<.03,"exported loop derivative loads with its verified decoded duration: "+str(entry.id))
  for entry in bindings.assets:
   check(load(str(entry.stream)) is AudioStream,"audio stream loads from PCK: "+str(entry.id))
  var catalog=load("res://scripts/presentation/asset_catalog.gd").new()
@@ -89,14 +132,24 @@ func run_check() -> void:
  check(app.menu.visible and app.menu.panel_mode=="tree","exported world body click opens actual freezer")
  await frames(15);await capture("03_windows_freezer")
  check(app.audio.assets.size()==bindings.assets.size(),"all configured development audio bindings load in exported game")
+ check(app.audio.loop_variants.size()==3 and not app.audio.loop_variants.has("MUS_END"),"continuous variants load without looping or replacing the one-shot ending")
+ check(app.character_presentation!=null and int(app.character_presentation.state().stage)==0,"exported new campaign initializes the separate long-term presentation without fabricated progress")
  check(app.menu.title.text=="星仓" and app.menu.pages.has("inventory"),"exported star-store title and independent inventory exist")
  app.menu.close_menu();app.closing_left=0;app.paused_manual=true;app.unlock_combat()
  check(app.session.data.level==5 and app.rules.mode=="combat" and app.CombatMap.rooms().size()==18,"exported L5 opens with eighteen rooms and combat rules")
+ check(int(app.combat.data.geometry_version)==3 and app.layout.spatial_version==3,"exported fresh combat uses per-room spatial version3")
+ var metric_cortex=load("res://scripts/world/cortex_layout.gd").new("atrium",2)
+ check(metric_cortex.world_size()==app.layout.world_size(),"exported same-name exploration/combat room reuses its architectural base")
+ metric_cortex=null
  check(app.combat.config.observations.size()==7 and app.combat.reactions!=null and app.combat.observations!=null,"exported combat includes actual evidence and witnessed-reaction modules")
  check(app.combat.Bed.polygon(Vector2(3,3),Vector2(1,1)).size()==4,"exported bed resolves oriented geometry implementation")
  await capture("04_windows_combat")
  app.unlock_street()
  check(app.session.data.level==6 and app.street.data.actors.size()==45 and app.StreetMap.rooms().size()==7,"exported Street loads all forty-five identities and seven segments")
+ check(app.street.hand_grips!=null,"exported dedicated four-identity physical hand grips load")
+ check(app.street.double_head!=null,"exported double-head physical counterattack module loads")
+ check(app.street.double_face_retreat!=null,"exported double-face injury retreat module loads")
+ check(JSON.parse_string(FileAccess.get_file_as_string("res://data/opening.json")).sequences.parasite.auto_play,"exported narrative introduction defaults to automatic playback")
  var entry:Vector2=app.hero_pos
  check(entry.is_equal_approx(app.layout.spawn()),"exported Street begins at actual entry")
  check(app.street.box!=null and app.street.data.box.id=="street_labor_box","exported Street loads the one physical labor box module")

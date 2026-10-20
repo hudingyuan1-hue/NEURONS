@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-10-18T18:32:12.579164+00:00",
+  "baseline": "2a5887f91a69e135979d504d333c5b2d289f3dcc",
+  "scope": "Source-backed Street double-face actual post-hurt local retreat only; production frozen after actual input verification. Existing source appearance, witnessed visible cast/head-turn/target/neutral rules unchanged.",
+  "source": {
+    "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+    "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+    "actually_read": [
+      "S3:P1728–1734 directly parsed original DOCX paragraphs"
+    ],
+    "adopted": [
+      "S3:P1734: actual injury followed by retreat, no new counter or automatic awakening/fourth-wall evidence.",
+      "S3:P1732: actual hit discards unfinished head turn without queued replay; completed witnessed orientation/cast facts remain.",
+      "S3:P1729–1731: existing appearance and actual visible intervention witness implementation retained."
+    ]
+  },
+  "existing_parameters_reused": {
+    "display_retreat_s": 0.5,
+    "actor_speed_m_s": 0.85,
+    "new_parameters": []
+  },
+  "protected_semantics": {
+    "actors": true,
+    "attacks": true,
+    "rooms": true,
+    "materials": true,
+    "all_original_test_parameter_values": true,
+    "no_new_attack_damage_timing_skills_keys_endings_music": true
+  },
+  "runtime_changes": [
+    "Actual HP decrease hooks reset one local retreat episode; legacy snapshot with existing actual hurt can reconstruct only current recovery.",
+    "Existing hurt response freezes movement first. Then existing .5 seconds at existing .85m/s, slowed by actual floor where applicable.",
+    "Every local outward/lateral step checks swept static wall clearance, actual living body centers, complete bed/chair footprints and existing portal approach. Blocked motion waits, no teleport or cross-room origin reuse.",
+    "Frozen local injury origin never tracks hidden actors or changes last_seen/follow/hostility; death/absence stop movement.",
+    "Actual normal process pause/JSON preserve remaining duration and actual position; completed episode cannot repeat.",
+    "Tiny code-rendered step motion follows actual traveled distance; remains placeholder art."
+  ],
+  "verification": {
+    "finite_r1": {
+      "passes": 25,
+      "failures": 0,
+      "rendered": null,
+      "scope": "Explicit position/solid/body/old-snapshot fixtures. Real paid CONTROL/legal knee or named direct actual injury; original hurt first, bounded source-backed neutral retreat, physical walls/body/wheelchair/portal, JSON and pause. No new counter, source identity, timing or stats. Not human full B7 or final art."
+    },
+    "live_r1": {
+      "passes": 14,
+      "failures": 0,
+      "rendered": true,
+      "scope": "One explicit neutral actor/body placement; actual paid CONTROL and F knee, ordinary process/AI original injury→local legal retreat→neutral. Actual Space/Book/Escape/running wheel, no injury/retreat/turn success fields filled after entry. Silent fixed30; not human full campaign, crowds or final art/audio."
+    },
+    "displays": {
+      "passes": 58,
+      "failures": 0,
+      "rendered": false,
+      "scope": "Eight positioned passive actor fixtures; selected clear floors/wall obstruction, actual production perception/exposure/motion, hurt, manual pause and JSON restore. Unknown glyph matches remain unavailable. Not natural all-cast/full-game/human art or audio acceptance."
+    },
+    "double_head_regression": {
+      "passes": 46,
+      "failures": 0,
+      "rendered": null,
+      "scope": "Declared body/wall/target movement fixtures; counters initiated only by actual paid CONTROL and legal knee contact. Real original hurt, AI approach/windup, swept two arms,15HP once, JSON/pause/neutral/loss/death. Not human crowds/final art or full B7."
+    },
+    "street_regression": {
+      "passes": 54,
+      "failures": 0,
+      "rendered": true,
+      "scope": "Declared room/health/actor and threshold fixtures; actual world/contact/return/save/achievement handlers and full-radius geometry. Not natural full-game, all 45 exclusive branches, final art or audio audition."
+    },
+    "natural": {
+      "passes": 6,
+      "failures": 0,
+      "rendered": true,
+      "scope": "Declared direct L5 entry (or explicit --street-entry-only); after entry no seed/NPC/resource/position/route/damage fixtures. Optional complete-ending flag waits original auto dialogue/unskipped tail; no completion fields injected. Fixed30 automatic real window, not human pacing or all branches."
+    }
+  },
+  "actual_live": {
+    "movie": "live_r1/continuous_silent.mp4",
+    "frames": 167,
+    "fps": 30,
+    "seconds": 5.566666666666666,
+    "inputs": [
+      "actually paid CONTROL",
+      "actual F key knee body contact",
+      "actual Space during original injury",
+      "actual header Book during movement",
+      "actual Escape resumes same episode",
+      "actual running wheel and camera restoration"
+    ],
+    "inspected": [
+      "live_r1/04_actual_neutral_after_retreat.png",
+      "tmp/double_face_retreat_movie_r1/frame00000095.png actual in-motion body and Chinese state label"
+    ],
+    "fixture": "One explicitly placed neutral body/host scene with cleared local furniture; no attack/hit/retreat/turn success fields injected after entry. Not natural crowds/final-art acceptance."
+  },
+  "natural": {
+    "result": "natural/result.json",
+    "passes": 6,
+    "failures": 0,
+    "rendered": true,
+    "elapsed_game_seconds": 92.666666666664,
+    "hp": 80,
+    "visits": [
+      "street_plaza",
+      "street_narrow",
+      "street_twisted",
+      "street_node",
+      "street_end"
+    ],
+    "ending_phases": [
+      "registration",
+      "dialogue",
+      "wake",
+      "planet",
+      "complete"
+    ],
+    "scope": "Declared direct L5 entry (or explicit --street-entry-only); after entry no seed/NPC/resource/position/route/damage fixtures. Optional complete-ending flag waits original auto dialogue/unskipped tail; no completion fields injected. Fixed30 automatic real window, not human pacing or all branches."
+  },
+  "file_sha256": {
+    "neurons/scripts/core/street_double_face_retreat.gd": "7c515b975a5e941a46951f1f6f0479e6463820038a76794ce662f466a923d635",
+    "neurons/scripts/core/street_chapter.gd": "f5419d655ab14a9ee2e1637f977f3bf042851cfdf05b66986a67c0a8913ca186",
+    "neurons/scripts/world/combat_view.gd": "3f94fbfac7d777efa3349031b28306f26b610d7909ac886e24f2dda9dfc64f03",
+    "neurons/tests/street_double_face_retreat_check.gd": "6696b499a99b111ef4f3333988f05e26f4b53520f5106ffed5335932e62d6670",
+    "neurons/tests/street_double_face_retreat_live_check.gd": "88a7a13b761ff9895773a375a36699cc7ed1366d86da42ed53d3337f9db8ddc1"
+  },
+  "limits": [
+    "Actual software-driven real window/input and explicit positive/negative fixtures, not human full-game or B7 acceptance.",
+    "Complex crowds and remaining exclusive ownership/prior-scar identity/source-glyph issues remain under original project plan; this increment does not assert their completion.",
+    "No new source art/audio generated, no default saves modified, no Git write operations."
+  ],
+  "failed_runs": []
+}

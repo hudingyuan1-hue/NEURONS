@@ -24,9 +24,11 @@ func clear_lines() -> void:
  app.sync_audio_pause()
 
 func music_id() -> String:
- return str(app.audio.channels.music[0].get_meta("cue_id",""))
+ return str(music_player().get_meta("cue_id",""))
 
-func cursor() -> float:return app.audio.channels.music[0].get_playback_position()
+func music_player():return app.audio.channels.music[maxi(0,app.audio.music_slot)]
+
+func cursor() -> float:return music_player().get_playback_position()
 
 func pump() -> void:
  clear_lines();app._process(0.0)
@@ -70,11 +72,11 @@ func _ready() -> void:
  var state:Dictionary=JSON.parse_string(JSON.stringify(app.audio.snapshot_playback()))
  await wait_real(.2);check(is_equal_approx(cursor(),before),"manual pause holds new music")
  app.audio.restore_playback(state);await wait_real(.12)
- check(music_id()=="MUS_HOSPITAL" and app.audio.channels.music[0].stream_paused and absf(cursor()-before)<.12,"audio JSON restores current replacement and paused seek without replay from zero")
+ check(music_id()=="MUS_HOSPITAL" and music_player().stream_paused and absf(cursor()-before)<.12,"audio JSON restores current replacement and paused seek without replay from zero")
  app.paused_manual=false;app.sync_audio_pause();before=cursor();await wait_real(.2)
  check(cursor()>before+.08,"restored replacement resumes after pause")
  app.audio.set_level("music",.25)
- check(is_equal_approx(app.audio.channels.music[0].volume_linear,float(app.audio.levels.master)*.25),"existing music volume controls apply to replacement")
+ check(is_equal_approx(music_player().volume_linear,float(app.audio.levels.master)*.25),"existing music volume controls apply to replacement")
  app.unlock_asylum();pump();check(music_id()=="MUS_HOSPITAL","actual asylum unlock selects hospital exploration recording")
  app.unlock_cortex();pump();check(music_id()=="MUS_HOSPITAL","actual cortex exploration selects hospital recording")
  app.unlock_combat();pump();check(music_id()=="MUS_DANGER","actual cortex battle selects danger recording")

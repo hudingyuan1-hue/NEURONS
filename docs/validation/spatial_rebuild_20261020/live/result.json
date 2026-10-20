@@ -1,0 +1,969 @@
+{
+  "failures": [],
+  "passes": [
+    "L1:bedroom actual entry is walkable",
+    "L1:bedroom camera projection round trip",
+    "L1:bedroom uses metric geometry",
+    "L1:bedroom full-size world viewport",
+    "L2:ward actual entry is walkable",
+    "L2:ward camera projection round trip",
+    "L2:ward uses metric geometry",
+    "L2:ward full-size world viewport",
+    "L2:lobby actual entry is walkable",
+    "L2:lobby camera projection round trip",
+    "L2:lobby uses metric geometry",
+    "L2:lobby full-size world viewport",
+    "L2:clinic actual entry is walkable",
+    "L2:clinic camera projection round trip",
+    "L2:clinic uses metric geometry",
+    "L2:clinic full-size world viewport",
+    "L2:pharmacy actual entry is walkable",
+    "L2:pharmacy camera projection round trip",
+    "L2:pharmacy uses metric geometry",
+    "L2:pharmacy full-size world viewport",
+    "L2:office actual entry is walkable",
+    "L2:office camera projection round trip",
+    "L2:office uses metric geometry",
+    "L2:office full-size world viewport",
+    "L3:ward actual entry is walkable",
+    "L3:ward camera projection round trip",
+    "L3:ward uses metric geometry",
+    "L3:ward full-size world viewport",
+    "L3:lobby actual entry is walkable",
+    "L3:lobby camera projection round trip",
+    "L3:lobby uses metric geometry",
+    "L3:lobby full-size world viewport",
+    "L3:clinic actual entry is walkable",
+    "L3:clinic camera projection round trip",
+    "L3:clinic uses metric geometry",
+    "L3:clinic full-size world viewport",
+    "L3:pharmacy actual entry is walkable",
+    "L3:pharmacy camera projection round trip",
+    "L3:pharmacy uses metric geometry",
+    "L3:pharmacy full-size world viewport",
+    "L3:office actual entry is walkable",
+    "L3:office camera projection round trip",
+    "L3:office uses metric geometry",
+    "L3:office full-size world viewport",
+    "L3:stairs actual entry is walkable",
+    "L3:stairs camera projection round trip",
+    "L3:stairs uses metric geometry",
+    "L3:stairs full-size world viewport",
+    "L3:corridor actual entry is walkable",
+    "L3:corridor camera projection round trip",
+    "L3:corridor uses metric geometry",
+    "L3:corridor full-size world viewport",
+    "L3:activity actual entry is walkable",
+    "L3:activity camera projection round trip",
+    "L3:activity uses metric geometry",
+    "L3:activity full-size world viewport",
+    "L3:group_therapy actual entry is walkable",
+    "L3:group_therapy camera projection round trip",
+    "L3:group_therapy uses metric geometry",
+    "L3:group_therapy full-size world viewport",
+    "L3:quiet actual entry is walkable",
+    "L3:quiet camera projection round trip",
+    "L3:quiet uses metric geometry",
+    "L3:quiet full-size world viewport",
+    "L3:bathroom actual entry is walkable",
+    "L3:bathroom camera projection round trip",
+    "L3:bathroom uses metric geometry",
+    "L3:bathroom full-size world viewport",
+    "L3:double_ward actual entry is walkable",
+    "L3:double_ward camera projection round trip",
+    "L3:double_ward uses metric geometry",
+    "L3:double_ward full-size world viewport",
+    "L3:workshop actual entry is walkable",
+    "L3:workshop camera projection round trip",
+    "L3:workshop uses metric geometry",
+    "L3:workshop full-size world viewport",
+    "fresh L4 selects version2 without migrating an in-flight save",
+    "L4:atrium actual entry is walkable",
+    "L4:atrium camera projection round trip",
+    "L4:atrium uses metric geometry",
+    "L4:atrium full-size world viewport",
+    "L4:memory actual entry is walkable",
+    "L4:memory camera projection round trip",
+    "L4:memory uses metric geometry",
+    "L4:memory full-size world viewport",
+    "L4:visual actual entry is walkable",
+    "L4:visual camera projection round trip",
+    "L4:visual uses metric geometry",
+    "L4:visual full-size world viewport",
+    "L4:decision actual entry is walkable",
+    "L4:decision camera projection round trip",
+    "L4:decision uses metric geometry",
+    "L4:decision full-size world viewport",
+    "L4:body actual entry is walkable",
+    "L4:body camera projection round trip",
+    "L4:body uses metric geometry",
+    "L4:body full-size world viewport",
+    "L4:bridge actual entry is walkable",
+    "L4:bridge camera projection round trip",
+    "L4:bridge uses metric geometry",
+    "L4:bridge full-size world viewport",
+    "L4:rhythm actual entry is walkable",
+    "L4:rhythm camera projection round trip",
+    "L4:rhythm uses metric geometry",
+    "L4:rhythm full-size world viewport",
+    "L4:index actual entry is walkable",
+    "L4:index camera projection round trip",
+    "L4:index uses metric geometry",
+    "L4:index full-size world viewport",
+    "L4:switch actual entry is walkable",
+    "L4:switch camera projection round trip",
+    "L4:switch uses metric geometry",
+    "L4:switch full-size world viewport",
+    "L4:verify actual entry is walkable",
+    "L4:verify camera projection round trip",
+    "L4:verify uses metric geometry",
+    "L4:verify full-size world viewport",
+    "L4:identity actual entry is walkable",
+    "L4:identity camera projection round trip",
+    "L4:identity uses metric geometry",
+    "L4:identity full-size world viewport",
+    "metric L4 actual JSON snapshot restores",
+    "metric L4 snapshot preserves new version",
+    "legacy L4 snapshot without version remains loadable",
+    "legacy active action keeps its old metre geometry",
+    "fresh L5 selects per-room geometry version3",
+    "L5:atrium actual entry is walkable",
+    "L5:atrium camera projection round trip",
+    "L5:atrium uses metric geometry",
+    "L5:atrium full-size world viewport",
+    "L5:memory actual entry is walkable",
+    "L5:memory camera projection round trip",
+    "L5:memory uses metric geometry",
+    "L5:memory full-size world viewport",
+    "L5:visual actual entry is walkable",
+    "L5:visual camera projection round trip",
+    "L5:visual uses metric geometry",
+    "L5:visual full-size world viewport",
+    "L5:decision actual entry is walkable",
+    "L5:decision camera projection round trip",
+    "L5:decision uses metric geometry",
+    "L5:decision full-size world viewport",
+    "L5:body actual entry is walkable",
+    "L5:body camera projection round trip",
+    "L5:body uses metric geometry",
+    "L5:body full-size world viewport",
+    "L5:bridge actual entry is walkable",
+    "L5:bridge camera projection round trip",
+    "L5:bridge uses metric geometry",
+    "L5:bridge full-size world viewport",
+    "L5:rhythm actual entry is walkable",
+    "L5:rhythm camera projection round trip",
+    "L5:rhythm uses metric geometry",
+    "L5:rhythm full-size world viewport",
+    "L5:index actual entry is walkable",
+    "L5:index camera projection round trip",
+    "L5:index uses metric geometry",
+    "L5:index full-size world viewport",
+    "L5:switch actual entry is walkable",
+    "L5:switch camera projection round trip",
+    "L5:switch uses metric geometry",
+    "L5:switch full-size world viewport",
+    "L5:verify actual entry is walkable",
+    "L5:verify camera projection round trip",
+    "L5:verify uses metric geometry",
+    "L5:verify full-size world viewport",
+    "L5:identity actual entry is walkable",
+    "L5:identity camera projection round trip",
+    "L5:identity uses metric geometry",
+    "L5:identity full-size world viewport",
+    "L5:hippocampus actual entry is walkable",
+    "L5:hippocampus camera projection round trip",
+    "L5:hippocampus uses metric geometry",
+    "L5:hippocampus full-size world viewport",
+    "L5:thalamus actual entry is walkable",
+    "L5:thalamus camera projection round trip",
+    "L5:thalamus uses metric geometry",
+    "L5:thalamus full-size world viewport",
+    "L5:cerebellum actual entry is walkable",
+    "L5:cerebellum camera projection round trip",
+    "L5:cerebellum uses metric geometry",
+    "L5:cerebellum full-size world viewport",
+    "L5:hypothalamus actual entry is walkable",
+    "L5:hypothalamus camera projection round trip",
+    "L5:hypothalamus uses metric geometry",
+    "L5:hypothalamus full-size world viewport",
+    "L5:basal actual entry is walkable",
+    "L5:basal camera projection round trip",
+    "L5:basal uses metric geometry",
+    "L5:basal full-size world viewport",
+    "L5:amygdala actual entry is walkable",
+    "L5:amygdala camera projection round trip",
+    "L5:amygdala uses metric geometry",
+    "L5:amygdala full-size world viewport",
+    "L5:brainstem actual entry is walkable",
+    "L5:brainstem camera projection round trip",
+    "L5:brainstem uses metric geometry",
+    "L5:brainstem full-size world viewport",
+    "new L5 layout round-trips actual snapshot",
+    "L6:street_plaza actual entry is walkable",
+    "L6:street_plaza camera projection round trip",
+    "L6:street_plaza uses metric geometry",
+    "L6:street_plaza full-size world viewport",
+    "L6:street_side actual entry is walkable",
+    "L6:street_side camera projection round trip",
+    "L6:street_side uses metric geometry",
+    "L6:street_side full-size world viewport",
+    "L6:street_narrow actual entry is walkable",
+    "L6:street_narrow camera projection round trip",
+    "L6:street_narrow uses metric geometry",
+    "L6:street_narrow full-size world viewport",
+    "L6:street_twisted actual entry is walkable",
+    "L6:street_twisted camera projection round trip",
+    "L6:street_twisted uses metric geometry",
+    "L6:street_twisted full-size world viewport",
+    "L6:street_maintenance actual entry is walkable",
+    "L6:street_maintenance camera projection round trip",
+    "L6:street_maintenance uses metric geometry",
+    "L6:street_maintenance full-size world viewport",
+    "L6:street_node actual entry is walkable",
+    "L6:street_node camera projection round trip",
+    "L6:street_node uses metric geometry",
+    "L6:street_node full-size world viewport",
+    "L6:street_end actual entry is walkable",
+    "L6:street_end camera projection round trip",
+    "L6:street_end uses metric geometry",
+    "L6:street_end full-size world viewport",
+    "L0:hidden_street actual entry is walkable",
+    "L0:hidden_street camera projection round trip",
+    "L0:hidden_street uses metric geometry",
+    "L0:hidden_street full-size world viewport",
+    "all55 regular instances and independent hidden fragment rendered"
+  ],
+  "rendered": true,
+  "rooms": [
+    {
+      "chapter": 1,
+      "room": "bedroom",
+      "size": [
+        6.40000009536743,
+        4.80000019073486
+      ],
+      "spawn": [
+        1.70000004768372,
+        1.70000004768372
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 2,
+      "room": "ward",
+      "size": [
+        6.40000009536743,
+        4.80000019073486
+      ],
+      "spawn": [
+        4.44999980926514,
+        1.25
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 2,
+      "room": "lobby",
+      "size": [
+        12.0,
+        8.0
+      ],
+      "spawn": [
+        7.25,
+        1.25
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 2,
+      "room": "clinic",
+      "size": [
+        8.0,
+        6.0
+      ],
+      "spawn": [
+        2.40000009536743,
+        4.75
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 2,
+      "room": "pharmacy",
+      "size": [
+        8.0,
+        6.0
+      ],
+      "spawn": [
+        1.25,
+        5.0
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 2,
+      "room": "office",
+      "size": [
+        9.0,
+        6.0
+      ],
+      "spawn": [
+        1.25,
+        3.65000009536743
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 3,
+      "room": "ward",
+      "size": [
+        6.40000009536743,
+        4.80000019073486
+      ],
+      "spawn": [
+        3.20000004768372,
+        3.54999995231628
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 3,
+      "room": "lobby",
+      "size": [
+        12.0,
+        8.0
+      ],
+      "spawn": [
+        7.25,
+        1.25
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 3,
+      "room": "clinic",
+      "size": [
+        8.0,
+        6.0
+      ],
+      "spawn": [
+        2.40000009536743,
+        4.75
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 3,
+      "room": "pharmacy",
+      "size": [
+        8.0,
+        6.0
+      ],
+      "spawn": [
+        1.25,
+        5.0
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 3,
+      "room": "office",
+      "size": [
+        9.0,
+        6.0
+      ],
+      "spawn": [
+        1.25,
+        3.65000009536743
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 3,
+      "room": "stairs",
+      "size": [
+        7.0,
+        5.0
+      ],
+      "spawn": [
+        1.39999997615814,
+        3.75
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 3,
+      "room": "corridor",
+      "size": [
+        16.0,
+        5.0
+      ],
+      "spawn": [
+        1.25,
+        2.5
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 3,
+      "room": "activity",
+      "size": [
+        10.0,
+        8.0
+      ],
+      "spawn": [
+        1.5,
+        1.25
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 3,
+      "room": "group_therapy",
+      "size": [
+        9.0,
+        8.0
+      ],
+      "spawn": [
+        1.5,
+        1.25
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 3,
+      "room": "quiet",
+      "size": [
+        6.0,
+        5.0
+      ],
+      "spawn": [
+        1.39999997615814,
+        3.75
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 3,
+      "room": "bathroom",
+      "size": [
+        8.0,
+        7.0
+      ],
+      "spawn": [
+        2.40000009536743,
+        5.75
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 3,
+      "room": "double_ward",
+      "size": [
+        8.0,
+        6.0
+      ],
+      "spawn": [
+        6.40000009536743,
+        4.75
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 3,
+      "room": "workshop",
+      "size": [
+        10.0,
+        7.0
+      ],
+      "spawn": [
+        8.39999961853027,
+        5.75
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 4,
+      "room": "atrium",
+      "size": [
+        10.8000001907349,
+        9.60000038146973
+      ],
+      "spawn": [
+        5.40000009536743,
+        8.53999996185303
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 4,
+      "room": "memory",
+      "size": [
+        11.0,
+        7.19999980926514
+      ],
+      "spawn": [
+        5.19999980926514,
+        1.05999994277954
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 4,
+      "room": "visual",
+      "size": [
+        10.3999996185303,
+        8.39999961853027
+      ],
+      "spawn": [
+        5.19999980926514,
+        7.34000015258789
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 4,
+      "room": "decision",
+      "size": [
+        10.8000001907349,
+        7.59999990463257
+      ],
+      "spawn": [
+        5.40000009536743,
+        6.53999996185303
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 4,
+      "room": "body",
+      "size": [
+        10.8000001907349,
+        8.0
+      ],
+      "spawn": [
+        9.73999977111816,
+        4.0
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 4,
+      "room": "bridge",
+      "size": [
+        15.0,
+        6.40000009536743
+      ],
+      "spawn": [
+        1.05999994277954,
+        3.20000004768372
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 4,
+      "room": "rhythm",
+      "size": [
+        15.0,
+        8.0
+      ],
+      "spawn": [
+        1.05999994277954,
+        2.09999990463257
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 4,
+      "room": "index",
+      "size": [
+        10.3999996185303,
+        9.0
+      ],
+      "spawn": [
+        1.05999994277954,
+        4.5
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 4,
+      "room": "switch",
+      "size": [
+        13.0,
+        10.0
+      ],
+      "spawn": [
+        1.05999994277954,
+        4.69999980926514
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 4,
+      "room": "verify",
+      "size": [
+        12.0,
+        6.80000019073486
+      ],
+      "spawn": [
+        1.05999994277954,
+        3.40000009536743
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 4,
+      "room": "identity",
+      "size": [
+        12.0,
+        7.19999980926514
+      ],
+      "spawn": [
+        10.9399995803833,
+        3.59999990463257
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "atrium",
+      "size": [
+        10.8000001907349,
+        9.60000038146973
+      ],
+      "spawn": [
+        5.40000009536743,
+        8.53999996185303
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "memory",
+      "size": [
+        11.0,
+        7.19999980926514
+      ],
+      "spawn": [
+        5.19999980926514,
+        1.05999994277954
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "visual",
+      "size": [
+        10.3999996185303,
+        8.39999961853027
+      ],
+      "spawn": [
+        5.19999980926514,
+        7.34000015258789
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "decision",
+      "size": [
+        10.8000001907349,
+        7.59999990463257
+      ],
+      "spawn": [
+        5.40000009536743,
+        6.53999996185303
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "body",
+      "size": [
+        10.8000001907349,
+        8.0
+      ],
+      "spawn": [
+        9.73999977111816,
+        4.0
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "bridge",
+      "size": [
+        15.0,
+        6.40000009536743
+      ],
+      "spawn": [
+        1.05999994277954,
+        3.20000004768372
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "rhythm",
+      "size": [
+        15.0,
+        8.0
+      ],
+      "spawn": [
+        1.05999994277954,
+        2.09999990463257
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "index",
+      "size": [
+        10.3999996185303,
+        9.0
+      ],
+      "spawn": [
+        1.05999994277954,
+        4.5
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "switch",
+      "size": [
+        13.0,
+        10.0
+      ],
+      "spawn": [
+        1.05999994277954,
+        4.69999980926514
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "verify",
+      "size": [
+        12.0,
+        6.80000019073486
+      ],
+      "spawn": [
+        1.05999994277954,
+        3.40000009536743
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "identity",
+      "size": [
+        12.0,
+        7.19999980926514
+      ],
+      "spawn": [
+        10.9399995803833,
+        3.59999990463257
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "hippocampus",
+      "size": [
+        14.0,
+        10.0
+      ],
+      "spawn": [
+        7.0,
+        1.05999994277954
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "thalamus",
+      "size": [
+        14.0,
+        13.0
+      ],
+      "spawn": [
+        7.0,
+        1.05999994277954
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "cerebellum",
+      "size": [
+        19.0,
+        7.59999990463257
+      ],
+      "spawn": [
+        17.9400005340576,
+        3.79999995231628
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "hypothalamus",
+      "size": [
+        15.0,
+        9.19999980926514
+      ],
+      "spawn": [
+        7.5,
+        1.05999994277954
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "basal",
+      "size": [
+        13.0,
+        12.0
+      ],
+      "spawn": [
+        11.9399995803833,
+        5.80000019073486
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "amygdala",
+      "size": [
+        16.0,
+        9.0
+      ],
+      "spawn": [
+        1.05999994277954,
+        4.5
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 5,
+      "room": "brainstem",
+      "size": [
+        12.0,
+        12.0
+      ],
+      "spawn": [
+        6.0,
+        1.05999994277954
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 6,
+      "room": "street_plaza",
+      "size": [
+        16.0,
+        11.0
+      ],
+      "spawn": [
+        1.29999995231628,
+        5.5
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 6,
+      "room": "street_side",
+      "size": [
+        10.0,
+        9.0
+      ],
+      "spawn": [
+        5.0,
+        0.860000014305115
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 6,
+      "room": "street_narrow",
+      "size": [
+        18.0,
+        8.0
+      ],
+      "spawn": [
+        1.29999995231628,
+        4.0
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 6,
+      "room": "street_twisted",
+      "size": [
+        20.0,
+        12.0
+      ],
+      "spawn": [
+        0.860000014305115,
+        6.0
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 6,
+      "room": "street_maintenance",
+      "size": [
+        12.0,
+        8.0
+      ],
+      "spawn": [
+        0.860000014305115,
+        4.0
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 6,
+      "room": "street_node",
+      "size": [
+        17.0,
+        12.0
+      ],
+      "spawn": [
+        1.29999995231628,
+        6.0
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 6,
+      "room": "street_end",
+      "size": [
+        16.0,
+        11.0
+      ],
+      "spawn": [
+        0.860000014305115,
+        5.5
+      ],
+      "version": 3
+    },
+    {
+      "chapter": 0,
+      "room": "hidden_street",
+      "size": [
+        5.59999990463257,
+        3.79999995231628
+      ],
+      "spawn": [
+        0.600000023841858,
+        3.34999990463257
+      ],
+      "version": 3
+    }
+  ],
+  "scope": "Declared chapter/room and legacy-save fixtures; real runtime renderer, portal entry, metric scale and actual snapshot handlers. Does not prove natural whole game, branch balance or formal art/audio approval."
+}

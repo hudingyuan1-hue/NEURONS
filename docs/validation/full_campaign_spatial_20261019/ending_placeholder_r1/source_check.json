@@ -1,0 +1,38 @@
+{
+  "source": {
+    "path": "DOCX/AI整理后文档/NEURONS_规则增补与卧室样片规格_R1.docx",
+    "sha256": "201488a3befb6543343f4111fee42012b22b96e81472896974ba0a398677bf44",
+    "paragraphs": [
+      {
+        "paragraph": 28,
+        "text": "E1  幻觉逃脱：原结局第一节拍后，广场光线收窄成病房灯光；镜头落到现实病床。宿主睁眼，脑内出口画面随之消退。结局标识指向宿主胜利；不把幻觉改记为真实离院，也不接第二关。"
+      },
+      {
+        "paragraph": 29,
+        "text": "E2  角色胜利：原出口对白后，现实病床上的身体睁眼，动作意图由角色接续。连接画面中断，再切到来处星球的玩家外部本体恢复感知。星球仅作短尾声，不能进入探索；结局二锁定。"
+      },
+      {
+        "paragraph": 30,
+        "text": "E3  玩家胜利：原出口对白后，现实病床上的身体睁眼，镜头视点与玩家接续；角色原有的身份性反馈停止。结局三锁定，不以增加敌人、地图或额外战斗表达夺取。"
+      }
+    ]
+  },
+  "implementation": "Only the existing wake/planet presentation phases; no new map, gameplay, event condition, ending text, species/identity design or user art order. All runtime data supplied read-only; draw leaves its dictionaries unchanged.",
+  "files": [
+    {
+      "path": "neurons/scripts/world/ending_story_placeholder.gd",
+      "sha256": "2f442cdc52ecf6521b1b768c0545671589f650c1e80d81fc5f46a16dace6a604"
+    },
+    {
+      "path": "neurons/tests/ending_story_placeholder_check.gd",
+      "sha256": "204bca271b5e3c2444c49ce1d419839df1805f8f715e3a6b74a292d43d87e8dd"
+    }
+  ],
+  "visual_review": [
+    "02_E2_body_awake_connection_break.png",
+    "04_E2_external_perception.png",
+    "05_E3_body_player_view.png"
+  ],
+  "integration": "const EndingStory=preload(\"res://scripts/world/ending_story_placeholder.gd\"); in draw_main_ending(), after dark backdrop and before original label: EndingStory.draw(canvas,e,at)",
+  "not_accepted": "Actual integrated campaign playback and formal visuals have not yet been checked by this independent presentation sample."
+}

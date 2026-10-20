@@ -1,0 +1,43 @@
+{
+  "failures": [],
+  "passes": [
+    "v1 solid=false floor layer permits actor footprint",
+    "v1 solid=false floor layer permits actor segment",
+    "v1 solid=false floor layer permits oriented bed",
+    "v1 collision=false floor layer permits actor footprint",
+    "v1 collision=false floor layer permits actor segment",
+    "v1 collision=false floor layer permits oriented bed",
+    "v1 separate banks preserve true centre passage, not enclosing hull",
+    "v1 real bank still blocks actor and segment",
+    "v1 oriented bed uses actual banks and centre opening",
+    "v2 solid=false floor layer permits actor footprint",
+    "v2 solid=false floor layer permits actor segment",
+    "v2 solid=false floor layer permits oriented bed",
+    "v2 collision=false floor layer permits actor footprint",
+    "v2 collision=false floor layer permits actor segment",
+    "v2 collision=false floor layer permits oriented bed",
+    "v2 separate banks preserve true centre passage, not enclosing hull",
+    "v2 real bank still blocks actor and segment",
+    "v2 oriented bed uses actual banks and centre opening",
+    "oriented bed cannot cross architectural walls collection",
+    "oriented bed cannot cross solid decorative rail",
+    "non-solid decorative layer does not become bed blocker",
+    "institution static wall permits a genuinely unobstructed bed pose",
+    "oriented bed respects institution static_walls as real walls",
+    "combat v2 respects explicit collision=false independently from solid",
+    "combat v3 respects explicit collision=false independently from solid"
+  ],
+  "scope": "Explicit local nonphysical/compound/wall/rail fixtures, real v1/v2/v3 production collision APIs. No game-rule mutation or natural-play claim.",
+  "engine_errors": [],
+  "command": [
+    "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\tmp\\resume_20261015\\runtime\\godot472\\Godot_v4.7.2-stable_win64_console.exe",
+    "--headless",
+    "--path",
+    "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\neurons",
+    "--script",
+    "res://tests/shared_collision_compat_20261019.gd",
+    "--",
+    "--validation-root=res://../docs/validation/full_campaign_spatial_20261019/collision_final_r2"
+  ],
+  "exit_code": 0
+}

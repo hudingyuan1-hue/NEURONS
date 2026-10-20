@@ -1,0 +1,10 @@
+{
+  "purpose": "Read-only original metric layouts for saves predating source reconstruction; never mutate old in-flight actions into new geometry.",
+  "revision": 1,
+  "sha256": {
+    "room_spaces.json": "e5cdd3ae78e8a9d4883582459e34db6313374d637cade733fdba3950b81006f0",
+    "institution_spaces.json": "5b6fa17cd6b75680d024f6cb43f61bd5a4e069392fe887c16dde4ac32602952c",
+    "neural_spaces.json": "17d0100124679c55db15125c91c107ea1c65a2d11301a1904ae3033f8d7c59c7",
+    "street_spaces.json": "78506865f6e970380b1e7f5497097ab227fa3bf6b26417ef4ed4e4ce47441363"
+  }
+}

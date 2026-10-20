@@ -1,0 +1,529 @@
+[
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 0.0333333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": false,
+    "pos_m": [
+      0.860000014305115,
+      4.0
+    ],
+    "pose": "idle",
+    "room": "street_maintenance",
+    "route_points": 0,
+    "sp": 100,
+    "street_clock_s": 0.0,
+    "street_s": 0.0,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 0.3,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 0.266666666666667,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 0.566666666666667,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 0.533333333333333,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 0.833333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 0.8,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 1.1,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 1.06666666666667,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 1.36666666666667,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 1.33333333333333,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 1.63333333333334,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 1.6,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 1.9,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 1.86666666666667,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 2.16666666666667,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 2.13333333333334,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 2.43333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 2.4,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 2.7,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 2.66666666666667,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 2.96666666666667,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 2.93333333333333,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 3.23333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": true,
+    "pos_m": [
+      0.821666657924652,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.0333333333333333,
+    "street_s": 3.2,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.0333333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 3.5,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": false,
+    "pos_m": [
+      0.591666519641876,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.233333333333333,
+    "street_s": 3.46666666666666,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.233333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "street_twisted",
+    "door_left_s": 0.4,
+    "elapsed_s": 3.76666666666666,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": false,
+    "pos_m": [
+      0.514999806880951,
+      4.0
+    ],
+    "pose": "give",
+    "room": "street_maintenance",
+    "route_points": 0,
+    "sp": 100,
+    "street_clock_s": 0.5,
+    "street_s": 3.73333333333333,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.5
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "street_twisted",
+    "door_left_s": 0.133333333333333,
+    "elapsed_s": 4.03333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": false,
+    "pos_m": [
+      0.514999806880951,
+      4.0
+    ],
+    "pose": "give",
+    "room": "street_maintenance",
+    "route_points": 0,
+    "sp": 100,
+    "street_clock_s": 0.766666666666667,
+    "street_s": 4.0,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 0.766666666666667
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "street_twisted",
+    "door_left_s": 0.0,
+    "elapsed_s": 4.29999999999999,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 15,
+    "paused": false,
+    "pos_m": [
+      0.36166650056839,
+      4.0
+    ],
+    "pose": "walk",
+    "room": "street_maintenance",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 1.03333333333333,
+    "street_s": 4.26666666666666,
+    "visible_actors": [
+      "dog",
+      "cleaner"
+    ],
+    "world_s": 1.03333333333333
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "belt_contains": false,
+  "belt_contains_seconds": 0.000016,
+  "calls": [
+    {
+      "a": [
+        9.79216861724854,
+        6.05816268920898
+      ],
+      "b": [
+        19.5200004577637,
+        6.0
+      ],
+      "method": "path",
+      "points": 2,
+      "seconds": 0.000039
+    },
+    {
+      "a": [
+        9.79216861724854,
+        6.05816268920898
+      ],
+      "b": [
+        10.8876190185547,
+        5.45609331130981
+      ],
+      "bodies": 5,
+      "method": "path_around_bodies",
+      "points": 2,
+      "seconds": 0.000036
+    },
+    {
+      "method": "rebuild_grid",
+      "seconds": 0.131628
+    },
+    {
+      "a": [
+        9.79216861724854,
+        6.05816268920898
+      ],
+      "b": [
+        10.8876190185547,
+        5.45609331130981
+      ],
+      "bodies": 8,
+      "method": "path_around_bodies",
+      "points": 0,
+      "seconds": 0.000009
+    },
+    {
+      "method": "rebuild_grid",
+      "seconds": 0.124593
+    }
+  ],
+  "fixture": "Actual performance snapshot after 98 ordinary process frames, no actor/route edits.",
+  "hero_seconds": 0.475765,
+  "method_seconds": {}
+}

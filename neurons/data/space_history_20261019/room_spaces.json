@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "scope": "Explicit per-room geometry migration. Unlisted rooms retain geometry version 1.",
+  "rooms": {
+    "bedroom": {
+      "id": "L1_ROOM",
+      "geometry_version": 2,
+      "status": "Implemented geometry trial; visual and normal-play acceptance pending",
+      "authority": "2026-10-16 user permits room dimensions and local placement to change; S1:P16-P20/T2 preserve all eleven search points, bed rest, door and cat window",
+      "size_m": [6.4, 4.8],
+      "size_meaning": "Interior clear floor size, excluding wall thickness",
+      "body_radius_m": 0.21,
+      "body_radius_note": "Navigation footprint only; not the skill, attack or body-part hit region",
+      "adult_height_reference_m": 1.75,
+      "adult_height_note": "Visual ruler, not a newly assigned canonical height or identity",
+      "projection": {
+        "viewport_px": [1280, 720],
+        "origin_px": [180, 270],
+        "x_px_per_m": 96,
+        "depth_px_per_m": [30, 56],
+        "height_px_per_m": 78,
+        "source_scale": 2,
+        "note": "Camera may follow; do not shrink people and furniture to fit the whole room on screen"
+      },
+      "wall": {"thickness_m": 0.15, "height_m": 2.55, "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}},
+      "asset_template": {"coordinate_unit": "metre", "ground_anchor": "footprint_center", "action_anchor": "approach_m is the actor standing point, not the furniture pivot or hand contact", "layers": ["architecture", "furniture", "movable_props", "foreground_occluders"], "background_under_movable_props": "Complete material, no baked-in silhouette", "geometry_status": "Runtime spatial contract; formal drawing and normal-play acceptance are separate"},
+      "door": {"wall": "north", "center_m": [5.3, 0], "clear_width_m": 0.95, "height_m": 2.15},
+      "window": {"wall": "south", "center_m": [5.15, 4.8], "width_m": 1.3, "sill_height_m": 0.9, "opening_height_m": 1.15, "use": "Existing cat exit, not an extra search point"},
+      "anchors": {"door": [5.3, 0.3], "bed": [1.7, 1.7], "cat_exit": [5.15, 4.5], "dog_idle": [3.2, 2.05], "animal_encounter": [3.45, 2.1]},
+      "furniture": [
+        {"id":"bed","name":"床","kind":"bed","rect_m":[0.35,0.35,2.05,1.0],"approach_m":[1.7,1.7],"height_m":0.55,"color":"8b9b9c","source":"S1:T2R2","note":"Accessible bed edge and under-bed search; simple single bed"},
+        {"id":"bedside","name":"床头柜","kind":"drawer","rect_m":[2.65,0.4,0.55,0.5],"approach_m":[2.925,1.25],"height_m":0.6,"color":"967857","source":"S1:T2R3","attachments":["book","clock"]},
+        {"id":"chair","name":"靠背椅","kind":"chair","rect_m":[1.0,2.95,0.55,0.55],"approach_m":[1.9,3.2],"height_m":1.05,"color":"8a7255","source":"S1:T2R4","action_offsets":{"shift":[-0.15,-0.1]}},
+        {"id":"desk","name":"书桌","kind":"desk","rect_m":[0.35,3.9,1.65,0.6],"approach_m":[1.9,3.55],"height_m":0.76,"color":"ae8c61","source":"S1:T2R5","attachments":["books","stationery","pen","paper","tissue"]},
+        {"id":"stool","name":"蓝凳与纸箱","kind":"stool","rect_m":[2.35,4.0,0.4,0.4],"approach_m":[2.55,3.65],"height_m":0.45,"color":"657f8b","source":"S1:T2R6","attachments":["small_cardboard_box"],"attachment_height_m":0.3},
+        {"id":"box","name":"杂物箱","kind":"box","rect_m":[3.1,3.95,0.6,0.6],"approach_m":[3.4,3.55],"height_m":0.9,"color":"a78f6c","source":"S1:T2R7","lower_height_m":0.45,"upper_height_m":0.45,"action_offsets":{"upper_shift":[0.8,0.0]}},
+        {"id":"rack","name":"衣帽架与白褂","kind":"rack","rect_m":[4.2,0.45,0.5,0.5],"approach_m":[4.45,1.3],"height_m":1.75,"color":"c4bba6","source":"S1:T2R8/P20","attachments":["white_coat_with_mended_cuff"]},
+        {"id":"wardrobe","name":"衣柜","kind":"wardrobe","rect_m":[5.5,3.05,0.6,1.4],"approach_m":[5.15,3.75],"height_m":2.05,"color":"81755f","source":"S1:T2R9","open_door_side":"south/window side"},
+        {"id":"books","name":"五层书架","kind":"books","rect_m":[5.65,2.0,0.45,0.75],"approach_m":[5.25,2.4],"height_m":1.6,"color":"967c5c","source":"S1:T2R10","shelf_count":5},
+        {"id":"storage","name":"储物柜与病服","kind":"drawer","rect_m":[5.45,0.95,0.65,0.8],"approach_m":[5.1,1.35],"height_m":1.4,"color":"879184","source":"S1:T2R11/P20","attachments":["bloodstained_hospital_clothes_with_unknown_label"]},
+        {"id":"fan","name":"立式风扇","kind":"fan","rect_m":[3.5,0.35,0.45,0.45],"approach_m":[3.725,1.15],"height_m":1.35,"color":"6d8485","source":"S1:T2R12","note":"Search external base only; do not add dismantling"}
+      ]
+    }
+  }
+}

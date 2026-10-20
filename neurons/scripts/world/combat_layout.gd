@@ -2,16 +2,38 @@ extends "res://scripts/world/room_layout.gd"
 ## Independent L5 geometry. L4 saves/layouts remain unchanged.
 const Map=preload("res://scripts/core/combat_map.gd")
 const CortexLayout=preload("res://scripts/world/cortex_layout.gd")
+const NeuralDisplay=preload("res://scripts/world/spatial_presentation.gd")
+const SpatialGeometry=preload("res://scripts/world/spatial_geometry.gd")
+const SpatialRevision=preload("res://scripts/world/spatial_revision.gd")
+var spatial_revision:int=SpatialRevision.CURRENT
 var room_id:String=""
 var contact_events:Array=[]
 var decor:Array=[]
 var rack_rect:=Rect2()
 var cold_zone:=Rect2()
 var pulse_zone:=Rect2(4.8,.8,1.6,6.0)
+var spatial_version:int=2
+var metric_spec:Dictionary={}
 
-func _init(room:String="atrium",with_rack:bool=true) -> void:
- room_id=room;geometry_version=2;body_radius=.21;bounds_size=Map.SIZE
+func _init(room:String="atrium",with_rack:bool=true,version:int=2,revision:int=SpatialRevision.CURRENT) -> void:
+ spatial_revision=revision
+ room_id=room;geometry_version=2;spatial_version=version;body_radius=.21;bounds_size=Map.world_size(room,version,revision)
  furniture.clear();movable_blockers.clear()
+ if spatial_version>=3:
+  metric_spec=Map.space_spec(room,revision)
+  for value:Dictionary in metric_spec.furniture+metric_spec.get("partitions",[]):
+   if str(value.id)=="memory_clothes_rack" and not with_rack:continue
+   var built:Dictionary=metric_item(value)
+   furniture.append(built)
+   if str(value.id)=="memory_clothes_rack":rack_rect=built.rect
+  for value:Dictionary in metric_spec.get("decor",[]):
+   var built:Dictionary=metric_item(value)
+   if built.get("solid",true) and built.get("collision",true):furniture.append(built)
+   else:decor.append(built)
+  if metric_spec.has("cold_zone_m"):cold_zone=rectangle(metric_spec.cold_zone_m)
+  if metric_spec.has("pulse_zone_m"):pulse_zone=rectangle(metric_spec.pulse_zone_m)
+  rebuild_grid()
+  return
  if room in Map.Cortex.ALL_ROOMS:
   var source=CortexLayout.new(room)
   for item in source.furniture+source.decor:
@@ -28,6 +50,50 @@ func _init(room:String="atrium",with_rack:bool=true) -> void:
   rack_rect=Rect2(3.1,2.5,.18,.9)
   var rack:Dictionary=prop("记忆陈列衣架",rack_rect,1.7,"rack");rack.id="memory_clothes_rack";furniture.append(rack)
  rebuild_grid()
+
+func vector(value:Array) -> Vector2:return Vector2(float(value[0]),float(value[1]))
+func rectangle(value:Array) -> Rect2:return Rect2(float(value[0]),float(value[1]),float(value[2]),float(value[3]))
+
+func metric_item(item:Dictionary) -> Dictionary:
+ var value:Dictionary=item.duplicate(true)
+ value.rect=rectangle(item.rect_m);value.at=vector(item.stand_m)
+ value.height=float(item.height_m)*78.0;value.color=Color("8b9a96")
+ if item.has("collision_rects_m"):
+  value.collision_rects=[]
+  for rect:Array in item.collision_rects_m:value.collision_rects.append(rectangle(rect))
+ elif not item.get("solid",true):value.collision_rects=[]
+ return value
+
+func space_spec() -> Dictionary:
+ if spatial_version>=3:return metric_spec.duplicate(true)
+ return {"chapter":5,"room_id":room_id,"geometry_version":2,"size_m":[Map.SIZE.x,Map.SIZE.y],"status":"legacy saved attempt; version3 is the production template contract"}
+
+func collision_rects(item:Dictionary) -> Array:return item.get("collision_rects",[item.rect])
+
+func walkable(p:Vector2,radius:float=-1.0) -> bool:
+ if spatial_version<3:return super.walkable(p,radius)
+ if radius<0.0:radius=body_radius
+ if not p.is_finite() or not SpatialGeometry.inside_floor(metric_spec,world_size(),p,radius):return false
+ for item:Dictionary in furniture+decor:
+  if not item.get("solid",true) or not item.get("collision",true):continue
+  for rect:Rect2 in collision_rects(item):
+   if footprint_contains(rect.grow(radius),p):return false
+ for rect:Rect2 in movable_blockers:
+  if footprint_contains(rect.grow(radius),p):return false
+ return true
+
+func clear_segment(a:Vector2,b:Vector2,radius:float=0.0) -> bool:
+ if spatial_version<3:return super.clear_segment(a,b,radius)
+ if radius<0.0:radius=body_radius
+ if not walkable(a,radius) or not walkable(b,radius):return false
+ if not SpatialGeometry.segment_inside_floor(metric_spec,world_size(),a,b,radius):return false
+ for item:Dictionary in furniture+decor:
+  if not item.get("solid",true) or not item.get("collision",true):continue
+  for rect:Rect2 in collision_rects(item):
+   if segment_hits_rect(a,b,rect.grow(radius)):return false
+ for rect:Rect2 in movable_blockers:
+  if segment_hits_rect(a,b,rect.grow(radius)):return false
+ return true
 
 func prop(name_value:String,rect:Rect2,height_m:float,kind:String="cabinet") -> Dictionary:
  return {"id":name_value,"name":name_value,"rect":rect,"at":rect.get_center(),"kind":kind,"height":height_m*78,"color":Color("8b9a96")}
@@ -57,18 +123,24 @@ func build_deep() -> void:
  if room_id=="hypothalamus":cold_zone=Rect2(2.0,2.2,2.6,3.1)
  if room_id=="thalamus":furniture[5].rect=Rect2(8.6,3.3,1.1,.6)
 
-func project(p:Vector2) -> Vector2:return Vector2(70+p.x*96+p.y*30,200+p.y*56)
-func unproject(p:Vector2) -> Vector2:
- var z:float=(p.y-200)/56.0
- return Vector2((p.x-70-z*30)/96.0,z)
+func project(p:Vector2) -> Vector2:return NeuralDisplay.project(p,Vector2(70,200))
+func unproject(p:Vector2) -> Vector2:return NeuralDisplay.unproject(p,Vector2(70,200))
 
 func portal(toward:String) -> Dictionary:
- var at:Vector2=Map.doorway(room_id,toward)
+ if spatial_version>=3:
+  for value:Dictionary in metric_spec.portals:
+   if str(value.toward)!=toward:continue
+   var result:Dictionary=value.duplicate(true)
+   for key:String in ["at","threshold","landing","inward"]:result[key]=vector(value[key+"_m"] if key!="inward" else value.inward)
+   if value.has("wall_point_m"):result.wall_point=vector(value.wall_point_m)
+   return result
+  return {}
+ var at:Vector2=Map.doorway(room_id,toward,spatial_version)
  if at.x<0:return {}
- var inward:Vector2=Vector2.RIGHT if at.x<1 else Vector2.LEFT if at.x>10 else Vector2.DOWN if at.y<1 else Vector2.UP
+ var inward:Vector2=Vector2.RIGHT if at.x<1 else Vector2.LEFT if at.x>world_size().x-1 else Vector2.DOWN if at.y<1 else Vector2.UP
  return {"at":at,"threshold":at-inward*.23,"landing":at+inward*.38,"inward":inward,"toward":toward,"wall":"west" if inward==Vector2.RIGHT else "east" if inward==Vector2.LEFT else "north" if inward==Vector2.DOWN else "south","width_m":1.2,"height_m":2.2}
 
-func spawn() -> Vector2:return Vector2(1.3,3.8)
+func spawn() -> Vector2:return vector(metric_spec.spawn_m) if spatial_version>=3 else Vector2(1.3,3.8)
 func speed_factor(at:Vector2) -> float:return .8 if cold_zone.has_area() and cold_zone.has_point(at) else 1.0
 
 func clipped_step(from:Vector2,to:Vector2) -> Vector2:

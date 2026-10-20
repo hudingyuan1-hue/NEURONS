@@ -1,0 +1,6923 @@
+{
+  "version": 1,
+  "sources": [
+    "S1:P220–473",
+    "S3:T35–46",
+    "user:2026-10-18 whole-game spatial correction"
+  ],
+  "projection": {
+    "origin_px": [
+      70,
+      200
+    ],
+    "x_px_per_m": 96,
+    "depth_vector_px": [
+      30,
+      56
+    ],
+    "height_px_per_m": 78
+  },
+  "calibration": {
+    "adult_height_m": 1.75,
+    "wall_thickness_m": 0.15,
+    "wall_height_m": 2.55,
+    "projection_note": "Fixed 2D parallel oblique projection. No vanishing-point convergence or runtime 3D."
+  },
+  "rooms": {
+    "L4:atrium": {
+      "chapter": 4,
+      "room_id": "atrium",
+      "title": "褶皱中庭",
+      "geometry_version": 2,
+      "size_m": [
+        10.8,
+        7.6
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "atrium:0",
+          "name": "皮层核心",
+          "kind": "core",
+          "rect_m": [
+            3.4,
+            2.2,
+            4.0,
+            3.0
+          ],
+          "height_m": 1.9,
+          "stand_m": [
+            2.98,
+            3.7
+          ],
+          "solid": true,
+          "source": "S3:T35",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "atrium:1",
+          "name": "脑回墙体",
+          "kind": "wall",
+          "rect_m": [
+            0.8893,
+            0.45,
+            1.5,
+            0.3
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            1.6393,
+            1.17
+          ],
+          "solid": true,
+          "source": "S3:T35",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "atrium:2",
+          "name": "脑沟通道",
+          "kind": "debris",
+          "rect_m": [
+            8.0786,
+            5.65,
+            1.2,
+            0.7
+          ],
+          "height_m": 0.28,
+          "stand_m": [
+            8.6786,
+            5.23
+          ],
+          "solid": true,
+          "source": "S3:T35",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "old_doorplate",
+          "name": "旧门牌",
+          "kind": "plate",
+          "rect_m": [
+            1.4,
+            0.18,
+            0.5,
+            0.08
+          ],
+          "height_m": 1.7,
+          "stand_m": [
+            1.65,
+            0.22
+          ],
+          "solid": false,
+          "source": "S1:P228",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "broken_wristband",
+          "name": "断裂腕带",
+          "kind": "band",
+          "rect_m": [
+            9.9,
+            6.35,
+            0.18,
+            0.1
+          ],
+          "height_m": 0.03,
+          "stand_m": [
+            9.99,
+            6.4
+          ],
+          "solid": false,
+          "source": "S1:P228",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "memory",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            2.2
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            2.2
+          ],
+          "landing_m": [
+            0.86,
+            2.2
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "visual",
+          "wall": "east",
+          "at_m": [
+            10.32,
+            2.2
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            10.55,
+            2.2
+          ],
+          "landing_m": [
+            9.94,
+            2.2
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "decision",
+          "wall": "north",
+          "at_m": [
+            5.4,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            5.4,
+            0.25
+          ],
+          "landing_m": [
+            5.4,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "body",
+          "wall": "south",
+          "at_m": [
+            5.4,
+            7.12
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "threshold_m": [
+            5.4,
+            7.35
+          ],
+          "landing_m": [
+            5.4,
+            6.74
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        1.8321,
+        5.8
+      ]
+    },
+    "L5:atrium": {
+      "chapter": 5,
+      "room_id": "atrium",
+      "title": "褶皱中庭",
+      "geometry_version": 3,
+      "size_m": [
+        11.6,
+        8.0
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "atrium:0",
+          "name": "皮层核心",
+          "kind": "core",
+          "rect_m": [
+            3.5,
+            2.2947,
+            4.6,
+            3.2
+          ],
+          "height_m": 1.9,
+          "stand_m": [
+            3.08,
+            3.8947
+          ],
+          "solid": true,
+          "source": "S3:T35",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "atrium:1",
+          "name": "脑回墙体",
+          "kind": "wall",
+          "rect_m": [
+            1.0107,
+            0.4816,
+            1.5,
+            0.3
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            1.7607,
+            1.2016
+          ],
+          "solid": true,
+          "source": "S3:T35",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "atrium:2",
+          "name": "脑沟通道",
+          "kind": "debris",
+          "rect_m": [
+            8.7214,
+            5.9658,
+            1.2,
+            0.7
+          ],
+          "height_m": 0.28,
+          "stand_m": [
+            9.3214,
+            5.5458
+          ],
+          "solid": true,
+          "source": "S3:T35",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "old_doorplate",
+          "name": "旧门牌",
+          "kind": "plate",
+          "rect_m": [
+            1.4,
+            0.18,
+            0.5,
+            0.08
+          ],
+          "height_m": 1.7,
+          "stand_m": [
+            1.65,
+            0.22
+          ],
+          "solid": false,
+          "source": "S1:P228",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "broken_wristband",
+          "name": "断裂腕带",
+          "kind": "band",
+          "rect_m": [
+            10.7,
+            6.75,
+            0.18,
+            0.1
+          ],
+          "height_m": 0.03,
+          "stand_m": [
+            10.79,
+            6.8
+          ],
+          "solid": false,
+          "source": "S1:P228",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "memory",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            2.3158
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            2.3158
+          ],
+          "landing_m": [
+            0.86,
+            2.3158
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "visual",
+          "wall": "east",
+          "at_m": [
+            11.12,
+            2.3158
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            11.35,
+            2.3158
+          ],
+          "landing_m": [
+            10.74,
+            2.3158
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "decision",
+          "wall": "north",
+          "at_m": [
+            5.8,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            5.8,
+            0.25
+          ],
+          "landing_m": [
+            5.8,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "body",
+          "wall": "south",
+          "at_m": [
+            5.8,
+            7.52
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "threshold_m": [
+            5.8,
+            7.75
+          ],
+          "landing_m": [
+            5.8,
+            7.14
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        1.3,
+        3.8
+      ]
+    },
+    "L4:memory": {
+      "chapter": 4,
+      "room_id": "memory",
+      "title": "记忆档案室",
+      "geometry_version": 2,
+      "size_m": [
+        9.6,
+        7.2
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "memory:0",
+          "name": "病历架",
+          "kind": "books",
+          "rect_m": [
+            0.5571,
+            0.6026,
+            1.8,
+            0.5
+          ],
+          "height_m": 1.95,
+          "stand_m": [
+            1.4571,
+            1.5226
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:1",
+          "name": "查阅桌",
+          "kind": "desk",
+          "rect_m": [
+            4.0,
+            3.3421,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            3.58,
+            3.7421
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:2",
+          "name": "地毯陈设组",
+          "kind": "rug",
+          "rect_m": [
+            0.7143,
+            5.2211,
+            2.0,
+            1.4
+          ],
+          "height_m": 0.02,
+          "stand_m": [
+            1.7143,
+            4.8011
+          ],
+          "solid": false,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:3",
+          "name": "旧电视",
+          "kind": "screen",
+          "rect_m": [
+            0.4929,
+            3.1105,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            1.8129,
+            3.4105
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:4",
+          "name": "录音机",
+          "kind": "recorder",
+          "rect_m": [
+            6.9857,
+            5.6961,
+            0.6,
+            0.45
+          ],
+          "height_m": 0.48,
+          "stand_m": [
+            7.2857,
+            5.2761
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:5",
+          "name": "照片墙",
+          "kind": "board",
+          "rect_m": [
+            8.5243,
+            1.8184,
+            0.18,
+            1.1
+          ],
+          "height_m": 1.65,
+          "stand_m": [
+            8.1043,
+            2.3684
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:6",
+          "name": "档案柜",
+          "kind": "drawer",
+          "rect_m": [
+            6.9643,
+            0.625,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            7.7143,
+            1.595
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "memory_group_chair",
+          "name": "地毯组椅子",
+          "kind": "chair",
+          "rect_m": [
+            0.8143,
+            5.5211,
+            0.5,
+            0.55
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            1.0643,
+            5.7961
+          ],
+          "solid": true,
+          "source": "S1:P236",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory_group_plant",
+          "name": "地毯组绿植",
+          "kind": "plant",
+          "rect_m": [
+            2.0643,
+            5.9211,
+            0.45,
+            0.45
+          ],
+          "height_m": 1.0,
+          "stand_m": [
+            2.2893,
+            6.1461
+          ],
+          "solid": true,
+          "source": "S1:P236",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "atrium",
+          "wall": "east",
+          "at_m": [
+            9.12,
+            5.3053
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            9.35,
+            5.3053
+          ],
+          "landing_m": [
+            8.74,
+            5.3053
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "visual",
+          "wall": "north",
+          "at_m": [
+            4.8,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            4.8,
+            0.25
+          ],
+          "landing_m": [
+            4.8,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        8.74,
+        5.3053
+      ]
+    },
+    "L5:memory": {
+      "chapter": 5,
+      "room_id": "memory",
+      "title": "记忆档案室",
+      "geometry_version": 3,
+      "size_m": [
+        11.2,
+        8.4
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "memory:0",
+          "name": "病历架",
+          "kind": "books",
+          "rect_m": [
+            0.8,
+            0.7447,
+            1.8,
+            0.5
+          ],
+          "height_m": 1.95,
+          "stand_m": [
+            1.7,
+            1.6647
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:1",
+          "name": "查阅桌",
+          "kind": "desk",
+          "rect_m": [
+            4.8,
+            3.9658,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            4.38,
+            4.3658
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:2",
+          "name": "地毯陈设组",
+          "kind": "rug",
+          "rect_m": [
+            1.0,
+            6.2079,
+            2.0,
+            1.4
+          ],
+          "height_m": 0.02,
+          "stand_m": [
+            2.0,
+            5.7879
+          ],
+          "solid": false,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:3",
+          "name": "旧电视",
+          "kind": "screen",
+          "rect_m": [
+            0.65,
+            3.6789,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            1.97,
+            3.9789
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:4",
+          "name": "录音机",
+          "kind": "recorder",
+          "rect_m": [
+            8.2,
+            6.6829,
+            0.6,
+            0.45
+          ],
+          "height_m": 0.48,
+          "stand_m": [
+            8.5,
+            6.2629
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:5",
+          "name": "照片墙",
+          "kind": "board",
+          "rect_m": [
+            9.96,
+            2.2132,
+            0.18,
+            1.1
+          ],
+          "height_m": 1.65,
+          "stand_m": [
+            9.54,
+            2.7632
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory:6",
+          "name": "档案柜",
+          "kind": "drawer",
+          "rect_m": [
+            8.25,
+            0.775,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            9.0,
+            1.745
+          ],
+          "solid": true,
+          "source": "S3:T36",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "memory_group_chair",
+          "name": "地毯组椅子",
+          "kind": "chair",
+          "rect_m": [
+            1.1,
+            6.5079,
+            0.5,
+            0.55
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            1.35,
+            6.7829
+          ],
+          "solid": true,
+          "source": "S1:P236",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory_group_plant",
+          "name": "地毯组绿植",
+          "kind": "plant",
+          "rect_m": [
+            2.35,
+            6.9079,
+            0.45,
+            0.45
+          ],
+          "height_m": 1.0,
+          "stand_m": [
+            2.575,
+            7.1329
+          ],
+          "solid": true,
+          "source": "S1:P236",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "atrium",
+          "wall": "east",
+          "at_m": [
+            10.72,
+            6.1895
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            10.95,
+            6.1895
+          ],
+          "landing_m": [
+            10.34,
+            6.1895
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "visual",
+          "wall": "north",
+          "at_m": [
+            5.6,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            5.6,
+            0.25
+          ],
+          "landing_m": [
+            5.6,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        10.34,
+        6.1895
+      ]
+    },
+    "L4:visual": {
+      "chapter": 4,
+      "room_id": "visual",
+      "title": "视觉影像室",
+      "geometry_version": 2,
+      "size_m": [
+        10.4,
+        7.6
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "visual:0",
+          "name": "旧电视",
+          "kind": "screen",
+          "rect_m": [
+            0.5714,
+            2.1,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            1.8914,
+            2.4
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "visual:1",
+          "name": "影像控制台",
+          "kind": "console",
+          "rect_m": [
+            7.9357,
+            1.975,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            7.5157,
+            2.3
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "visual:2",
+          "name": "影像档案柜",
+          "kind": "drawer",
+          "rect_m": [
+            9.0107,
+            4.0,
+            0.55,
+            1.5
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            8.5907,
+            4.75
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "visual:3",
+          "name": "弧形屏基座",
+          "kind": "screen",
+          "rect_m": [
+            3.95,
+            1.1,
+            2.5,
+            0.5
+          ],
+          "height_m": 1.9,
+          "stand_m": [
+            5.2,
+            2.02
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "visual:4",
+          "name": "观影座椅组",
+          "kind": "chairs",
+          "rect_m": [
+            3.4,
+            4.3,
+            3.6,
+            1.2
+          ],
+          "height_m": 0.85,
+          "stand_m": [
+            5.2,
+            4.9
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact",
+          "collision_rects_m": [
+            [
+              3.4,
+              4.3,
+              0.8,
+              1.2
+            ],
+            [
+              6.2,
+              4.3,
+              0.8,
+              1.2
+            ]
+          ],
+          "layout_note": "Two physical seating banks, one grouped point; central and side aisles remain open."
+        },
+        {
+          "id": "visual:5",
+          "name": "杂物堆",
+          "kind": "debris",
+          "rect_m": [
+            0.7,
+            6.3,
+            1.2,
+            0.7
+          ],
+          "height_m": 0.28,
+          "stand_m": [
+            2.32,
+            6.65
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "atrium",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            5.6
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            5.6
+          ],
+          "landing_m": [
+            0.86,
+            5.6
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "memory",
+          "wall": "north",
+          "at_m": [
+            5.2,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            5.2,
+            0.25
+          ],
+          "landing_m": [
+            5.2,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        0.86,
+        5.6
+      ]
+    },
+    "L5:visual": {
+      "chapter": 5,
+      "room_id": "visual",
+      "title": "视觉影像室",
+      "geometry_version": 3,
+      "size_m": [
+        12.0,
+        8.0
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "visual:0",
+          "name": "旧电视",
+          "kind": "screen",
+          "rect_m": [
+            0.7286,
+            2.2263,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            2.0486,
+            2.5263
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "visual:1",
+          "name": "影像控制台",
+          "kind": "console",
+          "rect_m": [
+            9.2643,
+            2.0961,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            8.8443,
+            2.4211
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "visual:2",
+          "name": "影像档案柜",
+          "kind": "drawer",
+          "rect_m": [
+            10.4393,
+            4.25,
+            0.55,
+            1.5
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            10.0193,
+            5.0
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "visual:3",
+          "name": "弧形屏基座",
+          "kind": "screen",
+          "rect_m": [
+            4.75,
+            1.1711,
+            2.5,
+            0.5
+          ],
+          "height_m": 1.9,
+          "stand_m": [
+            6.0,
+            2.0911
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "visual:4",
+          "name": "观影座椅组",
+          "kind": "chairs",
+          "rect_m": [
+            4.2,
+            4.5579,
+            3.6,
+            1.2
+          ],
+          "height_m": 0.85,
+          "stand_m": [
+            6.0,
+            5.1579
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact",
+          "collision_rects_m": [
+            [
+              4.2,
+              4.5579,
+              0.8,
+              1.2
+            ],
+            [
+              7.0,
+              4.5579,
+              0.8,
+              1.2
+            ]
+          ],
+          "layout_note": "Two physical seating banks, one grouped point; central and side aisles remain open."
+        },
+        {
+          "id": "visual:5",
+          "name": "杂物堆",
+          "kind": "debris",
+          "rect_m": [
+            0.9,
+            6.65,
+            1.2,
+            0.7
+          ],
+          "height_m": 0.28,
+          "stand_m": [
+            2.52,
+            7.0
+          ],
+          "solid": true,
+          "source": "S3:T37",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "atrium",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            5.8947
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            5.8947
+          ],
+          "landing_m": [
+            0.86,
+            5.8947
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "memory",
+          "wall": "north",
+          "at_m": [
+            6.0,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            6.0,
+            0.25
+          ],
+          "landing_m": [
+            6.0,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        0.86,
+        5.8947
+      ]
+    },
+    "L4:decision": {
+      "chapter": 4,
+      "room_id": "decision",
+      "title": "意象决策室",
+      "geometry_version": 2,
+      "size_m": [
+        9.6,
+        8.0
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "decision:0",
+          "name": "病历档案柜",
+          "kind": "drawer",
+          "rect_m": [
+            0.6679,
+            1.1974,
+            0.55,
+            1.5
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            1.6379,
+            1.9474
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:1",
+          "name": "资料终端",
+          "kind": "console",
+          "rect_m": [
+            0.3286,
+            4.2013,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.1486,
+            4.5263
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:2",
+          "name": "行动指令板",
+          "kind": "board",
+          "rect_m": [
+            0.5357,
+            6.7521,
+            1.5,
+            0.18
+          ],
+          "height_m": 1.65,
+          "stand_m": [
+            2.4557,
+            6.8421
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:3",
+          "name": "决策会议桌",
+          "kind": "desk",
+          "rect_m": [
+            4.0,
+            3.5474,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            4.8,
+            4.7674
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:4",
+          "name": "绿植",
+          "kind": "plant",
+          "rect_m": [
+            8.0393,
+            6.5671,
+            0.55,
+            0.55
+          ],
+          "height_m": 1.15,
+          "stand_m": [
+            7.6193,
+            6.8421
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:5",
+          "name": "路线规划板",
+          "kind": "board",
+          "rect_m": [
+            8.5671,
+            4.0816,
+            0.18,
+            1.1
+          ],
+          "height_m": 1.65,
+          "stand_m": [
+            8.1471,
+            4.6316
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:6",
+          "name": "记录仪器",
+          "kind": "recorder",
+          "rect_m": [
+            8.0143,
+            1.3539,
+            0.6,
+            0.45
+          ],
+          "height_m": 0.48,
+          "stand_m": [
+            7.5943,
+            1.5789
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "atrium",
+          "wall": "south",
+          "at_m": [
+            4.8,
+            7.52
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "threshold_m": [
+            4.8,
+            7.75
+          ],
+          "landing_m": [
+            4.8,
+            7.14
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "bridge",
+          "wall": "north",
+          "at_m": [
+            4.8,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            4.8,
+            0.25
+          ],
+          "landing_m": [
+            4.8,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        4.8,
+        7.14
+      ]
+    },
+    "L5:decision": {
+      "chapter": 5,
+      "room_id": "decision",
+      "title": "意象决策室",
+      "geometry_version": 3,
+      "size_m": [
+        11.6,
+        8.4
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "decision:0",
+          "name": "病历档案柜",
+          "kind": "drawer",
+          "rect_m": [
+            0.8643,
+            1.2947,
+            0.55,
+            1.5
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            1.8343,
+            2.0447
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:1",
+          "name": "资料终端",
+          "kind": "console",
+          "rect_m": [
+            0.5429,
+            4.4276,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.3629,
+            4.7526
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:2",
+          "name": "行动指令板",
+          "kind": "board",
+          "rect_m": [
+            0.8036,
+            7.0942,
+            1.5,
+            0.18
+          ],
+          "height_m": 1.65,
+          "stand_m": [
+            2.7236,
+            7.1842
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:3",
+          "name": "决策会议桌",
+          "kind": "desk",
+          "rect_m": [
+            5.0,
+            3.7447,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            5.8,
+            4.9647
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:4",
+          "name": "绿植",
+          "kind": "plant",
+          "rect_m": [
+            9.7714,
+            6.9092,
+            0.55,
+            0.55
+          ],
+          "height_m": 1.15,
+          "stand_m": [
+            9.3514,
+            7.1842
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:5",
+          "name": "路线规划板",
+          "kind": "board",
+          "rect_m": [
+            10.3707,
+            4.3132,
+            0.18,
+            1.1
+          ],
+          "height_m": 1.65,
+          "stand_m": [
+            9.9507,
+            4.8632
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "decision:6",
+          "name": "记录仪器",
+          "kind": "recorder",
+          "rect_m": [
+            9.7464,
+            1.4329,
+            0.6,
+            0.45
+          ],
+          "height_m": 0.48,
+          "stand_m": [
+            9.3264,
+            1.6579
+          ],
+          "solid": true,
+          "source": "S3:T38",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "atrium",
+          "wall": "south",
+          "at_m": [
+            5.8,
+            7.92
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "threshold_m": [
+            5.8,
+            8.15
+          ],
+          "landing_m": [
+            5.8,
+            7.54
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "bridge",
+          "wall": "north",
+          "at_m": [
+            5.8,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            5.8,
+            0.25
+          ],
+          "landing_m": [
+            5.8,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        5.8,
+        7.54
+      ]
+    },
+    "L4:body": {
+      "chapter": 4,
+      "room_id": "body",
+      "title": "身体感知室",
+      "geometry_version": 2,
+      "size_m": [
+        10.4,
+        8.0
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "body:0",
+          "name": "姿态检测屏底座",
+          "kind": "screen",
+          "rect_m": [
+            0.5714,
+            1.2263,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            1.8914,
+            1.5263
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:1",
+          "name": "观察镜框",
+          "kind": "mirror",
+          "rect_m": [
+            0.6529,
+            2.7434,
+            0.18,
+            1.25
+          ],
+          "height_m": 1.9,
+          "stand_m": [
+            1.2529,
+            3.3684
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:2",
+          "name": "身体定位示意板",
+          "kind": "board",
+          "rect_m": [
+            0.6529,
+            4.7132,
+            0.18,
+            1.1
+          ],
+          "height_m": 1.65,
+          "stand_m": [
+            1.2529,
+            5.2632
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:3",
+          "name": "肢体模型区",
+          "kind": "model",
+          "rect_m": [
+            0.6071,
+            6.8553,
+            1.2,
+            0.5
+          ],
+          "height_m": 1.2,
+          "stand_m": [
+            2.2271,
+            7.1053
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:4",
+          "name": "身体感知检查台",
+          "kind": "desk",
+          "rect_m": [
+            7.9286,
+            1.9158,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            7.5086,
+            2.3158
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:5",
+          "name": "触觉测试台",
+          "kind": "clamp",
+          "rect_m": [
+            7.9286,
+            4.8632,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.85,
+          "stand_m": [
+            7.5086,
+            5.2632
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:6",
+          "name": "器械柜",
+          "kind": "drawer",
+          "rect_m": [
+            8.2571,
+            6.7776,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            7.8371,
+            7.0526
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:7",
+          "name": "身体映射区边缘凹槽",
+          "kind": "groove",
+          "rect_m": [
+            3.9929,
+            6.9276,
+            1.3,
+            0.25
+          ],
+          "height_m": 0.04,
+          "stand_m": [
+            4.6429,
+            6.5076
+          ],
+          "solid": false,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "body_mapping_floor",
+          "name": "身体映射区",
+          "kind": "mapping",
+          "rect_m": [
+            3.0,
+            2.6,
+            2.8,
+            2.5
+          ],
+          "height_m": 0,
+          "stand_m": [
+            4.4,
+            3.85
+          ],
+          "solid": false,
+          "source": "S1:P265",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "atrium",
+          "wall": "north",
+          "at_m": [
+            5.2,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            5.2,
+            0.25
+          ],
+          "landing_m": [
+            5.2,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        5.2,
+        0.86
+      ]
+    },
+    "L5:body": {
+      "chapter": 5,
+      "room_id": "body",
+      "title": "身体感知室",
+      "geometry_version": 3,
+      "size_m": [
+        12.4,
+        8.4
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "body:0",
+          "name": "姿态检测屏底座",
+          "kind": "screen",
+          "rect_m": [
+            0.7679,
+            1.3026,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            2.0879,
+            1.6026
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:1",
+          "name": "观察镜框",
+          "kind": "mirror",
+          "rect_m": [
+            0.7957,
+            2.9118,
+            0.18,
+            1.25
+          ],
+          "height_m": 1.9,
+          "stand_m": [
+            1.3957,
+            3.5368
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:2",
+          "name": "身体定位示意板",
+          "kind": "board",
+          "rect_m": [
+            0.7957,
+            4.9763,
+            0.18,
+            1.1
+          ],
+          "height_m": 1.65,
+          "stand_m": [
+            1.3957,
+            5.5263
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:3",
+          "name": "肢体模型区",
+          "kind": "model",
+          "rect_m": [
+            0.8393,
+            7.2105,
+            1.2,
+            0.5
+          ],
+          "height_m": 1.2,
+          "stand_m": [
+            2.4593,
+            7.4605
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:4",
+          "name": "身体感知检查台",
+          "kind": "desk",
+          "rect_m": [
+            9.6071,
+            2.0316,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            9.1871,
+            2.4316
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:5",
+          "name": "触觉测试台",
+          "kind": "clamp",
+          "rect_m": [
+            9.6071,
+            5.1263,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.85,
+          "stand_m": [
+            9.1871,
+            5.5263
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:6",
+          "name": "器械柜",
+          "kind": "drawer",
+          "rect_m": [
+            9.9893,
+            7.1303,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            9.5693,
+            7.4053
+          ],
+          "solid": true,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "body:7",
+          "name": "身体映射区边缘凹槽",
+          "kind": "groove",
+          "rect_m": [
+            4.8857,
+            7.2803,
+            1.3,
+            0.25
+          ],
+          "height_m": 0.04,
+          "stand_m": [
+            5.5357,
+            6.8603
+          ],
+          "solid": false,
+          "source": "S3:T39",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "body_mapping_floor",
+          "name": "身体映射区",
+          "kind": "mapping",
+          "rect_m": [
+            3.0,
+            2.6,
+            2.8,
+            2.5
+          ],
+          "height_m": 0,
+          "stand_m": [
+            4.4,
+            3.85
+          ],
+          "solid": false,
+          "source": "S1:P265",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "atrium",
+          "wall": "north",
+          "at_m": [
+            6.2,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            6.2,
+            0.25
+          ],
+          "landing_m": [
+            6.2,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        6.2,
+        0.86
+      ]
+    },
+    "L4:bridge": {
+      "chapter": 4,
+      "room_id": "bridge",
+      "title": "胼胝桥",
+      "geometry_version": 2,
+      "size_m": [
+        11.2,
+        6.8
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "bridge:0",
+          "name": "中枢连接控制台",
+          "kind": "console",
+          "rect_m": [
+            4.9,
+            2.8513,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            5.6,
+            3.9213
+          ],
+          "solid": true,
+          "source": "S3:T41",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "bridge:1",
+          "name": "左侧检测终端",
+          "kind": "console",
+          "rect_m": [
+            0.45,
+            4.4618,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.27,
+            4.7868
+          ],
+          "solid": true,
+          "source": "S3:T41",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "bridge:2",
+          "name": "右侧检测终端",
+          "kind": "console",
+          "rect_m": [
+            9.35,
+            4.4618,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            8.93,
+            4.7868
+          ],
+          "solid": true,
+          "source": "S3:T41",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "bridge:3",
+          "name": "维护设备柜",
+          "kind": "drawer",
+          "rect_m": [
+            7.65,
+            0.575,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            8.4,
+            1.545
+          ],
+          "solid": true,
+          "source": "S3:T41",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "bridge_fibers",
+          "name": "桥下纤维束",
+          "kind": "cable",
+          "rect_m": [
+            3.4,
+            6.15,
+            1.8,
+            0.4
+          ],
+          "height_m": 0.03,
+          "stand_m": [
+            4.3,
+            6.35
+          ],
+          "solid": false,
+          "source": "S1:P285",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "decision",
+          "wall": "north",
+          "at_m": [
+            1.8,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            1.8,
+            0.25
+          ],
+          "landing_m": [
+            1.8,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "index",
+          "wall": "east",
+          "at_m": [
+            10.72,
+            1.7895
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            10.95,
+            1.7895
+          ],
+          "landing_m": [
+            10.34,
+            1.7895
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "rhythm",
+          "wall": "south",
+          "at_m": [
+            5.6,
+            6.32
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "threshold_m": [
+            5.6,
+            6.55
+          ],
+          "landing_m": [
+            5.6,
+            5.94
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "switch",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            1.7895
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            1.7895
+          ],
+          "landing_m": [
+            0.86,
+            1.7895
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        1.8,
+        0.86
+      ]
+    },
+    "L5:bridge": {
+      "chapter": 5,
+      "room_id": "bridge",
+      "title": "胼胝桥",
+      "geometry_version": 3,
+      "size_m": [
+        12.8,
+        7.6
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "bridge:0",
+          "name": "中枢连接控制台",
+          "kind": "console",
+          "rect_m": [
+            5.7,
+            3.225,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            6.4,
+            4.295
+          ],
+          "solid": true,
+          "source": "S3:T41",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "bridge:1",
+          "name": "左侧检测终端",
+          "kind": "console",
+          "rect_m": [
+            0.6143,
+            5.025,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.4343,
+            5.35
+          ],
+          "solid": true,
+          "source": "S3:T41",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "bridge:2",
+          "name": "右侧检测终端",
+          "kind": "console",
+          "rect_m": [
+            10.7857,
+            5.025,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            10.3657,
+            5.35
+          ],
+          "solid": true,
+          "source": "S3:T41",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "bridge:3",
+          "name": "维护设备柜",
+          "kind": "drawer",
+          "rect_m": [
+            8.85,
+            0.675,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            9.6,
+            1.645
+          ],
+          "solid": true,
+          "source": "S3:T41",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "bridge_fibers",
+          "name": "桥下纤维束",
+          "kind": "cable",
+          "rect_m": [
+            3.4,
+            6.95,
+            1.8,
+            0.4
+          ],
+          "height_m": 0.03,
+          "stand_m": [
+            4.3,
+            7.15
+          ],
+          "solid": false,
+          "source": "S1:P285",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "decision",
+          "wall": "north",
+          "at_m": [
+            2.0571,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            2.0571,
+            0.25
+          ],
+          "landing_m": [
+            2.0571,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "index",
+          "wall": "east",
+          "at_m": [
+            12.32,
+            2.0
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            12.55,
+            2.0
+          ],
+          "landing_m": [
+            11.94,
+            2.0
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "rhythm",
+          "wall": "south",
+          "at_m": [
+            6.4,
+            7.12
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "threshold_m": [
+            6.4,
+            7.35
+          ],
+          "landing_m": [
+            6.4,
+            6.74
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "switch",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            2.0
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            2.0
+          ],
+          "landing_m": [
+            0.86,
+            2.0
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        2.0571,
+        0.86
+      ]
+    },
+    "L4:rhythm": {
+      "chapter": 4,
+      "room_id": "rhythm",
+      "title": "节律支路",
+      "geometry_version": 2,
+      "size_m": [
+        12.0,
+        7.6
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "rhythm:0",
+          "name": "脉冲检测仪",
+          "kind": "console",
+          "rect_m": [
+            0.2107,
+            1.825,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.0307,
+            2.15
+          ],
+          "solid": true,
+          "source": "S3:T42",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "rhythm:1",
+          "name": "神经纤维束",
+          "kind": "cable",
+          "rect_m": [
+            0.5321,
+            5.75,
+            0.65,
+            0.5
+          ],
+          "height_m": 0.15,
+          "stand_m": [
+            1.6021,
+            6.0
+          ],
+          "solid": true,
+          "source": "S3:T42",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "rhythm:2",
+          "name": "接驳节点",
+          "kind": "node",
+          "rect_m": [
+            5.0071,
+            6.275,
+            0.7,
+            0.55
+          ],
+          "height_m": 0.75,
+          "stand_m": [
+            5.3571,
+            5.855
+          ],
+          "solid": true,
+          "source": "S3:T42",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "rhythm:3",
+          "name": "线路维护柜",
+          "kind": "drawer",
+          "rect_m": [
+            7.7143,
+            6.325,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            8.4643,
+            5.905
+          ],
+          "solid": true,
+          "source": "S3:T42",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [
+        {
+          "id": "rhythm_bend",
+          "name": "L形房间之外的不可达区域",
+          "kind": "excluded_volume",
+          "rect_m": [
+            3.84,
+            0.0,
+            8.16,
+            3.344
+          ],
+          "height_m": 0,
+          "stand_m": [
+            7.92,
+            1.672
+          ],
+          "solid": true,
+          "source": "S1:P291",
+          "layer": "logical_only",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact",
+          "logical_exclusion": true
+        }
+      ],
+      "decor": [
+        {
+          "id": "rhythm_inner_wall_vertical",
+          "name": "弯道内侧竖墙",
+          "kind": "wall",
+          "rect_m": [
+            3.84,
+            0.0,
+            0.15,
+            3.344
+          ],
+          "height_m": 2.55,
+          "stand_m": [
+            3.915,
+            1.672
+          ],
+          "solid": false,
+          "source": "S1:P291",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "rhythm_inner_wall_horizontal",
+          "name": "弯道内侧横墙",
+          "kind": "wall",
+          "rect_m": [
+            3.84,
+            3.194,
+            8.16,
+            0.15
+          ],
+          "height_m": 2.55,
+          "stand_m": [
+            7.92,
+            3.269
+          ],
+          "solid": false,
+          "source": "S1:P291",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "bridge",
+          "wall": "north",
+          "at_m": [
+            1.8214,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            1.8214,
+            0.25
+          ],
+          "landing_m": [
+            1.8214,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "identity",
+          "wall": "east",
+          "at_m": [
+            11.52,
+            5.8
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            11.75,
+            5.8
+          ],
+          "landing_m": [
+            11.14,
+            5.8
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "One primary bend; solid excluded upper-right volume, waiting/passing pocket below its corner.",
+      "floor_polygon_m": [
+        [
+          0,
+          0
+        ],
+        [
+          3.84,
+          0
+        ],
+        [
+          3.84,
+          3.344
+        ],
+        [
+          12.0,
+          3.344
+        ],
+        [
+          12.0,
+          7.6
+        ],
+        [
+          0,
+          7.6
+        ]
+      ],
+      "wall_ranges_m": {
+        "north": [
+          0,
+          3.84
+        ],
+        "east": [
+          3.344,
+          7.6
+        ]
+      },
+      "spawn_m": [
+        1.8214,
+        0.86
+      ]
+    },
+    "L5:rhythm": {
+      "chapter": 5,
+      "room_id": "rhythm",
+      "title": "节律支路",
+      "geometry_version": 3,
+      "size_m": [
+        13.6,
+        8.0
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "rhythm:0",
+          "name": "脉冲检测仪",
+          "kind": "console",
+          "rect_m": [
+            0.3321,
+            1.9382,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.1521,
+            2.2632
+          ],
+          "solid": true,
+          "source": "S3:T42",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "rhythm:1",
+          "name": "神经纤维束",
+          "kind": "cable",
+          "rect_m": [
+            0.6464,
+            6.0658,
+            0.65,
+            0.5
+          ],
+          "height_m": 0.15,
+          "stand_m": [
+            1.7164,
+            6.3158
+          ],
+          "solid": true,
+          "source": "S3:T42",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "rhythm:2",
+          "name": "接驳节点",
+          "kind": "node",
+          "rect_m": [
+            5.7214,
+            6.6197,
+            0.7,
+            0.55
+          ],
+          "height_m": 0.75,
+          "stand_m": [
+            6.0714,
+            6.1997
+          ],
+          "solid": true,
+          "source": "S3:T42",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "rhythm:3",
+          "name": "线路维护柜",
+          "kind": "drawer",
+          "rect_m": [
+            8.8429,
+            6.6724,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            9.5929,
+            6.2524
+          ],
+          "solid": true,
+          "source": "S3:T42",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [
+        {
+          "id": "rhythm_bend",
+          "name": "L形房间之外的不可达区域",
+          "kind": "excluded_volume",
+          "rect_m": [
+            4.352,
+            0.0,
+            9.248,
+            3.52
+          ],
+          "height_m": 0,
+          "stand_m": [
+            8.976,
+            1.76
+          ],
+          "solid": true,
+          "source": "S1:P291",
+          "layer": "logical_only",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact",
+          "logical_exclusion": true
+        }
+      ],
+      "decor": [
+        {
+          "id": "rhythm_inner_wall_vertical",
+          "name": "弯道内侧竖墙",
+          "kind": "wall",
+          "rect_m": [
+            4.352,
+            0.0,
+            0.15,
+            3.52
+          ],
+          "height_m": 2.55,
+          "stand_m": [
+            4.427,
+            1.76
+          ],
+          "solid": false,
+          "source": "S1:P291",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "rhythm_inner_wall_horizontal",
+          "name": "弯道内侧横墙",
+          "kind": "wall",
+          "rect_m": [
+            4.352,
+            3.37,
+            9.248,
+            0.15
+          ],
+          "height_m": 2.55,
+          "stand_m": [
+            8.976,
+            3.445
+          ],
+          "solid": false,
+          "source": "S1:P291",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "bridge",
+          "wall": "north",
+          "at_m": [
+            2.0643,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            2.0643,
+            0.25
+          ],
+          "landing_m": [
+            2.0643,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "identity",
+          "wall": "east",
+          "at_m": [
+            13.12,
+            6.1053
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            13.35,
+            6.1053
+          ],
+          "landing_m": [
+            12.74,
+            6.1053
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "One primary bend; solid excluded upper-right volume, waiting/passing pocket below its corner.",
+      "floor_polygon_m": [
+        [
+          0,
+          0
+        ],
+        [
+          4.352,
+          0
+        ],
+        [
+          4.352,
+          3.52
+        ],
+        [
+          13.6,
+          3.52
+        ],
+        [
+          13.6,
+          8.0
+        ],
+        [
+          0,
+          8.0
+        ]
+      ],
+      "wall_ranges_m": {
+        "north": [
+          0,
+          4.352
+        ],
+        "east": [
+          3.52,
+          8.0
+        ]
+      },
+      "spawn_m": [
+        2.0643,
+        0.86
+      ]
+    },
+    "L4:index": {
+      "chapter": 4,
+      "room_id": "index",
+      "title": "索引档案室",
+      "geometry_version": 2,
+      "size_m": [
+        10.4,
+        8.0
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "index:0",
+          "name": "档案推车",
+          "kind": "cart",
+          "rect_m": [
+            0.6679,
+            2.6197,
+            0.8,
+            0.55
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            1.8879,
+            2.8947
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "index:1",
+          "name": "查询工作台",
+          "kind": "desk",
+          "rect_m": [
+            7.2786,
+            0.7053,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            8.0786,
+            1.9253
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "index:2",
+          "name": "档案柜组",
+          "kind": "drawer",
+          "rect_m": [
+            0.7929,
+            5.25,
+            0.55,
+            1.5
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            1.7629,
+            6.0
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "index:3",
+          "name": "索引终端",
+          "kind": "console",
+          "rect_m": [
+            4.5,
+            3.6224,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            5.2,
+            4.6924
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "index:4",
+          "name": "维护储物柜",
+          "kind": "drawer",
+          "rect_m": [
+            3.8929,
+            6.6724,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            4.6429,
+            6.2524
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "index:5",
+          "name": "身份档案显示屏底座",
+          "kind": "screen",
+          "rect_m": [
+            8.975,
+            4.0158,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            8.555,
+            4.3158
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "bridge",
+          "wall": "north",
+          "at_m": [
+            2.0429,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            2.0429,
+            0.25
+          ],
+          "landing_m": [
+            2.0429,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "switch",
+          "wall": "south",
+          "at_m": [
+            8.3571,
+            7.52
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "threshold_m": [
+            8.3571,
+            7.75
+          ],
+          "landing_m": [
+            8.3571,
+            7.14
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        2.0429,
+        0.86
+      ]
+    },
+    "L5:index": {
+      "chapter": 5,
+      "room_id": "index",
+      "title": "索引档案室",
+      "geometry_version": 3,
+      "size_m": [
+        12.0,
+        8.4
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "index:0",
+          "name": "档案推车",
+          "kind": "cart",
+          "rect_m": [
+            0.8321,
+            2.7645,
+            0.8,
+            0.55
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.0521,
+            3.0395
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "index:1",
+          "name": "查询工作台",
+          "kind": "desk",
+          "rect_m": [
+            8.5214,
+            0.7605,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            9.3214,
+            1.9805
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "index:2",
+          "name": "档案柜组",
+          "kind": "drawer",
+          "rect_m": [
+            0.9571,
+            5.55,
+            0.55,
+            1.5
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            1.9271,
+            6.3
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "index:3",
+          "name": "索引终端",
+          "kind": "console",
+          "rect_m": [
+            5.3,
+            3.8197,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            6.0,
+            4.8897
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "index:4",
+          "name": "维护储物柜",
+          "kind": "drawer",
+          "rect_m": [
+            4.6071,
+            7.0197,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            5.3571,
+            6.5997
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "index:5",
+          "name": "身份档案显示屏底座",
+          "kind": "screen",
+          "rect_m": [
+            10.425,
+            4.2316,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            10.005,
+            4.5316
+          ],
+          "solid": true,
+          "source": "S3:T43",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "bridge",
+          "wall": "north",
+          "at_m": [
+            2.3571,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            2.3571,
+            0.25
+          ],
+          "landing_m": [
+            2.3571,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "switch",
+          "wall": "south",
+          "at_m": [
+            9.6429,
+            7.92
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "threshold_m": [
+            9.6429,
+            8.15
+          ],
+          "landing_m": [
+            9.6429,
+            7.54
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        2.3571,
+        0.86
+      ]
+    },
+    "L4:switch": {
+      "chapter": 4,
+      "room_id": "switch",
+      "title": "切换分岔路",
+      "geometry_version": 2,
+      "size_m": [
+        9.6,
+        7.2
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "switch:0",
+          "name": "切换控制台",
+          "kind": "console",
+          "rect_m": [
+            4.1,
+            3.0855,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            4.8,
+            4.1555
+          ],
+          "solid": true,
+          "source": "S3:T44",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "switch:1",
+          "name": "信号检测屏底座",
+          "kind": "screen",
+          "rect_m": [
+            0.9643,
+            5.5737,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            2.2843,
+            5.8737
+          ],
+          "solid": true,
+          "source": "S3:T44",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "switch:2",
+          "name": "线路维护柜",
+          "kind": "drawer",
+          "rect_m": [
+            7.4786,
+            0.9092,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            8.2286,
+            1.8792
+          ],
+          "solid": true,
+          "source": "S3:T44",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "switch_fixed_marks",
+          "name": "固定地纹",
+          "kind": "floor_marks",
+          "rect_m": [
+            3.2,
+            1.2,
+            0.7,
+            0.7
+          ],
+          "height_m": 0,
+          "stand_m": [
+            3.55,
+            1.55
+          ],
+          "solid": false,
+          "source": "S1:P281",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "switch_fixed_frame",
+          "name": "固定门框特征",
+          "kind": "frame",
+          "rect_m": [
+            0.16,
+            1.2,
+            0.12,
+            0.5
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            0.22,
+            1.45
+          ],
+          "solid": false,
+          "source": "S1:P281",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "index",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            1.8947
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            1.8947
+          ],
+          "landing_m": [
+            0.86,
+            1.8947
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "bridge",
+          "wall": "north",
+          "at_m": [
+            4.8,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            4.8,
+            0.25
+          ],
+          "landing_m": [
+            4.8,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "verify",
+          "wall": "east",
+          "at_m": [
+            9.12,
+            5.4947
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            9.35,
+            5.4947
+          ],
+          "landing_m": [
+            8.74,
+            5.4947
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        0.86,
+        1.8947
+      ]
+    },
+    "L5:switch": {
+      "chapter": 5,
+      "room_id": "switch",
+      "title": "切换分岔路",
+      "geometry_version": 3,
+      "size_m": [
+        11.6,
+        7.6
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "switch:0",
+          "name": "切换控制台",
+          "kind": "console",
+          "rect_m": [
+            5.1,
+            3.275,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            5.8,
+            4.345
+          ],
+          "solid": true,
+          "source": "S3:T44",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "switch:1",
+          "name": "信号检测屏底座",
+          "kind": "screen",
+          "rect_m": [
+            1.2589,
+            5.9,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            2.5789,
+            6.2
+          ],
+          "solid": true,
+          "source": "S3:T44",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "switch:2",
+          "name": "线路维护柜",
+          "kind": "drawer",
+          "rect_m": [
+            9.1929,
+            0.975,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            9.9429,
+            1.945
+          ],
+          "solid": true,
+          "source": "S3:T44",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "switch_fixed_marks",
+          "name": "固定地纹",
+          "kind": "floor_marks",
+          "rect_m": [
+            3.2,
+            1.2,
+            0.7,
+            0.7
+          ],
+          "height_m": 0,
+          "stand_m": [
+            3.55,
+            1.55
+          ],
+          "solid": false,
+          "source": "S1:P281",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "switch_fixed_frame",
+          "name": "固定门框特征",
+          "kind": "frame",
+          "rect_m": [
+            0.16,
+            1.2,
+            0.12,
+            0.5
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            0.22,
+            1.45
+          ],
+          "solid": false,
+          "source": "S1:P281",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "index",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            2.0
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            2.0
+          ],
+          "landing_m": [
+            0.86,
+            2.0
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "bridge",
+          "wall": "north",
+          "at_m": [
+            5.8,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            5.8,
+            0.25
+          ],
+          "landing_m": [
+            5.8,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "verify",
+          "wall": "east",
+          "at_m": [
+            11.12,
+            5.8
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            11.35,
+            5.8
+          ],
+          "landing_m": [
+            10.74,
+            5.8
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        0.86,
+        2.0
+      ]
+    },
+    "L4:verify": {
+      "chapter": 4,
+      "room_id": "verify",
+      "title": "核验出口",
+      "geometry_version": 2,
+      "size_m": [
+        10.4,
+        8.4
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "verify:0",
+          "name": "身份识别终端",
+          "kind": "console",
+          "rect_m": [
+            0.5536,
+            1.6645,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.3736,
+            1.9895
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "verify:1",
+          "name": "核验控制台",
+          "kind": "console",
+          "rect_m": [
+            8.3536,
+            1.6645,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            7.9336,
+            1.9895
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "verify:2",
+          "name": "等候长椅组",
+          "kind": "chairs",
+          "rect_m": [
+            3.4,
+            6.0868,
+            3.6,
+            1.2
+          ],
+          "height_m": 0.85,
+          "stand_m": [
+            5.2,
+            6.6868
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact",
+          "collision_rects_m": [
+            [
+              3.4,
+              6.0868,
+              0.8,
+              1.2
+            ],
+            [
+              6.2,
+              6.0868,
+              0.8,
+              1.2
+            ]
+          ],
+          "layout_note": "Two physical seating banks, one grouped point; central and side aisles remain open."
+        },
+        {
+          "id": "verify:3",
+          "name": "门禁面板",
+          "kind": "panel",
+          "rect_m": [
+            6.685,
+            0.6889,
+            0.28,
+            0.28
+          ],
+          "height_m": 1.2,
+          "stand_m": [
+            6.825,
+            1.3889
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "verify:4",
+          "name": "维护终端",
+          "kind": "console",
+          "rect_m": [
+            0.4607,
+            3.9303,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.2807,
+            4.2553
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "verify:5",
+          "name": "身份信息显示屏底座",
+          "kind": "screen",
+          "rect_m": [
+            8.8821,
+            3.9553,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            8.4621,
+            4.2553
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "verify:6",
+          "name": "资料柜",
+          "kind": "drawer",
+          "rect_m": [
+            8.2107,
+            7.0197,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            7.7907,
+            7.2947
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "switch",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            6.1895
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            6.1895
+          ],
+          "landing_m": [
+            0.86,
+            6.1895
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "identity",
+          "wall": "east",
+          "at_m": [
+            9.92,
+            6.1895
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            10.15,
+            6.1895
+          ],
+          "landing_m": [
+            9.54,
+            6.1895
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "combat_exit",
+          "wall": "north",
+          "at_m": [
+            5.2,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            5.2,
+            0.25
+          ],
+          "landing_m": [
+            5.2,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        0.86,
+        6.1895
+      ]
+    },
+    "L5:verify": {
+      "chapter": 5,
+      "room_id": "verify",
+      "title": "核验出口",
+      "geometry_version": 3,
+      "size_m": [
+        12.0,
+        8.8
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "verify:0",
+          "name": "身份识别终端",
+          "kind": "console",
+          "rect_m": [
+            0.7464,
+            1.7592,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.5664,
+            2.0842
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "verify:1",
+          "name": "核验控制台",
+          "kind": "console",
+          "rect_m": [
+            9.7464,
+            1.7592,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            9.3264,
+            2.0842
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "verify:2",
+          "name": "等候长椅组",
+          "kind": "chairs",
+          "rect_m": [
+            4.2,
+            6.4053,
+            3.6,
+            1.2
+          ],
+          "height_m": 0.85,
+          "stand_m": [
+            6.0,
+            7.0053
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact",
+          "collision_rects_m": [
+            [
+              4.2,
+              6.4053,
+              0.8,
+              1.2
+            ],
+            [
+              7.0,
+              6.4053,
+              0.8,
+              1.2
+            ]
+          ],
+          "layout_note": "Two physical seating banks, one grouped point; central and side aisles remain open."
+        },
+        {
+          "id": "verify:3",
+          "name": "门禁面板",
+          "kind": "panel",
+          "rect_m": [
+            7.735,
+            0.7284,
+            0.28,
+            0.28
+          ],
+          "height_m": 1.2,
+          "stand_m": [
+            7.875,
+            1.4284
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "verify:4",
+          "name": "维护终端",
+          "kind": "console",
+          "rect_m": [
+            0.6393,
+            4.1329,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.4593,
+            4.4579
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "verify:5",
+          "name": "身份信息显示屏底座",
+          "kind": "screen",
+          "rect_m": [
+            10.3179,
+            4.1579,
+            0.9,
+            0.6
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            9.8979,
+            4.4579
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "verify:6",
+          "name": "资料柜",
+          "kind": "drawer",
+          "rect_m": [
+            9.5893,
+            7.3671,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            9.1693,
+            7.6421
+          ],
+          "solid": true,
+          "source": "S3:T45",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "switch",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            6.4842
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            6.4842
+          ],
+          "landing_m": [
+            0.86,
+            6.4842
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "identity",
+          "wall": "east",
+          "at_m": [
+            11.52,
+            6.4842
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            11.75,
+            6.4842
+          ],
+          "landing_m": [
+            11.14,
+            6.4842
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "hippocampus",
+          "wall": "north",
+          "at_m": [
+            6.0,
+            0.48
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "threshold_m": [
+            6.0,
+            0.25
+          ],
+          "landing_m": [
+            6.0,
+            0.86
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        0.86,
+        6.4842
+      ]
+    },
+    "L4:identity": {
+      "chapter": 4,
+      "room_id": "identity",
+      "title": "身份核查室",
+      "geometry_version": 2,
+      "size_m": [
+        10.8,
+        8.4
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "identity:0",
+          "name": "记录终端①",
+          "kind": "console",
+          "rect_m": [
+            0.5536,
+            3.9855,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.3736,
+            4.3105
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:1",
+          "name": "核验台①",
+          "kind": "desk",
+          "rect_m": [
+            2.3821,
+            6.4526,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            3.1821,
+            6.0326
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:2",
+          "name": "双面身份镜",
+          "kind": "mirror",
+          "rect_m": [
+            5.31,
+            4.1829,
+            0.18,
+            1.25
+          ],
+          "height_m": 1.9,
+          "stand_m": [
+            4.89,
+            4.8079
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:3",
+          "name": "核验台②",
+          "kind": "desk",
+          "rect_m": [
+            6.8179,
+            6.4526,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            7.6179,
+            6.0326
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:4",
+          "name": "编号档案柜①",
+          "kind": "drawer",
+          "rect_m": [
+            1.0821,
+            0.775,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            1.8321,
+            1.745
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:5",
+          "name": "编号档案柜②",
+          "kind": "drawer",
+          "rect_m": [
+            8.2179,
+            0.775,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            8.9679,
+            1.745
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:6",
+          "name": "记录终端②",
+          "kind": "console",
+          "rect_m": [
+            8.8464,
+            3.9855,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            8.4264,
+            4.3105
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "rhythm",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            2.2105
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            2.2105
+          ],
+          "landing_m": [
+            0.86,
+            2.2105
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "verify",
+          "wall": "east",
+          "at_m": [
+            10.32,
+            2.2105
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            10.55,
+            2.2105
+          ],
+          "landing_m": [
+            9.94,
+            2.2105
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P220–323"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        5.6,
+        3.8
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        0.86,
+        2.2105
+      ]
+    },
+    "L5:identity": {
+      "chapter": 5,
+      "room_id": "identity",
+      "title": "身份核查室",
+      "geometry_version": 3,
+      "size_m": [
+        12.0,
+        8.8
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.55,
+      "furniture": [
+        {
+          "id": "identity:0",
+          "name": "记录终端①",
+          "kind": "console",
+          "rect_m": [
+            0.6929,
+            4.1908,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.5129,
+            4.5158
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:1",
+          "name": "核验台①",
+          "kind": "desk",
+          "rect_m": [
+            2.7357,
+            6.7789,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            3.5357,
+            6.3589
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:2",
+          "name": "双面身份镜",
+          "kind": "mirror",
+          "rect_m": [
+            5.91,
+            4.4118,
+            0.18,
+            1.25
+          ],
+          "height_m": 1.9,
+          "stand_m": [
+            5.49,
+            5.0368
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:3",
+          "name": "核验台②",
+          "kind": "desk",
+          "rect_m": [
+            7.6643,
+            6.7789,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.76,
+          "stand_m": [
+            8.4643,
+            6.3589
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:4",
+          "name": "编号档案柜①",
+          "kind": "drawer",
+          "rect_m": [
+            1.2857,
+            0.825,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            2.0357,
+            1.795
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:5",
+          "name": "编号档案柜②",
+          "kind": "drawer",
+          "rect_m": [
+            9.2143,
+            0.825,
+            1.5,
+            0.55
+          ],
+          "height_m": 1.45,
+          "stand_m": [
+            9.9643,
+            1.795
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "identity:6",
+          "name": "记录终端②",
+          "kind": "console",
+          "rect_m": [
+            9.9071,
+            4.1908,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            9.4871,
+            4.5158
+          ],
+          "solid": true,
+          "source": "S3:T46",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "rhythm",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            2.3158
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            2.3158
+          ],
+          "landing_m": [
+            0.86,
+            2.3158
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "verify",
+          "wall": "east",
+          "at_m": [
+            11.52,
+            2.3158
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            11.75,
+            2.3158
+          ],
+          "landing_m": [
+            11.14,
+            2.3158
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P327–418"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "layout_note": "Preserve required topology and independent furniture; sizes are implementation calibration, not source measurements.",
+      "spawn_m": [
+        0.86,
+        2.3158
+      ]
+    },
+    "L5:hippocampus": {
+      "chapter": 5,
+      "room_id": "hippocampus",
+      "title": "海马回廊",
+      "geometry_version": 3,
+      "size_m": [
+        14.0,
+        8.0
+      ],
+      "spawn_m": [
+        0.86,
+        4.0
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.7,
+      "furniture": [
+        {
+          "id": "记忆陈列",
+          "name": "记忆陈列",
+          "kind": "core",
+          "rect_m": [
+            5.0,
+            2.6,
+            3.0,
+            2.0
+          ],
+          "height_m": 1.35,
+          "stand_m": [
+            6.5,
+            5.02
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "航迹地图",
+          "name": "航迹地图",
+          "kind": "console",
+          "rect_m": [
+            1.7,
+            0.55,
+            1.7,
+            0.6
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.55,
+            1.57
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "时光装置",
+          "name": "时光装置",
+          "kind": "console",
+          "rect_m": [
+            8.2,
+            0.55,
+            1.3,
+            0.8
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            8.85,
+            1.77
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "记忆胶囊",
+          "name": "记忆胶囊",
+          "kind": "console",
+          "rect_m": [
+            10.6,
+            5.8,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            11.4,
+            5.38
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "档案柜",
+          "name": "档案柜",
+          "kind": "console",
+          "rect_m": [
+            1.4,
+            6.0,
+            1.8,
+            0.55
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            2.3,
+            5.58
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "陈列墙",
+          "name": "陈列墙",
+          "kind": "console",
+          "rect_m": [
+            11.9,
+            1.6,
+            0.22,
+            2.1
+          ],
+          "height_m": 1.9,
+          "stand_m": [
+            12.01,
+            4.12
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "记录终端",
+          "name": "记录终端",
+          "kind": "console",
+          "rect_m": [
+            8.2,
+            6.1,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            8.9,
+            5.68
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "memory_clothes_rack",
+          "name": "记忆陈列衣架",
+          "kind": "rack",
+          "rect_m": [
+            3.1,
+            2.5,
+            0.18,
+            0.9
+          ],
+          "height_m": 1.7,
+          "stand_m": [
+            2.6,
+            2.95
+          ],
+          "solid": true,
+          "source": "S1:P435",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "verify",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            4.0
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            4.0
+          ],
+          "landing_m": [
+            0.86,
+            4.0
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "thalamus",
+          "wall": "east",
+          "at_m": [
+            13.52,
+            4.0
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            13.75,
+            4.0
+          ],
+          "landing_m": [
+            13.14,
+            4.0
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P419–473"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "layout_note": "Pale, sacred third layer; existing injuries/evidence remain. No new rest, search, key or mandatory visit.",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ]
+    },
+    "L5:thalamus": {
+      "chapter": 5,
+      "room_id": "thalamus",
+      "title": "丘脑中继厅",
+      "geometry_version": 3,
+      "size_m": [
+        14.0,
+        11.2
+      ],
+      "spawn_m": [
+        0.86,
+        2.6526
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.7,
+      "furniture": [
+        {
+          "id": "中继核心",
+          "name": "中继核心",
+          "kind": "core",
+          "rect_m": [
+            5.7,
+            4.4,
+            2.6,
+            2.3
+          ],
+          "height_m": 1.35,
+          "stand_m": [
+            7.0,
+            7.12
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "维护面板",
+          "name": "维护面板",
+          "kind": "console",
+          "rect_m": [
+            1.8,
+            0.55,
+            1.5,
+            0.5
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.55,
+            1.47
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "电缆接点",
+          "name": "电缆接点",
+          "kind": "console",
+          "rect_m": [
+            9.8,
+            0.6,
+            1.8,
+            0.45
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            10.7,
+            1.47
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "监测屏",
+          "name": "监测屏",
+          "kind": "console",
+          "rect_m": [
+            5.6,
+            0.5,
+            1.5,
+            0.5
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            6.35,
+            1.42
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "控制台",
+          "name": "控制台",
+          "kind": "console",
+          "rect_m": [
+            1.7,
+            4.5,
+            1.4,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.4,
+            5.57
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "设备柜",
+          "name": "设备柜",
+          "kind": "console",
+          "rect_m": [
+            10.8,
+            4.5,
+            1.5,
+            0.6
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            11.55,
+            5.52
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "hippocampus",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            2.6526
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            2.6526
+          ],
+          "landing_m": [
+            0.86,
+            2.6526
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "cerebellum",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            8.4
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            8.4
+          ],
+          "landing_m": [
+            0.86,
+            8.4
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "hypothalamus",
+          "wall": "south",
+          "at_m": [
+            4.375,
+            10.72
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "threshold_m": [
+            4.375,
+            10.95
+          ],
+          "landing_m": [
+            4.375,
+            10.34
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "basal",
+          "wall": "south",
+          "at_m": [
+            9.625,
+            10.72
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "threshold_m": [
+            9.625,
+            10.95
+          ],
+          "landing_m": [
+            9.625,
+            10.34
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "amygdala",
+          "wall": "east",
+          "at_m": [
+            13.52,
+            8.4
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            13.75,
+            8.4
+          ],
+          "landing_m": [
+            13.14,
+            8.4
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "brainstem",
+          "wall": "east",
+          "at_m": [
+            13.52,
+            2.6526
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            13.75,
+            2.6526
+          ],
+          "landing_m": [
+            13.14,
+            2.6526
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P419–473"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "layout_note": "Pale, sacred third layer; existing injuries/evidence remain. No new rest, search, key or mandatory visit.",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "actor_stands_m": {
+        "self": [
+          9.1,
+          5.5
+        ]
+      }
+    },
+    "L5:cerebellum": {
+      "chapter": 5,
+      "room_id": "cerebellum",
+      "title": "小脑折列室",
+      "geometry_version": 3,
+      "size_m": [
+        13.2,
+        8.4
+      ],
+      "spawn_m": [
+        0.86,
+        4.2
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.7,
+      "furniture": [
+        {
+          "id": "折叶阵列",
+          "name": "折叶阵列",
+          "kind": "wall",
+          "rect_m": [
+            4.0,
+            2.2,
+            0.35,
+            3.0
+          ],
+          "height_m": 1.7,
+          "stand_m": [
+            4.175,
+            5.62
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "控制终端",
+          "name": "控制终端",
+          "kind": "console",
+          "rect_m": [
+            1.4,
+            0.6,
+            1.5,
+            0.65
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.15,
+            1.67
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "校准机械臂",
+          "name": "校准机械臂",
+          "kind": "console",
+          "rect_m": [
+            9.7,
+            0.6,
+            1.6,
+            0.8
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            10.5,
+            1.82
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "姿态架",
+          "name": "姿态架",
+          "kind": "console",
+          "rect_m": [
+            1.4,
+            6.8,
+            1.4,
+            0.55
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.1,
+            6.38
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "平衡平台",
+          "name": "平衡平台",
+          "kind": "console",
+          "rect_m": [
+            5.8,
+            6.4,
+            1.7,
+            1.0
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            6.65,
+            5.98
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "工具柜",
+          "name": "工具柜",
+          "kind": "console",
+          "rect_m": [
+            9.5,
+            6.9,
+            1.3,
+            0.5
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            10.15,
+            6.48
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "储物柜",
+          "name": "储物柜",
+          "kind": "console",
+          "rect_m": [
+            11.8,
+            2.0,
+            0.55,
+            1.4
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            12.075,
+            3.82
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [
+        {
+          "id": "cerebellum_fold",
+          "name": "折叶隔断",
+          "kind": "wall",
+          "rect_m": [
+            8.3,
+            3.3,
+            0.35,
+            3.0
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            8.475,
+            4.8
+          ],
+          "solid": true,
+          "source": "S1:P447",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "thalamus",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            4.2
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            4.2
+          ],
+          "landing_m": [
+            0.86,
+            4.2
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "amygdala",
+          "wall": "east",
+          "at_m": [
+            12.72,
+            4.2
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            12.95,
+            4.2
+          ],
+          "landing_m": [
+            12.34,
+            4.2
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P419–473"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "layout_note": "Pale, sacred third layer; existing injuries/evidence remain. No new rest, search, key or mandatory visit.",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ]
+    },
+    "L5:hypothalamus": {
+      "chapter": 5,
+      "room_id": "hypothalamus",
+      "title": "下丘脑温控室",
+      "geometry_version": 3,
+      "size_m": [
+        12.8,
+        9.2
+      ],
+      "spawn_m": [
+        0.86,
+        4.6
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.7,
+      "furniture": [
+        {
+          "id": "温控台",
+          "name": "温控台",
+          "kind": "console",
+          "rect_m": [
+            1.2,
+            0.6,
+            1.5,
+            0.7
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            1.95,
+            1.72
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "传感器",
+          "name": "传感器",
+          "kind": "console",
+          "rect_m": [
+            4.4,
+            0.55,
+            0.5,
+            0.5
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            4.65,
+            1.47
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "监测屏",
+          "name": "监测屏",
+          "kind": "console",
+          "rect_m": [
+            7.5,
+            0.5,
+            1.2,
+            0.5
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            8.1,
+            1.42
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "维护设备",
+          "name": "维护设备",
+          "kind": "console",
+          "rect_m": [
+            10.2,
+            0.65,
+            1.3,
+            0.7
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            10.85,
+            1.77
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "冷却管路与液罐",
+          "name": "冷却管路与液罐",
+          "kind": "console",
+          "rect_m": [
+            1.2,
+            6.8,
+            2.1,
+            1.4
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.25,
+            6.38
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "阀组",
+          "name": "阀组",
+          "kind": "console",
+          "rect_m": [
+            4.6,
+            7.6,
+            0.7,
+            0.6
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            4.95,
+            7.18
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "设备柜",
+          "name": "设备柜",
+          "kind": "console",
+          "rect_m": [
+            9.3,
+            7.6,
+            1.7,
+            0.55
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            10.15,
+            7.18
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "加热装置",
+          "name": "加热装置",
+          "kind": "console",
+          "rect_m": [
+            10.8,
+            5.5,
+            1.3,
+            1.5
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            11.45,
+            5.08
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "thalamus",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            4.6
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            4.6
+          ],
+          "landing_m": [
+            0.86,
+            4.6
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "basal",
+          "wall": "east",
+          "at_m": [
+            12.32,
+            4.6
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            12.55,
+            4.6
+          ],
+          "landing_m": [
+            11.94,
+            4.6
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P419–473"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "layout_note": "Pale, sacred third layer; existing injuries/evidence remain. No new rest, search, key or mandatory visit.",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "cold_zone_m": [
+        2.0,
+        2.2,
+        2.6,
+        3.1
+      ]
+    },
+    "L5:basal": {
+      "chapter": 5,
+      "room_id": "basal",
+      "title": "基底核选动环",
+      "geometry_version": 3,
+      "size_m": [
+        12.8,
+        10.0
+      ],
+      "spawn_m": [
+        0.86,
+        5.0
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.7,
+      "furniture": [
+        {
+          "id": "动作选择核心",
+          "name": "动作选择核心",
+          "kind": "core",
+          "rect_m": [
+            5.2,
+            3.7,
+            2.4,
+            2.0
+          ],
+          "height_m": 1.35,
+          "stand_m": [
+            6.4,
+            6.12
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "状态屏",
+          "name": "状态屏",
+          "kind": "console",
+          "rect_m": [
+            1.4,
+            0.55,
+            1.3,
+            0.5
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.05,
+            1.47
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "维护区",
+          "name": "维护区",
+          "kind": "console",
+          "rect_m": [
+            9.7,
+            0.65,
+            1.6,
+            0.7
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            10.5,
+            1.77
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "测试舱",
+          "name": "测试舱",
+          "kind": "console",
+          "rect_m": [
+            1.4,
+            7.5,
+            1.6,
+            1.2
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.2,
+            7.08
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "路径终端",
+          "name": "路径终端",
+          "kind": "console",
+          "rect_m": [
+            9.7,
+            7.5,
+            1.6,
+            0.7
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            10.5,
+            7.08
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "校准台",
+          "name": "校准台",
+          "kind": "console",
+          "rect_m": [
+            4.4,
+            8.6,
+            1.5,
+            0.7
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            5.15,
+            8.18
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "机械臂",
+          "name": "机械臂",
+          "kind": "console",
+          "rect_m": [
+            7.0,
+            8.6,
+            1.5,
+            0.7
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            7.75,
+            8.18
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [
+        {
+          "id": "basal_screen_n",
+          "name": "内环遮挡北",
+          "kind": "wall",
+          "rect_m": [
+            4.65,
+            2.8,
+            3.5,
+            0.15
+          ],
+          "height_m": 1.75,
+          "stand_m": [
+            6.4,
+            2.875
+          ],
+          "solid": true,
+          "source": "S1:P459",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "basal_screen_s",
+          "name": "内环遮挡南",
+          "kind": "wall",
+          "rect_m": [
+            4.65,
+            6.7,
+            3.5,
+            0.15
+          ],
+          "height_m": 1.75,
+          "stand_m": [
+            6.4,
+            6.775
+          ],
+          "solid": true,
+          "source": "S1:P459",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "thalamus",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            5.0
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            5.0
+          ],
+          "landing_m": [
+            0.86,
+            5.0
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "hypothalamus",
+          "wall": "east",
+          "at_m": [
+            12.32,
+            5.0
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            12.55,
+            5.0
+          ],
+          "landing_m": [
+            11.94,
+            5.0
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P419–473"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "layout_note": "Pale, sacred third layer; existing injuries/evidence remain. No new rest, search, key or mandatory visit.",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ]
+    },
+    "L5:amygdala": {
+      "chapter": 5,
+      "room_id": "amygdala",
+      "title": "杏仁核双室",
+      "geometry_version": 3,
+      "size_m": [
+        14.4,
+        8.4
+      ],
+      "spawn_m": [
+        0.86,
+        4.2
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.7,
+      "furniture": [
+        {
+          "id": "警报灯",
+          "name": "警报灯",
+          "kind": "console",
+          "rect_m": [
+            1.5,
+            0.5,
+            0.4,
+            0.4
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            1.7,
+            1.32
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "监测屏",
+          "name": "监测屏",
+          "kind": "console",
+          "rect_m": [
+            4.0,
+            0.55,
+            1.2,
+            0.6
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            4.6,
+            1.57
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "观察位",
+          "name": "观察位",
+          "kind": "console",
+          "rect_m": [
+            1.4,
+            6.4,
+            1.3,
+            0.9
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.05,
+            5.98
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "封抑柜",
+          "name": "封抑柜",
+          "kind": "console",
+          "rect_m": [
+            4.8,
+            6.8,
+            1.5,
+            0.6
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            5.55,
+            6.38
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "低刺激灯",
+          "name": "低刺激灯",
+          "kind": "console",
+          "rect_m": [
+            9.0,
+            0.55,
+            0.4,
+            0.4
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            9.2,
+            1.37
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "安抚座椅",
+          "name": "安抚座椅",
+          "kind": "console",
+          "rect_m": [
+            11.5,
+            2.4,
+            1.8,
+            0.8
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            12.4,
+            3.62
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "情绪记录台",
+          "name": "情绪记录台",
+          "kind": "console",
+          "rect_m": [
+            8.7,
+            6.5,
+            1.7,
+            0.8
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            9.55,
+            6.08
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "隔离储柜",
+          "name": "隔离储柜",
+          "kind": "console",
+          "rect_m": [
+            12.4,
+            6.6,
+            1.3,
+            0.7
+          ],
+          "height_m": 1.8,
+          "stand_m": [
+            13.05,
+            6.18
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [
+        {
+          "id": "amygdala_north",
+          "name": "双室隔断北",
+          "kind": "wall",
+          "rect_m": [
+            7.1,
+            0.0,
+            0.15,
+            3.05
+          ],
+          "height_m": 2.55,
+          "stand_m": [
+            7.175,
+            1.525
+          ],
+          "solid": true,
+          "source": "S1:P465",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "amygdala_south",
+          "name": "双室隔断南",
+          "kind": "wall",
+          "rect_m": [
+            7.1,
+            5.15,
+            0.15,
+            3.25
+          ],
+          "height_m": 2.55,
+          "stand_m": [
+            7.175,
+            6.775
+          ],
+          "solid": true,
+          "source": "S1:P465",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "decor": [],
+      "portals": [
+        {
+          "toward": "thalamus",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            4.2
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            4.2
+          ],
+          "landing_m": [
+            0.86,
+            4.2
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "cerebellum",
+          "wall": "east",
+          "at_m": [
+            13.92,
+            4.2
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            14.15,
+            4.2
+          ],
+          "landing_m": [
+            13.54,
+            4.2
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P419–473"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "layout_note": "Pale, sacred third layer; existing injuries/evidence remain. No new rest, search, key or mandatory visit.",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ]
+    },
+    "L5:brainstem": {
+      "chapter": 5,
+      "room_id": "brainstem",
+      "title": "脑干脉冲井",
+      "geometry_version": 3,
+      "size_m": [
+        12.0,
+        10.4
+      ],
+      "spawn_m": [
+        0.86,
+        5.2
+      ],
+      "wall_thickness_m": 0.15,
+      "wall_height_m": 2.7,
+      "furniture": [
+        {
+          "id": "脉冲核心与护栏",
+          "name": "脉冲核心与护栏",
+          "kind": "core",
+          "rect_m": [
+            5.1,
+            3.6,
+            1.8,
+            3.0
+          ],
+          "height_m": 1.35,
+          "stand_m": [
+            6.0,
+            7.02
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "生命监测终端",
+          "name": "生命监测终端",
+          "kind": "console",
+          "rect_m": [
+            1.7,
+            0.65,
+            1.4,
+            0.6
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.4,
+            1.67
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "检修平台",
+          "name": "检修平台",
+          "kind": "console",
+          "rect_m": [
+            8.8,
+            7.2,
+            1.4,
+            0.9
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            9.5,
+            6.78
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "维生控制台",
+          "name": "维生控制台",
+          "kind": "console",
+          "rect_m": [
+            8.8,
+            0.6,
+            1.5,
+            0.7
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            9.55,
+            1.72
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "导管接口",
+          "name": "导管接口",
+          "kind": "console",
+          "rect_m": [
+            1.6,
+            7.4,
+            1.2,
+            0.7
+          ],
+          "height_m": 0.9,
+          "stand_m": [
+            2.2,
+            6.98
+          ],
+          "solid": true,
+          "source": "S1:P432–471",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "partitions": [],
+      "decor": [
+        {
+          "id": "brainstem_guard_w",
+          "name": "脉冲井护栏西",
+          "kind": "rail",
+          "rect_m": [
+            4.85,
+            3.35,
+            0.1,
+            3.5
+          ],
+          "height_m": 0.95,
+          "stand_m": [
+            4.9,
+            5.1
+          ],
+          "solid": false,
+          "source": "S1:P470",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        },
+        {
+          "id": "brainstem_guard_e",
+          "name": "脉冲井护栏东",
+          "kind": "rail",
+          "rect_m": [
+            7.05,
+            3.35,
+            0.1,
+            3.5
+          ],
+          "height_m": 0.95,
+          "stand_m": [
+            7.1,
+            5.1
+          ],
+          "solid": false,
+          "source": "S1:P470",
+          "layer": "independent_object",
+          "anchor": "floor_center",
+          "shadow": "separate_soft_contact"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "thalamus",
+          "wall": "west",
+          "at_m": [
+            0.48,
+            5.2
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "threshold_m": [
+            0.25,
+            5.2
+          ],
+          "landing_m": [
+            0.86,
+            5.2
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        },
+        {
+          "toward": "street_exit",
+          "wall": "east",
+          "at_m": [
+            11.52,
+            5.2
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "threshold_m": [
+            11.75,
+            5.2
+          ],
+          "landing_m": [
+            11.14,
+            5.2
+          ],
+          "width_m": 1.2,
+          "height_m": 2.2
+        }
+      ],
+      "source": [
+        "S1:P419–473"
+      ],
+      "status": "implemented metre contract; formal art and human pacing not approved",
+      "layout_note": "Pale, sacred third layer; existing injuries/evidence remain. No new rest, search, key or mandatory visit.",
+      "legacy_size_m": [
+        11.2,
+        7.6
+      ],
+      "pulse_zone_m": [
+        4.8,
+        0.8,
+        1.6,
+        6.0
+      ]
+    }
+  }
+}

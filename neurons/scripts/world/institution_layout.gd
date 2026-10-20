@@ -3,32 +3,42 @@ extends "res://scripts/world/room_layout.gd"
 ## Configuration is a technical layout trial, not an approved visual design.
 const SPACE_DATA_PATH:String="res://data/institution_spaces.json"
 const Upper=preload("res://scripts/world/asylum_layout.gd")
+const Presentation=preload("res://scripts/world/spatial_presentation.gd")
+const SpatialGeometry=preload("res://scripts/world/spatial_geometry.gd")
+const SpatialRevision=preload("res://scripts/world/spatial_revision.gd")
+var spatial_revision:int=SpatialRevision.CURRENT
 var config:Dictionary={}
 var room_id:String="lobby"
 var phase_level:int=2
 var projection_origin:=Vector2(180,270)
-var projection_x:float=96.0
-var projection_depth:=Vector2(30,56)
-var height_pixels_per_m:float=78.0
+var projection_x:float=Presentation.X_BASIS.x
+var projection_depth:Vector2=Presentation.DEPTH_BASIS
+var height_pixels_per_m:float=Presentation.HEIGHT_PIXELS
 var wall_thickness_m:float=0.15
 var decor:Array[Dictionary]=[]
 var static_walls:Array[Dictionary]=[]
 var portals:Array[Dictionary]=[]
 var _configured:bool=false
 
-func _init(room:String="lobby",level:int=2) -> void:
+func _init(room:String="lobby",level:int=2,revision:int=SpatialRevision.CURRENT) -> void:
  if not _configured:
-  var document:Variant=JSON.parse_string(FileAccess.get_file_as_string(SPACE_DATA_PATH))
+  spatial_revision=revision
+  var document:Variant=SpatialRevision.document("institution_spaces.json",revision)
   assert(document is Dictionary and document.get("rooms",{}).has(room),"Unknown institution room: "+room)
   room_id=room;phase_level=level
   config=document.rooms[room].duplicate(true)
+  var phase_override:Dictionary=config.get("phase_overrides",{}).get(str(level),{})
+  for field:String in phase_override:
+   if config.get(field) is Dictionary and phase_override[field] is Dictionary:config[field].merge(phase_override[field],true)
+   else:config[field]=phase_override[field].duplicate(true) if phase_override[field] is Array or phase_override[field] is Dictionary else phase_override[field]
   geometry_version=int(config.geometry_version)
   bounds_size=_v2(config.size_m)
   body_radius=float(document.body_radius_m)
   projection_origin=_v2(document.projection.origin_px)
-  projection_x=float(document.projection.x_px_per_m)
-  projection_depth=_v2(document.projection.depth_px_per_m)
-  height_pixels_per_m=float(document.projection.height_px_per_m)
+  # Display basis is shared; metre-space positions and room data stay intact.
+  projection_x=Presentation.X_BASIS.x
+  projection_depth=Presentation.DEPTH_BASIS
+  height_pixels_per_m=Presentation.HEIGHT_PIXELS
   wall_thickness_m=float(config.wall.thickness_m)
   furniture.clear()
   for source:Dictionary in config.furniture:furniture.append(_item(source))
@@ -65,20 +75,24 @@ func portal(toward:String) -> Dictionary:
 func candidate_count() -> int:
  return int(config.get("search_counts",{}).get(str(phase_level),0))
 
+func space_spec() -> Dictionary:
+ # Export the active level override and saved revision, not the unmerged room.
+ var result:Dictionary=config.duplicate(true)
+ result.spatial_revision=spatial_revision
+ return result
+
 func project(point:Vector2) -> Vector2:
- return projection_origin+Vector2(projection_x*point.x+projection_depth.x*point.y,projection_depth.y*point.y)
+ return Presentation.project(point,projection_origin)
 
 func unproject(point:Vector2) -> Vector2:
- var local:=point-projection_origin
- var depth:float=local.y/projection_depth.y
- return Vector2((local.x-projection_depth.x*depth)/projection_x,depth)
+ return Presentation.unproject(point,projection_origin)
 
 func project_at_height(point:Vector2,height_m:float) -> Vector2:
  return project(point)-Vector2(0,height_m*height_pixels_per_m)
 
 func walkable(point:Vector2,radius:float=-1.0) -> bool:
  if radius<0.0:radius=body_radius
- if not Rect2(Vector2.ONE*radius,world_size()-Vector2.ONE*radius*2.0).has_point(point):return false
+ if not SpatialGeometry.inside_floor(config,world_size(),point,radius):return false
  for item:Dictionary in furniture:
   if bool(item.get("collision",true)):
    for rect:Rect2 in footprints(item):
@@ -94,6 +108,7 @@ func walkable(point:Vector2,radius:float=-1.0) -> bool:
 func clear_segment(a:Vector2,b:Vector2,radius:float=0.0) -> bool:
  if radius<0.0:radius=body_radius
  if not walkable(a,radius) or not walkable(b,radius):return false
+ if not SpatialGeometry.segment_inside_floor(config,world_size(),a,b,radius):return false
  # Point sampling can miss a very short crossing of an inflated cabinet corner.
  # Navigation and each real movement step must use the same continuous test.
  for items:Array in [furniture,decor,static_walls]:

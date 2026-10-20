@@ -5,6 +5,8 @@ const Menu=preload("res://scripts/ui/campaign_menu.gd")
 const Catalog=preload("res://scripts/presentation/asset_catalog.gd")
 const Feedback=preload("res://scripts/ui/feedback_audio.gd")
 const DialogueDisplay=preload("res://scripts/ui/dialogue_playback.gd")
+const UIStyle=preload("res://scripts/ui/ui_style.gd")
+const RigBodyPreview=preload("res://scripts/ui/rig_body_preview.gd")
 var app
 var demo
 var terminal
@@ -32,6 +34,7 @@ var guide_canvas:Node2D
 var finishing:bool=false
 var focus_mask:ColorRect
 var focus_material:ShaderMaterial
+var practice_body
 
 func _init(owner) -> void:
  app=owner
@@ -41,12 +44,13 @@ func _ready() -> void:
  texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
  set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
  mouse_filter=Control.MOUSE_FILTER_STOP
- theme=app.theme
+ theme=UIStyle.theme_for()
+ practice_body=RigBodyPreview.new();add_child(practice_body)
  lesson_data=JSON.parse_string(FileAccess.get_file_as_string("res://data/tutorial_dialogue.json"))
  var bg:=ColorRect.new();bg.size=Vector2(1280,720);bg.color=Color("17282a");bg.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(bg)
  # A reused actor atlas in a labelled practice view; no new gameplay room.
  var panel:=Panel.new();panel.position=Vector2(70,110);panel.size=Vector2(1140,430)
- panel.add_theme_stylebox_override("panel",app.panel_style(Color("293b37"),Color("718e7c")));panel.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(panel)
+ panel.add_theme_stylebox_override("panel",UIStyle.surface("paper"));panel.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(panel)
  var art:=Node2D.new();art.set_script(load("res://scripts/ui/menu_art.gd"));art.host=self;art.z_index=1;add_child(art)
  terminal=Menu.new();terminal.z_index=2;terminal.reduced_effects=app.reduced_effects;add_child(terminal)
  terminal.cast_requested.connect(practice_skin)
@@ -90,7 +94,7 @@ void fragment() {
 }"""
  focus_material.shader=focus_shader;focus_mask.material=focus_material;add_child(focus_mask)
  var instructions:=Panel.new();instructions.position=Vector2(25,575);instructions.size=Vector2(1230,125);instructions.z_index=10
- instructions.add_theme_stylebox_override("panel",app.panel_style(Color("20322d"),Color("849a83")));add_child(instructions)
+ instructions.add_theme_stylebox_override("panel",UIStyle.surface("paper",true));add_child(instructions)
  hint=Label.new();hint.position=Vector2(18,10);hint.size=Vector2(1175,30);hint.add_theme_font_size_override("font_size",21);instructions.add_child(hint)
  detail=Label.new();detail.position=Vector2(18,47);detail.size=Vector2(875,68);detail.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;detail.add_theme_font_size_override("font_size",17);instructions.add_child(detail)
  next=button(instructions,"继续",Vector2(910,47),advance_lesson)
@@ -110,7 +114,7 @@ void fragment() {
 
 func button(parent:Node,text:String,pos:Vector2,callback:Callable) -> Button:
  var b:=Button.new();b.position=pos;b.size=Vector2(130,42);b.text=text
- b.add_theme_stylebox_override("normal",app.panel_style(Color("294032"),Color("8a9d7a")))
+ UIStyle.style_button(b)
  b.add_theme_font_size_override("font_size",15);b.pressed.connect(callback)
  if parent==self:b.z_index=10
  parent.add_child(b);return b
@@ -253,6 +257,7 @@ func _process(delta:float) -> void:
   if not demo.pending_neural.is_empty():demo.apply_pending();audio.cue("SFX_SKIN","practice")
   demo.tick(delta)
   if demo.reaction_left<=0 and demo.pending_neural.is_empty():change_stage(6)
+ if practice_body!=null:practice_body.sample(0,"SKIN" if demo.reaction_left>0 else "",float(demo.reaction_left)*4.0,clock,app.reduced_effects)
  for child in get_children():
   if child is Node2D:child.queue_redraw()
 
@@ -264,12 +269,12 @@ func draw_art(canvas:Node2D) -> void:
  if demo==null or terminal==null or terminal.visible:return
  canvas.draw_rect(Rect2(270,275,250,110),Color("879c9d"))
  canvas.draw_rect(Rect2(270,375,250,18),Color("606f70"))
- var pose:String="scratch" if demo.reaction_left>0 else "idle"
- var phase:float=maxf(0,0.5-demo.reaction_left) if pose=="scratch" else clock
- var frame:Dictionary=catalog.actor_frame(pose,Vector2.LEFT,phase)
  var foot:=Vector2(650,400)
- canvas.draw_texture_rect_region(frame.texture,Rect2(foot-frame.foot*2,frame.size*2),frame.source)
- canvas.draw_string(theme.default_font,Vector2(415,485),"独立练习 · 身体与界面均为可替换占位",HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("c7d7be"))
+ if practice_body==null or not practice_body.draw(canvas,foot,180):
+  canvas.draw_rect(Rect2(605,220,100,200),Color("d6d5c5"))
+  canvas.draw_string(theme.default_font,Vector2(615,309),"练习区",HORIZONTAL_ALIGNMENT_LEFT,-1,17,UIStyle.INK)
+  canvas.draw_string(theme.default_font,Vector2(606,335),"人体校准中",HORIZONTAL_ALIGNMENT_LEFT,-1,14,UIStyle.MUTED)
+ canvas.draw_string(theme.default_font,Vector2(415,485),"独立练习 / 不影响正式进度",HORIZONTAL_ALIGNMENT_LEFT,-1,18,UIStyle.MUTED)
 
 func find_button(root:Node,text:String) -> Button:
  for child in root.get_children():

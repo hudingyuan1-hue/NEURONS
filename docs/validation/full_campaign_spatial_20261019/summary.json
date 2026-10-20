@@ -1,0 +1,170 @@
+{
+  "scope": "Read-only-driver observation of actual new campaigns plus separately declared presentation samples. No gameplay seed/NPC/resources/keys/routes/positions/levels/completion fields injected in natural campaigns.",
+  "natural_cases": [
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/natural_r1/result.json",
+      "passes": 1,
+      "failures": [
+        "real profile entry is available"
+      ],
+      "reason": "driver_profile_entry_failed",
+      "elapsed_simulation_seconds": null,
+      "visited_levels": [],
+      "searches_by_level": {},
+      "ending": null,
+      "complete": false
+    },
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/natural_r2/result.json",
+      "passes": 8,
+      "failures": [
+        "fresh profile displays the real opening"
+      ],
+      "reason": "complete_ending",
+      "elapsed_simulation_seconds": 429.500000000125,
+      "visited_levels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "searches_by_level": {
+        "1": 2,
+        "2": 7,
+        "3": 1,
+        "4": 4
+      },
+      "ending": "E2",
+      "complete": true
+    },
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/natural_r3/result.json",
+      "passes": 9,
+      "failures": [],
+      "reason": "complete_ending",
+      "elapsed_simulation_seconds": 126.466666666662,
+      "visited_levels": [
+        1
+      ],
+      "searches_by_level": {
+        "1": 2
+      },
+      "ending": "E1",
+      "complete": true
+    },
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/natural_r4/result.json",
+      "passes": 9,
+      "failures": [],
+      "reason": "complete_ending",
+      "elapsed_simulation_seconds": 206.466666666658,
+      "visited_levels": [
+        1
+      ],
+      "searches_by_level": {
+        "1": 8
+      },
+      "ending": "E1",
+      "complete": true
+    },
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/natural_r5/result.json",
+      "passes": 10,
+      "failures": [],
+      "reason": "complete_ending",
+      "elapsed_simulation_seconds": 949.033333333129,
+      "visited_levels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "searches_by_level": {
+        "1": 6,
+        "2": 9,
+        "3": 13,
+        "4": 12
+      },
+      "ending": "E2",
+      "complete": true
+    },
+    {
+      "path": "docs/validation/full_campaign_spatial_20261019/natural_r6/result.json",
+      "passes": 10,
+      "failures": [],
+      "reason": "complete_ending",
+      "elapsed_simulation_seconds": 699.533333333356,
+      "visited_levels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "searches_by_level": {
+        "1": 7,
+        "2": 9,
+        "3": 11,
+        "4": 1
+      },
+      "ending": "E2",
+      "complete": true
+    }
+  ],
+  "flow_conclusion": "Two real new profiles after default intro correction automatically traversed L1-L6 and complete unskipped E2. Two other real profiles completed legitimate hidden E1. No failed main path was forced into a different branch.",
+  "timing_limitations": "Fixed30 simulation accelerates wall time, not human play or audio listening. Fast L3/L4 exits are permitted first-search key successes; do not impose mandatory room visits or remove the confirmed whole-group guarantee. L5 around70.5s and main Street around93s including tail remain only no-intervention autonomous samples, not difficulty approval.",
+  "source_scene_audit": {
+    "playable_rooms": "S1:P420 counts amygdala dual chambers as one scene. S1:P476-P503: only five Street main segments plus two single-mouth side branches; recesses/equipment/storefronts are not extra rooms. Existing all56 runtime instances cover the explicit room types.",
+    "real_presentation_gap": "R1:P28-P30 calls for actual bed/body wake staging in E2/E3 and E2 external-body epilogue. Existing main ending had a dark screen and text labels. New read-only ending_story_placeholder.gd supplies elementary geometry without adding maps, story, character design or an art order.",
+    "remaining_known_source_limits": "B3 five unresolved source facts remain unknown; this scene audit does not claim every actor branch or formal art is accepted."
+  },
+  "files": [
+    {
+      "path": "neurons/tests/full_campaign_spatial_natural_check.gd",
+      "sha256": "5a166a87d23812ac234002a1e794874ce650895115ecc3d3af49a8977ce2e941"
+    },
+    {
+      "path": "neurons/tests/full_campaign_spatial_bootstrap.gd",
+      "sha256": "8b265f69973dcd9ac2d8ee998a97ea5da986041e27bb5f9c82d2b5659d81f60a"
+    },
+    {
+      "path": "neurons/scripts/world/ending_story_placeholder.gd",
+      "sha256": "2f442cdc52ecf6521b1b768c0545671589f650c1e80d81fc5f46a16dace6a604"
+    },
+    {
+      "path": "neurons/tests/ending_story_placeholder_check.gd",
+      "sha256": "204bca271b5e3c2444c49ce1d419839df1805f8f715e3a6b74a292d43d87e8dd"
+    },
+    {
+      "path": "neurons/tests/institution_visible_faces_check.gd",
+      "sha256": "21afa67bd848596d7c3952406eb4d2c617bae3c81d77181c4037af1433ee474c"
+    }
+  ],
+  "failure_retention": "natural_r1 headless UI driver entry failed. natural_r2 production route completed but test frontend bypassed intro; root fixed only the audit opening flag. Both failures preserved, not counted as passes.",
+  "current_driver_note": "After r5/r6, stall classification was tightened: a phase name such as returning/opening alone no longer exempts immobility; only real running timers/busy/paused/death states do. Root final runs can use the current stricter driver.",
+  "shared_collision_regression": "collision_summary.json",
+  "final_natural_run": {
+    "path": "natural_final_a/result.json",
+    "runtime_changed_after_checkpoint": [],
+    "elapsed_simulation_seconds": 597.233333333447,
+    "visited_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "ending": "E2 complete; actual result panel visible",
+    "passes": 10,
+    "failures": [],
+    "engine_errors": [],
+    "stderr_empty": true,
+    "scope": "Stricter stall driver after shared geometry/13 doors, Bed collision and double-head changes. Genuine new profile, automatic intro/dialogue, tutorial Skip only; ordinary process, no gameplay fixtures. Fixed30 accelerates wall time, not human pacing/balance approval."
+  }
+}

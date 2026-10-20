@@ -1,0 +1,14 @@
+{
+  "updated_at": "2026-10-20T08:55:41.223765+08:00",
+  "ui_items": 38,
+  "image_orders": 8,
+  "png_outputs": 19,
+  "non_ui_items_identical": 602,
+  "approved_hashes_unchanged": true,
+  "inventory_snapshot_unchanged": true,
+  "progress_sources_unchanged": true,
+  "standalone_progress_sha256": "c63307766c121fbb4e50515f87c6576fbf6f60737ac100d670936dad6fe2949c",
+  "backup": "C:\\Users\\23623\\Desktop\\NEW\\最终表单\\历史\\UI生成说明修订前_20261020_085540",
+  "game_written": false,
+  "images_generated": false
+}

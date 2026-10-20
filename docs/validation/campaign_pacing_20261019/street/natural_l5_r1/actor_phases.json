@@ -1,0 +1,1226 @@
+[
+  {
+    "actor": "father",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.98246169090271,
+    "phase": "idle",
+    "room": "street_plaza",
+    "street_s": 0.0
+  },
+  {
+    "actor": "warder",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.41404724121094,
+    "phase": "idle",
+    "room": "street_plaza",
+    "street_s": 0.0
+  },
+  {
+    "actor": "transporter_hospital",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.3776330947876,
+    "phase": "idle",
+    "room": "street_plaza",
+    "street_s": 0.0
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 4.02243709564209,
+    "phase": "idle",
+    "room": "street_plaza",
+    "street_s": 0.0
+  },
+  {
+    "actor": "head_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.51920223236084,
+    "phase": "idle",
+    "room": "street_plaza",
+    "street_s": 0.0
+  },
+  {
+    "actor": "back",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.30483722686768,
+    "phase": "idle",
+    "room": "street_plaza",
+    "street_s": 0.0
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.85530543327332,
+    "phase": "stamp",
+    "room": "street_plaza",
+    "street_s": 0.266666666666652
+  },
+  {
+    "actor": "back",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.01876068115234,
+    "phase": "number_front",
+    "room": "street_plaza",
+    "street_s": 0.266666666666652
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.59156060218811,
+    "phase": "number_show",
+    "room": "street_plaza",
+    "street_s": 0.799999999999955
+  },
+  {
+    "actor": "head_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 5.79407548904419,
+    "phase": "board_raise",
+    "room": "street_plaza",
+    "street_s": 0.799999999999955
+  },
+  {
+    "actor": "head_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 5.59362840652466,
+    "phase": "point",
+    "room": "street_plaza",
+    "street_s": 1.06666666666661
+  },
+  {
+    "actor": "head_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 5.21965217590332,
+    "phase": "report_side",
+    "room": "street_plaza",
+    "street_s": 1.59999999999991
+  },
+  {
+    "actor": "head_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 5.12265157699585,
+    "phase": "idle",
+    "room": "street_plaza",
+    "street_s": 2.13333333333321
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.30546522140503,
+    "phase": "paper_stow",
+    "room": "street_plaza",
+    "street_s": 2.39999999999986
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.30425095558167,
+    "phase": "stamp",
+    "room": "street_plaza",
+    "street_s": 3.19999999999982
+  },
+  {
+    "actor": "warder",
+    "attack_id": "combat:6:1:warder:1",
+    "attack_target": "hero",
+    "distance_m": 1.36422991752625,
+    "phase": "windup",
+    "room": "street_plaza",
+    "street_s": 3.46666666666647
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.12239480018616,
+    "phase": "number_show",
+    "room": "street_plaza",
+    "street_s": 3.73333333333312
+  },
+  {
+    "actor": "warder",
+    "attack_id": "combat:6:1:warder:1",
+    "attack_target": "hero",
+    "distance_m": 0.85217809677124,
+    "phase": "attack",
+    "room": "street_plaza",
+    "street_s": 4.26666666666642
+  },
+  {
+    "actor": "warder",
+    "attack_id": "combat:6:1:warder:1",
+    "attack_target": "hero",
+    "distance_m": 0.813081383705139,
+    "phase": "recover",
+    "room": "street_plaza",
+    "street_s": 4.53333333333308
+  },
+  {
+    "actor": "warder",
+    "attack_id": "combat:6:1:warder:1",
+    "attack_target": "hero",
+    "distance_m": 0.971877753734589,
+    "phase": "idle",
+    "room": "street_plaza",
+    "street_s": 5.06666666666638
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.1068696975708,
+    "phase": "paper_stow",
+    "room": "street_plaza",
+    "street_s": 5.33333333333303
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.83294486999512,
+    "phase": "stamp",
+    "room": "street_plaza",
+    "street_s": 6.13333333333298
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 4.58714866638184,
+    "phase": "number_show",
+    "room": "street_plaza",
+    "street_s": 6.93333333333294
+  },
+  {
+    "actor": "back",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 1.87297749519348,
+    "phase": "number_turn",
+    "room": "street_plaza",
+    "street_s": 8.2666666666662
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.07791471481323,
+    "phase": "paper_stow",
+    "room": "street_plaza",
+    "street_s": 8.53333333333285
+  },
+  {
+    "actor": "back",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 1.78154098987579,
+    "phase": "number_back",
+    "room": "street_plaza",
+    "street_s": 8.7999999999995
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.68848419189453,
+    "phase": "stamp",
+    "room": "street_plaza",
+    "street_s": 9.06666666666615
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 7.608323097229,
+    "phase": "number_show",
+    "room": "street_plaza",
+    "street_s": 9.86666666666611
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.44808483123779,
+    "phase": "paper_stow",
+    "room": "street_plaza",
+    "street_s": 11.466666666666
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 10.3679933547974,
+    "phase": "stamp",
+    "room": "street_plaza",
+    "street_s": 12.266666666666
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 10.9812717437744,
+    "phase": "number_show",
+    "room": "street_plaza",
+    "street_s": 12.7999999999993
+  },
+  {
+    "actor": "register_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 12.351580619812,
+    "phase": "paper_stow",
+    "room": "street_plaza",
+    "street_s": 14.3999999999992
+  },
+  {
+    "actor": "cat",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 2.85028529167175,
+    "phase": "idle",
+    "room": "street_narrow",
+    "street_s": 14.9333333333325
+  },
+  {
+    "actor": "twitch",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.12244892120361,
+    "phase": "idle",
+    "room": "street_narrow",
+    "street_s": 14.9333333333325
+  },
+  {
+    "actor": "assistant_asylum",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.20659065246582,
+    "phase": "idle",
+    "room": "street_narrow",
+    "street_s": 14.9333333333325
+  },
+  {
+    "actor": "isolation",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 2.84990310668945,
+    "phase": "idle",
+    "room": "street_narrow",
+    "street_s": 14.9333333333325
+  },
+  {
+    "actor": "dislocated",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.00386667251587,
+    "phase": "idle",
+    "room": "street_narrow",
+    "street_s": 14.9333333333325
+  },
+  {
+    "actor": "dislocated",
+    "attack_id": "combat:6:1:dislocated:2",
+    "attack_target": "hero",
+    "distance_m": 1.03173387050629,
+    "phase": "windup",
+    "room": "street_narrow",
+    "street_s": 17.599999999999
+  },
+  {
+    "actor": "twitch",
+    "attack_id": "combat:6:1:twitch:3",
+    "attack_target": "hero",
+    "distance_m": 0.907409846782684,
+    "phase": "windup",
+    "room": "street_narrow",
+    "street_s": 18.399999999999
+  },
+  {
+    "actor": "dislocated",
+    "attack_id": "combat:6:1:dislocated:2",
+    "attack_target": "hero",
+    "distance_m": 0.808041214942932,
+    "phase": "attack",
+    "room": "street_narrow",
+    "street_s": 18.399999999999
+  },
+  {
+    "actor": "dislocated",
+    "attack_id": "combat:6:1:dislocated:2",
+    "attack_target": "hero",
+    "distance_m": 1.14848434925079,
+    "phase": "recover",
+    "room": "street_narrow",
+    "street_s": 18.9333333333323
+  },
+  {
+    "actor": "warder",
+    "attack_id": "combat:6:1:warder:1",
+    "attack_target": "hero",
+    "distance_m": 5.05999517440796,
+    "phase": "idle",
+    "room": "street_narrow",
+    "street_s": 19.1999999999989
+  },
+  {
+    "actor": "dislocated",
+    "attack_id": "combat:6:1:dislocated:2",
+    "attack_target": "hero",
+    "distance_m": 1.50610852241516,
+    "phase": "idle",
+    "room": "street_narrow",
+    "street_s": 19.4666666666656
+  },
+  {
+    "actor": "twitch",
+    "attack_id": "combat:6:1:twitch:3",
+    "attack_target": "hero",
+    "distance_m": 1.4220654964447,
+    "phase": "attack",
+    "room": "street_narrow",
+    "street_s": 19.7333333333322
+  },
+  {
+    "actor": "twitch",
+    "attack_id": "combat:6:1:twitch:3",
+    "attack_target": "hero",
+    "distance_m": 2.14988017082214,
+    "phase": "recover",
+    "room": "street_narrow",
+    "street_s": 20.2666666666655
+  },
+  {
+    "actor": "father",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 7.20666742324829,
+    "phase": "idle",
+    "room": "street_narrow",
+    "street_s": 21.0666666666655
+  },
+  {
+    "actor": "twitch",
+    "attack_id": "combat:6:1:twitch:3",
+    "attack_target": "hero",
+    "distance_m": 2.6410391330719,
+    "phase": "idle",
+    "room": "street_narrow",
+    "street_s": 21.0666666666655
+  },
+  {
+    "actor": "assistant_asylum",
+    "attack_id": "combat:6:1:assistant_asylum:4",
+    "attack_target": "hero",
+    "distance_m": 1.0260009765625,
+    "phase": "windup",
+    "room": "street_narrow",
+    "street_s": 21.0666666666655
+  },
+  {
+    "actor": "assistant_asylum",
+    "attack_id": "combat:6:1:assistant_asylum:4",
+    "attack_target": "hero",
+    "distance_m": 1.30422568321228,
+    "phase": "attack",
+    "room": "street_narrow",
+    "street_s": 22.1333333333321
+  },
+  {
+    "actor": "assistant_asylum",
+    "attack_id": "combat:6:1:assistant_asylum:4",
+    "attack_target": "hero",
+    "distance_m": 1.52752161026001,
+    "phase": "recover",
+    "room": "street_narrow",
+    "street_s": 22.3999999999987
+  },
+  {
+    "actor": "assistant_asylum",
+    "attack_id": "combat:6:1:assistant_asylum:4",
+    "attack_target": "hero",
+    "distance_m": 1.91984474658966,
+    "phase": "idle",
+    "room": "street_narrow",
+    "street_s": 22.933333333332
+  },
+  {
+    "actor": "reverse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 4.53928089141846,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 30.1333333333316
+  },
+  {
+    "actor": "archivist",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 7.09779405593872,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 30.1333333333316
+  },
+  {
+    "actor": "double_face",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.90676593780518,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 30.1333333333316
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 4.59594106674194,
+    "phase": "branch_point",
+    "room": "street_twisted",
+    "street_s": 30.1333333333316
+  },
+  {
+    "actor": "pharmacist",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 7.09779453277588,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 30.1333333333316
+  },
+  {
+    "actor": "ward_nurse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.90676593780518,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 30.1333333333316
+  },
+  {
+    "actor": "transporter_asylum",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 15.9889125823975,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 30.1333333333316
+  },
+  {
+    "actor": "speaker",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 15.8683748245239,
+    "phase": "point",
+    "room": "street_twisted",
+    "street_s": 30.1333333333316
+  },
+  {
+    "actor": "supervisor",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 15.8834924697876,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 30.1333333333316
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 4.0223388671875,
+    "phase": "clip_read",
+    "room": "street_twisted",
+    "street_s": 31.7333333333315
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 4.24345588684082,
+    "phase": "branch_point",
+    "room": "street_twisted",
+    "street_s": 33.3333333333314
+  },
+  {
+    "actor": "assistant_asylum",
+    "attack_id": "combat:6:1:assistant_asylum:4",
+    "attack_target": "hero",
+    "distance_m": 4.36999368667603,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 33.8666666666647
+  },
+  {
+    "actor": "pharmacist",
+    "attack_id": "combat:6:1:pharmacist:5",
+    "attack_target": "hero",
+    "distance_m": 2.01921772956848,
+    "phase": "windup",
+    "room": "street_twisted",
+    "street_s": 34.399999999998
+  },
+  {
+    "actor": "dislocated",
+    "attack_id": "combat:6:1:dislocated:2",
+    "attack_target": "hero",
+    "distance_m": 5.2829122543335,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 34.6666666666647
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 5.15808582305908,
+    "phase": "clip_read",
+    "room": "street_twisted",
+    "street_s": 34.9333333333313
+  },
+  {
+    "actor": "twitch",
+    "attack_id": "combat:6:1:twitch:3",
+    "attack_target": "hero",
+    "distance_m": 5.78291368484497,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 35.199999999998
+  },
+  {
+    "actor": "pharmacist",
+    "attack_id": "combat:6:1:pharmacist:5",
+    "attack_target": "hero",
+    "distance_m": 2.52737379074097,
+    "phase": "attack",
+    "room": "street_twisted",
+    "street_s": 35.4666666666647
+  },
+  {
+    "actor": "pharmacist",
+    "attack_id": "combat:6:1:pharmacist:5",
+    "attack_target": "hero",
+    "distance_m": 2.72679972648621,
+    "phase": "recover",
+    "room": "street_twisted",
+    "street_s": 35.7333333333313
+  },
+  {
+    "actor": "pharmacist",
+    "attack_id": "combat:6:1:pharmacist:5",
+    "attack_target": "hero",
+    "distance_m": 3.11357736587524,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 36.2666666666646
+  },
+  {
+    "actor": "cat",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 7.43667078018188,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 36.5333333333313
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.47889280319214,
+    "phase": "branch_point",
+    "room": "street_twisted",
+    "street_s": 36.5333333333313
+  },
+  {
+    "actor": "isolation",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 8.05001354217529,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 37.0666666666646
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 8.00735759735107,
+    "phase": "clip_read",
+    "room": "street_twisted",
+    "street_s": 38.1333333333312
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.6452522277832,
+    "phase": "branch_point",
+    "room": "street_twisted",
+    "street_s": 39.7333333333311
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 11.0930013656616,
+    "phase": "clip_read",
+    "room": "street_twisted",
+    "street_s": 41.333333333331
+  },
+  {
+    "actor": "supervisor",
+    "attack_id": "combat:6:1:supervisor:6",
+    "attack_target": "hero",
+    "distance_m": 0.897740721702576,
+    "phase": "windup",
+    "room": "street_twisted",
+    "street_s": 41.5999999999976
+  },
+  {
+    "actor": "supervisor",
+    "attack_id": "combat:6:1:supervisor:6",
+    "attack_target": "hero",
+    "distance_m": 0.478698015213013,
+    "phase": "attack",
+    "room": "street_twisted",
+    "street_s": 42.3999999999976
+  },
+  {
+    "actor": "supervisor",
+    "attack_id": "combat:6:1:supervisor:6",
+    "attack_target": "hero",
+    "distance_m": 0.519814372062683,
+    "phase": "recover",
+    "room": "street_twisted",
+    "street_s": 42.6666666666642
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 12.2350978851318,
+    "phase": "branch_point",
+    "room": "street_twisted",
+    "street_s": 42.9333333333309
+  },
+  {
+    "actor": "supervisor",
+    "attack_id": "combat:6:1:supervisor:6",
+    "attack_target": "hero",
+    "distance_m": 0.626717746257782,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 43.1999999999975
+  },
+  {
+    "actor": "ward_nurse",
+    "attack_id": "combat:6:1:ward_nurse:7",
+    "attack_target": "hero",
+    "distance_m": 0.965283751487732,
+    "phase": "windup",
+    "room": "street_twisted",
+    "street_s": 43.7333333333308
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 11.5382528305054,
+    "phase": "clip_read",
+    "room": "street_twisted",
+    "street_s": 44.5333333333308
+  },
+  {
+    "actor": "pharmacist",
+    "attack_id": "combat:6:1:pharmacist:8",
+    "attack_target": "hero",
+    "distance_m": 1.99090027809143,
+    "phase": "windup",
+    "room": "street_twisted",
+    "street_s": 44.5333333333308
+  },
+  {
+    "actor": "ward_nurse",
+    "attack_id": "combat:6:1:ward_nurse:7",
+    "attack_target": "hero",
+    "distance_m": 0.73638528585434,
+    "phase": "attack",
+    "room": "street_twisted",
+    "street_s": 44.5333333333308
+  },
+  {
+    "actor": "ward_nurse",
+    "attack_id": "combat:6:1:ward_nurse:7",
+    "attack_target": "hero",
+    "distance_m": 1.04393815994263,
+    "phase": "recover",
+    "room": "street_twisted",
+    "street_s": 45.0666666666641
+  },
+  {
+    "actor": "pharmacist",
+    "attack_id": "combat:6:1:pharmacist:8",
+    "attack_target": "hero",
+    "distance_m": 2.83590984344482,
+    "phase": "attack",
+    "room": "street_twisted",
+    "street_s": 45.5999999999974
+  },
+  {
+    "actor": "ward_nurse",
+    "attack_id": "combat:6:1:ward_nurse:7",
+    "attack_target": "hero",
+    "distance_m": 1.78601551055908,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 45.5999999999974
+  },
+  {
+    "actor": "supervisor",
+    "attack_id": "combat:6:1:supervisor:9",
+    "attack_target": "hero",
+    "distance_m": 0.863871574401855,
+    "phase": "windup",
+    "room": "street_twisted",
+    "street_s": 45.5999999999974
+  },
+  {
+    "actor": "pharmacist",
+    "attack_id": "combat:6:1:pharmacist:8",
+    "attack_target": "hero",
+    "distance_m": 3.0870532989502,
+    "phase": "recover",
+    "room": "street_twisted",
+    "street_s": 45.8666666666641
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 12.5067567825317,
+    "phase": "branch_point",
+    "room": "street_twisted",
+    "street_s": 46.1333333333307
+  },
+  {
+    "actor": "supervisor",
+    "attack_id": "combat:6:1:supervisor:9",
+    "attack_target": "hero",
+    "distance_m": 0.50227290391922,
+    "phase": "attack",
+    "room": "street_twisted",
+    "street_s": 46.3999999999974
+  },
+  {
+    "actor": "pharmacist",
+    "attack_id": "combat:6:1:pharmacist:8",
+    "attack_target": "hero",
+    "distance_m": 3.85501623153687,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 46.666666666664
+  },
+  {
+    "actor": "transporter_asylum",
+    "attack_id": "street_lateral:1:10",
+    "attack_target": "hero",
+    "distance_m": 2.33507418632507,
+    "phase": "windup",
+    "room": "street_twisted",
+    "street_s": 46.666666666664
+  },
+  {
+    "actor": "supervisor",
+    "attack_id": "combat:6:1:supervisor:9",
+    "attack_target": "hero",
+    "distance_m": 0.670484721660614,
+    "phase": "recover",
+    "room": "street_twisted",
+    "street_s": 46.666666666664
+  },
+  {
+    "actor": "supervisor",
+    "attack_id": "combat:6:1:supervisor:9",
+    "attack_target": "hero",
+    "distance_m": 1.15132367610931,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 47.1999999999973
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 14.3457078933716,
+    "phase": "clip_read",
+    "room": "street_twisted",
+    "street_s": 47.7333333333306
+  },
+  {
+    "actor": "transporter_asylum",
+    "attack_id": "street_lateral:1:10",
+    "attack_target": "hero",
+    "distance_m": 2.62597179412842,
+    "phase": "attack",
+    "room": "street_twisted",
+    "street_s": 47.7333333333306
+  },
+  {
+    "actor": "transporter_asylum",
+    "attack_id": "street_lateral:1:10",
+    "attack_target": "hero",
+    "distance_m": 2.80618000030518,
+    "phase": "recover",
+    "room": "street_twisted",
+    "street_s": 48.2666666666639
+  },
+  {
+    "actor": "transporter_asylum",
+    "attack_id": "street_lateral:1:10",
+    "attack_target": "hero",
+    "distance_m": 3.67953681945801,
+    "phase": "idle",
+    "room": "street_twisted",
+    "street_s": 49.0666666666639
+  },
+  {
+    "actor": "triage",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 16.1848793029785,
+    "phase": "branch_point",
+    "room": "street_twisted",
+    "street_s": 49.3333333333305
+  },
+  {
+    "actor": "mother",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 4.63433456420898,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 50.6666666666638
+  },
+  {
+    "actor": "doctor",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 7.16115522384644,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 50.6666666666638
+  },
+  {
+    "actor": "assistant",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.97702693939209,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 50.6666666666638
+  },
+  {
+    "actor": "double_head",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 4.63402032852173,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 50.6666666666638
+  },
+  {
+    "actor": "psychiatrist",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 7.16135883331299,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 50.6666666666638
+  },
+  {
+    "actor": "guard_asylum",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.97688102722168,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 50.6666666666638
+  },
+  {
+    "actor": "director",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 12.8960590362549,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 50.6666666666638
+  },
+  {
+    "actor": "blind",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 12.7462844848633,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 50.6666666666638
+  },
+  {
+    "actor": "supervisor",
+    "attack_id": "combat:6:1:supervisor:9",
+    "attack_target": "hero",
+    "distance_m": 1.69958305358887,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 52.5333333333303
+  },
+  {
+    "actor": "ward_nurse",
+    "attack_id": "combat:6:1:ward_nurse:7",
+    "attack_target": "hero",
+    "distance_m": 4.44118165969849,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 55.1999999999969
+  },
+  {
+    "actor": "archivist",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 4.92904424667358,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 55.7333333333302
+  },
+  {
+    "actor": "psychiatrist",
+    "attack_id": "combat:6:1:psychiatrist:12",
+    "attack_target": "hero",
+    "distance_m": 1.00208032131195,
+    "phase": "windup",
+    "room": "street_node",
+    "street_s": 55.7333333333302
+  },
+  {
+    "actor": "reverse",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 5.70141792297363,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 56.5333333333301
+  },
+  {
+    "actor": "psychiatrist",
+    "attack_id": "combat:6:1:psychiatrist:12",
+    "attack_target": "hero",
+    "distance_m": 1.16571140289307,
+    "phase": "attack",
+    "room": "street_node",
+    "street_s": 56.5333333333301
+  },
+  {
+    "actor": "psychiatrist",
+    "attack_id": "combat:6:1:psychiatrist:12",
+    "attack_target": "hero",
+    "distance_m": 1.26821172237396,
+    "phase": "recover",
+    "room": "street_node",
+    "street_s": 56.7999999999968
+  },
+  {
+    "actor": "assistant",
+    "attack_id": "combat:6:1:assistant:13",
+    "attack_target": "hero",
+    "distance_m": 2.1327497959137,
+    "phase": "windup",
+    "room": "street_node",
+    "street_s": 57.3333333333301
+  },
+  {
+    "actor": "psychiatrist",
+    "attack_id": "combat:6:1:psychiatrist:12",
+    "attack_target": "hero",
+    "distance_m": 1.76739740371704,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 57.5999999999967
+  },
+  {
+    "actor": "assistant",
+    "attack_id": "combat:6:1:assistant:13",
+    "attack_target": "hero",
+    "distance_m": 2.08611369132996,
+    "phase": "recover",
+    "room": "street_node",
+    "street_s": 58.3999999999967
+  },
+  {
+    "actor": "assistant",
+    "attack_id": "combat:6:1:assistant:13",
+    "attack_target": "hero",
+    "distance_m": 2.26354384422302,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 59.1999999999966
+  },
+  {
+    "actor": "director",
+    "attack_id": "combat:6:1:director:14",
+    "attack_target": "hero",
+    "distance_m": 0.767330229282379,
+    "phase": "windup",
+    "room": "street_node",
+    "street_s": 61.8666666666632
+  },
+  {
+    "actor": "blind",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 2.71970510482788,
+    "phase": "cloth_raise",
+    "room": "street_node",
+    "street_s": 62.3999999999965
+  },
+  {
+    "actor": "director",
+    "attack_id": "combat:6:1:director:14",
+    "attack_target": "hero",
+    "distance_m": 0.529000639915466,
+    "phase": "attack",
+    "room": "street_node",
+    "street_s": 62.6666666666631
+  },
+  {
+    "actor": "blind",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 2.41515111923218,
+    "phase": "cloth",
+    "room": "street_node",
+    "street_s": 62.6666666666631
+  },
+  {
+    "actor": "director",
+    "attack_id": "combat:6:1:director:14",
+    "attack_target": "hero",
+    "distance_m": 0.967987477779388,
+    "phase": "recover",
+    "room": "street_node",
+    "street_s": 63.1999999999964
+  },
+  {
+    "actor": "director",
+    "attack_id": "combat:6:1:director:14",
+    "attack_target": "hero",
+    "distance_m": 1.38744485378265,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 63.7333333333297
+  },
+  {
+    "actor": "blind",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 0.464829236268997,
+    "phase": "cloth_close",
+    "room": "street_node",
+    "street_s": 64.5333333333297
+  },
+  {
+    "actor": "blind",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 0.464526444673538,
+    "phase": "idle",
+    "room": "street_node",
+    "street_s": 64.7999999999963
+  },
+  {
+    "actor": "skinface",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 4.06225109100342,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 68.5333333333295
+  },
+  {
+    "actor": "self",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.69490003585815,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 68.5333333333295
+  },
+  {
+    "actor": "guard_hospital",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.67984962463379,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 68.5333333333295
+  },
+  {
+    "actor": "archivist_asylum",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.89518451690674,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 68.5333333333295
+  },
+  {
+    "actor": "informant",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.79555082321167,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 68.5333333333295
+  },
+  {
+    "actor": "mimic",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.60945796966553,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 68.5333333333295
+  },
+  {
+    "actor": "informant",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 5.77872610092163,
+    "phase": "point",
+    "room": "street_end",
+    "street_s": 69.5999999999961
+  },
+  {
+    "actor": "informant",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 5.07732629776001,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 70.399999999996
+  }
+]

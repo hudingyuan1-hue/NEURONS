@@ -1,0 +1,999 @@
+{
+  "attempts": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1
+  },
+  "deaths": [],
+  "elapsed_game_seconds": 176.133333333326,
+  "failures": [],
+  "hp": 100,
+  "level": 6,
+  "passes": [
+    "real unlock_cortex selects new L4 metric geometry",
+    "no key location is preselected at actual L4 entry",
+    "natural run restores the actual untouched direct-L4 entry",
+    "natural actual keyed L4 departure reaches new L5 version3",
+    "natural L4 to L5 to actual Street doorway retains forty-five identities",
+    "no twenty-five-second unexplained standstill in natural new geometry",
+    "actual L5 departure cancels key-search gameplay"
+  ],
+  "scope": "Actual initial unlock_cortex entry snapshot restored before starting. Then ordinary _process only: no seed, NPC, resource, position, route, key, damage, search, event or ending writes; default auto dialogue retained. Actual deaths/retries recorded. Fixed-frame automated observation is not human pacing or all branches.",
+  "still_seconds": 0.0,
+  "timeline": [
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 0.0333333333333333,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        1.8872584104538,
+        5.69909191131592
+      ],
+      "room": "atrium",
+      "search_elapsed": 0.0,
+      "searches": 0,
+      "sp": 100,
+      "target": "",
+      "world_time": 0.1
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 2.0,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        2.97203993797302,
+        3.71456241607666
+      ],
+      "room": "atrium",
+      "search_elapsed": 0.0,
+      "searches": 1,
+      "sp": 100,
+      "target": "atrium:0",
+      "world_time": 2.06666666666667
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 1,
+      "elapsed": 8.99999999999998,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        2.97203993797302,
+        3.71456241607666
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 1,
+      "sp": 100,
+      "target": "atrium:0",
+      "world_time": 9.06666666666665
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 11.3,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        2.97203993797302,
+        3.71456241607666
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 1,
+      "sp": 100,
+      "target": "atrium:0",
+      "world_time": 9.06666666666665
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 17.7,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        8.67154026031494,
+        5.23317050933838
+      ],
+      "room": "atrium",
+      "search_elapsed": 0.0,
+      "searches": 2,
+      "sp": 100,
+      "target": "atrium:2",
+      "world_time": 15.4666666666666
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 1,
+      "elapsed": 24.7000000000004,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        8.67154026031494,
+        5.23317050933838
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 2,
+      "sp": 100,
+      "target": "atrium:2",
+      "world_time": 22.4666666666669
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 27.2000000000005,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        8.67154026031494,
+        5.23317050933838
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 2,
+      "sp": 100,
+      "target": "atrium:2",
+      "world_time": 22.4666666666669
+    },
+    {
+      "action": "cortex_observation_route",
+      "dialogue": 0,
+      "elapsed": 27.2333333333338,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        8.67154026031494,
+        5.23317050933838
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 2,
+      "sp": 100,
+      "target": "atrium:2",
+      "world_time": 22.5000000000003
+    },
+    {
+      "action": "cortex_observing",
+      "dialogue": 0,
+      "elapsed": 27.2666666666672,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        8.67154026031494,
+        5.23317050933838
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 2,
+      "sp": 100,
+      "target": "atrium:2",
+      "world_time": 22.5333333333336
+    },
+    {
+      "action": "door",
+      "dialogue": 0,
+      "elapsed": 28.3000000000006,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        8.67154026031494,
+        5.23317050933838
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 2,
+      "sp": 100,
+      "target": "atrium:2",
+      "world_time": 23.566666666667
+    },
+    {
+      "action": "opening",
+      "dialogue": 0,
+      "elapsed": 37.1666666666671,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        0.487395614385605,
+        1.7107264995575
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 2,
+      "sp": 100,
+      "target": "atrium:2",
+      "world_time": 32.4333333333341
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 37.8000000000004,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        8.71901893615723,
+        5.12625980377197
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 2,
+      "sp": 100,
+      "target": "atrium:2",
+      "world_time": 33.133333333334
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 40.9666666666669,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        7.72243976593018,
+        1.6236093044281
+      ],
+      "room": "memory",
+      "search_elapsed": 0.0,
+      "searches": 3,
+      "sp": 100,
+      "target": "memory:6",
+      "world_time": 36.3000000000005
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 1,
+      "elapsed": 47.9666666666665,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        7.72243976593018,
+        1.6236093044281
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 3,
+      "sp": 100,
+      "target": "memory:6",
+      "world_time": 43.3000000000001
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 50.4666666666664,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        7.72243976593018,
+        1.6236093044281
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 3,
+      "sp": 100,
+      "target": "memory:6",
+      "world_time": 43.3000000000001
+    },
+    {
+      "action": "cortex_observation_route",
+      "dialogue": 0,
+      "elapsed": 50.4999999999997,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        7.72243976593018,
+        1.6236093044281
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 3,
+      "sp": 100,
+      "target": "memory:6",
+      "world_time": 43.3333333333334
+    },
+    {
+      "action": "cortex_observing",
+      "dialogue": 0,
+      "elapsed": 50.533333333333,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        7.72243976593018,
+        1.6236093044281
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 3,
+      "sp": 100,
+      "target": "memory:6",
+      "world_time": 43.3666666666668
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 51.5666666666663,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        7.6864538192749,
+        1.63681757450104
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 3,
+      "sp": 100,
+      "target": "memory:6",
+      "world_time": 44.4
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 55.7999999999994,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        3.58576416969299,
+        3.71125650405884
+      ],
+      "room": "memory",
+      "search_elapsed": 0.0,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 48.6333333333331
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 1,
+      "elapsed": 62.799999999999,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        3.58576416969299,
+        3.71125650405884
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 55.6333333333327
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 65.8333333333322,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        3.58576416969299,
+        3.71125650405884
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 55.6333333333327
+    },
+    {
+      "action": "cortex_observation_route",
+      "dialogue": 0,
+      "elapsed": 65.8666666666655,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        3.58576416969299,
+        3.71125650405884
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 55.6666666666661
+    },
+    {
+      "action": "cortex_observing",
+      "dialogue": 0,
+      "elapsed": 65.8999999999988,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        3.58576416969299,
+        3.71125650405884
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 55.6999999999994
+    },
+    {
+      "action": "door",
+      "dialogue": 0,
+      "elapsed": 69.433333333332,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        3.58576416969299,
+        3.71125650405884
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 59.2333333333325
+    },
+    {
+      "action": "opening",
+      "dialogue": 0,
+      "elapsed": 74.7333333333317,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        9.11397075653076,
+        5.19909334182739
+      ],
+      "room": "memory",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 64.5333333333322
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 75.366666666665,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        0.860000014305115,
+        1.70000004768372
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 65.1666666666655
+    },
+    {
+      "action": "cortex_observation_route",
+      "dialogue": 0,
+      "elapsed": 75.3999999999983,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        0.860000014305115,
+        1.70000004768372
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 65.1999999999989
+    },
+    {
+      "action": "cortex_observing",
+      "dialogue": 0,
+      "elapsed": 75.6999999999983,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        1.11357915401459,
+        1.52754139900208
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 65.4999999999988
+    },
+    {
+      "action": "door",
+      "dialogue": 0,
+      "elapsed": 76.7333333333315,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        1.11357915401459,
+        1.52754139900208
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 66.5333333333321
+    },
+    {
+      "action": "opening",
+      "dialogue": 0,
+      "elapsed": 78.5999999999981,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        2.88454627990723,
+        0.506786406040192
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 68.3999999999987
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 79.2333333333314,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        4.80000019073486,
+        7.06333303451538
+      ],
+      "room": "decision",
+      "search_elapsed": 6.99999999999998,
+      "searches": 4,
+      "sp": 100,
+      "target": "memory:1",
+      "world_time": 69.0999999999986
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 81.199999999998,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        4.80000019073486,
+        4.80166149139404
+      ],
+      "room": "decision",
+      "search_elapsed": 0.0,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 71.0666666666652
+    },
+    {
+      "action": "pickup",
+      "dialogue": 0,
+      "elapsed": 88.1999999999976,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        4.80000019073486,
+        4.80166149139404
+      ],
+      "room": "decision",
+      "search_elapsed": 6.99999999999998,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 78.0666666666648
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 88.6333333333309,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        4.80000019073486,
+        4.80166149139404
+      ],
+      "room": "decision",
+      "search_elapsed": 6.99999999999998,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 78.4999999999981
+    },
+    {
+      "action": "door",
+      "dialogue": 0,
+      "elapsed": 88.6666666666642,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        4.80000019073486,
+        4.80166149139404
+      ],
+      "room": "decision",
+      "search_elapsed": 6.99999999999998,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 78.5333333333314
+    },
+    {
+      "action": "opening",
+      "dialogue": 0,
+      "elapsed": 93.3999999999973,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        4.79929256439209,
+        0.481814384460449
+      ],
+      "room": "decision",
+      "search_elapsed": 6.99999999999998,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 83.2666666666645
+    },
+    {
+      "action": "door",
+      "dialogue": 0,
+      "elapsed": 94.0333333333306,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        1.76865756511688,
+        0.882070302963257
+      ],
+      "room": "bridge",
+      "search_elapsed": 6.99999999999998,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 83.9666666666645
+    },
+    {
+      "action": "opening",
+      "dialogue": 0,
+      "elapsed": 95.3999999999971,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        0.483618676662445,
+        1.7869518995285
+      ],
+      "room": "bridge",
+      "search_elapsed": 6.99999999999998,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 85.3333333333311
+    },
+    {
+      "action": "door",
+      "dialogue": 0,
+      "elapsed": 96.0333333333304,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        6.02140665054321,
+        0.891799330711365
+      ],
+      "room": "switch",
+      "search_elapsed": 6.99999999999998,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 86.033333333331
+    },
+    {
+      "action": "opening",
+      "dialogue": 0,
+      "elapsed": 100.83333333333,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        9.10397911071777,
+        5.4709005355835
+      ],
+      "room": "switch",
+      "search_elapsed": 6.99999999999998,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 90.8333333333307
+    },
+    {
+      "action": "door",
+      "dialogue": 0,
+      "elapsed": 101.466666666663,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        0.892211377620697,
+        5.57921838760376
+      ],
+      "room": "verify",
+      "search_elapsed": 6.99999999999998,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 91.5333333333307
+    },
+    {
+      "action": "opening",
+      "dialogue": 0,
+      "elapsed": 107.33333333333,
+      "gripped": false,
+      "hp": 100,
+      "level": 4,
+      "position_m": [
+        5.19541931152344,
+        0.486383348703384
+      ],
+      "room": "verify",
+      "search_elapsed": 6.99999999999998,
+      "searches": 5,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 97.399999999997
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 107.966666666663,
+      "gripped": false,
+      "hp": 100,
+      "level": 5,
+      "position_m": [
+        1.84718835353851,
+        5.72483253479004
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 98.099999999997
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 1,
+      "elapsed": 108.03333333333,
+      "gripped": false,
+      "hp": 100,
+      "level": 5,
+      "position_m": [
+        1.86227679252625,
+        5.64966487884521
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 98.1666666666637
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 111.266666666663,
+      "gripped": false,
+      "hp": 100,
+      "level": 5,
+      "position_m": [
+        1.86227679252625,
+        5.64966487884521
+      ],
+      "room": "atrium",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 98.1666666666637
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 116.633333333329,
+      "gripped": false,
+      "hp": 100,
+      "level": 5,
+      "position_m": [
+        4.80000019073486,
+        7.06333303451538
+      ],
+      "room": "decision",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 103.599999999997
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 124.166666666662,
+      "gripped": false,
+      "hp": 100,
+      "level": 5,
+      "position_m": [
+        1.73731517791748,
+        0.904140472412109
+      ],
+      "room": "bridge",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 111.199999999996
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 126.299999999995,
+      "gripped": false,
+      "hp": 100,
+      "level": 5,
+      "position_m": [
+        6.04281330108643,
+        0.923598647117615
+      ],
+      "room": "switch",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 113.399999999996
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 131.866666666662,
+      "gripped": false,
+      "hp": 100,
+      "level": 5,
+      "position_m": [
+        0.9259272813797,
+        5.57407283782959
+      ],
+      "room": "verify",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 119.033333333329
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 138.799999999995,
+      "gripped": false,
+      "hp": 100,
+      "level": 5,
+      "position_m": [
+        0.946250081062317,
+        4.0
+      ],
+      "room": "hippocampus",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 126.033333333329
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 152.799999999994,
+      "gripped": false,
+      "hp": 100,
+      "level": 5,
+      "position_m": [
+        0.93666672706604,
+        2.65260004997253
+      ],
+      "room": "thalamus",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 140.099999999995
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 164.533333333327,
+      "gripped": false,
+      "hp": 100,
+      "level": 5,
+      "position_m": [
+        0.93666672706604,
+        5.20000028610229
+      ],
+      "room": "brainstem",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 151.899999999994
+    },
+    {
+      "action": "autonomy",
+      "dialogue": 0,
+      "elapsed": 176.133333333326,
+      "gripped": false,
+      "hp": 100,
+      "level": 6,
+      "position_m": [
+        1.37666654586792,
+        5.5
+      ],
+      "room": "street_plaza",
+      "search_elapsed": 6.99999999999998,
+      "searches": 0,
+      "sp": 100,
+      "target": "decision:3",
+      "world_time": 163.56666666666
+    }
+  ],
+  "visits": [
+    "L4:atrium",
+    "L4:memory",
+    "L4:decision",
+    "L4:bridge",
+    "L4:switch",
+    "L4:verify",
+    "L5:atrium",
+    "L5:decision",
+    "L5:bridge",
+    "L5:switch",
+    "L5:verify",
+    "L5:hippocampus",
+    "L5:thalamus",
+    "L5:brainstem",
+    "L6:street_plaza"
+  ]
+}

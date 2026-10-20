@@ -1,0 +1,18 @@
+{
+  "status": "material_foundation_only_not_enabled",
+  "built_in_imagegen_calls": 2,
+  "active_master": "neurons/assets/production/materials/painterly_material_atlas_v002.png",
+  "material_crops": 16,
+  "gpu_preview": "docs/validation/asset_production_20261020/materials/gpu_v002/preview_result.json",
+  "gpu_stderr": "empty",
+  "production_enabled": false,
+  "fixed_contract": ["Current floor contours/voids", "Mitered wall union and real apertures", "Original prop IDs and placements", "All collision/navigation/event state"],
+  "visual_findings": [
+    "第二版比首版减少密集磨损和纹理重复，机构上下墙涂层、原门窗洞口和家具空隙可读。",
+    "当前仍是材质基础，未达到用户批准样板的完整绘画环境成稿。",
+    "神经表面仍偏平滑塑料，Street立面仍像缺环境细节的墙截片，家具仍偏平板。",
+    "不以技术运行通过替代画风验收，不开启全局 enabled。"
+  ],
+  "next_authorized_work": "Produce actual painterly transparent bedroom furniture sprites/atlases, preserving individual feet/world dimensions/state layers, then inspect the complete bedroom combination before expanding.",
+  "owners": "Codex owns remaining production; no new manual regeneration order."
+}

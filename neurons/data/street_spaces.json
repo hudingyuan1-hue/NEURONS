@@ -1,0 +1,3156 @@
+{
+  "schema": 1,
+  "geometry_version": 3,
+  "scope": "Document-led nonrectangular street/plaza/side-room geometry. Stable route graph, actor identities, damage/timing and source event causality retained; rectangle props are envelopes, not image silhouettes.",
+  "projection": {
+    "origin_px": [
+      70,
+      200
+    ],
+    "x_px_per_m": 96,
+    "depth_x_px_per_m": 30,
+    "depth_y_px_per_m": 56,
+    "height_px_per_m": 78
+  },
+  "reference": {
+    "adult_height_m": 1.75,
+    "minimum_single_actor_clearance_m": 0.55,
+    "main_portal_width_m": 1.4,
+    "notes": "Visual measuring references, not new character identity or building-code claims. Existing bounds, graph, actor/save coordinates and all combat/ending rules retained. Props are independent; no baked people, labels, halos or scenery."
+  },
+  "rooms": {
+    "street_plaza": {
+      "id": "street_plaza",
+      "title": "初始广场",
+      "size_m": [
+        16,
+        11
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "沿真实街区轮廓的路缘及局部建筑立面；室外无四面高墙封盒，近侧轮廓保持低矮剖切。"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "中央雕像喷泉",
+          "rect": [
+            6.6,
+            4.15,
+            2.8,
+            2.7
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 1.0,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "fountain",
+          "footprint_shape": "ellipse",
+          "silhouette_note": "圆／椭圆石质池沿与中央雕塑，池盆有内凹与竖向水体，不是实心方箱。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_1",
+          "name": "长椅",
+          "rect": [
+            2.2,
+            8.6,
+            1.7,
+            0.5
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "open_frame",
+          "silhouette_note": "细腿、横向座板与靠背，下方穿透；不封成方柜。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_2",
+          "name": "壁龛雕像",
+          "rect": [
+            8.9,
+            1.15,
+            0.65,
+            0.5
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "statue",
+          "height_m": 1.45,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "organic",
+          "silhouette_note": "人体或既定雕像轮廓立于小基座，基座只占下部。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_3",
+          "name": "路灯",
+          "rect": [
+            11.9,
+            2.1,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "circle",
+          "silhouette_note": "细长圆杆、独立灯头、小圆底座，不能占满矩形外接框。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_4",
+          "name": "枯树",
+          "rect": [
+            12.9,
+            2.2,
+            0.5,
+            0.55
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "tree",
+          "height_m": 2.5,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "organic",
+          "silhouette_note": "分叉树干、纤细枝条与不规则树根，镂空轮廓。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_5",
+          "name": "排水口",
+          "rect": [
+            3.7,
+            9.15,
+            0.55,
+            0.35
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.015,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "drain",
+          "footprint_shape": "flat",
+          "silhouette_note": "贴地格栅／排水沟，无额外立体底座。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_6",
+          "name": "墙面标识",
+          "rect": [
+            4.8,
+            9.5,
+            0.65,
+            0.08
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 1.0,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "sign",
+          "footprint_shape": "flat",
+          "silhouette_note": "薄墙面标识／关闭门扇，依附建筑，不生成立柱箱体。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_7",
+          "name": "异常组织",
+          "rect": [
+            10.8,
+            9.35,
+            0.8,
+            0.35
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.015,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "growth",
+          "footprint_shape": "organic_flat",
+          "silhouette_note": "低对比附着痕迹顺着墙地延展，非突出血肉器官。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "Document-led polygon reconstruction implemented; procedural placeholder, final art and human play approval remain separate.",
+      "geometry_version": 3,
+      "floor_polygon_m": [
+        [
+          0,
+          4.3
+        ],
+        [
+          1.2,
+          4.3
+        ],
+        [
+          1.2,
+          2.3
+        ],
+        [
+          2.1,
+          2.3
+        ],
+        [
+          2.1,
+          1.0
+        ],
+        [
+          4.7,
+          1.0
+        ],
+        [
+          4.7,
+          0
+        ],
+        [
+          6.5,
+          0
+        ],
+        [
+          6.5,
+          1.0
+        ],
+        [
+          10.7,
+          1.0
+        ],
+        [
+          10.7,
+          1.7
+        ],
+        [
+          13.8,
+          1.7
+        ],
+        [
+          13.8,
+          3.8
+        ],
+        [
+          16,
+          3.8
+        ],
+        [
+          16,
+          7.2
+        ],
+        [
+          14.4,
+          7.2
+        ],
+        [
+          14.4,
+          9.2
+        ],
+        [
+          12.2,
+          9.2
+        ],
+        [
+          12.2,
+          10.2
+        ],
+        [
+          5.5,
+          10.2
+        ],
+        [
+          5.5,
+          11
+        ],
+        [
+          3.5,
+          11
+        ],
+        [
+          3.5,
+          9.8
+        ],
+        [
+          1.2,
+          9.8
+        ],
+        [
+          1.2,
+          7
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "floor_holes_m": [],
+      "space_shape": "入口窄口向带喷泉的多边广场张开，沿街立面错落退进；喷泉两侧可以绕行。",
+      "geometry_source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        {
+          "toward": "street_narrow",
+          "wall": "east",
+          "wall_point": [
+            16,
+            5.5
+          ],
+          "at": [
+            15.52,
+            5.5
+          ],
+          "threshold": [
+            15.75,
+            5.5
+          ],
+          "landing": [
+            15.14,
+            5.5
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        },
+        {
+          "toward": "street_side",
+          "wall": "north",
+          "wall_point": [
+            5.6,
+            0
+          ],
+          "at": [
+            5.6,
+            0.48
+          ],
+          "threshold": [
+            5.6,
+            0.25
+          ],
+          "landing": [
+            5.6,
+            0.86
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        }
+      ],
+      "spawn_m": [
+        1.3,
+        5.5
+      ],
+      "boundary_facades": [
+        {
+          "edge_index": 0,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 2,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 4,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 6,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 8,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 10,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 12,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        }
+      ]
+    },
+    "street_side": {
+      "id": "street_side",
+      "title": "侧室",
+      "size_m": [
+        7,
+        13
+      ],
+      "environment": "covered_interior",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "单入口服务侧室／侧巷，沿不规则实际边界建墙；前近侧剖低，入口北向。"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "破损长椅",
+          "rect": [
+            0.75,
+            8.55,
+            1.6,
+            0.5
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "open_frame",
+          "silhouette_note": "细腿、横向座板与靠背，下方穿透；不封成方柜。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_1",
+          "name": "壁龛小雕像",
+          "rect": [
+            5.75,
+            4.4,
+            0.65,
+            0.5
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "statue",
+          "height_m": 1.45,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "organic",
+          "silhouette_note": "人体或既定雕像轮廓立于小基座，基座只占下部。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_2",
+          "name": "封闭维护柜",
+          "rect": [
+            5.6,
+            6.4,
+            0.8,
+            0.55
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "cabinet",
+          "footprint_shape": "cabinet",
+          "silhouette_note": "柜体按真实薄板、门缝与把手构造，不是无差别实心立方体。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_3",
+          "name": "旧皮箱",
+          "rect": [
+            1.6,
+            11.35,
+            0.7,
+            0.45
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.45,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "case",
+          "footprint_shape": "rounded_box",
+          "silhouette_note": "带圆角、提手、锁扣的旧皮箱，不是无结构方块。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_4",
+          "name": "木箱",
+          "rect": [
+            4.9,
+            11.1,
+            0.65,
+            0.6
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "box",
+          "footprint_shape": "box",
+          "silhouette_note": "仅真实木箱／纸箱保留方盒结构，需板缝或折边。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_5",
+          "name": "灯具",
+          "rect": [
+            1.4,
+            5.5,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "circle",
+          "silhouette_note": "细长圆杆、独立灯头、小圆底座，不能占满矩形外接框。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_6",
+          "name": "管道",
+          "rect": [
+            6.2,
+            7.7,
+            0.2,
+            0.9
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.65,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "pipe",
+          "footprint_shape": "linear",
+          "silhouette_note": "圆柱管线与间隔支架，沿墙延伸，不生成柜箱外壳。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_7",
+          "name": "排水口",
+          "rect": [
+            3.4,
+            10.9,
+            0.5,
+            0.3
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.015,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "drain",
+          "footprint_shape": "flat",
+          "silhouette_note": "贴地格栅／排水沟，无额外立体底座。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_8",
+          "name": "异常组织",
+          "rect": [
+            5.2,
+            9.4,
+            0.8,
+            0.3
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.015,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "growth",
+          "footprint_shape": "organic_flat",
+          "silhouette_note": "低对比附着痕迹顺着墙地延展，非突出血肉器官。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "Document-led polygon reconstruction implemented; procedural placeholder, final art and human play approval remain separate.",
+      "geometry_version": 3,
+      "floor_polygon_m": [
+        [
+          2.5,
+          0
+        ],
+        [
+          4.5,
+          0
+        ],
+        [
+          4.5,
+          2.3
+        ],
+        [
+          5.2,
+          2.3
+        ],
+        [
+          5.2,
+          3.8
+        ],
+        [
+          6.7,
+          3.8
+        ],
+        [
+          6.7,
+          9.7
+        ],
+        [
+          6,
+          9.7
+        ],
+        [
+          6,
+          12.3
+        ],
+        [
+          1.4,
+          12.3
+        ],
+        [
+          1.4,
+          10.4
+        ],
+        [
+          0.4,
+          10.4
+        ],
+        [
+          0.4,
+          5.2
+        ],
+        [
+          1.2,
+          5.2
+        ],
+        [
+          1.2,
+          3.0
+        ],
+        [
+          2.5,
+          3.0
+        ]
+      ],
+      "floor_holes_m": [],
+      "space_shape": "北侧唯一入口进入竖长服务侧室，窄入口约2米，随后向下伸长并分两处错落壁龛，底端封闭。外围约7×13米是本房可用范围，长轴与北入单口沿源图46，不保留旧10×9米近方形占位。",
+      "geometry_source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        {
+          "toward": "street_plaza",
+          "wall": "north",
+          "wall_point": [
+            3.5,
+            0
+          ],
+          "at": [
+            3.5,
+            0.48
+          ],
+          "threshold": [
+            3.5,
+            0.25
+          ],
+          "landing": [
+            3.5,
+            0.86
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        }
+      ],
+      "spawn_m": [
+        3.5,
+        1.3
+      ],
+      "boundary_facades": [
+        {
+          "edge_index": 0,
+          "height_m": 2.8,
+          "role": "continuous_service_room_wall"
+        },
+        {
+          "edge_index": 2,
+          "height_m": 2.8,
+          "role": "continuous_service_room_wall"
+        },
+        {
+          "edge_index": 4,
+          "height_m": 2.8,
+          "role": "continuous_service_room_wall"
+        },
+        {
+          "edge_index": 9,
+          "height_m": 2.8,
+          "role": "continuous_service_room_wall"
+        },
+        {
+          "edge_index": 11,
+          "height_m": 2.8,
+          "role": "continuous_service_room_wall"
+        },
+        {
+          "edge_index": 13,
+          "height_m": 2.8,
+          "role": "continuous_service_room_wall"
+        },
+        {
+          "edge_index": 15,
+          "height_m": 2.8,
+          "role": "continuous_service_room_wall"
+        }
+      ],
+      "dimension_authority": "Document image46 is distinctly longitudinal; new clear footprint selected for five existing friendly actors, wall-side props and unobstructed return. Metre values are production geometry, not invented canonical architecture dimensions.",
+      "actor_stands_m": {
+        "nurse": [
+          3.2,
+          4.8
+        ],
+        "corner": [
+          1.1,
+          7.4
+        ],
+        "wheelchair": [
+          5.2,
+          5.2
+        ],
+        "transport_patient": [
+          2.3,
+          10.7
+        ],
+        "postop": [
+          4.7,
+          8.2
+        ]
+      }
+    },
+    "street_narrow": {
+      "id": "street_narrow",
+      "title": "狭窄通道",
+      "size_m": [
+        18,
+        8
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "沿真实街区轮廓的路缘及局部建筑立面；室外无四面高墙封盒，近侧轮廓保持低矮剖切。"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "壁灯",
+          "rect": [
+            3.35,
+            0.95,
+            0.3,
+            0.18
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "wall_lamp",
+          "height_m": 1.95,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "circle",
+          "silhouette_note": "贴墙支架与独立灯罩，后方无落地箱体。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_1",
+          "name": "长椅",
+          "rect": [
+            7.7,
+            1.55,
+            1.65,
+            0.45
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "notes": "旧长椅被通用北侧实体凹槽间墙吞入；移至已存在凹槽，不扩大路程或新增房间。",
+          "footprint_shape": "open_frame",
+          "silhouette_note": "细腿、横向座板与靠背，下方穿透；不封成方柜。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_2",
+          "name": "管线",
+          "rect": [
+            12.0,
+            2.28,
+            0.9,
+            0.16
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.65,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "pipe",
+          "footprint_shape": "linear",
+          "silhouette_note": "圆柱管线与间隔支架，沿墙延伸，不生成柜箱外壳。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "recess_top_left",
+          "name": "凹槽间墙",
+          "rect": [
+            4.4,
+            0.1,
+            2.6,
+            1.7
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "floor",
+          "notes": "此矩形为街道建筑占地与凹槽实体，不等于普通墙体厚度。",
+          "height_m": 0,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "collision": false,
+          "render": false,
+          "replaced_by": "floor_polygon_m boundary; retained ID for existing saves only"
+        },
+        {
+          "id": "recess_top_right",
+          "name": "凹槽间墙",
+          "rect": [
+            10.6,
+            0.1,
+            2.6,
+            1.7
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "floor",
+          "notes": "此矩形为街道建筑占地与凹槽实体，不等于普通墙体厚度。",
+          "height_m": 0,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "collision": false,
+          "render": false,
+          "replaced_by": "floor_polygon_m boundary; retained ID for existing saves only"
+        },
+        {
+          "id": "recess_bottom",
+          "name": "侧墙",
+          "rect": [
+            6,
+            6.3,
+            6,
+            1.6
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "floor",
+          "notes": "此矩形为街道建筑占地与凹槽实体，不等于普通墙体厚度。",
+          "height_m": 0,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "collision": false,
+          "render": false,
+          "replaced_by": "floor_polygon_m boundary; retained ID for existing saves only"
+        },
+        {
+          "id": "street_extra_6",
+          "name": "维护柜",
+          "rect": [
+            13.3,
+            0.9,
+            0.75,
+            0.5
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "cabinet",
+          "footprint_shape": "cabinet",
+          "silhouette_note": "柜体按真实薄板、门缝与把手构造，不是无差别实心立方体。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_extra_7",
+          "name": "排水口",
+          "rect": [
+            12,
+            6.85,
+            0.55,
+            0.3
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.015,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "notes": "排水口移至南侧实体墙前的可见地面，不嵌在墙体碰撞内部。",
+          "kind": "drain",
+          "footprint_shape": "flat",
+          "silhouette_note": "贴地格栅／排水沟，无额外立体底座。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_extra_8",
+          "name": "积水",
+          "rect": [
+            7.8,
+            5.25,
+            2,
+            0.3
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.008,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "puddle",
+          "footprint_shape": "organic_flat",
+          "silhouette_note": "不规则薄水迹融入地面，无方形托盘或底座。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_extra_9",
+          "name": "杂物箱",
+          "rect": [
+            15.5,
+            5.05,
+            0.8,
+            0.5
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "box",
+          "footprint_shape": "box",
+          "silhouette_note": "仅真实木箱／纸箱保留方盒结构，需板缝或折边。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_extra_10",
+          "name": "墙面异常组织",
+          "rect": [
+            14.0,
+            0.85,
+            0.5,
+            0.25
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.015,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "growth",
+          "footprint_shape": "organic_flat",
+          "silhouette_note": "低对比附着痕迹顺着墙地延展，非突出血肉器官。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "Document-led polygon reconstruction implemented; procedural placeholder, final art and human play approval remain separate.",
+      "geometry_version": 3,
+      "floor_polygon_m": [
+        [
+          0,
+          2.9
+        ],
+        [
+          1.3,
+          2.9
+        ],
+        [
+          1.3,
+          2.2
+        ],
+        [
+          3,
+          2.2
+        ],
+        [
+          3,
+          0.8
+        ],
+        [
+          4.4,
+          0.8
+        ],
+        [
+          4.4,
+          2.2
+        ],
+        [
+          7,
+          2.2
+        ],
+        [
+          7,
+          1.4
+        ],
+        [
+          10.6,
+          1.4
+        ],
+        [
+          10.6,
+          2.2
+        ],
+        [
+          13.1,
+          2.2
+        ],
+        [
+          13.1,
+          0.7
+        ],
+        [
+          14.8,
+          0.7
+        ],
+        [
+          14.8,
+          2.2
+        ],
+        [
+          16.7,
+          2.2
+        ],
+        [
+          16.7,
+          2.9
+        ],
+        [
+          18,
+          2.9
+        ],
+        [
+          18,
+          5.1
+        ],
+        [
+          16.7,
+          5.1
+        ],
+        [
+          16.7,
+          5.8
+        ],
+        [
+          13.2,
+          5.8
+        ],
+        [
+          13.2,
+          7.5
+        ],
+        [
+          11.5,
+          7.5
+        ],
+        [
+          11.5,
+          5.8
+        ],
+        [
+          6,
+          5.8
+        ],
+        [
+          6,
+          7.2
+        ],
+        [
+          4.5,
+          7.2
+        ],
+        [
+          4.5,
+          5.8
+        ],
+        [
+          1.3,
+          5.8
+        ],
+        [
+          1.3,
+          5.1
+        ],
+        [
+          0,
+          5.1
+        ]
+      ],
+      "floor_holes_m": [],
+      "space_shape": "连续细长通道，两侧交错壁龛与退让口袋；通行主脊贯通，墙体属于建筑边界而非摆在路中的巨型方柜。",
+      "geometry_source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        {
+          "toward": "street_plaza",
+          "wall": "west",
+          "wall_point": [
+            0,
+            4
+          ],
+          "at": [
+            0.48,
+            4.0
+          ],
+          "threshold": [
+            0.25,
+            4.0
+          ],
+          "landing": [
+            0.86,
+            4.0
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        },
+        {
+          "toward": "street_twisted",
+          "wall": "east",
+          "wall_point": [
+            18,
+            4
+          ],
+          "at": [
+            17.52,
+            4.0
+          ],
+          "threshold": [
+            17.75,
+            4.0
+          ],
+          "landing": [
+            17.14,
+            4.0
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        }
+      ],
+      "spawn_m": [
+        1.3,
+        4.0
+      ],
+      "boundary_facades": [
+        {
+          "edge_index": 0,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 2,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 4,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 6,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 8,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 10,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 12,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 14,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 16,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        }
+      ]
+    },
+    "street_twisted": {
+      "id": "street_twisted",
+      "title": "扭曲街道",
+      "size_m": [
+        20,
+        12
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "沿真实街区轮廓的路缘及局部建筑立面；室外无四面高墙封盒，近侧轮廓保持低矮剖切。"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "杂货铺",
+          "rect": [
+            2.1,
+            2.28,
+            1.6,
+            0.32
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "architectural",
+          "silhouette_note": "连续沿街墙面、真实门窗凹口与檐线；不是摆在路中的小盒建筑。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_1",
+          "name": "报刊铺立面",
+          "rect": [
+            8.7,
+            1.4,
+            1.6,
+            0.32
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "architectural",
+          "silhouette_note": "连续沿街墙面、真实门窗凹口与檐线；不是摆在路中的小盒建筑。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_2",
+          "name": "长椅",
+          "rect": [
+            15.6,
+            3.65,
+            1.65,
+            0.5
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "open_frame",
+          "silhouette_note": "细腿、横向座板与靠背，下方穿透；不封成方柜。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_3",
+          "name": "箱体",
+          "rect": [
+            3.8,
+            8.7,
+            0.7,
+            0.55
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "box",
+          "footprint_shape": "box",
+          "silhouette_note": "仅真实木箱／纸箱保留方盒结构，需板缝或折边。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_4",
+          "name": "枯树",
+          "rect": [
+            12.8,
+            3.0,
+            0.5,
+            0.55
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "tree",
+          "height_m": 2.5,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "organic",
+          "silhouette_note": "分叉树干、纤细枝条与不规则树根，镂空轮廓。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_5",
+          "name": "路灯",
+          "rect": [
+            15.0,
+            8.2,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "circle",
+          "silhouette_note": "细长圆杆、独立灯头、小圆底座，不能占满矩形外接框。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_6",
+          "name": "积水",
+          "rect": [
+            5.0,
+            8.8,
+            1.3,
+            0.45
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.008,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "puddle",
+          "footprint_shape": "organic_flat",
+          "silhouette_note": "不规则薄水迹融入地面，无方形托盘或底座。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_7",
+          "name": "排水口",
+          "rect": [
+            8.6,
+            10.65,
+            0.5,
+            0.35
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.015,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "drain",
+          "footprint_shape": "flat",
+          "silhouette_note": "贴地格栅／排水沟，无额外立体底座。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_8",
+          "name": "栏杆",
+          "rect": [
+            10.8,
+            9.65,
+            1.2,
+            0.16
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.9,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "railing",
+          "footprint_shape": "linear",
+          "silhouette_note": "细立柱与横杆构成的透空护栏，不是实体墙块。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_9",
+          "name": "扭曲地面",
+          "rect": [
+            7.7,
+            7.2,
+            1.3,
+            0.9
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.03,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "floor",
+          "footprint_shape": "flat",
+          "silhouette_note": "地面或平台构造，保持可踏入，不做阻路实心箱。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_10",
+          "name": "局部塌陷",
+          "rect": [
+            2.1,
+            7.8,
+            0.8,
+            0.6
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "rubble",
+          "footprint_shape": "organic",
+          "silhouette_note": "不规则低矮碎物堆，零件独立，不是几何整块。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "Document-led polygon reconstruction implemented; procedural placeholder, final art and human play approval remain separate.",
+      "geometry_version": 3,
+      "floor_polygon_m": [
+        [
+          0,
+          4.8
+        ],
+        [
+          1.4,
+          4.8
+        ],
+        [
+          1.4,
+          2.2
+        ],
+        [
+          4.4,
+          2.2
+        ],
+        [
+          4.4,
+          1.2
+        ],
+        [
+          6.1,
+          1.2
+        ],
+        [
+          6.1,
+          0
+        ],
+        [
+          7.9,
+          0
+        ],
+        [
+          7.9,
+          1.3
+        ],
+        [
+          10.9,
+          1.3
+        ],
+        [
+          10.9,
+          2.5
+        ],
+        [
+          12.8,
+          2.5
+        ],
+        [
+          13.8,
+          3.5
+        ],
+        [
+          17.7,
+          3.5
+        ],
+        [
+          17.7,
+          4.8
+        ],
+        [
+          20,
+          4.8
+        ],
+        [
+          20,
+          7.2
+        ],
+        [
+          18.4,
+          7.2
+        ],
+        [
+          18.4,
+          8.8
+        ],
+        [
+          14.7,
+          8.8
+        ],
+        [
+          13.2,
+          10.5
+        ],
+        [
+          10.2,
+          10.5
+        ],
+        [
+          10.2,
+          11.5
+        ],
+        [
+          7.5,
+          11.5
+        ],
+        [
+          7.5,
+          10.4
+        ],
+        [
+          3.4,
+          10.4
+        ],
+        [
+          3.4,
+          9.4
+        ],
+        [
+          1.4,
+          9.4
+        ],
+        [
+          1.4,
+          7.2
+        ],
+        [
+          0,
+          7.2
+        ]
+      ],
+      "floor_holes_m": [],
+      "space_shape": "街道在中段错移并分出北侧维护支路，宽窄变化和转折产生遮蔽，东端重新收束；非随机新增迷宫。",
+      "geometry_source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        {
+          "toward": "street_narrow",
+          "wall": "west",
+          "wall_point": [
+            0,
+            6
+          ],
+          "at": [
+            0.48,
+            6.0
+          ],
+          "threshold": [
+            0.25,
+            6.0
+          ],
+          "landing": [
+            0.86,
+            6.0
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        },
+        {
+          "toward": "street_node",
+          "wall": "east",
+          "wall_point": [
+            20,
+            6
+          ],
+          "at": [
+            19.52,
+            6.0
+          ],
+          "threshold": [
+            19.75,
+            6.0
+          ],
+          "landing": [
+            19.14,
+            6.0
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        },
+        {
+          "toward": "street_maintenance",
+          "wall": "north",
+          "wall_point": [
+            7,
+            0
+          ],
+          "at": [
+            7.0,
+            0.48
+          ],
+          "threshold": [
+            7.0,
+            0.25
+          ],
+          "landing": [
+            7.0,
+            0.86
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        }
+      ],
+      "spawn_m": [
+        1.3,
+        6.0
+      ],
+      "boundary_facades": [
+        {
+          "edge_index": 0,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 2,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 4,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 6,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 8,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 10,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 12,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 14,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        }
+      ]
+    },
+    "street_maintenance": {
+      "id": "street_maintenance",
+      "title": "维护通道",
+      "size_m": [
+        12,
+        8
+      ],
+      "environment": "open_air_service_alley",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "沿真实街区轮廓的路缘及局部建筑立面；室外无四面高墙封盒，近侧轮廓保持低矮剖切。"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "沿墙管架",
+          "rect": [
+            6.0,
+            1.45,
+            1,
+            0.22
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.65,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "pipe",
+          "footprint_shape": "linear",
+          "silhouette_note": "圆柱管线与间隔支架，沿墙延伸，不生成柜箱外壳。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_1",
+          "name": "维护柜",
+          "rect": [
+            4.75,
+            0.75,
+            0.75,
+            0.5
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "cabinet",
+          "footprint_shape": "cabinet",
+          "silhouette_note": "柜体按真实薄板、门缝与把手构造，不是无差别实心立方体。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_2",
+          "name": "照明",
+          "rect": [
+            7.65,
+            1.5,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "circle",
+          "silhouette_note": "细长圆杆、独立灯头、小圆底座，不能占满矩形外接框。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_3",
+          "name": "集中成矮堆的检修杂物",
+          "rect": [
+            10.1,
+            3.1,
+            0.8,
+            0.6
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "rubble",
+          "footprint_shape": "organic",
+          "silhouette_note": "不规则低矮碎物堆，零件独立，不是几何整块。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_cleaner_cart",
+          "name": "侧停清洁车",
+          "rect": [
+            1.65,
+            6.0,
+            0.65,
+            0.65
+          ],
+          "solid": true,
+          "kind": "cleaner_cart",
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.65,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "open_frame",
+          "silhouette_note": "轮子、支架、把手和分离桶体，小车框架透空。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "Document-led polygon reconstruction implemented; procedural placeholder, final art and human play approval remain separate.",
+      "geometry_version": 3,
+      "floor_polygon_m": [
+        [
+          0,
+          3
+        ],
+        [
+          1.2,
+          3
+        ],
+        [
+          1.2,
+          1.3
+        ],
+        [
+          4.2,
+          1.3
+        ],
+        [
+          4.2,
+          0.55
+        ],
+        [
+          6,
+          0.55
+        ],
+        [
+          6,
+          1.3
+        ],
+        [
+          10.8,
+          1.3
+        ],
+        [
+          10.8,
+          2.2
+        ],
+        [
+          11.6,
+          2.2
+        ],
+        [
+          11.6,
+          6.8
+        ],
+        [
+          8.6,
+          6.8
+        ],
+        [
+          8.6,
+          7.45
+        ],
+        [
+          5.8,
+          7.45
+        ],
+        [
+          5.8,
+          6.8
+        ],
+        [
+          1.2,
+          6.8
+        ],
+        [
+          1.2,
+          5
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "floor_holes_m": [],
+      "space_shape": "主路旁的单口维护巷，墙边管架和清洁车占边，小检修湾让行，末端封闭。",
+      "geometry_source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        {
+          "toward": "street_twisted",
+          "wall": "west",
+          "wall_point": [
+            0,
+            4
+          ],
+          "at": [
+            0.48,
+            4.0
+          ],
+          "threshold": [
+            0.25,
+            4.0
+          ],
+          "landing": [
+            0.86,
+            4.0
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        }
+      ],
+      "spawn_m": [
+        1.3,
+        4.0
+      ],
+      "boundary_facades": [
+        {
+          "edge_index": 0,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 2,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 4,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 6,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        }
+      ]
+    },
+    "street_node": {
+      "id": "street_node",
+      "title": "异化节点",
+      "size_m": [
+        17,
+        12
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "沿真实街区轮廓的路缘及局部建筑立面；室外无四面高墙封盒，近侧轮廓保持低矮剖切。"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "中央异化塌陷核心",
+          "rect": [
+            7.1,
+            4.65,
+            2.8,
+            2.7
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.08,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "pit",
+          "footprint_shape": "ellipse",
+          "silhouette_note": "地面不规则塌陷口与低矮破边，中心留空，不画成实体箱或器官堆。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_1",
+          "name": "外围步道",
+          "rect": [
+            5.15,
+            2.25,
+            5.4,
+            0.55
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.03,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "floor",
+          "footprint_shape": "flat",
+          "silhouette_note": "地面或平台构造，保持可踏入，不做阻路实心箱。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_2",
+          "name": "异常组织",
+          "rect": [
+            6.3,
+            1.75,
+            0.8,
+            0.3
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.015,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "growth",
+          "footprint_shape": "organic_flat",
+          "silhouette_note": "低对比附着痕迹顺着墙地延展，非突出血肉器官。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_3",
+          "name": "店铺立面",
+          "rect": [
+            12.0,
+            2.75,
+            1.6,
+            0.3
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "architectural",
+          "silhouette_note": "连续沿街墙面、真实门窗凹口与檐线；不是摆在路中的小盒建筑。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_4",
+          "name": "长椅",
+          "rect": [
+            11.25,
+            9.55,
+            1.65,
+            0.5
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "open_frame",
+          "silhouette_note": "细腿、横向座板与靠背，下方穿透；不封成方柜。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_5",
+          "name": "灯具",
+          "rect": [
+            2.6,
+            9.45,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "circle",
+          "silhouette_note": "细长圆杆、独立灯头、小圆底座，不能占满矩形外接框。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_6",
+          "name": "栏杆",
+          "rect": [
+            6.3,
+            8.3,
+            1.2,
+            0.16
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.9,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "railing",
+          "footprint_shape": "linear",
+          "silhouette_note": "细立柱与横杆构成的透空护栏，不是实体墙块。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_7",
+          "name": "箱体",
+          "rect": [
+            7.8,
+            9.1,
+            0.7,
+            0.6
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "box",
+          "footprint_shape": "box",
+          "silhouette_note": "仅真实木箱／纸箱保留方盒结构，需板缝或折边。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_8",
+          "name": "设备间",
+          "rect": [
+            11.6,
+            10.5,
+            1.2,
+            0.35
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "architectural",
+          "silhouette_note": "连续沿街墙面、真实门窗凹口与檐线；不是摆在路中的小盒建筑。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_9",
+          "name": "封闭维修门",
+          "rect": [
+            12.1,
+            10.55,
+            0.75,
+            0.08
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 1.0,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "sign",
+          "footprint_shape": "flat",
+          "silhouette_note": "薄墙面标识／关闭门扇，依附建筑，不生成立柱箱体。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "Document-led polygon reconstruction implemented; procedural placeholder, final art and human play approval remain separate.",
+      "geometry_version": 3,
+      "floor_polygon_m": [
+        [
+          0,
+          4.8
+        ],
+        [
+          1.4,
+          4.8
+        ],
+        [
+          1.4,
+          3
+        ],
+        [
+          3.1,
+          3
+        ],
+        [
+          3.1,
+          1.6
+        ],
+        [
+          5.9,
+          1.6
+        ],
+        [
+          5.9,
+          0.65
+        ],
+        [
+          7.7,
+          0.65
+        ],
+        [
+          7.7,
+          1.5
+        ],
+        [
+          11.9,
+          1.5
+        ],
+        [
+          11.9,
+          2.6
+        ],
+        [
+          14.5,
+          2.6
+        ],
+        [
+          14.5,
+          4.7
+        ],
+        [
+          17,
+          4.7
+        ],
+        [
+          17,
+          7.3
+        ],
+        [
+          15.5,
+          7.3
+        ],
+        [
+          15.5,
+          9.7
+        ],
+        [
+          13.4,
+          9.7
+        ],
+        [
+          13.4,
+          11.3
+        ],
+        [
+          10.8,
+          11.3
+        ],
+        [
+          10.8,
+          10.5
+        ],
+        [
+          7.1,
+          10.5
+        ],
+        [
+          7.1,
+          11.4
+        ],
+        [
+          4.8,
+          11.4
+        ],
+        [
+          4.8,
+          10.5
+        ],
+        [
+          2.1,
+          10.5
+        ],
+        [
+          2.1,
+          8.3
+        ],
+        [
+          0.8,
+          8.3
+        ],
+        [
+          0.8,
+          7.2
+        ],
+        [
+          0,
+          7.2
+        ]
+      ],
+      "floor_holes_m": [
+        [
+          [
+            9.9,
+            6.0
+          ],
+          [
+            9.7934,
+            6.5166
+          ],
+          [
+            9.4899,
+            6.9546
+          ],
+          [
+            9.0358,
+            7.2472
+          ],
+          [
+            8.5,
+            7.35
+          ],
+          [
+            7.9642,
+            7.2472
+          ],
+          [
+            7.5101,
+            6.9546
+          ],
+          [
+            7.2066,
+            6.5166
+          ],
+          [
+            7.1,
+            6.0
+          ],
+          [
+            7.2066,
+            5.4834
+          ],
+          [
+            7.5101,
+            5.0454
+          ],
+          [
+            7.9642,
+            4.7528
+          ],
+          [
+            8.5,
+            4.65
+          ],
+          [
+            9.0358,
+            4.7528
+          ],
+          [
+            9.4899,
+            5.0454
+          ],
+          [
+            9.7934,
+            5.4834
+          ]
+        ]
+      ],
+      "space_shape": "塌陷核心周围的异形节点与外围绕行地带，沿街立面有凹凸进退，两端连接保持。",
+      "geometry_source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        {
+          "toward": "street_twisted",
+          "wall": "west",
+          "wall_point": [
+            0,
+            6
+          ],
+          "at": [
+            0.48,
+            6.0
+          ],
+          "threshold": [
+            0.25,
+            6.0
+          ],
+          "landing": [
+            0.86,
+            6.0
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        },
+        {
+          "toward": "street_end",
+          "wall": "east",
+          "wall_point": [
+            17,
+            6
+          ],
+          "at": [
+            16.52,
+            6.0
+          ],
+          "threshold": [
+            16.75,
+            6.0
+          ],
+          "landing": [
+            16.14,
+            6.0
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        }
+      ],
+      "spawn_m": [
+        1.3,
+        6.0
+      ],
+      "boundary_facades": [
+        {
+          "edge_index": 0,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 2,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 4,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 6,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 8,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 10,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 12,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        }
+      ]
+    },
+    "street_end": {
+      "id": "street_end",
+      "title": "出口",
+      "size_m": [
+        16,
+        11
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "沿真实街区轮廓的路缘及局部建筑立面；室外无四面高墙封盒，近侧轮廓保持低矮剖切。"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "检查岗亭",
+          "rect": [
+            3.6,
+            1.3,
+            1.45,
+            0.55
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "architectural",
+          "silhouette_note": "连续沿街墙面、真实门窗凹口与檐线；不是摆在路中的小盒建筑。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_1",
+          "name": "破损道闸",
+          "rect": [
+            5.9,
+            2.5,
+            1.8,
+            0.15
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.9,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "railing",
+          "footprint_shape": "linear",
+          "silhouette_note": "细立柱与横杆构成的透空护栏，不是实体墙块。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_2",
+          "name": "栏杆",
+          "rect": [
+            10.9,
+            2.4,
+            1.1,
+            0.16
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.9,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "railing",
+          "footprint_shape": "linear",
+          "silhouette_note": "细立柱与横杆构成的透空护栏，不是实体墙块。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_3",
+          "name": "长椅",
+          "rect": [
+            3.3,
+            8.65,
+            1.65,
+            0.5
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "open_frame",
+          "silhouette_note": "细腿、横向座板与靠背，下方穿透；不封成方柜。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_4",
+          "name": "灯具",
+          "rect": [
+            12.3,
+            2.0,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "circle",
+          "silhouette_note": "细长圆杆、独立灯头、小圆底座，不能占满矩形外接框。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_5",
+          "name": "积水",
+          "rect": [
+            5.3,
+            8.4,
+            1.1,
+            0.5
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.008,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "puddle",
+          "footprint_shape": "organic_flat",
+          "silhouette_note": "不规则薄水迹融入地面，无方形托盘或底座。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_6",
+          "name": "排水口",
+          "rect": [
+            7.2,
+            10.05,
+            0.5,
+            0.3
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.015,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "drain",
+          "footprint_shape": "flat",
+          "silhouette_note": "贴地格栅／排水沟，无额外立体底座。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_7",
+          "name": "设备间",
+          "rect": [
+            9.2,
+            9.1,
+            1.2,
+            0.35
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "architectural",
+          "silhouette_note": "连续沿街墙面、真实门窗凹口与檐线；不是摆在路中的小盒建筑。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_8",
+          "name": "收束门廊",
+          "rect": [
+            13.5,
+            4.3,
+            1.5,
+            2.4
+          ],
+          "solid": false,
+          "kind": "floor",
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.03,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "flat",
+          "silhouette_note": "地面或平台构造，保持可踏入，不做阻路实心箱。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_9",
+          "name": "出口平台",
+          "rect": [
+            12.25,
+            7.75,
+            1.1,
+            0.45
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.03,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "kind": "floor",
+          "footprint_shape": "flat",
+          "silhouette_note": "地面或平台构造，保持可踏入，不做阻路实心箱。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        },
+        {
+          "id": "street_prop_10",
+          "name": "终点门框",
+          "rect": [
+            15.25,
+            4.75,
+            0.3,
+            1.5
+          ],
+          "solid": false,
+          "kind": "gate",
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 2.35,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "footprint_shape": "open_frame",
+          "silhouette_note": "立柱与横楣形成真正贯通门口，不封住入口。",
+          "rect_meaning": "Placement/collision envelope only; not the visible outline or a request for a box-shaped object."
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "Document-led polygon reconstruction implemented; procedural placeholder, final art and human play approval remain separate.",
+      "geometry_version": 3,
+      "floor_polygon_m": [
+        [
+          0,
+          4.3
+        ],
+        [
+          1.2,
+          4.3
+        ],
+        [
+          1.2,
+          2.6
+        ],
+        [
+          3.3,
+          2.6
+        ],
+        [
+          3.3,
+          1.1
+        ],
+        [
+          5.4,
+          1.1
+        ],
+        [
+          5.4,
+          2.2
+        ],
+        [
+          10.7,
+          2.2
+        ],
+        [
+          10.7,
+          1.3
+        ],
+        [
+          12.9,
+          1.3
+        ],
+        [
+          12.9,
+          2.4
+        ],
+        [
+          14.4,
+          2.4
+        ],
+        [
+          14.4,
+          4.2
+        ],
+        [
+          16,
+          4.2
+        ],
+        [
+          16,
+          6.8
+        ],
+        [
+          14.4,
+          6.8
+        ],
+        [
+          14.4,
+          8.6
+        ],
+        [
+          12.1,
+          8.6
+        ],
+        [
+          12.1,
+          9.8
+        ],
+        [
+          8.8,
+          9.8
+        ],
+        [
+          8.8,
+          10.7
+        ],
+        [
+          6.8,
+          10.7
+        ],
+        [
+          6.8,
+          9.6
+        ],
+        [
+          2.4,
+          9.6
+        ],
+        [
+          2.4,
+          7.4
+        ],
+        [
+          1.2,
+          7.4
+        ],
+        [
+          1.2,
+          6.7
+        ],
+        [
+          0,
+          6.7
+        ]
+      ],
+      "floor_holes_m": [],
+      "space_shape": "检查收束街段，两侧凹进岗亭和设备湾，路面逐渐汇向东端门廊及终点。",
+      "geometry_source": "关卡 周目 环境(1).docx:P422–437/images44–50; maintenance is the existing single-mouth branch shown in overview, not a new map.",
+      "portals": [
+        {
+          "toward": "street_node",
+          "wall": "west",
+          "wall_point": [
+            0,
+            5.5
+          ],
+          "at": [
+            0.48,
+            5.5
+          ],
+          "threshold": [
+            0.25,
+            5.5
+          ],
+          "landing": [
+            0.86,
+            5.5
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        },
+        {
+          "toward": "ending_gate",
+          "wall": "east",
+          "wall_point": [
+            16,
+            5.5
+          ],
+          "at": [
+            15.52,
+            5.5
+          ],
+          "threshold": [
+            15.75,
+            5.5
+          ],
+          "landing": [
+            15.14,
+            5.5
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "width_m": 1.4,
+          "height_m": 2.2,
+          "opening_role": "street_passage_not_interior_door"
+        }
+      ],
+      "spawn_m": [
+        1.3,
+        5.5
+      ],
+      "boundary_facades": [
+        {
+          "edge_index": 0,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 2,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 4,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 6,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 8,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 10,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        },
+        {
+          "edge_index": 12,
+          "height_m": 2.8,
+          "role": "continuous_street_facade"
+        }
+      ]
+    }
+  },
+  "hidden": {
+    "id": "hidden_street",
+    "title": "第一关隐藏广场片段",
+    "size_m": [
+      5.6,
+      3.8
+    ],
+    "environment": "open_air_plaza_fragment",
+    "wall": {
+      "height_m": 2.8,
+      "thickness_m": 0.18,
+      "role": "局部沿街立面和低路缘，不围成卧室。"
+    },
+    "source": "S1:P24–26/P511; hidden_street.json layout and original E1 threshold retained",
+    "status": "Document-led compact plaza contour; no Street45 population or new room; existing E1 threshold retained.",
+    "props": [
+      {
+        "id": "fountain",
+        "name": "喷泉",
+        "rect": [
+          2.25,
+          1.25,
+          1.0,
+          1.2
+        ],
+        "height_m": 1.0,
+        "kind": "fountain",
+        "solid": true,
+        "footprint_shape": "ellipse",
+        "silhouette_note": "圆／椭圆石质池沿与中央雕塑，池盆有内凹与竖向水体，不是实心方箱。"
+      },
+      {
+        "id": "bench_west",
+        "name": "长椅 · 不可休息",
+        "rect": [
+          1.3,
+          0.25,
+          1.35,
+          0.35
+        ],
+        "height_m": 0.85,
+        "kind": "bench",
+        "solid": true,
+        "footprint_shape": "open_frame",
+        "silhouette_note": "细腿、横向座板与靠背，下方穿透；不封成方柜。"
+      },
+      {
+        "id": "bench_east",
+        "name": "长椅 · 不可休息",
+        "rect": [
+          3.75,
+          3.2,
+          1.15,
+          0.35
+        ],
+        "height_m": 0.85,
+        "kind": "bench",
+        "solid": true,
+        "footprint_shape": "open_frame",
+        "silhouette_note": "细腿、横向座板与靠背，下方穿透；不封成方柜。"
+      },
+      {
+        "id": "lamp",
+        "name": "路灯",
+        "rect": [
+          4.7,
+          1.55,
+          0.2,
+          0.2
+        ],
+        "height_m": 2.7,
+        "kind": "lamp",
+        "solid": true,
+        "footprint_shape": "circle",
+        "silhouette_note": "细长圆杆、独立灯头、小圆底座，不能占满矩形外接框。"
+      }
+    ],
+    "portals": [
+      {
+        "toward": "bedroom",
+        "wall": "west",
+        "at": [
+          0.6,
+          3.35
+        ],
+        "wall_point": [
+          0,
+          3.35
+        ],
+        "threshold": [
+          0.37,
+          3.35
+        ],
+        "landing": [
+          0.98,
+          3.35
+        ],
+        "inward": [
+          1,
+          0
+        ],
+        "width_m": 0.95,
+        "height_m": 2.2,
+        "role": "entry_only_no_return_transition"
+      },
+      {
+        "toward": "E1",
+        "wall": "north",
+        "at": [
+          5.12,
+          0.42
+        ],
+        "wall_point": [
+          5.12,
+          0
+        ],
+        "threshold": [
+          5.12,
+          0.42
+        ],
+        "landing": [
+          5.12,
+          0.22
+        ],
+        "inward": [
+          0,
+          1
+        ],
+        "width_m": 0.72,
+        "height_m": 2.2,
+        "role": "existing_one_way_E1_threshold_not_new_room"
+      }
+    ],
+    "geometry_version": 3,
+    "floor_polygon_m": [
+      [
+        0,
+        2.65
+      ],
+      [
+        0.45,
+        2.65
+      ],
+      [
+        0.45,
+        0.9
+      ],
+      [
+        1.1,
+        0.9
+      ],
+      [
+        1.1,
+        0
+      ],
+      [
+        5.6,
+        0
+      ],
+      [
+        5.6,
+        2.8
+      ],
+      [
+        5.15,
+        2.8
+      ],
+      [
+        5.15,
+        3.8
+      ],
+      [
+        0.3,
+        3.8
+      ],
+      [
+        0.3,
+        3.65
+      ],
+      [
+        0,
+        3.65
+      ]
+    ],
+    "floor_holes_m": [],
+    "space_shape": "第一关广场战斗片段：保留喷泉绕行、入口与E1实阈值，边缘沿街界有退进，不复制卧室四壁。",
+    "boundary_facades": [
+      {
+        "edge_index": 3,
+        "height_m": 2.8
+      },
+      {
+        "edge_index": 4,
+        "height_m": 2.8
+      }
+    ]
+  },
+  "schema_version": 2
+}

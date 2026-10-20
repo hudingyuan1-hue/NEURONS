@@ -1,0 +1,36 @@
+{
+  "belt_contains": true,
+  "belt_contains_seconds": 0.14385,
+  "calls": [
+    {
+      "a": [
+        4.79547357559204,
+        6.38097763061523
+      ],
+      "b": [
+        19.5200004577637,
+        6.0
+      ],
+      "method": "path",
+      "points": 2,
+      "seconds": 0.000037
+    },
+    {
+      "a": [
+        4.79547357559204,
+        6.38097763061523
+      ],
+      "b": [
+        6.0450553894043,
+        6.34864616394043
+      ],
+      "bodies": 4,
+      "method": "path_around_bodies",
+      "points": 2,
+      "seconds": 0.000036
+    }
+  ],
+  "fixture": "Actual performance snapshot after 98 ordinary process frames, no actor/route edits.",
+  "hero_seconds": 2.305887,
+  "method_seconds": {}
+}

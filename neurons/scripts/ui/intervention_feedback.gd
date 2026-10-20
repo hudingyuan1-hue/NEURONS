@@ -1,4 +1,5 @@
 extends Control
+const UIStyle=preload("res://scripts/ui/ui_style.gd")
 ## Presentation only. Reads settled actions; never submits or delays gameplay.
 var app
 var remaining:float=0.0
@@ -13,15 +14,14 @@ var tint:=Color("d8b17a")
 func _ready() -> void:
  mouse_filter=Control.MOUSE_FILTER_IGNORE
  set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
- theme=Theme.new();theme.default_font=load("res://assets/fonts/NotoSansCJKsc-Regular.otf")
+ theme=UIStyle.theme_for()
  activity=make_label(Rect2(26,153,590,29),16)
  progress=ProgressBar.new();progress.position=Vector2(26,183);progress.size=Vector2(280,5)
  progress.show_percentage=false;progress.mouse_filter=Control.MOUSE_FILTER_IGNORE
  add_child(progress)
  receipt_panel=Panel.new();receipt_panel.position=Vector2(815,153);receipt_panel.size=Vector2(414,120)
  receipt_panel.mouse_filter=Control.MOUSE_FILTER_IGNORE
- var style:=StyleBoxFlat.new();style.bg_color=Color(0.065,0.1,0.11,0.94)
- style.border_color=Color("a69a78");style.set_border_width_all(1);style.set_corner_radius_all(5)
+ var style:=UIStyle.surface("paper",true)
  receipt_panel.add_theme_stylebox_override("panel",style);add_child(receipt_panel)
  headline=make_label(Rect2(830,164,385,30),19)
  detail=make_label(Rect2(830,198,382,67),15);detail.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
@@ -30,7 +30,7 @@ func _ready() -> void:
 func make_label(bounds:Rect2,points:int) -> Label:
  var label:=Label.new();label.position=bounds.position;label.size=bounds.size
  label.mouse_filter=Control.MOUSE_FILTER_IGNORE
- label.add_theme_font_size_override("font_size",points);label.add_theme_color_override("font_color",Color("e5e3ce"))
+ label.add_theme_font_size_override("font_size",points);label.add_theme_color_override("font_color",UIStyle.INK)
  add_child(label);return label
 
 func present(result:Dictionary,target:String) -> void:
@@ -39,7 +39,7 @@ func present(result:Dictionary,target:String) -> void:
  var cost:int=int(app.rules.spec(id).get("cost",0))
  var success:bool=bool(result.get("success",false))
  var cancelled:bool=bool(result.get("search_cancelled",false))
- tint=Color("d8b17a") if success else Color("ba9490")
+ tint=UIStyle.TEAL if success else UIStyle.OXIDE
  headline.text=name+" · "+("搜寻已中断" if cancelled else "已生效" if success else "施放被中断" if result.get("reason","")=="interrupted" else "被抵抗")
  var effect:String="原行动继续；本次扣费不退还。"
  if cancelled:effect="此次搜寻机会已占用，无完成收入；重试将重新计时。"
@@ -70,6 +70,9 @@ func _process(delta:float) -> void:
   if app.rules.control_left>0:activity.text=activity.text.replace("自主搜寻","掌控搜寻")
  if not app.world_paused():remaining=maxf(0,remaining-delta)
  var show_receipt:bool=remaining>0 and not app.menu.visible and app.tutorial_ui==null and app.opening_ui==null
+ var top:float=153
+ if app.father_prompt!=null and app.father_prompt.visible:top=minf(450,app.father_prompt.position.y+app.father_prompt.size.y+12)
+ receipt_panel.position.y=top;headline.position.y=top+11;detail.position.y=top+45
  receipt_panel.visible=show_receipt;headline.visible=show_receipt;detail.visible=show_receipt
  queue_redraw()
 

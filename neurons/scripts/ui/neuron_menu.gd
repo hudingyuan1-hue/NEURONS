@@ -7,10 +7,11 @@ signal close_requested
 @export var reduced_effects: bool = false
 
 const FONT_PATH := "res://assets/fonts/NotoSansCJKsc-Regular.otf"
+const UIStyle=preload("res://scripts/ui/ui_style.gd")
 const PLAYER_PREVIEW_PATH := "" # v001 rejected by user; keep source, stop adoption.
-const INK := Color("#c6d9be")
-const DIM := Color("#53635b")
-const ACCENT := Color("#b7d6a4")
+const INK := Color("#293834")
+const DIM := Color("#68736a")
+const ACCENT := Color("#9b7042")
 const SKIN_DESCRIPTION := "皮肤刺激 · SKIN\n{\n  // 消耗1神经元\n  // 我会让他感到皮肤不适\n  // 这有概率让他放弃本次行动\n  COST: 1神经元;  COOLDOWN: 2 秒;\n  INTENSITY: 1;\n  SUCCESS: 抓挠 0.5 秒;\n  INTERRUPT: 打断搜寻;\n  RESIST: 抵抗不退款;\n}"
 
 var _built: bool = false
@@ -237,15 +238,7 @@ func _button(parent: Node, text_value: String, bounds: Rect2) -> Button:
 	button.size = bounds.size
 	button.mouse_filter = Control.MOUSE_FILTER_STOP
 	button.add_theme_font_size_override("font_size", 18)
-	button.add_theme_color_override("font_color", INK)
-	button.add_theme_color_override("font_hover_color", ACCENT)
-	button.add_theme_color_override("font_pressed_color", Color("#e2ecd1"))
-	button.add_theme_color_override("font_disabled_color", DIM)
-	button.add_theme_stylebox_override("normal", _box(Color("#20392d"), Color("#80936a"), 1))
-	button.add_theme_stylebox_override("hover", _box(Color("#304a36"), ACCENT, 2))
-	button.add_theme_stylebox_override("pressed", _box(Color("#14291f"), ACCENT, 2))
-	button.add_theme_stylebox_override("disabled", _box(Color("#1b2922"), Color("#394b3e"), 1))
-	button.add_theme_stylebox_override("focus", _box(Color(0, 0, 0, 0), ACCENT, 2))
+	UIStyle.style_button(button,UIStyle.mode_for(parent))
 	parent.add_child(button)
 	return button
 
@@ -255,7 +248,7 @@ func _box(fill: Color, edge: Color, border: int) -> StyleBoxFlat:
 	box.bg_color = fill
 	box.border_color = edge
 	box.set_border_width_all(border)
-	box.set_corner_radius_all(5)
+	box.set_corner_radius_all(0)
 	box.content_margin_left = 8.0
 	box.content_margin_right = 8.0
 	return box

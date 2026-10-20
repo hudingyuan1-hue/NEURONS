@@ -5,6 +5,7 @@ const CortexMap=preload("res://scripts/core/cortex_map.gd")
 const KeyDiscovery=preload("res://scripts/core/key_discovery.gd")
 const StreetMap=preload("res://scripts/core/street_map.gd")
 const CombatMap=preload("res://scripts/core/combat_map.gd")
+const SpatialRevision=preload("res://scripts/world/spatial_revision.gd")
 const ASYLUM_METRIC_ROOMS=["corridor","activity","group_therapy","quiet","bathroom","double_ward","workshop"]
 const ROOM_POINTS={
  "bedroom":["床","床头柜","靠背椅","书桌","蓝色圆凳与纸箱","杂物箱","衣帽架","衣柜","五层书架","储物柜","立式风扇"],
@@ -19,10 +20,11 @@ var key_rules=KeyDiscovery.new()
 
 func _init() -> void:
  data={"level":1,"cycle":1,"attempts":{"1":1,"2":1,"3":1},"targets":[],"key_target":"","key_seen":false,"key_owner":"",
-  "unlocked":[1],"rooms":{},"receipts":{},"exploration_boundary":false,"profile":{}}
+  "unlocked":[1],"rooms":{},"receipts":{},"exploration_boundary":false,"profile":{},"spatial_revision":SpatialRevision.CURRENT}
 
 func new_attempt(level:int,rng:RandomNumberGenerator) -> void:
  var previous_level:int=int(data.get("level",1))
+ var previous_spatial_revision:int=int(data.get("spatial_revision",SpatialRevision.LEGACY))
  var previous_institution_geometry:int=int(data.get("institution_geometry_version",1))
  var previous_asylum_spaces:Dictionary=data.get("asylum_space_versions",{}).duplicate(true)
  # Persist one discovery root for the profile. Replaying a saved rest or
@@ -49,7 +51,11 @@ func new_attempt(level:int,rng:RandomNumberGenerator) -> void:
   candidates=_take_sample(first,8,recent_target)+_take_sample(second,8,recent_target)
  else:candidates=_take_sample(candidates,10 if level==1 else 12 if level==2 else 14,recent_target)
  data.level=level
+ # Hospital/asylum rest keeps living actors, held originals and some work
+ # state. Keep that floor identity until a chapter transition resets them.
+ data.spatial_revision=previous_spatial_revision if level in [2,3] and previous_level==level else SpatialRevision.CURRENT
  if level==1:data.room_geometry_version=2
+ if level==4:data.cortex_geometry_version=2
  # A real rest does not migrate in-flight actors/originals into a different
  # floor plan. New chapters/new profiles can adopt v2 independently.
  if level in [2,3]:data.institution_geometry_version=previous_institution_geometry if previous_level==level else 2

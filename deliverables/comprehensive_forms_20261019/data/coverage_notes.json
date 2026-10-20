@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "scene_rows": 57,
+  "runtime_spaces": 56,
+  "scene_row_explanation": "56实际空间各1条（包含同房阶段），另1条L1卧室旧化状态；不是57个独立房型，也不是额外教程房。",
+  "furniture_locator_count": 381,
+  "non_scene_rows": 522,
+  "effects_families": 23,
+  "definite_new_manual_asset_categories_found": [],
+  "needs_explicit_ui_production_package": true,
+  "already_covered_do_not_duplicate": [
+    {
+      "topic": "大黄碎裂与残留",
+      "ids": [
+        "VIS_DOG_SHATTER",
+        "VIS_DOG_L1_REMAINS",
+        "CHR_DOG_L1_REMAINS"
+      ],
+      "handling": "沿母图加工／必要终态；新的低血腥方向也覆盖残留，保留红项圈和真实命中因果，不新增整套怪物。"
+    },
+    {
+      "topic": "夹具、抓握与拖拽",
+      "ids": [
+        "VIS_PAIR_CONTACT"
+      ],
+      "handling": "关键接触和外部夹具分层；程序补合拢/持有/释放，不按每一帧另订人工图。"
+    },
+    {
+      "topic": "投箱、袋与纸",
+      "ids": [
+        "VIS_MOVING_OBJECTS"
+      ],
+      "handling": "复用现物分层与真实落点，物体状态确实缺绘再补。"
+    },
+    {
+      "topic": "递药、泼洒",
+      "ids": [
+        "VIS_MEDICINE"
+      ],
+      "handling": "杯液/手部接触与残留分层，非血腥但要身份与物主一致。"
+    },
+    {
+      "topic": "家具开合、露底",
+      "ids": [
+        "VIS_FURNITURE_STATES"
+      ],
+      "handling": "已有覆盖；属于独立活动件、内部与移开后补底，不能因功能占位未美术验收就再次列为漏类。"
+    },
+    {
+      "topic": "开场结局图",
+      "count": 14,
+      "handling": "含既有SLIDE候选，应逐图核验复用，不因最终素材目录暂无同名图就视为完全未制作。"
+    }
+  ],
+  "reuse_relationships": {
+    "ENV_ROOM_L2_WARD_ASYLUM": "ENV_ROOM_L2_WARD_BASE",
+    "ENV_ROOM_L2_LOBBY_ASYLUM": "ENV_ROOM_L2_LOBBY_BASE",
+    "ENV_ROOM_L2_CLINIC_ASYLUM": "ENV_ROOM_L2_CLINIC_BASE",
+    "ENV_ROOM_L2_PHARMACY_ASYLUM": "ENV_ROOM_L2_PHARMACY_BASE",
+    "ENV_ROOM_L2_OFFICE_ASYLUM": "ENV_ROOM_L2_OFFICE_BASE",
+    "ENV_ROOM_L4_ATRIUM_ALTERED": "ENV_ROOM_L4_ATRIUM_BASE",
+    "ENV_ROOM_L4_MEMORY_ALTERED": "ENV_ROOM_L4_MEMORY_BASE",
+    "ENV_ROOM_L4_VISUAL_ALTERED": "ENV_ROOM_L4_VISUAL_BASE",
+    "ENV_ROOM_L4_DECISION_ALTERED": "ENV_ROOM_L4_DECISION_BASE",
+    "ENV_ROOM_L4_BODY_ALTERED": "ENV_ROOM_L4_BODY_BASE",
+    "ENV_ROOM_L4_BRIDGE_ALTERED": "ENV_ROOM_L4_BRIDGE_BASE",
+    "ENV_ROOM_L4_RHYTHM_ALTERED": "ENV_ROOM_L4_RHYTHM_BASE",
+    "ENV_ROOM_L4_INDEX_ALTERED": "ENV_ROOM_L4_INDEX_BASE",
+    "ENV_ROOM_L4_SWITCH_ALTERED": "ENV_ROOM_L4_SWITCH_BASE",
+    "ENV_ROOM_L4_VERIFY_ALTERED": "ENV_ROOM_L4_VERIFY_BASE",
+    "ENV_ROOM_L4_IDENTITY_ALTERED": "ENV_ROOM_L4_IDENTITY_BASE",
+    "ENV_ROOM_L1_ROOM_WORN": "ENV_ROOM_L1_ROOM_BASE"
+  },
+  "reuse_exceptions": [
+    {
+      "runtime_id": "L5_verify",
+      "issue": "几何同L4_verify，但原combat_exit转为hippocampus去向；不画新额外门。"
+    },
+    {
+      "runtime_id": "L5_memory",
+      "issue": "增加椅/绿植独立占位，建筑底图保留；不把新增物件烘入墙地。"
+    },
+    {
+      "runtime_id": "L4_rhythm/L5_rhythm",
+      "issue": "两者同为L形polygon；L5额外excluded_volume只是逻辑房外区域，不是新家具，也不该生成巨柜。"
+    }
+  ],
+  "scene_conflicts": [
+    {
+      "runtime_id": "L2_ward",
+      "asset_id": "ENV_ROOM_L2_WARD_BASE",
+      "issue": "旧scene_items逐房文字要求一扇采光窗，而运行geometry与最新模板没有任何窗。",
+      "handling": "本轮不新增窗或改游戏；生成提示词按现运行模板说明无窗，列为Codex空间与原稿核对项。不能把旧文和模板同时上传造成额外窗口。",
+      "manual_order": false
+    },
+    {
+      "runtime_id": "L3_ward",
+      "asset_id": "ENV_ROOM_L2_WARD_ASYLUM",
+      "issue": "旧scene_items逐房文字要求一扇采光窗，而运行geometry与最新模板没有任何窗。",
+      "handling": "本轮不新增窗或改游戏；生成提示词按现运行模板说明无窗，列为Codex空间与原稿核对项。不能把旧文和模板同时上传造成额外窗口。",
+      "manual_order": false
+    }
+  ],
+  "new_scene_candidate": {
+    "path": "C:/Users/23623/Documents/GitHub/NEURONS/DOCX/最终素材/场景/ENV_ROOM_L4_ATRIUM_ALTERED_v001.png",
+    "asset_id": "ENV_ROOM_L4_ATRIUM_ALTERED",
+    "runtime_id": "L5_atrium",
+    "status": "已有候选，需局部结构修改",
+    "findings": [
+      "现图仅两处明确开口，实际四向连接必须保留",
+      "保留现有宽笔与灰白大色面，减暗红肉感",
+      "不新增逻辑场景，不要求重画已合格部分"
+    ]
+  },
+  "limitations": "本轮未修改或运行游戏；运行几何合同不等于原稿所有建筑需求已经最终验收。未以缺少文件等同需人工新增。"
+}

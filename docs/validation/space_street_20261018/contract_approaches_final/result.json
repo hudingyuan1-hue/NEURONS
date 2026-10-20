@@ -1,0 +1,90 @@
+{
+  "failed": 0,
+  "failures": [],
+  "passed": 264,
+  "rooms": [
+    {
+      "portal_routes": [
+        {
+          "distance_m": 10.6166051626205,
+          "from": "street_narrow",
+          "reached": true,
+          "to": "street_side"
+        }
+      ],
+      "prop_count": 8,
+      "room": "street_plaza"
+    },
+    {
+      "portal_routes": [],
+      "prop_count": 9,
+      "room": "street_side"
+    },
+    {
+      "portal_routes": [
+        {
+          "distance_m": 16.280001282692,
+          "from": "street_plaza",
+          "reached": true,
+          "to": "street_twisted"
+        }
+      ],
+      "prop_count": 11,
+      "room": "street_narrow"
+    },
+    {
+      "portal_routes": [
+        {
+          "distance_m": 18.280001282692,
+          "from": "street_narrow",
+          "reached": true,
+          "to": "street_node"
+        },
+        {
+          "distance_m": 8.01238159276545,
+          "from": "street_narrow",
+          "reached": true,
+          "to": "street_maintenance"
+        },
+        {
+          "distance_m": 13.1832936629653,
+          "from": "street_node",
+          "reached": true,
+          "to": "street_maintenance"
+        }
+      ],
+      "prop_count": 11,
+      "room": "street_twisted"
+    },
+    {
+      "portal_routes": [],
+      "prop_count": 5,
+      "room": "street_maintenance"
+    },
+    {
+      "portal_routes": [
+        {
+          "distance_m": 15.8277371898294,
+          "from": "street_twisted",
+          "reached": true,
+          "to": "street_end"
+        }
+      ],
+      "prop_count": 10,
+      "room": "street_node"
+    },
+    {
+      "portal_routes": [
+        {
+          "distance_m": 14.2800003290176,
+          "from": "street_node",
+          "reached": true,
+          "to": "ending_gate"
+        }
+      ],
+      "prop_count": 11,
+      "room": "street_end"
+    }
+  ],
+  "scope": "Actual runtime layouts, swept body path movement, independent hidden geometry. Not NPC crowd or human balance/visual approval."
+}

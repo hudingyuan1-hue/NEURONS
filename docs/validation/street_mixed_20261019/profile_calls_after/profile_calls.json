@@ -1,0 +1,22 @@
+{
+  "belt_contains": false,
+  "belt_contains_seconds": 0.000007,
+  "calls": [
+    {
+      "a": [
+        6.63485956192017,
+        6.33338928222656
+      ],
+      "b": [
+        19.5200004577637,
+        6.0
+      ],
+      "method": "path",
+      "points": 2,
+      "seconds": 0.000037
+    }
+  ],
+  "fixture": "Actual performance snapshot after 98 ordinary process frames, no actor/route edits.",
+  "hero_seconds": 0.263959,
+  "method_seconds": {}
+}

@@ -1,0 +1,16 @@
+warning: in the working copy of 'neurons/data/hospital_observations.json', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/data/institution_spaces.json', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/data/opening.json', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/data/room_spaces.json', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/data/street_chapter.json', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/campaign.gd', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/core/campaign_session.gd', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/core/combat_chapter.gd', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/core/cortex_events.gd', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/core/cortex_map.gd', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/ui/front_end.gd', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/world/campaign_view.gd', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/world/combat_view.gd', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/world/cortex_layout.gd', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/world/metric_bedroom_view.gd', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'neurons/scripts/world/metric_institution_view.gd', CRLF will be replaced by LF the next time Git touches it

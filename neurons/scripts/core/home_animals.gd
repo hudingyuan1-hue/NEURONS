@@ -50,6 +50,7 @@ func cue(id:String,node:String,allowed:Array=[]) -> void:
 
 func start_exploration_line() -> void:
  if app.session.has_key() or app.rules.mode!="exploration" or app.family.busy():return
+ if app.character_presentation!=null and not app.character_presentation.view_state().allow_early_jokes:return
  cue("S1_START","attempt",[] if app.rules.actual_attempt<=1 else [2,4])
 
 func xy(p:Vector2) -> Array:

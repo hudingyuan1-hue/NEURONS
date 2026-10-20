@@ -1,0 +1,49 @@
+{
+  "production_file": "neurons/scripts/ui/campaign_menu.gd",
+  "before_git_HEAD_sha256": "608cc0e95026b772b3ce93541f280019353e3a91408ddc43585b485e5fd096de",
+  "after_sha256": "681be24bafdb0051b78815812ae792107d329cb968a2f81fe60ec3b40a5df3b9",
+  "new_driver": "neurons/tests/campaign_menu_selection_live_20261019.gd",
+  "final_evidence": "menu_selection_ui_r2",
+  "result": {
+    "failures": [],
+    "passes": [
+      "declared unchanged actual checkpoint restores into isolated save root",
+      "actual star-cabinet button opens real purchase UI",
+      "actual one-cluster TEMP purchase supplies second hoverable node without free resource writes",
+      "actual Tab opens current CRT",
+      "public describe retains explicit rescue-prompt selection semantics",
+      "actual SKIN click chooses SKIN and exposes direction controls",
+      "real hover previews TEMP while retaining clicked SKIN and zero fee",
+      "real pointer entering direction area restores selected fee action and cooldown description",
+      "hover does not change existing direction choice",
+      "locked node hover retains old blank-preview rule without selecting it",
+      "leaving locked preview restores selected node",
+      "actual cancel keeps selected information and charges nothing",
+      "real pointer preview direction and cancel preserve ordinary menu world freeze",
+      "actual selected-direction click closes CRT and resolves through production cast handler",
+      "hovering TEMP did not swap real cast; exactly one SKIN receipt charges one neuron",
+      "actual direction is north and previewed TEMP has not been applied",
+      "actual close and reopen regenerate selected information",
+      "actual cooldown refusal retains selected cost action cooldown text and adds no charge",
+      "actual refusal does not restart and hide the already-visible selected description",
+      "actual cancel close reopen preserves selection without another payment"
+    ],
+    "rendered": true,
+    "scope": "Actual mouse across unlocked/locked nodes, selected direction, cancel, successful one-neuron SKIN, cooldown refusal, close and reopen. Actual TEMP purchase1C; only direct UI call is compatibility check of public describe used by rescue prompt. No resources/skill/RNG/NPC/route/position/damage writes after production checkpoint restore; not a full campaign or artwork/audio acceptance."
+  },
+  "movie": {
+    "path": "menu_selection_ui_r2/continuous_silent.mp4",
+    "frames": 646,
+    "fps": 30,
+    "seconds": 21.533333333333335,
+    "raw_avi": "tmp/campaign_pacing_20261019/raw_movies/menu_selection_ui_r2.avi"
+  },
+  "changes": [
+    "Hover preview no longer changes clicked selection",
+    "Mouse exit and direction cancel restore selected description",
+    "Open/reopen shows selected actual fee and cooldown",
+    "Repeated identical description restoration does not restart typing",
+    "Public explicit describe selection retained for campaign rescue prompt"
+  ],
+  "unchanged_gameplay": "No fee, direction, prerequisite, skill condition, actor, physics, probability, room, ending or campaign/front_end source edits by this UI fix."
+}

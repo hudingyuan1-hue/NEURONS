@@ -1,0 +1,11 @@
+{
+  "asset_id": "CHR_OTHER_NPCS_MOTHER",
+  "mode": "built_in_image_gen_background_extraction",
+  "source_path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_MOTHER_v001.png",
+  "source_project_path": "DOCX/最终素材/人物/CHR_OTHER_NPCS_MOTHER_v001.png",
+  "source_sha256": "7ee1e1fc53cfd945bd6be0e680673e3895cc71c2df08b3a70332dac9d15a3abf",
+  "prompt": "Use case: background-extraction. Asset type: NEURONS full-body NPC sprite source. Input image 1 is the edit target. Remove ONLY the warm grey background and any cast shadow outside the figure, producing a genuinely transparent alpha background. Keep the same person, exact face, hair, costume, clothing colors, body proportions, pose, hands and feet, original oblique viewing angle and original painterly brushwork. Do not redesign, beautify, change expression or relight the person. Preserve internal clothing highlights and the thin hair silhouette; white fabric must stay opaque, never be mistaken for background. Keep the entire head and both shoes, preserving the portrait canvas and figure placement. No environment, floor, glow, drop shadow, checkerboard, text, extra props or extra characters. Keep her auburn tied hair, light blouse, flower-pattern apron, grey skirt, brown shoes and both empty hands.",
+  "transparent_background": true,
+  "original_unchanged": true,
+  "status": "requested_not_yet_generated"
+}

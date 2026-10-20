@@ -2,6 +2,11 @@ extends RefCounted
 ## S3:P1350–1355/P1602–1606: one attached waist-height strap, no restraint.
 const ID="warder"
 var owner_ref:WeakRef
+# A windup asks about several possible dodge targets. The full attached-strip
+# prediction depends on its source pose and collision scene, never the target.
+# Keep this transient: saves contain only actual action state and receipts.
+var prediction_key:Array=[]
+var prediction_points:Array=[]
 var battle:
  get:return owner_ref.get_ref()
 func _init(owner) -> void:owner_ref=weakref(owner)
@@ -33,6 +38,9 @@ func clipped(p:Array,previous:Array=[]) -> Dictionary:
  if not floor.clear_segment(battle.position(ID),battle.vector(p[0]),radius):return {"points":[],"blocked":true}
  for i in range(1,p.size()):
   var start:Vector2=battle.vector(p[i-1]);var end:Vector2=battle.vector(p[i]);var last:Vector2=start
+  # clear_segment is continuous. A wholly clear strip needs no repeated
+  # sub-segment checks; obstructed strips retain the original stop samples.
+  if floor.clear_segment(start,end,radius):out.append(p[i]);continue
   var count:int=maxi(1,ceili(start.distance_to(end)/param("belt_sample_m")))
   for n in range(1,count+1):
    var next:Vector2=start.lerp(end,float(n)/count)
@@ -79,11 +87,31 @@ func prepare(delta:float) -> void:
  s.sweep=path.points;s.blocked=path.blocked
  if not path.stopped.is_empty():s.profile=path.stopped.duplicate(true)
  if s.blocked:actor().elapsed=maxf(float(actor().elapsed),active-delta)
+
+func _prediction_key() -> Array:
+ var floor=battle.floor_for(str(actor().room));var geometry:Array=[];var parameters:Dictionary={}
+ for key in battle.config.test_parameters:
+  if str(key).begins_with("belt_"):parameters[key]=battle.config.test_parameters[key]
+ # Copy mutable collections, including compound/disabled footprints. Exact
+ # values deliberately invalidate on sub-cell moves, temporary push/pop and
+ # a restored layout instance; clock/frame alone cannot express those changes.
+ for property:Dictionary in floor.get_property_list():
+  if str(property.name) not in ["furniture","decor","walls","static_walls","movable_blockers","oriented_beds","bounds_size","geometry_version","spatial_version","metric_spec","floor_polygon_m","body_radius"]:continue
+  var value=floor.get(property.name)
+  geometry.append([property.name,value.duplicate(true) if value is Array or value is Dictionary else value])
+ return [str(actor().room),battle.position(ID),direction(),floor.get_instance_id(),attack().duplicate(true),parameters,geometry]
+
+func _windup_points() -> Array:
+ var current:Array=_prediction_key()
+ if current!=prediction_key:
+  prediction_key=current;prediction_points=sweep_between(0,1).points
+ return prediction_points
+
 func contains(target:Vector2) -> bool:
  var a:Dictionary=actor()
  if not a.present or a.hp<=0 or a.hurt>0:return false
  var points:Array=[]
- if a.phase=="windup":points=sweep_between(0,1).points
+ if a.phase=="windup":points=_windup_points()
  elif a.phase=="attack":points=state().sweep
  else:return false
  var radius:float=param("belt_radius_m")+param("belt_body_radius_m");var floor=battle.floor_for(str(a.room))

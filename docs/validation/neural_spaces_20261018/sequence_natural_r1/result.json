@@ -1,0 +1,35 @@
+{
+  "doors": [],
+  "failures": [],
+  "natural_visits": [
+    "L4:atrium",
+    "L4:visual",
+    "L4:memory",
+    "L4:body",
+    "L4:decision",
+    "L4:bridge",
+    "L4:switch",
+    "L4:verify",
+    "L5:atrium",
+    "L5:decision",
+    "L5:bridge",
+    "L5:switch",
+    "L5:verify",
+    "L5:hippocampus",
+    "L5:thalamus",
+    "L5:brainstem",
+    "L6:street_plaza"
+  ],
+  "passes": [
+    "real unlock_cortex selects new L4 metric geometry",
+    "no key location is preselected at actual L4 entry",
+    "natural run restores the actual untouched direct-L4 entry",
+    "natural actual keyed L4 departure reaches new L5 version3",
+    "natural L4 to L5 to actual Street doorway retains forty-five identities",
+    "no twenty-five-second unexplained standstill in natural new geometry",
+    "actual L5 departure cancels key-search gameplay"
+  ],
+  "rendered": true,
+  "scope": "New L4v2 sixty-two real source actions and separate fresh autonomous L4→L5v3→Street run; fixture and natural evidence are separate files. No formal-art, audio listening or full B7 claim.",
+  "search_count": 0
+}

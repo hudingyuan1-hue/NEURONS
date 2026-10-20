@@ -68,7 +68,20 @@ static func candidates(floor_number:int=0) -> Array:
 static func doors(room:String) -> Array:
  return GRAPH.get(room,[]).duplicate()
 
-static func doorway(room:String,to:String) -> Vector2:
+const SpatialRevision=preload("res://scripts/world/spatial_revision.gd")
+static func space_spec(room:String,revision:int=SpatialRevision.CURRENT) -> Dictionary:
+ return SpatialRevision.document("neural_spaces.json",revision).get("rooms",{}).get("L4:"+room,{}).duplicate(true)
+
+static func world_size(room:String,version:int=1,revision:int=SpatialRevision.CURRENT) -> Vector2:
+ if version<2:return Vector2(5.6,3.8)
+ var size:Array=space_spec(room,revision).get("size_m",[5.6,3.8])
+ return Vector2(float(size[0]),float(size[1]))
+
+static func doorway(room:String,to:String,version:int=1,revision:int=SpatialRevision.CURRENT) -> Vector2:
+ if version>=2:
+  for portal:Dictionary in space_spec(room,revision).get("portals",[]):
+   if str(portal.toward)==to:return Vector2(float(portal.at_m[0]),float(portal.at_m[1]))
+  return Vector2(-1,-1)
  return DOOR_POSITIONS.get(room,{}).get(to,Vector2(-1,-1))
 
 static func next_room(from:String,to:String) -> String:

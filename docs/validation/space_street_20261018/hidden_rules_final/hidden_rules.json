@@ -1,0 +1,283 @@
+{
+  "checks": 69,
+  "failed": 0,
+  "results": [
+    {
+      "label": "entry changes mode without restoring body values",
+      "ok": true
+    },
+    {
+      "label": "hidden route has no unlock/entry reward or item reset",
+      "ok": true
+    },
+    {
+      "label": "one 60HP hunter and independent plaza fixtures",
+      "ok": true
+    },
+    {
+      "label": "fountain blocks actual line of sight",
+      "ok": true
+    },
+    {
+      "label": "both sides of fountain have reachable independent bypasses",
+      "ok": true
+    },
+    {
+      "label": "all return-patrol positions are actually reachable beside fountain and benches",
+      "ok": true
+    },
+    {
+      "label": "zero-resource entry can reach exit through ordinary navigation",
+      "ok": true
+    },
+    {
+      "label": "zero-resource autonomous body reaches E1 without a key or killed-enemy requirement",
+      "ok": true
+    },
+    {
+      "label": "shared combat regeneration runs only until actual exit locks world",
+      "ok": true
+    },
+    {
+      "label": "occlusion retains last actual sight without tracking through fountain",
+      "ok": true
+    },
+    {
+      "label": "unreachable last-seen location ends investigation without a permanent chase",
+      "ok": true
+    },
+    {
+      "label": "nearby hunter begins visible windup without proximity damage",
+      "ok": true
+    },
+    {
+      "label": "late windup locks attack direction; attack does not retarget",
+      "ok": true
+    },
+    {
+      "label": "real sidestep misses without invulnerability or compensating hit",
+      "ok": true
+    },
+    {
+      "label": "1.5-second cooldown begins only after 0.8-second recovery",
+      "ok": true
+    },
+    {
+      "label": "actual hunter hit deducts 15HP and zero SP",
+      "ok": true
+    },
+    {
+      "label": "one attack commits one durable hit receipt",
+      "ok": true
+    },
+    {
+      "label": "repeat hit callback never duplicates damage",
+      "ok": true
+    },
+    {
+      "label": "fountain stops forward lunge and prevents damage through facility",
+      "ok": true
+    },
+    {
+      "label": "menu freezes attack position, phase, damage and world time",
+      "ok": true
+    },
+    {
+      "label": "closing menu resumes same attack to actual contact",
+      "ok": true
+    },
+    {
+      "label": "contact-interruption fixture uses a genuinely available paid skill",
+      "ok": true
+    },
+    {
+      "label": "actual contact cancels unexecuted body reaction while retaining valid cast fee and interruption receipt",
+      "ok": true
+    },
+    {
+      "label": "held crouch actually lowers upper body below high lunge trajectory",
+      "ok": true
+    },
+    {
+      "label": "early crouch entry is still physically in attack trajectory",
+      "ok": true
+    },
+    {
+      "label": "withdrawing hands gives no torso invulnerability",
+      "ok": true
+    },
+    {
+      "label": "kick 1 commits one 15HP body hit",
+      "ok": true
+    },
+    {
+      "label": "kick 2 commits one 15HP body hit",
+      "ok": true
+    },
+    {
+      "label": "kick 3 commits one 15HP body hit",
+      "ok": true
+    },
+    {
+      "label": "kick 4 commits one 15HP body hit",
+      "ok": true
+    },
+    {
+      "label": "four actual hits retire hunter with no resource drops or duplicate neural fee",
+      "ok": true
+    },
+    {
+      "label": "dead hunter neither blocks hero nor remains a living drawn actor",
+      "ok": true
+    },
+    {
+      "label": "kick cannot damage beyond range or through fountain",
+      "ok": true
+    },
+    {
+      "label": "standing near an exit marker is not a crossing",
+      "ok": true
+    },
+    {
+      "label": "legacy proximity callback without a movement segment cannot award E1",
+      "ok": true
+    },
+    {
+      "label": "only an inside-to-outside threshold crossing has valid direction",
+      "ok": true
+    },
+    {
+      "label": "crossing beside the finite doorway cannot award E1",
+      "ok": true
+    },
+    {
+      "label": "outer landing is reachable by ordinary collision-aware movement",
+      "ok": true
+    },
+    {
+      "label": "fatal contact at actual exit wins over E1",
+      "ok": true
+    },
+    {
+      "label": "fatal hit cannot queue still-alive or escape-success dialogue",
+      "ok": true
+    },
+    {
+      "label": "nonfatal hit beside threshold does not itself complete E1",
+      "ok": true
+    },
+    {
+      "label": "valid crossing commits only after nonfatal damage has been applied",
+      "ok": true
+    },
+    {
+      "label": "E1 requests the two original global achievement keys",
+      "ok": true
+    },
+    {
+      "label": "feedback due at crossing survives into the ending record without blocking E1",
+      "ok": true
+    },
+    {
+      "label": "ending locks old world, attack and player movement",
+      "ok": true
+    },
+    {
+      "label": "old-world damage and repeated exit callbacks are inert",
+      "ok": true
+    },
+    {
+      "label": "manual pause freezes separate ending presentation clock",
+      "ok": true
+    },
+    {
+      "label": "E1 first retains plaza then transitions to reality-bed wake-up placeholder",
+      "ok": true
+    },
+    {
+      "label": "finished E1 never automatically revives or enters hospital",
+      "ok": true
+    },
+    {
+      "label": "JSON-restored attack preserves contact receipt and cannot hit twice",
+      "ok": true
+    },
+    {
+      "label": "module persistence uses portable JSON primitives",
+      "ok": true
+    },
+    {
+      "label": "first actual sight is presented during the encounter rather than waiting for patrol",
+      "ok": true
+    },
+    {
+      "label": "latest player-opposition instruction suppresses only the contradictory assistance quote",
+      "ok": true
+    },
+    {
+      "label": "restoring an already-presented sight receipt does not repeat its dialogue",
+      "ok": true
+    },
+    {
+      "label": "historical source dialogue remains intact while the explicit user override controls playback",
+      "ok": true
+    },
+    {
+      "label": "zero-resource autonomous body evades a live hunter to the real exit",
+      "ok": true
+    },
+    {
+      "label": "natural autonomous escape does not require attacks, resource purchase or mental damage",
+      "ok": true
+    },
+    {
+      "label": "natural pursuit sight and hit/evade feedback match unique contact receipts and exact damage",
+      "ok": true
+    },
+    {
+      "label": "loading cannot advance hidden contact or consume queued attack",
+      "ok": true
+    },
+    {
+      "label": "loading completion resumes the saved real contact",
+      "ok": true
+    },
+    {
+      "label": "formal global file is independent from profiles and reserves the original twelve keys",
+      "ok": true
+    },
+    {
+      "label": "isolated save root also isolates all global achievement writes",
+      "ok": true
+    },
+    {
+      "label": "one valid E1 atomically unlocks both actual global achievements",
+      "ok": true
+    },
+    {
+      "label": "global record contains no resource rewards or profile knowledge",
+      "ok": true
+    },
+    {
+      "label": "replaying one exit callback cannot unlock or reward twice",
+      "ok": true
+    },
+    {
+      "label": "new profiles and restored older saves cannot reduce already-earned global progress",
+      "ok": true
+    },
+    {
+      "label": "unwired triggers, previews and missing event identities cannot create achievements",
+      "ok": true
+    },
+    {
+      "label": "damaged primary recovers the complete latest monotonic global union",
+      "ok": true
+    },
+    {
+      "label": "corrupt global file without valid backup is preserved and clearly reports failure",
+      "ok": true
+    }
+  ],
+  "scope": "Headless isolated Godot module; fixtures for contact/attack/exit. No GPU rendering, natural random route or full campaign acceptance claimed."
+}

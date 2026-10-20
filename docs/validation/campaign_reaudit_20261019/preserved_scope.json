@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-10-19T19:53:52.552308+08:00",
+  "local_head_preserved": "2a5887f91a69e135979d504d333c5b2d289f3dcc",
+  "scope": "Local references only; no Git write or fetch. Preexisting source/art/lock-file status preserved. Source geometry and original rule/audio bindings checked separately from presentation changes.",
+  "rooms": 56,
+  "logical_fields": [
+    "chapter",
+    "config",
+    "decor",
+    "furniture",
+    "geometry_version",
+    "portals",
+    "room_id",
+    "size_m",
+    "space_spec",
+    "spawn_m",
+    "physical_wall",
+    "logical_walls_complete"
+  ],
+  "logical_diffs": [],
+  "protected_unchanged": {
+    "neurons/scripts/core/neural_rules.gd": true,
+    "neurons/scripts/core/campaign_session.gd": true,
+    "neurons/data/skills.json": true,
+    "neurons/data/key_discovery.json": true,
+    "neurons/data/combat_chapter.json": true,
+    "neurons/data/street_chapter.json": true,
+    "neurons/data/room_spaces.json": true,
+    "neurons/data/institution_spaces.json": true,
+    "neurons/data/neural_spaces.json": true,
+    "neurons/data/street_spaces.json": true,
+    "neurons/data/home_rules.json": true,
+    "neurons/data/audio_bindings.json": true
+  },
+  "runtime_source_hashes_current": true
+}

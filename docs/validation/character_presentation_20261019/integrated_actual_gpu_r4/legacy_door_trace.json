@@ -1,0 +1,114 @@
+[
+  {
+    "destination": "",
+    "door_left": -1.0,
+    "hero": [
+      2.90000009536743,
+      1.27999997138977
+    ],
+    "label": "ordinary_before_approach",
+    "presentation_action_serial": 0,
+    "room": "atrium",
+    "route_points": 2,
+    "stage": 0,
+    "stage_facts": 0
+  },
+  {
+    "destination": "",
+    "door_left": -1.0,
+    "hero": [
+      2.90000009536743,
+      0.479999989271164
+    ],
+    "label": "ordinary_at_no_advance",
+    "presentation_action_serial": 0,
+    "room": "atrium",
+    "route_points": 0,
+    "stage": 0,
+    "stage_facts": 0
+  },
+  {
+    "destination": "decision",
+    "door_left": 0.0,
+    "hero": [
+      2.90000009536743,
+      0.278749972581863
+    ],
+    "label": "ordinary_threshold_no_advance",
+    "presentation_action_serial": 0,
+    "room": "atrium",
+    "route_points": 1,
+    "stage": 0.0,
+    "stage_facts": 0
+  },
+  {
+    "destination": "",
+    "door_left": -1.0,
+    "hero": [
+      4.80000019073486,
+      7.1399998664856
+    ],
+    "label": "ordinary_actual_cross_one_stage",
+    "presentation_action_serial": 1,
+    "room": "decision",
+    "route_points": 0,
+    "stage": 1,
+    "stage_facts": 1
+  },
+  {
+    "destination": "",
+    "door_left": -1.0,
+    "hero": [
+      4.80000019073486,
+      7.11124992370605
+    ],
+    "label": "ordinary_restored_cross_not_replayed",
+    "presentation_action_serial": 1.0,
+    "room": "decision",
+    "route_points": 68,
+    "stage": 1.0,
+    "stage_facts": 1
+  },
+  {
+    "destination": "ending_gate",
+    "door_left": 0.6,
+    "hero": [
+      15.4962615966797,
+      5.5
+    ],
+    "label": "final_gate_first_at_once",
+    "presentation_action_serial": 0,
+    "room": "street_end",
+    "route_points": 0,
+    "stage": 0,
+    "stage_facts": 0
+  },
+  {
+    "destination": "ending_gate",
+    "door_left": 0.0,
+    "hero": [
+      15.7262649536133,
+      5.5
+    ],
+    "label": "final_gate_threshold_not_second",
+    "presentation_action_serial": 0,
+    "room": "street_end",
+    "route_points": 1,
+    "stage": 0.0,
+    "stage_facts": 0
+  },
+  {
+    "destination": "ending_gate",
+    "door_left": 0.0,
+    "hero": [
+      15.7262649536133,
+      5.5
+    ],
+    "label": "final_gate_actual_end_not_second",
+    "presentation_action_serial": 0,
+    "room": "street_end",
+    "route_points": 0,
+    "stage": 0.0,
+    "stage_facts": 0
+  }
+]

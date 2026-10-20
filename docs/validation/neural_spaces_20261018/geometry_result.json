@@ -1,0 +1,267 @@
+{
+  "failures": [],
+  "rooms": [
+    {
+      "furniture": 3,
+      "portals": 4,
+      "room": "L4:atrium",
+      "size_m": [
+        10.8000001907349,
+        7.59999990463257
+      ]
+    },
+    {
+      "furniture": 7,
+      "portals": 2,
+      "room": "L4:memory",
+      "size_m": [
+        9.60000038146973,
+        7.19999980926514
+      ]
+    },
+    {
+      "furniture": 6,
+      "portals": 2,
+      "room": "L4:visual",
+      "size_m": [
+        10.3999996185303,
+        7.59999990463257
+      ]
+    },
+    {
+      "furniture": 7,
+      "portals": 2,
+      "room": "L4:decision",
+      "size_m": [
+        9.60000038146973,
+        8.0
+      ]
+    },
+    {
+      "furniture": 8,
+      "portals": 1,
+      "room": "L4:body",
+      "size_m": [
+        10.3999996185303,
+        8.0
+      ]
+    },
+    {
+      "furniture": 4,
+      "portals": 4,
+      "room": "L4:bridge",
+      "size_m": [
+        11.1999998092651,
+        6.80000019073486
+      ]
+    },
+    {
+      "furniture": 4,
+      "portals": 2,
+      "room": "L4:rhythm",
+      "size_m": [
+        12.0,
+        7.59999990463257
+      ]
+    },
+    {
+      "furniture": 6,
+      "portals": 2,
+      "room": "L4:index",
+      "size_m": [
+        10.3999996185303,
+        8.0
+      ]
+    },
+    {
+      "furniture": 3,
+      "portals": 3,
+      "room": "L4:switch",
+      "size_m": [
+        9.60000038146973,
+        7.19999980926514
+      ]
+    },
+    {
+      "furniture": 7,
+      "portals": 3,
+      "room": "L4:verify",
+      "size_m": [
+        10.3999996185303,
+        8.39999961853027
+      ]
+    },
+    {
+      "furniture": 7,
+      "portals": 2,
+      "room": "L4:identity",
+      "size_m": [
+        10.8000001907349,
+        8.39999961853027
+      ]
+    },
+    {
+      "furniture": 3,
+      "portals": 4,
+      "room": "L5:atrium",
+      "size_m": [
+        10.8000001907349,
+        7.59999990463257
+      ]
+    },
+    {
+      "furniture": 9,
+      "portals": 2,
+      "room": "L5:memory",
+      "size_m": [
+        9.60000038146973,
+        7.19999980926514
+      ]
+    },
+    {
+      "furniture": 6,
+      "portals": 2,
+      "room": "L5:visual",
+      "size_m": [
+        10.3999996185303,
+        7.59999990463257
+      ]
+    },
+    {
+      "furniture": 7,
+      "portals": 2,
+      "room": "L5:decision",
+      "size_m": [
+        9.60000038146973,
+        8.0
+      ]
+    },
+    {
+      "furniture": 8,
+      "portals": 1,
+      "room": "L5:body",
+      "size_m": [
+        10.3999996185303,
+        8.0
+      ]
+    },
+    {
+      "furniture": 4,
+      "portals": 4,
+      "room": "L5:bridge",
+      "size_m": [
+        11.1999998092651,
+        6.80000019073486
+      ]
+    },
+    {
+      "furniture": 5,
+      "portals": 2,
+      "room": "L5:rhythm",
+      "size_m": [
+        12.0,
+        7.59999990463257
+      ]
+    },
+    {
+      "furniture": 6,
+      "portals": 2,
+      "room": "L5:index",
+      "size_m": [
+        10.3999996185303,
+        8.0
+      ]
+    },
+    {
+      "furniture": 3,
+      "portals": 3,
+      "room": "L5:switch",
+      "size_m": [
+        9.60000038146973,
+        7.19999980926514
+      ]
+    },
+    {
+      "furniture": 7,
+      "portals": 3,
+      "room": "L5:verify",
+      "size_m": [
+        10.3999996185303,
+        8.39999961853027
+      ]
+    },
+    {
+      "furniture": 7,
+      "portals": 2,
+      "room": "L5:identity",
+      "size_m": [
+        10.8000001907349,
+        8.39999961853027
+      ]
+    },
+    {
+      "furniture": 8,
+      "portals": 2,
+      "room": "L5:hippocampus",
+      "size_m": [
+        14.0,
+        8.0
+      ]
+    },
+    {
+      "furniture": 6,
+      "portals": 6,
+      "room": "L5:thalamus",
+      "size_m": [
+        14.0,
+        11.1999998092651
+      ]
+    },
+    {
+      "furniture": 8,
+      "portals": 2,
+      "room": "L5:cerebellum",
+      "size_m": [
+        13.1999998092651,
+        8.39999961853027
+      ]
+    },
+    {
+      "furniture": 8,
+      "portals": 2,
+      "room": "L5:hypothalamus",
+      "size_m": [
+        12.8000001907349,
+        9.19999980926514
+      ]
+    },
+    {
+      "furniture": 9,
+      "portals": 2,
+      "room": "L5:basal",
+      "size_m": [
+        12.8000001907349,
+        10.0
+      ]
+    },
+    {
+      "furniture": 10,
+      "portals": 2,
+      "room": "L5:amygdala",
+      "size_m": [
+        14.3999996185303,
+        8.39999961853027
+      ]
+    },
+    {
+      "furniture": 5,
+      "portals": 2,
+      "room": "L5:brainstem",
+      "size_m": [
+        12.0,
+        10.3999996185303
+      ]
+    }
+  ],
+  "scope": "Actual new L4/L5 Godot layout construction, real grid routing and portal segments. Legacy constructor compatibility. Not whole-game human pacing, all actor combinations or formal art acceptance."
+}

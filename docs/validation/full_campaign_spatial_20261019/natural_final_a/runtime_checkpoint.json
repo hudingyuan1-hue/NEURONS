@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "path": "neurons/scripts/world/room_layout.gd",
+      "sha256": "ea2d1f0a2258f39aad32c6522b5dae856daca99e2e1acde955e4c22331cf29ef"
+    },
+    {
+      "path": "neurons/scripts/world/combat_layout.gd",
+      "sha256": "8e28e677a93ceea7352c9d2e1db1af80f5a9ab2e2f5d4d216bdd245685021694"
+    },
+    {
+      "path": "neurons/scripts/world/cortex_layout.gd",
+      "sha256": "e80f19851e72964d9605b2ec105cc3a9a0e0de413cb36b35a189a2f59d1cdbb1"
+    },
+    {
+      "path": "neurons/scripts/core/combat_chapter.gd",
+      "sha256": "9cd8f70d888b399ce94797aa0df296c9eede380c68aaf1bd64070c54d18c954a"
+    },
+    {
+      "path": "neurons/scripts/core/bed_body.gd",
+      "sha256": "3b38cdcc3e786c92d68f7e0519b5779ab17decd8fcb8da4e07595d7f1a668be9"
+    },
+    {
+      "path": "neurons/scripts/core/combat_map.gd",
+      "sha256": "dfa8d306e2b0f24e928bcb6ca7d904ce7d9487a088479ae1376264f4e64b6f5c"
+    },
+    {
+      "path": "neurons/scripts/core/cortex_map.gd",
+      "sha256": "7497b75ee351cdfa88d3b3798ed38d8723d2190bff4066c6f6efadf9e01d9190"
+    },
+    {
+      "path": "neurons/data/neural_spaces.json",
+      "sha256": "17d0100124679c55db15125c91c107ea1c65a2d11301a1904ae3033f8d7c59c7"
+    },
+    {
+      "path": "neurons/data/opening.json",
+      "sha256": "52db79ef0884863debc2e47b356685f83d52057350ecf625cbb8f77196221331"
+    },
+    {
+      "path": "neurons/tests/full_campaign_spatial_natural_check.gd",
+      "sha256": "5a166a87d23812ac234002a1e794874ce650895115ecc3d3af49a8977ce2e941"
+    },
+    {
+      "path": "neurons/scripts/core/street_double_head.gd",
+      "sha256": "5858f6688cd405b73a03725cc5727671407df8a046b7a48cf2aa60accf2eab8f"
+    }
+  ],
+  "note": "Read-only source freeze checkpoint shortly after launch; no production files changed by the natural driver."
+}

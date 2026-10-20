@@ -1,0 +1,1579 @@
+{
+  "fixture": "Explicit initial Street exit room. Original forty-five NPCs and original skills/resources. All later runs restore the unchanged actual initial_entry_fixture.json through production restore_snapshot.",
+  "checkpoint_sha256": "2640947167343f01b2ecc1ba54670f4a547fea2142518e9b52c50590751f907f",
+  "comparisons": [
+    {
+      "run": "exit_baseline_r1",
+      "reason": "actual_ending_registration",
+      "elapsed_s": 13.1333333333333,
+      "actual_world_s": 13.1666666666666,
+      "presentation_or_menu_frozen_s": 0,
+      "world_delay_vs_no_input_s": 0.0,
+      "total_elapsed_delay_vs_no_input_s": 0.0,
+      "distance_m": 14.4134457111359,
+      "entry_hp": 100,
+      "exit_hp": 100,
+      "neurons_paid": 0,
+      "clusters_paid": 0,
+      "actual_skill_submissions": [],
+      "actual_skill_resolutions": [],
+      "actual_attack_starts": [],
+      "actual_hero_hits": [],
+      "ui_inputs": [],
+      "same_initial_rules_position_route_rng": {
+        "hero_pos": true,
+        "hero_facing": true,
+        "route": true,
+        "rng_state": true,
+        "rules": true
+      },
+      "same_initial_all_45_actor_states": true,
+      "restore_normalization_differences": [],
+      "ending": {
+        "complete": false,
+        "dialogue_sent": false,
+        "elapsed": 0.0,
+        "id": "E2",
+        "phase": "registration",
+        "receipt": "ending:E2:1b737db63b0b84c0be8bc498fc759daad6f4daa76d73c5bf65ddd7255e99a7c3"
+      },
+      "stderr_bytes": 0
+    },
+    {
+      "run": "exit_skin_r1",
+      "reason": "actual_ending_registration",
+      "elapsed_s": 17.7333333333334,
+      "actual_world_s": 14.1666666666666,
+      "presentation_or_menu_frozen_s": 3.566666666666798,
+      "world_delay_vs_no_input_s": 1.0,
+      "total_elapsed_delay_vs_no_input_s": 4.600000000000097,
+      "distance_m": 17.0256472155452,
+      "entry_hp": 100,
+      "exit_hp": 100,
+      "neurons_paid": 3,
+      "clusters_paid": 0,
+      "actual_skill_submissions": [
+        {
+          "fact": {
+            "cost": 1.0,
+            "event_id": "neural:1:1",
+            "kind": "skill_submitted",
+            "skill": "SKIN",
+            "success": true,
+            "time": 0.733333333333333
+          },
+          "observed_room": "street_end",
+          "street_s": 1.43333333333333
+        },
+        {
+          "fact": {
+            "cost": 1.0,
+            "event_id": "neural:1:2",
+            "kind": "skill_submitted",
+            "skill": "SKIN",
+            "success": true,
+            "time": 2.76666666666667
+          },
+          "observed_room": "street_end",
+          "street_s": 5.39999999999999
+        },
+        {
+          "fact": {
+            "cost": 1.0,
+            "event_id": "neural:1:3",
+            "kind": "skill_submitted",
+            "skill": "SKIN",
+            "success": true,
+            "time": 4.79999999999999
+          },
+          "observed_room": "street_end",
+          "street_s": 8.23333333333331
+        }
+      ],
+      "actual_skill_resolutions": [
+        {
+          "fact": {
+            "context": {
+              "action": "navigation",
+              "direction": [
+                0.0,
+                -1.0
+              ],
+              "father_rescue": false,
+              "intent_point": [
+                15.5200004577637,
+                5.5
+              ],
+              "medical_rescue": false,
+              "perceived_threat": true,
+              "room": "street_end",
+              "target": "self"
+            },
+            "event_id": "neural:1:1",
+            "kind": "skill_reacted",
+            "skill": "SKIN",
+            "time": 0.733333333333333
+          },
+          "observed_room": "street_end",
+          "street_s": 1.63333333333334
+        },
+        {
+          "fact": {
+            "context": {
+              "action": "navigation",
+              "direction": [
+                0.0,
+                -1.0
+              ],
+              "father_rescue": false,
+              "intent_point": [
+                15.5200004577637,
+                5.5
+              ],
+              "medical_rescue": false,
+              "perceived_threat": true,
+              "room": "street_end",
+              "target": "self"
+            },
+            "event_id": "neural:1:2",
+            "kind": "skill_reacted",
+            "skill": "SKIN",
+            "time": 2.76666666666667
+          },
+          "observed_room": "street_end",
+          "street_s": 5.59999999999999
+        },
+        {
+          "fact": {
+            "context": {
+              "action": "navigation",
+              "direction": [
+                0.0,
+                -1.0
+              ],
+              "father_rescue": false,
+              "intent_point": [
+                15.5200004577637,
+                5.5
+              ],
+              "medical_rescue": false,
+              "perceived_threat": true,
+              "room": "street_end",
+              "target": "self"
+            },
+            "event_id": "neural:1:3",
+            "kind": "skill_reacted",
+            "skill": "SKIN",
+            "time": 4.79999999999999
+          },
+          "observed_room": "street_end",
+          "street_s": 8.43333333333331
+        }
+      ],
+      "actual_attack_starts": [
+        {
+          "fact": {
+            "actor": "skinface",
+            "direction": [
+              0.914286494255066,
+              0.405068159103394
+            ],
+            "event_id": "combat:6:1:skinface:1",
+            "kind": "combat_attack_started",
+            "room": "street_end",
+            "time": 2.83333333333333
+          },
+          "observed_room": "street_end",
+          "street_s": 5.63333333333332
+        },
+        {
+          "fact": {
+            "actor": "guard_hospital",
+            "direction": [
+              -0.976980149745941,
+              0.213330626487732
+            ],
+            "event_id": "combat:6:1:guard_hospital:2",
+            "kind": "combat_attack_started",
+            "room": "street_end",
+            "time": 5.13333333333332
+          },
+          "observed_room": "street_end",
+          "street_s": 8.73333333333331
+        }
+      ],
+      "actual_hero_hits": [],
+      "ui_inputs": [
+        {
+          "details": {},
+          "label": "input_schedule_started",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 0.633333333333333,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "",
+            "menu_visible": false,
+            "neurons": 14,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              2.02833247184753,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.633333333333333,
+            "street_s": 0.6,
+            "world_s": 0.633333333333333
+          }
+        },
+        {
+          "details": {
+            "actual_key": "Tab",
+            "direction": "north / up"
+          },
+          "label": "first:before_tab",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 0.7,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "",
+            "menu_visible": false,
+            "neurons": 14,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              2.10499882698059,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.7,
+            "street_s": 0.666666666666667,
+            "world_s": 0.7
+          }
+        },
+        {
+          "details": {
+            "neurons_after": 13,
+            "neurons_before": 14,
+            "pos_before_m": [
+              2.10499882698059,
+              5.5
+            ],
+            "real_input": "Tab, mouse SKIN, mouse north direction"
+          },
+          "label": "first:after_actual_resolution",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 1.6,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 2.0,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "选择实际位移方向；取消不扣费",
+            "menu_visible": false,
+            "neurons": 13,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              2.30595827102661,
+              4.70972537994385
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "皮肤刺激：实际反应；保留已成立结果",
+            "street_clock_s": 1.13333333333333,
+            "street_s": 1.96666666666667,
+            "world_s": 1.13333333333333
+          }
+        },
+        {
+          "details": {
+            "actual_key": "Tab",
+            "direction": "north / up"
+          },
+          "label": "cooldown_repeat:before_tab",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 1.53333333333333,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 2.06666666666667,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "选择实际位移方向；取消不扣费",
+            "menu_visible": false,
+            "neurons": 13,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              2.38248825073242,
+              4.71430206298828
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "皮肤刺激：实际反应；保留已成立结果",
+            "street_clock_s": 1.2,
+            "street_s": 2.03333333333334,
+            "world_s": 1.2
+          }
+        },
+        {
+          "details": {
+            "displayed_reason": "冷却尚未结束",
+            "neurons_after": 13,
+            "neurons_before": 13
+          },
+          "label": "cooldown_repeat:ui_denied",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 1.5,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 2.96666666666667,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "冷却尚未结束",
+            "menu_visible": true,
+            "neurons": 13,
+            "paused": true,
+            "pending": {},
+            "pos_m": [
+              2.42075324058533,
+              4.7165904045105
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "皮肤刺激：实际反应；保留已成立结果",
+            "street_clock_s": 1.23333333333333,
+            "street_s": 2.93333333333333,
+            "world_s": 1.23333333333333
+          }
+        },
+        {
+          "details": {
+            "actual_key": "Tab",
+            "direction": "north / up"
+          },
+          "label": "second:before_tab",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 4.73333333333333,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "冷却尚未结束",
+            "menu_visible": false,
+            "neurons": 13,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              4.14267873764038,
+              4.81956577301025
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "皮肤刺激：实际反应；保留已成立结果",
+            "street_clock_s": 2.73333333333333,
+            "street_s": 4.69999999999999,
+            "world_s": 2.73333333333333
+          }
+        },
+        {
+          "details": {
+            "neurons_after": 12,
+            "neurons_before": 13,
+            "pos_before_m": [
+              4.14267873764038,
+              4.81956577301025
+            ],
+            "real_input": "Tab, mouse SKIN, mouse north direction"
+          },
+          "label": "second:after_actual_resolution",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 1.6,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 5.96666666666666,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "选择实际位移方向；取消不扣费",
+            "menu_visible": false,
+            "neurons": 12,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              4.34249305725098,
+              4.04291391372681
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "皮肤刺激：实际反应；保留已成立结果",
+            "street_clock_s": 3.16666666666667,
+            "street_s": 5.93333333333332,
+            "world_s": 3.16666666666667
+          }
+        },
+        {
+          "details": {
+            "actual_key": "Tab",
+            "direction": "north / up"
+          },
+          "label": "third:before_tab",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 7.105427357601e-15,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 7.56666666666665,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "选择实际位移方向；取消不扣费",
+            "menu_visible": false,
+            "neurons": 12,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              6.16704750061035,
+              4.28076791763306
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "皮肤刺激：实际反应；保留已成立结果",
+            "street_clock_s": 4.76666666666666,
+            "street_s": 7.53333333333332,
+            "world_s": 4.76666666666666
+          }
+        },
+        {
+          "details": {
+            "neurons_after": 11,
+            "neurons_before": 12,
+            "pos_before_m": [
+              6.16704750061035,
+              4.28076791763306
+            ],
+            "real_input": "Tab, mouse SKIN, mouse north direction"
+          },
+          "label": "third:after_actual_resolution",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 1.6,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 8.79999999999998,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "选择实际位移方向；取消不扣费",
+            "menu_visible": false,
+            "neurons": 11,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              6.33411502838135,
+              3.54657340049744
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "皮肤刺激：实际反应；保留已成立结果",
+            "street_clock_s": 5.19999999999999,
+            "street_s": 8.76666666666665,
+            "world_s": 5.19999999999999
+          }
+        },
+        {
+          "details": {},
+          "label": "input_schedule_finished",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 1.53333333333334,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 8.86666666666665,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "选择实际位移方向；取消不扣费",
+            "menu_visible": false,
+            "neurons": 11,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              6.39995622634888,
+              3.58476662635803
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "皮肤刺激：实际反应；保留已成立结果",
+            "street_clock_s": 5.26666666666666,
+            "street_s": 8.83333333333331,
+            "world_s": 5.26666666666666
+          }
+        }
+      ],
+      "same_initial_rules_position_route_rng": {
+        "hero_pos": true,
+        "hero_facing": true,
+        "route": true,
+        "rng_state": true,
+        "rules": true
+      },
+      "same_initial_all_45_actor_states": true,
+      "restore_normalization_differences": [
+        {
+          "path": "street_state/lateral_bed/travel",
+          "source": null,
+          "restored": {}
+        },
+        {
+          "path": "street_state/appearance/fact_count",
+          "source": 1,
+          "restored": 3
+        },
+        {
+          "path": "combat_state/appearance/fact_count",
+          "source": 0,
+          "restored": 3
+        },
+        {
+          "path": "session/cortex_geometry_version",
+          "source": null,
+          "restored": 1
+        },
+        {
+          "path": "session/institution_geometry_version",
+          "source": null,
+          "restored": 1
+        },
+        {
+          "path": "session/asylum_space_versions",
+          "source": null,
+          "restored": {}
+        }
+      ],
+      "ending": {
+        "complete": false,
+        "dialogue_sent": false,
+        "elapsed": 0.0,
+        "id": "E2",
+        "phase": "registration",
+        "receipt": "ending:E2:1b737db63b0b84c0be8bc498fc759daad6f4daa76d73c5bf65ddd7255e99a7c3"
+      },
+      "stderr_bytes": 0
+    },
+    {
+      "run": "exit_startle_r1",
+      "reason": "actual_ending_registration",
+      "elapsed_s": 24.4000000000004,
+      "actual_world_s": 14.7333333333333,
+      "presentation_or_menu_frozen_s": 9.6666666666671,
+      "world_delay_vs_no_input_s": 1.5666666666667002,
+      "total_elapsed_delay_vs_no_input_s": 11.2666666666671,
+      "distance_m": 17.1838591098785,
+      "entry_hp": 100,
+      "exit_hp": 100,
+      "neurons_paid": 2,
+      "clusters_paid": 3,
+      "actual_skill_submissions": [
+        {
+          "fact": {
+            "cost": 2.0,
+            "event_id": "neural:1:1",
+            "kind": "skill_submitted",
+            "skill": "STARTLE",
+            "success": true,
+            "time": 1.0
+          },
+          "observed_room": "street_end",
+          "street_s": 10.5333333333333
+        }
+      ],
+      "actual_skill_resolutions": [
+        {
+          "fact": {
+            "context": {
+              "action": "navigation",
+              "father_rescue": false,
+              "intent_point": [
+                15.5200004577637,
+                5.5
+              ],
+              "medical_rescue": false,
+              "perceived_threat": true,
+              "room": "street_end",
+              "target": "self"
+            },
+            "event_id": "neural:1:1",
+            "kind": "skill_reacted",
+            "skill": "STARTLE",
+            "time": 1.0
+          },
+          "observed_room": "street_end",
+          "street_s": 10.7333333333333
+        }
+      ],
+      "actual_attack_starts": [
+        {
+          "fact": {
+            "actor": "archivist_asylum",
+            "direction": [
+              -0.0233186334371567,
+              -0.999728083610535
+            ],
+            "event_id": "combat:6:1:archivist_asylum:1",
+            "kind": "combat_attack_started",
+            "room": "street_end",
+            "time": 2.46666666666667
+          },
+          "observed_room": "street_end",
+          "street_s": 12.1666666666666
+        },
+        {
+          "fact": {
+            "actor": "self",
+            "direction": [
+              0.320611149072647,
+              -0.947210848331451
+            ],
+            "event_id": "combat:6:1:self:2",
+            "kind": "combat_attack_started",
+            "room": "street_end",
+            "time": 4.53333333333333
+          },
+          "observed_room": "street_end",
+          "street_s": 14.2333333333333
+        }
+      ],
+      "actual_hero_hits": [],
+      "ui_inputs": [
+        {
+          "details": {},
+          "label": "startle_purchase_begin",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 0.633333333333333,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "",
+            "menu_visible": false,
+            "neurons": 14,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              2.02833247184753,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.633333333333333,
+            "street_s": 0.6,
+            "world_s": 0.633333333333333
+          }
+        },
+        {
+          "details": {
+            "clusters_after": 6,
+            "clusters_before": 7,
+            "real_input": "star cabinet node, confirm unlock"
+          },
+          "label": "purchase:TEMP",
+          "state": {
+            "clusters": 6,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 1.83333333333334,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "tree",
+            "menu_status": "已完成 · 冷热感",
+            "menu_visible": true,
+            "neurons": 14,
+            "paused": true,
+            "pending": {},
+            "pos_m": [
+              2.21999835968018,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.8,
+            "street_s": 1.8,
+            "world_s": 0.8
+          }
+        },
+        {
+          "details": {
+            "clusters_after": 4,
+            "clusters_before": 6,
+            "real_input": "star cabinet node, confirm unlock"
+          },
+          "label": "purchase:STARTLE",
+          "state": {
+            "clusters": 4,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 2.83333333333333,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "tree",
+            "menu_status": "已完成 · 惊跳反应",
+            "menu_visible": true,
+            "neurons": 14,
+            "paused": true,
+            "pending": {},
+            "pos_m": [
+              2.21999835968018,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.8,
+            "street_s": 2.8,
+            "world_s": 0.8
+          }
+        },
+        {
+          "details": {},
+          "label": "purchases_closed_and_original_dialogue_completed",
+          "state": {
+            "clusters": 4,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 9.89999999999998,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "tree",
+            "menu_status": "已完成 · 惊跳反应",
+            "menu_visible": false,
+            "neurons": 14,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              2.21999835968018,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.8,
+            "street_s": 9.86666666666664,
+            "world_s": 0.8
+          }
+        },
+        {
+          "details": {},
+          "label": "startle_first:menu_did_not_open",
+          "state": {
+            "clusters": 4,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 10.0666666666666,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "tree",
+            "menu_status": "已完成 · 惊跳反应",
+            "menu_visible": false,
+            "neurons": 14,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              2.41166424751282,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.966666666666667,
+            "street_s": 10.0333333333333,
+            "world_s": 0.966666666666667
+          }
+        },
+        {
+          "details": {
+            "neurons_after": 12,
+            "neurons_before": 14,
+            "pos_before_m": [
+              2.41166424751282,
+              5.5
+            ],
+            "real_input": "Tab, existing unlocked STARTLE node"
+          },
+          "label": "startle_second:after_actual_resolution",
+          "state": {
+            "clusters": 4,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 11.2,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "",
+            "menu_visible": false,
+            "neurons": 12,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              1.21291399002075,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "惊跳反应：实际反应；保留已成立结果",
+            "street_clock_s": 1.5,
+            "street_s": 11.1666666666666,
+            "world_s": 1.5
+          }
+        },
+        {
+          "details": {},
+          "label": "input_schedule_finished",
+          "state": {
+            "clusters": 4,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 11.2666666666666,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "",
+            "menu_visible": false,
+            "neurons": 12,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              1.28958058357239,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "惊跳反应：实际反应；保留已成立结果",
+            "street_clock_s": 1.56666666666667,
+            "street_s": 11.2333333333333,
+            "world_s": 1.56666666666667
+          }
+        }
+      ],
+      "same_initial_rules_position_route_rng": {
+        "hero_pos": true,
+        "hero_facing": true,
+        "route": true,
+        "rng_state": true,
+        "rules": true
+      },
+      "same_initial_all_45_actor_states": true,
+      "restore_normalization_differences": [
+        {
+          "path": "street_state/lateral_bed/travel",
+          "source": null,
+          "restored": {}
+        },
+        {
+          "path": "street_state/appearance/fact_count",
+          "source": 1,
+          "restored": 3
+        },
+        {
+          "path": "combat_state/appearance/fact_count",
+          "source": 0,
+          "restored": 3
+        },
+        {
+          "path": "session/cortex_geometry_version",
+          "source": null,
+          "restored": 1
+        },
+        {
+          "path": "session/institution_geometry_version",
+          "source": null,
+          "restored": 1
+        },
+        {
+          "path": "session/asylum_space_versions",
+          "source": null,
+          "restored": {}
+        }
+      ],
+      "ending": {
+        "complete": false,
+        "dialogue_sent": false,
+        "elapsed": 0.0,
+        "id": "E2",
+        "phase": "registration",
+        "receipt": "ending:E2:1b737db63b0b84c0be8bc498fc759daad6f4daa76d73c5bf65ddd7255e99a7c3"
+      },
+      "stderr_bytes": 0
+    },
+    {
+      "run": "exit_startle_r2",
+      "reason": "actual_ending_registration",
+      "elapsed_s": 26.5666666666671,
+      "actual_world_s": 16.3,
+      "presentation_or_menu_frozen_s": 10.2666666666671,
+      "world_delay_vs_no_input_s": 3.1333333333334004,
+      "total_elapsed_delay_vs_no_input_s": 13.433333333333799,
+      "distance_m": 19.9542787075043,
+      "entry_hp": 100,
+      "exit_hp": 100,
+      "neurons_paid": 4,
+      "clusters_paid": 3,
+      "actual_skill_submissions": [
+        {
+          "fact": {
+            "cost": 2.0,
+            "event_id": "neural:1:1",
+            "kind": "skill_submitted",
+            "skill": "STARTLE",
+            "success": true,
+            "time": 0.933333333333333
+          },
+          "observed_room": "street_end",
+          "street_s": 10.4666666666666
+        },
+        {
+          "fact": {
+            "cost": 2.0,
+            "event_id": "neural:1:2",
+            "kind": "skill_submitted",
+            "skill": "STARTLE",
+            "success": true,
+            "time": 4.96666666666666
+          },
+          "observed_room": "street_end",
+          "street_s": 15.1
+        }
+      ],
+      "actual_skill_resolutions": [
+        {
+          "fact": {
+            "context": {
+              "action": "navigation",
+              "father_rescue": false,
+              "intent_point": [
+                15.5200004577637,
+                5.5
+              ],
+              "medical_rescue": false,
+              "perceived_threat": true,
+              "room": "street_end",
+              "target": "self"
+            },
+            "event_id": "neural:1:1",
+            "kind": "skill_reacted",
+            "skill": "STARTLE",
+            "time": 0.933333333333333
+          },
+          "observed_room": "street_end",
+          "street_s": 10.6666666666666
+        },
+        {
+          "fact": {
+            "context": {
+              "action": "navigation",
+              "father_rescue": false,
+              "intent_point": [
+                6.4016580581665,
+                5.5
+              ],
+              "medical_rescue": false,
+              "perceived_threat": true,
+              "room": "street_end",
+              "target": "self"
+            },
+            "event_id": "neural:1:2",
+            "kind": "skill_reacted",
+            "skill": "STARTLE",
+            "time": 4.96666666666666
+          },
+          "observed_room": "street_end",
+          "street_s": 15.3
+        }
+      ],
+      "actual_attack_starts": [
+        {
+          "fact": {
+            "actor": "archivist_asylum",
+            "direction": [
+              0.018067542463541,
+              -0.99983674287796
+            ],
+            "event_id": "combat:6:1:archivist_asylum:1",
+            "kind": "combat_attack_started",
+            "room": "street_end",
+            "time": 2.46666666666667
+          },
+          "observed_room": "street_end",
+          "street_s": 12.1666666666666
+        },
+        {
+          "fact": {
+            "actor": "self",
+            "direction": [
+              0.310336977243423,
+              -0.95062667131424
+            ],
+            "event_id": "combat:6:1:self:2",
+            "kind": "combat_attack_started",
+            "room": "street_end",
+            "time": 4.53333333333333
+          },
+          "observed_room": "street_end",
+          "street_s": 14.2333333333333
+        },
+        {
+          "fact": {
+            "actor": "skinface",
+            "direction": [
+              0.418651551008224,
+              0.908146977424622
+            ],
+            "event_id": "combat:6:1:skinface:3",
+            "kind": "combat_attack_started",
+            "room": "street_end",
+            "time": 5.36666666666666
+          },
+          "observed_room": "street_end",
+          "street_s": 15.6666666666666
+        },
+        {
+          "fact": {
+            "actor": "guard_hospital",
+            "direction": [
+              0.0388607978820801,
+              0.999244570732117
+            ],
+            "event_id": "combat:6:1:guard_hospital:4",
+            "kind": "combat_attack_started",
+            "room": "street_end",
+            "time": 7.66666666666665
+          },
+          "observed_room": "street_end",
+          "street_s": 17.9666666666667
+        }
+      ],
+      "actual_hero_hits": [],
+      "ui_inputs": [
+        {
+          "details": {},
+          "label": "startle_purchase_begin",
+          "state": {
+            "clusters": 7,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 0.633333333333333,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "",
+            "menu_visible": false,
+            "neurons": 14,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              2.02833247184753,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.633333333333333,
+            "street_s": 0.6,
+            "world_s": 0.633333333333333
+          }
+        },
+        {
+          "details": {
+            "clusters_after": 6,
+            "clusters_before": 7,
+            "real_input": "star cabinet node, confirm unlock"
+          },
+          "label": "purchase:TEMP",
+          "state": {
+            "clusters": 6,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 1.83333333333334,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "tree",
+            "menu_status": "已完成 · 冷热感",
+            "menu_visible": true,
+            "neurons": 14,
+            "paused": true,
+            "pending": {},
+            "pos_m": [
+              2.21999835968018,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.8,
+            "street_s": 1.8,
+            "world_s": 0.8
+          }
+        },
+        {
+          "details": {
+            "clusters_after": 4,
+            "clusters_before": 6,
+            "real_input": "star cabinet node, confirm unlock"
+          },
+          "label": "purchase:STARTLE",
+          "state": {
+            "clusters": 4,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 2.83333333333333,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "tree",
+            "menu_status": "已完成 · 惊跳反应",
+            "menu_visible": true,
+            "neurons": 14,
+            "paused": true,
+            "pending": {},
+            "pos_m": [
+              2.21999835968018,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.8,
+            "street_s": 2.8,
+            "world_s": 0.8
+          }
+        },
+        {
+          "details": {},
+          "label": "purchases_closed_and_original_dialogue_completed",
+          "state": {
+            "clusters": 4,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 9.89999999999998,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "tree",
+            "menu_status": "已完成 · 惊跳反应",
+            "menu_visible": false,
+            "neurons": 14,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              2.21999835968018,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+            "street_clock_s": 0.8,
+            "street_s": 9.86666666666664,
+            "world_s": 0.8
+          }
+        },
+        {
+          "details": {
+            "neurons_after": 12,
+            "neurons_before": 14,
+            "pos_before_m": [
+              2.33499789237976,
+              5.5
+            ],
+            "real_input": "Tab, existing unlocked STARTLE node"
+          },
+          "label": "startle_first:after_actual_resolution",
+          "state": {
+            "clusters": 4,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 11.1333333333333,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "",
+            "menu_visible": false,
+            "neurons": 12,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              1.1362476348877,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "惊跳反应：实际反应；保留已成立结果",
+            "street_clock_s": 1.43333333333333,
+            "street_s": 11.1,
+            "world_s": 1.43333333333333
+          }
+        },
+        {
+          "details": {
+            "neurons_after": 10,
+            "neurons_before": 12,
+            "pos_before_m": [
+              5.16124153137207,
+              5.5
+            ],
+            "real_input": "Tab, existing unlocked STARTLE node"
+          },
+          "label": "startle_second:after_actual_resolution",
+          "state": {
+            "clusters": 4,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 15.7666666666666,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "",
+            "menu_visible": false,
+            "neurons": 10,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              3.96249079704285,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "惊跳反应：实际反应；保留已成立结果",
+            "street_clock_s": 5.46666666666666,
+            "street_s": 15.7333333333333,
+            "world_s": 5.46666666666666
+          }
+        },
+        {
+          "details": {},
+          "label": "input_schedule_finished",
+          "state": {
+            "clusters": 4,
+            "control_ms": 0,
+            "cooldown_remaining_s": 0.0,
+            "destination": "",
+            "door_left_s": -1.0,
+            "elapsed_s": 15.8333333333333,
+            "ending": {},
+            "gripped": false,
+            "hp": 100,
+            "level": 6,
+            "menu_page": "cast",
+            "menu_status": "",
+            "menu_visible": false,
+            "neurons": 10,
+            "paused": false,
+            "pending": {},
+            "pos_m": [
+              4.03915739059448,
+              5.5
+            ],
+            "pose": "walk",
+            "room": "street_end",
+            "route_points": 1,
+            "skin_power": 1,
+            "skin_resistance": 0,
+            "skin_unlocked": true,
+            "sp": 100,
+            "status_note": "惊跳反应：实际反应；保留已成立结果",
+            "street_clock_s": 5.53333333333332,
+            "street_s": 15.8,
+            "world_s": 5.53333333333332
+          }
+        }
+      ],
+      "same_initial_rules_position_route_rng": {
+        "hero_pos": true,
+        "hero_facing": true,
+        "route": true,
+        "rng_state": true,
+        "rules": true
+      },
+      "same_initial_all_45_actor_states": true,
+      "restore_normalization_differences": [
+        {
+          "path": "street_state/lateral_bed/travel",
+          "source": null,
+          "restored": {}
+        },
+        {
+          "path": "street_state/appearance/fact_count",
+          "source": 1,
+          "restored": 3
+        },
+        {
+          "path": "combat_state/appearance/fact_count",
+          "source": 0,
+          "restored": 3
+        },
+        {
+          "path": "session/cortex_geometry_version",
+          "source": null,
+          "restored": 1
+        },
+        {
+          "path": "session/institution_geometry_version",
+          "source": null,
+          "restored": 1
+        },
+        {
+          "path": "session/asylum_space_versions",
+          "source": null,
+          "restored": {}
+        }
+      ],
+      "ending": {
+        "complete": false,
+        "dialogue_sent": false,
+        "elapsed": 0.0,
+        "id": "E2",
+        "phase": "registration",
+        "receipt": "ending:E2:1b737db63b0b84c0be8bc498fc759daad6f4daa76d73c5bf65ddd7255e99a7c3"
+      },
+      "stderr_bytes": 0
+    }
+  ],
+  "production_changes_by_measurement": [],
+  "observed_player_feedback": [
+    "Actual SKIN popup shows effect, one-neuron cost, remaining balance and directional displacement.",
+    "Actual early cooldown repeat says 冷却尚未结束 and does not charge.",
+    "Actual TEMP and STARTLE tree purchases reduce clusters by one and two; original growth dialogue plays automatically.",
+    "Moving the pointer from selected SKIN node to direction controls clears the descriptive text pane. Keep selected description as a small UI follow-up."
+  ],
+  "measurement_failure_preserved": "exit_startle_r1 first immediate Tab met the original three-frame post-close input lock; not a free skill or rule fix. r2 waits for the actual lock to expire, then performs two paid casts through input.",
+  "restore_boundary": "The production restore initializes empty lateral-bed travel, rebuilds appearance fact-count caches, and supplies absent legacy institution/cortex version defaults. Initial rules, RNG, actor states, positions and routes are equal. No source checkpoint fields were edited.",
+  "clock_boundary": "Use saved production Street.clock delta for active-time comparison. Observer active_s can miss initialization/capture callback frames (up to 0.17s here); it must not override the actual game clock. Observed elapsed and game-clock intervals differ by that small sampling boundary.",
+  "conclusion": "Directional paid interventions change path and real NPC attacks; two paid backward STARTLE actions delay active escape by about three seconds. Host still evades and reaches E2, with no manufactured injury. These bounded scripts validate effect/feedback and cost, not overall player difficulty or all strategies.",
+  "media": [
+    "exit_skin_r1/continuous_silent.mp4",
+    "exit_startle_r1/continuous_silent.mp4",
+    "exit_startle_r2/continuous_silent.mp4"
+  ]
+}

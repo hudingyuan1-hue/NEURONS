@@ -122,8 +122,14 @@ func travel(id:String,room:String,delta:float) -> bool:
  if str(a.room)==room:return true
  var step:String=Map.next_room(str(a.room),room)
  if step.is_empty() or step.ends_with("exit"):return false
- if move(id,Map.doorway(str(a.room),step),delta):
-  var previous:String=str(a.room);var entry:Vector2=Map.doorway(step,previous)
+ # The logical graph does not encode the current metre contour or door side.
+ # Use this saved attempt's actual layout for both ends, including legacy rooms.
+ var outgoing:Dictionary=layout_for(str(a.room)).portal(step)
+ if outgoing.is_empty():return false
+ if move(id,outgoing.at,delta):
+  var previous:String=str(a.room);var incoming:Dictionary=layout_for(step).portal(previous)
+  if incoming.is_empty():return false
+  var entry:Vector2=incoming.at
   if step==app.room_id and app.hero_pos.distance_to(entry)<0.45:return false
   for other in data.actors:
    if other!=id and present(str(other)) and str(actor(str(other)).room)==step and position(str(other)).distance_to(entry)<0.4:return false
@@ -207,7 +213,8 @@ func spawn_pending() -> void:
   if not group.pending or room!=app.room_id or float(data.clock)-float(data.batches.get(room,-100.0))<float(config.timing.spawn_batch):continue
   var doors:Array=Map.doors(room)
   if doors.is_empty():continue
-  var entry:Vector2=Map.doorway(room,str(doors[0]));var floor_layout=layout_for(room)
+  var floor_layout=layout_for(room)
+  var entry:Vector2=floor_layout.portal(str(doors[0])).at
   if not floor_layout.walkable(entry) or app.hero_pos.distance_to(entry)<0.5:continue
   var free:bool=true
   for other in data.actors:
@@ -251,7 +258,7 @@ func advance_stands(delta:float) -> void:
    actor(id).stand_done=true
    # Only a completed genuine arrival establishes the idle watch direction.
    # Existing/saved facing and explicitly staged test actors are untouched.
-   face_target(id,Map.doorway("verify","combat_exit") if id=="face_press" else at)
+   face_target(id,layout_for("verify").portal("combat_exit").at if id=="face_press" else at)
 
 func bind_evidence() -> void:
  # This is a representation of already-existing records, never a newly

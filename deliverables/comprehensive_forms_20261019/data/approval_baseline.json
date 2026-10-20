@@ -1,0 +1,2375 @@
+{
+  "ids": [
+    "ENV_BED",
+    "ENV_BEDSIDE",
+    "ENV_BEDSIDE_OPEN",
+    "ENV_DESK",
+    "ENV_DESK_OPEN",
+    "ENV_CHAIR",
+    "ENV_STOOL",
+    "ENV_TRUNK",
+    "ENV_TRUNK_OPEN",
+    "ENV_COATRACK",
+    "ENV_STORAGE",
+    "ENV_STORAGE_OPEN",
+    "ENV_BOOKSHELF",
+    "ENV_WARDROBE",
+    "ENV_WARDROBE_OPEN",
+    "ENV_FAN",
+    "ENV_LAMP",
+    "ENV_WINDOW",
+    "ENV_WINDOW_OPEN",
+    "ENV_DOOR",
+    "ENV_DOOR_OPEN",
+    "ENV_ALL_013",
+    "ENV_ALL_014",
+    "ENV_ALL_015",
+    "ENV_ALL_016",
+    "ENV_ALL_017",
+    "ENV_ALL_018",
+    "ENV_ALL_019",
+    "ENV_ALL_020",
+    "ENV_ALL_021",
+    "ENV_ALL_023",
+    "ENV_ALL_024",
+    "ENV_ALL_025",
+    "ENV_ALL_025_OPEN",
+    "ENV_ALL_026",
+    "ENV_ALL_027",
+    "ENV_ALL_029",
+    "ENV_ALL_030",
+    "ENV_ALL_031",
+    "ENV_ALL_031_OPEN",
+    "ENV_ALL_032",
+    "ENV_ALL_032_OPEN",
+    "ENV_ALL_033",
+    "ENV_ALL_034",
+    "ENV_ALL_035",
+    "ENV_ALL_036",
+    "ENV_ALL_036_OPEN",
+    "ENV_ALL_037",
+    "ENV_ALL_038",
+    "ENV_ALL_041",
+    "ENV_ALL_042",
+    "ENV_ALL_043",
+    "ENV_ALL_044",
+    "ENV_ALL_045",
+    "ENV_ALL_046",
+    "ENV_ALL_047",
+    "ENV_ALL_048",
+    "ENV_ALL_049",
+    "ENV_ALL_050",
+    "ENV_ALL_051",
+    "ENV_ALL_052",
+    "ENV_ALL_052_OPEN",
+    "ENV_ALL_053",
+    "ENV_ALL_056",
+    "ENV_ALL_059",
+    "ENV_ALL_060",
+    "ENV_ALL_062",
+    "ENV_ALL_062_OPEN",
+    "ENV_ALL_063",
+    "ENV_ALL_064",
+    "ENV_ALL_064_OPEN",
+    "ENV_ALL_065",
+    "ENV_ALL_066",
+    "ENV_ALL_069",
+    "ENV_ALL_071",
+    "ENV_ALL_072",
+    "ENV_ALL_073",
+    "ENV_ALL_076",
+    "ENV_ALL_077",
+    "ENV_ALL_079",
+    "ENV_ALL_080",
+    "ENV_ALL_082",
+    "ENV_ALL_083",
+    "ENV_ALL_085",
+    "ENV_ALL_086",
+    "ENV_ALL_087",
+    "ENV_ALL_088",
+    "ENV_ALL_089",
+    "ENV_ALL_091",
+    "ENV_ALL_093",
+    "ENV_ALL_093_OPEN",
+    "ENV_ALL_094",
+    "ENV_ALL_095",
+    "ENV_ALL_096",
+    "ENV_ALL_098",
+    "ENV_ALL_103",
+    "ENV_ALL_108",
+    "ENV_ALL_111",
+    "ENV_ALL_114",
+    "ENV_ALL_116",
+    "ENV_ALL_117",
+    "ENV_ALL_118",
+    "ENV_ALL_123",
+    "ENV_ALL_124",
+    "ENV_ALL_125",
+    "ENV_ALL_126",
+    "ENV_ALL_129",
+    "ENV_ALL_131",
+    "ENV_ALL_133",
+    "ENV_ALL_134",
+    "ENV_ALL_138",
+    "ENV_ALL_139",
+    "ENV_ALL_140",
+    "ENV_ALL_141",
+    "ENV_ALL_142",
+    "ENV_ALL_145",
+    "ENV_ALL_150",
+    "ENV_ALL_151",
+    "ENV_ALL_152",
+    "ENV_ALL_153",
+    "ENV_ALL_155",
+    "ENV_ALL_156",
+    "ENV_ALL_158",
+    "ENV_ALL_159",
+    "ENV_ALL_160",
+    "ENV_ALL_161",
+    "ENV_ALL_165",
+    "ENV_ALL_167",
+    "ENV_ALL_168",
+    "ENV_ALL_169",
+    "ENV_ALL_171",
+    "ENV_ALL_172",
+    "ENV_ALL_173",
+    "ENV_ALL_174",
+    "ENV_ALL_174_OPEN",
+    "ENV_ALL_175",
+    "ENV_ALL_176",
+    "ENV_ALL_177",
+    "ENV_ALL_183",
+    "ENV_ALL_186",
+    "ENV_ALL_187",
+    "ENV_ALL_192",
+    "ENV_SMALL_PROPS_COLLAR",
+    "ENV_SMALL_PROPS_DOCTOR_COAT",
+    "ENV_SMALL_PROPS_PATIENT_GOWN",
+    "ENV_SMALL_PROPS_RELIC_BAG",
+    "ENV_SMALL_PROPS_SHOES",
+    "ENV_SMALL_PROPS_KEY",
+    "ENV_SMALL_PROPS_PORRIDGE",
+    "ENV_SMALL_PROPS_CANDY",
+    "ENV_SMALL_PROPS_CHOCOLATE",
+    "ENV_SMALL_PROPS_BOTTLE",
+    "ENV_SMALL_PROPS_BOTTLE_BROKEN",
+    "ENV_SMALL_PROPS_CIGARETTE",
+    "ENV_SMALL_PROPS_GLASSES",
+    "ENV_SMALL_PROPS_LAUNDRY_BAG",
+    "ENV_SMALL_PROPS_WHEELCHAIR",
+    "ENV_SMALL_PROPS_STRETCHER",
+    "ENV_SMALL_PROPS_NURSING_TRAY",
+    "ENV_SMALL_PROPS_GAUZE",
+    "ENV_SMALL_PROPS_WRISTBAND",
+    "ENV_SMALL_PROPS_CLIPBOARD",
+    "ENV_SMALL_PROPS_NUMBER_FOLDER",
+    "ENV_SMALL_PROPS_STAMP",
+    "ENV_SMALL_PROPS_MEDICINE_CUP",
+    "ENV_SMALL_PROPS_MEDICINE_BOX",
+    "ENV_SMALL_PROPS_PILLS",
+    "ENV_SMALL_PROPS_SYRINGE",
+    "ENV_SMALL_PROPS_SAMPLE_TUBE",
+    "ENV_SMALL_PROPS_KEYRING",
+    "ENV_SMALL_PROPS_RESTRAINT",
+    "ENV_SMALL_PROPS_BEDSHEET",
+    "ENV_SMALL_PROPS_CLEAN_BAG",
+    "ENV_SMALL_PROPS_MOP",
+    "ENV_SMALL_PROPS_RECORDER_CABLE",
+    "ENV_SMALL_PROPS_PACKING_BOX",
+    "ENV_SMALL_PROPS_PACKING_TAPE",
+    "ENV_SMALL_PROPS_CLAMP",
+    "ENV_SMALL_PROPS_PEN",
+    "ENV_SMALL_PROPS_PAPER",
+    "ENV_SMALL_PROPS_ALARM_CLOCK",
+    "ENV_SMALL_PROPS_TISSUE",
+    "ENV_SMALL_PROPS_TUTOR_GLASSES",
+    "ENV_SMALL_PROPS_TUTOR_POINTER",
+    "ENV_SMALL_PROPS_TUTOR_HAMMER",
+    "ENV_SMALL_PROPS_EYE_INSPECTOR",
+    "ENV_SMALL_PROPS_BOOK_OPEN",
+    "ENV_SMALL_PROPS_BOOK_OPEN_OPEN",
+    "ENV_SMALL_PROPS_PENCIL_CASE",
+    "ENV_SMALL_PROPS_ERASER",
+    "ENV_SMALL_PROPS_RULER",
+    "ENV_SMALL_PROPS_CLOTH_FOLDED",
+    "ENV_SMALL_PROPS_CALL_BUTTON",
+    "ENV_SMALL_PROPS_COVER_CLOTH",
+    "ENV_SMALL_PROPS_TRANSPORT_BOARD",
+    "ENV_SMALL_PROPS_SOILED_BIN",
+    "ENV_SMALL_PROPS_OLD_DOOR_SIGN",
+    "ENV_SMALL_PROPS_PAINT_BRUSH",
+    "ENV_SMALL_PROPS_PAPER_SCISSORS",
+    "CHR_MAIN",
+    "CHR_MAIN_OUTFIT_L1_WORN",
+    "CHR_MAIN_OUTFIT_L1_DAMAGED",
+    "CHR_MAIN_OUTFIT_L2_NEW",
+    "CHR_MAIN_OUTFIT_L2_WORN",
+    "CHR_MAIN_OUTFIT_L2_BLOOD",
+    "CHR_MAIN_OUTFIT_L3_NEW",
+    "CHR_MAIN_OUTFIT_L3_WORN",
+    "CHR_MAIN_OUTFIT_L3_BLOOD",
+    "CHR_MAIN_OUTFIT_L4_COAT",
+    "CHR_MAIN_OUTFIT_L4_COAT_WORN",
+    "CHR_MAIN_OUTFIT_L4_COAT_BLOOD",
+    "CHR_MAIN_OUTFIT_L5_SUIT",
+    "CHR_MAIN_OUTFIT_L6_ROBE",
+    "CHR_MAIN_CONTROL_DISTANT",
+    "CHR_MAIN_CONTROL_FRAGMENTED",
+    "CHR_MAIN_IDLE_D0",
+    "CHR_MAIN_IDLE_D1",
+    "CHR_MAIN_IDLE_D2",
+    "CHR_MAIN_IDLE_D3",
+    "CHR_MAIN_WALK_D0",
+    "CHR_MAIN_WALK_D1",
+    "CHR_MAIN_WALK_D2",
+    "CHR_MAIN_WALK_D3",
+    "CHR_MAIN_SEARCH_HIGH_D0",
+    "CHR_MAIN_SEARCH_HIGH_D1",
+    "CHR_MAIN_SEARCH_HIGH_D2",
+    "CHR_MAIN_SEARCH_HIGH_D3",
+    "CHR_MAIN_SEARCH_MID_D0",
+    "CHR_MAIN_SEARCH_MID_D1",
+    "CHR_MAIN_SEARCH_MID_D2",
+    "CHR_MAIN_SEARCH_MID_D3",
+    "CHR_MAIN_SEARCH_LOW_D0",
+    "CHR_MAIN_SEARCH_LOW_D1",
+    "CHR_MAIN_SEARCH_LOW_D2",
+    "CHR_MAIN_SEARCH_LOW_D3",
+    "CHR_MAIN_PICKUP_D0",
+    "CHR_MAIN_PICKUP_D1",
+    "CHR_MAIN_PICKUP_D2",
+    "CHR_MAIN_PICKUP_D3",
+    "CHR_MAIN_EAT_D0",
+    "CHR_MAIN_EAT_D1",
+    "CHR_MAIN_EAT_D2",
+    "CHR_MAIN_EAT_D3",
+    "CHR_MAIN_HURT_D0",
+    "CHR_MAIN_HURT_D1",
+    "CHR_MAIN_HURT_D2",
+    "CHR_MAIN_HURT_D3",
+    "CHR_MAIN_KICK_D0",
+    "CHR_MAIN_KICK_D1",
+    "CHR_MAIN_KICK_D2",
+    "CHR_MAIN_KICK_D3",
+    "CHR_MAIN_WITHDRAW_D0",
+    "CHR_MAIN_WITHDRAW_D1",
+    "CHR_MAIN_WITHDRAW_D2",
+    "CHR_MAIN_WITHDRAW_D3",
+    "CHR_MAIN_GUT_D0",
+    "CHR_MAIN_GUT_D1",
+    "CHR_MAIN_SCRATCH_D0",
+    "CHR_MAIN_SCRATCH_D1",
+    "CHR_MAIN_FACE_REACT_D0",
+    "CHR_MAIN_FACE_REACT_D1",
+    "CHR_MAIN_SLEEP_WAKE",
+    "CHR_MAIN_LED_REFERENCE",
+    "CHR_MAIN_COMBAT_REACTIONS",
+    "CHR_PLAYER_MASTER_2D",
+    "CHR_PLAYER_TURN",
+    "CHR_PLAYER_EXPR_01",
+    "CHR_PLAYER_EXPR_02",
+    "CHR_PLAYER_EXPR_03",
+    "CHR_PLAYER_EXPR_04",
+    "CHR_PLAYER_EXPR_05",
+    "CHR_PLAYER_EXPR_06",
+    "CHR_PLAYER_ACT_TEACH",
+    "CHR_PLAYER_ACT_HAMMER",
+    "CHR_PLAYER_ACT_WAVE",
+    "CHR_PLAYER_ACT_SCRATCH",
+    "CHR_PLAYER_ACT_LAUGH",
+    "CHR_PLAYER_ACT_UNEASY",
+    "CHR_OTHER_NPCS_FATHER",
+    "CHR_OTHER_NPCS_FATHER_BACK",
+    "CHR_OTHER_NPCS_FATHER_ALTERED",
+    "CHR_OTHER_NPCS_FATHER_ACTION_FIRST",
+    "CHR_OTHER_NPCS_FATHER_ACTION_ALTERED",
+    "CHR_FATHER_L1_COLLAPSE",
+    "CHR_OTHER_NPCS_N02",
+    "CHR_OTHER_NPCS_N02_BACK",
+    "CHR_OTHER_NPCS_N02_ALTERED",
+    "CHR_OTHER_NPCS_N02_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N02_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N03",
+    "CHR_OTHER_NPCS_N03_BACK",
+    "CHR_OTHER_NPCS_N03_ALTERED",
+    "CHR_OTHER_NPCS_N03_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N03_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N04",
+    "CHR_OTHER_NPCS_N04_BACK",
+    "CHR_OTHER_NPCS_N04_ALTERED",
+    "CHR_OTHER_NPCS_N04_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N04_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N05",
+    "CHR_OTHER_NPCS_N05_BACK",
+    "CHR_OTHER_NPCS_N05_ALTERED",
+    "CHR_OTHER_NPCS_N05_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N05_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N06",
+    "CHR_OTHER_NPCS_N06_BACK",
+    "CHR_OTHER_NPCS_N06_ALTERED",
+    "CHR_OTHER_NPCS_N06_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N06_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N07",
+    "CHR_OTHER_NPCS_N07_BACK",
+    "CHR_OTHER_NPCS_N07_ALTERED",
+    "CHR_OTHER_NPCS_N07_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N07_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N08",
+    "CHR_OTHER_NPCS_N08_BACK",
+    "CHR_OTHER_NPCS_N08_ALTERED",
+    "CHR_OTHER_NPCS_N08_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N08_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N09",
+    "CHR_OTHER_NPCS_N09_BACK",
+    "CHR_OTHER_NPCS_N09_ALTERED",
+    "CHR_OTHER_NPCS_N09_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N09_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N10",
+    "CHR_OTHER_NPCS_N10_BACK",
+    "CHR_OTHER_NPCS_N10_ALTERED",
+    "CHR_OTHER_NPCS_N10_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N10_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N11",
+    "CHR_OTHER_NPCS_N11_BACK",
+    "CHR_OTHER_NPCS_N11_ALTERED",
+    "CHR_OTHER_NPCS_N11_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N11_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_CAT",
+    "CHR_OTHER_NPCS_CAT_BACK",
+    "CHR_OTHER_NPCS_CAT_ALTERED",
+    "CHR_OTHER_NPCS_CAT_ACTION_FIRST",
+    "CHR_OTHER_NPCS_CAT_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N13",
+    "CHR_OTHER_NPCS_N13_BACK",
+    "CHR_OTHER_NPCS_N13_ALTERED",
+    "CHR_OTHER_NPCS_N13_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N13_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N14",
+    "CHR_OTHER_NPCS_N14_BACK",
+    "CHR_OTHER_NPCS_N14_ALTERED",
+    "CHR_OTHER_NPCS_N14_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N14_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N15",
+    "CHR_OTHER_NPCS_N15_BACK",
+    "CHR_OTHER_NPCS_N15_ALTERED",
+    "CHR_OTHER_NPCS_N15_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N15_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N16",
+    "CHR_OTHER_NPCS_N16_BACK",
+    "CHR_OTHER_NPCS_N16_ALTERED",
+    "CHR_OTHER_NPCS_N16_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N16_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N17",
+    "CHR_OTHER_NPCS_N17_BACK",
+    "CHR_OTHER_NPCS_N17_ALTERED",
+    "CHR_OTHER_NPCS_N17_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N17_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N18",
+    "CHR_OTHER_NPCS_N18_BACK",
+    "CHR_OTHER_NPCS_N18_ALTERED",
+    "CHR_OTHER_NPCS_N18_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N18_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N19",
+    "CHR_OTHER_NPCS_N19_BACK",
+    "CHR_OTHER_NPCS_N19_ALTERED",
+    "CHR_OTHER_NPCS_N19_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N19_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N20",
+    "CHR_OTHER_NPCS_N20_BACK",
+    "CHR_OTHER_NPCS_N20_ALTERED",
+    "CHR_OTHER_NPCS_N20_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N20_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N21",
+    "CHR_OTHER_NPCS_N21_BACK",
+    "CHR_OTHER_NPCS_N21_ALTERED",
+    "CHR_OTHER_NPCS_N21_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N21_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N22",
+    "CHR_OTHER_NPCS_N22_BACK",
+    "CHR_OTHER_NPCS_N22_ALTERED",
+    "CHR_OTHER_NPCS_N22_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N22_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N23",
+    "CHR_OTHER_NPCS_N23_BACK",
+    "CHR_OTHER_NPCS_N23_ALTERED",
+    "CHR_OTHER_NPCS_N23_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N23_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N24",
+    "CHR_OTHER_NPCS_N24_BACK",
+    "CHR_OTHER_NPCS_N24_ALTERED",
+    "CHR_OTHER_NPCS_N24_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N24_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N25",
+    "CHR_OTHER_NPCS_N25_BACK",
+    "CHR_OTHER_NPCS_N25_ALTERED",
+    "CHR_OTHER_NPCS_N25_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N25_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_DOG",
+    "CHR_OTHER_NPCS_DOG_BACK",
+    "CHR_OTHER_NPCS_DOG_ALTERED",
+    "CHR_OTHER_NPCS_DOG_ACTION_FIRST",
+    "CHR_OTHER_NPCS_DOG_ACTION_ALTERED",
+    "CHR_DOG_L1_REMAINS",
+    "CHR_OTHER_NPCS_N27",
+    "CHR_OTHER_NPCS_N27_BACK",
+    "CHR_OTHER_NPCS_N27_ALTERED",
+    "CHR_OTHER_NPCS_N27_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N27_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N28",
+    "CHR_OTHER_NPCS_N28_BACK",
+    "CHR_OTHER_NPCS_N28_ALTERED",
+    "CHR_OTHER_NPCS_N28_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N28_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N29",
+    "CHR_OTHER_NPCS_N29_BACK",
+    "CHR_OTHER_NPCS_N29_ALTERED",
+    "CHR_OTHER_NPCS_N29_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N29_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N30",
+    "CHR_OTHER_NPCS_N30_BACK",
+    "CHR_OTHER_NPCS_N30_ALTERED",
+    "CHR_OTHER_NPCS_N30_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N30_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N31",
+    "CHR_OTHER_NPCS_N31_BACK",
+    "CHR_OTHER_NPCS_N31_ALTERED",
+    "CHR_OTHER_NPCS_N31_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N31_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_MOTHER",
+    "CHR_OTHER_NPCS_MOTHER_BACK",
+    "CHR_OTHER_NPCS_MOTHER_ALTERED",
+    "CHR_OTHER_NPCS_MOTHER_ACTION_FIRST",
+    "CHR_OTHER_NPCS_MOTHER_ACTION_ALTERED",
+    "CHR_MOTHER_L1_COLLAPSE",
+    "CHR_OTHER_NPCS_N33",
+    "CHR_OTHER_NPCS_N33_BACK",
+    "CHR_OTHER_NPCS_N33_ALTERED",
+    "CHR_OTHER_NPCS_N33_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N33_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N34",
+    "CHR_OTHER_NPCS_N34_BACK",
+    "CHR_OTHER_NPCS_N34_ALTERED",
+    "CHR_OTHER_NPCS_N34_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N34_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N35",
+    "CHR_OTHER_NPCS_N35_BACK",
+    "CHR_OTHER_NPCS_N35_ALTERED",
+    "CHR_OTHER_NPCS_N35_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N35_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N36",
+    "CHR_OTHER_NPCS_N36_BACK",
+    "CHR_OTHER_NPCS_N36_ALTERED",
+    "CHR_OTHER_NPCS_N36_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N36_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N37",
+    "CHR_OTHER_NPCS_N37_BACK",
+    "CHR_OTHER_NPCS_N37_ALTERED",
+    "CHR_OTHER_NPCS_N37_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N37_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N38",
+    "CHR_OTHER_NPCS_N38_BACK",
+    "CHR_OTHER_NPCS_N38_ALTERED",
+    "CHR_OTHER_NPCS_N38_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N38_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N39",
+    "CHR_OTHER_NPCS_N39_BACK",
+    "CHR_OTHER_NPCS_N39_ALTERED",
+    "CHR_OTHER_NPCS_N39_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N39_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N40",
+    "CHR_OTHER_NPCS_N40_BACK",
+    "CHR_OTHER_NPCS_N40_ALTERED",
+    "CHR_OTHER_NPCS_N40_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N40_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N41",
+    "CHR_OTHER_NPCS_N41_BACK",
+    "CHR_OTHER_NPCS_N41_ALTERED",
+    "CHR_OTHER_NPCS_N41_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N41_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N42",
+    "CHR_OTHER_NPCS_N42_BACK",
+    "CHR_OTHER_NPCS_N42_ALTERED",
+    "CHR_OTHER_NPCS_N42_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N42_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N43",
+    "CHR_OTHER_NPCS_N43_BACK",
+    "CHR_OTHER_NPCS_N43_ALTERED",
+    "CHR_OTHER_NPCS_N43_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N43_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N44",
+    "CHR_OTHER_NPCS_N44_BACK",
+    "CHR_OTHER_NPCS_N44_ALTERED",
+    "CHR_OTHER_NPCS_N44_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N44_ACTION_ALTERED",
+    "CHR_OTHER_NPCS_N45",
+    "CHR_OTHER_NPCS_N45_BACK",
+    "CHR_OTHER_NPCS_N45_ALTERED",
+    "CHR_OTHER_NPCS_N45_ACTION_FIRST",
+    "CHR_OTHER_NPCS_N45_ACTION_ALTERED",
+    "CHR_HUNTER",
+    "CHR_HUNTER_ACTION",
+    "SLIDE_A02",
+    "SLIDE_A03",
+    "SLIDE_A04",
+    "SLIDE_A06",
+    "SLIDE_B04",
+    "SLIDE_B05",
+    "ENDING_HOSPITAL_BASE",
+    "ENDING_HOST_EYES",
+    "ENDING_HOST_BODY_REFERENCE",
+    "UI_EVIDENCE_FAMILY_PHOTO",
+    "UI_EVIDENCE_REHAB_PHOTO",
+    "UI_RECORD_34",
+    "UI_REHAB_WORK_ART",
+    "ENV_EVENT_BODY_UNKNOWN",
+    "ENV_ROOM_L1_ROOM_BASE",
+    "ENV_ROOM_L2_WARD_BASE",
+    "ENV_ROOM_L2_LOBBY_BASE",
+    "ENV_ROOM_L2_CLINIC_BASE",
+    "ENV_ROOM_L2_PHARMACY_BASE",
+    "ENV_ROOM_L2_OFFICE_BASE",
+    "ENV_ROOM_L2_WARD_ASYLUM",
+    "ENV_ROOM_L2_LOBBY_ASYLUM",
+    "ENV_ROOM_L2_CLINIC_ASYLUM",
+    "ENV_ROOM_L2_PHARMACY_ASYLUM",
+    "ENV_ROOM_L2_OFFICE_ASYLUM",
+    "ENV_ROOM_L3_STAIRS_BASE",
+    "ENV_ROOM_L3_CORRIDOR_BASE",
+    "ENV_ROOM_L3_ACTIVITY_BASE",
+    "ENV_ROOM_L3_GROUP_BASE",
+    "ENV_ROOM_L3_QUIET_BASE",
+    "ENV_ROOM_L3_BATH_BASE",
+    "ENV_ROOM_L3_DOUBLE_BASE",
+    "ENV_ROOM_L3_WORK_BASE",
+    "ENV_ROOM_L4_ATRIUM_BASE",
+    "ENV_ROOM_L4_MEMORY_BASE",
+    "ENV_ROOM_L4_VISUAL_BASE",
+    "ENV_ROOM_L4_DECISION_BASE",
+    "ENV_ROOM_L4_BODY_BASE",
+    "ENV_ROOM_L4_BRIDGE_BASE",
+    "ENV_ROOM_L4_RHYTHM_BASE",
+    "ENV_ROOM_L4_INDEX_BASE",
+    "ENV_ROOM_L4_SWITCH_BASE",
+    "ENV_ROOM_L4_VERIFY_BASE",
+    "ENV_ROOM_L4_IDENTITY_BASE",
+    "ENV_ROOM_L4_ATRIUM_ALTERED",
+    "ENV_ROOM_L4_MEMORY_ALTERED",
+    "ENV_ROOM_L4_VISUAL_ALTERED",
+    "ENV_ROOM_L4_DECISION_ALTERED",
+    "ENV_ROOM_L4_BODY_ALTERED",
+    "ENV_ROOM_L4_BRIDGE_ALTERED",
+    "ENV_ROOM_L4_RHYTHM_ALTERED",
+    "ENV_ROOM_L4_INDEX_ALTERED",
+    "ENV_ROOM_L4_SWITCH_ALTERED",
+    "ENV_ROOM_L4_VERIFY_ALTERED",
+    "ENV_ROOM_L4_IDENTITY_ALTERED",
+    "ENV_ROOM_L5_HIPPOCAMPUS_BASE",
+    "ENV_ROOM_L5_THALAMUS_BASE",
+    "ENV_ROOM_L5_CEREBELLUM_BASE",
+    "ENV_ROOM_L5_HYPOTHALAMUS_BASE",
+    "ENV_ROOM_L5_BASAL_BASE",
+    "ENV_ROOM_L5_AMYGDALA_BASE",
+    "ENV_ROOM_L5_BRAINSTEM_BASE",
+    "ENV_ROOM_L6_SQUARE_BASE",
+    "ENV_ROOM_L6_SIDE_BASE",
+    "ENV_ROOM_L6_NARROW_BASE",
+    "ENV_ROOM_L6_TWIST_BASE",
+    "ENV_ROOM_L6_MAINT_BASE",
+    "ENV_ROOM_L6_MUTATION_BASE",
+    "ENV_ROOM_L6_EXIT_BASE",
+    "ENV_ROOM_HIDDEN_STREET",
+    "ENV_ROOM_L1_ROOM_WORN",
+    "UI_DESIGN_ATTEMPT_FEEDBACK",
+    "UI_DESIGN_FOUNDATION",
+    "UI_DESIGN_TITLE",
+    "UI_DESIGN_PROFILE",
+    "UI_DESIGN_SAVE_CONFIRM",
+    "UI_DESIGN_PAUSE",
+    "UI_DESIGN_SETTINGS",
+    "UI_DESIGN_HUD_RESOURCES",
+    "UI_DESIGN_HUD_VITALITY",
+    "UI_DESIGN_HUD_SEARCH",
+    "UI_DESIGN_HUD_CONTROL",
+    "UI_DESIGN_VIEW_TOOLS",
+    "UI_DESIGN_CRT_SHELL",
+    "UI_DESIGN_SKILL_ICONS",
+    "UI_DESIGN_CRT_DESCRIPTION",
+    "UI_DESIGN_DIRECTION_PICKER",
+    "UI_DESIGN_CAST_FEEDBACK",
+    "UI_DESIGN_TREE_SHELL",
+    "UI_DESIGN_BODY_PREVIEW",
+    "UI_DESIGN_TREE_SPIRAL",
+    "UI_DESIGN_TREE_INSPECT",
+    "UI_DESIGN_TREE_EXCHANGE",
+    "UI_DESIGN_BOOK_SHELL",
+    "UI_DESIGN_BOOK_EVIDENCE",
+    "UI_DESIGN_BOOK_DETAILS",
+    "UI_DESIGN_INVENTORY",
+    "UI_DESIGN_DIALOGUE",
+    "UI_DESIGN_OPENING_OVERLAY",
+    "UI_DESIGN_TUTORIAL",
+    "UI_DESIGN_FATHER_GUIDANCE",
+    "UI_DESIGN_ENDING",
+    "UI_DESIGN_RUN_RECORDS",
+    "UI_DESIGN_TRANSITIONS",
+    "UI_DESIGN_BUTTONS",
+    "UI_DESIGN_PANELS_TABS_SCROLL",
+    "UI_DESIGN_INPUTS_SLIDERS",
+    "UI_DESIGN_TOOLTIPS_NOTICES",
+    "UI_DESIGN_POINTER_KEYS",
+    "VIS_DOG_L1_REMAINS",
+    "VIS_DOG_SHATTER",
+    "VIS_NPC_HURT_DOWN",
+    "VIS_HERO_ZERO",
+    "VIS_MADNESS",
+    "VIS_HAND_MARKS",
+    "VIS_PARENT_COLLAPSE",
+    "VIS_PARENT_FIGHT",
+    "VIS_CAT_HOLD",
+    "VIS_PAIR_CONTACT",
+    "VIS_MEDICINE",
+    "VIS_BANDAGE",
+    "VIS_CHAIR_BED",
+    "VIS_BODY_TRANSPORT",
+    "VIS_MOVING_OBJECTS",
+    "VIS_FURNITURE_STATES",
+    "VIS_SCREEN_RECORDS",
+    "VIS_CLOTH_MIMIC",
+    "VIS_ENV_ALTER",
+    "VIS_LOCAL_EFFECTS",
+    "VIS_BLOOD_DOOR",
+    "VIS_UI_FEEDBACK",
+    "VIS_STORY_ENDING"
+  ],
+  "counts": {
+    "candidate": 129,
+    "codex": 139,
+    "pending": 200,
+    "deferred": 2,
+    "accepted": 113,
+    "edit": 26,
+    "partial": 4,
+    "redo": 20,
+    "blocked": 7
+  },
+  "accepted_parts": {
+    "CHR_MAIN": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_v001.png",
+        "sha256": "09d5b5f5702976c1dd9933f40fdabc471e11fd1f2f742bbc235788be32868e0d"
+      }
+    ],
+    "CHR_MAIN_OUTFIT_L1_WORN": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_OUTFIT_L1_WORN_v001.png",
+        "sha256": "cec3fa7da487b2b0e3e30ad263f2cb8fc810d0f8f79eac77027c5e2dd2904809"
+      }
+    ],
+    "CHR_MAIN_OUTFIT_L1_DAMAGED": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_OUTFIT_L1_DAMAGED_v001.png",
+        "sha256": "37b4675d2d905d64a3b9c754e66381a4a4e3e195ee8f62311524343438c73ca8"
+      }
+    ],
+    "CHR_MAIN_OUTFIT_L2_NEW": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_OUTFIT_L2_NEW_v001.png",
+        "sha256": "65c943e0faa6d1d5d1838254daf89fa3c2ede33695ae16ab20c92c4f35faa492"
+      }
+    ],
+    "CHR_MAIN_OUTFIT_L2_WORN": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_OUTFIT_L2_WORN_v001.png",
+        "sha256": "21915823fcc633115a907759899d9a1998fc4391f7afd666e11bf7d9bd19b641"
+      }
+    ],
+    "CHR_MAIN_OUTFIT_L3_NEW": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_OUTFIT_L3_NEW_v001.png",
+        "sha256": "06391073522c7f30e7e3b17df1f26b4b79b55319e55cc70571dbbd20f1941279"
+      }
+    ],
+    "CHR_MAIN_OUTFIT_L3_WORN": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_OUTFIT_L3_WORN_v001.png",
+        "sha256": "5fc6112078804fc0550be399685a070ea36c0ee203294eccb45dae46b298591c"
+      }
+    ],
+    "CHR_MAIN_OUTFIT_L4_COAT": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_OUTFIT_L4_COAT_v001.png",
+        "sha256": "b48652f51f1d34d0ad1a1f0f8b21da97a4ed9389df989d975a24c56ec911a479"
+      }
+    ],
+    "CHR_MAIN_OUTFIT_L4_COAT_WORN": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_OUTFIT_L4_COAT_WORN_v001.png",
+        "sha256": "95c0cddc22419ae69bf001a14051f6796c5cb26eabcd54e605b7b681b0ff6214"
+      }
+    ],
+    "CHR_MAIN_OUTFIT_L5_SUIT": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_OUTFIT_L5_SUIT_v001.png",
+        "sha256": "e4180c703a10d9706bf99ce9cb34467d5d6c45b7bc341ee0facfb5b0ba86f142"
+      }
+    ],
+    "CHR_MAIN_OUTFIT_L6_ROBE": [
+      {
+        "key": "main",
+        "filename": "CHR_MAIN_OUTFIT_L6_ROBE_v001.png",
+        "sha256": "cf73e1dc374f599f270a5b8b293955a29efe5e04e72cde67728a8744aa00574b"
+      }
+    ],
+    "CHR_MAIN_IDLE_D0": [
+      {
+        "key": "idle::0",
+        "filename": "CHR_MAIN_IDLE_D0__idle__P01_v004.png",
+        "sha256": "d9f8661d55dc891719e42196cb359f72f1e7d5c2aedf3b49fd5ab1fa5d32e1ec"
+      }
+    ],
+    "CHR_MAIN_IDLE_D1": [
+      {
+        "key": "idle::0",
+        "filename": "CHR_MAIN_IDLE_D1__idle__P01_v004.png",
+        "sha256": "1689481b8e04dece8717c38df353f5b10e9abf9b8e32713fb906bda1e3b45752"
+      }
+    ],
+    "CHR_MAIN_IDLE_D2": [
+      {
+        "key": "idle::0",
+        "filename": "CHR_MAIN_IDLE_D2__idle__P01_v004.png",
+        "sha256": "ae527d8289f3a83f9d63e0f3ac9c87eea7624a31bef284c3e45f1d38582d05ab"
+      }
+    ],
+    "CHR_MAIN_IDLE_D3": [
+      {
+        "key": "idle::0",
+        "filename": "CHR_MAIN_IDLE_D3__idle__P01_v004.png",
+        "sha256": "ae8e077eaa4fa22002574f0c7d42c54aca968f9a4b0be594ed538f4a5561318e"
+      }
+    ],
+    "CHR_PLAYER_MASTER_2D": [
+      {
+        "key": "main",
+        "filename": "CHR_PLAYER_MASTER_2D_v001.png",
+        "sha256": "1b7413cc31a496b27275219215dbd50dc961106ad625361c7d5b6aeb618d3475"
+      }
+    ],
+    "CHR_PLAYER_TURN": [
+      {
+        "key": "FRONT",
+        "filename": "CHR_PLAYER_TURN__FRONT_v005.png",
+        "sha256": "9d78f2d84a9424a0b669e133f4ee24492ac0fa4fd17b7c243582478b45ed2745"
+      },
+      {
+        "key": "SIDE",
+        "filename": "CHR_PLAYER_TURN__SIDE_v005.png",
+        "sha256": "07c9f4d2f366e28d82b27b8410112da656b463dae846f32a3af6d77b830a6b56"
+      },
+      {
+        "key": "BACK",
+        "filename": "CHR_PLAYER_TURN__BACK_v005.png",
+        "sha256": "ecfd0fcfeec35d424cd4564cd86e9be213f94bda9350a4dae1fa17311eb0f41d"
+      }
+    ],
+    "CHR_PLAYER_EXPR_01": [
+      {
+        "key": "E01",
+        "filename": "CHR_PLAYER_EXPR_01__E01_v005.png",
+        "sha256": "b1fdb1692ff7c930e75dfe41262f27dab8deae5c4146f95f032b47a9ed051f27"
+      },
+      {
+        "key": "E02",
+        "filename": "CHR_PLAYER_EXPR_01__E02_v005.png",
+        "sha256": "745f54de9c08e4b800b9ca1f38a076ef44e606ab22f46af3e93a607e4ace4b1a"
+      },
+      {
+        "key": "E03",
+        "filename": "CHR_PLAYER_EXPR_01__E03_v005.png",
+        "sha256": "7e8f76dfd95e49b1cd0de39d050fb07351fa3f38ed57c3596d4c4584ad35a84c"
+      },
+      {
+        "key": "E04",
+        "filename": "CHR_PLAYER_EXPR_01__E04_v005.png",
+        "sha256": "2a57d846c01225c715ba1b0839be83f32223d7eb402eae2a5fbb78c02cb44819"
+      }
+    ],
+    "CHR_PLAYER_EXPR_02": [
+      {
+        "key": "E01",
+        "filename": "CHR_PLAYER_EXPR_02__E01_v005.png",
+        "sha256": "5e756b717eba4f7869b2bb4ade3d15c659061d702ed6d9a0c11b479b17fec7d2"
+      },
+      {
+        "key": "E02",
+        "filename": "CHR_PLAYER_EXPR_02__E02_v005.png",
+        "sha256": "0e36b6ddfbff28b19e20995a2e36e240bf78c0db19cd964613aefaded39182d9"
+      },
+      {
+        "key": "E03",
+        "filename": "CHR_PLAYER_EXPR_02__E03_v005.png",
+        "sha256": "e5de7b2e51728594b5e67f4bfdcb1d7e6e3333c235d8fcffffa74898d7c5e755"
+      },
+      {
+        "key": "E04",
+        "filename": "CHR_PLAYER_EXPR_02__E04_v005.png",
+        "sha256": "0f5eb88a1a717cb7e4ad2a6d98a4c4ee262e04a23d0196b67c1a334401755c4a"
+      }
+    ],
+    "CHR_PLAYER_EXPR_03": [
+      {
+        "key": "E01",
+        "filename": "CHR_PLAYER_EXPR_03__E01_v005.png",
+        "sha256": "1807c907208f95188c4f576ab8c1a09fd503994f42d15d18907efbf2a6952735"
+      },
+      {
+        "key": "E02",
+        "filename": "CHR_PLAYER_EXPR_03__E02_v005.png",
+        "sha256": "a1a61b4c8116cd6790ae363734ec459db40742eefc72ba5d852e9d8ab3840bbd"
+      },
+      {
+        "key": "E03",
+        "filename": "CHR_PLAYER_EXPR_03__E03_v005.png",
+        "sha256": "17680f78955e357e0bef3129dc8cf06d84abe90c5716d2c1aae60f5b8aab7bd5"
+      },
+      {
+        "key": "E04",
+        "filename": "CHR_PLAYER_EXPR_03__E04_v005.png",
+        "sha256": "57bdbabad9fde2745fe0b47468ad9957936fa2af0f75b035cf0d6e006d0dddce"
+      }
+    ],
+    "CHR_PLAYER_EXPR_04": [
+      {
+        "key": "E01",
+        "filename": "CHR_PLAYER_EXPR_04__E01_v005.png",
+        "sha256": "4117f3fe6d605c15e5e7da8dea1eef7bd3ce4abc3f053e31f1513527add98f7d"
+      },
+      {
+        "key": "E02",
+        "filename": "CHR_PLAYER_EXPR_04__E02_v005.png",
+        "sha256": "dee4991b179c344ac9ea12725d6fc2f6eeb980dc79bde256d8096cdd833ef6b7"
+      },
+      {
+        "key": "E03",
+        "filename": "CHR_PLAYER_EXPR_04__E03_v005.png",
+        "sha256": "84eca26db225cb15192eefd644e97b7c06ed8ab4febc658ac35f362fd588d995"
+      },
+      {
+        "key": "E04",
+        "filename": "CHR_PLAYER_EXPR_04__E04_v005.png",
+        "sha256": "aa867147b7420c3de329c77219531e09cd397ae02c23967488b0fccbf8d14590"
+      }
+    ],
+    "CHR_PLAYER_EXPR_05": [
+      {
+        "key": "E01",
+        "filename": "CHR_PLAYER_EXPR_05__E01_v005.png",
+        "sha256": "ead573e290930424d4a183f10bdc0ecaea446ecc21fe9d8f24233ca178775422"
+      },
+      {
+        "key": "E02",
+        "filename": "CHR_PLAYER_EXPR_05__E02_v005.png",
+        "sha256": "0760d945642a6e70fa224d1a9ca1eef8a3c2d1ff5b7ce09e0d808963afd2276e"
+      },
+      {
+        "key": "E03",
+        "filename": "CHR_PLAYER_EXPR_05__E03_v005.png",
+        "sha256": "30cc986e8276cad084b4688d8cdc96dd95f2446ff030f6a1f3b1457e9540fd64"
+      },
+      {
+        "key": "E04",
+        "filename": "CHR_PLAYER_EXPR_05__E04_v005.png",
+        "sha256": "fe8217a39256326f881eacc2a0ef64984d8266b94a90f5f9fa39efeb093cde77"
+      }
+    ],
+    "CHR_PLAYER_EXPR_06": [
+      {
+        "key": "E01",
+        "filename": "CHR_PLAYER_EXPR_06__E01_v005.png",
+        "sha256": "657531930b55ba79e00ea7023413e3607790016a69cc60ef179025d5e363b1f6"
+      },
+      {
+        "key": "E03",
+        "filename": "CHR_PLAYER_EXPR_06__E03_v005.png",
+        "sha256": "fc9577280b10763ba8055db1527a5d0733a079234cbc2a2fde57f54a45a967fc"
+      },
+      {
+        "key": "E04",
+        "filename": "CHR_PLAYER_EXPR_06__E04_v005.png",
+        "sha256": "854d0d9d9f2cc56f1b71f32b7d98a5969e1e5cee2e85fad5d6c1d4facc5ecfab"
+      }
+    ],
+    "CHR_OTHER_NPCS_FATHER": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_FATHER_v001.png",
+        "sha256": "2a279871199cc28b1cb42d70e2cf56ac9e089d48ae49065db95870a575f7b648"
+      }
+    ],
+    "CHR_OTHER_NPCS_FATHER_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_FATHER_BACK_v001.png",
+        "sha256": "d89f1b6fd82bda770f206cc6a865cd482f63049b1f86d67c4f92ad2ca0ba7b62"
+      }
+    ],
+    "CHR_OTHER_NPCS_FATHER_ACTION_FIRST": [
+      {
+        "key": "reach::0",
+        "filename": "CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P01_v004.png",
+        "sha256": "242def53acb41a2e81fae9e77d91b68883fba958bc227082273d0e7f1b3c1ae3"
+      },
+      {
+        "key": "reach::1",
+        "filename": "CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P02_v004.png",
+        "sha256": "6c265207a6fd3880a38f78aedebc8c95aa750dbf32531befafd40c7743c42d88"
+      },
+      {
+        "key": "reach::2",
+        "filename": "CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P02_v004.png",
+        "sha256": "6c265207a6fd3880a38f78aedebc8c95aa750dbf32531befafd40c7743c42d88"
+      },
+      {
+        "key": "release::0",
+        "filename": "CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P02_v004.png",
+        "sha256": "6c265207a6fd3880a38f78aedebc8c95aa750dbf32531befafd40c7743c42d88"
+      }
+    ],
+    "CHR_OTHER_NPCS_N02": [
+      {
+        "key": "identity",
+        "filename": "CHR_OTHER_NPCS_N02_v001.png",
+        "sha256": null
+      }
+    ],
+    "CHR_OTHER_NPCS_N02_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N02_BACK_v001.png",
+        "sha256": "e887b316b6120719fe53021db53e4975bd0e13790293b5b68a961fb966147ebc"
+      }
+    ],
+    "CHR_OTHER_NPCS_N03": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N03_v001.png",
+        "sha256": "b61eafb558269c642d19999a587be6fb507cd8c035d74af45d8c6fa04241ebd4"
+      }
+    ],
+    "CHR_OTHER_NPCS_N04": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N04_v001.png",
+        "sha256": "f23ce310d1c10c437ea2bf53e20e0955aaef7eb8e7396afea5af0c448b61208f"
+      }
+    ],
+    "CHR_OTHER_NPCS_N04_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N04_BACK_v001.png",
+        "sha256": "bb2e48dc6768465caf31c735efb92af28eedba3e49a00f163a8892bb887a9f6f"
+      }
+    ],
+    "CHR_OTHER_NPCS_N04_ACTION_FIRST": [
+      {
+        "key": "event::0",
+        "filename": "CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P01_v004.png",
+        "sha256": "dbe88b5fbd1d6953d9a6e69cacfde601b16e5beac8ebe14098b72f2b0a9ced7a"
+      },
+      {
+        "key": "event::1",
+        "filename": "CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P02_v004.png",
+        "sha256": "7c0706523b1043fe619a7509f835c9e21a80a797d4cf40ce2ead4f3db1f83cba"
+      },
+      {
+        "key": "event::3",
+        "filename": "CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P04_v004.png",
+        "sha256": "f05303415221c0ae6246c5adb800a450bebd401ff37f739b0f191a0d17e45810"
+      }
+    ],
+    "CHR_OTHER_NPCS_N05": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N05_v001.png",
+        "sha256": "8cef027d79aa8c19f221b7efbbcc84e12e45da17da1d74d39279cbe00c6fca96"
+      }
+    ],
+    "CHR_OTHER_NPCS_N05_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N05_BACK_v001.png",
+        "sha256": "f5f66a2bef3da1df0ad45c984fe15d5a6c5f16579cb0a26941d3f0fe03f1b8ba"
+      }
+    ],
+    "CHR_OTHER_NPCS_N06": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N06_v001.png",
+        "sha256": "3b5a3b18f08788e34468bd090900d901ac09c048c74e15ec004caa964b0f49ae"
+      }
+    ],
+    "CHR_OTHER_NPCS_N06_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N06_BACK_v001.png",
+        "sha256": "0beb9203a5b820209989cc9834d54ec7fbc1bff05fea20bc0135dd05d10bb90f"
+      }
+    ],
+    "CHR_OTHER_NPCS_N07": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N07_v001.png",
+        "sha256": "2dac38925dbf6bc3fbd16f0e2aec86ca4f6109c61c500e095ba056d678def533"
+      }
+    ],
+    "CHR_OTHER_NPCS_N07_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N07_BACK_v001.png",
+        "sha256": "1605b13dcbb4b3301a24df904d16e28bf5d6b29f2c6a77e45b6a04583b70949e"
+      }
+    ],
+    "CHR_OTHER_NPCS_N08": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N08_v001.png",
+        "sha256": "030fadf9ca930a66dc7b398a75e179d67b22d3c87daa61de7b35eb9665504894"
+      }
+    ],
+    "CHR_OTHER_NPCS_N08_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N08_BACK_v001.png",
+        "sha256": "c291e93a1d2e4ce162a5ab4fd271f0b2525f602afde8e728bc8f58aaffb3dc8e"
+      }
+    ],
+    "CHR_OTHER_NPCS_N09": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N09_v001.png",
+        "sha256": "bae05b20fe04b2f7d481260bb6ae97c5d3387c079e7a5cc8a83ff46b18df024c"
+      }
+    ],
+    "CHR_OTHER_NPCS_N09_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N09_BACK_v001.png",
+        "sha256": "6669b121ae80943f9d666a0fdd63cfa96eb8f2db780c2d8a279bbd8ecf29751a"
+      }
+    ],
+    "CHR_OTHER_NPCS_N10": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N10_v001.png",
+        "sha256": "90779679183f8a6bc33efd3603d190b90831010689e5fbdf5f1ea820110f0c2d"
+      }
+    ],
+    "CHR_OTHER_NPCS_N10_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N10_BACK_v001.png",
+        "sha256": "bb0274adc965e57c74e9f287543521c23768888a4a5bcf4d4be39a34f8e2805f"
+      }
+    ],
+    "CHR_OTHER_NPCS_N11": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N11_v001.png",
+        "sha256": "abfd84aa415926e921f6942a25d731de4da995d8378afce19c63babdcbe830a0"
+      }
+    ],
+    "CHR_OTHER_NPCS_N11_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N11_BACK_v001.png",
+        "sha256": "3286754a9b24c21c740582e9dadfd303052894be0ede8e0686604562c717e633"
+      }
+    ],
+    "CHR_OTHER_NPCS_CAT": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_CAT_v001.png",
+        "sha256": "6e852052931cf49afdb5499cd6dd09bc83aa7c61bfd85a4c6365b2c17573e275"
+      }
+    ],
+    "CHR_OTHER_NPCS_CAT_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_CAT_BACK_v001.png",
+        "sha256": "0ca7a24c6615acfe02584a6d3827878b5f0ca2adf975799901622ffdc939d027"
+      }
+    ],
+    "CHR_OTHER_NPCS_CAT_ALTERED": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_CAT_ALTERED_v001.png",
+        "sha256": "03dd533f2133dd596b2d5c59e702c53d398e33231c785e4584108a7a646b2093"
+      }
+    ],
+    "CHR_OTHER_NPCS_N13": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N13_v001.png",
+        "sha256": "d0c32c49e6b17507f12953691be78810b48f821fc23b36a657e73e1670c99b8f"
+      }
+    ],
+    "CHR_OTHER_NPCS_N13_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N13_BACK_v001.png",
+        "sha256": "b89cd4bde739adb6f0eabb3b9bacdd998404260fb183842ade5fa6350d65cbd7"
+      }
+    ],
+    "CHR_OTHER_NPCS_N14": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N14_v001.png",
+        "sha256": "2c3b35ce613bdcc47c0c6fc71bf06eed8f67a89a741a724fbb6cff4de9a51473"
+      }
+    ],
+    "CHR_OTHER_NPCS_N14_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N14_BACK_v001.png",
+        "sha256": "be1ffe8ccf08a39941732e6ba095194f9589d67fbc47a7140ac680ac9fd09f76"
+      }
+    ],
+    "CHR_OTHER_NPCS_N15": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N15_v001.png",
+        "sha256": "9b505d54a256667d75db22852564ced4ce055b93a01a709253fe8d0c94b9836f"
+      }
+    ],
+    "CHR_OTHER_NPCS_N15_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N15_BACK_v001.png",
+        "sha256": "161e739a24adeeb4d5dca5c65ad934762e233f89eb3cfae14815dc4ab5ee3668"
+      }
+    ],
+    "CHR_OTHER_NPCS_N16": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N16_v001.png",
+        "sha256": "db702b0020f976030c84cf23fd1d6426f2ee93006302a99961e532d2cd789742"
+      }
+    ],
+    "CHR_OTHER_NPCS_N16_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N16_BACK_v001.png",
+        "sha256": "20e9f81eef35ca2d2f70b7582e2036b5bf6422e0a69c0e55fddb118b8ac302c0"
+      }
+    ],
+    "CHR_OTHER_NPCS_N17": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N17_v001.png",
+        "sha256": "90a0b2625586dabcb40e78b84761a0aee2fa960dfbb6d1ddb01847aed6303a91"
+      }
+    ],
+    "CHR_OTHER_NPCS_N17_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N17_BACK_v001.png",
+        "sha256": "e24604d920d2dd8cc337ed68b86871b427e87a0304aaa1320c9e4ffb51429519"
+      }
+    ],
+    "CHR_OTHER_NPCS_N18": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N18_v001.png",
+        "sha256": "29ef25dee7e819059be79e656c1da21bcfa5b9955aea43b7dfd625d3cd0a9523"
+      }
+    ],
+    "CHR_OTHER_NPCS_N18_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N18_BACK_v001.png",
+        "sha256": "91521c3c28b224f650224e5d38e6c19f755bcdfa56e76088d550c1e208b05abc"
+      }
+    ],
+    "CHR_OTHER_NPCS_N19": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N19_v001.png",
+        "sha256": "082e9fed5d79eea6db1686f275777c83f41a127d120f5e203ab6084da9573a8e"
+      }
+    ],
+    "CHR_OTHER_NPCS_N19_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N19_BACK_v001.png",
+        "sha256": "8b054e36a543f556af445398f3dbb3eaf3afce33ddbd0b8383ecb7cb1e268196"
+      }
+    ],
+    "CHR_OTHER_NPCS_N20": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N20_v001.png",
+        "sha256": "82c04a57aa7a859ffad0fac4fa19d9dda1857f2dbc9505b15e75393de01b4b31"
+      }
+    ],
+    "CHR_OTHER_NPCS_N20_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N20_BACK_v001.png",
+        "sha256": "00381b05c4fd4144059abc1025d87539738538f02ecdd8c7576ea03cd605f271"
+      }
+    ],
+    "CHR_OTHER_NPCS_N21": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N21_v001.png",
+        "sha256": "e48be78511ec057392b824379745a1eb75c768b6ae9fc25ae01825543de418a3"
+      }
+    ],
+    "CHR_OTHER_NPCS_N21_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N21_BACK_v001.png",
+        "sha256": "daf56adab029e1c41466b482fb32233cc7ef4655603e85277b21df806f1cbdfa"
+      }
+    ],
+    "CHR_OTHER_NPCS_N22": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N22_v001.png",
+        "sha256": "637cba4a175f7c486262c47cb09620590f0de7c66d133aeacda50d96c9b3ca12"
+      }
+    ],
+    "CHR_OTHER_NPCS_N23": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N23_v001.png",
+        "sha256": "0bd08fae17c80f3bf366c77aa30a92a8daa805a5ed7017e0e94f22d12c6ce233"
+      }
+    ],
+    "CHR_OTHER_NPCS_N23_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N23_BACK_v001.png",
+        "sha256": "d9bd628fa9fed27bbeb250151cd37fd509e5094851b1d17b6c8aa568b5e91432"
+      }
+    ],
+    "CHR_OTHER_NPCS_N24": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N24_v001.png",
+        "sha256": "c27035f8d44178e64ba1e54a261395a472d0658e3b36688cb05a6e1548d3d2c5"
+      }
+    ],
+    "CHR_OTHER_NPCS_N24_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N24_BACK_v001.png",
+        "sha256": "0256c62e58d85f87a2c13cd0df8069c39e47a0215fed2933fc0896611816924d"
+      }
+    ],
+    "CHR_OTHER_NPCS_N25": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N25_v001.png",
+        "sha256": "59426e755e362696e58ccee8e6dae9fe0c583723ab455b82785e95523fcec052"
+      }
+    ],
+    "CHR_OTHER_NPCS_N25_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N25_BACK_v001.png",
+        "sha256": "1b547824e51ba7ba584063bc149b076b04336b240cd2b38529ef268697bf7388"
+      }
+    ],
+    "CHR_OTHER_NPCS_DOG": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_DOG_v001.png",
+        "sha256": "8f5a15dc0032f47ea64e401bbf7ca78b7c804e0f5c965d27a22a153b637e436b"
+      }
+    ],
+    "CHR_OTHER_NPCS_DOG_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_DOG_BACK_v001.png",
+        "sha256": "c1405ef67b4d57ab08b9e0cb5c78035fa495ba780694a92cb239f5d81a3a4fc4"
+      }
+    ],
+    "CHR_OTHER_NPCS_N27": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N27_v001.png",
+        "sha256": "e4117b440fca92ff3120074842708c6f620b44fc9c6fcfeb414fd01203986309"
+      }
+    ],
+    "CHR_OTHER_NPCS_N27_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N27_BACK_v001.png",
+        "sha256": "f67e20f09476ffc25b399fbc577ccbdffeeb1002cd587e84076cd52179bbe6cc"
+      }
+    ],
+    "CHR_OTHER_NPCS_N28": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N28_v001.png",
+        "sha256": "3ed7e42f7d1ef7b69c3663f1ddf995137e7db55526a7bc82b23bcd00063cbefc"
+      }
+    ],
+    "CHR_OTHER_NPCS_N28_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N28_BACK_v001.png",
+        "sha256": "d770451e2e55ba797e33855222859ede49890feca193c13d9bdde8a45869de62"
+      }
+    ],
+    "CHR_OTHER_NPCS_N29": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N29_v001.png",
+        "sha256": "6bc4812a44c81b921b3ef13c804bb67bd0015382c03bf785f5055c4f44146ed7"
+      }
+    ],
+    "CHR_OTHER_NPCS_N29_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N29_BACK_v001.png",
+        "sha256": "29e4a03095d0c092a9d9a18290f708482a25b03dc1a0f5c2de4713c72bebbb0d"
+      }
+    ],
+    "CHR_OTHER_NPCS_N30": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N30_v001.png",
+        "sha256": "b2368ac0d83b698fff44083782fac15445b6ffb91b69e5dc977ee88aee198208"
+      }
+    ],
+    "CHR_OTHER_NPCS_N30_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N30_BACK_v001.png",
+        "sha256": "b5d6c2b83c234808999287c6156553717cf442c2efe6489b1109eead248c474b"
+      }
+    ],
+    "CHR_OTHER_NPCS_N31": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N31_v001.png",
+        "sha256": "643059821fea77efe86d6f99ef5f7e5de54a9d8112075fbe333b906ad91ac552"
+      }
+    ],
+    "CHR_OTHER_NPCS_N31_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N31_BACK_v001.png",
+        "sha256": "b2c9e8f1f3dea91316994920a8150d437b9a9396e52caec8ca5bfb19fdb325b5"
+      }
+    ],
+    "CHR_OTHER_NPCS_N31_ALTERED": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N31_ALTERED_v001.png",
+        "sha256": "66722685aba1a03c7e09c558a8efd74a1ce9063d39d5a97cfbe01e4c37b077f9"
+      }
+    ],
+    "CHR_OTHER_NPCS_MOTHER": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_MOTHER_v001.png",
+        "sha256": "7ee1e1fc53cfd945bd6be0e680673e3895cc71c2df08b3a70332dac9d15a3abf"
+      }
+    ],
+    "CHR_OTHER_NPCS_MOTHER_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_MOTHER_BACK_v001.png",
+        "sha256": "24cf2469c98bf908e5e21fc45d29452faf0566cc17bdffee71d21c1384c54837"
+      }
+    ],
+    "CHR_MOTHER_L1_COLLAPSE": [
+      {
+        "key": "main",
+        "filename": "CHR_MOTHER_L1_COLLAPSE_v001.png",
+        "sha256": "03506126e43fd764f62f87d14b4c70fe5751de38889f6d16be3a149e047614b3"
+      }
+    ],
+    "CHR_OTHER_NPCS_N33": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N33_v001.png",
+        "sha256": "7f766f17bfa2a20b587e018d75ccf00bd5e2cff96053ace458aca1b0f3b0f3b9"
+      }
+    ],
+    "CHR_OTHER_NPCS_N33_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N33_BACK_v001.png",
+        "sha256": "610d92d534b6afee97e9855339412a1d37e911365a09ca44c6af99c9f39f43ff"
+      }
+    ],
+    "CHR_OTHER_NPCS_N34": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N34_v001.png",
+        "sha256": "81eec1a62abfbd3272d4b574eee6cf39b54572449211515c9c1b177170e6ed07"
+      }
+    ],
+    "CHR_OTHER_NPCS_N34_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N34_BACK_v001.png",
+        "sha256": "9d82fe25ce4382a4a073180df80aae31fc5b94253a665375f4832f7e6459ec87"
+      }
+    ],
+    "CHR_OTHER_NPCS_N35": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N35_v001.png",
+        "sha256": "82ea6b78e2bfd997a46abd3f5cba1502b249ce00b28ebc08dcbcbd6daf4fd84d"
+      }
+    ],
+    "CHR_OTHER_NPCS_N35_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N35_BACK_v001.png",
+        "sha256": "72bc7a2396208376034c38d896333d7e2693b0aea28fab1041c6e69703acb835"
+      }
+    ],
+    "CHR_OTHER_NPCS_N36": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N36_v001.png",
+        "sha256": "e58f747f1a7d9ec297ee3a9e7d5d33c5b59e210cc5bd67c46dfa3fd8945b92f7"
+      }
+    ],
+    "CHR_OTHER_NPCS_N36_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N36_BACK_v001.png",
+        "sha256": "7150b01afa2459b891e8956c9ac40ab22bfca9f10feeb83dfb40bf8fde758cc2"
+      }
+    ],
+    "CHR_OTHER_NPCS_N36_ALTERED": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N36_ALTERED_v001.png",
+        "sha256": "c866576b0a47388dfa8f07483cf9b078c1784da9cb315306d1b736751eced9d5"
+      }
+    ],
+    "CHR_OTHER_NPCS_N37": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N37_v001.png",
+        "sha256": "005b20fca2f99b6261b43fa3082270431ad971bccf13e87d78254c881b144b5a"
+      }
+    ],
+    "CHR_OTHER_NPCS_N37_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N37_BACK_v001.png",
+        "sha256": "b3ba8af99482d93f22d067bedbadd92ff5a9439bdb804c600d298a97200d22da"
+      }
+    ],
+    "CHR_OTHER_NPCS_N38": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N38_v001.png",
+        "sha256": "c605c512815767e9b55eaf4b9b1a2eec0381c1eef3d3342b1cbf485bbd2bd0cc"
+      }
+    ],
+    "CHR_OTHER_NPCS_N38_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N38_BACK_v001.png",
+        "sha256": "dfa446b6fff411f96d80ff13ecac2e4301362997826266b2bdb5bb53fb64ac0e"
+      }
+    ],
+    "CHR_OTHER_NPCS_N39": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N39_v001.png",
+        "sha256": "7d27d57085d4d22706ab6a06c3085415b1a794e691cdc6079d67ee95939e1222"
+      }
+    ],
+    "CHR_OTHER_NPCS_N39_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N39_BACK_v001.png",
+        "sha256": "636147c8b316e534b184a8711b3cb432330f147376d95dcd598044078d9bc819"
+      }
+    ],
+    "CHR_OTHER_NPCS_N40": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N40_v001.png",
+        "sha256": "e16a3fcdee7db262d4ed16ed39e3207f962780803d48e69dee906ecd9a418b93"
+      }
+    ],
+    "CHR_OTHER_NPCS_N40_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N40_BACK_v001.png",
+        "sha256": "fa9914acfee617892ea955633e5bdc50f82366dad098b77e6e849f2237f43cd9"
+      }
+    ],
+    "CHR_OTHER_NPCS_N41_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N41_BACK_v001.png",
+        "sha256": "9691d19ba1db412c94d6b5b7421c10c6a9c69c79e05d56e9459e9607fe7ac3c8"
+      }
+    ],
+    "CHR_OTHER_NPCS_N42": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N42_v001.png",
+        "sha256": "2617de86ba65347a9aa6f5528b0b896f83d1608cc324257b565c27a7e5226f95"
+      }
+    ],
+    "CHR_OTHER_NPCS_N42_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N42_BACK_v001.png",
+        "sha256": "dd23b55dbbf5ae412955fda449f2fa9a030f72b4c514fc2f99da2da57425e105"
+      }
+    ],
+    "CHR_OTHER_NPCS_N43": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N43_v001.png",
+        "sha256": "babd599800fb1a03d73e0e2bfdd1b0bc7ebc3810c7e798f5ebc9437ada13f9d1"
+      }
+    ],
+    "CHR_OTHER_NPCS_N43_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N43_BACK_v001.png",
+        "sha256": "5e59b562f8cd266fe67fc04cac5a23a393ff6b0e59536faf6f18f099292729ba"
+      }
+    ],
+    "CHR_OTHER_NPCS_N44": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N44_v001.png",
+        "sha256": "4652e72adf014b289d44dbde3de2472a96ced0294c535445287e03943bb90be8"
+      }
+    ],
+    "CHR_OTHER_NPCS_N44_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N44_BACK_v001.png",
+        "sha256": "26d5997fc0dfe0fdf077e2af78b1fbf51676acaa849c733ca30daa20ddd76f39"
+      }
+    ],
+    "CHR_OTHER_NPCS_N45": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N45_v001.png",
+        "sha256": "c900f9fb38f9ac81d02af03b30a18a1c15e5662628193d1d4e70ad39bc0cdcae"
+      }
+    ],
+    "CHR_OTHER_NPCS_N45_BACK": [
+      {
+        "key": "main",
+        "filename": "CHR_OTHER_NPCS_N45_BACK_v001.png",
+        "sha256": "66723b6e94d515a9192c97e1080aef1f5c0c9bc7237a51556c4f929415a35c04"
+      }
+    ],
+    "CHR_HUNTER": [
+      {
+        "key": "main",
+        "filename": "CHR_HUNTER_v001.png",
+        "sha256": "2d9fa536b10753b52d9098ce1ef665b504f854cdda9fc31d2b8ba39289aaa77f"
+      }
+    ]
+  },
+  "review_status": {
+    "ENV_BED": "candidate",
+    "ENV_BEDSIDE": "candidate",
+    "ENV_BEDSIDE_OPEN": "candidate",
+    "ENV_DESK": "candidate",
+    "ENV_DESK_OPEN": "candidate",
+    "ENV_CHAIR": "candidate",
+    "ENV_STOOL": "candidate",
+    "ENV_TRUNK": "candidate",
+    "ENV_TRUNK_OPEN": "candidate",
+    "ENV_COATRACK": "candidate",
+    "ENV_STORAGE": "candidate",
+    "ENV_STORAGE_OPEN": "candidate",
+    "ENV_BOOKSHELF": "candidate",
+    "ENV_WARDROBE": "codex",
+    "ENV_WARDROBE_OPEN": "codex",
+    "ENV_FAN": "candidate",
+    "ENV_LAMP": "candidate",
+    "ENV_WINDOW": "candidate",
+    "ENV_WINDOW_OPEN": "candidate",
+    "ENV_DOOR": "codex",
+    "ENV_DOOR_OPEN": "codex",
+    "ENV_ALL_013": "pending",
+    "ENV_ALL_014": "candidate",
+    "ENV_ALL_015": "candidate",
+    "ENV_ALL_016": "candidate",
+    "ENV_ALL_017": "candidate",
+    "ENV_ALL_018": "candidate",
+    "ENV_ALL_019": "candidate",
+    "ENV_ALL_020": "candidate",
+    "ENV_ALL_021": "candidate",
+    "ENV_ALL_023": "candidate",
+    "ENV_ALL_024": "candidate",
+    "ENV_ALL_025": "candidate",
+    "ENV_ALL_025_OPEN": "candidate",
+    "ENV_ALL_026": "candidate",
+    "ENV_ALL_027": "candidate",
+    "ENV_ALL_029": "candidate",
+    "ENV_ALL_030": "candidate",
+    "ENV_ALL_031": "candidate",
+    "ENV_ALL_031_OPEN": "candidate",
+    "ENV_ALL_032": "candidate",
+    "ENV_ALL_032_OPEN": "candidate",
+    "ENV_ALL_033": "candidate",
+    "ENV_ALL_034": "candidate",
+    "ENV_ALL_035": "candidate",
+    "ENV_ALL_036": "candidate",
+    "ENV_ALL_036_OPEN": "candidate",
+    "ENV_ALL_037": "candidate",
+    "ENV_ALL_038": "candidate",
+    "ENV_ALL_041": "candidate",
+    "ENV_ALL_042": "candidate",
+    "ENV_ALL_043": "candidate",
+    "ENV_ALL_044": "candidate",
+    "ENV_ALL_045": "candidate",
+    "ENV_ALL_046": "candidate",
+    "ENV_ALL_047": "candidate",
+    "ENV_ALL_048": "candidate",
+    "ENV_ALL_049": "candidate",
+    "ENV_ALL_050": "candidate",
+    "ENV_ALL_051": "candidate",
+    "ENV_ALL_052": "candidate",
+    "ENV_ALL_052_OPEN": "candidate",
+    "ENV_ALL_053": "candidate",
+    "ENV_ALL_056": "candidate",
+    "ENV_ALL_059": "candidate",
+    "ENV_ALL_060": "candidate",
+    "ENV_ALL_062": "candidate",
+    "ENV_ALL_062_OPEN": "candidate",
+    "ENV_ALL_063": "candidate",
+    "ENV_ALL_064": "candidate",
+    "ENV_ALL_064_OPEN": "candidate",
+    "ENV_ALL_065": "candidate",
+    "ENV_ALL_066": "candidate",
+    "ENV_ALL_069": "candidate",
+    "ENV_ALL_071": "candidate",
+    "ENV_ALL_072": "candidate",
+    "ENV_ALL_073": "candidate",
+    "ENV_ALL_076": "candidate",
+    "ENV_ALL_077": "candidate",
+    "ENV_ALL_079": "candidate",
+    "ENV_ALL_080": "candidate",
+    "ENV_ALL_082": "candidate",
+    "ENV_ALL_083": "candidate",
+    "ENV_ALL_085": "candidate",
+    "ENV_ALL_086": "candidate",
+    "ENV_ALL_087": "candidate",
+    "ENV_ALL_088": "candidate",
+    "ENV_ALL_089": "candidate",
+    "ENV_ALL_091": "candidate",
+    "ENV_ALL_093": "candidate",
+    "ENV_ALL_093_OPEN": "candidate",
+    "ENV_ALL_094": "candidate",
+    "ENV_ALL_095": "candidate",
+    "ENV_ALL_096": "candidate",
+    "ENV_ALL_098": "candidate",
+    "ENV_ALL_103": "candidate",
+    "ENV_ALL_108": "candidate",
+    "ENV_ALL_111": "candidate",
+    "ENV_ALL_114": "candidate",
+    "ENV_ALL_116": "candidate",
+    "ENV_ALL_117": "candidate",
+    "ENV_ALL_118": "candidate",
+    "ENV_ALL_123": "candidate",
+    "ENV_ALL_124": "candidate",
+    "ENV_ALL_125": "candidate",
+    "ENV_ALL_126": "candidate",
+    "ENV_ALL_129": "candidate",
+    "ENV_ALL_131": "candidate",
+    "ENV_ALL_133": "candidate",
+    "ENV_ALL_134": "candidate",
+    "ENV_ALL_138": "codex",
+    "ENV_ALL_139": "codex",
+    "ENV_ALL_140": "codex",
+    "ENV_ALL_141": "codex",
+    "ENV_ALL_142": "codex",
+    "ENV_ALL_145": "codex",
+    "ENV_ALL_150": "codex",
+    "ENV_ALL_151": "codex",
+    "ENV_ALL_152": "codex",
+    "ENV_ALL_153": "codex",
+    "ENV_ALL_155": "codex",
+    "ENV_ALL_156": "codex",
+    "ENV_ALL_158": "codex",
+    "ENV_ALL_159": "codex",
+    "ENV_ALL_160": "codex",
+    "ENV_ALL_161": "codex",
+    "ENV_ALL_165": "pending",
+    "ENV_ALL_167": "pending",
+    "ENV_ALL_168": "codex",
+    "ENV_ALL_169": "pending",
+    "ENV_ALL_171": "codex",
+    "ENV_ALL_172": "pending",
+    "ENV_ALL_173": "codex",
+    "ENV_ALL_174": "codex",
+    "ENV_ALL_174_OPEN": "deferred",
+    "ENV_ALL_175": "codex",
+    "ENV_ALL_176": "codex",
+    "ENV_ALL_177": "codex",
+    "ENV_ALL_183": "codex",
+    "ENV_ALL_186": "codex",
+    "ENV_ALL_187": "pending",
+    "ENV_ALL_192": "codex",
+    "ENV_SMALL_PROPS_COLLAR": "codex",
+    "ENV_SMALL_PROPS_DOCTOR_COAT": "codex",
+    "ENV_SMALL_PROPS_PATIENT_GOWN": "codex",
+    "ENV_SMALL_PROPS_RELIC_BAG": "codex",
+    "ENV_SMALL_PROPS_SHOES": "codex",
+    "ENV_SMALL_PROPS_KEY": "codex",
+    "ENV_SMALL_PROPS_PORRIDGE": "codex",
+    "ENV_SMALL_PROPS_CANDY": "codex",
+    "ENV_SMALL_PROPS_CHOCOLATE": "codex",
+    "ENV_SMALL_PROPS_BOTTLE": "codex",
+    "ENV_SMALL_PROPS_BOTTLE_BROKEN": "codex",
+    "ENV_SMALL_PROPS_CIGARETTE": "codex",
+    "ENV_SMALL_PROPS_GLASSES": "codex",
+    "ENV_SMALL_PROPS_LAUNDRY_BAG": "codex",
+    "ENV_SMALL_PROPS_WHEELCHAIR": "pending",
+    "ENV_SMALL_PROPS_STRETCHER": "pending",
+    "ENV_SMALL_PROPS_NURSING_TRAY": "codex",
+    "ENV_SMALL_PROPS_GAUZE": "codex",
+    "ENV_SMALL_PROPS_WRISTBAND": "codex",
+    "ENV_SMALL_PROPS_CLIPBOARD": "codex",
+    "ENV_SMALL_PROPS_NUMBER_FOLDER": "codex",
+    "ENV_SMALL_PROPS_STAMP": "codex",
+    "ENV_SMALL_PROPS_MEDICINE_CUP": "codex",
+    "ENV_SMALL_PROPS_MEDICINE_BOX": "codex",
+    "ENV_SMALL_PROPS_PILLS": "codex",
+    "ENV_SMALL_PROPS_SYRINGE": "codex",
+    "ENV_SMALL_PROPS_SAMPLE_TUBE": "codex",
+    "ENV_SMALL_PROPS_KEYRING": "codex",
+    "ENV_SMALL_PROPS_RESTRAINT": "codex",
+    "ENV_SMALL_PROPS_BEDSHEET": "codex",
+    "ENV_SMALL_PROPS_CLEAN_BAG": "codex",
+    "ENV_SMALL_PROPS_MOP": "codex",
+    "ENV_SMALL_PROPS_RECORDER_CABLE": "codex",
+    "ENV_SMALL_PROPS_PACKING_BOX": "codex",
+    "ENV_SMALL_PROPS_PACKING_TAPE": "codex",
+    "ENV_SMALL_PROPS_CLAMP": "codex",
+    "ENV_SMALL_PROPS_PEN": "candidate",
+    "ENV_SMALL_PROPS_PAPER": "candidate",
+    "ENV_SMALL_PROPS_ALARM_CLOCK": "candidate",
+    "ENV_SMALL_PROPS_TISSUE": "candidate",
+    "ENV_SMALL_PROPS_TUTOR_GLASSES": "codex",
+    "ENV_SMALL_PROPS_TUTOR_POINTER": "codex",
+    "ENV_SMALL_PROPS_TUTOR_HAMMER": "codex",
+    "ENV_SMALL_PROPS_EYE_INSPECTOR": "codex",
+    "ENV_SMALL_PROPS_BOOK_OPEN": "candidate",
+    "ENV_SMALL_PROPS_BOOK_OPEN_OPEN": "candidate",
+    "ENV_SMALL_PROPS_PENCIL_CASE": "codex",
+    "ENV_SMALL_PROPS_ERASER": "candidate",
+    "ENV_SMALL_PROPS_RULER": "candidate",
+    "ENV_SMALL_PROPS_CLOTH_FOLDED": "candidate",
+    "ENV_SMALL_PROPS_CALL_BUTTON": "codex",
+    "ENV_SMALL_PROPS_COVER_CLOTH": "codex",
+    "ENV_SMALL_PROPS_TRANSPORT_BOARD": "codex",
+    "ENV_SMALL_PROPS_SOILED_BIN": "codex",
+    "ENV_SMALL_PROPS_OLD_DOOR_SIGN": "codex",
+    "ENV_SMALL_PROPS_PAINT_BRUSH": "codex",
+    "ENV_SMALL_PROPS_PAPER_SCISSORS": "codex",
+    "CHR_MAIN": "accepted",
+    "CHR_MAIN_OUTFIT_L1_WORN": "accepted",
+    "CHR_MAIN_OUTFIT_L1_DAMAGED": "accepted",
+    "CHR_MAIN_OUTFIT_L2_NEW": "accepted",
+    "CHR_MAIN_OUTFIT_L2_WORN": "accepted",
+    "CHR_MAIN_OUTFIT_L2_BLOOD": "edit",
+    "CHR_MAIN_OUTFIT_L3_NEW": "accepted",
+    "CHR_MAIN_OUTFIT_L3_WORN": "accepted",
+    "CHR_MAIN_OUTFIT_L3_BLOOD": "edit",
+    "CHR_MAIN_OUTFIT_L4_COAT": "accepted",
+    "CHR_MAIN_OUTFIT_L4_COAT_WORN": "accepted",
+    "CHR_MAIN_OUTFIT_L4_COAT_BLOOD": "edit",
+    "CHR_MAIN_OUTFIT_L5_SUIT": "accepted",
+    "CHR_MAIN_OUTFIT_L6_ROBE": "accepted",
+    "CHR_MAIN_CONTROL_DISTANT": "codex",
+    "CHR_MAIN_CONTROL_FRAGMENTED": "codex",
+    "CHR_MAIN_IDLE_D0": "accepted",
+    "CHR_MAIN_IDLE_D1": "accepted",
+    "CHR_MAIN_IDLE_D2": "accepted",
+    "CHR_MAIN_IDLE_D3": "accepted",
+    "CHR_MAIN_WALK_D0": "pending",
+    "CHR_MAIN_WALK_D1": "pending",
+    "CHR_MAIN_WALK_D2": "pending",
+    "CHR_MAIN_WALK_D3": "pending",
+    "CHR_MAIN_SEARCH_HIGH_D0": "pending",
+    "CHR_MAIN_SEARCH_HIGH_D1": "pending",
+    "CHR_MAIN_SEARCH_HIGH_D2": "pending",
+    "CHR_MAIN_SEARCH_HIGH_D3": "pending",
+    "CHR_MAIN_SEARCH_MID_D0": "pending",
+    "CHR_MAIN_SEARCH_MID_D1": "pending",
+    "CHR_MAIN_SEARCH_MID_D2": "pending",
+    "CHR_MAIN_SEARCH_MID_D3": "pending",
+    "CHR_MAIN_SEARCH_LOW_D0": "pending",
+    "CHR_MAIN_SEARCH_LOW_D1": "pending",
+    "CHR_MAIN_SEARCH_LOW_D2": "pending",
+    "CHR_MAIN_SEARCH_LOW_D3": "pending",
+    "CHR_MAIN_PICKUP_D0": "pending",
+    "CHR_MAIN_PICKUP_D1": "pending",
+    "CHR_MAIN_PICKUP_D2": "pending",
+    "CHR_MAIN_PICKUP_D3": "pending",
+    "CHR_MAIN_EAT_D0": "pending",
+    "CHR_MAIN_EAT_D1": "pending",
+    "CHR_MAIN_EAT_D2": "pending",
+    "CHR_MAIN_EAT_D3": "pending",
+    "CHR_MAIN_HURT_D0": "pending",
+    "CHR_MAIN_HURT_D1": "pending",
+    "CHR_MAIN_HURT_D2": "pending",
+    "CHR_MAIN_HURT_D3": "pending",
+    "CHR_MAIN_KICK_D0": "pending",
+    "CHR_MAIN_KICK_D1": "pending",
+    "CHR_MAIN_KICK_D2": "pending",
+    "CHR_MAIN_KICK_D3": "pending",
+    "CHR_MAIN_WITHDRAW_D0": "pending",
+    "CHR_MAIN_WITHDRAW_D1": "pending",
+    "CHR_MAIN_WITHDRAW_D2": "pending",
+    "CHR_MAIN_WITHDRAW_D3": "pending",
+    "CHR_MAIN_GUT_D0": "pending",
+    "CHR_MAIN_GUT_D1": "pending",
+    "CHR_MAIN_SCRATCH_D0": "pending",
+    "CHR_MAIN_SCRATCH_D1": "pending",
+    "CHR_MAIN_FACE_REACT_D0": "pending",
+    "CHR_MAIN_FACE_REACT_D1": "pending",
+    "CHR_MAIN_SLEEP_WAKE": "pending",
+    "CHR_MAIN_LED_REFERENCE": "pending",
+    "CHR_MAIN_COMBAT_REACTIONS": "pending",
+    "CHR_PLAYER_MASTER_2D": "accepted",
+    "CHR_PLAYER_TURN": "accepted",
+    "CHR_PLAYER_EXPR_01": "accepted",
+    "CHR_PLAYER_EXPR_02": "accepted",
+    "CHR_PLAYER_EXPR_03": "accepted",
+    "CHR_PLAYER_EXPR_04": "accepted",
+    "CHR_PLAYER_EXPR_05": "accepted",
+    "CHR_PLAYER_EXPR_06": "partial",
+    "CHR_PLAYER_ACT_TEACH": "pending",
+    "CHR_PLAYER_ACT_HAMMER": "pending",
+    "CHR_PLAYER_ACT_WAVE": "pending",
+    "CHR_PLAYER_ACT_SCRATCH": "pending",
+    "CHR_PLAYER_ACT_LAUGH": "pending",
+    "CHR_PLAYER_ACT_UNEASY": "pending",
+    "CHR_OTHER_NPCS_FATHER": "accepted",
+    "CHR_OTHER_NPCS_FATHER_BACK": "accepted",
+    "CHR_OTHER_NPCS_FATHER_ALTERED": "redo",
+    "CHR_OTHER_NPCS_FATHER_ACTION_FIRST": "partial",
+    "CHR_OTHER_NPCS_FATHER_ACTION_ALTERED": "pending",
+    "CHR_FATHER_L1_COLLAPSE": "pending",
+    "CHR_OTHER_NPCS_N02": "partial",
+    "CHR_OTHER_NPCS_N02_BACK": "accepted",
+    "CHR_OTHER_NPCS_N02_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N02_ACTION_FIRST": "edit",
+    "CHR_OTHER_NPCS_N02_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N03": "accepted",
+    "CHR_OTHER_NPCS_N03_BACK": "pending",
+    "CHR_OTHER_NPCS_N03_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N03_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N03_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N04": "accepted",
+    "CHR_OTHER_NPCS_N04_BACK": "accepted",
+    "CHR_OTHER_NPCS_N04_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N04_ACTION_FIRST": "partial",
+    "CHR_OTHER_NPCS_N04_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N05": "accepted",
+    "CHR_OTHER_NPCS_N05_BACK": "accepted",
+    "CHR_OTHER_NPCS_N05_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N05_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N05_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N06": "accepted",
+    "CHR_OTHER_NPCS_N06_BACK": "accepted",
+    "CHR_OTHER_NPCS_N06_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N06_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N06_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N07": "accepted",
+    "CHR_OTHER_NPCS_N07_BACK": "accepted",
+    "CHR_OTHER_NPCS_N07_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N07_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N07_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N08": "accepted",
+    "CHR_OTHER_NPCS_N08_BACK": "accepted",
+    "CHR_OTHER_NPCS_N08_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N08_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N08_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N09": "accepted",
+    "CHR_OTHER_NPCS_N09_BACK": "accepted",
+    "CHR_OTHER_NPCS_N09_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N09_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N09_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N10": "accepted",
+    "CHR_OTHER_NPCS_N10_BACK": "accepted",
+    "CHR_OTHER_NPCS_N10_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N10_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N10_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N11": "accepted",
+    "CHR_OTHER_NPCS_N11_BACK": "accepted",
+    "CHR_OTHER_NPCS_N11_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N11_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N11_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_CAT": "accepted",
+    "CHR_OTHER_NPCS_CAT_BACK": "accepted",
+    "CHR_OTHER_NPCS_CAT_ALTERED": "accepted",
+    "CHR_OTHER_NPCS_CAT_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_CAT_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N13": "accepted",
+    "CHR_OTHER_NPCS_N13_BACK": "accepted",
+    "CHR_OTHER_NPCS_N13_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N13_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N13_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N14": "accepted",
+    "CHR_OTHER_NPCS_N14_BACK": "accepted",
+    "CHR_OTHER_NPCS_N14_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N14_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N14_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N15": "accepted",
+    "CHR_OTHER_NPCS_N15_BACK": "accepted",
+    "CHR_OTHER_NPCS_N15_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N15_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N15_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N16": "accepted",
+    "CHR_OTHER_NPCS_N16_BACK": "accepted",
+    "CHR_OTHER_NPCS_N16_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N16_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N16_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N17": "accepted",
+    "CHR_OTHER_NPCS_N17_BACK": "accepted",
+    "CHR_OTHER_NPCS_N17_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N17_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N17_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N18": "accepted",
+    "CHR_OTHER_NPCS_N18_BACK": "accepted",
+    "CHR_OTHER_NPCS_N18_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N18_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N18_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N19": "accepted",
+    "CHR_OTHER_NPCS_N19_BACK": "accepted",
+    "CHR_OTHER_NPCS_N19_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N19_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N19_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N20": "accepted",
+    "CHR_OTHER_NPCS_N20_BACK": "accepted",
+    "CHR_OTHER_NPCS_N20_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N20_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N20_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N21": "accepted",
+    "CHR_OTHER_NPCS_N21_BACK": "accepted",
+    "CHR_OTHER_NPCS_N21_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N21_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N21_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N22": "accepted",
+    "CHR_OTHER_NPCS_N22_BACK": "pending",
+    "CHR_OTHER_NPCS_N22_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N22_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N22_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N23": "accepted",
+    "CHR_OTHER_NPCS_N23_BACK": "accepted",
+    "CHR_OTHER_NPCS_N23_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N23_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N23_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N24": "accepted",
+    "CHR_OTHER_NPCS_N24_BACK": "accepted",
+    "CHR_OTHER_NPCS_N24_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N24_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N24_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N25": "accepted",
+    "CHR_OTHER_NPCS_N25_BACK": "accepted",
+    "CHR_OTHER_NPCS_N25_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N25_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N25_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_DOG": "accepted",
+    "CHR_OTHER_NPCS_DOG_BACK": "accepted",
+    "CHR_OTHER_NPCS_DOG_ALTERED": "redo",
+    "CHR_OTHER_NPCS_DOG_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_DOG_ACTION_ALTERED": "pending",
+    "CHR_DOG_L1_REMAINS": "pending",
+    "CHR_OTHER_NPCS_N27": "accepted",
+    "CHR_OTHER_NPCS_N27_BACK": "accepted",
+    "CHR_OTHER_NPCS_N27_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N27_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N27_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N28": "accepted",
+    "CHR_OTHER_NPCS_N28_BACK": "accepted",
+    "CHR_OTHER_NPCS_N28_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N28_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N28_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N29": "accepted",
+    "CHR_OTHER_NPCS_N29_BACK": "accepted",
+    "CHR_OTHER_NPCS_N29_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N29_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N29_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N30": "accepted",
+    "CHR_OTHER_NPCS_N30_BACK": "accepted",
+    "CHR_OTHER_NPCS_N30_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N30_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N30_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N31": "accepted",
+    "CHR_OTHER_NPCS_N31_BACK": "accepted",
+    "CHR_OTHER_NPCS_N31_ALTERED": "accepted",
+    "CHR_OTHER_NPCS_N31_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N31_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_MOTHER": "accepted",
+    "CHR_OTHER_NPCS_MOTHER_BACK": "accepted",
+    "CHR_OTHER_NPCS_MOTHER_ALTERED": "redo",
+    "CHR_OTHER_NPCS_MOTHER_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_MOTHER_ACTION_ALTERED": "pending",
+    "CHR_MOTHER_L1_COLLAPSE": "accepted",
+    "CHR_OTHER_NPCS_N33": "accepted",
+    "CHR_OTHER_NPCS_N33_BACK": "accepted",
+    "CHR_OTHER_NPCS_N33_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N33_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N33_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N34": "accepted",
+    "CHR_OTHER_NPCS_N34_BACK": "accepted",
+    "CHR_OTHER_NPCS_N34_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N34_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N34_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N35": "accepted",
+    "CHR_OTHER_NPCS_N35_BACK": "accepted",
+    "CHR_OTHER_NPCS_N35_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N35_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N35_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N36": "accepted",
+    "CHR_OTHER_NPCS_N36_BACK": "accepted",
+    "CHR_OTHER_NPCS_N36_ALTERED": "accepted",
+    "CHR_OTHER_NPCS_N36_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N36_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N37": "accepted",
+    "CHR_OTHER_NPCS_N37_BACK": "accepted",
+    "CHR_OTHER_NPCS_N37_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N37_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N37_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N38": "accepted",
+    "CHR_OTHER_NPCS_N38_BACK": "accepted",
+    "CHR_OTHER_NPCS_N38_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N38_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N38_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N39": "accepted",
+    "CHR_OTHER_NPCS_N39_BACK": "accepted",
+    "CHR_OTHER_NPCS_N39_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N39_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N39_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N40": "accepted",
+    "CHR_OTHER_NPCS_N40_BACK": "accepted",
+    "CHR_OTHER_NPCS_N40_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N40_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N40_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N41": "pending",
+    "CHR_OTHER_NPCS_N41_BACK": "accepted",
+    "CHR_OTHER_NPCS_N41_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N41_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N41_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N42": "accepted",
+    "CHR_OTHER_NPCS_N42_BACK": "accepted",
+    "CHR_OTHER_NPCS_N42_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N42_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N42_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N43": "accepted",
+    "CHR_OTHER_NPCS_N43_BACK": "accepted",
+    "CHR_OTHER_NPCS_N43_ALTERED": "redo",
+    "CHR_OTHER_NPCS_N43_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N43_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N44": "accepted",
+    "CHR_OTHER_NPCS_N44_BACK": "accepted",
+    "CHR_OTHER_NPCS_N44_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N44_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N44_ACTION_ALTERED": "pending",
+    "CHR_OTHER_NPCS_N45": "accepted",
+    "CHR_OTHER_NPCS_N45_BACK": "accepted",
+    "CHR_OTHER_NPCS_N45_ALTERED": "edit",
+    "CHR_OTHER_NPCS_N45_ACTION_FIRST": "pending",
+    "CHR_OTHER_NPCS_N45_ACTION_ALTERED": "pending",
+    "CHR_HUNTER": "accepted",
+    "CHR_HUNTER_ACTION": "pending",
+    "SLIDE_A02": "candidate",
+    "SLIDE_A03": "candidate",
+    "SLIDE_A04": "candidate",
+    "SLIDE_A06": "candidate",
+    "SLIDE_B04": "candidate",
+    "SLIDE_B05": "deferred",
+    "ENDING_HOSPITAL_BASE": "pending",
+    "ENDING_HOST_EYES": "blocked",
+    "ENDING_HOST_BODY_REFERENCE": "blocked",
+    "UI_EVIDENCE_FAMILY_PHOTO": "blocked",
+    "UI_EVIDENCE_REHAB_PHOTO": "blocked",
+    "UI_RECORD_34": "blocked",
+    "UI_REHAB_WORK_ART": "pending",
+    "ENV_EVENT_BODY_UNKNOWN": "pending",
+    "ENV_ROOM_L1_ROOM_BASE": "candidate",
+    "ENV_ROOM_L2_WARD_BASE": "blocked",
+    "ENV_ROOM_L2_LOBBY_BASE": "candidate",
+    "ENV_ROOM_L2_CLINIC_BASE": "candidate",
+    "ENV_ROOM_L2_PHARMACY_BASE": "candidate",
+    "ENV_ROOM_L2_OFFICE_BASE": "candidate",
+    "ENV_ROOM_L2_WARD_ASYLUM": "blocked",
+    "ENV_ROOM_L2_LOBBY_ASYLUM": "candidate",
+    "ENV_ROOM_L2_CLINIC_ASYLUM": "candidate",
+    "ENV_ROOM_L2_PHARMACY_ASYLUM": "candidate",
+    "ENV_ROOM_L2_OFFICE_ASYLUM": "candidate",
+    "ENV_ROOM_L3_STAIRS_BASE": "pending",
+    "ENV_ROOM_L3_CORRIDOR_BASE": "pending",
+    "ENV_ROOM_L3_ACTIVITY_BASE": "pending",
+    "ENV_ROOM_L3_GROUP_BASE": "pending",
+    "ENV_ROOM_L3_QUIET_BASE": "pending",
+    "ENV_ROOM_L3_BATH_BASE": "pending",
+    "ENV_ROOM_L3_DOUBLE_BASE": "pending",
+    "ENV_ROOM_L3_WORK_BASE": "pending",
+    "ENV_ROOM_L4_ATRIUM_BASE": "pending",
+    "ENV_ROOM_L4_MEMORY_BASE": "pending",
+    "ENV_ROOM_L4_VISUAL_BASE": "pending",
+    "ENV_ROOM_L4_DECISION_BASE": "pending",
+    "ENV_ROOM_L4_BODY_BASE": "pending",
+    "ENV_ROOM_L4_BRIDGE_BASE": "pending",
+    "ENV_ROOM_L4_RHYTHM_BASE": "pending",
+    "ENV_ROOM_L4_INDEX_BASE": "pending",
+    "ENV_ROOM_L4_SWITCH_BASE": "pending",
+    "ENV_ROOM_L4_VERIFY_BASE": "pending",
+    "ENV_ROOM_L4_IDENTITY_BASE": "pending",
+    "ENV_ROOM_L4_ATRIUM_ALTERED": "edit",
+    "ENV_ROOM_L4_MEMORY_ALTERED": "pending",
+    "ENV_ROOM_L4_VISUAL_ALTERED": "pending",
+    "ENV_ROOM_L4_DECISION_ALTERED": "pending",
+    "ENV_ROOM_L4_BODY_ALTERED": "pending",
+    "ENV_ROOM_L4_BRIDGE_ALTERED": "pending",
+    "ENV_ROOM_L4_RHYTHM_ALTERED": "pending",
+    "ENV_ROOM_L4_INDEX_ALTERED": "pending",
+    "ENV_ROOM_L4_SWITCH_ALTERED": "pending",
+    "ENV_ROOM_L4_VERIFY_ALTERED": "pending",
+    "ENV_ROOM_L4_IDENTITY_ALTERED": "pending",
+    "ENV_ROOM_L5_HIPPOCAMPUS_BASE": "pending",
+    "ENV_ROOM_L5_THALAMUS_BASE": "pending",
+    "ENV_ROOM_L5_CEREBELLUM_BASE": "pending",
+    "ENV_ROOM_L5_HYPOTHALAMUS_BASE": "pending",
+    "ENV_ROOM_L5_BASAL_BASE": "pending",
+    "ENV_ROOM_L5_AMYGDALA_BASE": "pending",
+    "ENV_ROOM_L5_BRAINSTEM_BASE": "pending",
+    "ENV_ROOM_L6_SQUARE_BASE": "pending",
+    "ENV_ROOM_L6_SIDE_BASE": "pending",
+    "ENV_ROOM_L6_NARROW_BASE": "pending",
+    "ENV_ROOM_L6_TWIST_BASE": "pending",
+    "ENV_ROOM_L6_MAINT_BASE": "pending",
+    "ENV_ROOM_L6_MUTATION_BASE": "pending",
+    "ENV_ROOM_L6_EXIT_BASE": "pending",
+    "ENV_ROOM_HIDDEN_STREET": "pending",
+    "ENV_ROOM_L1_ROOM_WORN": "candidate",
+    "UI_DESIGN_ATTEMPT_FEEDBACK": "codex",
+    "UI_DESIGN_FOUNDATION": "codex",
+    "UI_DESIGN_TITLE": "codex",
+    "UI_DESIGN_PROFILE": "codex",
+    "UI_DESIGN_SAVE_CONFIRM": "codex",
+    "UI_DESIGN_PAUSE": "codex",
+    "UI_DESIGN_SETTINGS": "codex",
+    "UI_DESIGN_HUD_RESOURCES": "codex",
+    "UI_DESIGN_HUD_VITALITY": "codex",
+    "UI_DESIGN_HUD_SEARCH": "codex",
+    "UI_DESIGN_HUD_CONTROL": "codex",
+    "UI_DESIGN_VIEW_TOOLS": "codex",
+    "UI_DESIGN_CRT_SHELL": "codex",
+    "UI_DESIGN_SKILL_ICONS": "codex",
+    "UI_DESIGN_CRT_DESCRIPTION": "codex",
+    "UI_DESIGN_DIRECTION_PICKER": "codex",
+    "UI_DESIGN_CAST_FEEDBACK": "codex",
+    "UI_DESIGN_TREE_SHELL": "codex",
+    "UI_DESIGN_BODY_PREVIEW": "codex",
+    "UI_DESIGN_TREE_SPIRAL": "codex",
+    "UI_DESIGN_TREE_INSPECT": "codex",
+    "UI_DESIGN_TREE_EXCHANGE": "codex",
+    "UI_DESIGN_BOOK_SHELL": "codex",
+    "UI_DESIGN_BOOK_EVIDENCE": "codex",
+    "UI_DESIGN_BOOK_DETAILS": "codex",
+    "UI_DESIGN_INVENTORY": "codex",
+    "UI_DESIGN_DIALOGUE": "codex",
+    "UI_DESIGN_OPENING_OVERLAY": "codex",
+    "UI_DESIGN_TUTORIAL": "codex",
+    "UI_DESIGN_FATHER_GUIDANCE": "codex",
+    "UI_DESIGN_ENDING": "codex",
+    "UI_DESIGN_RUN_RECORDS": "codex",
+    "UI_DESIGN_TRANSITIONS": "codex",
+    "UI_DESIGN_BUTTONS": "codex",
+    "UI_DESIGN_PANELS_TABS_SCROLL": "codex",
+    "UI_DESIGN_INPUTS_SLIDERS": "codex",
+    "UI_DESIGN_TOOLTIPS_NOTICES": "codex",
+    "UI_DESIGN_POINTER_KEYS": "codex",
+    "VIS_DOG_L1_REMAINS": "codex",
+    "VIS_DOG_SHATTER": "codex",
+    "VIS_NPC_HURT_DOWN": "codex",
+    "VIS_HERO_ZERO": "codex",
+    "VIS_MADNESS": "codex",
+    "VIS_HAND_MARKS": "codex",
+    "VIS_PARENT_COLLAPSE": "codex",
+    "VIS_PARENT_FIGHT": "codex",
+    "VIS_CAT_HOLD": "codex",
+    "VIS_PAIR_CONTACT": "codex",
+    "VIS_MEDICINE": "codex",
+    "VIS_BANDAGE": "codex",
+    "VIS_CHAIR_BED": "codex",
+    "VIS_BODY_TRANSPORT": "codex",
+    "VIS_MOVING_OBJECTS": "codex",
+    "VIS_FURNITURE_STATES": "codex",
+    "VIS_SCREEN_RECORDS": "codex",
+    "VIS_CLOTH_MIMIC": "codex",
+    "VIS_ENV_ALTER": "codex",
+    "VIS_LOCAL_EFFECTS": "codex",
+    "VIS_BLOOD_DOOR": "codex",
+    "VIS_UI_FEEDBACK": "codex",
+    "VIS_STORY_ENDING": "codex"
+  },
+  "source_progress": {
+    "schema_version": 2,
+    "kind": "progress",
+    "updated": "2026-10-16",
+    "art": [
+      {
+        "id": "ART_CODE_UI",
+        "status": "B3功能分项通过，正式美术/全排列待验",
+        "file": "neurons/scripts/ui/campaign_menu.gd",
+        "notes": "B3真实CRT/鼠标读纸/袋/外侧观察窗；32目标接触与读纸反馈、原护士手持/台面容器，16.07秒连续无声操作已保存；新PCK43/0/EXE入口通过。代码占位不代表正式图像批准，无新增人工UI任务。",
+        "owner": "Codex"
+      },
+      {
+        "id": "ART_CODE_DERIVED",
+        "status": "B3无阻塞范围已实施，5项内容待核，后关继续",
+        "file": "neurons/scripts/core/neural_rules.gd",
+        "notes": "原照片/鞋实际装袋出场→正常跨关→护士实走收存，ready/两类接触中段跨真实重试与JSON续接；独立原纸/真正成品阅读、外侧观察窗。旧数字键/同源转抄已修。未知编号/摄影/签署/白板不造内容，B4按原计划继续。",
+        "owner": "Codex"
+      }
+    ],
+    "audio": [
+      {
+        "id": "AUD_CODE_UI",
+        "status": "开发链路已接，未听验",
+        "file": "neurons/data/audio_bindings.json",
+        "notes": "冷气等既有材质可走UI通道，世界暂停不误停UI声；正常退出异步Ogg清理已修，最终相关检查stderr空。只加载/播放状态验证，未主观听验。"
+      },
+      {
+        "id": "AUD_CODE_MOVE",
+        "status": "开发链路已接，未听验",
+        "file": "neurons/data/audio_bindings.json",
+        "notes": "现有衣料声复用食用准备；每次合法尝试独立音效ID，跨JSON与新尝试不吞重试提示。保留既有脚步材质，未主观听验。"
+      },
+      {
+        "id": "AUD_CODE_BODY",
+        "status": "开发链路已接，未听验",
+        "file": "neurons/data/audio_bindings.json",
+        "notes": "离线抓挠/腹部候选按事件接入；未听验。"
+      },
+      {
+        "id": "AUD_MUSIC_ROOM",
+        "status": "开发链路已接，未听验",
+        "file": "neurons/data/audio_bindings.json",
+        "notes": "用户本地MUS_MENU/ROOM转换开发副本已播放，保留母版；不循环，循环与情绪未听验。"
+      }
+    ],
+    "form_progress": {
+      "art": {},
+      "audio": {}
+    },
+    "source_form": "NEURONS_MORPH_20261017"
+  },
+  "initial": {
+    "ART_CODE_UI": {
+      "id": "ART_CODE_UI",
+      "status": "B3功能分项通过，正式美术/全排列待验",
+      "file": "neurons/scripts/ui/campaign_menu.gd",
+      "notes": "B3真实CRT/鼠标读纸/袋/外侧观察窗；32目标接触与读纸反馈、原护士手持/台面容器，16.07秒连续无声操作已保存；新PCK43/0/EXE入口通过。代码占位不代表正式图像批准，无新增人工UI任务。",
+      "owner": "Codex"
+    },
+    "ART_CODE_DERIVED": {
+      "id": "ART_CODE_DERIVED",
+      "status": "B3无阻塞范围已实施，5项内容待核，后关继续",
+      "file": "neurons/scripts/core/neural_rules.gd",
+      "notes": "原照片/鞋实际装袋出场→正常跨关→护士实走收存，ready/两类接触中段跨真实重试与JSON续接；独立原纸/真正成品阅读、外侧观察窗。旧数字键/同源转抄已修。未知编号/摄影/签署/白板不造内容，B4按原计划继续。",
+      "owner": "Codex"
+    }
+  },
+  "source_progress_files": {
+    "desktop": {
+      "schema_version": 3,
+      "kind": "progress",
+      "updated": "2026-10-16",
+      "art": [
+        {
+          "id": "ART_CODE_UI",
+          "status": "B3功能分项通过，正式美术/全排列待验",
+          "file": "neurons/scripts/ui/campaign_menu.gd",
+          "notes": "B3真实CRT/鼠标读纸/袋/外侧观察窗；32目标接触与读纸反馈、原护士手持/台面容器，16.07秒连续无声操作已保存；新PCK43/0/EXE入口通过。代码占位不代表正式图像批准，无新增人工UI任务。",
+          "owner": "Codex"
+        },
+        {
+          "id": "ART_CODE_DERIVED",
+          "status": "B3无阻塞范围已实施，5项内容待核，后关继续",
+          "file": "neurons/scripts/core/neural_rules.gd",
+          "notes": "原照片/鞋实际装袋出场→正常跨关→护士实走收存，ready/两类接触中段跨真实重试与JSON续接；独立原纸/真正成品阅读、外侧观察窗。旧数字键/同源转抄已修。未知编号/摄影/签署/白板不造内容，B4按原计划继续。",
+          "owner": "Codex"
+        }
+      ],
+      "audio": [
+        {
+          "id": "AUD_CODE_UI",
+          "status": "开发链路已接，未听验",
+          "file": "neurons/data/audio_bindings.json",
+          "notes": "冷气等既有材质可走UI通道，世界暂停不误停UI声；正常退出异步Ogg清理已修，最终相关检查stderr空。只加载/播放状态验证，未主观听验。"
+        },
+        {
+          "id": "AUD_CODE_MOVE",
+          "status": "开发链路已接，未听验",
+          "file": "neurons/data/audio_bindings.json",
+          "notes": "现有衣料声复用食用准备；每次合法尝试独立音效ID，跨JSON与新尝试不吞重试提示。保留既有脚步材质，未主观听验。"
+        },
+        {
+          "id": "AUD_CODE_BODY",
+          "status": "开发链路已接，未听验",
+          "file": "neurons/data/audio_bindings.json",
+          "notes": "离线抓挠/腹部候选按事件接入；未听验。"
+        },
+        {
+          "id": "AUD_MUSIC_ROOM",
+          "status": "开发链路已接，未听验",
+          "file": "neurons/data/audio_bindings.json",
+          "notes": "用户本地MUS_MENU/ROOM转换开发副本已播放，保留母版；不循环，循环与情绪未听验。"
+        }
+      ],
+      "form_progress": {
+        "art": {
+          "ART_CODE_UI": {
+            "id": "ART_CODE_UI",
+            "status": "B3功能分项通过，正式美术/全排列待验",
+            "file": "neurons/scripts/ui/campaign_menu.gd",
+            "notes": "B3真实CRT/鼠标读纸/袋/外侧观察窗；32目标接触与读纸反馈、原护士手持/台面容器，16.07秒连续无声操作已保存；新PCK43/0/EXE入口通过。代码占位不代表正式图像批准，无新增人工UI任务。",
+            "owner": "Codex"
+          },
+          "ART_CODE_DERIVED": {
+            "id": "ART_CODE_DERIVED",
+            "status": "B3无阻塞范围已实施，5项内容待核，后关继续",
+            "file": "neurons/scripts/core/neural_rules.gd",
+            "notes": "原照片/鞋实际装袋出场→正常跨关→护士实走收存，ready/两类接触中段跨真实重试与JSON续接；独立原纸/真正成品阅读、外侧观察窗。旧数字键/同源转抄已修。未知编号/摄影/签署/白板不造内容，B4按原计划继续。",
+            "owner": "Codex"
+          }
+        },
+        "audio": {}
+      },
+      "source_form": "NEURONS_MORPH_20261017"
+    }
+  }
+}

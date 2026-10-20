@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "tool": "tools/build_audio_loops_20261019.py",
+  "tool_sha256": "f3859b4626bc0751b0499cb7da92d7e6fb7aaadf7aff8d9d99643639b0033a7b",
+  "ffmpeg": "ffmpeg version 9.0-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+  "variants": [
+    {
+      "id": "MUS_HOSPITAL",
+      "stream": "res://assets/audio/loops_20261019/MUS_HOSPITAL_loop.ogg",
+      "source": "DOCX/早期音乐素材/音频2/MUS_HOSPITAL_v001.wav",
+      "source_sha256": "65a18421b3fd426204d4f02c230837fab45a060b674d051377bfa6e19a2b25de",
+      "output_sha256": "23e8319598c352ccb73f28b46c560ed10fda7d5b9e4feb9cdefb2bcfeadc2bbd",
+      "overlap_s": 0.2,
+      "source_analysis": {
+        "duration_s": 271.472167,
+        "leading_below_minus55_s": 0.107833,
+        "trailing_below_minus55_s": 0.0,
+        "head_50ms_rms_dbfs": -86.713,
+        "tail_50ms_rms_dbfs": -31.128,
+        "wrap_jump_peak": 0.027112484,
+        "wrap_jump_dbfs": -31.337,
+        "peak_dbfs": -5.416
+      },
+      "processed_pcm_analysis": {
+        "duration_s": 271.272167,
+        "leading_below_minus55_s": 0.0,
+        "trailing_below_minus55_s": 0.0,
+        "head_50ms_rms_dbfs": -25.298,
+        "tail_50ms_rms_dbfs": -27.226,
+        "wrap_jump_peak": 0.008686423,
+        "wrap_jump_dbfs": -41.223,
+        "peak_dbfs": -5.416
+      },
+      "decoded_ogg_analysis": {
+        "duration_s": 271.272167,
+        "leading_below_minus55_s": 0.0,
+        "trailing_below_minus55_s": 0.0,
+        "head_50ms_rms_dbfs": -25.278,
+        "tail_50ms_rms_dbfs": -27.28,
+        "wrap_jump_peak": 0.009128343,
+        "wrap_jump_dbfs": -40.792,
+        "peak_dbfs": -5.315
+      },
+      "processing": "Cosine convex tail-to-head overlap. Recording interior and channel count retained; duration shortens only by overlap, no full musical phrase removed. Original binding and once-only stream unchanged."
+    },
+    {
+      "id": "MUS_DANGER",
+      "stream": "res://assets/audio/loops_20261019/MUS_DANGER_loop.ogg",
+      "source": "DOCX/早期音乐素材/音频2/MUS_DANGER_v001.wav",
+      "source_sha256": "14b8eb0cdbdbc014a54216e208f0c13ffde15c515e167510bd77640ca428387f",
+      "output_sha256": "aef5978dfd9fe2f63b133d908f5ee0b5f8d34b8f8967460d6988036493ea90a6",
+      "overlap_s": 0.2,
+      "source_analysis": {
+        "duration_s": 220.166333,
+        "leading_below_minus55_s": 0.168313,
+        "trailing_below_minus55_s": 0.0,
+        "head_50ms_rms_dbfs": -95.162,
+        "tail_50ms_rms_dbfs": -47.314,
+        "wrap_jump_peak": 0.005161047,
+        "wrap_jump_dbfs": -45.745,
+        "peak_dbfs": -3.737
+      },
+      "processed_pcm_analysis": {
+        "duration_s": 219.966333,
+        "leading_below_minus55_s": 0.032813,
+        "trailing_below_minus55_s": 0.025958,
+        "head_50ms_rms_dbfs": -62.823,
+        "tail_50ms_rms_dbfs": -64.753,
+        "wrap_jump_peak": 4.4346e-05,
+        "wrap_jump_dbfs": -87.063,
+        "peak_dbfs": -3.737
+      },
+      "decoded_ogg_analysis": {
+        "duration_s": 219.966333,
+        "leading_below_minus55_s": 0.035146,
+        "trailing_below_minus55_s": 0.026,
+        "head_50ms_rms_dbfs": -63.035,
+        "tail_50ms_rms_dbfs": -64.844,
+        "wrap_jump_peak": 6.7476e-05,
+        "wrap_jump_dbfs": -83.417,
+        "peak_dbfs": -3.881
+      },
+      "processing": "Cosine convex tail-to-head overlap. Recording interior and channel count retained; duration shortens only by overlap, no full musical phrase removed. Original binding and once-only stream unchanged."
+    },
+    {
+      "id": "AMB_FAN",
+      "stream": "res://assets/audio/loops_20261019/AMB_FAN_loop.ogg",
+      "source": "DOCX/早期音乐素材/音频/AMB_FAN_v001.wav",
+      "source_sha256": "7b67fdf07e98985d37333c61d209c8a0fa237729cb0efd682554010413f98eaa",
+      "output_sha256": "c147b7262780bd4ed38a0c2952fde9f12067d36518ff250d69b405a7566058b1",
+      "overlap_s": 0.12,
+      "source_analysis": {
+        "duration_s": 24.147188,
+        "leading_below_minus55_s": 0.002188,
+        "trailing_below_minus55_s": 0.0,
+        "head_50ms_rms_dbfs": -53.198,
+        "tail_50ms_rms_dbfs": -43.552,
+        "wrap_jump_peak": 0.005191565,
+        "wrap_jump_dbfs": -45.694,
+        "peak_dbfs": -23.505
+      },
+      "processed_pcm_analysis": {
+        "duration_s": 24.027188,
+        "leading_below_minus55_s": 8.3e-05,
+        "trailing_below_minus55_s": 0.000604,
+        "head_50ms_rms_dbfs": -50.167,
+        "tail_50ms_rms_dbfs": -51.901,
+        "wrap_jump_peak": 5.9009e-05,
+        "wrap_jump_dbfs": -84.582,
+        "peak_dbfs": -23.505
+      },
+      "decoded_ogg_analysis": {
+        "duration_s": 24.027188,
+        "leading_below_minus55_s": 6.3e-05,
+        "trailing_below_minus55_s": 0.000604,
+        "head_50ms_rms_dbfs": -50.271,
+        "tail_50ms_rms_dbfs": -52.057,
+        "wrap_jump_peak": 0.000225778,
+        "wrap_jump_dbfs": -72.926,
+        "peak_dbfs": -23.657
+      },
+      "processing": "Cosine convex tail-to-head overlap. Recording interior and channel count retained; duration shortens only by overlap, no full musical phrase removed. Original binding and once-only stream unchanged."
+    }
+  ],
+  "listening_verified": false,
+  "release_approved": false,
+  "scope": "Sustained-only technical loop variants for three delivered recordings. No new manual music order; no claim of seamless musical phrasing or final mixing."
+}

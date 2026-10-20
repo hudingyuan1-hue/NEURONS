@@ -1,0 +1,12 @@
+{
+  "rooms": 56,
+  "gpu_passes": 232,
+  "natural_passes": 10,
+  "natural_ending": "E2",
+  "natural_simulation_seconds": 817.266666666583,
+  "natural_hp": 100,
+  "package_passes": 154,
+  "formal_art_accepted": false,
+  "human_normal_speed_accepted": false,
+  "second_pc_accepted": false
+}

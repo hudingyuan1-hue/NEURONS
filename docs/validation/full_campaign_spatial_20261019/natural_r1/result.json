@@ -1,0 +1,11 @@
+{
+  "passes": [
+    "entire route uses isolated saves"
+  ],
+  "failures": [
+    "real profile entry is available"
+  ],
+  "reason": "driver_profile_entry_failed",
+  "rendered": false,
+  "scope": "Actual first headless standalone invocation failed to open profile through synthetic pointer input before campaign initialization; exit1. No gameplay exercised or overridden. Preserved as a driver/environment failure, not a game regression."
+}

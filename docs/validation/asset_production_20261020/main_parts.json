@@ -1,0 +1,2366 @@
+{
+  "method": "Generated true-alpha parts; source-preserving alpha cleanup, corrective collar patch, local Polygon2D skinning. No white-key removal.",
+  "directions": {
+    "D0": {
+      "enabled": true,
+      "atlas": "res://assets/production/characters/main/CHR_MAIN_BLUE_D0_ATLAS_v002.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "foot_anchor_px": [
+        580,
+        1315
+      ],
+      "body_height_px": 1290,
+      "bones": {
+        "pelvis": {
+          "rest_px": [
+            565,
+            752
+          ]
+        },
+        "spine": {
+          "rest_px": [
+            565,
+            600
+          ]
+        },
+        "chest": {
+          "rest_px": [
+            555,
+            360
+          ]
+        },
+        "neck": {
+          "rest_px": [
+            575,
+            270
+          ]
+        },
+        "head": {
+          "rest_px": [
+            580,
+            250
+          ]
+        },
+        "left_upper_arm": {
+          "rest_px": [
+            442,
+            342
+          ]
+        },
+        "left_forearm": {
+          "rest_px": [
+            423,
+            525
+          ]
+        },
+        "left_hand": {
+          "rest_px": [
+            438,
+            707
+          ]
+        },
+        "right_upper_arm": {
+          "rest_px": [
+            642,
+            320
+          ]
+        },
+        "right_forearm": {
+          "rest_px": [
+            693,
+            485
+          ]
+        },
+        "right_hand": {
+          "rest_px": [
+            705,
+            660
+          ]
+        },
+        "left_thigh": {
+          "rest_px": [
+            515,
+            778
+          ]
+        },
+        "left_shin": {
+          "rest_px": [
+            495,
+            1002
+          ]
+        },
+        "left_foot": {
+          "rest_px": [
+            486,
+            1237
+          ]
+        },
+        "right_thigh": {
+          "rest_px": [
+            623,
+            775
+          ]
+        },
+        "right_shin": {
+          "rest_px": [
+            618,
+            982
+          ]
+        },
+        "right_foot": {
+          "rest_px": [
+            615,
+            1186
+          ]
+        }
+      },
+      "parts": [
+        {
+          "id": "head",
+          "region_px": [
+            16,
+            16,
+            225,
+            272
+          ],
+          "original_grid_cell": 0,
+          "painted_pixels": 38270,
+          "directional_foot": false,
+          "bone": "head",
+          "pivot_px": [
+            112.5,
+            255.68
+          ],
+          "scale": [
+            0.86,
+            0.86
+          ],
+          "z_index": 20,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "torso",
+          "region_px": [
+            400,
+            16,
+            212,
+            307
+          ],
+          "original_grid_cell": 1,
+          "painted_pixels": 1137236,
+          "directional_foot": false,
+          "bone": "chest",
+          "pivot_px": [
+            106.0,
+            85.96
+          ],
+          "scale": [
+            1.61,
+            1.61
+          ],
+          "z_index": 10,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "pelvis",
+          "region_px": [
+            784,
+            16,
+            202,
+            120
+          ],
+          "original_grid_cell": 2,
+          "painted_pixels": 40916,
+          "directional_foot": false,
+          "bone": "pelvis",
+          "pivot_px": [
+            101.0,
+            32.400000000000006
+          ],
+          "scale": [
+            1.17,
+            0.82
+          ],
+          "z_index": 5,
+          "rotation_degrees": 0,
+          "offset_px": [
+            0,
+            -35
+          ]
+        },
+        {
+          "id": "left_upper_arm",
+          "region_px": [
+            1168,
+            16,
+            134,
+            232
+          ],
+          "original_grid_cell": 3,
+          "painted_pixels": 21961,
+          "directional_foot": false,
+          "bone": "left_upper_arm",
+          "pivot_px": [
+            46.646,
+            42.0
+          ],
+          "scale": [
+            0.7,
+            1.087349
+          ],
+          "z_index": 9,
+          "rotation_degrees": 15.185184,
+          "attachment_px": [
+            [
+              46.646031746031746,
+              42.0
+            ],
+            [
+              88.9293893129771,
+              209.0
+            ]
+          ]
+        },
+        {
+          "id": "left_forearm",
+          "region_px": [
+            16,
+            400,
+            130,
+            268
+          ],
+          "original_grid_cell": 4,
+          "painted_pixels": 20838,
+          "directional_foot": false,
+          "bone": "left_forearm",
+          "pivot_px": [
+            81.0,
+            48.0
+          ],
+          "scale": [
+            0.7,
+            0.937816
+          ],
+          "z_index": 8,
+          "rotation_degrees": -12.345575,
+          "attachment_px": [
+            [
+              81.0,
+              48.0
+            ],
+            [
+              46.34310344827586,
+              241.0
+            ]
+          ]
+        },
+        {
+          "id": "left_hand",
+          "region_px": [
+            400,
+            400,
+            108,
+            185
+          ],
+          "original_grid_cell": 5,
+          "painted_pixels": 11337,
+          "directional_foot": false,
+          "bone": "left_hand",
+          "pivot_px": [
+            54.0,
+            14.8
+          ],
+          "scale": [
+            0.62,
+            0.62
+          ],
+          "z_index": 7,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "right_upper_arm",
+          "region_px": [
+            784,
+            400,
+            123,
+            233
+          ],
+          "original_grid_cell": 6,
+          "painted_pixels": 22283,
+          "directional_foot": false,
+          "bone": "right_upper_arm",
+          "pivot_px": [
+            77.712,
+            42.0
+          ],
+          "scale": [
+            0.62,
+            1.024324
+          ],
+          "z_index": -5,
+          "rotation_degrees": -22.015112,
+          "attachment_px": [
+            [
+              77.71235194585448,
+              42.0
+            ],
+            [
+              54.21380471380471,
+              210.0
+            ]
+          ]
+        },
+        {
+          "id": "right_forearm",
+          "region_px": [
+            1168,
+            400,
+            120,
+            195
+          ],
+          "original_grid_cell": 7,
+          "painted_pixels": 13730,
+          "directional_foot": false,
+          "bone": "right_forearm",
+          "pivot_px": [
+            43.427,
+            35.0
+          ],
+          "scale": [
+            0.65,
+            1.236823
+          ],
+          "z_index": -6,
+          "rotation_degrees": 2.255705,
+          "attachment_px": [
+            [
+              43.42702702702703,
+              35.0
+            ],
+            [
+              72.47099767981439,
+              176.0
+            ]
+          ]
+        },
+        {
+          "id": "right_hand",
+          "region_px": [
+            16,
+            784,
+            110,
+            166
+          ],
+          "original_grid_cell": 8,
+          "painted_pixels": 10281,
+          "directional_foot": false,
+          "bone": "right_hand",
+          "pivot_px": [
+            55.0,
+            13.28
+          ],
+          "scale": [
+            0.6,
+            0.6
+          ],
+          "z_index": -7,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "left_thigh",
+          "region_px": [
+            400,
+            784,
+            153,
+            252
+          ],
+          "original_grid_cell": 9,
+          "painted_pixels": 31005,
+          "directional_foot": false,
+          "bone": "left_thigh",
+          "pivot_px": [
+            85.142,
+            45.0
+          ],
+          "scale": [
+            0.8,
+            1.230223
+          ],
+          "z_index": 2,
+          "rotation_degrees": -0.277413,
+          "attachment_px": [
+            [
+              85.14221724524076,
+              45.0
+            ],
+            [
+              58.786821705426355,
+              227.0
+            ]
+          ]
+        },
+        {
+          "id": "left_shin",
+          "region_px": [
+            784,
+            784,
+            112,
+            280
+          ],
+          "original_grid_cell": 10,
+          "painted_pixels": 25185,
+          "directional_foot": false,
+          "bone": "left_shin",
+          "pivot_px": [
+            57.858,
+            50.0
+          ],
+          "scale": [
+            0.9,
+            1.16415
+          ],
+          "z_index": 1,
+          "rotation_degrees": 1.56651,
+          "attachment_px": [
+            [
+              57.858176555716355,
+              50.0
+            ],
+            [
+              55.0,
+              252.0
+            ]
+          ]
+        },
+        {
+          "id": "left_foot",
+          "region_px": [
+            1168,
+            784,
+            177,
+            195
+          ],
+          "original_grid_cell": 11,
+          "painted_pixels": 17778,
+          "directional_foot": false,
+          "bone": "left_foot",
+          "pivot_px": [
+            70.8,
+            33.15
+          ],
+          "scale": [
+            0.68,
+            0.68
+          ],
+          "z_index": 0,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "right_thigh",
+          "region_px": [
+            16,
+            1168,
+            172,
+            251
+          ],
+          "original_grid_cell": 12,
+          "painted_pixels": 31563,
+          "directional_foot": false,
+          "bone": "right_thigh",
+          "pivot_px": [
+            64.928,
+            45.0
+          ],
+          "scale": [
+            0.7,
+            1.130193
+          ],
+          "z_index": -2,
+          "rotation_degrees": 10.287844,
+          "attachment_px": [
+            [
+              64.92824074074075,
+              45.0
+            ],
+            [
+              110.71285892634208,
+              226.0
+            ]
+          ]
+        },
+        {
+          "id": "right_shin",
+          "region_px": [
+            400,
+            1168,
+            105,
+            284
+          ],
+          "original_grid_cell": 13,
+          "painted_pixels": 25040,
+          "directional_foot": false,
+          "bone": "right_shin",
+          "pivot_px": [
+            51.142,
+            51.0
+          ],
+          "scale": [
+            0.9,
+            0.995052
+          ],
+          "z_index": -3,
+          "rotation_degrees": 1.925355,
+          "attachment_px": [
+            [
+              51.14180206794683,
+              51.0
+            ],
+            [
+              55.425774877650895,
+              256.0
+            ]
+          ]
+        },
+        {
+          "id": "right_foot",
+          "region_px": [
+            784,
+            1168,
+            174,
+            202
+          ],
+          "original_grid_cell": 14,
+          "painted_pixels": 18898,
+          "directional_foot": false,
+          "bone": "right_foot",
+          "pivot_px": [
+            48.72,
+            32.32
+          ],
+          "scale": [
+            0.68,
+            0.68
+          ],
+          "z_index": -4,
+          "rotation_degrees": 0
+        }
+      ],
+      "knee_bend": {
+        "left": -1,
+        "right": -1
+      },
+      "elbow_bend": {
+        "left": -1,
+        "right": 1
+      },
+      "soft_skinning": true,
+      "depth_projection": false,
+      "crouch_drop_fraction": 0.13,
+      "adaptive_pelvis": true,
+      "stride_m": 0.55,
+      "walk_lift_fraction": 0.025,
+      "source_mother": "DOCX/最终素材/动作/CHR_MAIN_IDLE_D0__idle__P01_v004.png",
+      "status": "Actual motion and contact verification pending",
+      "sockets": {
+        "left_hand": {
+          "bone": "left_hand",
+          "offset_px": [
+            0,
+            36
+          ]
+        },
+        "right_hand": {
+          "bone": "right_hand",
+          "offset_px": [
+            0,
+            36
+          ]
+        },
+        "mouth": {
+          "bone": "head",
+          "offset_px": [
+            49,
+            -25
+          ]
+        }
+      }
+    },
+    "D1": {
+      "enabled": true,
+      "atlas": "res://assets/production/characters/main/CHR_MAIN_BLUE_D1_ATLAS_v002.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "foot_anchor_px": [
+        555,
+        1280
+      ],
+      "body_height_px": 1210,
+      "bones": {
+        "pelvis": {
+          "rest_px": [
+            555,
+            750
+          ]
+        },
+        "spine": {
+          "rest_px": [
+            550,
+            590
+          ]
+        },
+        "chest": {
+          "rest_px": [
+            540,
+            370
+          ]
+        },
+        "neck": {
+          "rest_px": [
+            550,
+            260
+          ]
+        },
+        "head": {
+          "rest_px": [
+            552,
+            250
+          ]
+        },
+        "left_upper_arm": {
+          "rest_px": [
+            445,
+            330
+          ]
+        },
+        "left_forearm": {
+          "rest_px": [
+            405,
+            515
+          ]
+        },
+        "left_hand": {
+          "rest_px": [
+            414,
+            685
+          ]
+        },
+        "right_upper_arm": {
+          "rest_px": [
+            614,
+            354
+          ]
+        },
+        "right_forearm": {
+          "rest_px": [
+            657,
+            545
+          ]
+        },
+        "right_hand": {
+          "rest_px": [
+            680,
+            735
+          ]
+        },
+        "left_thigh": {
+          "rest_px": [
+            495,
+            758
+          ]
+        },
+        "left_shin": {
+          "rest_px": [
+            491,
+            980
+          ]
+        },
+        "left_foot": {
+          "rest_px": [
+            484,
+            1190
+          ]
+        },
+        "right_thigh": {
+          "rest_px": [
+            605,
+            770
+          ]
+        },
+        "right_shin": {
+          "rest_px": [
+            610,
+            1003
+          ]
+        },
+        "right_foot": {
+          "rest_px": [
+            619,
+            1230
+          ]
+        }
+      },
+      "parts": [
+        {
+          "id": "head",
+          "region_px": [
+            16,
+            16,
+            214,
+            207
+          ],
+          "original_grid_cell": 0,
+          "painted_pixels": 36273,
+          "directional_foot": false,
+          "bone": "head",
+          "pivot_px": [
+            107.0,
+            194.58
+          ],
+          "scale": [
+            0.86,
+            0.86
+          ],
+          "z_index": 20,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "torso",
+          "region_px": [
+            400,
+            16,
+            199,
+            298
+          ],
+          "original_grid_cell": 1,
+          "painted_pixels": 1059716,
+          "directional_foot": false,
+          "bone": "chest",
+          "pivot_px": [
+            99.5,
+            83.44
+          ],
+          "scale": [
+            1.49,
+            1.58
+          ],
+          "z_index": 10,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "pelvis",
+          "region_px": [
+            784,
+            16,
+            210,
+            118
+          ],
+          "original_grid_cell": 2,
+          "painted_pixels": 45083,
+          "directional_foot": false,
+          "bone": "pelvis",
+          "pivot_px": [
+            105.0,
+            31.860000000000003
+          ],
+          "scale": [
+            1.17,
+            0.82
+          ],
+          "z_index": 5,
+          "rotation_degrees": 0,
+          "offset_px": [
+            0,
+            -50
+          ]
+        },
+        {
+          "id": "left_upper_arm",
+          "region_px": [
+            1168,
+            16,
+            162,
+            217
+          ],
+          "original_grid_cell": 3,
+          "painted_pixels": 23302,
+          "directional_foot": false,
+          "bone": "left_upper_arm",
+          "pivot_px": [
+            56.212,
+            39.0
+          ],
+          "scale": [
+            0.66,
+            1.188266
+          ],
+          "z_index": -5,
+          "rotation_degrees": 23.859873,
+          "attachment_px": [
+            [
+              56.2123745819398,
+              39.0
+            ],
+            [
+              114.16876971608833,
+              195.0
+            ]
+          ]
+        },
+        {
+          "id": "left_forearm",
+          "region_px": [
+            16,
+            400,
+            139,
+            262
+          ],
+          "original_grid_cell": 4,
+          "painted_pixels": 22797,
+          "directional_foot": false,
+          "bone": "left_forearm",
+          "pivot_px": [
+            86.637,
+            47.0
+          ],
+          "scale": [
+            0.68,
+            0.890097
+          ],
+          "z_index": -6,
+          "rotation_degrees": -11.843066,
+          "attachment_px": [
+            [
+              86.6374269005848,
+              47.0
+            ],
+            [
+              48.28304821150855,
+              236.0
+            ]
+          ]
+        },
+        {
+          "id": "left_hand",
+          "region_px": [
+            400,
+            400,
+            111,
+            194
+          ],
+          "original_grid_cell": 5,
+          "painted_pixels": 12418,
+          "directional_foot": false,
+          "bone": "left_hand",
+          "pivot_px": [
+            55.5,
+            15.52
+          ],
+          "scale": [
+            0.62,
+            0.62
+          ],
+          "z_index": -7,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "right_upper_arm",
+          "region_px": [
+            784,
+            400,
+            154,
+            221
+          ],
+          "original_grid_cell": 6,
+          "painted_pixels": 23524,
+          "directional_foot": false,
+          "bone": "right_upper_arm",
+          "pivot_px": [
+            104.066,
+            40.0
+          ],
+          "scale": [
+            0.75,
+            1.201618
+          ],
+          "z_index": 9,
+          "rotation_degrees": -25.298591,
+          "attachment_px": [
+            [
+              104.06557377049181,
+              40.0
+            ],
+            [
+              47.07210031347962,
+              199.0
+            ]
+          ]
+        },
+        {
+          "id": "right_forearm",
+          "region_px": [
+            1168,
+            400,
+            146,
+            227
+          ],
+          "original_grid_cell": 7,
+          "painted_pixels": 19718,
+          "directional_foot": false,
+          "bone": "right_forearm",
+          "pivot_px": [
+            49.645,
+            41.0
+          ],
+          "scale": [
+            0.75,
+            1.160442
+          ],
+          "z_index": 8,
+          "rotation_degrees": 1.862463,
+          "attachment_px": [
+            [
+              49.644776119402984,
+              41.0
+            ],
+            [
+              88.52867383512545,
+              204.0
+            ]
+          ]
+        },
+        {
+          "id": "right_hand",
+          "region_px": [
+            16,
+            784,
+            122,
+            189
+          ],
+          "original_grid_cell": 8,
+          "painted_pixels": 12281,
+          "directional_foot": false,
+          "bone": "right_hand",
+          "pivot_px": [
+            61.0,
+            15.12
+          ],
+          "scale": [
+            0.6,
+            0.6
+          ],
+          "z_index": 7,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "left_thigh",
+          "region_px": [
+            400,
+            784,
+            149,
+            249
+          ],
+          "original_grid_cell": 9,
+          "painted_pixels": 32244,
+          "directional_foot": false,
+          "bone": "left_thigh",
+          "pivot_px": [
+            81.714,
+            45.0
+          ],
+          "scale": [
+            0.8,
+            1.236547
+          ],
+          "z_index": -2,
+          "rotation_degrees": -3.499142,
+          "attachment_px": [
+            [
+              81.71428571428571,
+              45.0
+            ],
+            [
+              59.78678304239401,
+              224.0
+            ]
+          ]
+        },
+        {
+          "id": "left_shin",
+          "region_px": [
+            784,
+            784,
+            117,
+            278
+          ],
+          "original_grid_cell": 10,
+          "painted_pixels": 27978,
+          "directional_foot": false,
+          "bone": "left_shin",
+          "pivot_px": [
+            58.357,
+            50.0
+          ],
+          "scale": [
+            0.9,
+            1.050335
+          ],
+          "z_index": -3,
+          "rotation_degrees": 3.153964,
+          "attachment_px": [
+            [
+              58.357142857142854,
+              50.0
+            ],
+            [
+              63.42897327707454,
+              250.0
+            ]
+          ]
+        },
+        {
+          "id": "left_foot",
+          "region_px": [
+            1168,
+            784,
+            180,
+            160
+          ],
+          "original_grid_cell": 11,
+          "painted_pixels": 144740,
+          "directional_foot": true,
+          "bone": "left_foot",
+          "pivot_px": [
+            111.71232876712328,
+            88.0
+          ],
+          "scale": [
+            0.6111111111111112,
+            0.6111111111111112
+          ],
+          "z_index": -4,
+          "rotation_degrees": 0,
+          "anchor_method": "skin-only centroid for ankle landmark; no color-key extraction"
+        },
+        {
+          "id": "right_thigh",
+          "region_px": [
+            16,
+            1168,
+            176,
+            256
+          ],
+          "original_grid_cell": 12,
+          "painted_pixels": 35613,
+          "directional_foot": false,
+          "bone": "right_thigh",
+          "pivot_px": [
+            70.214,
+            46.0
+          ],
+          "scale": [
+            0.88,
+            1.252014
+          ],
+          "z_index": 2,
+          "rotation_degrees": 7.47329,
+          "attachment_px": [
+            [
+              70.21443965517241,
+              46.0
+            ],
+            [
+              110.28539071347679,
+              230.0
+            ]
+          ]
+        },
+        {
+          "id": "right_shin",
+          "region_px": [
+            400,
+            1168,
+            120,
+            270
+          ],
+          "original_grid_cell": 13,
+          "painted_pixels": 27739,
+          "directional_foot": false,
+          "bone": "right_shin",
+          "pivot_px": [
+            59.287,
+            49.0
+          ],
+          "scale": [
+            0.95,
+            1.170981
+          ],
+          "z_index": 1,
+          "rotation_degrees": -1.79107,
+          "attachment_px": [
+            [
+              59.28679245283019,
+              49.0
+            ],
+            [
+              61.287553648068666,
+              243.0
+            ]
+          ]
+        },
+        {
+          "id": "right_foot",
+          "region_px": [
+            784,
+            1168,
+            180,
+            164
+          ],
+          "original_grid_cell": 14,
+          "painted_pixels": 146818,
+          "directional_foot": true,
+          "bone": "right_foot",
+          "pivot_px": [
+            70.2248201438849,
+            90.0
+          ],
+          "scale": [
+            0.7777777777777778,
+            0.7777777777777778
+          ],
+          "z_index": 0,
+          "rotation_degrees": 0,
+          "anchor_method": "skin-only centroid for ankle landmark; no color-key extraction"
+        }
+      ],
+      "knee_bend": {
+        "left": -1,
+        "right": -1
+      },
+      "elbow_bend": {
+        "left": -1,
+        "right": 1
+      },
+      "soft_skinning": true,
+      "depth_projection": true,
+      "crouch_drop_fraction": 0.13,
+      "adaptive_pelvis": true,
+      "stride_m": 0.5,
+      "walk_lift_fraction": 0.025,
+      "source_mother": "DOCX/最终素材/动作/CHR_MAIN_IDLE_D1__idle__P01_v004.png",
+      "status": "Actual motion and contact verification pending",
+      "sockets": {
+        "left_hand": {
+          "bone": "left_hand",
+          "offset_px": [
+            0,
+            36
+          ]
+        },
+        "right_hand": {
+          "bone": "right_hand",
+          "offset_px": [
+            0,
+            36
+          ]
+        },
+        "mouth": {
+          "bone": "head",
+          "offset_px": [
+            0,
+            -35
+          ]
+        }
+      }
+    },
+    "D2": {
+      "enabled": true,
+      "atlas": "res://assets/production/characters/main/CHR_MAIN_BLUE_D2_ATLAS_v002.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "foot_anchor_px": [
+        555,
+        1330
+      ],
+      "body_height_px": 1280,
+      "bones": {
+        "pelvis": {
+          "rest_px": [
+            555,
+            752
+          ]
+        },
+        "spine": {
+          "rest_px": [
+            558,
+            600
+          ]
+        },
+        "chest": {
+          "rest_px": [
+            555,
+            360
+          ]
+        },
+        "neck": {
+          "rest_px": [
+            550,
+            272
+          ]
+        },
+        "head": {
+          "rest_px": [
+            545,
+            248
+          ]
+        },
+        "left_upper_arm": {
+          "rest_px": [
+            454,
+            323
+          ]
+        },
+        "left_forearm": {
+          "rest_px": [
+            420,
+            495
+          ]
+        },
+        "left_hand": {
+          "rest_px": [
+            415,
+            672
+          ]
+        },
+        "right_upper_arm": {
+          "rest_px": [
+            635,
+            355
+          ]
+        },
+        "right_forearm": {
+          "rest_px": [
+            673,
+            540
+          ]
+        },
+        "right_hand": {
+          "rest_px": [
+            664,
+            724
+          ]
+        },
+        "left_thigh": {
+          "rest_px": [
+            501,
+            780
+          ]
+        },
+        "left_shin": {
+          "rest_px": [
+            505,
+            980
+          ]
+        },
+        "left_foot": {
+          "rest_px": [
+            500,
+            1170
+          ]
+        },
+        "right_thigh": {
+          "rest_px": [
+            615,
+            785
+          ]
+        },
+        "right_shin": {
+          "rest_px": [
+            623,
+            1025
+          ]
+        },
+        "right_foot": {
+          "rest_px": [
+            632,
+            1240
+          ]
+        }
+      },
+      "parts": [
+        {
+          "id": "head",
+          "region_px": [
+            16,
+            16,
+            238,
+            277
+          ],
+          "original_grid_cell": 0,
+          "painted_pixels": 41161,
+          "directional_foot": false,
+          "bone": "head",
+          "pivot_px": [
+            119.0,
+            260.38
+          ],
+          "scale": [
+            0.86,
+            0.86
+          ],
+          "z_index": 20,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "torso",
+          "region_px": [
+            400,
+            16,
+            224,
+            306
+          ],
+          "original_grid_cell": 1,
+          "painted_pixels": 1110886,
+          "directional_foot": false,
+          "bone": "chest",
+          "pivot_px": [
+            112.0,
+            85.68
+          ],
+          "scale": [
+            1.58,
+            1.61
+          ],
+          "z_index": 10,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "pelvis",
+          "region_px": [
+            784,
+            16,
+            235,
+            127
+          ],
+          "original_grid_cell": 2,
+          "painted_pixels": 50638,
+          "directional_foot": false,
+          "bone": "pelvis",
+          "pivot_px": [
+            117.5,
+            34.29
+          ],
+          "scale": [
+            1.17,
+            0.82
+          ],
+          "z_index": 5,
+          "rotation_degrees": 0,
+          "offset_px": [
+            0,
+            -50
+          ]
+        },
+        {
+          "id": "left_upper_arm",
+          "region_px": [
+            1168,
+            16,
+            163,
+            239
+          ],
+          "original_grid_cell": 3,
+          "painted_pixels": 26573,
+          "directional_foot": false,
+          "bone": "left_upper_arm",
+          "pivot_px": [
+            54.929,
+            43.0
+          ],
+          "scale": [
+            0.64,
+            0.99472
+          ],
+          "z_index": -5,
+          "rotation_degrees": 23.802615,
+          "attachment_px": [
+            [
+              54.929394812680115,
+              43.0
+            ],
+            [
+              114.78716216216216,
+              215.0
+            ]
+          ]
+        },
+        {
+          "id": "left_forearm",
+          "region_px": [
+            16,
+            400,
+            167,
+            266
+          ],
+          "original_grid_cell": 4,
+          "painted_pixels": 24045,
+          "directional_foot": false,
+          "bone": "left_forearm",
+          "pivot_px": [
+            111.5,
+            48.0
+          ],
+          "scale": [
+            0.66,
+            0.904653
+          ],
+          "z_index": -6,
+          "rotation_degrees": -11.007886,
+          "attachment_px": [
+            [
+              111.5,
+              48.0
+            ],
+            [
+              52.85589519650655,
+              239.0
+            ]
+          ]
+        },
+        {
+          "id": "left_hand",
+          "region_px": [
+            400,
+            400,
+            128,
+            203
+          ],
+          "original_grid_cell": 5,
+          "painted_pixels": 13590,
+          "directional_foot": false,
+          "bone": "left_hand",
+          "pivot_px": [
+            64.0,
+            16.24
+          ],
+          "scale": [
+            0.62,
+            0.62
+          ],
+          "z_index": -7,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "right_upper_arm",
+          "region_px": [
+            784,
+            400,
+            149,
+            218
+          ],
+          "original_grid_cell": 6,
+          "painted_pixels": 24824,
+          "directional_foot": false,
+          "bone": "right_upper_arm",
+          "pivot_px": [
+            96.924,
+            39.0
+          ],
+          "scale": [
+            0.74,
+            1.188612
+          ],
+          "z_index": 9,
+          "rotation_degrees": -20.461019,
+          "attachment_px": [
+            [
+              96.92397660818713,
+              39.0
+            ],
+            [
+              57.64307228915663,
+              196.0
+            ]
+          ]
+        },
+        {
+          "id": "right_forearm",
+          "region_px": [
+            1168,
+            400,
+            150,
+            231
+          ],
+          "original_grid_cell": 7,
+          "painted_pixels": 19427,
+          "directional_foot": false,
+          "bone": "right_forearm",
+          "pivot_px": [
+            51.861,
+            42.0
+          ],
+          "scale": [
+            0.72,
+            1.097147
+          ],
+          "z_index": 8,
+          "rotation_degrees": 11.446506,
+          "attachment_px": [
+            [
+              51.861070911722145,
+              42.0
+            ],
+            [
+              90.32544378698225,
+              208.0
+            ]
+          ]
+        },
+        {
+          "id": "right_hand",
+          "region_px": [
+            16,
+            784,
+            133,
+            196
+          ],
+          "original_grid_cell": 8,
+          "painted_pixels": 13704,
+          "directional_foot": false,
+          "bone": "right_hand",
+          "pivot_px": [
+            66.5,
+            15.68
+          ],
+          "scale": [
+            0.6,
+            0.6
+          ],
+          "z_index": 7,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "left_thigh",
+          "region_px": [
+            400,
+            784,
+            160,
+            264
+          ],
+          "original_grid_cell": 9,
+          "painted_pixels": 35504,
+          "directional_foot": false,
+          "bone": "left_thigh",
+          "pivot_px": [
+            87.714,
+            48.0
+          ],
+          "scale": [
+            0.8,
+            1.048599
+          ],
+          "z_index": -2,
+          "rotation_degrees": -6.291568,
+          "attachment_px": [
+            [
+              87.71382636655949,
+              48.0
+            ],
+            [
+              65.28670520231213,
+              238.0
+            ]
+          ]
+        },
+        {
+          "id": "left_shin",
+          "region_px": [
+            784,
+            784,
+            121,
+            283
+          ],
+          "original_grid_cell": 10,
+          "painted_pixels": 27769,
+          "directional_foot": false,
+          "bone": "left_shin",
+          "pivot_px": [
+            63.215,
+            51.0
+          ],
+          "scale": [
+            0.9,
+            0.93168
+          ],
+          "z_index": -3,
+          "rotation_degrees": 1.835186,
+          "attachment_px": [
+            [
+              63.215425531914896,
+              51.0
+            ],
+            [
+              64.42346208869814,
+              255.0
+            ]
+          ]
+        },
+        {
+          "id": "left_foot",
+          "region_px": [
+            1168,
+            784,
+            180,
+            145
+          ],
+          "original_grid_cell": 11,
+          "painted_pixels": 124583,
+          "directional_foot": true,
+          "bone": "left_foot",
+          "pivot_px": [
+            129.97752808988764,
+            80.0
+          ],
+          "scale": [
+            0.8888888888888888,
+            0.8888888888888888
+          ],
+          "z_index": -4,
+          "rotation_degrees": 0,
+          "anchor_method": "skin-only centroid for ankle landmark; no color-key extraction"
+        },
+        {
+          "id": "right_thigh",
+          "region_px": [
+            16,
+            1168,
+            209,
+            257
+          ],
+          "original_grid_cell": 12,
+          "painted_pixels": 38898,
+          "directional_foot": false,
+          "bone": "right_thigh",
+          "pivot_px": [
+            77.0,
+            46.0
+          ],
+          "scale": [
+            0.85,
+            1.269745
+          ],
+          "z_index": 2,
+          "rotation_degrees": 10.07125,
+          "attachment_px": [
+            [
+              77.0,
+              46.0
+            ],
+            [
+              135.6425576519916,
+              231.0
+            ]
+          ]
+        },
+        {
+          "id": "right_shin",
+          "region_px": [
+            400,
+            1168,
+            120,
+            292
+          ],
+          "original_grid_cell": 13,
+          "painted_pixels": 28271,
+          "directional_foot": false,
+          "bone": "right_shin",
+          "pivot_px": [
+            54.644,
+            53.0
+          ],
+          "scale": [
+            0.95,
+            1.023054
+          ],
+          "z_index": 1,
+          "rotation_degrees": 0.856638,
+          "attachment_px": [
+            [
+              54.64381720430107,
+              53.0
+            ],
+            [
+              67.5,
+              263.0
+            ]
+          ]
+        },
+        {
+          "id": "right_foot",
+          "region_px": [
+            784,
+            1168,
+            180,
+            339
+          ],
+          "original_grid_cell": 14,
+          "painted_pixels": 103837,
+          "directional_foot": true,
+          "bone": "right_foot",
+          "pivot_px": [
+            90.0,
+            186.0
+          ],
+          "scale": [
+            0.6388888888888888,
+            0.6388888888888888
+          ],
+          "z_index": 0,
+          "rotation_degrees": 0,
+          "anchor_method": "skin-only centroid for ankle landmark; no color-key extraction"
+        }
+      ],
+      "knee_bend": {
+        "left": 1,
+        "right": 1
+      },
+      "elbow_bend": {
+        "left": -1,
+        "right": 1
+      },
+      "soft_skinning": true,
+      "depth_projection": false,
+      "crouch_drop_fraction": 0.13,
+      "adaptive_pelvis": true,
+      "stride_m": 0.55,
+      "walk_lift_fraction": 0.025,
+      "source_mother": "DOCX/最终素材/动作/CHR_MAIN_IDLE_D2__idle__P01_v004.png",
+      "status": "Actual motion and contact verification pending",
+      "sockets": {
+        "left_hand": {
+          "bone": "left_hand",
+          "offset_px": [
+            0,
+            36
+          ]
+        },
+        "right_hand": {
+          "bone": "right_hand",
+          "offset_px": [
+            0,
+            36
+          ]
+        },
+        "mouth": {
+          "bone": "head",
+          "offset_px": [
+            -49,
+            -25
+          ]
+        }
+      }
+    },
+    "D3": {
+      "enabled": true,
+      "atlas": "res://assets/production/characters/main/CHR_MAIN_BLUE_D3_ATLAS_v002.png",
+      "canvas_px": [
+        1122,
+        1402
+      ],
+      "foot_anchor_px": [
+        556,
+        1310
+      ],
+      "body_height_px": 1270,
+      "bones": {
+        "pelvis": {
+          "rest_px": [
+            556,
+            752
+          ]
+        },
+        "spine": {
+          "rest_px": [
+            556,
+            590
+          ]
+        },
+        "chest": {
+          "rest_px": [
+            556,
+            360
+          ]
+        },
+        "neck": {
+          "rest_px": [
+            556,
+            278
+          ]
+        },
+        "head": {
+          "rest_px": [
+            556,
+            258
+          ]
+        },
+        "left_upper_arm": {
+          "rest_px": [
+            445,
+            336
+          ]
+        },
+        "left_forearm": {
+          "rest_px": [
+            405,
+            519
+          ]
+        },
+        "left_hand": {
+          "rest_px": [
+            413,
+            703
+          ]
+        },
+        "right_upper_arm": {
+          "rest_px": [
+            670,
+            336
+          ]
+        },
+        "right_forearm": {
+          "rest_px": [
+            707,
+            520
+          ]
+        },
+        "right_hand": {
+          "rest_px": [
+            703,
+            703
+          ]
+        },
+        "left_thigh": {
+          "rest_px": [
+            495,
+            778
+          ]
+        },
+        "left_shin": {
+          "rest_px": [
+            494,
+            1000
+          ]
+        },
+        "left_foot": {
+          "rest_px": [
+            492,
+            1195
+          ]
+        },
+        "right_thigh": {
+          "rest_px": [
+            617,
+            778
+          ]
+        },
+        "right_shin": {
+          "rest_px": [
+            621,
+            1000
+          ]
+        },
+        "right_foot": {
+          "rest_px": [
+            627,
+            1195
+          ]
+        }
+      },
+      "parts": [
+        {
+          "id": "head",
+          "region_px": [
+            16,
+            16,
+            222,
+            283
+          ],
+          "original_grid_cell": 0,
+          "painted_pixels": 39020,
+          "directional_foot": false,
+          "bone": "head",
+          "pivot_px": [
+            111.0,
+            266.02
+          ],
+          "scale": [
+            0.86,
+            0.86
+          ],
+          "z_index": 20,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "torso",
+          "region_px": [
+            400,
+            16,
+            236,
+            294
+          ],
+          "original_grid_cell": 1,
+          "painted_pixels": 1134399,
+          "directional_foot": false,
+          "bone": "chest",
+          "pivot_px": [
+            118.0,
+            82.32
+          ],
+          "scale": [
+            1.66,
+            1.66
+          ],
+          "z_index": 10,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "pelvis",
+          "region_px": [
+            784,
+            16,
+            270,
+            180
+          ],
+          "original_grid_cell": 2,
+          "painted_pixels": 51418,
+          "directional_foot": false,
+          "bone": "pelvis",
+          "pivot_px": [
+            126,
+            72
+          ],
+          "scale": [
+            1,
+            1
+          ],
+          "z_index": 5,
+          "rotation_degrees": 0,
+          "offset_px": [
+            0,
+            0
+          ],
+          "source_crop_px": [
+            430,
+            680,
+            700,
+            860
+          ]
+        },
+        {
+          "id": "left_upper_arm",
+          "region_px": [
+            1168,
+            16,
+            161,
+            235
+          ],
+          "original_grid_cell": 3,
+          "painted_pixels": 25553,
+          "directional_foot": false,
+          "bone": "left_upper_arm",
+          "pivot_px": [
+            53.928,
+            42.0
+          ],
+          "scale": [
+            0.78,
+            1.073212
+          ],
+          "z_index": 9,
+          "rotation_degrees": 25.429394,
+          "attachment_px": [
+            [
+              53.92772861356932,
+              42.0
+            ],
+            [
+              108.35762711864406,
+              212.0
+            ]
+          ]
+        },
+        {
+          "id": "left_forearm",
+          "region_px": [
+            16,
+            400,
+            164,
+            276
+          ],
+          "original_grid_cell": 4,
+          "painted_pixels": 23959,
+          "directional_foot": false,
+          "bone": "left_forearm",
+          "pivot_px": [
+            110.143,
+            50.0
+          ],
+          "scale": [
+            0.77,
+            0.903155
+          ],
+          "z_index": 8,
+          "rotation_degrees": -16.332368,
+          "attachment_px": [
+            [
+              110.14348462664715,
+              50.0
+            ],
+            [
+              52.91587301587302,
+              248.0
+            ]
+          ]
+        },
+        {
+          "id": "left_hand",
+          "region_px": [
+            400,
+            400,
+            114,
+            196
+          ],
+          "original_grid_cell": 5,
+          "painted_pixels": 12986,
+          "directional_foot": false,
+          "bone": "left_hand",
+          "pivot_px": [
+            57.0,
+            15.68
+          ],
+          "scale": [
+            0.62,
+            0.62
+          ],
+          "z_index": 7,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "right_upper_arm",
+          "region_px": [
+            784,
+            400,
+            143,
+            235
+          ],
+          "original_grid_cell": 6,
+          "painted_pixels": 25213,
+          "directional_foot": false,
+          "bone": "right_upper_arm",
+          "pivot_px": [
+            92.281,
+            42.0
+          ],
+          "scale": [
+            0.78,
+            1.09359
+          ],
+          "z_index": -5,
+          "rotation_degrees": -19.251251,
+          "attachment_px": [
+            [
+              92.28083209509659,
+              42.0
+            ],
+            [
+              59.28615863141524,
+              212.0
+            ]
+          ]
+        },
+        {
+          "id": "right_forearm",
+          "region_px": [
+            1168,
+            400,
+            148,
+            226
+          ],
+          "original_grid_cell": 7,
+          "painted_pixels": 19134,
+          "directional_foot": false,
+          "bone": "right_forearm",
+          "pivot_px": [
+            50.928,
+            41.0
+          ],
+          "scale": [
+            0.77,
+            1.113239
+          ],
+          "z_index": -6,
+          "rotation_degrees": 11.103445,
+          "attachment_px": [
+            [
+              50.927927927927925,
+              41.0
+            ],
+            [
+              91.59960552268245,
+              203.0
+            ]
+          ]
+        },
+        {
+          "id": "right_hand",
+          "region_px": [
+            16,
+            784,
+            121,
+            187
+          ],
+          "original_grid_cell": 8,
+          "painted_pixels": 12533,
+          "directional_foot": false,
+          "bone": "right_hand",
+          "pivot_px": [
+            60.5,
+            14.96
+          ],
+          "scale": [
+            0.6,
+            0.6
+          ],
+          "z_index": -7,
+          "rotation_degrees": 0
+        },
+        {
+          "id": "left_thigh",
+          "region_px": [
+            400,
+            784,
+            163,
+            252
+          ],
+          "original_grid_cell": 9,
+          "painted_pixels": 33030,
+          "directional_foot": false,
+          "bone": "left_thigh",
+          "pivot_px": [
+            91.215,
+            45.0
+          ],
+          "scale": [
+            0.88,
+            1.211945
+          ],
+          "z_index": 2,
+          "rotation_degrees": -6.24452,
+          "attachment_px": [
+            [
+              91.21474358974359,
+              45.0
+            ],
+            [
+              62.64496314496314,
+              227.0
+            ]
+          ]
+        },
+        {
+          "id": "left_shin",
+          "region_px": [
+            784,
+            784,
+            115,
+            288
+          ],
+          "original_grid_cell": 10,
+          "painted_pixels": 27958,
+          "directional_foot": false,
+          "bone": "left_shin",
+          "pivot_px": [
+            56.714,
+            52.0
+          ],
+          "scale": [
+            0.95,
+            0.941714
+          ],
+          "z_index": 1,
+          "rotation_degrees": 2.181923,
+          "attachment_px": [
+            [
+              56.713884992987374,
+              52.0
+            ],
+            [
+              62.425036390101894,
+              259.0
+            ]
+          ]
+        },
+        {
+          "id": "left_foot",
+          "region_px": [
+            1168,
+            784,
+            180,
+            241
+          ],
+          "original_grid_cell": 11,
+          "painted_pixels": 168448,
+          "directional_foot": true,
+          "bone": "left_foot",
+          "pivot_px": [
+            136.60106382978722,
+            96.0
+          ],
+          "scale": [
+            0.6944444444444444,
+            0.6944444444444444
+          ],
+          "z_index": 0,
+          "rotation_degrees": 0,
+          "anchor_method": "skin-only centroid for ankle landmark; no color-key extraction"
+        },
+        {
+          "id": "right_thigh",
+          "region_px": [
+            16,
+            1168,
+            180,
+            245
+          ],
+          "original_grid_cell": 12,
+          "painted_pixels": 33744,
+          "directional_foot": false,
+          "bone": "right_thigh",
+          "pivot_px": [
+            70.143,
+            44.0
+          ],
+          "scale": [
+            0.88,
+            1.242927
+          ],
+          "z_index": -2,
+          "rotation_degrees": 8.829577,
+          "attachment_px": [
+            [
+              70.14254624591948,
+              44.0
+            ],
+            [
+              113.35697674418604,
+              220.0
+            ]
+          ]
+        },
+        {
+          "id": "right_shin",
+          "region_px": [
+            400,
+            1168,
+            115,
+            276
+          ],
+          "original_grid_cell": 13,
+          "painted_pixels": 27306,
+          "directional_foot": false,
+          "bone": "right_shin",
+          "pivot_px": [
+            57.071,
+            50.0
+          ],
+          "scale": [
+            0.95,
+            0.985289
+          ],
+          "z_index": -3,
+          "rotation_degrees": -1.347065,
+          "attachment_px": [
+            [
+              57.07086614173228,
+              50.0
+            ],
+            [
+              58.559471365638764,
+              248.0
+            ]
+          ]
+        },
+        {
+          "id": "right_foot",
+          "region_px": [
+            784,
+            1168,
+            180,
+            241
+          ],
+          "original_grid_cell": 14,
+          "painted_pixels": 170269,
+          "directional_foot": true,
+          "bone": "right_foot",
+          "pivot_px": [
+            42.4037558685446,
+            96.0
+          ],
+          "scale": [
+            0.6944444444444444,
+            0.6944444444444444
+          ],
+          "z_index": -4,
+          "rotation_degrees": 0,
+          "anchor_method": "skin-only centroid for ankle landmark; no color-key extraction"
+        }
+      ],
+      "knee_bend": {
+        "left": 1,
+        "right": -1
+      },
+      "elbow_bend": {
+        "left": -1,
+        "right": 1
+      },
+      "soft_skinning": true,
+      "depth_projection": true,
+      "crouch_drop_fraction": 0.13,
+      "adaptive_pelvis": true,
+      "stride_m": 0.5,
+      "walk_lift_fraction": 0.025,
+      "source_mother": "DOCX/最终素材/动作/CHR_MAIN_IDLE_D3__idle__P01_v004.png",
+      "status": "Actual motion and contact verification pending",
+      "sockets": {
+        "left_hand": {
+          "bone": "left_hand",
+          "offset_px": [
+            0,
+            36
+          ]
+        },
+        "right_hand": {
+          "bone": "right_hand",
+          "offset_px": [
+            0,
+            36
+          ]
+        },
+        "mouth": {
+          "bone": "head",
+          "offset_px": [
+            0,
+            -35
+          ]
+        }
+      }
+    }
+  },
+  "status": "Continuous actual motion and visual verification pending"
+}

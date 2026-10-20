@@ -1,4 +1,5 @@
 extends PanelContainer
+const UIStyle=preload("res://scripts/ui/ui_style.gd")
 ## Read-only live guidance. Buttons focus existing CRT nodes; never cast/pay.
 signal node_requested(id:String)
 var heading:Label
@@ -11,8 +12,9 @@ func _ready() -> void:
  position=Vector2(816,147)
  custom_minimum_size=Vector2(430,0)
  mouse_filter=Control.MOUSE_FILTER_STOP
- var box:=StyleBoxFlat.new()
- box.bg_color=Color("24302ff2");box.border_color=Color("ac7972")
+ theme=UIStyle.theme_for()
+ var box:=UIStyle.surface("paper",true)
+ box.border_color=UIStyle.OXIDE
  box.set_border_width_all(1);box.set_content_margin_all(10)
  add_theme_stylebox_override("panel",box)
  var column:=VBoxContainer.new();column.add_theme_constant_override("separation",6);add_child(column)
@@ -23,10 +25,7 @@ func _ready() -> void:
  for id in ["SKIN","GUT","PORES","TEMP","TINNITUS","DRYMOUTH","KNEE","WITHDRAW","STARTLE","FEAR","JOY","CONTROL"]:
   var button:=Button.new();button.custom_minimum_size=Vector2(130,29)
   button.add_theme_font_size_override("font_size",14)
-  var style:=StyleBoxFlat.new();style.bg_color=Color("30463e");style.border_color=Color("88a68b");style.set_border_width_all(1)
-  button.add_theme_stylebox_override("normal",style)
-  var dim:=style.duplicate();dim.bg_color=Color("25312d");dim.border_color=Color("4c5c53")
-  button.add_theme_stylebox_override("disabled",dim)
+  UIStyle.style_button(button)
   button.pressed.connect(func():node_requested.emit(id))
   grid.add_child(button);buttons[id]=button
  hide()

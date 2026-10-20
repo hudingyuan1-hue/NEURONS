@@ -1,4 +1,9 @@
 extends RefCounted
+const SpatialShell=preload("res://scripts/world/spatial_shell.gd")
+const NeuralDisplay=preload("res://scripts/world/spatial_presentation.gd")
+const SpatialGeometry=preload("res://scripts/world/spatial_geometry.gd")
+const SpatialProp=preload("res://scripts/world/spatial_prop.gd")
+const EndingStory=preload("res://scripts/world/ending_story_placeholder.gd")
 ## Code-drawn 2D trial; all figures remain explicit placeholders.
 var canvas
 var app
@@ -8,25 +13,37 @@ var font:Font
 func draw(target,owner,catalog) -> void:
  canvas=target;app=owner;battle=app.active_battle();font=target.font
  var layout=app.layout;var deep:bool=battle.map.deep(app.room_id)
+ var spatial_spec:Dictionary=layout.space_spec() if layout.has_method("space_spec") else {}
  canvas.draw_rect(Rect2(-1800,-1200,4500,3000),Color("263039") if deep else Color("211f2a"))
  var corners:Array=[]
  for p in [Vector2.ZERO,Vector2(layout.world_size().x,0),layout.world_size(),Vector2(0,layout.world_size().y)]:corners.append(layout.project(p))
- canvas.poly(corners,Color("b0b9ad") if deep else Color("645455"))
- for row in range(1,16):canvas.draw_line(layout.project(Vector2(0,row*.475)),layout.project(Vector2(11.2,row*.475)),Color(0.4,0.44,0.43,.17),1)
+ if spatial_spec.has("floor_polygon_m"):
+  corners.clear()
+  for p:Array in spatial_spec.floor_polygon_m:corners.append(layout.project(Vector2(float(p[0]),float(p[1]))))
+ SpatialGeometry.draw_floor(canvas,layout,Color("b0b9ad") if deep else Color("645455"),Color("263039") if deep else Color("211f2a"))
+ SpatialGeometry.draw_floor_lines(canvas,layout,.5,Color(0.4,0.44,0.43,.12))
  if battle.chapter_id==6:draw_street_surfaces()
  canvas.draw_polyline(PackedVector2Array(corners+[corners[0]]),Color("b8beb1"),4)
+ draw_architecture(false)
  if layout.cold_zone.has_area():zone(layout.cold_zone,Color(.3,.63,.8,.26),"局部冷区 · 双方移速80%")
  if app.room_id=="brainstem":
   var phase:String=battle.pulse_phase()
   zone(layout.pulse_zone,{"warning":Color(.93,.73,.31,.27),"active":Color(.97,.86,.55,.65),"interval":Color(.5,.61,.65,.12)}[phase],{"warning":"脉冲预警 · 离开亮带","active":"脉冲冲击","interval":"脉冲间隔"}[phase])
  for f in layout.decor:
+  if not f.get("render",true):continue
   if float(f.height)>5:continue
   var rect:Rect2=f.rect
   canvas.poly([layout.project(rect.position),layout.project(Vector2(rect.end.x,rect.position.y)),layout.project(rect.end),layout.project(Vector2(rect.position.x,rect.end.y))],Color("77696b") if not deep else Color("b0b8ad"))
  var ordered:Array=[]
+ var architectural_decor:Dictionary=SpatialShell.architectural_decor_ids(layout)
+ var architectural_partitions:Dictionary=SpatialShell.architectural_partition_ids(layout)
  for f in layout.furniture+layout.decor:
+  if f.get("logical_exclusion",false) or not f.get("render",true):continue
+  if architectural_decor.has(str(f.id)):continue
   if f in layout.decor and float(f.height)<=5:continue
-  ordered.append({"kind":"prop","data":f,"depth":layout.project((f.rect as Rect2).end).y})
+  if architectural_partitions.has(str(f.id)):
+   ordered.append({"kind":"fixed_architecture","data":f,"group":str(architectural_partitions[str(f.id)]),"depth":NeuralDisplay.footprint_depth(layout,f.rect)})
+  else:ordered.append({"kind":"prop","data":f,"depth":NeuralDisplay.footprint_depth(layout,f.rect)})
  ordered.append({"kind":"hero","depth":layout.project(app.hero_pos).y})
  if battle.chapter_id==6:
   var director:Dictionary=battle.data.actors.director;var cage:Dictionary=battle.director.state()
@@ -37,6 +54,13 @@ func draw(target,owner,catalog) -> void:
    if carrier.present and carrier.room==app.room_id:
     var grasp:Dictionary=battle.grasp_motion.state(str(grasp_id))
     ordered.append({"kind":"grasp_arm","id":grasp_id,"depth":layout.project(battle.vector(grasp.hand)).y})
+  for grip_id in battle.HandGrips.IDS:
+   var carrier:Dictionary=battle.data.actors[grip_id];var grip:Dictionary=battle.hand_grips.state(grip_id)
+   if carrier.present and carrier.hp>0 and carrier.room==app.room_id:
+    for index in range(grip.hands.size()):ordered.append({"kind":"hand_grip_arm","id":grip_id,"index":index,"depth":layout.project(battle.vector(grip.hands[index])).y})
+  var double_head:Dictionary=battle.data.actors.double_head;var two_arms:Array=battle.double_head.state().arms
+  if double_head.present and double_head.hp>0 and double_head.room==app.room_id:
+   for index in range(two_arms.size()):ordered.append({"kind":"double_head_arm","index":index,"depth":layout.project((battle.vector(two_arms[index][1])+battle.vector(two_arms[index][2]))*.5).y})
   var restraint:Dictionary=battle.restraint.state();var assistant:Dictionary=battle.data.actors.assistant_asylum
   if assistant.present and assistant.room==app.room_id and not restraint.pose.is_empty():
    for index in range(2):ordered.append({"kind":"restraint_arm","index":index,"depth":layout.project(battle.vector(restraint.pose.arms[index][2])).y})
@@ -78,7 +102,11 @@ func draw(target,owner,catalog) -> void:
   if a.present and a.room==app.room_id:ordered.append({"kind":"actor","id":id,"depth":layout.project(battle.position(id)).y})
  ordered.sort_custom(func(a,b):return a.depth<b.depth)
  for entry in ordered:
-  if entry.kind=="prop":
+  if entry.kind=="fixed_architecture":
+   draw_architecture(false,str(entry.group))
+   var f:Dictionary=entry.data
+   text(layout.project((f.rect as Rect2).get_center())-Vector2(0,float(f.height)+6),str(f.name),12)
+  elif entry.kind=="prop":
    var f:Dictionary=entry.data
    if f.get("kind","")=="gate":draw_gate(f)
    elif f.get("kind","")=="rack":draw_rack(f)
@@ -86,7 +114,7 @@ func draw(target,owner,catalog) -> void:
     canvas.prism(f.rect,float(f.height),Color("757b78"))
     var cart_top:Vector2=layout.project(f.rect.get_center())-Vector2(0,float(f.height))
     canvas.draw_circle(cart_top,12,Color("414951"));canvas.draw_line(cart_top-Vector2(12,5),cart_top+Vector2(12,5),Color("9f9b89"),3)
-   else:canvas.prism(f.rect,float(f.height),Color("a5afa8") if deep else Color("837172"))
+   else:SpatialProp.draw(canvas,layout,f,Color("a5afa8") if deep else Color("837172"))
    text(layout.project((f.rect as Rect2).get_center())-Vector2(0,float(f.height)+6),str(f.name),12)
   elif entry.kind=="lateral_bed":
    var bed:Dictionary=battle.data.lateral_bed
@@ -112,26 +140,46 @@ func draw(target,owner,catalog) -> void:
   elif entry.kind=="restraint_arm":draw_restraint_arm(int(entry.index))
   elif entry.kind=="restraint_loop":draw_restraint_loop()
   elif entry.kind=="grasp_arm":draw_grasp_arm(str(entry.id))
+  elif entry.kind=="hand_grip_arm":draw_hand_grip_arm(str(entry.id),int(entry.index))
+  elif entry.kind=="double_head_arm":draw_double_head_arm(int(entry.index))
   elif entry.kind=="director_rail":draw_director_rail(int(entry.index))
   elif entry.kind=="hero":
    var at:Vector2=layout.project(app.hero_pos)
    var crouch:float=.56 if app.rules.reaction_skill=="GUT" and app.rules.reaction_left>.2 else 1.0
    var frame:Dictionary=catalog.actor_frame("hit" if app.hero_state=="tinnitus" else app.hero_state,app.hero_facing,app.world_visual_time)
-   var scale_value:=Vector2(2.1,2.1*crouch)
+   # Atlas effective standing silhouette is 57px; the shared adult ruler is
+   # 1.75m × 78px/m. This changes art scale only, never body/contact geometry.
+   var actor_scale:float=136.5/57.0
+   var scale_value:=Vector2(actor_scale,actor_scale*crouch)
    canvas.draw_circle(at,17,Color(0,0,0,.25))
-   canvas.draw_texture_rect_region(frame.texture,Rect2(at-frame.foot*scale_value,frame.size*scale_value),frame.source)
-   draw_known_hand_marks(at,106,true)
-   if battle.chapter_id==6:draw_loss_reaction(at);draw_restraint_wrist(at);draw_grasp_wrist(at)
+   var production:bool=app.get("production_actors")!=null and app.production_actors.draw_hero(canvas,at,136.5)
+   if not production:canvas.draw_texture_rect_region(frame.texture,Rect2(at-frame.foot*scale_value,frame.size*scale_value),frame.source)
+   draw_known_hand_marks(at,136.5,true)
+   if battle.chapter_id==6:draw_loss_reaction(at);draw_restraint_wrist(at);draw_grasp_wrist(at);draw_hand_grip_wrist(at)
    if app.hero_state=="tinnitus":
-    canvas.draw_line(at+Vector2(12,-52),at+Vector2(22,-80),Color("a7b8b8"),5)
-    canvas.draw_line(at+Vector2(22,-80),at+Vector2(9,-91),Color("c4bea8"),4)
-    text(at-Vector2(0,112),"停步 · 侧头捂耳（姿态占位）",14)
+    if not production:
+     canvas.draw_line(at+Vector2(12,-52),at+Vector2(22,-80),Color("a7b8b8"),5)
+     canvas.draw_line(at+Vector2(22,-80),at+Vector2(9,-91),Color("c4bea8"),4)
+    text(at-Vector2(0,148),"停步 · 侧头捂耳",14)
   else:actor(str(entry.id))
+ draw_architecture(true)
  if battle.chapter_id==6:draw_main_ending()
  for id in app.visible_doors:
   var at:Vector2=layout.project(app.door_point(str(id)))
   canvas.draw_circle(at,13,Color("2f5055"));canvas.draw_arc(at,13,0,TAU,32,Color("d3d9bd"),2)
   text(at-Vector2(0,20),battle.map.title(str(id)),14)
+
+func draw_architecture(foreground:bool,group:String="") -> void:
+ # Both draw passes use one complete union. Real openings and near-wall
+ # cutaway heights are retained, without cuboid seams or duplicate L-walls.
+ var actual_portals:Array=[]
+ for toward in battle.map.doors(app.room_id):
+  var portal:Dictionary=app.layout.portal(str(toward))
+  if not portal.is_empty():actual_portals.append(portal)
+ var spec:Dictionary=app.layout.space_spec()
+ var outdoor:bool=battle.chapter_id==6 and str(spec.get("environment","open_air_urban"))!="covered_interior"
+ var tint:Color=Color("697b7c") if battle.chapter_id==6 else Color("abb4aa") if battle.map.deep(app.room_id) else Color("71666d")
+ SpatialShell.draw_architecture(canvas,app.layout,foreground,outdoor,{"top":tint.lightened(.16),"west":tint.darkened(.28),"south":tint.darkened(.18),"edge":tint.darkened(.38)},actual_portals,group)
 
 func text(at:Vector2,value:String,size_px:int) -> void:
  var width:float=font.get_string_size(value,HORIZONTAL_ALIGNMENT_LEFT,-1,size_px).x
@@ -170,12 +218,22 @@ func actor(id:String) -> void:
   canvas.draw_line(at-Vector2(0,65),app.layout.project(battle.position(id)-facing*.4)-Vector2(0,65),Color("c3b1a0"),5)
  canvas.draw_circle(at,17,Color(.03,.05,.07,.26))
  canvas.poly([at+Vector2(-18,-h*.7),at+Vector2(18,-h*.7),at+Vector2(24,-h*.2),at+Vector2(-24,-h*.2)],color)
- canvas.draw_circle(at+Vector2(0,-h*.88),h*.12,Color("c4bea8"))
- for side in [-1,1]:canvas.draw_line(at+Vector2(side*9,-h*.2),at+Vector2(side*12,0),color.darkened(.15),8)
+ if id!="double_head":canvas.draw_circle(at+Vector2(0,-h*.88),h*.12,Color("c4bea8"))
+ for side in [-1,1]:
+  var foot:Vector2=at+Vector2(side*12,0)
+  if battle.chapter_id==6 and id=="double_face" and a.phase=="display_retreat":
+   var pace:float=sin(float(battle.double_face_retreat.state().distance)*TAU/.36)*side
+   foot+=Vector2(pace*5,-absf(pace)*3)
+  canvas.draw_line(at+Vector2(side*9,-h*.2),foot,color.darkened(.15),8)
  if id=="double_head":
   canvas.draw_circle(at+Vector2(-14,-h*.88),13,Color("b9b39f"))
   canvas.draw_circle(at+Vector2(14,-h*.88),13,Color("b9b39f"))
-  if not a.hostile:canvas.draw_line(at+Vector2(-20,-h*.5),at+Vector2(10,-h*.74),color.darkened(.2),7);canvas.draw_line(at+Vector2(20,-h*.5),at+Vector2(-10,-h*.74),color.darkened(.2),7)
+  if battle.chapter_id==6:
+   var turn:float=float(battle.double_head.state().turn)
+   var eyes:Vector2=(app.layout.project(battle.position(id)+battle.double_head.direction())-at).normalized()*4.0*turn
+   for side in [-1,1]:canvas.draw_circle(at+Vector2(side*14,-h*.88)+eyes,2,Color("4e4c4a"))
+  var mutual_neck:bool=a.phase=="idle" if battle.chapter_id==6 else not a.hostile
+  if mutual_neck:canvas.draw_line(at+Vector2(-20,-h*.5),at+Vector2(10,-h*.74),color.darkened(.2),7);canvas.draw_line(at+Vector2(20,-h*.5),at+Vector2(-10,-h*.74),color.darkened(.2),7)
  if id=="double_face" and (a.get("face_turned",false) or float(a.get("face_turn_progress",0))>0):
   var progress:float=1.0 if a.get("face_turned",false) else float(a.face_turn_progress)
   canvas.draw_arc(at+Vector2(0,-h*.88),15,-PI*.5,-PI*.5+progress*TAU,24,Color("80566d"),4)
@@ -192,7 +250,7 @@ func actor(id:String) -> void:
    for index in range(3):
     var eye:Vector2=at+Vector2((index-1)*9,-56+abs(index-1)*5)
     canvas.draw_circle(eye,4,Color("c1baa3"));canvas.draw_circle(eye,1.5,Color("4c4250"))
- if a.phase in ["windup","attack","recover","grip"] and not (battle.chapter_id==6 and id in ["transporter_hospital","dislocated","isolation","ward_nurse","pharmacist","father","warder","assistant_asylum","psychiatrist","guard_hospital","director","mother","doctor","skinface"]):
+ if a.phase in ["windup","attack","recover","grip"] and not (battle.chapter_id==6 and id in ["transporter_hospital","dislocated","isolation","ward_nurse","pharmacist","father","warder","assistant_asylum","psychiatrist","guard_hospital","director","mother","doctor","skinface","archivist","supervisor","stitched","self","double_head"]):
   var direction:Vector2=battle.vector(a.direction)
   var attack:Dictionary=battle.config.attacks[str(s.attack)]
   var end:Vector2=app.layout.project(battle.position(id)+direction*float(attack.reach))
@@ -277,6 +335,7 @@ func draw_main_ending() -> void:
  if e.is_empty():return
  var at:Vector2=app.layout.project(app.hero_pos)
  canvas.draw_rect(Rect2(at-Vector2(1800,1000),Vector2(3600,2000)),Color(.07,.12,.12,.9))
+ EndingStory.draw(canvas,e,at)
  var label:String={"registration":"机构登记：自行离院","dialogue":"终点门内 · 原出口对白","wake":"现实病床 · 身体睁眼（演出占位）","planet":"来处星球 · 玩家恢复感知（演出占位）","complete":"本次流程结束"}.get(str(e.phase),"")
  text(at-Vector2(0,150),label,24)
  if e.phase=="wake":text(at-Vector2(0,90),"角色接续身体" if e.id=="E2" else "玩家接续身体",20)
@@ -311,6 +370,12 @@ func draw_display_pose(id:String,at:Vector2,h:float) -> void:
    canvas.draw_line(at+Vector2(13,-h*.55),hand,Color("b9af97"),6)
    if a.phase=="board_knock":canvas.draw_arc(hand,11,-.8,.8,12,Color("d8c7a1"),2)
  draw_report_look(id,at,h)
+ if id=="double_head":text(at-Vector2(0,h+34),{"mutual_neck_hold":"双头互扼","hurt":"受击反应","release_necks":"松开互扼","heads_turn":"双头共同转向","two_arm_thrust":"双臂向前反击","retract":"收手恢复","stopped":"停止"}.get(str(battle.double_head.state().phase),"")+"（占位）",11)
+ if id in battle.HandGrips.IDS:
+  var grip:Dictionary=battle.hand_grips.state(id)
+  if id=="supervisor":canvas.draw_rect(Rect2(at+Vector2(10,-h*.49),Vector2(13,8)),Color("a7b5b1"),false,2)
+  var phase_names:Dictionary={"lowered":"收回夹具" if id=="supervisor" else "收手","jaws_open":"双夹张开","fingers_open":"钉指张开" if id=="archivist" else "张手准备","extend":"瞄向腕臂伸出","close":"实际合拢","held":"扣住腕臂","open_retract":"松开收回","paper_remaining":"撕扯原纸页"}
+  text(at-Vector2(0,h+34),str(phase_names.get(str(grip.phase),str(grip.phase)))+"（占位）",11)
  if id=="dislocated":draw_clamp_pose(at,h)
  if id=="ward_nurse":draw_medicine_pose(at,h)
  if id=="pharmacist":draw_splash_cup(at,h)
@@ -428,6 +493,60 @@ func draw_director_rail(index:int) -> void:
  if a.hp>0:
   var shoulder:Vector2=app.layout.project(battle.vector(frame[0]))-Vector2(0,82)
   canvas.draw_line(shoulder,points[1],Color("b6b39e"),6)
+
+func draw_double_head_arm(index:int) -> void:
+ var s:Dictionary=battle.double_head.state()
+ if index>=s.arms.size():return
+ var arm:Array=s.arms[index];var h:float=float(battle.config.test_parameters.double_head_height_px)
+ var lift:float=lerpf(105,h,float(s.turn)) if s.phase in ["release_necks","heads_turn"] else h
+ var root:Vector2=app.layout.project(battle.vector(arm[0]))-Vector2(0,84)
+ var elbow:Vector2=app.layout.project(battle.vector(arm[1]))-Vector2(0,lift)
+ var hand:Vector2=app.layout.project(battle.vector(arm[2]))-Vector2(0,lift)
+ if s.phase=="release_necks":
+  var body:Vector2=app.layout.project(battle.position("double_head"));var sign_value:float=-1 if index==0 else 1
+  var release:float=clampf(float(battle.data.actors.double_head.elapsed)/(float(battle.double_head.attack().windup)*float(battle.config.test_parameters.double_head_release_ratio)),0,1)
+  root=(body+Vector2(sign_value*16,-84)).lerp(root,release)
+  elbow=(body+Vector2(sign_value*20,-66.5)).lerp(elbow,release)
+  hand=(body+Vector2(-sign_value*10,-98.5)).lerp(hand,release)
+ canvas.draw_line(root,elbow,Color("b3a994"),7);canvas.draw_line(elbow,hand,Color("b3a994"),6);canvas.draw_circle(hand,4,Color("c4bea8"))
+
+func draw_hand_grip_arm(id:String,index:int) -> void:
+ var s:Dictionary=battle.hand_grips.state(id);var height:float=float(battle.config.test_parameters.hand_grip_height_px)
+ var hand:Vector2=app.layout.project(battle.vector(s.hands[index]))-Vector2(0,height)
+ var shoulder:Vector2=app.layout.project(battle.hand_grips.shoulder(id,index))-Vector2(0,84)
+ var elbow:Vector2=shoulder.lerp(hand,.5)+Vector2(-3,5)
+ canvas.draw_line(shoulder,elbow,Color("9da99d"),7);canvas.draw_line(elbow,hand,Color("b2b09d"),5)
+ draw_hand_grip_fingers(id,index,battle.vector(s.hands[index]),float(s.open))
+
+func draw_hand_grip_fingers(id:String,index:int,center:Vector2,opened:float) -> void:
+ var d:Vector2=battle.hand_grips.direction(id);var side:=Vector2(-d.y,d.x);var lift:=Vector2(0,float(battle.config.test_parameters.hand_grip_height_px))
+ var origin:Vector2=app.layout.project(center)-lift
+ if id=="supervisor":
+  var gap:float=lerpf(.055,.11,opened)
+  for sign_value in [-1,1]:
+   var root:Vector2=app.layout.project(center-d*.07+side*float(sign_value)*gap)-lift
+   var hook:Vector2=app.layout.project(center+d*.045+side*float(sign_value)*gap)-lift
+   var tip:Vector2=app.layout.project(center+d*.07+side*float(sign_value)*.045)-lift
+   canvas.draw_line(origin,root,Color("7d8f91"),4);canvas.draw_line(root,hook,Color("afb8ae"),4);canvas.draw_line(hook,tip,Color("afb8ae"),3)
+ else:
+  for finger in range(4):
+   var sign_value:float=-1 if finger<2 else 1
+   var gap:float=lerpf(.018,.065,opened)*(1 if finger%2==0 else .65)
+   var base:Vector2=app.layout.project(center-d*.03+side*sign_value*.025)-lift
+   var joint:Vector2=app.layout.project(center+d*.025+side*sign_value*gap)-lift
+   var tip:Vector2=app.layout.project(center+d*.055+side*sign_value*.018)-lift
+   var color:Color=Color("c2beb0") if id=="archivist" else Color("a9b39f")
+   canvas.draw_line(base,joint,color,2);canvas.draw_line(joint,tip,color,2)
+
+func draw_hand_grip_wrist(at:Vector2) -> void:
+ var id:String=str(battle.data.holder)
+ if id not in battle.HandGrips.IDS:return
+ var s:Dictionary=battle.hand_grips.state(id);var index:int=int(s.holding_hand)
+ if index<0 or index>=s.hands.size():return
+ var hand:Vector2=app.layout.project(battle.vector(s.hands[index]))-Vector2(0,float(battle.config.test_parameters.hand_grip_height_px))
+ var elbow:Vector2=(at-Vector2(0,77)).lerp(hand,.5)+Vector2(5,5)
+ canvas.draw_line(at-Vector2(0,77),elbow,Color("9eb6be"),6);canvas.draw_line(elbow,hand,Color("bcb9a1"),4)
+ draw_hand_grip_fingers(id,index,battle.vector(s.hands[index]),0)
 
 func draw_grasp_arm(id:String) -> void:
  var a:Dictionary=battle.data.actors[id];var s:Dictionary=battle.grasp_motion.state(id)

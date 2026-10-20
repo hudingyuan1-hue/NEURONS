@@ -1,0 +1,874 @@
+{
+  "scope": "Prompt-form revision only; no game run, media generation or image/art acceptance.",
+  "checked_at": "2026-10-19T11:26:03.202599",
+  "failures": [],
+  "game_sources_unchanged": [
+    {
+      "path": "neurons/data/asylum.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/asylum_intake.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/asylum_isolation.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/asylum_nurse_duty.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/asylum_observations.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/asylum_records.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/asylum_trace_events.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/asylum_ward_events.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/audio_bindings.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/combat_chapter.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/cortex_events.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/cortex_upper_events.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/hidden_street.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/home_dialogue.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/home_rules.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/hospital.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/hospital_observations.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/institution_spaces.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/key_discovery.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/neural_spaces.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/opening.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/presentation.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/room_spaces.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/search_actions.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/skills.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/street_chapter.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/street_spaces.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/data/tutorial_dialogue.json",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/export_presets.cfg",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/project.godot",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/bedroom_art_trial.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/bedroom_art_trial.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/bedroom_sample.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/bedroom_sample.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/campaign.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/campaign.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/achievement_store.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/achievement_store.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/appearance_history.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/appearance_history.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_events.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_events.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_intake.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_intake.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_isolation.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_isolation.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_map.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_map.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_nurse_duty.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_nurse_duty.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_observations.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_observations.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_records.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_records.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_trace_events.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_trace_events.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_ward_events.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/asylum_ward_events.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/bed_body.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/bed_body.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/campaign_session.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/campaign_session.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_chapter.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_chapter.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_map.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_map.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_noises.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_noises.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_observations.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_observations.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_reactions.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/combat_reactions.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/cortex_events.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/cortex_events.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/cortex_map.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/cortex_map.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/cortex_upper_events.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/cortex_upper_events.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/family_events.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/family_events.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/hidden_street.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/hidden_street.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/home_animals.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/home_animals.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/hospital_events.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/hospital_events.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/hospital_observations.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/hospital_observations.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/hospital_records.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/hospital_records.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/interaction_rules.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/interaction_rules.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/key_discovery.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/key_discovery.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/neural_rules.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/save_store.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/save_store.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_archivist.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_archivist.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_bed_travel.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_bed_travel.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_belt.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_belt.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_bottle.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_bottle.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_box.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_box.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_chapter.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_chapter.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_clamp.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_clamp.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_director.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_director.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_displays.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_displays.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_double_face_retreat.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_double_face_retreat.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_double_head.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_double_head.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_embrace.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_embrace.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_grasp_motion.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_grasp_motion.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_hand_grips.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_hand_grips.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_lateral_bed.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_lateral_bed.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_laundry_bag.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_laundry_bag.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_losses.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_losses.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_map.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_map.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_materials.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_materials.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_medicine.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_medicine.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_mother.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_mother.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_reports.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_reports.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_restraint.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_restraint.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_splash.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_splash.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_sweeps.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/core/street_sweeps.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/presentation/asset_catalog.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/presentation/asset_catalog.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/presentation/search_actions.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/presentation/search_actions.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/presentation/view_controls.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/presentation/view_controls.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/body_preview.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/body_preview.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/campaign_menu.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/campaign_menu.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/dialogue_playback.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/dialogue_playback.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/ending_panel.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/ending_panel.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/father_prompt.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/father_prompt.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/feedback_audio.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/feedback_audio.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/front_end.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/front_end.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/intervention_feedback.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/intervention_feedback.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/menu_art.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/menu_art.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/neuron_menu.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/neuron_menu.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/opening_flow.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/opening_flow.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/tutorial_overlay.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/tutorial_overlay.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/vitality_panel.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/ui/vitality_panel.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/asylum_layout.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/asylum_layout.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/bedroom_layout.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/bedroom_layout.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/campaign_view.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/campaign_view.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/combat_layout.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/combat_layout.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/combat_view.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/combat_view.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/cortex_layout.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/cortex_layout.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/ending_story_placeholder.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/ending_story_placeholder.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/hidden_layout.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/hidden_layout.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/institution_layout.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/institution_layout.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/metric_bedroom_view.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/metric_bedroom_view.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/metric_institution_view.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/metric_institution_view.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/room_art_trial_view.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/room_art_trial_view.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/room_layout.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/room_layout.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/room_view.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/room_view.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/spatial_shell.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/spatial_shell.gd.uid",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/street_layout.gd",
+      "unchanged": true
+    },
+    {
+      "path": "neurons/scripts/world/street_layout.gd.uid",
+      "unchanged": true
+    }
+  ],
+  "source_art_form_unchanged": true,
+  "scene_count": 56,
+  "legacy_scene_derived_item_retained": 1,
+  "embedded_user_samples_unchanged": true,
+  "desktop_and_repo_pages_match": true,
+  "archive_exists": true,
+  "zip": "C:\\Users\\23623\\Desktop\\NEW\\最终表单\\NEURONS_生成表单_20261019.zip",
+  "outputs": [
+    {
+      "path": "C:\\Users\\23623\\Desktop\\NEW\\最终表单\\人物动作及其他\\01_人物动作及其他_生成表单_可分享.html",
+      "bytes": 1245917,
+      "sha256": "e2ff362b0853bf11cf21d82048cfc87cbc36ee9a050ee6f014d7ce4a87b21e5d"
+    },
+    {
+      "path": "C:\\Users\\23623\\Desktop\\NEW\\最终表单\\空间与家具模板\\00_空间与家具模板_可分享.html",
+      "bytes": 4849560,
+      "sha256": "aeb06ae0824d2c7cfac4aaa17961cb825cd2520fc42240035e57cd00aa616de2"
+    }
+  ]
+}

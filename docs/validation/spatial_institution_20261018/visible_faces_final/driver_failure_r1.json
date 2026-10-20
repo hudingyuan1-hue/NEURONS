@@ -1,0 +1,6 @@
+{
+  "failure": "Standalone inspector called asynchronous frontend.show_profile without await, so name_field was Nil. Driver fixed to await real profile creation; no game code/geometry changed to accommodate this.",
+  "test": "institution_visible_faces_check.gd",
+  "stage": "before campaign launch",
+  "counted_as_pass": false
+}

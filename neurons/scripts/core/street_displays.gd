@@ -105,7 +105,7 @@ func _aside(id:String,delta:float) -> void:
  elif app.layout.walkable(goal):battle._move_actor(id,goal,delta)
 func _point_entry(id:String) -> void:
  var a:Dictionary=battle.data.actors[id];var door:String=str(battle.map.doors(str(a.room))[0])
- a.direction=battle.xy((battle.map.doorway(str(a.room),door)-battle.position(id)).normalized())
+ a.direction=battle.xy((battle.floor_for(str(a.room)).portal(door).at-battle.position(id)).normalized())
 func _patient(id:String,delta:float) -> void:
  var a:Dictionary=battle.data.actors[id];var s:Dictionary=state(id)
  var danger:String=battle.materials.danger(id)
@@ -143,7 +143,8 @@ func _postop(delta:float) -> void:
 
 func _triage(delta:float) -> void:
  var id:String="triage";var a:Dictionary=battle.data.actors[id];var s:Dictionary=state(id)
- var portal:Vector2=battle.map.doorway(str(a.room),"street_maintenance")
+ var mouth:Dictionary=battle.floor_for(str(a.room)).portal("street_maintenance")
+ var portal:Vector2=mouth.at if not mouth.is_empty() else Vector2(-1,-1)
  if portal.x<0 or not battle.can_see(str(a.room),battle.position(id),portal):a.phase="idle";s.read.clear();return
  s.elapsed=fmod(float(s.elapsed)+delta,float(battle.config.test_parameters.guide_cycle_s))
  a.phase="branch_point" if s.elapsed<1.5 else "clip_read"

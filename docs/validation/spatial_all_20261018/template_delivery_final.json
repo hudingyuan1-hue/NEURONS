@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "source_hashes_current": true,
+    "56_room_pixel_origins": true,
+    "desktop_identical_00_空间与家具模板_可分享.html": true,
+    "desktop_identical_NEURONS_空间与家具模板.zip": true,
+    "zip_crc": true,
+    "zip_png_count": true,
+    "zip_includes_current_html": true,
+    "zip_includes_current_anchors": true
+  },
+  "failures": [],
+  "files": {
+    "00_空间与家具模板_可分享.html": {
+      "sha256": "51af44eb50266f9f5af8a1390bd3ce949a49eb99ee2cd413e9c167aff434efd6",
+      "bytes": 7028801
+    },
+    "NEURONS_空间与家具模板.zip": {
+      "sha256": "703a44fa2e09c78ddedc214949ee17a0a1da20c8a0e858252625748b7df650db",
+      "bytes": 5135549
+    },
+    "template_anchors.json": {
+      "sha256": "07f06e04ec1dd7dd193ebb694a2a723a33c9bcdd7ead5171b161b592a077ed0b",
+      "bytes": 314921
+    },
+    "runtime_spaces.json": {
+      "sha256": "e298340e6aafcea1e9ff050ba3e00c3732848e5b3a55a8988f05ed1eb2b1ed4d",
+      "bytes": 1107701
+    }
+  },
+  "scope": "Final portable files and runtime-to-image registration metadata; no actual browser/cross-device acceptance claim."
+}

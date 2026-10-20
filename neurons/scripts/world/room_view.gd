@@ -66,8 +66,10 @@ func prism(r:Rect2,h:float,col:Color) -> void:
  var c:=layout.project(r.end)
  var d:=layout.project(r.position+Vector2(0,r.size.y))
  var up:=Vector2(0,-h)
- poly([a,b,b+up,a+up],col.darkened(0.12))
- poly([b,c,c+up,b+up],col.darkened(0.28))
+ # Projection kernel toward the observer is (-30/96,1,56/78):
+ # west + south + top are visible. Hidden north/east faces must not fill
+ # the room, and the west face must not be left open.
+ poly([d,a,a+up,d+up],col.darkened(0.28))
  poly([c,d,d+up,c+up],col.darkened(0.18))
  poly([a+up,b+up,c+up,d+up],col.lightened(0.16))
  draw_polyline(PackedVector2Array([a+up,b+up,c+up,d+up,a+up]),col.darkened(0.38),1.0)

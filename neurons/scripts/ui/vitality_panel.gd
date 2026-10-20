@@ -1,4 +1,5 @@
 extends PanelContainer
+const UIStyle=preload("res://scripts/ui/ui_style.gd")
 ## Presentation only. Lifetime follows actual completed actions, never seconds.
 var auto_enabled:bool=true
 var manual_open:bool=false
@@ -23,19 +24,19 @@ func _ready() -> void:
  process_mode=Node.PROCESS_MODE_ALWAYS
  set_process(false)
  mouse_filter=Control.MOUSE_FILTER_IGNORE
- position=Vector2(20,150)
+ position=Vector2(20,200)
+ theme=UIStyle.theme_for()
  custom_minimum_size=Vector2(280,92)
- var style:=StyleBoxFlat.new()
- style.bg_color=Color("1b302eed");style.border_color=Color("8faaa0")
- style.set_border_width_all(1);style.set_content_margin_all(9)
+ var style:=UIStyle.surface("paper")
+ style.set_content_margin_all(11)
  add_theme_stylebox_override("panel",style)
  var column:=VBoxContainer.new();add_child(column)
  values=Label.new();values.add_theme_font_size_override("font_size",16);column.add_child(values)
- for color in [Color("b46b64"),Color("86a9bc")]:
+ for color in [UIStyle.OXIDE,UIStyle.TEAL]:
   var bar:=ProgressBar.new();bar.show_percentage=false;bar.custom_minimum_size=Vector2(258,7)
   bar.mouse_filter=Control.MOUSE_FILTER_IGNORE
   var fill:=StyleBoxFlat.new();fill.bg_color=color;bar.add_theme_stylebox_override("fill",fill)
-  var base:=StyleBoxFlat.new();base.bg_color=Color("10201f");bar.add_theme_stylebox_override("background",base)
+  var base:=StyleBoxFlat.new();base.bg_color=Color("c5c4b4");bar.add_theme_stylebox_override("background",base)
   column.add_child(bar)
   if hp_bar==null:hp_bar=bar
   else:sp_bar=bar
@@ -47,15 +48,15 @@ func _ready() -> void:
  key_base.mouse_filter=Control.MOUSE_FILTER_IGNORE;key_area.add_child(key_base)
  var base_style:=StyleBoxFlat.new();base_style.bg_color=Color("0d1c1c")
  base_style.border_color=Color("607b72");base_style.set_border_width_all(1)
- base_style.set_corner_radius_all(4);key_base.add_theme_stylebox_override("panel",base_style)
+ base_style.set_corner_radius_all(0);key_base.add_theme_stylebox_override("panel",base_style)
  keycap=PanelContainer.new();keycap.position=Vector2(1,1);keycap.size=Vector2(40,32)
  keycap.mouse_filter=Control.MOUSE_FILTER_IGNORE;key_area.add_child(keycap)
- var key_style:=StyleBoxFlat.new();key_style.bg_color=Color("405950")
- key_style.border_color=Color("c4d2b7");key_style.set_border_width_all(1)
- key_style.set_corner_radius_all(4);keycap.add_theme_stylebox_override("panel",key_style)
+ var key_style:=StyleBoxFlat.new();key_style.bg_color=Color("e0d9c7")
+ key_style.border_color=UIStyle.MUTED;key_style.set_border_width_all(1)
+ key_style.set_corner_radius_all(0);keycap.add_theme_stylebox_override("panel",key_style)
  var letter:=Label.new();letter.text="X";letter.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
  letter.vertical_alignment=VERTICAL_ALIGNMENT_CENTER;letter.add_theme_font_size_override("font_size",20)
- letter.add_theme_color_override("font_color",Color("e3e6ce"));keycap.add_child(letter)
+ letter.add_theme_color_override("font_color",UIStyle.INK);keycap.add_child(letter)
  hint=Label.new();hint.text="按 X 调出或关闭\n角色状态";hint.add_theme_font_size_override("font_size",13);hint_row.add_child(hint)
  refresh(100,100)
 

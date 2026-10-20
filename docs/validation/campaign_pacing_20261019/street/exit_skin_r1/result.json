@@ -1,0 +1,1840 @@
+{
+  "all_seven_rooms": [
+    {
+      "actually_visited": false,
+      "branch": false,
+      "configured_actors": [
+        {
+          "attack": "sweep",
+          "id": "father",
+          "relation": "enemy"
+        },
+        {
+          "attack": "belt",
+          "id": "warder",
+          "relation": "enemy"
+        },
+        {
+          "attack": "sweep",
+          "id": "transporter_hospital",
+          "relation": "enemy"
+        },
+        {
+          "attack": "",
+          "id": "register_nurse",
+          "relation": "neutral"
+        },
+        {
+          "attack": "",
+          "id": "head_nurse",
+          "relation": "enemy"
+        },
+        {
+          "attack": "",
+          "id": "back",
+          "relation": "neutral"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(15.52, 5.5)",
+          "height_m": 2.2,
+          "inward": "(-1.0, 0.0)",
+          "landing": "(15.14, 5.5)",
+          "threshold": "(15.75, 5.5)",
+          "toward": "street_narrow",
+          "wall": "east",
+          "wall_point": "(16.0, 5.5)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(5.6, 0.48)",
+          "height_m": 2.2,
+          "inward": "(0.0, 1.0)",
+          "landing": "(5.6, 0.86)",
+          "threshold": "(5.6, 0.25)",
+          "toward": "street_side",
+          "wall": "north",
+          "wall_point": "(5.6, 0.0)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_plaza",
+      "size_m": [
+        16.0,
+        11.0
+      ],
+      "static_portal_routes": [
+        {
+          "from": "street_narrow",
+          "route_points": 3,
+          "static_route_m": 11.2227716445923,
+          "toward": "street_side"
+        }
+      ],
+      "visits": []
+    },
+    {
+      "actually_visited": false,
+      "branch": true,
+      "configured_actors": [
+        {
+          "attack": "bandage",
+          "id": "nurse",
+          "relation": "friend"
+        },
+        {
+          "attack": "point",
+          "id": "corner",
+          "relation": "friend"
+        },
+        {
+          "attack": "",
+          "id": "wheelchair",
+          "relation": "friend"
+        },
+        {
+          "attack": "",
+          "id": "transport_patient",
+          "relation": "friend"
+        },
+        {
+          "attack": "",
+          "id": "postop",
+          "relation": "friend"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 4.5)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 4.5)",
+          "threshold": "(0.25, 4.5)",
+          "toward": "street_plaza",
+          "wall": "west",
+          "wall_point": "(0.0, 4.5)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_side",
+      "size_m": [
+        10.0,
+        9.0
+      ],
+      "static_portal_routes": [],
+      "visits": []
+    },
+    {
+      "actually_visited": false,
+      "branch": false,
+      "configured_actors": [
+        {
+          "attack": "pounce",
+          "id": "cat",
+          "relation": "enemy"
+        },
+        {
+          "attack": "charge",
+          "id": "twitch",
+          "relation": "enemy"
+        },
+        {
+          "attack": "restraint",
+          "id": "assistant_asylum",
+          "relation": "enemy"
+        },
+        {
+          "attack": "isolate",
+          "id": "isolation",
+          "relation": "enemy"
+        },
+        {
+          "attack": "grab",
+          "id": "dislocated",
+          "relation": "enemy"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 4.0)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 4.0)",
+          "threshold": "(0.25, 4.0)",
+          "toward": "street_plaza",
+          "wall": "west",
+          "wall_point": "(0.0, 4.0)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(17.52, 4.0)",
+          "height_m": 2.2,
+          "inward": "(-1.0, 0.0)",
+          "landing": "(17.14, 4.0)",
+          "threshold": "(17.75, 4.0)",
+          "toward": "street_twisted",
+          "wall": "east",
+          "wall_point": "(18.0, 4.0)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_narrow",
+      "size_m": [
+        18.0,
+        8.0
+      ],
+      "static_portal_routes": [
+        {
+          "from": "street_plaza",
+          "route_points": 2,
+          "static_route_m": 16.8899993896484,
+          "toward": "street_twisted"
+        }
+      ],
+      "visits": []
+    },
+    {
+      "actually_visited": false,
+      "branch": false,
+      "configured_actors": [
+        {
+          "attack": "charge",
+          "id": "reverse",
+          "relation": "enemy"
+        },
+        {
+          "attack": "grab",
+          "id": "archivist",
+          "relation": "enemy"
+        },
+        {
+          "attack": "watch",
+          "id": "double_face",
+          "relation": "neutral"
+        },
+        {
+          "attack": "",
+          "id": "triage",
+          "relation": "neutral"
+        },
+        {
+          "attack": "splash",
+          "id": "pharmacist",
+          "relation": "enemy"
+        },
+        {
+          "attack": "drug",
+          "id": "ward_nurse",
+          "relation": "enemy"
+        },
+        {
+          "attack": "lateral_bed",
+          "id": "transporter_asylum",
+          "relation": "enemy"
+        },
+        {
+          "attack": "",
+          "id": "speaker",
+          "relation": "friend"
+        },
+        {
+          "attack": "grab",
+          "id": "supervisor",
+          "relation": "enemy"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 6.0)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 6.0)",
+          "threshold": "(0.25, 6.0)",
+          "toward": "street_narrow",
+          "wall": "west",
+          "wall_point": "(0.0, 6.0)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(19.52, 6.0)",
+          "height_m": 2.2,
+          "inward": "(-1.0, 0.0)",
+          "landing": "(19.14, 6.0)",
+          "threshold": "(19.75, 6.0)",
+          "toward": "street_node",
+          "wall": "east",
+          "wall_point": "(20.0, 6.0)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(7.0, 0.48)",
+          "height_m": 2.2,
+          "inward": "(0.0, 1.0)",
+          "landing": "(7.0, 0.86)",
+          "threshold": "(7.0, 0.25)",
+          "toward": "street_maintenance",
+          "wall": "north",
+          "wall_point": "(7.0, 0.0)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_twisted",
+      "size_m": [
+        20.0,
+        12.0
+      ],
+      "static_portal_routes": [
+        {
+          "from": "street_narrow",
+          "route_points": 2,
+          "static_route_m": 18.8899993896484,
+          "toward": "street_node"
+        },
+        {
+          "from": "street_narrow",
+          "route_points": 3,
+          "static_route_m": 8.53201496601105,
+          "toward": "street_maintenance"
+        },
+        {
+          "from": "street_node",
+          "route_points": 3,
+          "static_route_m": 13.4458703994751,
+          "toward": "street_maintenance"
+        }
+      ],
+      "visits": []
+    },
+    {
+      "actually_visited": false,
+      "branch": true,
+      "configured_actors": [
+        {
+          "attack": "guard",
+          "id": "dog",
+          "relation": "friend"
+        },
+        {
+          "attack": "cart",
+          "id": "faceless",
+          "relation": "friend"
+        },
+        {
+          "attack": "",
+          "id": "treatment_pharmacist",
+          "relation": "neutral"
+        },
+        {
+          "attack": "",
+          "id": "cleaner",
+          "relation": "neutral"
+        },
+        {
+          "attack": "",
+          "id": "labor",
+          "relation": "friend"
+        },
+        {
+          "attack": "grab",
+          "id": "stitched",
+          "relation": "enemy"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 4.0)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 4.0)",
+          "threshold": "(0.25, 4.0)",
+          "toward": "street_twisted",
+          "wall": "west",
+          "wall_point": "(0.0, 4.0)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_maintenance",
+      "size_m": [
+        12.0,
+        8.0
+      ],
+      "static_portal_routes": [],
+      "visits": []
+    },
+    {
+      "actually_visited": false,
+      "branch": false,
+      "configured_actors": [
+        {
+          "attack": "grab",
+          "id": "mother",
+          "relation": "enemy"
+        },
+        {
+          "attack": "sweep",
+          "id": "doctor",
+          "relation": "enemy"
+        },
+        {
+          "attack": "charge",
+          "id": "assistant",
+          "relation": "enemy"
+        },
+        {
+          "attack": "sweep",
+          "id": "double_head",
+          "relation": "neutral"
+        },
+        {
+          "attack": "drag",
+          "id": "psychiatrist",
+          "relation": "enemy"
+        },
+        {
+          "attack": "short_charge",
+          "id": "guard_asylum",
+          "relation": "enemy"
+        },
+        {
+          "attack": "restraint",
+          "id": "director",
+          "relation": "enemy"
+        },
+        {
+          "attack": "",
+          "id": "blind",
+          "relation": "neutral"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 6.0)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 6.0)",
+          "threshold": "(0.25, 6.0)",
+          "toward": "street_twisted",
+          "wall": "west",
+          "wall_point": "(0.0, 6.0)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(16.52, 6.0)",
+          "height_m": 2.2,
+          "inward": "(-1.0, 0.0)",
+          "landing": "(16.14, 6.0)",
+          "threshold": "(16.75, 6.0)",
+          "toward": "street_end",
+          "wall": "east",
+          "wall_point": "(17.0, 6.0)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_node",
+      "size_m": [
+        17.0,
+        12.0
+      ],
+      "static_portal_routes": [
+        {
+          "from": "street_twisted",
+          "route_points": 4,
+          "static_route_m": 16.4389510154724,
+          "toward": "street_end"
+        }
+      ],
+      "visits": []
+    },
+    {
+      "actually_visited": true,
+      "branch": false,
+      "configured_actors": [
+        {
+          "attack": "sweep",
+          "id": "skinface",
+          "relation": "enemy"
+        },
+        {
+          "attack": "grab",
+          "id": "self",
+          "relation": "enemy"
+        },
+        {
+          "attack": "push",
+          "id": "guard_hospital",
+          "relation": "enemy"
+        },
+        {
+          "attack": "sweep",
+          "id": "archivist_asylum",
+          "relation": "enemy"
+        },
+        {
+          "attack": "",
+          "id": "informant",
+          "relation": "neutral"
+        },
+        {
+          "attack": "",
+          "id": "mimic",
+          "relation": "neutral"
+        }
+      ],
+      "portals": [
+        {
+          "at": "(0.48, 5.5)",
+          "height_m": 2.2,
+          "inward": "(1.0, 0.0)",
+          "landing": "(0.86, 5.5)",
+          "threshold": "(0.25, 5.5)",
+          "toward": "street_node",
+          "wall": "west",
+          "wall_point": "(0.0, 5.5)",
+          "width_m": 1.4
+        },
+        {
+          "at": "(15.52, 5.5)",
+          "height_m": 2.2,
+          "inward": "(-1.0, 0.0)",
+          "landing": "(15.14, 5.5)",
+          "threshold": "(15.75, 5.5)",
+          "toward": "ending_gate",
+          "wall": "east",
+          "wall_point": "(16.0, 5.5)",
+          "width_m": 1.4
+        }
+      ],
+      "room": "street_end",
+      "size_m": [
+        16.0,
+        11.0
+      ],
+      "static_portal_routes": [
+        {
+          "from": "street_node",
+          "route_points": 2,
+          "static_route_m": 14.8900003433228,
+          "toward": "ending_gate"
+        }
+      ],
+      "visits": [
+        {
+          "active_s": 14.0333333333333,
+          "actual_actor_hits": [],
+          "actual_hero_hits": [],
+          "availability_reasons_s": {
+            "SKIN:available": 8.00000000000006,
+            "SKIN:cooldown": 5.59999999999998,
+            "SKIN:presentation_paused": 3.99999999999999
+          },
+          "available_skill_s": {
+            "SKIN": 8.00000000000006
+          },
+          "body_busy_s": 0.0,
+          "damage_to_hero_hp": 0,
+          "damage_to_hero_sp": 0,
+          "distance_m": 17.0256472155452,
+          "door_intent_s": 0.8,
+          "elapsed_s": 17.7333333333334,
+          "entered_s": 0.0,
+          "entry_clusters": 7,
+          "entry_hp": 100,
+          "entry_neurons": 14,
+          "exit_hp": 100,
+          "exit_neurons": 11,
+          "facts": [
+            {
+              "fact": {
+                "cost": 1.0,
+                "event_id": "neural:1:1",
+                "kind": "skill_submitted",
+                "skill": "SKIN",
+                "success": true,
+                "time": 0.733333333333333
+              },
+              "observed_room": "street_end",
+              "street_s": 1.43333333333333
+            },
+            {
+              "fact": {
+                "context": {
+                  "action": "navigation",
+                  "direction": [
+                    0.0,
+                    -1.0
+                  ],
+                  "father_rescue": false,
+                  "intent_point": [
+                    15.5200004577637,
+                    5.5
+                  ],
+                  "medical_rescue": false,
+                  "perceived_threat": true,
+                  "room": "street_end",
+                  "target": "self"
+                },
+                "event_id": "neural:1:1",
+                "kind": "skill_reacted",
+                "skill": "SKIN",
+                "time": 0.733333333333333
+              },
+              "observed_room": "street_end",
+              "street_s": 1.63333333333334
+            },
+            {
+              "fact": {
+                "actor": "informant",
+                "at": [
+                  1.94208264350891,
+                  5.5
+                ],
+                "event_id": "street_report:1:informant:1",
+                "kind": "street_report_received",
+                "receivers": [
+                  "guard_hospital"
+                ],
+                "room": "street_end",
+                "source": "S3:P1621/P1908–1910",
+                "time": 1.56666666666667,
+                "witnessed": false
+              },
+              "observed_room": "street_end",
+              "street_s": 3.56666666666666
+            },
+            {
+              "fact": {
+                "cost": 1.0,
+                "event_id": "neural:1:2",
+                "kind": "skill_submitted",
+                "skill": "SKIN",
+                "success": true,
+                "time": 2.76666666666667
+              },
+              "observed_room": "street_end",
+              "street_s": 5.39999999999999
+            },
+            {
+              "fact": {
+                "context": {
+                  "action": "navigation",
+                  "direction": [
+                    0.0,
+                    -1.0
+                  ],
+                  "father_rescue": false,
+                  "intent_point": [
+                    15.5200004577637,
+                    5.5
+                  ],
+                  "medical_rescue": false,
+                  "perceived_threat": true,
+                  "room": "street_end",
+                  "target": "self"
+                },
+                "event_id": "neural:1:2",
+                "kind": "skill_reacted",
+                "skill": "SKIN",
+                "time": 2.76666666666667
+              },
+              "observed_room": "street_end",
+              "street_s": 5.59999999999999
+            },
+            {
+              "fact": {
+                "actor": "skinface",
+                "direction": [
+                  0.914286494255066,
+                  0.405068159103394
+                ],
+                "event_id": "combat:6:1:skinface:1",
+                "kind": "combat_attack_started",
+                "room": "street_end",
+                "time": 2.83333333333333
+              },
+              "observed_room": "street_end",
+              "street_s": 5.63333333333332
+            },
+            {
+              "fact": {
+                "cost": 1.0,
+                "event_id": "neural:1:3",
+                "kind": "skill_submitted",
+                "skill": "SKIN",
+                "success": true,
+                "time": 4.79999999999999
+              },
+              "observed_room": "street_end",
+              "street_s": 8.23333333333331
+            },
+            {
+              "fact": {
+                "context": {
+                  "action": "navigation",
+                  "direction": [
+                    0.0,
+                    -1.0
+                  ],
+                  "father_rescue": false,
+                  "intent_point": [
+                    15.5200004577637,
+                    5.5
+                  ],
+                  "medical_rescue": false,
+                  "perceived_threat": true,
+                  "room": "street_end",
+                  "target": "self"
+                },
+                "event_id": "neural:1:3",
+                "kind": "skill_reacted",
+                "skill": "SKIN",
+                "time": 4.79999999999999
+              },
+              "observed_room": "street_end",
+              "street_s": 8.43333333333331
+            },
+            {
+              "fact": {
+                "actor": "guard_hospital",
+                "direction": [
+                  -0.976980149745941,
+                  0.213330626487732
+                ],
+                "event_id": "combat:6:1:guard_hospital:2",
+                "kind": "combat_attack_started",
+                "room": "street_end",
+                "time": 5.13333333333332
+              },
+              "observed_room": "street_end",
+              "street_s": 8.73333333333331
+            },
+            {
+              "fact": {
+                "actor": "informant",
+                "at": [
+                  11.2018566131592,
+                  4.59317255020142
+                ],
+                "event_id": "street_report:1:informant:2",
+                "kind": "street_report_received",
+                "receivers": [
+                  "archivist_asylum"
+                ],
+                "room": "street_end",
+                "source": "S3:P1621/P1908–1910",
+                "time": 10.5333333333333,
+                "witnessed": true
+              },
+              "observed_room": "street_end",
+              "street_s": 14.1333333333333
+            }
+          ],
+          "forced_or_pose_displacement_m": 0.0287499390542507,
+          "gripped_s": 0.0,
+          "hostile_visible_s": 17.6,
+          "hostile_windup_or_active_s": 2.13333333333333,
+          "left_s": 17.7333333333334,
+          "moving_s": 13.4333333333333,
+          "paused_s": 3.73333333333333,
+          "room": "street_end",
+          "route_blocked_s": 0.0,
+          "visible_actors": {
+            "archivist_asylum": {
+              "attack": "sweep",
+              "first_s": 0.0,
+              "last_s": 17.6,
+              "minimum_distance_m": 2.13422322273254,
+              "relation": "enemy",
+              "visible_s": 17.6
+            },
+            "guard_hospital": {
+              "attack": "push",
+              "first_s": 5.86666666666666,
+              "last_s": 17.6,
+              "minimum_distance_m": 0.478756278753281,
+              "relation": "enemy",
+              "visible_s": 12.0
+            },
+            "informant": {
+              "attack": "",
+              "first_s": 3.46666666666666,
+              "last_s": 12.8,
+              "minimum_distance_m": 1.61522078514099,
+              "relation": "neutral",
+              "visible_s": 9.59999999999997
+            },
+            "mimic": {
+              "attack": "",
+              "first_s": 10.9333333333333,
+              "last_s": 14.9333333333333,
+              "minimum_distance_m": 4.36461925506592,
+              "relation": "neutral",
+              "visible_s": 4.26666666666665
+            },
+            "self": {
+              "attack": "grab",
+              "first_s": 3.46666666666666,
+              "last_s": 17.6,
+              "minimum_distance_m": 1.7540500164032,
+              "relation": "enemy",
+              "visible_s": 14.4
+            },
+            "skinface": {
+              "attack": "sweep",
+              "first_s": 0.0,
+              "last_s": 17.6,
+              "minimum_distance_m": 1.14808738231659,
+              "relation": "enemy",
+              "visible_s": 17.3333333333334
+            }
+          },
+          "walking_m": 16.9968972764909
+        }
+      ]
+    }
+  ],
+  "clusters": 7,
+  "elapsed_simulation_s": 17.7666666666667,
+  "ending": {
+    "complete": false,
+    "dialogue_sent": false,
+    "elapsed": 0.0,
+    "id": "E2",
+    "phase": "registration",
+    "receipt": "ending:E2:1b737db63b0b84c0be8bc498fc759daad6f4daa76d73c5bf65ddd7255e99a7c3"
+  },
+  "entry_fixture": "actual_checkpoint:res://../docs/validation/campaign_pacing_20261019/street/exit_baseline_r1/initial_entry_fixture.json",
+  "events": [
+    {
+      "clusters": 7,
+      "control_ms": 0,
+      "destination": "",
+      "door_left_s": -1.0,
+      "elapsed_s": 0.0333333333333333,
+      "ending": {},
+      "gripped": false,
+      "hp": 100,
+      "level": 6,
+      "neurons": 14,
+      "paused": false,
+      "pos_m": [
+        1.29999995231628,
+        5.5
+      ],
+      "pose": "idle",
+      "room": "street_end",
+      "route_points": 0,
+      "sp": 100,
+      "street_clock_s": 0.0,
+      "street_s": 0.0,
+      "world_s": 0.0
+    },
+    {
+      "fact": {
+        "cost": 1.0,
+        "event_id": "neural:1:1",
+        "kind": "skill_submitted",
+        "skill": "SKIN",
+        "success": true,
+        "time": 0.733333333333333
+      },
+      "observed_room": "street_end",
+      "street_s": 1.43333333333333
+    },
+    {
+      "fact": {
+        "context": {
+          "action": "navigation",
+          "direction": [
+            0.0,
+            -1.0
+          ],
+          "father_rescue": false,
+          "intent_point": [
+            15.5200004577637,
+            5.5
+          ],
+          "medical_rescue": false,
+          "perceived_threat": true,
+          "room": "street_end",
+          "target": "self"
+        },
+        "event_id": "neural:1:1",
+        "kind": "skill_reacted",
+        "skill": "SKIN",
+        "time": 0.733333333333333
+      },
+      "observed_room": "street_end",
+      "street_s": 1.63333333333334
+    },
+    {
+      "fact": {
+        "actor": "informant",
+        "at": [
+          1.94208264350891,
+          5.5
+        ],
+        "event_id": "street_report:1:informant:1",
+        "kind": "street_report_received",
+        "receivers": [
+          "guard_hospital"
+        ],
+        "room": "street_end",
+        "source": "S3:P1621/P1908–1910",
+        "time": 1.56666666666667,
+        "witnessed": false
+      },
+      "observed_room": "street_end",
+      "street_s": 3.56666666666666
+    },
+    {
+      "fact": {
+        "cost": 1.0,
+        "event_id": "neural:1:2",
+        "kind": "skill_submitted",
+        "skill": "SKIN",
+        "success": true,
+        "time": 2.76666666666667
+      },
+      "observed_room": "street_end",
+      "street_s": 5.39999999999999
+    },
+    {
+      "fact": {
+        "context": {
+          "action": "navigation",
+          "direction": [
+            0.0,
+            -1.0
+          ],
+          "father_rescue": false,
+          "intent_point": [
+            15.5200004577637,
+            5.5
+          ],
+          "medical_rescue": false,
+          "perceived_threat": true,
+          "room": "street_end",
+          "target": "self"
+        },
+        "event_id": "neural:1:2",
+        "kind": "skill_reacted",
+        "skill": "SKIN",
+        "time": 2.76666666666667
+      },
+      "observed_room": "street_end",
+      "street_s": 5.59999999999999
+    },
+    {
+      "fact": {
+        "actor": "skinface",
+        "direction": [
+          0.914286494255066,
+          0.405068159103394
+        ],
+        "event_id": "combat:6:1:skinface:1",
+        "kind": "combat_attack_started",
+        "room": "street_end",
+        "time": 2.83333333333333
+      },
+      "observed_room": "street_end",
+      "street_s": 5.63333333333332
+    },
+    {
+      "fact": {
+        "cost": 1.0,
+        "event_id": "neural:1:3",
+        "kind": "skill_submitted",
+        "skill": "SKIN",
+        "success": true,
+        "time": 4.79999999999999
+      },
+      "observed_room": "street_end",
+      "street_s": 8.23333333333331
+    },
+    {
+      "fact": {
+        "context": {
+          "action": "navigation",
+          "direction": [
+            0.0,
+            -1.0
+          ],
+          "father_rescue": false,
+          "intent_point": [
+            15.5200004577637,
+            5.5
+          ],
+          "medical_rescue": false,
+          "perceived_threat": true,
+          "room": "street_end",
+          "target": "self"
+        },
+        "event_id": "neural:1:3",
+        "kind": "skill_reacted",
+        "skill": "SKIN",
+        "time": 4.79999999999999
+      },
+      "observed_room": "street_end",
+      "street_s": 8.43333333333331
+    },
+    {
+      "fact": {
+        "actor": "guard_hospital",
+        "direction": [
+          -0.976980149745941,
+          0.213330626487732
+        ],
+        "event_id": "combat:6:1:guard_hospital:2",
+        "kind": "combat_attack_started",
+        "room": "street_end",
+        "time": 5.13333333333332
+      },
+      "observed_room": "street_end",
+      "street_s": 8.73333333333331
+    },
+    {
+      "fact": {
+        "actor": "informant",
+        "at": [
+          11.2018566131592,
+          4.59317255020142
+        ],
+        "event_id": "street_report:1:informant:2",
+        "kind": "street_report_received",
+        "receivers": [
+          "archivist_asylum"
+        ],
+        "room": "street_end",
+        "source": "S3:P1621/P1908–1910",
+        "time": 10.5333333333333,
+        "witnessed": true
+      },
+      "observed_room": "street_end",
+      "street_s": 14.1333333333333
+    }
+  ],
+  "hp": 100,
+  "interventions_applied": 3,
+  "limitations": [
+    "Declared direct chapter entry does not carry the full L1-L4 earned skill profile.",
+    "Unvisited branches have static portal distances only, not invented natural traversal duration.",
+    "Available skill windows are sampled; actual recorded input and receipts are separate.",
+    "No human or subjective audio/art acceptance claimed."
+  ],
+  "max_unexplained_still_s": 0.0333333333333333,
+  "neurons": 11,
+  "player_goal": "Prevent the autonomous host escaping. More NPC damage is not automatically greater player difficulty.",
+  "pre_street_s": 0.0333333333333333,
+  "reason": "actual_ending_registration",
+  "recorded_inputs": [
+    {
+      "details": {},
+      "label": "input_schedule_started",
+      "state": {
+        "clusters": 7,
+        "control_ms": 0,
+        "cooldown_remaining_s": 0.0,
+        "destination": "",
+        "door_left_s": -1.0,
+        "elapsed_s": 0.633333333333333,
+        "ending": {},
+        "gripped": false,
+        "hp": 100,
+        "level": 6,
+        "menu_page": "cast",
+        "menu_status": "",
+        "menu_visible": false,
+        "neurons": 14,
+        "paused": false,
+        "pending": {},
+        "pos_m": [
+          2.02833247184753,
+          5.5
+        ],
+        "pose": "walk",
+        "room": "street_end",
+        "route_points": 1,
+        "skin_power": 1,
+        "skin_resistance": 0,
+        "skin_unlocked": true,
+        "sp": 100,
+        "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+        "street_clock_s": 0.633333333333333,
+        "street_s": 0.6,
+        "world_s": 0.633333333333333
+      }
+    },
+    {
+      "details": {
+        "actual_key": "Tab",
+        "direction": "north / up"
+      },
+      "label": "first:before_tab",
+      "state": {
+        "clusters": 7,
+        "control_ms": 0,
+        "cooldown_remaining_s": 0.0,
+        "destination": "",
+        "door_left_s": -1.0,
+        "elapsed_s": 0.7,
+        "ending": {},
+        "gripped": false,
+        "hp": 100,
+        "level": 6,
+        "menu_page": "cast",
+        "menu_status": "",
+        "menu_visible": false,
+        "neurons": 14,
+        "paused": false,
+        "pending": {},
+        "pos_m": [
+          2.10499882698059,
+          5.5
+        ],
+        "pose": "walk",
+        "room": "street_end",
+        "route_points": 1,
+        "skin_power": 1,
+        "skin_resistance": 0,
+        "skin_unlocked": true,
+        "sp": 100,
+        "status_note": "已保存（动作、钥匙、随机状态与暂停均保留）",
+        "street_clock_s": 0.7,
+        "street_s": 0.666666666666667,
+        "world_s": 0.7
+      }
+    },
+    {
+      "details": {
+        "neurons_after": 13,
+        "neurons_before": 14,
+        "pos_before_m": [
+          2.10499882698059,
+          5.5
+        ],
+        "real_input": "Tab, mouse SKIN, mouse north direction"
+      },
+      "label": "first:after_actual_resolution",
+      "state": {
+        "clusters": 7,
+        "control_ms": 0,
+        "cooldown_remaining_s": 1.6,
+        "destination": "",
+        "door_left_s": -1.0,
+        "elapsed_s": 2.0,
+        "ending": {},
+        "gripped": false,
+        "hp": 100,
+        "level": 6,
+        "menu_page": "cast",
+        "menu_status": "选择实际位移方向；取消不扣费",
+        "menu_visible": false,
+        "neurons": 13,
+        "paused": false,
+        "pending": {},
+        "pos_m": [
+          2.30595827102661,
+          4.70972537994385
+        ],
+        "pose": "walk",
+        "room": "street_end",
+        "route_points": 1,
+        "skin_power": 1,
+        "skin_resistance": 0,
+        "skin_unlocked": true,
+        "sp": 100,
+        "status_note": "皮肤刺激：实际反应；保留已成立结果",
+        "street_clock_s": 1.13333333333333,
+        "street_s": 1.96666666666667,
+        "world_s": 1.13333333333333
+      }
+    },
+    {
+      "details": {
+        "actual_key": "Tab",
+        "direction": "north / up"
+      },
+      "label": "cooldown_repeat:before_tab",
+      "state": {
+        "clusters": 7,
+        "control_ms": 0,
+        "cooldown_remaining_s": 1.53333333333333,
+        "destination": "",
+        "door_left_s": -1.0,
+        "elapsed_s": 2.06666666666667,
+        "ending": {},
+        "gripped": false,
+        "hp": 100,
+        "level": 6,
+        "menu_page": "cast",
+        "menu_status": "选择实际位移方向；取消不扣费",
+        "menu_visible": false,
+        "neurons": 13,
+        "paused": false,
+        "pending": {},
+        "pos_m": [
+          2.38248825073242,
+          4.71430206298828
+        ],
+        "pose": "walk",
+        "room": "street_end",
+        "route_points": 1,
+        "skin_power": 1,
+        "skin_resistance": 0,
+        "skin_unlocked": true,
+        "sp": 100,
+        "status_note": "皮肤刺激：实际反应；保留已成立结果",
+        "street_clock_s": 1.2,
+        "street_s": 2.03333333333334,
+        "world_s": 1.2
+      }
+    },
+    {
+      "details": {
+        "displayed_reason": "冷却尚未结束",
+        "neurons_after": 13,
+        "neurons_before": 13
+      },
+      "label": "cooldown_repeat:ui_denied",
+      "state": {
+        "clusters": 7,
+        "control_ms": 0,
+        "cooldown_remaining_s": 1.5,
+        "destination": "",
+        "door_left_s": -1.0,
+        "elapsed_s": 2.96666666666667,
+        "ending": {},
+        "gripped": false,
+        "hp": 100,
+        "level": 6,
+        "menu_page": "cast",
+        "menu_status": "冷却尚未结束",
+        "menu_visible": true,
+        "neurons": 13,
+        "paused": true,
+        "pending": {},
+        "pos_m": [
+          2.42075324058533,
+          4.7165904045105
+        ],
+        "pose": "walk",
+        "room": "street_end",
+        "route_points": 1,
+        "skin_power": 1,
+        "skin_resistance": 0,
+        "skin_unlocked": true,
+        "sp": 100,
+        "status_note": "皮肤刺激：实际反应；保留已成立结果",
+        "street_clock_s": 1.23333333333333,
+        "street_s": 2.93333333333333,
+        "world_s": 1.23333333333333
+      }
+    },
+    {
+      "details": {
+        "actual_key": "Tab",
+        "direction": "north / up"
+      },
+      "label": "second:before_tab",
+      "state": {
+        "clusters": 7,
+        "control_ms": 0,
+        "cooldown_remaining_s": 0.0,
+        "destination": "",
+        "door_left_s": -1.0,
+        "elapsed_s": 4.73333333333333,
+        "ending": {},
+        "gripped": false,
+        "hp": 100,
+        "level": 6,
+        "menu_page": "cast",
+        "menu_status": "冷却尚未结束",
+        "menu_visible": false,
+        "neurons": 13,
+        "paused": false,
+        "pending": {},
+        "pos_m": [
+          4.14267873764038,
+          4.81956577301025
+        ],
+        "pose": "walk",
+        "room": "street_end",
+        "route_points": 1,
+        "skin_power": 1,
+        "skin_resistance": 0,
+        "skin_unlocked": true,
+        "sp": 100,
+        "status_note": "皮肤刺激：实际反应；保留已成立结果",
+        "street_clock_s": 2.73333333333333,
+        "street_s": 4.69999999999999,
+        "world_s": 2.73333333333333
+      }
+    },
+    {
+      "details": {
+        "neurons_after": 12,
+        "neurons_before": 13,
+        "pos_before_m": [
+          4.14267873764038,
+          4.81956577301025
+        ],
+        "real_input": "Tab, mouse SKIN, mouse north direction"
+      },
+      "label": "second:after_actual_resolution",
+      "state": {
+        "clusters": 7,
+        "control_ms": 0,
+        "cooldown_remaining_s": 1.6,
+        "destination": "",
+        "door_left_s": -1.0,
+        "elapsed_s": 5.96666666666666,
+        "ending": {},
+        "gripped": false,
+        "hp": 100,
+        "level": 6,
+        "menu_page": "cast",
+        "menu_status": "选择实际位移方向；取消不扣费",
+        "menu_visible": false,
+        "neurons": 12,
+        "paused": false,
+        "pending": {},
+        "pos_m": [
+          4.34249305725098,
+          4.04291391372681
+        ],
+        "pose": "walk",
+        "room": "street_end",
+        "route_points": 1,
+        "skin_power": 1,
+        "skin_resistance": 0,
+        "skin_unlocked": true,
+        "sp": 100,
+        "status_note": "皮肤刺激：实际反应；保留已成立结果",
+        "street_clock_s": 3.16666666666667,
+        "street_s": 5.93333333333332,
+        "world_s": 3.16666666666667
+      }
+    },
+    {
+      "details": {
+        "actual_key": "Tab",
+        "direction": "north / up"
+      },
+      "label": "third:before_tab",
+      "state": {
+        "clusters": 7,
+        "control_ms": 0,
+        "cooldown_remaining_s": 0.000000000000007105427357601,
+        "destination": "",
+        "door_left_s": -1.0,
+        "elapsed_s": 7.56666666666665,
+        "ending": {},
+        "gripped": false,
+        "hp": 100,
+        "level": 6,
+        "menu_page": "cast",
+        "menu_status": "选择实际位移方向；取消不扣费",
+        "menu_visible": false,
+        "neurons": 12,
+        "paused": false,
+        "pending": {},
+        "pos_m": [
+          6.16704750061035,
+          4.28076791763306
+        ],
+        "pose": "walk",
+        "room": "street_end",
+        "route_points": 1,
+        "skin_power": 1,
+        "skin_resistance": 0,
+        "skin_unlocked": true,
+        "sp": 100,
+        "status_note": "皮肤刺激：实际反应；保留已成立结果",
+        "street_clock_s": 4.76666666666666,
+        "street_s": 7.53333333333332,
+        "world_s": 4.76666666666666
+      }
+    },
+    {
+      "details": {
+        "neurons_after": 11,
+        "neurons_before": 12,
+        "pos_before_m": [
+          6.16704750061035,
+          4.28076791763306
+        ],
+        "real_input": "Tab, mouse SKIN, mouse north direction"
+      },
+      "label": "third:after_actual_resolution",
+      "state": {
+        "clusters": 7,
+        "control_ms": 0,
+        "cooldown_remaining_s": 1.6,
+        "destination": "",
+        "door_left_s": -1.0,
+        "elapsed_s": 8.79999999999998,
+        "ending": {},
+        "gripped": false,
+        "hp": 100,
+        "level": 6,
+        "menu_page": "cast",
+        "menu_status": "选择实际位移方向；取消不扣费",
+        "menu_visible": false,
+        "neurons": 11,
+        "paused": false,
+        "pending": {},
+        "pos_m": [
+          6.33411502838135,
+          3.54657340049744
+        ],
+        "pose": "walk",
+        "room": "street_end",
+        "route_points": 1,
+        "skin_power": 1,
+        "skin_resistance": 0,
+        "skin_unlocked": true,
+        "sp": 100,
+        "status_note": "皮肤刺激：实际反应；保留已成立结果",
+        "street_clock_s": 5.19999999999999,
+        "street_s": 8.76666666666665,
+        "world_s": 5.19999999999999
+      }
+    },
+    {
+      "details": {},
+      "label": "input_schedule_finished",
+      "state": {
+        "clusters": 7,
+        "control_ms": 0,
+        "cooldown_remaining_s": 1.53333333333334,
+        "destination": "",
+        "door_left_s": -1.0,
+        "elapsed_s": 8.86666666666665,
+        "ending": {},
+        "gripped": false,
+        "hp": 100,
+        "level": 6,
+        "menu_page": "cast",
+        "menu_status": "选择实际位移方向；取消不扣费",
+        "menu_visible": false,
+        "neurons": 11,
+        "paused": false,
+        "pending": {},
+        "pos_m": [
+          6.39995622634888,
+          3.58476662635803
+        ],
+        "pose": "walk",
+        "room": "street_end",
+        "route_points": 1,
+        "skin_power": 1,
+        "skin_resistance": 0,
+        "skin_unlocked": true,
+        "sp": 100,
+        "status_note": "皮肤刺激：实际反应；保留已成立结果",
+        "street_clock_s": 5.26666666666666,
+        "street_s": 8.83333333333331,
+        "world_s": 5.26666666666666
+      }
+    }
+  ],
+  "rendered": true,
+  "rules_unchanged": true,
+  "sampling_interval_s": 0.25,
+  "segments": [
+    {
+      "active_s": 14.0333333333333,
+      "actual_actor_hits": [],
+      "actual_hero_hits": [],
+      "availability_reasons_s": {
+        "SKIN:available": 8.00000000000006,
+        "SKIN:cooldown": 5.59999999999998,
+        "SKIN:presentation_paused": 3.99999999999999
+      },
+      "available_skill_s": {
+        "SKIN": 8.00000000000006
+      },
+      "body_busy_s": 0.0,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "distance_m": 17.0256472155452,
+      "door_intent_s": 0.8,
+      "elapsed_s": 17.7333333333334,
+      "entered_s": 0.0,
+      "entry_clusters": 7,
+      "entry_hp": 100,
+      "entry_neurons": 14,
+      "exit_hp": 100,
+      "exit_neurons": 11,
+      "facts": [
+        {
+          "fact": {
+            "cost": 1.0,
+            "event_id": "neural:1:1",
+            "kind": "skill_submitted",
+            "skill": "SKIN",
+            "success": true,
+            "time": 0.733333333333333
+          },
+          "observed_room": "street_end",
+          "street_s": 1.43333333333333
+        },
+        {
+          "fact": {
+            "context": {
+              "action": "navigation",
+              "direction": [
+                0.0,
+                -1.0
+              ],
+              "father_rescue": false,
+              "intent_point": [
+                15.5200004577637,
+                5.5
+              ],
+              "medical_rescue": false,
+              "perceived_threat": true,
+              "room": "street_end",
+              "target": "self"
+            },
+            "event_id": "neural:1:1",
+            "kind": "skill_reacted",
+            "skill": "SKIN",
+            "time": 0.733333333333333
+          },
+          "observed_room": "street_end",
+          "street_s": 1.63333333333334
+        },
+        {
+          "fact": {
+            "actor": "informant",
+            "at": [
+              1.94208264350891,
+              5.5
+            ],
+            "event_id": "street_report:1:informant:1",
+            "kind": "street_report_received",
+            "receivers": [
+              "guard_hospital"
+            ],
+            "room": "street_end",
+            "source": "S3:P1621/P1908–1910",
+            "time": 1.56666666666667,
+            "witnessed": false
+          },
+          "observed_room": "street_end",
+          "street_s": 3.56666666666666
+        },
+        {
+          "fact": {
+            "cost": 1.0,
+            "event_id": "neural:1:2",
+            "kind": "skill_submitted",
+            "skill": "SKIN",
+            "success": true,
+            "time": 2.76666666666667
+          },
+          "observed_room": "street_end",
+          "street_s": 5.39999999999999
+        },
+        {
+          "fact": {
+            "context": {
+              "action": "navigation",
+              "direction": [
+                0.0,
+                -1.0
+              ],
+              "father_rescue": false,
+              "intent_point": [
+                15.5200004577637,
+                5.5
+              ],
+              "medical_rescue": false,
+              "perceived_threat": true,
+              "room": "street_end",
+              "target": "self"
+            },
+            "event_id": "neural:1:2",
+            "kind": "skill_reacted",
+            "skill": "SKIN",
+            "time": 2.76666666666667
+          },
+          "observed_room": "street_end",
+          "street_s": 5.59999999999999
+        },
+        {
+          "fact": {
+            "actor": "skinface",
+            "direction": [
+              0.914286494255066,
+              0.405068159103394
+            ],
+            "event_id": "combat:6:1:skinface:1",
+            "kind": "combat_attack_started",
+            "room": "street_end",
+            "time": 2.83333333333333
+          },
+          "observed_room": "street_end",
+          "street_s": 5.63333333333332
+        },
+        {
+          "fact": {
+            "cost": 1.0,
+            "event_id": "neural:1:3",
+            "kind": "skill_submitted",
+            "skill": "SKIN",
+            "success": true,
+            "time": 4.79999999999999
+          },
+          "observed_room": "street_end",
+          "street_s": 8.23333333333331
+        },
+        {
+          "fact": {
+            "context": {
+              "action": "navigation",
+              "direction": [
+                0.0,
+                -1.0
+              ],
+              "father_rescue": false,
+              "intent_point": [
+                15.5200004577637,
+                5.5
+              ],
+              "medical_rescue": false,
+              "perceived_threat": true,
+              "room": "street_end",
+              "target": "self"
+            },
+            "event_id": "neural:1:3",
+            "kind": "skill_reacted",
+            "skill": "SKIN",
+            "time": 4.79999999999999
+          },
+          "observed_room": "street_end",
+          "street_s": 8.43333333333331
+        },
+        {
+          "fact": {
+            "actor": "guard_hospital",
+            "direction": [
+              -0.976980149745941,
+              0.213330626487732
+            ],
+            "event_id": "combat:6:1:guard_hospital:2",
+            "kind": "combat_attack_started",
+            "room": "street_end",
+            "time": 5.13333333333332
+          },
+          "observed_room": "street_end",
+          "street_s": 8.73333333333331
+        },
+        {
+          "fact": {
+            "actor": "informant",
+            "at": [
+              11.2018566131592,
+              4.59317255020142
+            ],
+            "event_id": "street_report:1:informant:2",
+            "kind": "street_report_received",
+            "receivers": [
+              "archivist_asylum"
+            ],
+            "room": "street_end",
+            "source": "S3:P1621/P1908–1910",
+            "time": 10.5333333333333,
+            "witnessed": true
+          },
+          "observed_room": "street_end",
+          "street_s": 14.1333333333333
+        }
+      ],
+      "forced_or_pose_displacement_m": 0.0287499390542507,
+      "gripped_s": 0.0,
+      "hostile_visible_s": 17.6,
+      "hostile_windup_or_active_s": 2.13333333333333,
+      "left_s": 17.7333333333334,
+      "moving_s": 13.4333333333333,
+      "paused_s": 3.73333333333333,
+      "room": "street_end",
+      "route_blocked_s": 0.0,
+      "visible_actors": {
+        "archivist_asylum": {
+          "attack": "sweep",
+          "first_s": 0.0,
+          "last_s": 17.6,
+          "minimum_distance_m": 2.13422322273254,
+          "relation": "enemy",
+          "visible_s": 17.6
+        },
+        "guard_hospital": {
+          "attack": "push",
+          "first_s": 5.86666666666666,
+          "last_s": 17.6,
+          "minimum_distance_m": 0.478756278753281,
+          "relation": "enemy",
+          "visible_s": 12.0
+        },
+        "informant": {
+          "attack": "",
+          "first_s": 3.46666666666666,
+          "last_s": 12.8,
+          "minimum_distance_m": 1.61522078514099,
+          "relation": "neutral",
+          "visible_s": 9.59999999999997
+        },
+        "mimic": {
+          "attack": "",
+          "first_s": 10.9333333333333,
+          "last_s": 14.9333333333333,
+          "minimum_distance_m": 4.36461925506592,
+          "relation": "neutral",
+          "visible_s": 4.26666666666665
+        },
+        "self": {
+          "attack": "grab",
+          "first_s": 3.46666666666666,
+          "last_s": 17.6,
+          "minimum_distance_m": 1.7540500164032,
+          "relation": "enemy",
+          "visible_s": 14.4
+        },
+        "skinface": {
+          "attack": "sweep",
+          "first_s": 0.0,
+          "last_s": 17.6,
+          "minimum_distance_m": 1.14808738231659,
+          "relation": "enemy",
+          "visible_s": 17.3333333333334
+        }
+      },
+      "walking_m": 16.9968972764909
+    }
+  ],
+  "skill_resolutions": [
+    {
+      "fact": {
+        "context": {
+          "action": "navigation",
+          "direction": [
+            0.0,
+            -1.0
+          ],
+          "father_rescue": false,
+          "intent_point": [
+            15.5200004577637,
+            5.5
+          ],
+          "medical_rescue": false,
+          "perceived_threat": true,
+          "room": "street_end",
+          "target": "self"
+        },
+        "event_id": "neural:1:1",
+        "kind": "skill_reacted",
+        "skill": "SKIN",
+        "time": 0.733333333333333
+      },
+      "observed_room": "street_end",
+      "street_s": 1.63333333333334
+    },
+    {
+      "fact": {
+        "context": {
+          "action": "navigation",
+          "direction": [
+            0.0,
+            -1.0
+          ],
+          "father_rescue": false,
+          "intent_point": [
+            15.5200004577637,
+            5.5
+          ],
+          "medical_rescue": false,
+          "perceived_threat": true,
+          "room": "street_end",
+          "target": "self"
+        },
+        "event_id": "neural:1:2",
+        "kind": "skill_reacted",
+        "skill": "SKIN",
+        "time": 2.76666666666667
+      },
+      "observed_room": "street_end",
+      "street_s": 5.59999999999999
+    },
+    {
+      "fact": {
+        "context": {
+          "action": "navigation",
+          "direction": [
+            0.0,
+            -1.0
+          ],
+          "father_rescue": false,
+          "intent_point": [
+            15.5200004577637,
+            5.5
+          ],
+          "medical_rescue": false,
+          "perceived_threat": true,
+          "room": "street_end",
+          "target": "self"
+        },
+        "event_id": "neural:1:3",
+        "kind": "skill_reacted",
+        "skill": "SKIN",
+        "time": 4.79999999999999
+      },
+      "observed_room": "street_end",
+      "street_s": 8.43333333333331
+    }
+  ],
+  "skill_submissions": [
+    {
+      "fact": {
+        "cost": 1.0,
+        "event_id": "neural:1:1",
+        "kind": "skill_submitted",
+        "skill": "SKIN",
+        "success": true,
+        "time": 0.733333333333333
+      },
+      "observed_room": "street_end",
+      "street_s": 1.43333333333333
+    },
+    {
+      "fact": {
+        "cost": 1.0,
+        "event_id": "neural:1:2",
+        "kind": "skill_submitted",
+        "skill": "SKIN",
+        "success": true,
+        "time": 2.76666666666667
+      },
+      "observed_room": "street_end",
+      "street_s": 5.39999999999999
+    },
+    {
+      "fact": {
+        "cost": 1.0,
+        "event_id": "neural:1:3",
+        "kind": "skill_submitted",
+        "skill": "SKIN",
+        "success": true,
+        "time": 4.79999999999999
+      },
+      "observed_room": "street_end",
+      "street_s": 8.23333333333331
+    }
+  ],
+  "sp": 100,
+  "street_s": 17.7333333333334,
+  "street_wall_s": 13.783,
+  "wall_s": 13.783
+}

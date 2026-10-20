@@ -1,0 +1,27 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS mixed-door fixture restores isolated actual Street entry
+PASS declared fourteen-body mixture retains two distinct beds and dead wheelchair
+PASS both pending mouths are truly occupied by rigid object plus live body
+PASS mixed west obstruction retains existing pass intent
+PASS independent east rigid bed also blocks actual crossing
+PASS real JSON retains mixed cast, stopped bed, dead chair and pending door
+PASS actual paused process freezes mixed pending retry clock
+PASS west live blocker really navigates away beside stationary dead wheelchair
+PASS dead wheelchair keeps its footprint while existing aperture exposes legal side lane
+PASS pending west intent actually resumes and crosses among larger mixed cast
+PASS west crossing preserves dead wheelchair pose across JSON precision conversion
+PASS west arrival stands outside actual dead wheelchair footprint
+PASS actual saved mixed blocked-east branch restores without reconstructing cast
+PASS east live blocker navigates along remaining lane beside original rigid bed
+PASS same saved east pending intent resumes through physically free bed side lane
+PASS east passage preserves stopped dead-carrier bed across JSON precision conversion
+PASS east arrival stands outside actual dead carrier bed footprint
+PASS stationary objects/retries/save cannot fabricate damage or duplicate identities
+PASS one-room ordinary-process fixture has ten mixed bodies including both beds and dead chair
+PASS ordinary autonomous process actually exits ten-body mixed street to next source segment
+PASS bounded mixed attack scheduling and no unexplained twenty-second standstill
+PASS ordinary mixed encounter keeps actual dead-object positions
+PASS actual mixed receipts and identities remain unique across the passage
+STREET_MIXED_CROWD 23 passed 0 failed

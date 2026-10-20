@@ -106,8 +106,8 @@
       "attack": "bandage",
       "hp": 40,
       "position_trial": [
-        3.3,
-        2.1
+        3.2,
+        4.8
       ],
       "source": "S1:T17R2；S3:P1634–1641（Street行为）",
       "behavior": "脱离追击后包扎；动作中断不提前治疗，往返不恢复治疗次数。"
@@ -121,8 +121,8 @@
       "attack": "point",
       "hp": 40,
       "position_trial": [
-        6.699999999999999,
-        6.9
+        1.1,
+        7.4
       ],
       "source": "S1:T17R3；S3:P1642–1647（Street行为）",
       "behavior": "指示原入口返回主路；不是本身人格，不指向不存在的后门。"
@@ -136,8 +136,8 @@
       "attack": "",
       "hp": 40,
       "position_trial": [
-        10.1,
-        2.1
+        5.2,
+        5.2
       ],
       "source": "S1:T17R4；S3:P1648–1655（Street行为）",
       "behavior": "靠墙让路、指向原入口；不新增治疗或开门能力。"
@@ -151,8 +151,8 @@
       "attack": "",
       "hp": 40,
       "position_trial": [
-        3.3,
-        6.9
+        2.3,
+        10.7
       ],
       "source": "S1:T17R5；S3:P1656–1662（Street行为）",
       "behavior": "坐在墙边，抬手指向原入口；不当作尸体，不新增治疗能力。"
@@ -166,8 +166,8 @@
       "attack": "",
       "hp": 40,
       "position_trial": [
-        6.699999999999999,
-        2.1
+        4.7,
+        8.2
       ],
       "source": "S1:T17R6；S3:P1663–1669（Street行为）",
       "behavior": "见角色靠近便展示敷料与编号，遇追兵沿墙退避；不强制停步观看。"
@@ -1068,7 +1068,29 @@
     "sweep_high_m": 1.85,
     "sweep_floor_m": 0.3,
     "sweep_body_high_m": 1.7,
-    "sweep_body_low_m": 0.35
+    "sweep_body_low_m": 0.35,
+    "hand_grip_start_m": 1.05,
+    "hand_grip_shoulder_m": 0.14,
+    "hand_grip_wrist_offset_m": 0.18,
+    "hand_grip_near_m": 0.28,
+    "hand_grip_arm_radius_m": 0.035,
+    "hand_grip_hand_outer_m": 0.09,
+    "hand_grip_clamp_outer_m": 0.12,
+    "hand_grip_capture_m": 0.065,
+    "hand_grip_forearm_m": 0.14,
+    "hand_grip_withdraw_m": 0.32,
+    "hand_grip_extend_ratio": 0.7,
+    "hand_grip_contact_ratio": 0.94,
+    "hand_grip_sample_m": 0.025,
+    "hand_grip_height_px": 75,
+    "double_head_shoulder_m": 0.16,
+    "double_head_hand_side_m": 0.18,
+    "double_head_near_m": 0.25,
+    "double_head_elbow_m": 0.28,
+    "double_head_arm_radius_m": 0.035,
+    "double_head_sample_m": 0.025,
+    "double_head_height_px": 75,
+    "double_head_release_ratio": 0.45
   },
   "observations": [],
   "dialogue": {
@@ -1115,7 +1137,8 @@
             2.7
           ],
           "height": 1.0,
-          "solid": true
+          "solid": true,
+          "kind": "fountain"
         },
         {
           "id": "street_prop_1",
@@ -1123,199 +1146,215 @@
           "rect": [
             2.2,
             8.6,
-            1.15,
-            0.65
+            1.7,
+            0.5
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.85,
+          "solid": true,
+          "kind": "bench"
         },
         {
           "id": "street_prop_2",
           "name": "壁龛雕像",
           "rect": [
-            7.2,
-            0.8,
+            8.9,
             1.15,
-            0.65
+            0.65,
+            0.5
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 1.45,
+          "solid": true,
+          "kind": "statue"
         },
         {
           "id": "street_prop_3",
           "name": "路灯",
           "rect": [
-            9.65,
-            0.8,
-            1.15,
-            0.65
+            11.9,
+            2.1,
+            0.24,
+            0.24
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 2.7,
+          "solid": false,
+          "kind": "lamp"
         },
         {
           "id": "street_prop_4",
           "name": "枯树",
           "rect": [
-            12.100000000000001,
-            0.8,
-            1.15,
-            0.65
+            12.9,
+            2.2,
+            0.5,
+            0.55
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 2.5,
+          "solid": true,
+          "kind": "tree"
         },
         {
           "id": "street_prop_5",
           "name": "排水口",
           "rect": [
-            2.3,
-            9.4,
-            1.15,
-            0.65
+            3.7,
+            9.15,
+            0.55,
+            0.35
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.015,
+          "solid": false,
+          "kind": "drain"
         },
         {
           "id": "street_prop_6",
           "name": "墙面标识",
           "rect": [
-            4.75,
-            9.4,
-            1.15,
-            0.65
+            4.8,
+            9.5,
+            0.65,
+            0.08
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 1.0,
+          "solid": false,
+          "kind": "sign"
         },
         {
           "id": "street_prop_7",
           "name": "异常组织",
           "rect": [
-            7.2,
-            9.4,
-            1.15,
-            0.65
+            10.8,
+            9.35,
+            0.8,
+            0.35
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.015,
+          "solid": false,
+          "kind": "growth"
         }
       ]
     },
     "street_side": {
       "trial_size_m": [
-        10,
-        9
+        7,
+        13
       ],
       "props": [
         {
           "id": "street_prop_0",
           "name": "破损长椅",
           "rect": [
-            2.3,
-            0.8,
-            1.15,
-            0.65
+            0.75,
+            8.55,
+            1.6,
+            0.5
           ],
-          "height": 1.0,
-          "solid": true
+          "height": 0.85,
+          "solid": true,
+          "kind": "bench"
         },
         {
           "id": "street_prop_1",
           "name": "壁龛小雕像",
           "rect": [
-            4.75,
-            0.8,
-            1.15,
-            0.65
+            5.75,
+            4.4,
+            0.65,
+            0.5
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 1.45,
+          "solid": true,
+          "kind": "statue"
         },
         {
           "id": "street_prop_2",
           "name": "封闭维护柜",
           "rect": [
-            7.2,
+            5.6,
+            6.4,
             0.8,
-            1.15,
-            0.65
+            0.55
           ],
           "height": 0.7,
-          "solid": true
+          "solid": true,
+          "kind": "cabinet"
         },
         {
           "id": "street_prop_3",
           "name": "旧皮箱",
           "rect": [
-            9.65,
-            0.8,
-            1.15,
-            0.65
+            1.6,
+            11.35,
+            0.7,
+            0.45
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.45,
+          "solid": true,
+          "kind": "case"
         },
         {
           "id": "street_prop_4",
           "name": "木箱",
           "rect": [
-            12.100000000000001,
-            0.8,
-            1.15,
-            0.65
+            4.9,
+            11.1,
+            0.65,
+            0.6
           ],
           "height": 0.7,
-          "solid": true
+          "solid": true,
+          "kind": "box"
         },
         {
           "id": "street_prop_5",
           "name": "灯具",
           "rect": [
-            2.3,
-            7.4,
-            1.15,
-            0.65
+            1.4,
+            5.5,
+            0.24,
+            0.24
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 2.7,
+          "solid": false,
+          "kind": "lamp"
         },
         {
           "id": "street_prop_6",
           "name": "管道",
           "rect": [
-            4.75,
-            7.4,
-            1.15,
-            0.65
+            6.2,
+            7.7,
+            0.2,
+            0.9
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.65,
+          "solid": true,
+          "kind": "pipe"
         },
         {
           "id": "street_prop_7",
           "name": "排水口",
           "rect": [
-            7.2,
-            7.4,
-            1.15,
-            0.65
+            3.4,
+            10.9,
+            0.5,
+            0.3
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.015,
+          "solid": false,
+          "kind": "drain"
         },
         {
           "id": "street_prop_8",
           "name": "异常组织",
           "rect": [
-            9.65,
-            7.4,
-            1.15,
-            0.65
+            5.2,
+            9.4,
+            0.8,
+            0.3
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.015,
+          "solid": false,
+          "kind": "growth"
         }
       ]
     },
@@ -1329,37 +1368,40 @@
           "id": "street_prop_0",
           "name": "壁灯",
           "rect": [
-            2.3,
-            0.8,
-            1.15,
-            0.65
+            3.35,
+            0.95,
+            0.3,
+            0.18
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 1.95,
+          "solid": false,
+          "kind": "wall_lamp"
         },
         {
           "id": "street_prop_1",
           "name": "长椅",
           "rect": [
-            4.75,
-            0.8,
-            1.15,
-            0.65
+            7.7,
+            1.55,
+            1.65,
+            0.45
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.85,
+          "solid": true,
+          "kind": "bench"
         },
         {
           "id": "street_prop_2",
           "name": "管线",
           "rect": [
-            7.2,
-            0.8,
-            1.15,
-            0.65
+            12.0,
+            2.28,
+            0.9,
+            0.16
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.65,
+          "solid": true,
+          "kind": "pipe"
         },
         {
           "id": "recess_top_left",
@@ -1370,8 +1412,11 @@
             2.6,
             1.7
           ],
-          "height": 2,
-          "solid": true
+          "height": 0,
+          "solid": false,
+          "kind": "floor",
+          "render": false,
+          "collision": false
         },
         {
           "id": "recess_top_right",
@@ -1382,8 +1427,11 @@
             2.6,
             1.7
           ],
-          "height": 2,
-          "solid": true
+          "height": 0,
+          "solid": false,
+          "kind": "floor",
+          "render": false,
+          "collision": false
         },
         {
           "id": "recess_bottom",
@@ -1394,68 +1442,76 @@
             6,
             1.6
           ],
-          "height": 2,
-          "solid": true
+          "height": 0,
+          "solid": false,
+          "kind": "floor",
+          "render": false,
+          "collision": false
         },
         {
           "id": "street_extra_6",
           "name": "维护柜",
           "rect": [
-            2,
-            1,
-            1,
-            0.55
+            13.3,
+            0.9,
+            0.75,
+            0.5
           ],
           "height": 0.7,
-          "solid": true
+          "solid": true,
+          "kind": "cabinet"
         },
         {
           "id": "street_extra_7",
           "name": "排水口",
           "rect": [
-            7.8,
-            6.6,
-            0.5,
-            0.4
+            12,
+            6.85,
+            0.55,
+            0.3
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.015,
+          "solid": false,
+          "kind": "drain"
         },
         {
           "id": "street_extra_8",
           "name": "积水",
           "rect": [
-            8.2,
-            5.6,
+            7.8,
+            5.25,
             2,
-            0.4
+            0.3
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.008,
+          "solid": false,
+          "kind": "puddle"
         },
         {
           "id": "street_extra_9",
           "name": "杂物箱",
           "rect": [
             15.5,
-            6.4,
-            1,
-            0.55
+            5.05,
+            0.8,
+            0.5
           ],
           "height": 0.7,
-          "solid": true
+          "solid": true,
+          "kind": "box"
         },
         {
           "id": "street_extra_10",
           "name": "墙面异常组织",
           "rect": [
-            13.6,
-            0.4,
+            14.0,
+            0.85,
             0.5,
-            0.5
+            0.25
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.015,
+          "solid": false,
+          "kind": "growth"
         }
       ]
     },
@@ -1469,133 +1525,144 @@
           "id": "street_prop_0",
           "name": "杂货铺",
           "rect": [
-            2.3,
-            0.8,
-            1.15,
-            0.65
+            2.1,
+            2.28,
+            1.6,
+            0.32
           ],
-          "height": 1.0,
-          "solid": true
+          "height": 2.55,
+          "solid": true,
+          "kind": "facade"
         },
         {
           "id": "street_prop_1",
           "name": "报刊铺立面",
           "rect": [
-            4.75,
-            0.8,
-            1.15,
-            0.65
+            8.7,
+            1.4,
+            1.6,
+            0.32
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 2.55,
+          "solid": true,
+          "kind": "facade"
         },
         {
           "id": "street_prop_2",
           "name": "长椅",
           "rect": [
-            16.5,
-            0.8,
-            1.15,
-            0.65
+            15.6,
+            3.65,
+            1.65,
+            0.5
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.85,
+          "solid": true,
+          "kind": "bench"
         },
         {
           "id": "street_prop_3",
           "name": "箱体",
           "rect": [
-            9.65,
-            0.8,
-            1.15,
-            0.65
+            3.8,
+            8.7,
+            0.7,
+            0.55
           ],
           "height": 0.7,
-          "solid": true
+          "solid": true,
+          "kind": "box"
         },
         {
           "id": "street_prop_4",
           "name": "枯树",
           "rect": [
-            12.100000000000001,
-            0.8,
-            1.15,
-            0.65
+            12.8,
+            3.0,
+            0.5,
+            0.55
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 2.5,
+          "solid": true,
+          "kind": "tree"
         },
         {
           "id": "street_prop_5",
           "name": "路灯",
           "rect": [
-            2.3,
-            10.4,
-            1.15,
-            0.65
+            15.0,
+            8.2,
+            0.24,
+            0.24
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 2.7,
+          "solid": false,
+          "kind": "lamp"
         },
         {
           "id": "street_prop_6",
           "name": "积水",
           "rect": [
-            4.75,
-            10.4,
-            1.15,
-            0.65
+            5.0,
+            8.8,
+            1.3,
+            0.45
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.008,
+          "solid": false,
+          "kind": "puddle"
         },
         {
           "id": "street_prop_7",
           "name": "排水口",
           "rect": [
-            7.2,
-            10.4,
-            1.15,
-            0.65
+            8.6,
+            10.65,
+            0.5,
+            0.35
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.015,
+          "solid": false,
+          "kind": "drain"
         },
         {
           "id": "street_prop_8",
           "name": "栏杆",
           "rect": [
+            10.8,
             9.65,
-            10.4,
-            1.15,
-            0.65
+            1.2,
+            0.16
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.9,
+          "solid": true,
+          "kind": "railing"
         },
         {
           "id": "street_prop_9",
           "name": "扭曲地面",
           "rect": [
-            12.100000000000001,
-            10.4,
-            1.15,
-            0.65
+            7.7,
+            7.2,
+            1.3,
+            0.9
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.03,
+          "solid": false,
+          "kind": "floor"
         },
         {
           "id": "street_prop_10",
           "name": "局部塌陷",
           "rect": [
-            2.3,
-            10.4,
-            1.15,
-            0.65
+            2.1,
+            7.8,
+            0.8,
+            0.6
           ],
           "height": 0.7,
-          "solid": true
+          "solid": true,
+          "kind": "rubble"
         }
       ]
     },
@@ -1610,55 +1677,59 @@
           "name": "沿墙管架",
           "rect": [
             6.0,
-            2.2,
-            1.0,
-            0.7
+            1.45,
+            1,
+            0.22
           ],
-          "height": 1.0,
-          "solid": true
+          "height": 0.65,
+          "solid": true,
+          "kind": "pipe"
         },
         {
           "id": "street_prop_1",
           "name": "维护柜",
           "rect": [
             4.75,
-            0.8,
-            1.15,
-            0.65
+            0.75,
+            0.75,
+            0.5
           ],
           "height": 0.7,
-          "solid": true
+          "solid": true,
+          "kind": "cabinet"
         },
         {
           "id": "street_prop_2",
           "name": "照明",
           "rect": [
-            7.2,
-            0.8,
-            1.15,
-            0.65
+            7.65,
+            1.5,
+            0.24,
+            0.24
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 2.7,
+          "solid": false,
+          "kind": "lamp"
         },
         {
           "id": "street_prop_3",
           "name": "集中成矮堆的检修杂物",
           "rect": [
-            9.65,
+            10.1,
+            3.1,
             0.8,
-            1.15,
-            0.65
+            0.6
           ],
           "height": 0.7,
-          "solid": true
+          "solid": true,
+          "kind": "rubble"
         },
         {
           "id": "street_cleaner_cart",
           "name": "侧停清洁车",
           "rect": [
-            1.6,
-            6.1,
+            1.65,
+            6.0,
             0.65,
             0.65
           ],
@@ -1683,116 +1754,126 @@
             2.8,
             2.7
           ],
-          "height": 1.0,
-          "solid": true
+          "height": 0.08,
+          "solid": false,
+          "kind": "pit"
         },
         {
           "id": "street_prop_1",
           "name": "外围步道",
           "rect": [
-            4.75,
-            0.8,
-            1.15,
-            0.65
+            5.15,
+            2.25,
+            5.4,
+            0.55
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.03,
+          "solid": false,
+          "kind": "floor"
         },
         {
           "id": "street_prop_2",
           "name": "异常组织",
           "rect": [
-            7.2,
+            6.3,
+            1.75,
             0.8,
-            1.15,
-            0.65
+            0.3
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.015,
+          "solid": false,
+          "kind": "growth"
         },
         {
           "id": "street_prop_3",
           "name": "店铺立面",
           "rect": [
-            9.65,
-            0.8,
-            1.15,
-            0.65
+            12.0,
+            2.75,
+            1.6,
+            0.3
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 2.55,
+          "solid": true,
+          "kind": "facade"
         },
         {
           "id": "street_prop_4",
           "name": "长椅",
           "rect": [
-            12.100000000000001,
-            0.8,
-            1.15,
-            0.65
+            11.25,
+            9.55,
+            1.65,
+            0.5
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.85,
+          "solid": true,
+          "kind": "bench"
         },
         {
           "id": "street_prop_5",
           "name": "灯具",
           "rect": [
-            2.3,
-            10.4,
-            1.15,
-            0.65
+            2.6,
+            9.45,
+            0.24,
+            0.24
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 2.7,
+          "solid": false,
+          "kind": "lamp"
         },
         {
           "id": "street_prop_6",
           "name": "栏杆",
           "rect": [
-            4.75,
-            10.4,
-            1.15,
-            0.65
+            6.3,
+            8.3,
+            1.2,
+            0.16
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.9,
+          "solid": true,
+          "kind": "railing"
         },
         {
           "id": "street_prop_7",
           "name": "箱体",
           "rect": [
-            7.2,
-            10.4,
-            1.15,
-            0.65
+            7.8,
+            9.1,
+            0.7,
+            0.6
           ],
           "height": 0.7,
-          "solid": true
+          "solid": true,
+          "kind": "box"
         },
         {
           "id": "street_prop_8",
           "name": "设备间",
           "rect": [
-            9.65,
-            10.4,
-            1.15,
-            0.65
+            11.6,
+            10.5,
+            1.2,
+            0.35
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 2.55,
+          "solid": true,
+          "kind": "facade"
         },
         {
           "id": "street_prop_9",
           "name": "封闭维修门",
           "rect": [
-            12.100000000000001,
-            10.4,
-            1.15,
-            0.65
+            12.1,
+            10.55,
+            0.75,
+            0.08
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 1.0,
+          "solid": false,
+          "kind": "sign"
         }
       ]
     },
@@ -1806,97 +1887,105 @@
           "id": "street_prop_0",
           "name": "检查岗亭",
           "rect": [
-            2.3,
-            0.8,
-            1.15,
-            0.65
+            3.6,
+            1.3,
+            1.45,
+            0.55
           ],
-          "height": 1.0,
-          "solid": true
+          "height": 2.55,
+          "solid": true,
+          "kind": "facade"
         },
         {
           "id": "street_prop_1",
           "name": "破损道闸",
           "rect": [
-            4.75,
-            0.8,
-            1.15,
-            0.65
+            5.9,
+            2.5,
+            1.8,
+            0.15
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.9,
+          "solid": true,
+          "kind": "railing"
         },
         {
           "id": "street_prop_2",
           "name": "栏杆",
           "rect": [
-            7.2,
-            0.8,
-            1.15,
-            0.65
+            10.9,
+            2.4,
+            1.1,
+            0.16
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.9,
+          "solid": true,
+          "kind": "railing"
         },
         {
           "id": "street_prop_3",
           "name": "长椅",
           "rect": [
-            9.65,
-            0.8,
-            1.15,
-            0.65
+            3.3,
+            8.65,
+            1.65,
+            0.5
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.85,
+          "solid": true,
+          "kind": "bench"
         },
         {
           "id": "street_prop_4",
           "name": "灯具",
           "rect": [
-            12.100000000000001,
-            0.8,
-            1.15,
-            0.65
+            12.3,
+            2.0,
+            0.24,
+            0.24
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 2.7,
+          "solid": false,
+          "kind": "lamp"
         },
         {
           "id": "street_prop_5",
           "name": "积水",
           "rect": [
-            2.3,
-            9.4,
-            1.15,
-            0.65
+            5.3,
+            8.4,
+            1.1,
+            0.5
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.008,
+          "solid": false,
+          "kind": "puddle"
         },
         {
           "id": "street_prop_6",
           "name": "排水口",
           "rect": [
-            4.75,
-            9.4,
-            1.15,
-            0.65
+            7.2,
+            10.05,
+            0.5,
+            0.3
           ],
-          "height": 0.05,
-          "solid": false
+          "height": 0.015,
+          "solid": false,
+          "kind": "drain"
         },
         {
           "id": "street_prop_7",
           "name": "设备间",
           "rect": [
-            7.2,
-            9.4,
-            1.15,
-            0.65
+            9.2,
+            9.1,
+            1.2,
+            0.35
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 2.55,
+          "solid": true,
+          "kind": "facade"
         },
         {
           "id": "street_prop_8",
@@ -1915,13 +2004,14 @@
           "id": "street_prop_9",
           "name": "出口平台",
           "rect": [
-            12.100000000000001,
-            9.4,
-            1.15,
-            0.65
+            12.25,
+            7.75,
+            1.1,
+            0.45
           ],
-          "height": 0.7,
-          "solid": true
+          "height": 0.03,
+          "solid": false,
+          "kind": "floor"
         },
         {
           "id": "street_prop_10",

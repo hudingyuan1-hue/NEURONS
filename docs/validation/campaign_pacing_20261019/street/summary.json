@@ -1,0 +1,684 @@
+{
+  "main_route": {
+    "pre_street_s": 65.6666666666655,
+    "street_s": 81.9333333333287,
+    "distance_m": 86.6140726543963,
+    "entry_hp": 85,
+    "exit_hp": 65,
+    "entry_neurons": 20,
+    "exit_neurons": 24,
+    "clusters": 7,
+    "max_unexplained_still_s": 0.833333333333333,
+    "ending": {
+      "complete": false,
+      "dialogue_sent": false,
+      "elapsed": 0.0,
+      "id": "E2",
+      "phase": "registration",
+      "receipt": "ending:E2:2cfd083552296d3f8f0b536c1c8f88c44592aed41a82f29a4a2a3d5faac00923"
+    },
+    "interventions_applied": 0
+  },
+  "seven_room_measurements": [
+    {
+      "room": "street_plaza",
+      "elapsed_s": 14.7999999999992,
+      "distance_m": 15.6537969205529,
+      "walking_m": 15.6250473093241,
+      "forced_or_pose_displacement_m": 0.0287496112287045,
+      "active_s": 14.8,
+      "paused_s": 0.0,
+      "moving_s": 14.2,
+      "body_busy_s": 0.0,
+      "gripped_s": 0.0,
+      "door_intent_s": 0.8,
+      "route_blocked_s": 0.0,
+      "entry_hp": 85,
+      "exit_hp": 85,
+      "entry_neurons": 20,
+      "exit_neurons": 21,
+      "entry_clusters": 7,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "actual_hero_hits": [],
+      "actual_actor_hits": [],
+      "visible_actors": {
+        "back": {
+          "attack": "",
+          "first_s": 4.53333333333308,
+          "last_s": 12.5333333333326,
+          "minimum_distance_m": 1.78154098987579,
+          "relation": "neutral",
+          "visible_s": 7.75
+        },
+        "father": {
+          "attack": "sweep",
+          "first_s": 0.0,
+          "last_s": 9.59999999999945,
+          "minimum_distance_m": 1.68570220470428,
+          "relation": "enemy",
+          "visible_s": 8.25
+        },
+        "head_nurse": {
+          "attack": "",
+          "first_s": 2.39999999999986,
+          "last_s": 4.26666666666642,
+          "minimum_distance_m": 4.65239572525024,
+          "relation": "enemy",
+          "visible_s": 2.0
+        },
+        "register_nurse": {
+          "attack": "",
+          "first_s": 0.0,
+          "last_s": 7.19999999999959,
+          "minimum_distance_m": 3.0412323474884,
+          "relation": "neutral",
+          "visible_s": 7.0
+        },
+        "warder": {
+          "attack": "belt",
+          "first_s": 1.06666666666661,
+          "last_s": 14.6666666666658,
+          "minimum_distance_m": 0.813081383705139,
+          "relation": "enemy",
+          "visible_s": 13.0
+        }
+      },
+      "hostile_windup_or_active_s": 1.0,
+      "fixture": "Unmodified autonomous L5 crossing into Street",
+      "actual_main_route": true,
+      "configured_actor_count": 6,
+      "configured_initial_enemy_attackers": [
+        "father",
+        "warder",
+        "transporter_hospital"
+      ],
+      "available_skill_s_time_weighted_from_samples": {
+        "SKIN": 14.7999999999992
+      },
+      "minimum_static_z_cross_section_m_at_sampled_positions": 4.120000000000003,
+      "static_z_cross_section_precision_m": 0.04,
+      "cross_section_excludes_dynamic_bodies": true
+    },
+    {
+      "room": "street_side",
+      "elapsed_s": 1.13333333333333,
+      "distance_m": 0.575000166893005,
+      "walking_m": 0.575000166893005,
+      "forced_or_pose_displacement_m": 0.0,
+      "active_s": 1.13333333333333,
+      "paused_s": 0.0,
+      "moving_s": 0.5,
+      "body_busy_s": 0.0,
+      "gripped_s": 0.0,
+      "door_intent_s": 0.833333333333333,
+      "route_blocked_s": 0.0,
+      "entry_hp": 100,
+      "exit_hp": 100,
+      "entry_neurons": 14,
+      "exit_neurons": 14,
+      "entry_clusters": 7,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "actual_hero_hits": [],
+      "actual_actor_hits": [],
+      "visible_actors": {
+        "nurse": {
+          "attack": "bandage",
+          "first_s": 0.0,
+          "last_s": 1.06666666666667,
+          "minimum_distance_m": 3.42426657676697,
+          "relation": "friend",
+          "visible_s": 1.06666666666667
+        },
+        "transport_patient": {
+          "attack": "",
+          "first_s": 0.0,
+          "last_s": 1.06666666666667,
+          "minimum_distance_m": 3.28109765052795,
+          "relation": "friend",
+          "visible_s": 1.06666666666667
+        }
+      },
+      "hostile_windup_or_active_s": 0.0,
+      "fixture": "Declared direct branch entrance; original actors and ordinary autonomous exit only",
+      "actual_main_route": false,
+      "configured_actor_count": 5,
+      "configured_initial_enemy_attackers": [],
+      "available_skill_s_time_weighted_from_samples": {
+        "SKIN": 1.13333333333333
+      },
+      "minimum_static_z_cross_section_m_at_sampled_positions": 8.979999999999993,
+      "static_z_cross_section_precision_m": 0.04,
+      "cross_section_excludes_dynamic_bodies": true
+    },
+    {
+      "room": "street_narrow",
+      "elapsed_s": 15.2666666666658,
+      "distance_m": 16.8283907175064,
+      "walking_m": 16.799641251564,
+      "forced_or_pose_displacement_m": 0.0287494659423828,
+      "active_s": 15.2666666666666,
+      "paused_s": 0.0,
+      "moving_s": 14.6666666666666,
+      "body_busy_s": 0.0,
+      "gripped_s": 0.0,
+      "door_intent_s": 0.8,
+      "route_blocked_s": 0.0,
+      "entry_hp": 85,
+      "exit_hp": 85,
+      "entry_neurons": 21,
+      "exit_neurons": 22,
+      "entry_clusters": 7,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "actual_hero_hits": [],
+      "actual_actor_hits": [],
+      "visible_actors": {
+        "assistant_asylum": {
+          "attack": "restraint",
+          "first_s": 18.399999999999,
+          "last_s": 29.866666666665,
+          "minimum_distance_m": 0.965721547603607,
+          "relation": "enemy",
+          "visible_s": 11.0
+        },
+        "cat": {
+          "attack": "pounce",
+          "first_s": 14.9333333333325,
+          "last_s": 25.8666666666652,
+          "minimum_distance_m": 0.998322129249573,
+          "relation": "enemy",
+          "visible_s": 10.5
+        },
+        "dislocated": {
+          "attack": "grab",
+          "first_s": 15.4666666666658,
+          "last_s": 29.866666666665,
+          "minimum_distance_m": 0.775900959968567,
+          "relation": "enemy",
+          "visible_s": 13.75
+        },
+        "isolation": {
+          "attack": "isolate",
+          "first_s": 14.9333333333325,
+          "last_s": 25.3333333333319,
+          "minimum_distance_m": 0.998050153255463,
+          "relation": "enemy",
+          "visible_s": 10.0
+        },
+        "twitch": {
+          "attack": "charge",
+          "first_s": 15.7333333333324,
+          "last_s": 29.866666666665,
+          "minimum_distance_m": 0.869347095489502,
+          "relation": "enemy",
+          "visible_s": 13.5
+        }
+      },
+      "hostile_windup_or_active_s": 3.75,
+      "fixture": "Unmodified autonomous L5 crossing into Street",
+      "actual_main_route": true,
+      "configured_actor_count": 5,
+      "configured_initial_enemy_attackers": [
+        "cat",
+        "twitch",
+        "assistant_asylum",
+        "isolation",
+        "dislocated"
+      ],
+      "available_skill_s_time_weighted_from_samples": {
+        "SKIN": 15.1333333333325
+      },
+      "minimum_static_z_cross_section_m_at_sampled_positions": 4.480000000000002,
+      "static_z_cross_section_precision_m": 0.04,
+      "cross_section_excludes_dynamic_bodies": true
+    },
+    {
+      "room": "street_twisted",
+      "elapsed_s": 20.5999999999988,
+      "distance_m": 22.184682905674,
+      "walking_m": 22.1559328902513,
+      "forced_or_pose_displacement_m": 0.0287500154227018,
+      "active_s": 20.6000000000002,
+      "paused_s": 0.0,
+      "moving_s": 19.6666666666668,
+      "body_busy_s": 0.0,
+      "gripped_s": 0.0,
+      "door_intent_s": 0.8,
+      "route_blocked_s": 0.333333333333333,
+      "entry_hp": 85,
+      "exit_hp": 85,
+      "entry_neurons": 22,
+      "exit_neurons": 23,
+      "entry_clusters": 7,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "actual_hero_hits": [],
+      "actual_actor_hits": [],
+      "visible_actors": {
+        "archivist": {
+          "attack": "grab",
+          "first_s": 31.9999999999982,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 1.03933393955231,
+          "relation": "enemy",
+          "visible_s": 17.5
+        },
+        "assistant_asylum": {
+          "attack": "restraint",
+          "first_s": 33.8666666666647,
+          "last_s": 45.5999999999974,
+          "minimum_distance_m": 4.21859788894653,
+          "relation": "enemy",
+          "visible_s": 3.75
+        },
+        "dislocated": {
+          "attack": "grab",
+          "first_s": 44.5333333333308,
+          "last_s": 44.7999999999975,
+          "minimum_distance_m": 4.88806486129761,
+          "relation": "enemy",
+          "visible_s": 0.5
+        },
+        "double_face": {
+          "attack": "watch",
+          "first_s": 35.4666666666647,
+          "last_s": 40.533333333331,
+          "minimum_distance_m": 4.00233554840088,
+          "relation": "neutral",
+          "visible_s": 5.0
+        },
+        "pharmacist": {
+          "attack": "splash",
+          "first_s": 31.9999999999982,
+          "last_s": 47.7333333333306,
+          "minimum_distance_m": 1.99090027809143,
+          "relation": "enemy",
+          "visible_s": 15.0
+        },
+        "reverse": {
+          "attack": "charge",
+          "first_s": 30.1333333333316,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 1.83637011051178,
+          "relation": "enemy",
+          "visible_s": 18.0
+        },
+        "speaker": {
+          "attack": "",
+          "first_s": 39.7333333333311,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 0.974143028259277,
+          "relation": "friend",
+          "visible_s": 10.25
+        },
+        "supervisor": {
+          "attack": "grab",
+          "first_s": 39.4666666666644,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 0.478698015213013,
+          "relation": "enemy",
+          "visible_s": 10.5
+        },
+        "transporter_asylum": {
+          "attack": "lateral_bed",
+          "first_s": 39.7333333333311,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 1.33781945705414,
+          "relation": "enemy",
+          "visible_s": 10.25
+        },
+        "triage": {
+          "attack": "",
+          "first_s": 30.1333333333316,
+          "last_s": 34.6666666666647,
+          "minimum_distance_m": 4.00170087814331,
+          "relation": "neutral",
+          "visible_s": 4.5
+        },
+        "ward_nurse": {
+          "attack": "drug",
+          "first_s": 34.9333333333313,
+          "last_s": 50.3999999999971,
+          "minimum_distance_m": 0.707519888877869,
+          "relation": "enemy",
+          "visible_s": 14.75
+        }
+      },
+      "hostile_windup_or_active_s": 6.5,
+      "fixture": "Unmodified autonomous L5 crossing into Street",
+      "actual_main_route": true,
+      "configured_actor_count": 9,
+      "configured_initial_enemy_attackers": [
+        "reverse",
+        "archivist",
+        "pharmacist",
+        "ward_nurse",
+        "transporter_asylum",
+        "supervisor"
+      ],
+      "available_skill_s_time_weighted_from_samples": {
+        "SKIN": 20.5333333333322
+      },
+      "minimum_static_z_cross_section_m_at_sampled_positions": 8.939999999999994,
+      "static_z_cross_section_precision_m": 0.04,
+      "cross_section_excludes_dynamic_bodies": true
+    },
+    {
+      "room": "street_maintenance",
+      "elapsed_s": 4.36666666666666,
+      "distance_m": 0.575000166893005,
+      "walking_m": 0.575000166893005,
+      "forced_or_pose_displacement_m": 0.0,
+      "active_s": 1.13333333333333,
+      "paused_s": 3.23333333333333,
+      "moving_s": 0.466666666666667,
+      "body_busy_s": 0.0,
+      "gripped_s": 0.0,
+      "door_intent_s": 0.833333333333333,
+      "route_blocked_s": 0.0333333333333333,
+      "entry_hp": 100,
+      "exit_hp": 100,
+      "entry_neurons": 15,
+      "exit_neurons": 15,
+      "entry_clusters": 7,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "actual_hero_hits": [],
+      "actual_actor_hits": [],
+      "visible_actors": {
+        "cleaner": {
+          "attack": "",
+          "first_s": 0.0,
+          "last_s": 4.26666666666666,
+          "minimum_distance_m": 3.07824635505676,
+          "relation": "neutral",
+          "visible_s": 4.26666666666666
+        },
+        "dog": {
+          "attack": "guard",
+          "first_s": 0.0,
+          "last_s": 4.26666666666666,
+          "minimum_distance_m": 2.65087413787842,
+          "relation": "friend",
+          "visible_s": 4.26666666666666
+        }
+      },
+      "hostile_windup_or_active_s": 0.0,
+      "fixture": "Declared direct branch entrance; original actors and ordinary autonomous exit only",
+      "actual_main_route": false,
+      "configured_actor_count": 6,
+      "configured_initial_enemy_attackers": [
+        "stitched"
+      ],
+      "available_skill_s_time_weighted_from_samples": {
+        "SKIN": 1.166666666666667
+      },
+      "minimum_static_z_cross_section_m_at_sampled_positions": 7.980000000000006,
+      "static_z_cross_section_precision_m": 0.04,
+      "cross_section_excludes_dynamic_bodies": true
+    },
+    {
+      "room": "street_node",
+      "elapsed_s": 17.7666666666657,
+      "distance_m": 17.1120898965746,
+      "walking_m": 17.0348548199981,
+      "forced_or_pose_displacement_m": 0.0772350765764713,
+      "active_s": 17.7666666666667,
+      "paused_s": 0.0,
+      "moving_s": 15.8,
+      "body_busy_s": 0.266666666666667,
+      "gripped_s": 0.0,
+      "door_intent_s": 0.8,
+      "route_blocked_s": 0.3,
+      "entry_hp": 85,
+      "exit_hp": 65,
+      "entry_neurons": 23,
+      "exit_neurons": 24,
+      "entry_clusters": 7,
+      "damage_to_hero_hp": 20,
+      "damage_to_hero_sp": 0,
+      "actual_hero_hits": [
+        {
+          "fact": {
+            "event_id": "combat:6:1:assistant:13",
+            "hp_damage": 20,
+            "kind": "combat_hit",
+            "room": "street_node",
+            "source": "assistant",
+            "sp_damage": 0,
+            "time": 123.966666666662
+          },
+          "observed_room": "street_node",
+          "street_s": 58.33333333333
+        }
+      ],
+      "actual_actor_hits": [],
+      "visible_actors": {
+        "archivist": {
+          "attack": "grab",
+          "first_s": 55.7333333333302,
+          "last_s": 59.4666666666633,
+          "minimum_distance_m": 4.3286714553833,
+          "relation": "enemy",
+          "visible_s": 2.5
+        },
+        "assistant": {
+          "attack": "charge",
+          "first_s": 55.7333333333302,
+          "last_s": 68.2666666666628,
+          "minimum_distance_m": 1.76271569728851,
+          "relation": "enemy",
+          "visible_s": 12.0
+        },
+        "blind": {
+          "attack": "",
+          "first_s": 60.5333333333299,
+          "last_s": 68.2666666666628,
+          "minimum_distance_m": 0.464526444673538,
+          "relation": "neutral",
+          "visible_s": 5.75
+        },
+        "director": {
+          "attack": "restraint",
+          "first_s": 59.7333333333299,
+          "last_s": 68.2666666666628,
+          "minimum_distance_m": 0.483102321624756,
+          "relation": "enemy",
+          "visible_s": 8.25
+        },
+        "doctor": {
+          "attack": "sweep",
+          "first_s": 52.799999999997,
+          "last_s": 58.6666666666633,
+          "minimum_distance_m": 1.47738289833069,
+          "relation": "enemy",
+          "visible_s": 5.75
+        },
+        "double_head": {
+          "attack": "sweep",
+          "first_s": 50.6666666666638,
+          "last_s": 55.4666666666635,
+          "minimum_distance_m": 4.00085067749023,
+          "relation": "neutral",
+          "visible_s": 4.75
+        },
+        "guard_asylum": {
+          "attack": "short_charge",
+          "first_s": 62.1333333333298,
+          "last_s": 68.2666666666628,
+          "minimum_distance_m": 3.21027183532715,
+          "relation": "enemy",
+          "visible_s": 6.0
+        },
+        "mother": {
+          "attack": "grab",
+          "first_s": 50.6666666666638,
+          "last_s": 65.5999999999963,
+          "minimum_distance_m": 1.23581552505493,
+          "relation": "enemy",
+          "visible_s": 12.5
+        },
+        "psychiatrist": {
+          "attack": "drag",
+          "first_s": 52.799999999997,
+          "last_s": 68.2666666666628,
+          "minimum_distance_m": 0.966599881649017,
+          "relation": "enemy",
+          "visible_s": 14.75
+        },
+        "supervisor": {
+          "attack": "grab",
+          "first_s": 52.5333333333303,
+          "last_s": 65.5999999999963,
+          "minimum_distance_m": 1.66552400588989,
+          "relation": "enemy",
+          "visible_s": 10.0
+        },
+        "ward_nurse": {
+          "attack": "drug",
+          "first_s": 55.1999999999969,
+          "last_s": 59.4666666666633,
+          "minimum_distance_m": 3.85740566253662,
+          "relation": "enemy",
+          "visible_s": 4.25
+        }
+      },
+      "hostile_windup_or_active_s": 3.25,
+      "fixture": "Unmodified autonomous L5 crossing into Street",
+      "actual_main_route": true,
+      "configured_actor_count": 8,
+      "configured_initial_enemy_attackers": [
+        "mother",
+        "doctor",
+        "assistant",
+        "psychiatrist",
+        "guard_asylum",
+        "director"
+      ],
+      "available_skill_s_time_weighted_from_samples": {
+        "SKIN": 17.499999999999098
+      },
+      "minimum_static_z_cross_section_m_at_sampled_positions": 3.180000000000002,
+      "static_z_cross_section_precision_m": 0.04,
+      "cross_section_excludes_dynamic_bodies": true
+    },
+    {
+      "room": "street_end",
+      "elapsed_s": 13.4999999999992,
+      "distance_m": 14.8351122140884,
+      "walking_m": 14.8063617944717,
+      "forced_or_pose_displacement_m": 0.0287504196166992,
+      "active_s": 13.5333333333333,
+      "paused_s": 0.0,
+      "moving_s": 12.9333333333333,
+      "body_busy_s": 0.0,
+      "gripped_s": 0.0,
+      "door_intent_s": 0.8,
+      "route_blocked_s": 0.0,
+      "entry_hp": 65,
+      "exit_hp": 65,
+      "entry_neurons": 24,
+      "exit_neurons": 24,
+      "entry_clusters": 7,
+      "damage_to_hero_hp": 0,
+      "damage_to_hero_sp": 0,
+      "actual_hero_hits": [],
+      "actual_actor_hits": [],
+      "visible_actors": {
+        "archivist_asylum": {
+          "attack": "sweep",
+          "first_s": 68.5333333333295,
+          "last_s": 81.866666666662,
+          "minimum_distance_m": 1.637002825737,
+          "relation": "enemy",
+          "visible_s": 12.75
+        },
+        "guard_hospital": {
+          "attack": "push",
+          "first_s": 71.9999999999959,
+          "last_s": 81.866666666662,
+          "minimum_distance_m": 1.14642369747162,
+          "relation": "enemy",
+          "visible_s": 9.5
+        },
+        "informant": {
+          "attack": "",
+          "first_s": 70.6666666666627,
+          "last_s": 76.533333333329,
+          "minimum_distance_m": 3.49991273880005,
+          "relation": "neutral",
+          "visible_s": 5.75
+        },
+        "mimic": {
+          "attack": "",
+          "first_s": 73.3333333333292,
+          "last_s": 79.4666666666622,
+          "minimum_distance_m": 3.30267429351807,
+          "relation": "neutral",
+          "visible_s": 6.0
+        },
+        "self": {
+          "attack": "grab",
+          "first_s": 69.8666666666627,
+          "last_s": 81.866666666662,
+          "minimum_distance_m": 1.22194218635559,
+          "relation": "enemy",
+          "visible_s": 11.5
+        },
+        "skinface": {
+          "attack": "sweep",
+          "first_s": 68.5333333333295,
+          "last_s": 81.866666666662,
+          "minimum_distance_m": 1.76015686988831,
+          "relation": "enemy",
+          "visible_s": 12.75
+        }
+      },
+      "hostile_windup_or_active_s": 0.0,
+      "fixture": "Unmodified autonomous L5 crossing into Street",
+      "actual_main_route": true,
+      "configured_actor_count": 6,
+      "configured_initial_enemy_attackers": [
+        "skinface",
+        "self",
+        "guard_hospital",
+        "archivist_asylum"
+      ],
+      "available_skill_s_time_weighted_from_samples": {
+        "SKIN": 13.39999999999921
+      },
+      "minimum_static_z_cross_section_m_at_sampled_positions": 7.920000000000005,
+      "static_z_cross_section_precision_m": 0.04,
+      "cross_section_excludes_dynamic_bodies": true
+    }
+  ],
+  "source_contract": "S1:P476-503: five main sections plus two optional single-mouth branches; no keys, search, rest, mandatory clear, all-identity meeting, or compulsory friendly deaths.",
+  "player_goal": "Prevent host escape. The host's successful no-input run is a baseline escape pressure; NPC damage and delays can be passive benefits to the player.",
+  "measurement_corrections": [
+    "r1 raw 0.25s actor/skill duration weights undercount fixed30 samples, whose spacing is 0.2667s; this summary weights actual sample timestamps and clips room boundaries.",
+    "Branch r1 wrongly counted formal-dialogue freeze as available intervention time. Driver r2 records presentation_paused and the retained r1 evidence is not used for that counter.",
+    "No production rule or geometry was changed for either measurement correction."
+  ],
+  "limitations": [
+    "Direct L5 fixture has seven clusters and only initial SKIN, unlike full-campaign earned skills; the current full-campaign no-spending result has thirteen clusters and fifty-six neurons at its ending.",
+    "Branch 0.575m values measure immediate autonomous return from a declared entry, not exploration of the whole room or a normally chosen player detour.",
+    "Skill windows and actor phases are quarter-second observations, not guaranteed exact reaction deadlines. Pause menus allow planning beyond world-time windows.",
+    "All source configured identities remain; not all were met or attacked. No change to NPC presence, RNG, speed, routes, resources, HP or ending fields after entry.",
+    "Screenshots and full JSON time series retained; no continuous video or human pacing/art/audio acceptance claimed."
+  ],
+  "source_sha256": {
+    "AGENTS.md": "6be2d332917d697c0e14c7de1fb03921e4718ba240cddf6fd032d7e880218840",
+    "docs/HANDOFF.md": "e972d1f5de3d484862c232f6ee5e047c814fb01ed1ba246eaab23996f7243803",
+    "DOCX/AI整理后文档/NEURONS_第一阶段_空间物品人员_合并修订版.docx": "986cf8367f87d82df28583db45b745b1619afaab3533d291dcb92e0d632e307e",
+    "neurons/data/street_chapter.json": "04ca0cbd70fdde4dcb5d3dc132afc1410a5eecb6327449603facc886bc3c23c1",
+    "neurons/data/street_spaces.json": "78506865f6e970380b1e7f5497097ab227fa3bf6b26417ef4ed4e4ce47441363",
+    "neurons/data/skills.json": "1892910a62c7b06f9cfef92f57dba12caa14d27409241bc1cc59b14d480b62d8",
+    "neurons/scripts/campaign.gd": "2b74d831760bfb07dc8d18864068bd3f33d0cc19def52eda42af268937620fe5",
+    "neurons/scripts/core/street_chapter.gd": "f5419d655ab14a9ee2e1637f977f3bf042851cfdf05b66986a67c0a8913ca186",
+    "neurons/scripts/core/combat_chapter.gd": "3cc73f914b628481a71413b4ae6334b627a8b3913e14cc5f1a65a04a5e59e67b",
+    "neurons/scripts/core/street_map.gd": "1f46f15ba5d3059664636e97c50d7b5bce5ec76eacbd2d8b1902f1f86c02e067",
+    "neurons/tests/street_pacing_measure_20261019.gd": "e1c249332c81fb566b6744becc8911db4d674fbca6f15631caebe6e661a72e4d"
+  }
+}

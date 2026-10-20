@@ -1,0 +1,321 @@
+{
+  "elapsed_game_seconds": 19.0666666666668,
+  "failures": [],
+  "hp": 90,
+  "passes": [
+    "real unlock_cortex selects new L4 metric geometry",
+    "no key location is preselected at actual L4 entry",
+    "new metric touch-table operator starts at a legal derived stand",
+    "actual new metric hand contact closes clamp and settles original ten HP once",
+    "ordinary process new metric clamp genuinely grips and releases",
+    "autonomous host retries and genuinely finishes touch-table search after release",
+    "new geometry cannot duplicate original clamp damage"
+  ],
+  "scope": "Explicit fresh-L4v2 body:5 target, unrelated random groups suppressed, actual derived legal operator stand. Then ordinary process and default dialogue only; no begin-search, contact, damage, grip, completion or route writes. Formal figure/animation and all operator combinations not accepted.",
+  "timeline": [
+    {
+      "action": "autonomy",
+      "clamp": {
+        "attempted": false,
+        "elapsed": 0.0,
+        "hand_out": false,
+        "hurt": false,
+        "pain_light": false,
+        "phase": "idle",
+        "retract_left": 0.0
+      },
+      "elapsed": 0.0333333333333333,
+      "gripped": false,
+      "hero_m": [
+        5.2177996635437,
+        0.893950045108795
+      ],
+      "hp": 100,
+      "operator": {
+        "elapsed": 0.0,
+        "facing": [
+          -0.64018440246582,
+          -0.768221318721771
+        ],
+        "phase": "idle",
+        "pos": [
+          7.48405981063843,
+          5.83375120162964
+        ],
+        "room": "body",
+        "route": [
+          [
+            7.00860023498535,
+            5.26319980621338
+          ]
+        ],
+        "stand_done": false
+      },
+      "search_attempts": 0,
+      "search_elapsed": 0.0,
+      "search_target": ""
+    },
+    {
+      "action": "autonomy",
+      "clamp": {
+        "attempted": false,
+        "elapsed": 0.0,
+        "hand_out": false,
+        "hurt": false,
+        "pain_light": false,
+        "phase": "idle",
+        "retract_left": 0.0
+      },
+      "elapsed": 4.29999999999999,
+      "gripped": false,
+      "hero_m": [
+        7.49620008468628,
+        5.23954916000366
+      ],
+      "hp": 100,
+      "operator": {
+        "elapsed": 0.0,
+        "facing": [
+          0.999747574329376,
+          -0.0224668812006712
+        ],
+        "phase": "idle",
+        "pos": [
+          7.01779174804688,
+          5.27422952651978
+        ],
+        "room": "body",
+        "route": [
+          [
+            7.00860023498535,
+            5.26319980621338
+          ]
+        ],
+        "stand_done": true
+      },
+      "search_attempts": 1,
+      "search_elapsed": 0.0,
+      "search_target": "body:5"
+    },
+    {
+      "action": "autonomy",
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.0,
+        "hand_out": false,
+        "hurt": false,
+        "origin": "autonomous",
+        "pain_light": false,
+        "phase": "windup",
+        "retract_left": 0.0,
+        "source_search": "search:1:1"
+      },
+      "elapsed": 4.56666666666666,
+      "gripped": false,
+      "hero_m": [
+        7.49620008468628,
+        5.23954916000366
+      ],
+      "hp": 100,
+      "operator": {
+        "elapsed": 0.0,
+        "facing": [
+          0.999747574329376,
+          -0.0224668812006712
+        ],
+        "phase": "idle",
+        "pos": [
+          7.01779174804688,
+          5.27422952651978
+        ],
+        "room": "body",
+        "route": [
+          [
+            7.00860023498535,
+            5.26319980621338
+          ]
+        ],
+        "stand_done": true
+      },
+      "search_attempts": 1,
+      "search_elapsed": 0.266666666666667,
+      "search_target": "body:5"
+    },
+    {
+      "action": "autonomy",
+      "clamp": {
+        "attempted": true,
+        "elapsed": 0.0,
+        "hand_out": false,
+        "hurt": true,
+        "origin": "autonomous",
+        "pain_light": true,
+        "phase": "release",
+        "retract_left": 0.0,
+        "source_search": "search:1:1"
+      },
+      "elapsed": 5.39999999999999,
+      "gripped": true,
+      "hero_m": [
+        7.49620008468628,
+        5.23954916000366
+      ],
+      "hp": 90,
+      "operator": {
+        "elapsed": 0.0,
+        "facing": [
+          0.999747574329376,
+          -0.0224668812006712
+        ],
+        "phase": "idle",
+        "pos": [
+          7.01779174804688,
+          5.27422952651978
+        ],
+        "room": "body",
+        "route": [
+          [
+            7.00860023498535,
+            5.26319980621338
+          ]
+        ],
+        "stand_done": true
+      },
+      "search_attempts": 1,
+      "search_elapsed": 1.06666666666667,
+      "search_target": "body:5"
+    },
+    {
+      "action": "autonomy",
+      "clamp": {
+        "attempted": true,
+        "elapsed": 1.03333333333333,
+        "hand_out": false,
+        "hurt": true,
+        "origin": "autonomous",
+        "pain_light": true,
+        "phase": "done",
+        "retract_left": 0.0,
+        "source_search": "search:1:1"
+      },
+      "elapsed": 6.36666666666665,
+      "gripped": false,
+      "hero_m": [
+        7.49620008468628,
+        5.23954916000366
+      ],
+      "hp": 90,
+      "operator": {
+        "elapsed": 0.0,
+        "facing": [
+          0.999747574329376,
+          -0.0224668812006712
+        ],
+        "phase": "idle",
+        "pos": [
+          7.01779174804688,
+          5.27422952651978
+        ],
+        "room": "body",
+        "route": [
+          [
+            7.00860023498535,
+            5.26319980621338
+          ]
+        ],
+        "stand_done": true
+      },
+      "search_attempts": 1,
+      "search_elapsed": 1.06666666666667,
+      "search_target": "body:5"
+    },
+    {
+      "action": "autonomy",
+      "clamp": {
+        "attempted": true,
+        "elapsed": 1.03333333333333,
+        "hand_out": false,
+        "hurt": true,
+        "origin": "autonomous",
+        "pain_light": true,
+        "phase": "done",
+        "retract_left": 0.0,
+        "source_search": "search:1:1"
+      },
+      "elapsed": 12.0666666666666,
+      "gripped": false,
+      "hero_m": [
+        7.49620008468628,
+        5.23954916000366
+      ],
+      "hp": 90,
+      "operator": {
+        "elapsed": 0.0,
+        "facing": [
+          0.999747574329376,
+          -0.0224668812006712
+        ],
+        "phase": "idle",
+        "pos": [
+          7.01779174804688,
+          5.27422952651978
+        ],
+        "room": "body",
+        "route": [
+          [
+            7.00860023498535,
+            5.26319980621338
+          ]
+        ],
+        "stand_done": true
+      },
+      "search_attempts": 2,
+      "search_elapsed": 0.0,
+      "search_target": "body:5"
+    },
+    {
+      "action": "autonomy",
+      "clamp": {
+        "attempted": true,
+        "elapsed": 1.03333333333333,
+        "hand_out": false,
+        "hurt": true,
+        "origin": "autonomous",
+        "pain_light": true,
+        "phase": "done",
+        "retract_left": 0.0,
+        "source_search": "search:1:1"
+      },
+      "elapsed": 19.0666666666668,
+      "gripped": false,
+      "hero_m": [
+        7.49620008468628,
+        5.23954916000366
+      ],
+      "hp": 90,
+      "operator": {
+        "elapsed": 0.0,
+        "facing": [
+          0.999747574329376,
+          -0.0224668812006712
+        ],
+        "phase": "idle",
+        "pos": [
+          7.01779174804688,
+          5.27422952651978
+        ],
+        "room": "body",
+        "route": [
+          [
+            7.00860023498535,
+            5.26319980621338
+          ]
+        ],
+        "stand_done": true
+      },
+      "search_attempts": 2,
+      "search_elapsed": 6.99999999999998,
+      "search_target": "body:5"
+    }
+  ]
+}

@@ -1,0 +1,2053 @@
+{
+  "doors": [
+    {
+      "arrived": "memory",
+      "from": "atrium",
+      "position": [
+        8.73999977111816,
+        5.19999980926514
+      ],
+      "reached": true,
+      "toward": "memory",
+      "world_time": 43.2249999999986
+    },
+    {
+      "arrived": "visual",
+      "from": "memory",
+      "position": [
+        3.40000009536743,
+        0.860000014305115
+      ],
+      "reached": true,
+      "toward": "visual",
+      "world_time": 115.975000000009
+    },
+    {
+      "arrived": "atrium",
+      "from": "visual",
+      "position": [
+        9.9399995803833,
+        1.70000004768372
+      ],
+      "reached": true,
+      "toward": "atrium",
+      "world_time": 179.825000000024
+    },
+    {
+      "arrived": "decision",
+      "from": "atrium",
+      "position": [
+        4.80000019073486,
+        7.1399998664856
+      ],
+      "reached": true,
+      "toward": "decision",
+      "world_time": 186.625000000025
+    },
+    {
+      "arrived": "atrium",
+      "from": "decision",
+      "position": [
+        2.90000009536743,
+        0.860000014305115
+      ],
+      "reached": true,
+      "toward": "atrium",
+      "world_time": 261.825000000036
+    },
+    {
+      "arrived": "body",
+      "from": "atrium",
+      "position": [
+        5.19999980926514,
+        0.860000014305115
+      ],
+      "reached": true,
+      "toward": "body",
+      "world_time": 267.85000000003
+    },
+    {
+      "arrived": "atrium",
+      "from": "body",
+      "position": [
+        2.90000009536743,
+        6.73999977111816
+      ],
+      "reached": true,
+      "toward": "atrium",
+      "world_time": 350.799999999955
+    },
+    {
+      "arrived": "decision",
+      "from": "atrium",
+      "position": [
+        4.80000019073486,
+        7.1399998664856
+      ],
+      "reached": true,
+      "toward": "decision",
+      "world_time": 356.824999999949
+    },
+    {
+      "arrived": "bridge",
+      "from": "decision",
+      "position": [
+        1.79999995231628,
+        0.860000014305115
+      ],
+      "reached": true,
+      "toward": "bridge",
+      "world_time": 363.574999999943
+    },
+    {
+      "arrived": "rhythm",
+      "from": "bridge",
+      "position": [
+        2.09999990463257,
+        0.860000014305115
+      ],
+      "reached": true,
+      "toward": "rhythm",
+      "world_time": 413.524999999898
+    },
+    {
+      "arrived": "bridge",
+      "from": "rhythm",
+      "position": [
+        4.40000009536743,
+        5.94000005722046
+      ],
+      "reached": true,
+      "toward": "bridge",
+      "world_time": 460.124999999855
+    },
+    {
+      "arrived": "index",
+      "from": "bridge",
+      "position": [
+        2.04290008544922,
+        0.860000014305115
+      ],
+      "reached": true,
+      "toward": "index",
+      "world_time": 467.274999999849
+    },
+    {
+      "arrived": "switch",
+      "from": "index",
+      "position": [
+        0.860000014305115,
+        1.894700050354
+      ],
+      "reached": true,
+      "toward": "switch",
+      "world_time": 534.874999999788
+    },
+    {
+      "arrived": "verify",
+      "from": "switch",
+      "position": [
+        0.860000014305115,
+        5.59999990463257
+      ],
+      "reached": true,
+      "toward": "verify",
+      "world_time": 572.599999999753
+    },
+    {
+      "arrived": "identity",
+      "from": "verify",
+      "position": [
+        9.9399995803833,
+        2.21050000190735
+      ],
+      "reached": true,
+      "toward": "identity",
+      "world_time": 655.374999999678
+    }
+  ],
+  "failures": [],
+  "fixture": "Actual unlock_cortex entry; NPC processing disabled and chapter exit held for finite geometry coverage. Each next source point is explicitly selected through choose_public_target, then normal advance_world route/search/contact/completion/key handlers run. Original sixteen-key sample and key RNG are not rewritten; no completion, injury, owner or reward fields injected. Existing finite dialogue queued UI is advanced. Separate untouched natural run follows entry restore.",
+  "passes": [
+    "real unlock_cortex selects new L4 metric geometry",
+    "no key location is preselected at actual L4 entry",
+    "new metric door-to-door handlers reach atrium",
+    "metric source search actually begins atrium:0",
+    "actual legal stand/contact before search atrium:0",
+    "source seven-second duration atrium:0",
+    "real completion/once-only reward atrium:0",
+    "metric source search actually begins atrium:1",
+    "actual legal stand/contact before search atrium:1",
+    "source seven-second duration atrium:1",
+    "real completion/once-only reward atrium:1",
+    "metric source search actually begins atrium:2",
+    "actual legal stand/contact before search atrium:2",
+    "source seven-second duration atrium:2",
+    "real completion/once-only reward atrium:2",
+    "new metric door-to-door handlers reach memory",
+    "metric source search actually begins memory:0",
+    "actual legal stand/contact before search memory:0",
+    "source seven-second duration memory:0",
+    "real completion/once-only reward memory:0",
+    "metric source search actually begins memory:1",
+    "actual legal stand/contact before search memory:1",
+    "source seven-second duration memory:1",
+    "real completion/once-only reward memory:1",
+    "metric source search actually begins memory:2",
+    "actual legal stand/contact before search memory:2",
+    "source seven-second duration memory:2",
+    "real completion/once-only reward memory:2",
+    "metric source search actually begins memory:3",
+    "actual legal stand/contact before search memory:3",
+    "source seven-second duration memory:3",
+    "real completion/once-only reward memory:3",
+    "metric source search actually begins memory:4",
+    "actual legal stand/contact before search memory:4",
+    "source seven-second duration memory:4",
+    "real completion/once-only reward memory:4",
+    "metric source search actually begins memory:5",
+    "actual legal stand/contact before search memory:5",
+    "source seven-second duration memory:5",
+    "real completion/once-only reward memory:5",
+    "metric source search actually begins memory:6",
+    "actual legal stand/contact before search memory:6",
+    "source seven-second duration memory:6",
+    "real completion/once-only reward memory:6",
+    "new metric door-to-door handlers reach visual",
+    "metric source search actually begins visual:0",
+    "actual legal stand/contact before search visual:0",
+    "source seven-second duration visual:0",
+    "real completion/once-only reward visual:0",
+    "metric source search actually begins visual:1",
+    "actual legal stand/contact before search visual:1",
+    "source seven-second duration visual:1",
+    "real completion/once-only reward visual:1",
+    "metric source search actually begins visual:2",
+    "actual legal stand/contact before search visual:2",
+    "source seven-second duration visual:2",
+    "real completion/once-only reward visual:2",
+    "metric source search actually begins visual:3",
+    "actual legal stand/contact before search visual:3",
+    "source seven-second duration visual:3",
+    "real completion/once-only reward visual:3",
+    "metric source search actually begins visual:4",
+    "actual legal stand/contact before search visual:4",
+    "source seven-second duration visual:4",
+    "real completion/once-only reward visual:4",
+    "metric source search actually begins visual:5",
+    "actual legal stand/contact before search visual:5",
+    "source seven-second duration visual:5",
+    "real completion/once-only reward visual:5",
+    "new metric door-to-door handlers reach decision",
+    "metric source search actually begins decision:0",
+    "actual legal stand/contact before search decision:0",
+    "source seven-second duration decision:0",
+    "real completion/once-only reward decision:0",
+    "metric source search actually begins decision:1",
+    "actual legal stand/contact before search decision:1",
+    "source seven-second duration decision:1",
+    "real completion/once-only reward decision:1",
+    "metric source search actually begins decision:2",
+    "actual legal stand/contact before search decision:2",
+    "source seven-second duration decision:2",
+    "real completion/once-only reward decision:2",
+    "metric source search actually begins decision:3",
+    "actual legal stand/contact before search decision:3",
+    "source seven-second duration decision:3",
+    "real completion/once-only reward decision:3",
+    "metric source search actually begins decision:4",
+    "actual legal stand/contact before search decision:4",
+    "source seven-second duration decision:4",
+    "real completion/once-only reward decision:4",
+    "metric source search actually begins decision:5",
+    "actual legal stand/contact before search decision:5",
+    "source seven-second duration decision:5",
+    "real completion/once-only reward decision:5",
+    "metric source search actually begins decision:6",
+    "actual legal stand/contact before search decision:6",
+    "source seven-second duration decision:6",
+    "real completion/once-only reward decision:6",
+    "new metric door-to-door handlers reach body",
+    "metric source search actually begins body:0",
+    "actual legal stand/contact before search body:0",
+    "source seven-second duration body:0",
+    "real completion/once-only reward body:0",
+    "metric source search actually begins body:1",
+    "actual legal stand/contact before search body:1",
+    "source seven-second duration body:1",
+    "real completion/once-only reward body:1",
+    "metric source search actually begins body:2",
+    "actual legal stand/contact before search body:2",
+    "source seven-second duration body:2",
+    "real completion/once-only reward body:2",
+    "metric source search actually begins body:3",
+    "actual legal stand/contact before search body:3",
+    "source seven-second duration body:3",
+    "real completion/once-only reward body:3",
+    "metric source search actually begins body:4",
+    "actual legal stand/contact before search body:4",
+    "source seven-second duration body:4",
+    "real completion/once-only reward body:4",
+    "metric source search actually begins body:5",
+    "actual legal stand/contact before search body:5",
+    "source seven-second duration body:5",
+    "new L4 touch-table real JSON keeps in-flight search",
+    "real completion/once-only reward body:5",
+    "metric source search actually begins body:6",
+    "actual legal stand/contact before search body:6",
+    "source seven-second duration body:6",
+    "real completion/once-only reward body:6",
+    "metric source search actually begins body:7",
+    "actual legal stand/contact before search body:7",
+    "source seven-second duration body:7",
+    "real completion/once-only reward body:7",
+    "new metric door-to-door handlers reach bridge",
+    "metric source search actually begins bridge:0",
+    "actual legal stand/contact before search bridge:0",
+    "source seven-second duration bridge:0",
+    "real completion/once-only reward bridge:0",
+    "metric source search actually begins bridge:1",
+    "actual legal stand/contact before search bridge:1",
+    "source seven-second duration bridge:1",
+    "real completion/once-only reward bridge:1",
+    "metric source search actually begins bridge:2",
+    "actual legal stand/contact before search bridge:2",
+    "source seven-second duration bridge:2",
+    "real completion/once-only reward bridge:2",
+    "metric source search actually begins bridge:3",
+    "actual legal stand/contact before search bridge:3",
+    "source seven-second duration bridge:3",
+    "real completion/once-only reward bridge:3",
+    "new metric door-to-door handlers reach rhythm",
+    "metric source search actually begins rhythm:0",
+    "actual legal stand/contact before search rhythm:0",
+    "source seven-second duration rhythm:0",
+    "real completion/once-only reward rhythm:0",
+    "metric source search actually begins rhythm:1",
+    "actual legal stand/contact before search rhythm:1",
+    "source seven-second duration rhythm:1",
+    "real completion/once-only reward rhythm:1",
+    "metric source search actually begins rhythm:2",
+    "actual legal stand/contact before search rhythm:2",
+    "source seven-second duration rhythm:2",
+    "real completion/once-only reward rhythm:2",
+    "metric source search actually begins rhythm:3",
+    "actual legal stand/contact before search rhythm:3",
+    "source seven-second duration rhythm:3",
+    "real completion/once-only reward rhythm:3",
+    "new metric door-to-door handlers reach index",
+    "metric source search actually begins index:0",
+    "actual legal stand/contact before search index:0",
+    "source seven-second duration index:0",
+    "real completion/once-only reward index:0",
+    "metric source search actually begins index:1",
+    "actual legal stand/contact before search index:1",
+    "source seven-second duration index:1",
+    "real completion/once-only reward index:1",
+    "metric source search actually begins index:2",
+    "actual legal stand/contact before search index:2",
+    "source seven-second duration index:2",
+    "real completion/once-only reward index:2",
+    "metric source search actually begins index:3",
+    "actual legal stand/contact before search index:3",
+    "source seven-second duration index:3",
+    "real completion/once-only reward index:3",
+    "metric source search actually begins index:4",
+    "actual legal stand/contact before search index:4",
+    "source seven-second duration index:4",
+    "real completion/once-only reward index:4",
+    "metric source search actually begins index:5",
+    "actual legal stand/contact before search index:5",
+    "source seven-second duration index:5",
+    "real completion/once-only reward index:5",
+    "new metric door-to-door handlers reach switch",
+    "metric source search actually begins switch:0",
+    "actual legal stand/contact before search switch:0",
+    "source seven-second duration switch:0",
+    "real completion/once-only reward switch:0",
+    "metric source search actually begins switch:1",
+    "actual legal stand/contact before search switch:1",
+    "source seven-second duration switch:1",
+    "real completion/once-only reward switch:1",
+    "metric source search actually begins switch:2",
+    "actual legal stand/contact before search switch:2",
+    "source seven-second duration switch:2",
+    "real completion/once-only reward switch:2",
+    "new metric door-to-door handlers reach verify",
+    "metric source search actually begins verify:0",
+    "actual legal stand/contact before search verify:0",
+    "source seven-second duration verify:0",
+    "real completion/once-only reward verify:0",
+    "metric source search actually begins verify:1",
+    "actual legal stand/contact before search verify:1",
+    "source seven-second duration verify:1",
+    "real completion/once-only reward verify:1",
+    "metric source search actually begins verify:2",
+    "actual legal stand/contact before search verify:2",
+    "source seven-second duration verify:2",
+    "real completion/once-only reward verify:2",
+    "metric source search actually begins verify:3",
+    "actual legal stand/contact before search verify:3",
+    "source seven-second duration verify:3",
+    "real completion/once-only reward verify:3",
+    "metric source search actually begins verify:4",
+    "actual legal stand/contact before search verify:4",
+    "source seven-second duration verify:4",
+    "real completion/once-only reward verify:4",
+    "metric source search actually begins verify:5",
+    "actual legal stand/contact before search verify:5",
+    "source seven-second duration verify:5",
+    "real completion/once-only reward verify:5",
+    "metric source search actually begins verify:6",
+    "actual legal stand/contact before search verify:6",
+    "source seven-second duration verify:6",
+    "real completion/once-only reward verify:6",
+    "new metric door-to-door handlers reach identity",
+    "metric source search actually begins identity:0",
+    "actual legal stand/contact before search identity:0",
+    "source seven-second duration identity:0",
+    "real completion/once-only reward identity:0",
+    "metric source search actually begins identity:1",
+    "actual legal stand/contact before search identity:1",
+    "source seven-second duration identity:1",
+    "real completion/once-only reward identity:1",
+    "metric source search actually begins identity:2",
+    "actual legal stand/contact before search identity:2",
+    "source seven-second duration identity:2",
+    "real completion/once-only reward identity:2",
+    "metric source search actually begins identity:3",
+    "actual legal stand/contact before search identity:3",
+    "source seven-second duration identity:3",
+    "real completion/once-only reward identity:3",
+    "metric source search actually begins identity:4",
+    "actual legal stand/contact before search identity:4",
+    "source seven-second duration identity:4",
+    "real completion/once-only reward identity:4",
+    "metric source search actually begins identity:5",
+    "actual legal stand/contact before search identity:5",
+    "source seven-second duration identity:5",
+    "real completion/once-only reward identity:5",
+    "metric source search actually begins identity:6",
+    "actual legal stand/contact before search identity:6",
+    "source seven-second duration identity:6",
+    "real completion/once-only reward identity:6",
+    "all sixty-two legal L4 source actions genuinely completed",
+    "all finite source actions use fresh metric L4 version2"
+  ],
+  "searches": [
+    {
+      "actual_position_m": [
+        2.97663736343384,
+        3.70615196228027
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.00701095629483461,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:1",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T35R2",
+      "stand_m": [
+        2.98000001907349,
+        3.70000004768372
+      ],
+      "start_m": [
+        1.83210003376007,
+        5.80000019073486
+      ],
+      "target": "atrium:0",
+      "world_time": 9.05000000000006
+    },
+    {
+      "actual_position_m": [
+        1.6472772359848,
+        1.18505358695984
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0170366745442152,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:2",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T35R3",
+      "stand_m": [
+        1.63929998874664,
+        1.16999995708466
+      ],
+      "start_m": [
+        2.97663736343384,
+        3.70615196228027
+      ],
+      "target": "atrium:1",
+      "world_time": 18.525
+    },
+    {
+      "actual_position_m": [
+        8.66889190673828,
+        5.19795799255371
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0334805101156235,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:3",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T35R4",
+      "stand_m": [
+        8.6786003112793,
+        5.23000001907349
+      ],
+      "start_m": [
+        1.6472772359848,
+        1.18505358695984
+      ],
+      "target": "atrium:2",
+      "world_time": 33.7499999999992
+    },
+    {
+      "actual_position_m": [
+        1.47789335250854,
+        1.52968430519104
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0219669919461012,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:4",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T36R2",
+      "stand_m": [
+        1.45710003376007,
+        1.52260005474091
+      ],
+      "start_m": [
+        8.73999977111816,
+        5.19999980926514
+      ],
+      "target": "memory:0",
+      "world_time": 57.3499999999978
+    },
+    {
+      "actual_position_m": [
+        3.563551902771,
+        3.72490358352661
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0237960945814848,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:5",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T36R3",
+      "stand_m": [
+        3.57999992370605,
+        3.74210000038147
+      ],
+      "start_m": [
+        1.47789335250854,
+        1.52968430519104
+      ],
+      "target": "memory:1",
+      "world_time": 66.9999999999981
+    },
+    {
+      "actual_position_m": [
+        1.72977983951569,
+        4.79231357574463
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0177994836121798,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:6",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T36R4",
+      "stand_m": [
+        1.71430003643036,
+        4.80109977722168
+      ],
+      "start_m": [
+        3.563551902771,
+        3.72490358352661
+      ],
+      "target": "memory:2",
+      "world_time": 75.8500000000001
+    },
+    {
+      "actual_position_m": [
+        1.81190311908722,
+        3.42455863952637
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0140938861295581,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:7",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T36R5",
+      "stand_m": [
+        1.81289994716644,
+        3.41050004959106
+      ],
+      "start_m": [
+        1.72977983951569,
+        4.79231357574463
+      ],
+      "target": "memory:3",
+      "world_time": 84.050000000002
+    },
+    {
+      "actual_position_m": [
+        7.27155351638794,
+        5.27631330490112
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0141479335725307,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:8",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T36R6",
+      "stand_m": [
+        7.28569984436035,
+        5.27610015869141
+      ],
+      "start_m": [
+        1.81190311908722,
+        3.42455863952637
+      ],
+      "target": "memory:4",
+      "world_time": 96.1750000000047
+    },
+    {
+      "actual_position_m": [
+        8.09597110748291,
+        2.39798355102539
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0307334288954735,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:9",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T36R7",
+      "stand_m": [
+        8.10429954528809,
+        2.36840009689331
+      ],
+      "start_m": [
+        7.27155351638794,
+        5.27631330490112
+      ],
+      "target": "memory:5",
+      "world_time": 105.775000000007
+    },
+    {
+      "actual_position_m": [
+        7.72889709472656,
+        1.62394666671753
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0324187986552715,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:10",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T36R8",
+      "stand_m": [
+        7.71430015563965,
+        1.59500002861023
+      ],
+      "start_m": [
+        8.09597110748291,
+        2.39798355102539
+      ],
+      "target": "memory:6",
+      "world_time": 113.525000000009
+    },
+    {
+      "actual_position_m": [
+        1.91120398044586,
+        2.37978363037109
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0283002462238073,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:11",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T37R2",
+      "stand_m": [
+        1.89139997959137,
+        2.40000009536743
+      ],
+      "start_m": [
+        3.40000009536743,
+        0.860000014305115
+      ],
+      "target": "visual:0",
+      "world_time": 124.800000000011
+    },
+    {
+      "actual_position_m": [
+        7.49678468704224,
+        2.30033612251282
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0189181640744209,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:12",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T37R3",
+      "stand_m": [
+        7.51569986343384,
+        2.29999995231628
+      ],
+      "start_m": [
+        1.91120398044586,
+        2.37978363037109
+      ],
+      "target": "visual:1",
+      "world_time": 136.675000000014
+    },
+    {
+      "actual_position_m": [
+        8.5871114730835,
+        4.74298572540283
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.00787900015711784,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:13",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T37R4",
+      "stand_m": [
+        8.59070014953613,
+        4.75
+      ],
+      "start_m": [
+        7.49678468704224,
+        2.30033612251282
+      ],
+      "target": "visual:2",
+      "world_time": 146.000000000016
+    },
+    {
+      "actual_position_m": [
+        5.20925664901733,
+        2.02745294570923
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0118842655792832,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:14",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T37R5",
+      "stand_m": [
+        5.19999980926514,
+        2.01999998092651
+      ],
+      "start_m": [
+        8.5871114730835,
+        4.74298572540283
+      ],
+      "target": "visual:3",
+      "world_time": 156.775000000019
+    },
+    {
+      "actual_position_m": [
+        5.19999980926514,
+        4.86624431610107
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0337557792663574,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:15",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T37R6",
+      "stand_m": [
+        5.19999980926514,
+        4.90000009536743
+      ],
+      "start_m": [
+        5.20925664901733,
+        2.02745294570923
+      ],
+      "target": "visual:4",
+      "world_time": 166.250000000021
+    },
+    {
+      "actual_position_m": [
+        2.34765839576721,
+        6.63869714736938
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0298788752406836,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:16",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T37R7",
+      "stand_m": [
+        2.3199999332428,
+        6.65000009536743
+      ],
+      "start_m": [
+        5.19999980926514,
+        4.86624431610107
+      ],
+      "target": "visual:5",
+      "world_time": 176.250000000023
+    },
+    {
+      "actual_position_m": [
+        1.64487242698669,
+        1.95884966850281
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0134056080132723,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:17",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T38R2",
+      "stand_m": [
+        1.63789999485016,
+        1.94739997386932
+      ],
+      "start_m": [
+        4.80000019073486,
+        7.1399998664856
+      ],
+      "target": "decision:0",
+      "world_time": 198.875000000028
+    },
+    {
+      "actual_position_m": [
+        2.14612746238709,
+        4.51381349563599
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0127289267256856,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:18",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T38R3",
+      "stand_m": [
+        2.14860010147095,
+        4.52629995346069
+      ],
+      "start_m": [
+        1.64487242698669,
+        1.95884966850281
+      ],
+      "target": "decision:1",
+      "world_time": 208.15000000003
+    },
+    {
+      "actual_position_m": [
+        2.45473790168762,
+        6.83484506607056
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.00731858098879457,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:19",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T38R4",
+      "stand_m": [
+        2.4556999206543,
+        6.84210014343262
+      ],
+      "start_m": [
+        2.14612746238709,
+        4.51381349563599
+      ],
+      "target": "decision:2",
+      "world_time": 217.175000000032
+    },
+    {
+      "actual_position_m": [
+        4.78088998794556,
+        4.78431272506714
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0255195461213589,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:20",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T38R5",
+      "stand_m": [
+        4.80000019073486,
+        4.76739978790283
+      ],
+      "start_m": [
+        2.45473790168762,
+        6.83484506607056
+      ],
+      "target": "decision:3",
+      "world_time": 226.875000000034
+    },
+    {
+      "actual_position_m": [
+        7.60186529159546,
+        6.829270362854
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0216464418917894,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:21",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T38R6",
+      "stand_m": [
+        7.61929988861084,
+        6.84210014343262
+      ],
+      "start_m": [
+        4.78088998794556,
+        4.78431272506714
+      ],
+      "target": "decision:4",
+      "world_time": 236.900000000037
+    },
+    {
+      "actual_position_m": [
+        8.14010334014893,
+        4.66090250015259
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0301264282315969,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:22",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T38R7",
+      "stand_m": [
+        8.1471004486084,
+        4.63159990310669
+      ],
+      "start_m": [
+        7.60186529159546,
+        6.829270362854
+      ],
+      "target": "decision:5",
+      "world_time": 245.850000000039
+    },
+    {
+      "actual_position_m": [
+        7.59895181655884,
+        1.60458922386169
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0261070597916842,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:23",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T38R8",
+      "stand_m": [
+        7.59429979324341,
+        1.57889997959137
+      ],
+      "start_m": [
+        8.14010334014893,
+        4.66090250015259
+      ],
+      "target": "decision:6",
+      "world_time": 255.550000000041
+    },
+    {
+      "actual_position_m": [
+        1.9024612903595,
+        1.52407240867615
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0112833743914962,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:24",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T39R2",
+      "stand_m": [
+        1.89139997959137,
+        1.52629995346069
+      ],
+      "start_m": [
+        5.19999980926514,
+        0.860000014305115
+      ],
+      "target": "body:0",
+      "world_time": 277.750000000021
+    },
+    {
+      "actual_position_m": [
+        1.26055371761322,
+        3.34631872177124
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0233702044934034,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:25",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T39R3",
+      "stand_m": [
+        1.2529000043869,
+        3.36840009689331
+      ],
+      "start_m": [
+        1.9024612903595,
+        1.52407240867615
+      ],
+      "target": "body:1",
+      "world_time": 286.425000000013
+    },
+    {
+      "actual_position_m": [
+        1.2529000043869,
+        5.23714637756348
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0260534286499023,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:26",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T39R4",
+      "stand_m": [
+        1.2529000043869,
+        5.26319980621338
+      ],
+      "start_m": [
+        1.26055371761322,
+        3.34631872177124
+      ],
+      "target": "body:2",
+      "world_time": 295.050000000006
+    },
+    {
+      "actual_position_m": [
+        2.22030973434448,
+        7.08364725112915
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0226924140006304,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:27",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T39R5",
+      "stand_m": [
+        2.22709989547729,
+        7.105299949646
+      ],
+      "start_m": [
+        1.2529000043869,
+        5.23714637756348
+      ],
+      "target": "body:3",
+      "world_time": 303.849999999998
+    },
+    {
+      "actual_position_m": [
+        7.48747110366821,
+        2.33496069908142
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0285232253372669,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:28",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T39R6",
+      "stand_m": [
+        7.50860023498535,
+        2.31579995155334
+      ],
+      "start_m": [
+        2.22030973434448,
+        7.08364725112915
+      ],
+      "target": "body:4",
+      "world_time": 317.024999999986
+    },
+    {
+      "actual_position_m": [
+        7.50860023498535,
+        5.24829435348511
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0149054527282715,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:29",
+      "mid_search_roundtrip": true,
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T39R7",
+      "stand_m": [
+        7.50860023498535,
+        5.26319980621338
+      ],
+      "start_m": [
+        7.48747110366821,
+        2.33496069908142
+      ],
+      "target": "body:5",
+      "world_time": 326.574999999977
+    },
+    {
+      "actual_position_m": [
+        7.83564519882202,
+        7.04467582702637
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0080565232783556,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:30",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T39R8",
+      "stand_m": [
+        7.8371000289917,
+        7.05259990692139
+      ],
+      "start_m": [
+        7.50860023498535,
+        5.24829435348511
+      ],
+      "target": "body:6",
+      "world_time": 335.149999999969
+    },
+    {
+      "actual_position_m": [
+        4.66298198699951,
+        6.51102590560913
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0203721523284912,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:31",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T39R9",
+      "stand_m": [
+        4.64289999008179,
+        6.50759983062744
+      ],
+      "start_m": [
+        7.83564519882202,
+        7.04467582702637
+      ],
+      "target": "body:7",
+      "world_time": 344.94999999996
+    },
+    {
+      "actual_position_m": [
+        5.5935697555542,
+        3.92043328285217
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.00648828968405724,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:32",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T41R2",
+      "stand_m": [
+        5.59999990463257,
+        3.92129993438721
+      ],
+      "start_m": [
+        1.79999995231628,
+        0.860000014305115
+      ],
+      "target": "bridge:0",
+      "world_time": 374.924999999933
+    },
+    {
+      "actual_position_m": [
+        2.28876781463623,
+        4.78192186355591
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0193914137780666,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:33",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T41R3",
+      "stand_m": [
+        2.26999998092651,
+        4.78679990768433
+      ],
+      "start_m": [
+        5.5935697555542,
+        3.92043328285217
+      ],
+      "target": "bridge:1",
+      "world_time": 384.899999999924
+    },
+    {
+      "actual_position_m": [
+        8.91125202178955,
+        4.78679990768433
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0187482833862305,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:34",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T41R4",
+      "stand_m": [
+        8.93000030517578,
+        4.78679990768433
+      ],
+      "start_m": [
+        2.28876781463623,
+        4.78192186355591
+      ],
+      "target": "bridge:2",
+      "world_time": 397.674999999912
+    },
+    {
+      "actual_position_m": [
+        8.40118503570557,
+        1.55225038528442
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.00734669482335448,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:35",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T41R5",
+      "stand_m": [
+        8.39999961853027,
+        1.54499995708466
+      ],
+      "start_m": [
+        8.91125202178955,
+        4.78679990768433
+      ],
+      "target": "bridge:3",
+      "world_time": 407.524999999903
+    },
+    {
+      "actual_position_m": [
+        2.03214073181152,
+        2.12317800521851
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0268607586622238,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:36",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T42R2",
+      "stand_m": [
+        2.03069996833801,
+        2.15000009536743
+      ],
+      "start_m": [
+        2.09999990463257,
+        0.860000014305115
+      ],
+      "target": "rhythm:0",
+      "world_time": 421.59999999989
+    },
+    {
+      "actual_position_m": [
+        1.60445439815521,
+        5.97885084152222
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0212798025459051,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:37",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T42R3",
+      "stand_m": [
+        1.60210001468658,
+        6.0
+      ],
+      "start_m": [
+        2.03214073181152,
+        2.12317800521851
+      ],
+      "target": "rhythm:1",
+      "world_time": 431.949999999881
+    },
+    {
+      "actual_position_m": [
+        5.33680486679077,
+        5.85578393936157
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0203102771192789,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:38",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T42R4",
+      "stand_m": [
+        5.35710000991821,
+        5.85500001907349
+      ],
+      "start_m": [
+        1.60445439815521,
+        5.97885084152222
+      ],
+      "target": "rhythm:2",
+      "world_time": 442.199999999872
+    },
+    {
+      "actual_position_m": [
+        8.43294334411621,
+        5.90449523925781
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0313608758151531,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:39",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T42R5",
+      "stand_m": [
+        8.46430015563965,
+        5.90500020980835
+      ],
+      "start_m": [
+        5.33680486679077,
+        5.85578393936157
+      ],
+      "target": "rhythm:3",
+      "world_time": 451.874999999863
+    },
+    {
+      "actual_position_m": [
+        1.89003396034241,
+        2.86668801307678
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0280932039022446,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:40",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T43R2",
+      "stand_m": [
+        1.88789999485016,
+        2.894700050354
+      ],
+      "start_m": [
+        2.04290008544922,
+        0.860000014305115
+      ],
+      "target": "index:0",
+      "world_time": 475.999999999841
+    },
+    {
+      "actual_position_m": [
+        8.05151653289795,
+        1.92954099178314
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.027413435280323,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:41",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T43R3",
+      "stand_m": [
+        8.07859992980957,
+        1.92530000209808
+      ],
+      "start_m": [
+        1.89003396034241,
+        2.86668801307678
+      ],
+      "target": "index:1",
+      "world_time": 488.42499999983
+    },
+    {
+      "actual_position_m": [
+        1.7684473991394,
+        5.99408197402954
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.00811151880770922,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:42",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T43R4",
+      "stand_m": [
+        1.76289999485016,
+        6.0
+      ],
+      "start_m": [
+        8.05151653289795,
+        1.92954099178314
+      ],
+      "target": "index:2",
+      "world_time": 502.124999999817
+    },
+    {
+      "actual_position_m": [
+        5.17554187774658,
+        4.70170450210571
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0261680074036121,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:43",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T43R5",
+      "stand_m": [
+        5.19999980926514,
+        4.6923999786377
+      ],
+      "start_m": [
+        1.7684473991394,
+        5.99408197402954
+      ],
+      "target": "index:3",
+      "world_time": 512.299999999808
+    },
+    {
+      "actual_position_m": [
+        4.64886665344238,
+        6.2356915473938
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0177417825907469,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:44",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T43R6",
+      "stand_m": [
+        4.64289999008179,
+        6.25239992141724
+      ],
+      "start_m": [
+        5.17554187774658,
+        4.70170450210571
+      ],
+      "target": "index:4",
+      "world_time": 520.7249999998
+    },
+    {
+      "actual_position_m": [
+        8.53354072570801,
+        4.32642269134521
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0239447504281998,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:45",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T43R7",
+      "stand_m": [
+        8.55500030517578,
+        4.31580018997192
+      ],
+      "start_m": [
+        4.64886665344238,
+        6.2356915473938
+      ],
+      "target": "index:5",
+      "world_time": 531.499999999791
+    },
+    {
+      "actual_position_m": [
+        4.76885747909546,
+        4.15780973434448
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0312282517552376,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:46",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T44R2",
+      "stand_m": [
+        4.80000019073486,
+        4.15549993515015
+      ],
+      "start_m": [
+        0.860000014305115,
+        1.894700050354
+      ],
+      "target": "switch:0",
+      "world_time": 545.874999999778
+    },
+    {
+      "actual_position_m": [
+        2.30718660354614,
+        5.85806846618652
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0277153719216585,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:47",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T44R3",
+      "stand_m": [
+        2.28430008888245,
+        5.87370014190674
+      ],
+      "start_m": [
+        4.76885747909546,
+        4.15780973434448
+      ],
+      "target": "switch:1",
+      "world_time": 555.524999999769
+    },
+    {
+      "actual_position_m": [
+        8.22117042541504,
+        1.88560318946838
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.00980779994279146,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:48",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T44R4",
+      "stand_m": [
+        8.22859954833984,
+        1.87919998168945
+      ],
+      "start_m": [
+        2.30718660354614,
+        5.85806846618652
+      ],
+      "target": "switch:2",
+      "world_time": 568.774999999757
+    },
+    {
+      "actual_position_m": [
+        2.37207794189453,
+        2.00513601303101
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0157098732888699,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:49",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T45R2",
+      "stand_m": [
+        2.37360000610352,
+        1.98950004577637
+      ],
+      "start_m": [
+        0.860000014305115,
+        5.59999990463257
+      ],
+      "target": "verify:0",
+      "world_time": 583.299999999743
+    },
+    {
+      "actual_position_m": [
+        7.92233896255493,
+        1.98950004577637
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.011260986328125,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:50",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T45R3",
+      "stand_m": [
+        7.93359994888306,
+        1.98950004577637
+      ],
+      "start_m": [
+        2.37207794189453,
+        2.00513601303101
+      ],
+      "target": "verify:1",
+      "world_time": 595.124999999733
+    },
+    {
+      "actual_position_m": [
+        5.21500825881958,
+        6.6610107421875
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0298385582864285,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:51",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T45R4",
+      "stand_m": [
+        5.19999980926514,
+        6.68680000305176
+      ],
+      "start_m": [
+        7.92233896255493,
+        1.98950004577637
+      ],
+      "target": "verify:2",
+      "world_time": 606.824999999722
+    },
+    {
+      "actual_position_m": [
+        6.81869697570801,
+        1.40944838523865
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0214932579547167,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:52",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T45R5",
+      "stand_m": [
+        6.82499980926514,
+        1.3889000415802
+      ],
+      "start_m": [
+        5.21500825881958,
+        6.6610107421875
+      ],
+      "target": "verify:3",
+      "world_time": 618.649999999711
+    },
+    {
+      "actual_position_m": [
+        2.30209159851074,
+        4.24180698394775
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0252915900200605,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:53",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T45R6",
+      "stand_m": [
+        2.28069996833801,
+        4.25530004501343
+      ],
+      "start_m": [
+        6.81869697570801,
+        1.40944838523865
+      ],
+      "target": "verify:4",
+      "world_time": 630.299999999701
+    },
+    {
+      "actual_position_m": [
+        8.43319511413574,
+        4.25530004501343
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.028904914855957,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:54",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T45R7",
+      "stand_m": [
+        8.4621000289917,
+        4.25530004501343
+      ],
+      "start_m": [
+        2.30209159851074,
+        4.24180698394775
+      ],
+      "target": "verify:5",
+      "world_time": 642.64999999969
+    },
+    {
+      "actual_position_m": [
+        7.7923526763916,
+        7.28721761703491
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.00766287883743644,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:55",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T45R8",
+      "stand_m": [
+        7.79069995880127,
+        7.29470014572144
+      ],
+      "start_m": [
+        8.43319511413574,
+        4.25530004501343
+      ],
+      "target": "verify:6",
+      "world_time": 652.374999999681
+    },
+    {
+      "actual_position_m": [
+        2.4048023223877,
+        4.30184030532837
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0323817431926727,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:56",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T46R2",
+      "stand_m": [
+        2.37360000610352,
+        4.3105001449585
+      ],
+      "start_m": [
+        9.9399995803833,
+        2.21050000190735
+      ],
+      "target": "identity:0",
+      "world_time": 669.149999999665
+    },
+    {
+      "actual_position_m": [
+        3.16778540611267,
+        6.00210952758789
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0336834341287613,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:57",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T46R3",
+      "stand_m": [
+        3.18210005760193,
+        6.03259992599487
+      ],
+      "start_m": [
+        2.4048023223877,
+        4.30184030532837
+      ],
+      "target": "identity:1",
+      "world_time": 677.799999999658
+    },
+    {
+      "actual_position_m": [
+        4.86430072784424,
+        4.82632875442505
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0316238291561604,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:58",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T46R4",
+      "stand_m": [
+        4.8899998664856,
+        4.80789995193481
+      ],
+      "start_m": [
+        3.16778540611267,
+        6.00210952758789
+      ],
+      "target": "identity:2",
+      "world_time": 686.62499999965
+    },
+    {
+      "actual_position_m": [
+        7.61170291900635,
+        6.03178119659424
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.00625082617625594,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:59",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T46R5",
+      "stand_m": [
+        7.61789989471436,
+        6.03259992599487
+      ],
+      "start_m": [
+        4.86430072784424,
+        4.82632875442505
+      ],
+      "target": "identity:3",
+      "world_time": 696.64999999964
+    },
+    {
+      "actual_position_m": [
+        1.85127186775208,
+        1.75346755981445
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0209584999829531,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:60",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T46R6",
+      "stand_m": [
+        1.83210003376007,
+        1.74500000476837
+      ],
+      "start_m": [
+        7.61170291900635,
+        6.03178119659424
+      ],
+      "target": "identity:4",
+      "world_time": 710.024999999628
+    },
+    {
+      "actual_position_m": [
+        8.93335151672363,
+        1.74500000476837
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0345487594604492,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:61",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T46R7",
+      "stand_m": [
+        8.96790027618408,
+        1.74500000476837
+      ],
+      "start_m": [
+        1.85127186775208,
+        1.75346755981445
+      ],
+      "target": "identity:5",
+      "world_time": 723.199999999616
+    },
+    {
+      "actual_position_m": [
+        8.43352890014648,
+        4.27672529220581
+      ],
+      "begun": true,
+      "completed": true,
+      "completed_before": false,
+      "contact_error_m": 0.0345189683139324,
+      "count_delta": 1,
+      "duration_s": 7.0,
+      "event_id": "search:1:62",
+      "neuron_delta": 1,
+      "settlement": "completed",
+      "source": "S3:T46R8",
+      "stand_m": [
+        8.42640018463135,
+        4.3105001449585
+      ],
+      "start_m": [
+        8.93335151672363,
+        1.74500000476837
+      ],
+      "target": "identity:6",
+      "world_time": 732.474999999608
+    }
+  ],
+  "world_seconds": 732.474999999608
+}

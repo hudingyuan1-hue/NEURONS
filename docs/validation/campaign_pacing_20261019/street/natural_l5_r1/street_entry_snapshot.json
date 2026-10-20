@@ -1,0 +1,4119 @@
+{
+  "action_left": 0.0,
+  "action_phase": "autonomy",
+  "arrival_left": 0.0,
+  "arrival_origin": [
+    0.0,
+    0.0
+  ],
+  "asylum_state": {},
+  "audio_state": {
+    "playing": [
+      {
+        "channel": "music",
+        "id": "MUS_DANGER",
+        "position": 0.00266666663810611
+      }
+    ],
+    "receipts": {
+      "MUS_DANGER:music:5:1": true,
+      "MUS_DANGER:music:6:1": true,
+      "SFX_COMBAT_WINDUP:combat:5:1:father:1:windup": true,
+      "SFX_COMBAT_WINDUP:combat:5:1:father:2:windup": true,
+      "SFX_COMBAT_WINDUP:combat:5:1:skinface:3:windup": true,
+      "SFX_FOOTSTEP:foot:1": true,
+      "SFX_FOOTSTEP:foot:100": true,
+      "SFX_FOOTSTEP:foot:101": true,
+      "SFX_FOOTSTEP:foot:102": true,
+      "SFX_FOOTSTEP:foot:104": true,
+      "SFX_FOOTSTEP:foot:105": true,
+      "SFX_FOOTSTEP:foot:106": true,
+      "SFX_FOOTSTEP:foot:107": true,
+      "SFX_FOOTSTEP:foot:108": true,
+      "SFX_FOOTSTEP:foot:109": true,
+      "SFX_FOOTSTEP:foot:11": true,
+      "SFX_FOOTSTEP:foot:110": true,
+      "SFX_FOOTSTEP:foot:111": true,
+      "SFX_FOOTSTEP:foot:112": true,
+      "SFX_FOOTSTEP:foot:113": true,
+      "SFX_FOOTSTEP:foot:114": true,
+      "SFX_FOOTSTEP:foot:115": true,
+      "SFX_FOOTSTEP:foot:118": true,
+      "SFX_FOOTSTEP:foot:119": true,
+      "SFX_FOOTSTEP:foot:12": true,
+      "SFX_FOOTSTEP:foot:120": true,
+      "SFX_FOOTSTEP:foot:121": true,
+      "SFX_FOOTSTEP:foot:122": true,
+      "SFX_FOOTSTEP:foot:123": true,
+      "SFX_FOOTSTEP:foot:124": true,
+      "SFX_FOOTSTEP:foot:125": true,
+      "SFX_FOOTSTEP:foot:126": true,
+      "SFX_FOOTSTEP:foot:127": true,
+      "SFX_FOOTSTEP:foot:128": true,
+      "SFX_FOOTSTEP:foot:13": true,
+      "SFX_FOOTSTEP:foot:14": true,
+      "SFX_FOOTSTEP:foot:17": true,
+      "SFX_FOOTSTEP:foot:18": true,
+      "SFX_FOOTSTEP:foot:19": true,
+      "SFX_FOOTSTEP:foot:2": true,
+      "SFX_FOOTSTEP:foot:20": true,
+      "SFX_FOOTSTEP:foot:22": true,
+      "SFX_FOOTSTEP:foot:23": true,
+      "SFX_FOOTSTEP:foot:24": true,
+      "SFX_FOOTSTEP:foot:25": true,
+      "SFX_FOOTSTEP:foot:27": true,
+      "SFX_FOOTSTEP:foot:28": true,
+      "SFX_FOOTSTEP:foot:29": true,
+      "SFX_FOOTSTEP:foot:3": true,
+      "SFX_FOOTSTEP:foot:30": true,
+      "SFX_FOOTSTEP:foot:31": true,
+      "SFX_FOOTSTEP:foot:32": true,
+      "SFX_FOOTSTEP:foot:33": true,
+      "SFX_FOOTSTEP:foot:35": true,
+      "SFX_FOOTSTEP:foot:37": true,
+      "SFX_FOOTSTEP:foot:38": true,
+      "SFX_FOOTSTEP:foot:39": true,
+      "SFX_FOOTSTEP:foot:41": true,
+      "SFX_FOOTSTEP:foot:42": true,
+      "SFX_FOOTSTEP:foot:43": true,
+      "SFX_FOOTSTEP:foot:45": true,
+      "SFX_FOOTSTEP:foot:46": true,
+      "SFX_FOOTSTEP:foot:47": true,
+      "SFX_FOOTSTEP:foot:48": true,
+      "SFX_FOOTSTEP:foot:49": true,
+      "SFX_FOOTSTEP:foot:5": true,
+      "SFX_FOOTSTEP:foot:50": true,
+      "SFX_FOOTSTEP:foot:52": true,
+      "SFX_FOOTSTEP:foot:53": true,
+      "SFX_FOOTSTEP:foot:54": true,
+      "SFX_FOOTSTEP:foot:55": true,
+      "SFX_FOOTSTEP:foot:56": true,
+      "SFX_FOOTSTEP:foot:57": true,
+      "SFX_FOOTSTEP:foot:58": true,
+      "SFX_FOOTSTEP:foot:59": true,
+      "SFX_FOOTSTEP:foot:6": true,
+      "SFX_FOOTSTEP:foot:60": true,
+      "SFX_FOOTSTEP:foot:61": true,
+      "SFX_FOOTSTEP:foot:62": true,
+      "SFX_FOOTSTEP:foot:63": true,
+      "SFX_FOOTSTEP:foot:64": true,
+      "SFX_FOOTSTEP:foot:65": true,
+      "SFX_FOOTSTEP:foot:66": true,
+      "SFX_FOOTSTEP:foot:67": true,
+      "SFX_FOOTSTEP:foot:68": true,
+      "SFX_FOOTSTEP:foot:69": true,
+      "SFX_FOOTSTEP:foot:7": true,
+      "SFX_FOOTSTEP:foot:70": true,
+      "SFX_FOOTSTEP:foot:71": true,
+      "SFX_FOOTSTEP:foot:72": true,
+      "SFX_FOOTSTEP:foot:73": true,
+      "SFX_FOOTSTEP:foot:74": true,
+      "SFX_FOOTSTEP:foot:75": true,
+      "SFX_FOOTSTEP:foot:76": true,
+      "SFX_FOOTSTEP:foot:77": true,
+      "SFX_FOOTSTEP:foot:78": true,
+      "SFX_FOOTSTEP:foot:79": true,
+      "SFX_FOOTSTEP:foot:80": true,
+      "SFX_FOOTSTEP:foot:81": true,
+      "SFX_FOOTSTEP:foot:82": true,
+      "SFX_FOOTSTEP:foot:83": true,
+      "SFX_FOOTSTEP:foot:84": true,
+      "SFX_FOOTSTEP:foot:85": true,
+      "SFX_FOOTSTEP:foot:86": true,
+      "SFX_FOOTSTEP:foot:87": true,
+      "SFX_FOOTSTEP:foot:88": true,
+      "SFX_FOOTSTEP:foot:89": true,
+      "SFX_FOOTSTEP:foot:9": true,
+      "SFX_FOOTSTEP:foot:90": true,
+      "SFX_FOOTSTEP:foot:91": true,
+      "SFX_FOOTSTEP:foot:92": true,
+      "SFX_FOOTSTEP:foot:93": true,
+      "SFX_FOOTSTEP:foot:94": true,
+      "SFX_FOOTSTEP:foot:95": true,
+      "SFX_FOOTSTEP:foot:96": true,
+      "SFX_FOOTSTEP:foot:97": true,
+      "SFX_FOOTSTEP:foot:98": true,
+      "SFX_FOOTSTEP:foot:99": true,
+      "SFX_HIT:combat:5:1:father:1": true
+    }
+  },
+  "closing_left": 0.0,
+  "combat_state": {
+    "actors": {
+      "archivist": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "memory",
+        "route": []
+      },
+      "assistant": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "body",
+        "route": []
+      },
+      "cat": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 1,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [
+          4.80000019073486,
+          0.25
+        ],
+        "hits": {},
+        "hostile": true,
+        "hp": 30.0,
+        "hurt": 0.0,
+        "investigation": {},
+        "last_seen": [],
+        "last_seen_at": 13.4333333333333,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.79999995231628,
+          0.860000014305115
+        ],
+        "present": true,
+        "room": "bridge",
+        "route": []
+      },
+      "corner": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "visual",
+        "route": []
+      },
+      "doctor": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "body",
+        "route": []
+      },
+      "dog": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 1,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [
+          1.86820101737976,
+          3.65931224822998
+        ],
+        "hits": {},
+        "hostile": false,
+        "hp": 0,
+        "hurt": 0.25,
+        "investigation": {},
+        "last_seen": [
+          2.3141176700592,
+          3.4845404624939
+        ],
+        "last_seen_at": 2.06666666666667,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.59920406341553,
+          3.27789521217346
+        ],
+        "present": true,
+        "room": "atrium",
+        "route": [
+          [
+            1.86820101737976,
+            3.65931224822998
+          ]
+        ]
+      },
+      "double_face": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "identity",
+        "route": []
+      },
+      "double_head": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 1,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [
+          9.35000038146973,
+          5.49469995498657
+        ],
+        "hits": {},
+        "hostile": false,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "investigation": {},
+        "last_seen": [],
+        "last_seen_at": 21.2666666666669,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          0.860000014305115,
+          5.59999990463257
+        ],
+        "present": true,
+        "room": "verify",
+        "route": []
+      },
+      "faceless": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "index",
+        "route": []
+      },
+      "father": {
+        "attack_id": "combat:5:1:father:2",
+        "attack_target": "hero",
+        "checks": 1,
+        "cooldown": 0.0,
+        "direction": [
+          0.369367301464081,
+          -0.929283440113068
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [
+          4.80000019073486,
+          0.25
+        ],
+        "hits": {},
+        "hostile": true,
+        "hp": 80.0,
+        "hurt": 0.0,
+        "investigation": {},
+        "last_seen": [],
+        "last_seen_at": 13.4333333333333,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.79999995231628,
+          0.860000014305115
+        ],
+        "present": true,
+        "room": "bridge",
+        "route": []
+      },
+      "mother": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 1,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": true,
+        "hp": 80.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "decision",
+        "route": []
+      },
+      "nurse": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "memory",
+        "route": []
+      },
+      "reverse": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 1,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "switch",
+        "route": []
+      },
+      "self": {
+        "attack_id": "combat:5:1:self:4",
+        "attack_target": "hero",
+        "checks": 0,
+        "cooldown": 0.0,
+        "direction": [
+          0.386360615491867,
+          -0.922347843647003
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [
+          10.6914319992065,
+          5.4686918258667
+        ],
+        "hits": {},
+        "hostile": true,
+        "hp": 80.0,
+        "hurt": 0.0,
+        "investigation": {},
+        "last_seen": [
+          11.7157964706421,
+          5.20162534713745
+        ],
+        "last_seen_at": 65.6333333333322,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          6.97540998458862,
+          6.83660125732422
+        ],
+        "present": true,
+        "room": "brainstem",
+        "route": [
+          [
+            7.59999990463257,
+            6.80000019073486
+          ],
+          [
+            10.6914319992065,
+            5.4686918258667
+          ]
+        ]
+      },
+      "skinface": {
+        "attack_id": "combat:5:1:skinface:3",
+        "attack_target": "hero",
+        "checks": 1,
+        "cooldown": 0.0,
+        "direction": [
+          0.789764821529388,
+          -0.613409757614136
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [
+          5.19782590866089,
+          0.278146535158157
+        ],
+        "hits": {},
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "investigation": {},
+        "last_seen": [],
+        "last_seen_at": 28.2666666666672,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          5.13132810592651,
+          0.377628177404404
+        ],
+        "present": true,
+        "room": "verify",
+        "route": [
+          [
+            5.19782590866089,
+            0.278146535158157
+          ]
+        ]
+      },
+      "twitch": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "rhythm",
+        "route": []
+      },
+      "warder": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "pos": [
+          1.20000004768372,
+          1.20000004768372
+        ],
+        "present": false,
+        "room": "visual",
+        "route": []
+      }
+    },
+    "appearance": {
+      "fact_count": 20,
+      "incidents": [
+        {
+          "event_id": "combat:5:1:father:1",
+          "hp_damage": 15,
+          "kind": "combat_hit",
+          "room": "atrium",
+          "source": "father",
+          "sp_damage": 0,
+          "time": 2.06666666666667
+        }
+      ],
+      "marks": {}
+    },
+    "bandage_done": false,
+    "bandage_elapsed": 0.0,
+    "boundary": true,
+    "cart_shift": 0.0,
+    "clock": 65.6333333333322,
+    "control_was_active": false,
+    "controlled_door": "",
+    "destination": "street_exit",
+    "door_left": 0.0,
+    "face_pending": {},
+    "geometry_version": 3,
+    "grip_safe_until": 0.0,
+    "grip_until": 0.0,
+    "hero_goal": [
+      11.5200004577637,
+      5.19999980926514
+    ],
+    "holder": "",
+    "inspected": {
+      "hippocampus_records": {
+        "记忆陈列": true
+      }
+    },
+    "inspection": {},
+    "inspection_lines": {},
+    "last_left": {
+      "atrium": 5.76666666666666,
+      "bridge": 15.6333333333333,
+      "decision": 13.4333333333333,
+      "hippocampus": 42.3333333333335,
+      "switch": 21.2666666666669,
+      "thalamus": 54.1333333333328,
+      "verify": 28.2666666666672
+    },
+    "last_spawn": {
+      "atrium": 0.0333333333333333,
+      "bridge": 14.6,
+      "decision": 7.09999999999998,
+      "verify": 22.7000000000003
+    },
+    "next_attack": 50.3999999999997,
+    "observed": {
+      "dog": true
+    },
+    "prop_rects": {},
+    "pulse_clock": 65.6333333333322,
+    "pulse_receipts": {},
+    "rack_sound": {
+      "latched": false,
+      "quiet": 65.5999999999988,
+      "serial": 0,
+      "swing": 0.0
+    },
+    "route_left": 0.275,
+    "serial": 4,
+    "spoken": {},
+    "version": 1,
+    "visible_casts": {}
+  },
+  "completed": [],
+  "controlled_route": false,
+  "cortex_state": {},
+  "death_left": 0.0,
+  "deferred_targets": {},
+  "destination": "",
+  "dialogue": [],
+  "drawer_open": {},
+  "family_state": {
+    "actions": 0,
+    "auto_food_used": false,
+    "blood_door": false,
+    "checks": {},
+    "collapse": {},
+    "dialogue_choices": {},
+    "eating": {},
+    "eating_serial": 0,
+    "extra_checked": false,
+    "fact_cursor": 20,
+    "father": {
+      "branch": "",
+      "elapsed": 0.0,
+      "facing": [
+        0.0,
+        1.0
+      ],
+      "phase": "absent",
+      "pos": [
+        4.6,
+        0.22
+      ],
+      "present": false,
+      "release_left": 0.0,
+      "route": [],
+      "used": false
+    },
+    "food_types": {},
+    "gift": [],
+    "gift_pick": 0.0,
+    "gift_roll": -1.0,
+    "gift_wait": 0.0,
+    "hidden_pending": false,
+    "inventory": [],
+    "mother": {
+      "branch": "",
+      "elapsed": 0.0,
+      "facing": [
+        0.0,
+        1.0
+      ],
+      "phase": "absent",
+      "pos": [
+        4.6,
+        0.22
+      ],
+      "present": false,
+      "release_left": 0.0,
+      "route": [],
+      "used": false
+    },
+    "mother_rest": false,
+    "picking_gift": false,
+    "pressure": 0.0,
+    "queued": [],
+    "rescued": false,
+    "spawn_order": [],
+    "startle": {},
+    "system_prompts": {}
+  },
+  "first_damage": true,
+  "first_damage_pending": true,
+  "footstep_left": 0.416666666666667,
+  "footstep_serial": 128,
+  "hero_facing": [
+    0.998871982097626,
+    -0.0474839843809605
+  ],
+  "hero_pos": [
+    1.29999995231628,
+    5.5
+  ],
+  "hero_state": "idle",
+  "hidden_state": {},
+  "home_state": {
+    "blocked_left": 0.0,
+    "blocked_search": "",
+    "cat": {
+      "left": 0.0,
+      "phase": "occupy",
+      "point": 6,
+      "pos": [
+        4.44999980926514,
+        1.29999995231628
+      ],
+      "present": false,
+      "rounds": 0,
+      "route": []
+    },
+    "counted": {},
+    "dialogue_choices": {
+      "DOG_HELP:request": 0,
+      "DOG_OPEN:arrival": 2,
+      "DOG_THANK:initial": 0,
+      "S1_START:attempt": 1
+    },
+    "dialogue_played": {
+      "DOG_HELP:request": true,
+      "DOG_OPEN:arrival": true,
+      "DOG_THANK:initial": true,
+      "S1_START:attempt": true
+    },
+    "dog": {
+      "alive": true,
+      "left": 0.0,
+      "phase": "idle",
+      "pos": [
+        3.1,
+        1.6
+      ],
+      "present": true,
+      "remaining": 3,
+      "route": [],
+      "target": -1
+    },
+    "dog_serial": 0,
+    "fighting": false,
+    "key_drop": [],
+    "tracked_search": ""
+  },
+  "hospital_state": {},
+  "menu_open": false,
+  "menu_page": "cast",
+  "motion": {},
+  "observing_index": -1,
+  "opening_state": {},
+  "paused_manual": false,
+  "presentation_id": "a",
+  "profile": {
+    "invader_id": 4553,
+    "name": "Street节奏测量",
+    "opening_completed": true,
+    "tutorial_completed": true
+  },
+  "prop_receipts": {},
+  "rng_state": "6114061777065685674",
+  "room_id": "street_plaza",
+  "route": [],
+  "route_action_origin": "autonomous",
+  "rules": {
+    "_cast_serial": 0,
+    "_completed_targets": {},
+    "_search_id": "",
+    "_search_serial": 0,
+    "_sp_depleted": false,
+    "absent": false,
+    "action": {},
+    "action_serial": 0,
+    "actual_attempt": 1,
+    "allow_supplemental_search": false,
+    "awakening_receipts": {},
+    "awareness_feedback": [],
+    "awareness_stage": 0,
+    "body_feedback": [],
+    "book_extensions": {},
+    "combat_regen": 1.63333333333326,
+    "config": {
+      "book_extensions": {
+        "book_item_parameters": {
+          "category": "物品",
+          "cost": 5.0,
+          "name": "已见物品参数",
+          "source": "体验:P428；R1:P39–42；S4:T4"
+        },
+        "book_person_parameters": {
+          "category": "人物",
+          "cost": 5.0,
+          "name": "已见人物行为参数",
+          "source": "体验:P429；R1:P39–42；S3/S4第一关规则"
+        },
+        "book_role_resistance": {
+          "category": "角色",
+          "cost": 5.0,
+          "name": "抗性明细",
+          "source": "体验:P427；R1:P39–42"
+        }
+      },
+      "schema": 1.0,
+      "skills": [
+        {
+          "combat_description": "消耗1神经元。侧挪：向选定方向短移一步；无无敌效果，不能穿过障碍。。角色表现：侧挪。",
+          "combat_dialogue": [
+            "[警惕]“不能站在这里。”",
+            "[紧张]“对，别停在那儿。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式取消未完成搜寻，战斗模式向选择方向短移。角色分别表现为收手抓挠、侧挪。",
+          "exploration_description": "消耗1神经元。抓挠，取消尚未完成的搜寻。角色表现：收手抓挠。",
+          "exploration_dialogue": [
+            "收手抓挠",
+            "[烦躁]“哪来的蚊子……”"
+          ],
+          "id": "SKIN",
+          "name": "皮肤刺激",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 0.0
+        },
+        {
+          "combat_description": "消耗1神经元。俯身：短暂降低上身受击范围；不能避开低位、地面及覆盖全身的攻击。。角色表现：俯身。",
+          "combat_dialogue": [
+            "[难受]“偏偏这时候……”",
+            "[紧张]“先低着头，别急着起来。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式中断搜寻或本次劝休，战斗模式俯身降低上身受击范围。角色捂腹弯腰。",
+          "exploration_description": "消耗1神经元。腹痛，取消搜寻；可中断本次劝休。角色表现：捂腹弯腰。",
+          "exploration_dialogue": [
+            "捂腹弯腰",
+            "[难受]“偏偏这个时候……”"
+          ],
+          "id": "GUT",
+          "name": "肠胃蠕动",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。警觉转身：转向已经感知的最近威胁，中止无关动作；不透视发现敌人。。角色表现：警觉转身。",
+          "combat_dialogue": [
+            "[警惕]“在那边。”",
+            "[认真]“……看到了。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式产生旁人可以察觉的皮肤异常、搜寻继续，战斗模式转向已感知的威胁。角色分别表现为查看手臂、转身警戒。",
+          "exploration_description": "消耗1神经元。出现可见异常，可引起附近人物注意；搜寻继续。角色表现：查看手臂。",
+          "exploration_dialogue": [
+            "查看手臂",
+            "[疑惑]“怎么起鸡皮疙瘩了？”"
+          ],
+          "id": "PORES",
+          "name": "毛孔变化",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。短时提速：加快移动，结束后恢复；不叠加，不附带免伤。。角色表现：短时提速。",
+          "combat_dialogue": [
+            "[凝重]“先离开这里。”",
+            "[着急]“快快快，别停。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式短暂减慢移动与搜寻，战斗模式短暂提高移动速度。角色分别表现为打颤、加快步频。",
+          "exploration_description": "消耗1神经元。颤抖，延缓当前移动或搜寻。角色表现：打颤、搓手。",
+          "exploration_dialogue": [
+            "打颤、搓手",
+            "[抱怨]“这地方空调不要钱啊？”"
+          ],
+          "id": "TEMP",
+          "name": "冷热感",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。止步：停止当前前进，短暂停顿后重新判断路线；不取消敌人攻击。。角色表现：止步。",
+          "combat_dialogue": [
+            "[警惕]“等一下……看看别的路。”",
+            "[紧张]“先别往前冲。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式短暂停顿后继续行动，战斗模式停止移动并重新判断路线。角色侧头停步，耳鸣不产生外界声源。",
+          "exploration_description": "消耗1神经元。短暂停步，随后继续；声音仅角色听见。角色表现：停步侧头。",
+          "exploration_dialogue": [
+            "停步侧头",
+            "[疑惑]“谁在响？……我耳朵？”"
+          ],
+          "id": "TINNITUS",
+          "name": "耳鸣",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。抑制出声：暂时压低惊叫、求助等声音；脚步和碰撞声仍存在，仅影响具有听觉判定的人物。。角色表现：抑制出声。",
+          "combat_dialogue": [
+            "[克制]“……先别出声。”",
+            "[紧张]“别喊，我看着呢。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式延缓未完成的物品交接，战斗模式暂时抑制角色出声。角色抿嘴吞咽，脚步与碰撞声仍存在。",
+          "exploration_description": "消耗1神经元。延缓尚未完成的物品交接，不撤销已获物品。角色表现：抿嘴吞咽，递出的手稍停。",
+          "exploration_dialogue": [
+            "抿嘴吞咽，递出的手稍停",
+            "[尴尬]“等一下……嗓子有点干。”"
+          ],
+          "id": "DRYMOUTH",
+          "name": "口腔干涩",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗2神经元。踢击：近距离向前攻击；命中才结算伤害，能否击退按目标规则处理。。角色表现：踢击。",
+          "combat_dialogue": [
+            "[警惕]“别靠过来。”",
+            "[紧张]“踢完就走，别耗着。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并向前踢击，实际命中才结算伤害与对应击退。角色突然向前弹腿。",
+          "exploration_description": "消耗2神经元。取消搜寻，向前弹腿；实际命中才伤害。角色表现：突然向前弹腿。",
+          "exploration_dialogue": [
+            "突然向前弹腿",
+            "[震惊]“不是……我腿怎么了？”"
+          ],
+          "id": "KNEE",
+          "name": "膝跳反射",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "GUT"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗2神经元。收臂：及时撤回手臂；不能解除已经锁紧的束缚，也不能防御全身攻击。。角色表现：收臂。",
+          "combat_dialogue": [
+            "[凝重]“手……又自己动了。”",
+            "[认真]“收回来了，接着走。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并收回手臂，可避开尚未命中的手部抓握、不能解除已经成立的控制。角色迅速收手。",
+          "exploration_description": "消耗2神经元。取消搜寻，避开尚未成立的手臂抓握。角色表现：猛地收手。",
+          "exploration_dialogue": [
+            "猛地收手",
+            "[警惕]“别碰我！”"
+          ],
+          "id": "WITHDRAW",
+          "name": "缩手反射",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗2神经元。后撤：距离大于皮肤刺激的侧挪；依靠实际位移避开攻击，无无敌效果，后方受阻则不能完整撤出。。角色表现：后撤。",
+          "combat_dialogue": [
+            "[警惕]“退开点。”",
+            "[紧张]“后面也得看着点。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并尝试向后移动，实际退开才可能避过攻击。角色后撤，遇到障碍不能穿过。",
+          "exploration_description": "消耗2神经元。取消搜寻，向后短移。角色表现：惊跳，后方可走时退步。",
+          "exploration_dialogue": [
+            "惊跳，后方可走时退步",
+            "[惊疑]“什么东西？！”"
+          ],
+          "id": "STARTLE",
+          "name": "惊跳反应",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "TEMP"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗3神经元。撤离倾向：停止主动进攻，远离已感知威胁；仍降低精神，不自动找到出口。。角色表现：撤离倾向。",
+          "combat_dialogue": [
+            "[不安]“不行……离它远点。”",
+            "[凝重]“先退，别硬撑。”"
+          ],
+          "cooldown": 8.0,
+          "cost": 3.0,
+          "description": "消耗3神经元。降低精神，探索模式取消搜寻并延后当前目标，战斗模式停止进攻并远离已感知威胁。角色收手、警戒并尝试退离。",
+          "exploration_description": "消耗3神经元。降低精神，取消搜寻，将当前目标延后。角色表现：缩手，盯住目标。",
+          "exploration_dialogue": [
+            "缩手，盯住目标",
+            "[不安]“这个……先不看了。”"
+          ],
+          "id": "FEAR",
+          "name": "恐惧",
+          "power": 3.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "TINNITUS",
+            "STARTLE"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 3.0,
+          "unlock_cost": 3.0
+        },
+        {
+          "combat_description": "消耗3神经元。稳定状态：恢复精神，解除自身情绪造成的犹豫；不回血、不解除物理束缚、不取消敌人威胁。。角色表现：稳定状态。",
+          "combat_dialogue": [
+            "[克制]“别慌……先看清楚。”",
+            "[认真]“还没出去呢。”"
+          ],
+          "cooldown": 8.0,
+          "cost": 3.0,
+          "description": "消耗3神经元。恢复精神并缓解角色自身恐惧，不恢复生命、不解除抓握。角色紧绷动作减轻、呼吸趋稳。",
+          "exploration_description": "消耗3神经元。恢复精神，缓解角色自身恐慌、犹豫；搜寻继续。角色表现：肩膀放松，轻笑后继续。",
+          "exploration_dialogue": [
+            "肩膀放松，轻笑后继续",
+            "[轻松]“算了，再找找。”"
+          ],
+          "id": "JOY",
+          "name": "开心",
+          "power": 3.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "PORES",
+            "WITHDRAW"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 3.0,
+          "unlock_cost": 3.0
+        },
+        {
+          "combat_description": "消耗5神经元。直接控制：接管移动、朝向及角色已经具备的攻击、互动；不自动获得其他技能，不保证命中或逃脱。。角色表现：直接控制。",
+          "combat_dialogue": [
+            "未识破：[惊疑]“我没想这么走……”；已识破：[冷漠]“看路。别停。”",
+            "[紧张]“先离开这里。”"
+          ],
+          "cooldown": 20.0,
+          "cost": 5.0,
+          "description": "消耗5神经元。接管移动、朝向与互动6秒，战斗模式可调用已解锁的踢击。角色响应输入，仍正常承受攻击与控制。",
+          "exploration_description": "消耗5神经元。接管移动与互动。角色表现：动作短暂停顿，随后响应操作。",
+          "exploration_dialogue": [
+            "动作短暂停顿，随后响应操作",
+            "[冷漠]“这一步，是你选的。”"
+          ],
+          "id": "CONTROL",
+          "name": "完全掌控",
+          "power": 4.0,
+          "prerequisite_mode": "any",
+          "prerequisites": [
+            "FEAR",
+            "JOY"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 4.0,
+          "unlock_cost": 5.0
+        }
+      ],
+      "test_parameters": {
+        "exploration_startle_distance": 0.4,
+        "note": "探索后撤距离为集中测试表现参数；完成判定按真实位移，不套战斗0.35秒。膝跳分段已按S4:P170定值。"
+      },
+      "timing": {
+        "combat_skin_distance": 0.8,
+        "combat_skin_duration": 0.25,
+        "combat_startle_distance": 1.4,
+        "combat_startle_duration": 0.35,
+        "control": 6.0,
+        "drymouth_combat": 6.0,
+        "drymouth_transfer_delay": 2.0,
+        "fear_combat": 3.0,
+        "fear_retry": 6.0,
+        "gut_reaction": 1.2,
+        "kick_attack": 0.15,
+        "kick_damage": 15.0,
+        "kick_prepare": 0.15,
+        "kick_push": 0.8,
+        "kick_range": 1.0,
+        "kick_recover": 0.35,
+        "kick_source": "S4:P170",
+        "kick_stun": 0.8,
+        "pores": 3.0,
+        "skin_reaction": 0.5,
+        "temp": 3.0,
+        "temp_combat_rate": 1.25,
+        "temp_exploration_rate": 0.75,
+        "tinnitus_combat": 0.3,
+        "tinnitus_exploration": 1.0,
+        "withdraw": 0.3
+      }
+    },
+    "control_context": {},
+    "control_event": "",
+    "control_evidence_receipts": {},
+    "control_feedback": [],
+    "control_fraction_ms": 0.0,
+    "control_left": 0.0,
+    "control_ms": 0,
+    "control_stage": 0,
+    "control_stage_receipts": {},
+    "cooldown_until": 0.0,
+    "effects": {},
+    "evidence": [],
+    "facts": [
+      {
+        "event_id": "explored:5:atrium",
+        "kind": "scene_first_explored",
+        "level": 5,
+        "neurons": 1,
+        "room": "atrium",
+        "time": 0.0
+      },
+      {
+        "actor": "dog",
+        "event_id": "combat:1:arrive:dog",
+        "kind": "combat_actor_arrived",
+        "room": "atrium",
+        "time": 0.0333333333333333
+      },
+      {
+        "actor": "father",
+        "event_id": "combat:1:arrive:father",
+        "kind": "combat_actor_arrived",
+        "room": "atrium",
+        "time": 0.0333333333333333
+      },
+      {
+        "actor": "father",
+        "direction": [
+          0.388345748186111,
+          0.921513795852661
+        ],
+        "event_id": "combat:5:1:father:1",
+        "kind": "combat_attack_started",
+        "room": "atrium",
+        "time": 1.23333333333333
+      },
+      {
+        "event_id": "combat:5:1:father:1",
+        "hp_damage": 15,
+        "kind": "combat_hit",
+        "room": "atrium",
+        "source": "father",
+        "sp_damage": 0,
+        "time": 2.06666666666667
+      },
+      {
+        "event_id": "combat:5:1:father:1:dog",
+        "hp": 0,
+        "kind": "combat_actor_hit",
+        "level": 5,
+        "source": "father",
+        "target": "dog",
+        "time": 2.06666666666667
+      },
+      {
+        "actor": "father",
+        "direction": [
+          0.369367301464081,
+          -0.929283440113068
+        ],
+        "event_id": "combat:5:1:father:2",
+        "kind": "combat_attack_started",
+        "room": "atrium",
+        "time": 5.33333333333332
+      },
+      {
+        "event_id": "explored:5:decision",
+        "kind": "scene_first_explored",
+        "level": 5,
+        "neurons": 1,
+        "room": "decision",
+        "time": 5.76666666666666
+      },
+      {
+        "actor": "cat",
+        "event_id": "combat:1:arrive:cat",
+        "kind": "combat_actor_arrived",
+        "room": "decision",
+        "time": 7.09999999999998
+      },
+      {
+        "event_id": "explored:5:bridge",
+        "kind": "scene_first_explored",
+        "level": 5,
+        "neurons": 1,
+        "room": "bridge",
+        "time": 13.4333333333333
+      },
+      {
+        "actor": "double_head",
+        "event_id": "combat:1:arrive:double_head",
+        "kind": "combat_actor_arrived",
+        "room": "bridge",
+        "time": 14.6
+      },
+      {
+        "event_id": "explored:5:switch",
+        "kind": "scene_first_explored",
+        "level": 5,
+        "neurons": 1,
+        "room": "switch",
+        "time": 15.6333333333333
+      },
+      {
+        "event_id": "explored:5:verify",
+        "kind": "scene_first_explored",
+        "level": 5,
+        "neurons": 1,
+        "room": "verify",
+        "time": 21.2666666666669
+      },
+      {
+        "actor": "skinface",
+        "event_id": "combat:1:arrive:skinface",
+        "kind": "combat_actor_arrived",
+        "room": "verify",
+        "time": 22.7000000000003
+      },
+      {
+        "actor": "skinface",
+        "direction": [
+          0.789764821529388,
+          -0.613409757614136
+        ],
+        "event_id": "combat:5:1:skinface:3",
+        "kind": "combat_attack_started",
+        "room": "verify",
+        "time": 22.7000000000003
+      },
+      {
+        "event_id": "explored:5:hippocampus",
+        "kind": "scene_first_explored",
+        "level": 5,
+        "neurons": 1,
+        "room": "hippocampus",
+        "time": 28.2666666666672
+      },
+      {
+        "event_id": "combat_evidence:hippocampus_records:记忆陈列",
+        "identity_glyph": null,
+        "kind": "combat_evidence_read",
+        "prop": "记忆陈列",
+        "records": [],
+        "source": "S3:P1528–1533",
+        "time": 35.2666666666672,
+        "time_glyph": null
+      },
+      {
+        "event_id": "explored:5:thalamus",
+        "kind": "scene_first_explored",
+        "level": 5,
+        "neurons": 1,
+        "room": "thalamus",
+        "time": 42.3333333333335
+      },
+      {
+        "actor": "self",
+        "direction": [
+          0.386360615491867,
+          -0.922347843647003
+        ],
+        "event_id": "combat:5:1:self:4",
+        "kind": "combat_attack_started",
+        "room": "thalamus",
+        "time": 49.5999999999997
+      },
+      {
+        "event_id": "explored:5:brainstem",
+        "kind": "scene_first_explored",
+        "level": 5,
+        "neurons": 1,
+        "room": "brainstem",
+        "time": 54.1333333333328
+      },
+      {
+        "event_id": "explored:6:street_plaza",
+        "kind": "scene_first_explored",
+        "level": 6,
+        "neurons": 1,
+        "room": "street_plaza",
+        "time": 65.6333333333322
+      }
+    ],
+    "global_resistance": 0,
+    "gripped": false,
+    "hp": 85,
+    "hurt_left": 0.0,
+    "institutional_records": [],
+    "intervention_lock": false,
+    "kick_until": 0.0,
+    "known": [],
+    "loading": false,
+    "lock_after_serial": 0,
+    "mode": "combat",
+    "neurons": 20,
+    "observations": [
+      {
+        "category": "人物",
+        "id": "dog",
+        "kind": "亲历事实",
+        "source": "现场观察",
+        "text": "大黄，戴着红项圈；本周目实际见到。"
+      },
+      {
+        "category": "角色",
+        "id": "combat_seen:dog",
+        "kind": "亲历事实",
+        "source": "S3第五关现场动作",
+        "text": "实际见到红项圈及护卫站位；未据此补写第一关死亡。"
+      },
+      {
+        "category": "物品",
+        "id": "combat_evidence:hippocampus_records:记忆陈列",
+        "kind": "亲历事实",
+        "source": "S3:P1528–1533",
+        "text": "衣物保留领标、缝线与伤痕，原始与修订记录分别陈列；具体编号、时间未核，不认定这些伤痕均为角色亲历。"
+      }
+    ],
+    "owners": {
+      "key": "",
+      "porridge": "mother"
+    },
+    "pending_global_growth": 0,
+    "pending_neural": {},
+    "pending_skin": {},
+    "plexus": 7,
+    "public_action": {},
+    "public_serial": 1,
+    "reaction_left": 0.0,
+    "reaction_skill": "",
+    "search_active": false,
+    "search_attempts": 0,
+    "search_count": 0,
+    "search_duration": 4.0,
+    "search_elapsed": 0.0,
+    "search_limit": 0,
+    "search_target": "",
+    "settled": {
+      "combat:5:1:father:1": "combat_hit"
+    },
+    "skill_states": {
+      "CONTROL": {
+        "growth": false,
+        "power": 4,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "DRYMOUTH": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "FEAR": {
+        "growth": false,
+        "power": 3,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "GUT": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "JOY": {
+        "growth": false,
+        "power": 3,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "KNEE": {
+        "growth": false,
+        "power": 2,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "PORES": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "SKIN": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": true,
+        "until": 0.0
+      },
+      "STARTLE": {
+        "growth": false,
+        "power": 2,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "TEMP": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "TINNITUS": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "WITHDRAW": {
+        "growth": false,
+        "power": 2,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": false,
+        "until": 0.0
+      }
+    },
+    "skin_pending_resistance": false,
+    "skin_power": 1,
+    "skin_reactions": 0,
+    "skin_resistance": 0,
+    "sp": 100,
+    "stun_left": 0.0,
+    "transitioning": false,
+    "trial": {},
+    "trial_attempt": 0,
+    "trial_evidence_count": 0,
+    "tutorial_demo": false,
+    "world_time": 65.6333333333322
+  },
+  "schema": 3,
+  "search_action_origin": "autonomous",
+  "search_props": {
+    "atrium:atrium:0": {
+      "geometry_version": 2
+    },
+    "atrium:atrium:1": {
+      "geometry_version": 2
+    },
+    "atrium:atrium:2": {
+      "geometry_version": 2
+    },
+    "bedroom:bed": {
+      "geometry_version": 2
+    },
+    "bedroom:bedside": {
+      "geometry_version": 2
+    },
+    "bedroom:books": {
+      "geometry_version": 2
+    },
+    "bedroom:box": {
+      "geometry_version": 2
+    },
+    "bedroom:chair": {
+      "geometry_version": 2
+    },
+    "bedroom:desk": {
+      "geometry_version": 2
+    },
+    "bedroom:fan": {
+      "geometry_version": 2
+    },
+    "bedroom:rack": {
+      "geometry_version": 2
+    },
+    "bedroom:stool": {
+      "geometry_version": 2
+    },
+    "bedroom:storage": {
+      "geometry_version": 2
+    },
+    "bedroom:wardrobe": {
+      "geometry_version": 2
+    },
+    "brainstem:导管接口": {
+      "geometry_version": 2
+    },
+    "brainstem:检修平台": {
+      "geometry_version": 2
+    },
+    "brainstem:生命监测终端": {
+      "geometry_version": 2
+    },
+    "brainstem:维生控制台": {
+      "geometry_version": 2
+    },
+    "brainstem:脉冲核心与护栏": {
+      "geometry_version": 2
+    },
+    "bridge:bridge:0": {
+      "geometry_version": 2
+    },
+    "bridge:bridge:1": {
+      "geometry_version": 2
+    },
+    "bridge:bridge:2": {
+      "geometry_version": 2
+    },
+    "bridge:bridge:3": {
+      "geometry_version": 2
+    },
+    "decision:decision:0": {
+      "geometry_version": 2
+    },
+    "decision:decision:1": {
+      "geometry_version": 2
+    },
+    "decision:decision:2": {
+      "geometry_version": 2
+    },
+    "decision:decision:3": {
+      "geometry_version": 2
+    },
+    "decision:decision:4": {
+      "geometry_version": 2
+    },
+    "decision:decision:5": {
+      "geometry_version": 2
+    },
+    "decision:decision:6": {
+      "geometry_version": 2
+    },
+    "hippocampus:memory_clothes_rack": {
+      "geometry_version": 2
+    },
+    "hippocampus:时光装置": {
+      "geometry_version": 2
+    },
+    "hippocampus:档案柜": {
+      "geometry_version": 2
+    },
+    "hippocampus:航迹地图": {
+      "geometry_version": 2
+    },
+    "hippocampus:记录终端": {
+      "geometry_version": 2
+    },
+    "hippocampus:记忆胶囊": {
+      "geometry_version": 2
+    },
+    "hippocampus:记忆陈列": {
+      "geometry_version": 2
+    },
+    "hippocampus:陈列墙": {
+      "geometry_version": 2
+    },
+    "street_plaza:street_prop_0": {
+      "geometry_version": 2
+    },
+    "street_plaza:street_prop_1": {
+      "geometry_version": 2
+    },
+    "street_plaza:street_prop_2": {
+      "geometry_version": 2
+    },
+    "street_plaza:street_prop_4": {
+      "geometry_version": 2
+    },
+    "switch:switch:0": {
+      "geometry_version": 2
+    },
+    "switch:switch:1": {
+      "geometry_version": 2
+    },
+    "switch:switch:2": {
+      "geometry_version": 2
+    },
+    "thalamus:中继核心": {
+      "geometry_version": 2
+    },
+    "thalamus:控制台": {
+      "geometry_version": 2
+    },
+    "thalamus:电缆接点": {
+      "geometry_version": 2
+    },
+    "thalamus:监测屏": {
+      "geometry_version": 2
+    },
+    "thalamus:维护面板": {
+      "geometry_version": 2
+    },
+    "thalamus:设备柜": {
+      "geometry_version": 2
+    },
+    "verify:verify:0": {
+      "geometry_version": 2
+    },
+    "verify:verify:1": {
+      "geometry_version": 2
+    },
+    "verify:verify:2": {
+      "geometry_version": 2
+    },
+    "verify:verify:3": {
+      "geometry_version": 2
+    },
+    "verify:verify:4": {
+      "geometry_version": 2
+    },
+    "verify:verify:5": {
+      "geometry_version": 2
+    },
+    "verify:verify:6": {
+      "geometry_version": 2
+    }
+  },
+  "session": {
+    "attempts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "5": 1,
+      "6": 1
+    },
+    "cortex_exit_crossed": false,
+    "cycle": 1,
+    "exploration_boundary": false,
+    "key_discovery": {
+      "attempt": 1,
+      "completed": {},
+      "completion_receipts": {},
+      "configuration_version": 2,
+      "diagnostic": "",
+      "discovered": "",
+      "eligible_targets": [
+        "bedroom:3",
+        "bedroom:2",
+        "bedroom:5",
+        "bedroom:1",
+        "bedroom:6",
+        "bedroom:10",
+        "bedroom:4",
+        "bedroom:9",
+        "bedroom:7",
+        "bedroom:0"
+      ],
+      "evidence": {},
+      "interference": {},
+      "level": 1,
+      "seed": "2cfd083552296d3f8f0b536c1c8f88c44592aed41a82f29a4a2a3d5faac00923",
+      "version": 2
+    },
+    "key_owner": "",
+    "key_seed_root": "2cfd083552296d3f8f0b536c1c8f88c44592aed41a82f29a4a2a3d5faac00923",
+    "key_seen": false,
+    "key_target": "",
+    "level": 6,
+    "profile": {
+      "invader_id": 4553,
+      "name": "Street节奏测量",
+      "opening_completed": true,
+      "tutorial_completed": false
+    },
+    "receipts": {
+      "explored:5:atrium": true,
+      "explored:5:brainstem": true,
+      "explored:5:bridge": true,
+      "explored:5:decision": true,
+      "explored:5:hippocampus": true,
+      "explored:5:switch": true,
+      "explored:5:thalamus": true,
+      "explored:5:verify": true,
+      "explored:6:street_plaza": true
+    },
+    "room_geometry_version": 2,
+    "rooms": {
+      "atrium": {
+        "drawer": {}
+      },
+      "bedroom": {
+        "drawer": {}
+      },
+      "bridge": {
+        "drawer": {}
+      },
+      "decision": {
+        "drawer": {}
+      },
+      "hippocampus": {
+        "drawer": {}
+      },
+      "switch": {
+        "drawer": {}
+      },
+      "thalamus": {
+        "drawer": {}
+      },
+      "verify": {
+        "drawer": {}
+      }
+    },
+    "street_returning": false,
+    "targets": [],
+    "unlocked": [
+      1,
+      5,
+      6
+    ]
+  },
+  "status_visible": false,
+  "street_state": {
+    "actors": {
+      "archivist": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          10.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          10.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_twisted",
+        "route": []
+      },
+      "archivist_asylum": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          8.80000019073486
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          8.80000019073486
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_end",
+        "route": []
+      },
+      "assistant": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          10.0,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_node",
+        "route": []
+      },
+      "assistant_asylum": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          10.0,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_narrow",
+        "route": []
+      },
+      "back": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          8.80000019073486
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          10.0,
+          8.80000019073486
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_plaza",
+        "route": []
+      },
+      "blind": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          13.6000003814697,
+          5.59999990463257
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          13.6000003814697,
+          5.59999990463257
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_node",
+        "route": []
+      },
+      "cat": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 30.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_narrow",
+        "route": []
+      },
+      "cleaner": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          6.0
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          6.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_maintenance",
+        "route": []
+      },
+      "corner": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          6.80000019073486
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          6.80000019073486
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_side",
+        "route": []
+      },
+      "director": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          13.6000003814697,
+          4.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          13.6000003814697,
+          4.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_node",
+        "route": []
+      },
+      "dislocated": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          2.40000009536743
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          2.40000009536743
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_narrow",
+        "route": []
+      },
+      "doctor": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          10.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          10.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_node",
+        "route": []
+      },
+      "dog": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          2.0
+        ],
+        "hostile": false,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_maintenance",
+        "route": []
+      },
+      "double_face": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          2.0
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          10.0,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_twisted",
+        "route": []
+      },
+      "double_head": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          10.0
+        ],
+        "hostile": false,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          10.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_node",
+        "route": []
+      },
+      "faceless": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          6.0
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          6.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_maintenance",
+        "route": []
+      },
+      "father": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 80.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_plaza",
+        "route": []
+      },
+      "guard_asylum": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          10.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          10.0,
+          10.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_node",
+        "route": []
+      },
+      "guard_hospital": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          10.0,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_end",
+        "route": []
+      },
+      "head_nurse": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_plaza",
+        "route": []
+      },
+      "informant": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          2.0
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_end",
+        "route": []
+      },
+      "isolation": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          6.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          6.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_narrow",
+        "route": []
+      },
+      "labor": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          1.60000002384186
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          1.60000002384186
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_maintenance",
+        "route": []
+      },
+      "mimic": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          8.80000019073486
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          10.0,
+          8.80000019073486
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_end",
+        "route": []
+      },
+      "mother": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 80.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_node",
+        "route": []
+      },
+      "nurse": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          2.0
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_side",
+        "route": []
+      },
+      "pharmacist": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 2,
+        "pos": [
+          6.80000019073486,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_twisted",
+        "route": []
+      },
+      "postop": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          2.0
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_side",
+        "route": []
+      },
+      "psychiatrist": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_node",
+        "route": []
+      },
+      "register_nurse": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.59999990463257,
+          8.80000019073486
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.59999990463257,
+          8.80000019073486
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_plaza",
+        "route": []
+      },
+      "reverse": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_twisted",
+        "route": []
+      },
+      "self": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          8.80000019073486
+        ],
+        "hostile": true,
+        "hp": 80.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          8.80000019073486
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_end",
+        "route": []
+      },
+      "skinface": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_end",
+        "route": []
+      },
+      "speaker": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          16.7999992370605,
+          5.59999990463257
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          16.7999992370605,
+          5.59999990463257
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_twisted",
+        "route": []
+      },
+      "stitched": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          6.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          10.0,
+          6.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_maintenance",
+        "route": []
+      },
+      "supervisor": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          16.7999992370605,
+          6.80000019073486
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          16.7999992370605,
+          6.80000019073486
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_twisted",
+        "route": []
+      },
+      "transport_patient": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          6.80000019073486
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          6.80000019073486
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_side",
+        "route": []
+      },
+      "transporter_asylum": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          16.7999992370605,
+          4.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          16.7999992370605,
+          4.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_twisted",
+        "route": []
+      },
+      "transporter_hospital": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          2.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          10.0,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_plaza",
+        "route": []
+      },
+      "treatment_pharmacist": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          2.0
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          10.0,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_maintenance",
+        "route": []
+      },
+      "triage": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          3.20000004768372,
+          10.0
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          3.20000004768372,
+          10.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_twisted",
+        "route": []
+      },
+      "twitch": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          6.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          6.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_narrow",
+        "route": []
+      },
+      "ward_nurse": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          10.0,
+          10.0
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 1,
+        "pos": [
+          10.0,
+          10.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_twisted",
+        "route": []
+      },
+      "warder": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          6.80000019073486,
+          8.80000019073486
+        ],
+        "hostile": true,
+        "hp": 60.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          6.80000019073486,
+          8.80000019073486
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_plaza",
+        "route": []
+      },
+      "wheelchair": {
+        "attack_id": "",
+        "attack_target": "hero",
+        "checks": 0,
+        "cloth_clock": -6.0,
+        "cooldown": 0.0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "elapsed": 0.0,
+        "face_turned": false,
+        "follow": "",
+        "goal": [],
+        "hits": {},
+        "home": [
+          8.80000019073486,
+          2.0
+        ],
+        "hostile": false,
+        "hp": 40.0,
+        "hurt": 0.0,
+        "last_seen": [],
+        "last_seen_at": -100.0,
+        "pending": false,
+        "phase": "idle",
+        "portions": 0,
+        "pos": [
+          8.80000019073486,
+          2.0
+        ],
+        "present": true,
+        "report_elapsed": 0.0,
+        "report_left": 0.0,
+        "report_target": [],
+        "room": "street_side",
+        "route": []
+      }
+    },
+    "appearance": {
+      "fact_count": 20,
+      "incidents": [
+        {
+          "event_id": "combat:5:1:father:1",
+          "hp_damage": 15,
+          "kind": "combat_hit",
+          "room": "atrium",
+          "source": "father",
+          "sp_damage": 0,
+          "time": 2.06666666666667
+        }
+      ],
+      "marks": {}
+    },
+    "archivist_papers": {
+      "elapsed": 0.0,
+      "folder": [],
+      "hero_visible": false,
+      "phase": "idle",
+      "spoken": false,
+      "target": "",
+      "witnessed_read": {}
+    },
+    "assistant_restraint": {
+      "attack_id": "",
+      "avoid_goal": [],
+      "blocked": false,
+      "owner": "assistant_asylum",
+      "phase": "folded",
+      "pose": {},
+      "recover_pose": {}
+    },
+    "bandage_done": false,
+    "bandage_elapsed": 0.0,
+    "boundary": false,
+    "box": {
+      "diverted": false,
+      "elapsed": 0.0,
+      "heard": [],
+      "height": 0.9,
+      "id": "street_labor_box",
+      "line_sent": false,
+      "origin": [],
+      "phase": "held",
+      "pos": [
+        6.80000019073486,
+        1.60000002384186
+      ],
+      "released": false,
+      "room": "street_maintenance",
+      "sound_sent": false,
+      "target": []
+    },
+    "cart_shift": 0.0,
+    "clock": 0.0,
+    "controlled_door": "",
+    "destination": "",
+    "director_frame": {
+      "attack_id": "",
+      "blocked": false,
+      "frames": [],
+      "owner": "director",
+      "phase": "folded",
+      "recover_frames": []
+    },
+    "dislocated_clamp": {
+      "attack_id": "",
+      "blocked": false,
+      "open": 1.0,
+      "phase": "folded",
+      "recover_origin": [],
+      "recovered": "",
+      "side": -1,
+      "tip": [
+        7.05000019073486,
+        2.24000000953674
+      ]
+    },
+    "displays": {
+      "actors": {
+        "back": {
+          "action": {},
+          "back": false,
+          "cooldown": 0.0,
+          "elapsed": 0.0,
+          "front": false,
+          "near": false,
+          "phase": "idle",
+          "protected_seen": false,
+          "read": {},
+          "read_seen": false,
+          "sample": {},
+          "serial": 0,
+          "turned": false
+        },
+        "blind": {
+          "action": {},
+          "back": false,
+          "cooldown": 0.0,
+          "elapsed": 0.0,
+          "front": false,
+          "near": false,
+          "phase": "idle",
+          "protected_seen": false,
+          "read": {},
+          "read_seen": false,
+          "sample": {},
+          "serial": 0,
+          "turned": false
+        },
+        "mimic": {
+          "action": {},
+          "back": false,
+          "cooldown": 0.0,
+          "elapsed": 0.0,
+          "front": false,
+          "near": false,
+          "phase": "idle",
+          "protected_seen": false,
+          "read": {},
+          "read_seen": false,
+          "sample": {},
+          "serial": 0,
+          "turned": false
+        },
+        "postop": {
+          "action": {},
+          "back": false,
+          "cooldown": 0.0,
+          "elapsed": 0.0,
+          "front": false,
+          "near": false,
+          "phase": "idle",
+          "protected_seen": false,
+          "read": {},
+          "read_seen": false,
+          "sample": {},
+          "serial": 0,
+          "turned": false
+        },
+        "register_nurse": {
+          "action": {},
+          "back": false,
+          "cooldown": 0.0,
+          "elapsed": 0.0,
+          "front": false,
+          "near": false,
+          "phase": "idle",
+          "protected_seen": false,
+          "read": {},
+          "read_seen": false,
+          "sample": {},
+          "serial": 0,
+          "turned": false
+        },
+        "transport_patient": {
+          "action": {},
+          "back": false,
+          "cooldown": 0.0,
+          "elapsed": 0.0,
+          "front": false,
+          "near": false,
+          "phase": "idle",
+          "protected_seen": false,
+          "read": {},
+          "read_seen": false,
+          "sample": {},
+          "serial": 0,
+          "turned": false
+        },
+        "triage": {
+          "action": {},
+          "back": false,
+          "cooldown": 0.0,
+          "elapsed": 0.0,
+          "front": false,
+          "near": false,
+          "phase": "idle",
+          "protected_seen": false,
+          "read": {},
+          "read_seen": false,
+          "sample": {},
+          "serial": 0,
+          "turned": false
+        },
+        "wheelchair": {
+          "action": {},
+          "back": false,
+          "cooldown": 0.0,
+          "elapsed": 0.0,
+          "front": false,
+          "near": false,
+          "phase": "idle",
+          "protected_seen": false,
+          "read": {},
+          "read_seen": false,
+          "sample": {},
+          "serial": 0,
+          "turned": false
+        }
+      },
+      "linen": {
+        "matched": false,
+        "read": 0.0,
+        "seen": false
+      },
+      "spoken": {}
+    },
+    "door_left": -1.0,
+    "double_head_arms": {
+      "arms": [],
+      "attack_id": "",
+      "blocked": [],
+      "owner": "double_head",
+      "phase": "mutual_neck_hold",
+      "recover_from": [],
+      "traces": [],
+      "turn": 0.0
+    },
+    "ending": {},
+    "face_pending": {},
+    "father_bottle": {
+      "attack_id": "",
+      "blocked": false,
+      "owner": "father",
+      "phase": "lowered",
+      "profile": [],
+      "recover_profile": [],
+      "sweep": []
+    },
+    "geometry_version": 2,
+    "grip_safe_until": 0.0,
+    "grip_until": 0.0,
+    "hand_grips": {
+      "archivist": {
+        "attack_id": "",
+        "blocked": [],
+        "hands": [],
+        "held_offset": [],
+        "holding_hand": -1,
+        "open": 1.0,
+        "owner": "archivist",
+        "phase": "lowered",
+        "recover_from": []
+      },
+      "self": {
+        "attack_id": "",
+        "blocked": [],
+        "hands": [],
+        "held_offset": [],
+        "holding_hand": -1,
+        "open": 1.0,
+        "owner": "self",
+        "phase": "lowered",
+        "recover_from": []
+      },
+      "stitched": {
+        "attack_id": "",
+        "blocked": [],
+        "hands": [],
+        "held_offset": [],
+        "holding_hand": -1,
+        "open": 1.0,
+        "owner": "stitched",
+        "phase": "lowered",
+        "recover_from": []
+      },
+      "supervisor": {
+        "attack_id": "",
+        "blocked": [],
+        "hands": [],
+        "held_offset": [],
+        "holding_hand": -1,
+        "open": 1.0,
+        "owner": "supervisor",
+        "phase": "lowered",
+        "recover_from": []
+      }
+    },
+    "holder": "",
+    "inspected": {},
+    "inspection": {},
+    "inspection_lines": {},
+    "isolation_embrace": {
+      "arms": [],
+      "attack_id": "",
+      "blocked": false,
+      "open": 0.0,
+      "phase": "folded",
+      "recover_arms": []
+    },
+    "last_left": {},
+    "last_spawn": {},
+    "lateral_bed": {
+      "attack_id": "",
+      "axis": [
+        0.0,
+        1.0
+      ],
+      "center": [
+        17.5999984741211,
+        4.0
+      ],
+      "coasting": false,
+      "distance": 0.0,
+      "elapsed": 0.0,
+      "hits": {},
+      "id": "street_asylum_transport_bed",
+      "operator": [
+        16.7999992370605,
+        4.0
+      ],
+      "phase": "idle",
+      "push": [
+        1.0,
+        0.0
+      ],
+      "retreat_left": 0.0,
+      "room": "street_twisted",
+      "seen_sign": false,
+      "travel": {},
+      "velocity": 0.0
+    },
+    "laundry_bag": {
+      "attack_id": "",
+      "blocked": false,
+      "center": [
+        9.61999988555908,
+        2.3199999332428
+      ],
+      "heading": [
+        1.0,
+        0.0
+      ],
+      "id": "street_hospital_laundry_bag",
+      "last_actor": [
+        10.0,
+        2.0
+      ],
+      "owner": "transporter_hospital",
+      "path": [],
+      "phase": "drag",
+      "raise_px": 0.0,
+      "recover_from": [],
+      "room": "street_plaza"
+    },
+    "local_sweeps": {
+      "doctor": {
+        "attack_id": "",
+        "blocked": false,
+        "height_px": 70.0,
+        "limbs": [],
+        "owner": "doctor",
+        "phase": "lowered",
+        "recover": [],
+        "stopped": [],
+        "sweep": []
+      },
+      "skinface": {
+        "attack_id": "",
+        "blocked": false,
+        "height_px": 70.0,
+        "limbs": [],
+        "owner": "skinface",
+        "phase": "lowered",
+        "recover": [],
+        "stopped": [],
+        "sweep": []
+      }
+    },
+    "loss_reactions": {
+      "acknowledged": {},
+      "pending": [],
+      "pose_left": 0.0
+    },
+    "materials": {
+      "cleaner": {
+        "bag": [],
+        "elapsed": 0.0,
+        "phase": "park",
+        "pickup_seen": false,
+        "target": ""
+      },
+      "faceless": {
+        "done": false,
+        "shift": 0.0
+      },
+      "pharmacist": {
+        "elapsed": 0.0,
+        "seen": false
+      },
+      "speaker": {
+        "holder": "neck",
+        "seen": false,
+        "tear": 0.0
+      },
+      "spoken": {},
+      "stitched": {
+        "tear": 0.0
+      },
+      "surfaces": {
+        "street_maintenance_label": {
+          "holder": "floor",
+          "id": "street_maintenance_label",
+          "kind": "label",
+          "number_glyph": null,
+          "original_id": "",
+          "pos": [
+            3.3,
+            5.9
+          ],
+          "progress": 0.0,
+          "room": "street_maintenance",
+          "seen": false,
+          "source": "S3:P1807; generic fallen label, not a copied earlier original"
+        },
+        "street_maintenance_scuff": {
+          "holder": "floor",
+          "id": "street_maintenance_scuff",
+          "kind": "scuff",
+          "original_id": "",
+          "pos": [
+            3.9,
+            5.5
+          ],
+          "progress": 0.0,
+          "room": "street_maintenance",
+          "seen": false,
+          "source": "S3:P1807; local ground scuff, not invented prior injury"
+        }
+      }
+    },
+    "next_attack": 0.0,
+    "observed": {},
+    "pending_ending_achievements": [],
+    "pharmacist_splash": {
+      "launched": {},
+      "phase": "ready",
+      "shots": []
+    },
+    "prop_rects": {},
+    "pulse_clock": 0.0,
+    "pulse_receipts": {},
+    "rack_sound": {
+      "latched": false,
+      "quiet": 0.0,
+      "serial": 0,
+      "swing": 0.0
+    },
+    "report_events": {},
+    "report_looks": {},
+    "report_speech": {},
+    "reports": {},
+    "route_left": 0.0,
+    "serial": 0,
+    "speed_deaths": {},
+    "speed_stacks": 0,
+    "spoken": {},
+    "version": 1,
+    "visible_casts": {},
+    "warder_belt": {
+      "attack_id": "",
+      "blocked": false,
+      "owner": "warder",
+      "phase": "wrapped",
+      "profile": [],
+      "recover_profile": [],
+      "sweep": []
+    }
+  },
+  "target_index": -1,
+  "view_state": {
+    "manual": false,
+    "miniature": false,
+    "position": [
+      800.447021484375,
+      376.0
+    ]
+  },
+  "vitality_display": {
+    "automatic": false,
+    "hint_acknowledged": false,
+    "hint_demo_seen": false,
+    "last_action": "",
+    "manual": false,
+    "pending": true
+  },
+  "world_visual_time": 65.6333333333322,
+  "zoom_index": 1
+}

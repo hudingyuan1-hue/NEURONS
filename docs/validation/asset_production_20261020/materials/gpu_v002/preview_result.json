@@ -1,0 +1,103 @@
+{
+  "config_enabled": false,
+  "records": [
+    {
+      "context": "bedroom",
+      "floor_material": "aged_floorboards",
+      "material_override": false,
+      "room": "L1_bedroom",
+      "save_error": 0,
+      "screenshot": "C:/Users/23623/Documents/GitHub/NEURONS/neurons/../docs/validation/asset_production_20261020/materials/gpu_v002/L1_bedroom_baseline.png",
+      "size_m": [
+        6.40000009536743,
+        4.80000019073486
+      ]
+    },
+    {
+      "context": "bedroom",
+      "floor_material": "aged_floorboards",
+      "material_override": true,
+      "room": "L1_bedroom",
+      "save_error": 0,
+      "screenshot": "C:/Users/23623/Documents/GitHub/NEURONS/neurons/../docs/validation/asset_production_20261020/materials/gpu_v002/L1_bedroom_materials.png",
+      "size_m": [
+        6.40000009536743,
+        4.80000019073486
+      ]
+    },
+    {
+      "context": "institution",
+      "floor_material": "institution_tile",
+      "material_override": false,
+      "room": "L3_double_ward",
+      "save_error": 0,
+      "screenshot": "C:/Users/23623/Documents/GitHub/NEURONS/neurons/../docs/validation/asset_production_20261020/materials/gpu_v002/L3_double_ward_baseline.png",
+      "size_m": [
+        8.0,
+        6.0
+      ]
+    },
+    {
+      "context": "institution",
+      "floor_material": "institution_tile",
+      "material_override": true,
+      "room": "L3_double_ward",
+      "save_error": 0,
+      "screenshot": "C:/Users/23623/Documents/GitHub/NEURONS/neurons/../docs/validation/asset_production_20261020/materials/gpu_v002/L3_double_ward_materials.png",
+      "size_m": [
+        8.0,
+        6.0
+      ]
+    },
+    {
+      "context": "cortex",
+      "floor_material": "cortical_fibers",
+      "material_override": false,
+      "room": "L4_atrium",
+      "save_error": 0,
+      "screenshot": "C:/Users/23623/Documents/GitHub/NEURONS/neurons/../docs/validation/asset_production_20261020/materials/gpu_v002/L4_atrium_baseline.png",
+      "size_m": [
+        10.8000001907349,
+        9.60000038146973
+      ]
+    },
+    {
+      "context": "cortex",
+      "floor_material": "cortical_fibers",
+      "material_override": true,
+      "room": "L4_atrium",
+      "save_error": 0,
+      "screenshot": "C:/Users/23623/Documents/GitHub/NEURONS/neurons/../docs/validation/asset_production_20261020/materials/gpu_v002/L4_atrium_materials.png",
+      "size_m": [
+        10.8000001907349,
+        9.60000038146973
+      ]
+    },
+    {
+      "context": "street",
+      "floor_material": "street_stone",
+      "material_override": false,
+      "room": "L6_street_plaza",
+      "save_error": 0,
+      "screenshot": "C:/Users/23623/Documents/GitHub/NEURONS/neurons/../docs/validation/asset_production_20261020/materials/gpu_v002/L6_street_plaza_baseline.png",
+      "size_m": [
+        16.0,
+        11.0
+      ]
+    },
+    {
+      "context": "street",
+      "floor_material": "street_stone",
+      "material_override": true,
+      "room": "L6_street_plaza",
+      "save_error": 0,
+      "screenshot": "C:/Users/23623/Documents/GitHub/NEURONS/neurons/../docs/validation/asset_production_20261020/materials/gpu_v002/L6_street_plaza_materials.png",
+      "size_m": [
+        16.0,
+        11.0
+      ]
+    }
+  ],
+  "rendered": true,
+  "scope": "Real GPU 2D material overlay on actual fixed layout geometry. Does not prove actual gameplay, full prop formal-art quality or character/animation integration."
+}

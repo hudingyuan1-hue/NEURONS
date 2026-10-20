@@ -2,7 +2,13 @@ extends RefCounted
 ## Metric institution presentation only. Reads physical state; never settles
 ## a rule, moves an actor or changes navigation. All coordinates are world pixels.
 const Metric=preload("res://scripts/world/metric_bedroom_view.gd")
-const HEIGHT:float=78.0
+const Presentation=preload("res://scripts/world/spatial_presentation.gd")
+const Architecture=preload("res://scripts/world/architectural_surface.gd")
+const Boundary=preload("res://scripts/world/spatial_boundary.gd")
+const Geometry=preload("res://scripts/world/spatial_geometry.gd")
+const Materials=preload("res://scripts/world/spatial_materials.gd")
+const SpatialProp=preload("res://scripts/world/spatial_prop.gd")
+const HEIGHT:float=Presentation.HEIGHT_PIXELS
 const HUMAN:float=1.75*HEIGHT # Visual ruler only, not canonical character height.
 const INK:=Color("35464a")
 const PHASES={
@@ -21,6 +27,8 @@ var layout
 var catalog
 var font:Font=ThemeDB.fallback_font
 var actor_parts=Metric.new()
+var architectural_pieces:Array=[]
+var _prop_material:String="painted_metal"
 
 static func _v(value:Variant) -> Vector2:
  return value if value is Vector2 else Vector2(float(value[0]),float(value[1]))
@@ -80,6 +88,7 @@ static func door_at_pixel(room_layout,pixel:Vector2) -> String:
  return ""
 
 static func _faces(room_layout,f:Dictionary) -> Array:
+ if not f.get("render",true):return []
  if f.has("collision_rects"):
   var result:Array=[]
   for rect:Rect2 in f.collision_rects:
@@ -104,26 +113,139 @@ static func _faces(room_layout,f:Dictionary) -> Array:
   return faces
  return Metric._prism_faces(room_layout,r,height)
 
-static func _window_face(room_layout,f:Dictionary) -> PackedVector2Array:
- var r:Rect2=f.rect;var h:float=_h(f)
+static func _window_face(room_layout,f:Dictionary,inset:float=.52) -> PackedVector2Array:
+ var r:Rect2=f.rect;var display:Dictionary=_window_display(f)
+ var h:float=float(display.sill_height_m)*HEIGHT
+ var opening:float=float(display.opening_height_m)*HEIGHT
  var center:Vector2=r.get_center()
  var side:String=str(f.wall_mount);var axis:Vector2
+ var t:float=float(room_layout.config.wall.get("thickness_m",.15))
  if side in ["west","east"]:
-  center.x=0 if side=="west" else room_layout.world_size().x;axis=Vector2(0,r.size.y*.5)
+  center.x=-t*inset if side=="west" else room_layout.world_size().x+t*inset;axis=Vector2(0,r.size.y*.5)
  else:
-  center.y=0 if side=="north" else room_layout.world_size().y;axis=Vector2(r.size.x*.5,0)
+  center.y=-t*inset if side=="north" else room_layout.world_size().y+t*inset;axis=Vector2(r.size.x*.5,0)
  var a:Vector2=room_layout.project(center-axis)-Vector2(0,h)
  var b:Vector2=room_layout.project(center+axis)-Vector2(0,h)
- return PackedVector2Array([a,b,b-Vector2(0,65),a-Vector2(0,65)])
+ return PackedVector2Array([a,b,b-Vector2(0,opening),a-Vector2(0,opening)])
+
+static func _window_display(f:Dictionary) -> Dictionary:
+ var rect:Rect2=f.rect;var side:String=str(f.wall_mount)
+ var width:float=rect.size.x if side in ["north","south"] else rect.size.y
+ return Presentation.window_display(side,width,float(f.get("sill_height_m",_h(f)/HEIGHT)),float(f.get("opening_height_m",65.0/HEIGHT)))
+
+static func _fixed_group(f:Dictionary) -> String:
+ return "fixed:"+str(f.get("id",f.get("name","partition")))
+
+static func _outer_rect(room_layout,side:String,start:float,length:float,t:float) -> Rect2:
+ var size:Vector2=room_layout.world_size()
+ match side:
+  "north":return Rect2(start,-t,length,t)
+  "south":return Rect2(start,size.y,length,t)
+  "west":return Rect2(-t,start,t,length)
+  _:return Rect2(size.x,start,t,length)
+
+static func _append_piece(result:Array,rect:Rect2,height:float,bottom:float,group:String,source_id:String) -> void:
+ if rect.size.x>0 and rect.size.y>0 and height>0:
+  result.append({"rect":rect,"bottom_m":bottom,"height_m":height,"group":group,"source_id":source_id})
+
+static func _wall_cap(side:String,at:float,length:float,physical_height:float,windows:Array) -> float:
+ var height:float=physical_height
+ for segment:Dictionary in Presentation.wall_display_segments(side,length,physical_height):
+  if at>=float(segment.start)-.00001 and at<=float(segment.end)+.00001:
+   height=float(segment.height_m);break
+ # A real window reveal is part of the surrounding continuous wall, not a
+ # separate pair of floor-to-frame posts. Functional high windows stay high.
+ for window:Dictionary in windows:
+  if at>=float(window.start)-.12 and at<=float(window.end)+.12:
+   height=maxf(height,minf(physical_height,float(window.display.wall_cap_height_m)))
+ return height
+
+## Actual display solids exported verbatim for the drawing locators. Physical
+## room dimensions/portals/search stands remain in the unchanged layout data.
+static func architecture_pieces(room_layout) -> Array:
+ if room_layout.config.get("floor_polygon_m",[]).size()>4:
+  return Boundary.pieces(room_layout,false,room_layout.portals)
+ var result:Array=[];var size:Vector2=room_layout.world_size()
+ var spec:Dictionary=room_layout.config.get("wall",{})
+ var t:float=float(spec.get("thickness_m",.15));var physical_height:float=float(spec.get("height_m",2.55))
+ var endpoint_heights:Dictionary={}
+ for side:String in ["north","east","south","west"]:
+  var length:float=size.x if side in ["north","south"] else size.y
+  var group:String="near" if side in ["west","south"] else "far"
+  var holes:Array=[];var windows:Array=[];var edges:Array=[0.0,length]
+  for portal:Dictionary in room_layout.portals:
+   if str(portal.wall)!=side:continue
+   var at:Vector2=_v(portal.get("wall_point",portal.threshold))
+   var center:float=at.x if side in ["north","south"] else at.y
+   var start:float=maxf(0,center-float(portal.width_m)*.5);var end:float=minf(length,center+float(portal.width_m)*.5)
+   holes.append({"start":start,"end":end,"height":float(portal.height_m)})
+   edges.append(start);edges.append(end)
+  for f:Dictionary in room_layout.furniture:
+   if str(f.get("kind",""))!="window" or str(f.get("wall_mount",""))!=side:continue
+   var rect:Rect2=f.rect;var start:float=rect.position.x if side in ["north","south"] else rect.position.y
+   var end:float=rect.end.x if side in ["north","south"] else rect.end.y
+   windows.append({"start":start,"end":end,"display":_window_display(f)})
+   for edge:float in [maxf(0,start-.12),start,end,minf(length,end+.12)]:edges.append(edge)
+  for segment:Dictionary in Presentation.wall_display_segments(side,length,physical_height):
+   edges.append(float(segment.start));edges.append(float(segment.end))
+  edges.sort();var unique:Array=[]
+  for edge:float in edges:
+   if unique.is_empty() or absf(edge-float(unique.back()))>.00001:unique.append(edge)
+  var endpoints:Array=[]
+  for at:float in [0.0,length]:
+   var height:float=_wall_cap(side,at,length,physical_height,windows)
+   for hole:Dictionary in holes:
+    if at>=float(hole.start)-.00001 and at<=float(hole.end)+.00001:height=0.0;break
+   endpoints.append(height)
+  endpoint_heights[side]=endpoints
+  for index in range(unique.size()-1):
+   var a:float=float(unique[index]);var b:float=float(unique[index+1]);var middle:float=(a+b)*.5
+   if b-a<=.00001:continue
+   var cap:float=_wall_cap(side,middle,length,physical_height,windows)
+   var rect:Rect2=_outer_rect(room_layout,side,a,b-a,t)
+   var hole_height:float=-1.0
+   for hole:Dictionary in holes:
+    if middle>float(hole.start) and middle<float(hole.end):hole_height=float(hole.height);break
+   if hole_height>=0:
+    _append_piece(result,rect,cap-hole_height,hole_height,group,"outer:"+side);continue
+   var found:Dictionary={}
+   for window:Dictionary in windows:
+    if middle>float(window.start) and middle<float(window.end):found=window;break
+   if found.is_empty():_append_piece(result,rect,cap,0,group,"outer:"+side)
+   else:
+    var sill:float=float(found.display.sill_height_m);var top:float=sill+float(found.display.opening_height_m)
+    _append_piece(result,rect,minf(cap,sill),0,group,"outer:"+side)
+    _append_piece(result,rect,cap-top,top,group,"outer:"+side)
+ # The four original rectangular boundaries meet at their inner edge. Fill
+ # the previously omitted exterior t*t corner at their shared shown height.
+ var corners:Array=[
+  {"rect":Rect2(-t,-t,t,t),"a":"north","ai":0,"b":"west","bi":0,"group":"near"},
+  {"rect":Rect2(size.x,-t,t,t),"a":"north","ai":1,"b":"east","bi":0,"group":"far"},
+  {"rect":Rect2(-t,size.y,t,t),"a":"south","ai":0,"b":"west","bi":1,"group":"near"},
+  {"rect":Rect2(size.x,size.y,t,t),"a":"south","ai":1,"b":"east","bi":1,"group":"near"}]
+ for corner:Dictionary in corners:
+  var height:float=minf(float(endpoint_heights[corner.a][corner.ai]),float(endpoint_heights[corner.b][corner.bi]))
+  _append_piece(result,corner.rect,height,0,str(corner.group),"outer:corner")
+ # Fixed interior walls and actual three-sided shower partitions join the
+ # same solid union. Open furniture such as chairs keeps its separate drawing.
+ var fixed:Array=[];fixed.append_array(room_layout.static_walls)
+ for f:Dictionary in room_layout.furniture+room_layout.decor:
+  if str(f.get("kind","")) in ["wall","facade","shower"]:fixed.append(f)
+ for f:Dictionary in fixed:
+  if not bool(f.get("render",true)):continue
+  var rects:Array=f.get("collision_rects",[f.rect]);var group:String=_fixed_group(f)
+  for rect:Rect2 in rects:
+   _append_piece(result,rect,_h(f)/HEIGHT,0,group,str(f.get("id",f.get("name","partition"))))
+ return result
 
 static func furniture_at_pixel(room_layout,pixel:Vector2) -> int:
  var ordered:Array=[]
  for index in range(room_layout.furniture.size()):
   var f:Dictionary=room_layout.furniture[index]
-  ordered.append({"index":index,"depth":room_layout.project((f.rect as Rect2).end).y,"faces":_faces(room_layout,f)})
+  ordered.append({"index":index,"depth":Presentation.footprint_depth(room_layout,f.rect),"faces":_faces(room_layout,f)})
  for f in room_layout.decor:
   if not f.get("collision",false):continue
-  ordered.append({"index":-1,"depth":room_layout.project((f.rect as Rect2).end).y,"faces":_faces(room_layout,f)})
+  ordered.append({"index":-1,"depth":Presentation.footprint_depth(room_layout,f.rect),"faces":_faces(room_layout,f)})
  ordered.sort_custom(func(a,b):return float(a.depth)>float(b.depth))
  for entry in ordered:
   for face in entry.faces:
@@ -134,12 +256,13 @@ func draw(target:Node2D,owner,room_layout,asset_catalog) -> void:
  canvas=target;app=owner;layout=room_layout;catalog=asset_catalog
  actor_parts.canvas=canvas;actor_parts.app=app;actor_parts.layout=layout;actor_parts.catalog=catalog;actor_parts.font=font
  canvas.draw_set_transform(Vector2.ZERO)
+ architectural_pieces=architecture_pieces(layout)
  _surfaces();_walls(false);_stairs()
  var ordered:Array=[]
- for f in layout.furniture:ordered.append({"type":"furniture","data":f,"depth":layout.project((f.rect as Rect2).end).y})
+ for f in layout.furniture:ordered.append({"type":"furniture","data":f,"depth":Presentation.footprint_depth(layout,f.rect)})
  for f in layout.decor:
-  if _decor_visible(f):ordered.append({"type":"furniture","data":f,"depth":layout.project((f.rect as Rect2).end).y})
- for f in layout.static_walls:ordered.append({"type":"wall","data":f,"depth":layout.project((f.rect as Rect2).end).y})
+  if _decor_visible(f):ordered.append({"type":"furniture","data":f,"depth":Presentation.footprint_depth(layout,f.rect)})
+ for f in layout.static_walls:ordered.append({"type":"wall","data":f,"depth":Presentation.footprint_depth(layout,f.rect)})
  ordered.append({"type":"actor","data":"hero","depth":layout.project(app.hero_pos).y})
  if canvas.has_method("extra_actors"):ordered.append_array(canvas.extra_actors())
  ordered.sort_custom(func(a,b):return float(a.depth)<float(b.depth))
@@ -149,19 +272,25 @@ func draw(target:Node2D,owner,room_layout,asset_catalog) -> void:
    "wall":_inner_wall(entry.data)
    "actor":_actor(str(entry.data))
  if app.key_visible() and not app.has_key():_key(layout.project(app.key_position())-Vector2(0,9))
- _walls(true);_targets()
+ _walls(true)
+ # Real window frames retain their configured sill/opening above a cut wall.
+ # Drawing them here keeps near-side structural cuts from hiding their target.
+ for f in layout.furniture:
+  if str(f.get("kind",""))=="window" and str(f.get("wall_mount","")) in ["west","south"]:_window(f)
+ _targets()
  canvas.draw_set_transform(Vector2.ZERO)
 
 func _decor_visible(f:Dictionary) -> bool:
+ if not f.get("render",true):return false
  if str(f.get("kind",""))=="marker":return false # Original physical marker owns actual relics.
  if str(f.get("id",""))=="ward_laundry_bag":return app.hospital!=null and str(app.hospital.data.get("bag",""))=="ward"
  return true
 
 func _inner_wall(f:Dictionary) -> void:
  var color:Color=f.get("color",Color("9da9a3"));var rect:Rect2=f.rect;var h:float=_h(f)
- var bounds:=Rect2(layout.project(rect.position)-Vector2(0,h),Vector2(96*rect.size.x+30*rect.size.y,h+56*rect.size.y))
- if h>90 and layout.project(rect.end).y>layout.project(app.hero_pos).y and bounds.intersects(hero_body_rect(app,layout)):color.a=.38
- _prism(rect,h,color)
+ var bounds:Rect2=Presentation.prism_bounds(layout,rect,h)
+ if h>90 and Presentation.footprint_depth(layout,rect)>layout.project(app.hero_pos).y and bounds.intersects(hero_body_rect(app,layout)):color.a=.38
+ Architecture.draw(canvas,layout,architectural_pieces,{"group":_fixed_group(f),"top":color,"edge":color.darkened(.22),"edge_width":1.0})
 
 func _poly(points:Variant,color:Color) -> void:
  canvas.draw_colored_polygon(PackedVector2Array(points),color)
@@ -173,6 +302,9 @@ func _label(at:Vector2,label:String,color:Color=Color("e1e4d3"),size:int=13) -> 
  canvas.draw_string(font,at+Vector2(-width*.5,0),label,HORIZONTAL_ALIGNMENT_LEFT,-1,size,color)
 
 func _prism(rect:Rect2,height:float,color:Color,bottom:float=0.0) -> void:
+ if Materials.enabled():
+  Materials.prop_face(canvas,layout,SpatialProp._quad(rect),bottom+height,color,_prop_material,bottom)
+  return
  var faces:Array=Metric._prism_faces(layout,rect,height,bottom)
  _poly(faces[1],color.darkened(.23));_poly(faces[2],color.darkened(.12));_poly(faces[0],color)
  var edge:PackedVector2Array=faces[0].duplicate();edge.append(edge[0])
@@ -181,6 +313,13 @@ func _prism(rect:Rect2,height:float,color:Color,bottom:float=0.0) -> void:
 func _surfaces() -> void:
  var size:Vector2=layout.world_size()
  canvas.draw_rect(Rect2(-2500,-2500,8000,8000),Color("233034"))
+ if Materials.enabled():
+  Geometry.draw_floor(canvas,layout,Color("a1b1a7"))
+  return
+ if layout.config.get("floor_polygon_m",[]).size()>4:
+  Geometry.draw_floor(canvas,layout,Color("85928c"))
+  Geometry.draw_floor_lines(canvas,layout,1.0,Color(.22,.32,.31,.16))
+  return
  _prism(Rect2(Vector2.ZERO,size),12,Color("778a87"),-12)
  var base:=Color("a1b1a7") if int(layout.phase_level)==2 else Color("85928c")
  _poly(Metric._projected_face(layout,Rect2(Vector2.ZERO,size),0),base)
@@ -192,47 +331,32 @@ func _surfaces() -> void:
  for z in range(1,ceili(size.y)):
   canvas.draw_line(layout.project(Vector2(0,z)),layout.project(Vector2(size.x,z)),Color(.22,.32,.31,.16),1)
 
-func _wall_rect(side:String,start:float,length:float,t:float) -> Rect2:
- var size:Vector2=layout.world_size()
- match side:
-  "north":return Rect2(start,-t,length,t)
-  "south":return Rect2(start,size.y,length,t)
-  "west":return Rect2(-t,start,t,length)
-  _:return Rect2(size.x,start,t,length)
-
 func _walls(front:bool) -> void:
- var size:Vector2=layout.world_size()
- var spec:Dictionary=layout.config.get("wall",{})
- var t:float=float(spec.get("thickness_m",.15));var full_height:float=float(spec.get("height_m",2.55))*HEIGHT
- for side in (["east","south"] if front else ["north","west"]):
+ var tone:=Color("a5b2a8")
+ Architecture.draw(canvas,layout,architectural_pieces,{"group":"near" if front else "far","top":tone,"edge":tone.darkened(.22),"edge_width":1.0})
+ var size:Vector2=layout.world_size();var physical_height:float=float(layout.config.wall.get("height_m",2.55))
+ for portal:Dictionary in layout.portals:
+  var side:String=str(portal.wall)
+  if (side in ["west","south"])!=front:continue
+  var at:Vector2=_v(portal.get("wall_point",portal.threshold))
+  var center:float=at.x if side in ["north","south"] else at.y
   var length:float=size.x if side in ["north","south"] else size.y
-  var cuts:Array=[];var h:float=.32*HEIGHT if front else full_height
-  for p in layout.portals:
-   if str(p.wall)!=side:continue
-   var threshold:Vector2=_v(p.threshold)
-   var center:float=threshold.x if side in ["north","south"] else threshold.y
-   cuts.append({"start":maxf(0,center-float(p.width_m)*.5),"end":minf(length,center+float(p.width_m)*.5),"portal":p})
-  cuts.sort_custom(func(a,b):return float(a.start)<float(b.start))
-  var cursor:float=0
-  for cut in cuts:
-   if float(cut.start)>cursor:_prism(_wall_rect(side,cursor,float(cut.start)-cursor,t),h,Color("a5b2a8"))
-   var p:Dictionary=cut.portal
-   if not front and full_height>float(p.height_m)*HEIGHT:
-    _prism(_wall_rect(side,float(cut.start),float(cut.end)-float(cut.start),t),full_height-float(p.height_m)*HEIGHT,Color("a5b2a8"),float(p.height_m)*HEIGHT)
-   _portal(p,front)
-   cursor=maxf(cursor,float(cut.end))
-  if cursor<length:_prism(_wall_rect(side,cursor,length-cursor,t),h,Color("a5b2a8"))
+  _portal(portal,front,_wall_cap(side,center,length,physical_height,[])*HEIGHT)
 
-func _portal(portal:Dictionary,front:bool) -> void:
+func _portal(portal:Dictionary,front:bool,display_height:float) -> void:
  var face:PackedVector2Array=_portal_face(layout,portal)
- if not front:_poly(face,Color("3c514f"))
+ var cutaway:bool=display_height<float(portal.height_m)*HEIGHT
+ if not cutaway:_poly(face,Color("3c514f"))
  if int(app.session.data.level)==3 and app.room_id=="corridor" and str(portal.toward)=="quiet":
   var progress:float=float(app.asylum.data.get("isolation_state",{}).get("door_progress",0))
   if progress>0:_poly(face,Color(.34,.40,.38,progress))
- # Full-height fine frame identifies the real opening; foreground wall stays
- # cut below shins so neither feet nor a grasp are concealed by a fake facade.
- var color:=Color(.69,.78,.71,.45) if front else Color("d0d6c2")
- canvas.draw_polyline(PackedVector2Array([face[0],face[3],face[2],face[1]]),color,3 if front else 5)
+ # Picking still uses the complete physical face; only the visible frame is cut.
+ var color:=Color("c2ccb9") if front else Color("d0d6c2")
+ if cutaway:
+  var up:=Vector2(0,display_height)
+  canvas.draw_line(face[0],face[0]-up,color,4)
+  canvas.draw_line(face[1],face[1]-up,color,4)
+ else:canvas.draw_polyline(PackedVector2Array([face[0],face[3],face[2],face[1]]),color,5)
  canvas.draw_line(face[0],face[1],Color("6e8176"),3)
  var threshold:Vector2=layout.project(_v(portal.threshold))
  var landing:Vector2=layout.project(_v(portal.landing))
@@ -260,9 +384,33 @@ func _stairs() -> void:
   var arrow:Vector2=(to-from).normalized()
   canvas.draw_line(to,to-arrow.rotated(.6)*10,Color("c3cfbc"),2);canvas.draw_line(to,to-arrow.rotated(-.6)*10,Color("c3cfbc"),2)
 
+func _window(f:Dictionary) -> void:
+ var face:PackedVector2Array=_window_face(layout,f)
+ var outer:PackedVector2Array=_window_face(layout,f,1.0 if str(f.wall_mount) in ["west","south"] else 0.0)
+ for edge_index in range(4):
+  var next:int=(edge_index+1)%4
+  _poly([outer[edge_index],outer[next],face[next],face[edge_index]],Color("a7ac96").darkened(.16 if edge_index!=0 else 0.0))
+ _poly(face,Color(.53,.64,.60,.08))
+ var edge:PackedVector2Array=face.duplicate();edge.append(face[0])
+ canvas.draw_polyline(edge,Color("b8bca7"),3)
+ canvas.draw_line(face[0].lerp(face[1],.5),face[3].lerp(face[2],.5),Color("afb8a4"),2)
+
 func _furniture(f:Dictionary) -> void:
+ if not f.get("render",true):return
  var rect:Rect2=f.rect;var h:float=_h(f);var tone:Color=f.get("color",Color("839b95"))
  var kind:String=str(f.get("kind","cabinet"));var at:Vector2=layout.project(rect.get_center())
+ _prop_material=Materials.prop_id(kind,str(f.get("name","")))
+ if kind in ["shower","wall","facade"]:
+  var surface_tone:Color=tone
+  if kind=="shower":surface_tone.a=.26
+  Architecture.draw(canvas,layout,architectural_pieces,{"group":_fixed_group(f),"top":surface_tone,"edge":surface_tone.darkened(.22),"edge_width":1.0})
+  # A movable privacy screen remains an event prop, independent of the fixed
+  # three-sided partitions now included in the complete architectural union.
+  if kind=="shower" and f.get("screen_target",false) and app.asylum.data.get("trace_events",{}).get("screen_closed",false):
+   var a:Vector2=layout.project(rect.position+Vector2(0,rect.size.y));var b:Vector2=layout.project(rect.end)
+   _poly([a,b,b-Vector2(0,h),a-Vector2(0,h)],Color("667e76"))
+  _label(at-Vector2(0,h+8),str(f.get("name","")),Color("e1e3cf"),11)
+  return
  if f.has("collision_rects"):
   for piece:Rect2 in f.collision_rects:
    if kind=="shower":
@@ -274,17 +422,19 @@ func _furniture(f:Dictionary) -> void:
    _poly([a,b,b-Vector2(0,h),a-Vector2(0,h)],Color("667e76"))
   _label(at-Vector2(0,h+8),str(f.get("name","")),Color("e1e3cf"),11)
   return
- var bounds:=Rect2(layout.project(rect.position)-Vector2(0,h),Vector2(96*rect.size.x+30*rect.size.y,h+56*rect.size.y))
- if h>110 and layout.project(rect.end).y>layout.project(app.hero_pos).y and bounds.intersects(hero_body_rect(app,layout)):tone.a=.38
+ var bounds:Rect2=Presentation.prism_bounds(layout,rect,h)
+ if h>110 and Presentation.footprint_depth(layout,rect)>layout.project(app.hero_pos).y and bounds.intersects(hero_body_rect(app,layout)):tone.a=.38
+ if Materials.enabled() and kind in ["bed","exam_bed","chair","chairs","bench","desk","table","counter","cart","sink","toilet","plant","bag","books","shelf","wardrobe","fan","lamp"]:
+  SpatialProp.draw(canvas,layout,f,tone)
+  if not str(f.get("name","")).is_empty():_label(at-Vector2(0,h+8),str(f.name),Color("e1e3cf"),11)
+  return
  match kind:
   "window":
-   if f.has("wall_mount"):
-    var face:PackedVector2Array=_window_face(layout,f);_poly(face,Color("a1b8ad"))
-    var edge:PackedVector2Array=face.duplicate();edge.append(face[0]);canvas.draw_polyline(edge,Color("c4cdbb"),5)
+   if f.has("wall_mount"):_window(f)
    else:_prism(rect,h,tone)
   "bed","exam_bed":
    _prism(rect,maxf(5,h-12),tone.darkened(.2));_prism(rect.grow(-.04),12,Color("c3cbb8"),maxf(0,h-12))
-   var pillow:=Rect2(rect.position+Vector2(.07,.06),Vector2(minf(.42,rect.size.x-.14),rect.size.y-.12))
+   var pillow:=Rect2(rect.position+Vector2(.07,.06),Vector2(rect.size.x-.14,minf(.42,rect.size.y-.12))) if rect.size.y>rect.size.x else Rect2(rect.position+Vector2(.07,.06),Vector2(minf(.42,rect.size.x-.14),rect.size.y-.12))
    _prism(pillow,8,Color("dde0cc"),h)
   "chair","chairs","bench","desk","table","counter","cart":
    var seat:float=.46*HEIGHT if kind in ["chair","chairs","bench"] else h
@@ -465,6 +615,7 @@ func _hero() -> void:
  var at:Vector2=layout.project(app.hero_pos)
  if app.action_phase=="resting":
   var pose:Dictionary=_rest_pose(app,layout);var frame:Dictionary=catalog.actor_frame("idle",app.hero_facing,0)
+  if app.get("production_actors")!=null and app.production_actors.draw_resting(canvas,pose.center,float(pose.angle),HUMAN):return
   var scale_value:float=HUMAN/57.0
   canvas.draw_set_transform(pose.center,float(pose.angle))
   canvas.draw_texture_rect_region(frame.texture,Rect2(-Vector2(frame.foot.x,frame.foot.y-28.5)*scale_value,frame.size*scale_value),frame.source)
@@ -478,24 +629,34 @@ func _hero() -> void:
  var frame:Dictionary=catalog.actor_frame("idle" if contact else str(app.hero_state),app.hero_facing,time)
  var scale2:=Vector2(HUMAN/57.0,HUMAN/57.0*crouch)
  canvas.draw_circle(at,18,Color(.04,.08,.08,.28))
- if contact:
+ var production:bool=app.get("production_actors")!=null and app.production_actors.draw_hero(canvas,at,HUMAN)
+ if contact and not production:
   actor_parts._actor_piece(frame,at,scale2,Rect2(0,0,64,32));actor_parts._actor_piece(frame,at,scale2,Rect2(0,50,64,30))
   canvas.draw_rect(Rect2(at+Vector2(-17,-40*scale2.y),Vector2(34,18*scale2.y)),Color("8caebc"))
   var free_side:float=-1.0
   if app.rules.search_active and app.target_index>=0 and layout.project((layout.furniture[app.target_index].rect as Rect2).get_center()).x<at.x:free_side=1.0
   canvas.draw_line(at+Vector2(free_side*15,-HUMAN*.69*crouch),at+Vector2(free_side*26,-HUMAN*.37*crouch),Color("8caebc"),7)
- else:canvas.draw_texture_rect_region(frame.texture,Rect2(at-frame.foot*scale2,frame.size*scale2),frame.source)
+ elif not production:canvas.draw_texture_rect_region(frame.texture,Rect2(at-frame.foot*scale2,frame.size*scale2),frame.source)
  var group=app.hospital if int(app.session.data.level)==2 else app.asylum
  var body:Dictionary=group.data.get("body",{});var holder:String=str(group.data.get("holder",""))
  if app.rules.search_active and app.target_index>=0:
   var f:Dictionary=layout.furniture[app.target_index];var rect:Rect2=f.rect
   var touch:=Vector2(clampf(app.hero_pos.x,rect.position.x,rect.end.x),clampf(app.hero_pos.y,rect.position.y,rect.end.y))
-  var hand:Vector2=layout.project(touch)-Vector2(0,minf(_h(f),HUMAN*.65) if crouch==1 else .24*HEIGHT)
+  var hand_height:float=minf(_h(f),HUMAN*.65) if crouch==1 else .24*HEIGHT
+  if str(f.get("kind",""))=="window" and f.has("wall_mount"):
+   hand_height=float(_window_display(f).sill_height_m)*HEIGHT
+   var inset:float=float(layout.config.wall.get("thickness_m",.15))*.52
+   match str(f.wall_mount):
+    "west":touch.x=-inset
+    "east":touch.x=layout.world_size().x+inset
+    "north":touch.y=-inset
+    "south":touch.y=layout.world_size().y+inset
+  var hand:Vector2=layout.project(touch)-Vector2(0,hand_height)
   if f.get("locked_upper",false):hand=material_handle(f)
-  _arm(at,HUMAN*crouch,hand,clampf(float(app.rules.search_elapsed)/.25,0,1),Color("91b3c1"))
+  if not production:_arm(at,HUMAN*crouch,hand,clampf(float(app.rules.search_elapsed)/.25,0,1),Color("91b3c1"))
  elif not holder.is_empty() and group.data.get("actors",{}).has(holder):
   var contact_info:Dictionary=_paired_contact(group,holder,group.actor(holder))
-  if not contact_info.is_empty():_arm(at,HUMAN,_v(contact_info.pixel),1.0,Color("9ab8c2"))
+  if not production and not contact_info.is_empty():_arm(at,HUMAN,_v(contact_info.pixel),1.0,Color("9ab8c2"))
  var reading:Dictionary=group.data.get("observation_state",{}).get("active",{}) if int(app.session.data.level)==2 else group.data.get("observations_state",{}).get("active",{})
  if int(app.session.data.level)==3 and reading.is_empty():reading=group.data.get("records_state",{}).get("reading",{})
  if not reading.is_empty():
@@ -503,18 +664,20 @@ func _hero() -> void:
   var phase:String=str(reading.get("phase","contact"))
   var reach:float=progress if phase=="prepare" else 1.0-progress if phase=="finish" else 1.0
   var hand:Vector2=at+Vector2(26+reach*9,-HUMAN*.55-reach*9)
-  _arm(at,HUMAN,hand,1.0,Color("a9bdc0"));_paper(hand)
+  if not production:_arm(at,HUMAN,hand,1.0,Color("a9bdc0"))
+  _paper(hand)
  if int(app.session.data.level)==3:
   var window_action:Dictionary=group.data.get("ward_window_state",{}).get("action",{})
   if not window_action.is_empty():
    var elapsed:float=float(window_action.elapsed)
    var reach:float=clampf(elapsed/group.WARD_WINDOW_PREPARE,0,1) if window_action.phase=="prepare" else clampf((group.WARD_WINDOW_PREPARE+group.WARD_WINDOW_CONTACT+group.WARD_WINDOW_FINISH-elapsed)/group.WARD_WINDOW_FINISH,0,1) if window_action.phase=="finish" else 1.0
    var hand:Vector2=item_pixel(app,layout,{"kind":"ward_window","pos":group.xy(group.ward_window_position())})
-   _arm(at,HUMAN,hand,reach,Color("a9bdc0"))
+   if not production:_arm(at,HUMAN,hand,reach,Color("a9bdc0"))
  var cup:String="hospital_cup" if int(app.session.data.level)==2 else "asylum_cup"
  if app.rules.owners.get(cup,"")=="hero":
   var hand:Vector2=at+Vector2(29,-HUMAN*(.84 if str(body.get("kind",""))=="raise_cup" else .45))
-  _arm(at,HUMAN,hand,1.0,Color("9db7be"));canvas.draw_rect(Rect2(hand+Vector2(-6,-8),Vector2(12,12)),Color("d5d9bd"))
+  if not production:_arm(at,HUMAN,hand,1.0,Color("9db7be"))
+  canvas.draw_rect(Rect2(hand+Vector2(-6,-8),Vector2(12,12)),Color("d5d9bd"))
  if app.has_key():_key(at+Vector2(-33,-HUMAN*.44))
  var forward:Vector2=(layout.project(app.hero_pos+app.hero_facing)-at).normalized()
  canvas.draw_line(at,at+forward*24,Color("edc483"),2)

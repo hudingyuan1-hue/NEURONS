@@ -1,0 +1,3193 @@
+{
+  "passed": 795,
+  "failed": 0,
+  "frozen_source_files": 264,
+  "stable_components": 174,
+  "source_alpha_copies": 22,
+  "built_in_cutouts": 4,
+  "runtime_binding_enabled": false,
+  "visual_qa_path": "docs/validation/asset_production_20261020/characters/cutout_alpha_preview.jpg",
+  "scope_note": "Source selection, provenance, true alpha, canvas and meaningful bounds only. Not movement, contact or animation acceptance. Raw alpha 1-7 peripheral specks are recorded for later composite QA; pixels are not changed.",
+  "checks": [
+    {
+      "check": "frozen source count matches registry",
+      "pass": true
+    },
+    {
+      "check": "component count matches registry",
+      "pass": true
+    },
+    {
+      "check": "main/player rig ownership excluded",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_DOG_L1_REMAINS_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_FATHER_L1_COLLAPSE_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_FATHER_L1_COLLAPSE v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_HUNTER_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_MOTHER_L1_COLLAPSE_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_CAT_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_CAT_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_CAT_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_DOG_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_DOG_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_DOG_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_DOG_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_FATHER_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_FATHER_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_FATHER_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_FATHER_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_MOTHER_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_MOTHER_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_MOTHER_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_MOTHER_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N02_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N02_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N02_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N02_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N02_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N03_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N03_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N03_BACK_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N03_BACK v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N03_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N04_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N04_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N04_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N04_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N05_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N05_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N05_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N05_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N06_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N06_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N06_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N06_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N07_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N07_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N07_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N07_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N08_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N08_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N08_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N08_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N09_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N09_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N09_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N09_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N10_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N10_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N10_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N10_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N11_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N11_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N11_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N11_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N13_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N13_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N13_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N13_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N14_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N14_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N14_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N14_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N15_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N15_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N15_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N15_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N16_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N16_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N16_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N16_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N17_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N17_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N17_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N17_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N18_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N18_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N18_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N18_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N19_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N19_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N20_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N20_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N20_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N20_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N21_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N21_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N21_ALTERED v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N21_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N21_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N22_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N22_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N22_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N23_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N23_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N23_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N23_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N24_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N24_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N24_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N24_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N25_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N25_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N25_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N25_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N27_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N27_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N27_ALTERED v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N27_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N27_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N28_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N28_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N28_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N28_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N29_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N29_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N29_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N29_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N30_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N30_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N30_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N30_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N31_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N31_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N31_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N33_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N33_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N33_ALTERED v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N33_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N33_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N34_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N34_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N34_ALTERED v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N34_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N34_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N35_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N35_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N35_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N35_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N36_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N36_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N36_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N37_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N37_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N37_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N37_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N38_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N38_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N38_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N38_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N39_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N39_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N39_ALTERED v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N39_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N39_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N40_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N40_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N40_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N40_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N41_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N41_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N42_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N42_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N42_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N42_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N43_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N43_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N43_ALTERED v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N43_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N43_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N44_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N44_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N44_ALTERED v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N44_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N44_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N45_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N45_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N45_ALTERED v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N45_BACK_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/CHR_OTHER_NPCS_N45_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_CAT_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_DOG_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_FATHER_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_FATHER_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_FATHER_ALTERED v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_MOTHER_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N02_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N03_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N04_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N04_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N05_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N06_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N07_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N08_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N09_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N10_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N11_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N13_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N14_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N15_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N16_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N17_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N18_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N19_ALTERED_v002.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N19_ALTERED v2",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N20_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N21_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N22_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N23_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N24_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N25_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N27_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N28_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N29_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N30_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N31_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N33_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N34_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N35_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N36_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N37_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N38_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N39_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N40_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N41_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N42_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N43_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N44_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/人物/异化/CHR_OTHER_NPCS_N45_ALTERED_v001.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P01_v005.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P01 v5",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P02_v005.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P02 v5",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P03_v005.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P03 v5",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_FATHER_ACTION_FIRST__carry_pose__P01_v005.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__carry_pose__P01 v5",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_FATHER_ACTION_FIRST__lead_pose__P01_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_FATHER_ACTION_FIRST__lead_pose__P02_v005.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__lead_pose__P02 v5",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P01_v004.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P02_v004.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_FATHER_ACTION_FIRST__release__P02_v005.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__release__P02 v5",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N02_ACTION_ALTERED__event__P01_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N02_ACTION_ALTERED__event__P02_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N02_ACTION_ALTERED__event__P03_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P01_v004.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P01_v005.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P01 v5",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P02_v004.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P02_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P05_v007.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N03_ACTION_ALTERED__event__P02_v008.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N03_ACTION_ALTERED__event__P03_v008.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N03_ACTION_ALTERED__event__P03 v8",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P01_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P02_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P03_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P04_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P01_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P02_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P03_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P04_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P01_v004.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P02_v004.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P03_v004.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P03_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P04_v004.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N05_ACTION_ALTERED__event__P01_v008.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N05_ACTION_ALTERED__event__P01 v8",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P01_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P02_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P03_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P04_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P01_v005.png",
+      "pass": true
+    },
+    {
+      "check": "exact source-alpha copy: CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P01 v5",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P02_v005.png",
+      "pass": true
+    },
+    {
+      "check": "source preserved: DOCX/最终素材/动作/CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P03_v005.png",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_DOG_L1_REMAINS",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_DOG_L1_REMAINS",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_FATHER_L1_COLLAPSE",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_FATHER_L1_COLLAPSE",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_HUNTER",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_HUNTER",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_HUNTER",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_MOTHER_L1_COLLAPSE",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_MOTHER_L1_COLLAPSE",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_MOTHER_L1_COLLAPSE",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_CAT_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_CAT_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_CAT_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_CAT_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_CAT_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_CAT_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_CAT",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_CAT",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_CAT",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_DOG_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_DOG_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_DOG_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_DOG_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_DOG_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_DOG_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_DOG",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_DOG",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_DOG",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_FATHER_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_FATHER_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_FATHER",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_MOTHER_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_MOTHER_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_MOTHER_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_MOTHER_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_MOTHER_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_MOTHER_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_MOTHER",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_MOTHER",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_MOTHER",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N02_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N02_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N02_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N02_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N02_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N02_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N03_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N03_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N03_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N03_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N03_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N03",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N03",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N03",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N04_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N04_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N04",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N05_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N05_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N05_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N05_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N05_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N05_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N05",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N05",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N05",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N06_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N06_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N06_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N06_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N06_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N06_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N06",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N06",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N06",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N07_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N07_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N07_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N07_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N07_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N07_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N07",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N07",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N07",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N08_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N08_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N08_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N08_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N08_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N08_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N08",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N08",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N08",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N09_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N09_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N09_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N09_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N09_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N09_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N09",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N09",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N09",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N10_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N10_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N10_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N10_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N10_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N10_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N10",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N10",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N10",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N11_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N11_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N11_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N11_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N11_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N11_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N11",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N11",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N11",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N13_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N13_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N13_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N13_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N13_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N13_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N13",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N13",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N13",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N14_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N14_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N14_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N14_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N14_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N14_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N14",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N14",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N14",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N15_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N15_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N15_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N15_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N15_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N15_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N15",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N15",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N15",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N16_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N16_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N16_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N16_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N16_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N16_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N16",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N16",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N16",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N17_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N17_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N17_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N17_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N17_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N17_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N17",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N17",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N17",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N18_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N18_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N18_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N18_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N18_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N18_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N18",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N18",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N18",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N19_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N19_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N19_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N19",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N19",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N19",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N20_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N20_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N20_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N20_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N20_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N20_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N20",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N20",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N20",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N21_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N21_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N21_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N21_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N21_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N21_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N21",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N21",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N21",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N22_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N22_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N22_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N22",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N22",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N22",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N23_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N23_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N23_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N23_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N23_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N23_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N23",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N23",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N23",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N24_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N24_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N24_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N24_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N24_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N24_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N24",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N24",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N24",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N25_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N25_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N25_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N25_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N25_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N25_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N25",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N25",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N25",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N27_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N27_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N27_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N27_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N27_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N27_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N27",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N27",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N27",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N28_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N28_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N28_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N28_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N28_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N28_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N28",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N28",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N28",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N29_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N29_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N29_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N29_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N29_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N29_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N29",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N29",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N29",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N30_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N30_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N30_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N30_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N30_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N30_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N30",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N30",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N30",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N31_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N31_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N31_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N31_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N31_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N31_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N31",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N31",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N31",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N33_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N33_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N33_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N33_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N33_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N33_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N33",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N33",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N33",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N34_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N34_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N34_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N34_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N34_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N34_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N34",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N34",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N34",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N35_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N35_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N35_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N35_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N35_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N35_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N35",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N35",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N35",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N36_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N36_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N36_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N36_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N36_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N36_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N36",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N36",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N36",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N37_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N37_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N37_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N37_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N37_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N37_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N37",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N37",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N37",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N38_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N38_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N38_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N38_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N38_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N38_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N38",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N38",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N38",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N39_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N39_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N39_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N39_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N39_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N39_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N39",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N39",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N39",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N40_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N40_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N40_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N40_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N40_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N40_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N40",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N40",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N40",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N41_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N41_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N41_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N41_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N41_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N41_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N42_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N42_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N42_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N42_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N42_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N42_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N42",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N42",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N42",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N43_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N43_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N43_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N43_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N43_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N43_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N43",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N43",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N43",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N44_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N44_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N44_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N44_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N44_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N44_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N44",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N44",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N44",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N45_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N45_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N45_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N45_BACK",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N45_BACK",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N45_BACK",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N45",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N45",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N45",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N19_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N19_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "explicit user-revised altered source preferred: CHR_OTHER_NPCS_N19_ALTERED",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P03",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_ACTION_ALTERED__event__P03",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__carry_pose__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__carry_pose__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__lead_pose__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__lead_pose__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__lead_pose__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__lead_pose__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P01",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P02",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__reach__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__release__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_FATHER_ACTION_FIRST__release__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N02_ACTION_ALTERED__event__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N02_ACTION_ALTERED__event__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N02_ACTION_ALTERED__event__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N02_ACTION_ALTERED__event__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N02_ACTION_ALTERED__event__P03",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N02_ACTION_ALTERED__event__P03",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P05",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N02_ACTION_FIRST__event__P05",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N03_ACTION_ALTERED__event__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N03_ACTION_ALTERED__event__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N03_ACTION_ALTERED__event__P03",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N03_ACTION_ALTERED__event__P03",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P03",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P03",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P04",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N03_ACTION_FIRST__lift_bag__P04",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P03",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P03",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P04",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04_ACTION_ALTERED__event__P04",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P01",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P02",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P03",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P03",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P04",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P04",
+      "pass": true
+    },
+    {
+      "check": "approved hash retained: CHR_OTHER_NPCS_N04_ACTION_FIRST__event__P04",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N05_ACTION_ALTERED__event__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N05_ACTION_ALTERED__event__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P03",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P03",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P04",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N05_ACTION_FIRST__event__P04",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P01",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P01",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P02",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P02",
+      "pass": true
+    },
+    {
+      "check": "selected source is recorded variant: CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P03",
+      "pass": true
+    },
+    {
+      "check": "not automatically runtime bound: CHR_OTHER_NPCS_N06_ACTION_FIRST__event__P03",
+      "pass": true
+    },
+    {
+      "check": "source master unchanged for cutout: CHR_OTHER_NPCS_FATHER",
+      "pass": true
+    },
+    {
+      "check": "builtin result copied without pixel modification: CHR_OTHER_NPCS_FATHER",
+      "pass": true
+    },
+    {
+      "check": "registry refers exact cutout: CHR_OTHER_NPCS_FATHER",
+      "pass": true
+    },
+    {
+      "check": "RGBA alpha and matching complete subject bounds: CHR_OTHER_NPCS_FATHER",
+      "pass": true
+    },
+    {
+      "check": "complete source canvas preserved: CHR_OTHER_NPCS_FATHER",
+      "pass": true
+    },
+    {
+      "check": "source master unchanged for cutout: CHR_OTHER_NPCS_MOTHER",
+      "pass": true
+    },
+    {
+      "check": "builtin result copied without pixel modification: CHR_OTHER_NPCS_MOTHER",
+      "pass": true
+    },
+    {
+      "check": "registry refers exact cutout: CHR_OTHER_NPCS_MOTHER",
+      "pass": true
+    },
+    {
+      "check": "RGBA alpha and matching complete subject bounds: CHR_OTHER_NPCS_MOTHER",
+      "pass": true
+    },
+    {
+      "check": "complete source canvas preserved: CHR_OTHER_NPCS_MOTHER",
+      "pass": true
+    },
+    {
+      "check": "source master unchanged for cutout: CHR_OTHER_NPCS_N04",
+      "pass": true
+    },
+    {
+      "check": "builtin result copied without pixel modification: CHR_OTHER_NPCS_N04",
+      "pass": true
+    },
+    {
+      "check": "registry refers exact cutout: CHR_OTHER_NPCS_N04",
+      "pass": true
+    },
+    {
+      "check": "RGBA alpha and matching complete subject bounds: CHR_OTHER_NPCS_N04",
+      "pass": true
+    },
+    {
+      "check": "complete source canvas preserved: CHR_OTHER_NPCS_N04",
+      "pass": true
+    },
+    {
+      "check": "source master unchanged for cutout: CHR_OTHER_NPCS_N03",
+      "pass": true
+    },
+    {
+      "check": "builtin result copied without pixel modification: CHR_OTHER_NPCS_N03",
+      "pass": true
+    },
+    {
+      "check": "registry refers exact cutout: CHR_OTHER_NPCS_N03",
+      "pass": true
+    },
+    {
+      "check": "RGBA alpha and matching complete subject bounds: CHR_OTHER_NPCS_N03",
+      "pass": true
+    },
+    {
+      "check": "complete source canvas preserved: CHR_OTHER_NPCS_N03",
+      "pass": true
+    }
+  ]
+}

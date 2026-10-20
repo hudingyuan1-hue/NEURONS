@@ -1,0 +1,14 @@
+{
+  "pid": 23380,
+  "owned_window_handles": [
+    4590636,
+    2428068,
+    4983242,
+    2034438,
+    3147746
+  ],
+  "normal_WM_CLOSE_requested": true,
+  "exited": true,
+  "exit_code": null,
+  "scope": "Own hidden exported EXE initialized OpenGL; sent WM_CLOSE only to windows belonging to this exact test PID. Not full EXE playthrough."
+}

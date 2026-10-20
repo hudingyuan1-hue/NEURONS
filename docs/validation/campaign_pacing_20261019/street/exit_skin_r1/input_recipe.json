@@ -1,0 +1,11 @@
+{
+  "entry": "Unchanged checkpoint passed via --pacing-replay-snapshot",
+  "initial_skill": "SKIN already unlocked in source save, no purchases",
+  "planned_actions": [
+    "At Street exit x>=2m, Tab→existing SKIN→north",
+    "Immediately try same input while on cooldown, retain actual refusal and no-fee result",
+    "After legitimate cooldown, repeat north twice if body/HP/end state allows"
+  ],
+  "prohibited_writes": "No direct RNG, resources, skill, NPC, route, position, damage, completion or game ticking writes.",
+  "reason": "Upper-row enemies are already visible in the scene. Test whether real paid directional interference changes exposure and escape time; do not force host death."
+}

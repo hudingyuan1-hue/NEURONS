@@ -3,6 +3,9 @@ const Campaign=preload("res://scripts/campaign.gd")
 const Store=preload("res://scripts/core/save_store.gd")
 const Feedback=preload("res://scripts/ui/feedback_audio.gd")
 const Opening=preload("res://scripts/ui/opening_flow.gd")
+const UIStyle=preload("res://scripts/ui/ui_style.gd")
+const UIPaint=preload("res://scripts/ui/ui_paint.gd")
+const UIPresentation=preload("res://scripts/ui/ui_presentation.gd")
 var store=Store.new()
 var active:Control
 var content:VBoxContainer
@@ -18,15 +21,14 @@ var pending_invader_id:int=0
 var title_audio
 var exiting:bool=false
 var startup_opening
+var title_paint
 
 func _ready() -> void:
  process_mode=Node.PROCESS_MODE_ALWAYS
  mouse_filter=Control.MOUSE_FILTER_IGNORE
  get_tree().auto_accept_quit=false
  get_window().close_requested.connect(request_exit)
- theme=Theme.new()
- theme.default_font=load("res://assets/fonts/NotoSansCJKsc-Regular.otf")
- theme.default_font_size=21
+ theme=UIStyle.theme_for()
  for argument in OS.get_cmdline_user_args():
   if argument.begins_with("--save-root="):store.root=argument.trim_prefix("--save-root=")
  var config:=ConfigFile.new()
@@ -46,6 +48,18 @@ func _ready() -> void:
   startup_opening.completed.connect(func(_sequence,_skipped):startup_opening.queue_free();startup_opening=null)
   startup_opening.start("startup")
  var checks:Dictionary={
+  "--ui-design-check":"ui_visual_20261020",
+  "--ui-narrative-check":"ui_narrative_20261020",
+  "--all-spaces-live-check":"all_spaces_live_check",
+  "--spatial-neural-sequence-check":"spatial_neural_sequence_check",
+  "--street-hand-grips-check":"street_hand_grips_check",
+  "--street-hand-grips-live-check":"street_hand_grips_live_check",
+  "--street-double-head-check":"street_double_head_check",
+  "--street-double-head-live-check":"street_double_head_live_check",
+  "--street-double-face-retreat-check":"street_double_face_retreat_check",
+  "--street-double-face-retreat-live-check":"street_double_face_retreat_live_check",
+  "--street-mixed-crowd-check":"street_mixed_crowd_check",
+  "--full-campaign-spatial-natural-check":"full_campaign_spatial_natural_check",
   "--metric-bedroom-check":"metric_bedroom_check",
   "--institution-space-check":"institution_space_check",
   "--institution-events-check":"institution_events_check",
@@ -61,6 +75,7 @@ func _ready() -> void:
   "--street-chapter-check":"street_chapter_check",
   "--combat-noise-check":"combat_noise_check",
   "--audio-delivery-check":"audio_delivery_check",
+  "--music-context-check":"music_context_check_20261019",
   "--street-natural-check":"street_natural_check",
   "--street-props-check":"street_props_check",
   "--street-materials-check":"street_materials_check",
@@ -146,24 +161,27 @@ func create_title() -> void:
  title_audio=Feedback.new()
  add_child(title_audio)
  title_audio.set_level("master",float(preferences.master))
- title_audio.cue("MUS_MENU","title")
- var bg:=ColorRect.new()
- bg.color=Color("17272a")
- bg.size=Vector2(1280,720)
- bg.mouse_filter=Control.MOUSE_FILTER_IGNORE
+ title_audio.set_music("MUS_MENU")
+ var bg:=UIPaint.new()
+ title_paint=bg
  add_child(bg)
+ var edition:=Label.new();edition.text="自主角色 / 神经干预";edition.position=Vector2(78,42)
+ edition.add_theme_font_size_override("font_size",14);edition.add_theme_color_override("font_color",UIStyle.MUTED);add_child(edition)
  content=VBoxContainer.new()
- content.position=Vector2(360,110)
- content.size=Vector2(560,500)
- content.add_theme_constant_override("separation",16)
+ content.position=Vector2(78,116)
+ content.size=Vector2(470,500)
+ content.add_theme_constant_override("separation",18)
  add_child(content)
  var title:=Label.new()
- title.text="N E U R O N S"
- title.add_theme_font_size_override("font_size",42)
+ title.text="NEURONS"
+ title.add_theme_font_size_override("font_size",58)
  content.add_child(title)
  message=Label.new()
  message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
- message.text="自主逃离与神经干预\n当前可玩：开场、卧室、医院、精神病院、脑部探索、第五关、Street主线与隐藏Street。人物与场景仍有占位；部分人物专属行为及正式音画继续制作。"
+ message.text="他选择去路。\n你改变身体的回应。"
+ message.add_theme_color_override("font_color",UIStyle.MUTED)
+ message.add_theme_font_size_override("font_size",19)
+ message.custom_minimum_size.y=82
  content.add_child(message)
  add_button("继续游戏",continue_game,not store.load_snapshot().ok)
  add_button("建立档案",show_profile)
@@ -186,29 +204,40 @@ func add_button(text:String,callback:Callable,disabled:bool=false) -> Button:
  var button:=Button.new()
  button.name=callback.get_method()
  button.text=text
- button.custom_minimum_size=Vector2(560,43)
+ button.custom_minimum_size=Vector2(470,46)
+ button.alignment=HORIZONTAL_ALIGNMENT_LEFT
+ UIStyle.style_button(button)
  button.disabled=disabled
  button.pressed.connect(callback)
  content.add_child(button)
  return button
 
 func show_profile() -> void:
+ if is_instance_valid(title_paint):title_paint.variant="profile";title_paint.queue_redraw()
  for child in content.get_children():child.queue_free()
  await get_tree().process_frame
  var label:=Label.new()
  label.text="玩家姓名 / 入侵者档案"
+ label.add_theme_font_size_override("font_size",26)
  content.add_child(label)
  name_field=LineEdit.new()
  name_field.max_length=24
+ name_field.custom_minimum_size.y=48
  pending_invader_id=randi_range(1000,9999)
  name_field.text="张%d"%pending_invader_id
  content.add_child(name_field)
+ var number:=Label.new();number.text="档案编号 / %04d"%pending_invader_id
+ number.add_theme_font_size_override("font_size",14);number.add_theme_color_override("font_color",UIStyle.MUTED);content.add_child(number)
  message=Label.new()
- message.text="统一玩家小怪物采用占位；正式造型由你制作。"
+ message.text="输入姓名，建立本次档案。"
+ message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+ message.custom_minimum_size.y=64
+ message.add_theme_color_override("font_color",UIStyle.MUTED)
  content.add_child(message)
  overwrite_armed=false
  add_button("建立并开始",new_game)
  add_button("返回",create_title)
+ name_field.grab_focus()
 
 func new_game() -> void:
  if name_field.text.strip_edges().is_empty():
@@ -218,7 +247,7 @@ func new_game() -> void:
   overwrite_armed=true
   message.text="已有档案；再次点击“建立并开始”确认覆盖（保留上一份备份）。"
   return
- var profile:Dictionary={"name":name_field.text.strip_edges(),"invader_id":pending_invader_id,"tutorial_completed":false,"opening_completed":is_check_run() and not "--opening-campaign-check" in OS.get_cmdline_user_args()}
+ var profile:Dictionary={"name":name_field.text.strip_edges(),"invader_id":pending_invader_id,"tutorial_completed":false,"opening_completed":is_check_run() and not "--opening-campaign-check" in OS.get_cmdline_user_args() and not "--full-campaign-spatial-natural-check" in OS.get_cmdline_user_args()}
  launch(profile,{})
  active.save_requested=true
 
@@ -243,6 +272,7 @@ func launch(profile:Dictionary,snapshot:Dictionary) -> void:
  active.return_to_title.connect(close_campaign)
  active.new_game_requested.connect(func():close_campaign();show_profile())
  add_child(active)
+ var presentation:=UIPresentation.new();presentation.name="UIPresentation";presentation.app=active;active.add_child(presentation)
  active.audio.set_level("master",float(preferences.master))
  for channel in preferences.channels:active.audio.set_level(channel,float(preferences.channels[channel]))
  active.audio.level_changed.connect(func(channel:String,value:float):
@@ -269,7 +299,8 @@ func show_settings() -> void:
   content.remove_child(child)
   child.queue_free()
  var heading:=Label.new()
- heading.text="设置\n主音量"
+ heading.text="声音与界面\n总音量"
+ heading.add_theme_font_size_override("font_size",24)
  content.add_child(heading)
  volume_slider=HSlider.new()
  volume_slider.min_value=0
@@ -279,14 +310,17 @@ func show_settings() -> void:
  content.add_child(volume_slider)
  reduced_box=CheckBox.new()
  reduced_box.text="降低扫描线与界面动效"
+ reduced_box.add_theme_font_size_override("font_size",16)
  reduced_box.button_pressed=bool(preferences.reduced)
  content.add_child(reduced_box)
  status_box=CheckBox.new()
  status_box.text="受伤后自动显示角色状态（X可手动开关）"
+ status_box.add_theme_font_size_override("font_size",16)
  status_box.button_pressed=bool(preferences.auto_status)
  content.add_child(status_box)
  dialogue_box=CheckBox.new()
  dialogue_box.text="对白自动继续 (关闭后手动继续)"
+ dialogue_box.add_theme_font_size_override("font_size",16)
  dialogue_box.button_pressed=bool(preferences.auto_dialogue)
  content.add_child(dialogue_box)
  message=Label.new()

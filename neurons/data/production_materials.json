@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "status": "representative_gpu_preview_pending_art_quality_review",
+  "master_texture": "res://assets/production/materials/painterly_material_atlas_v002.png",
+  "master_sha256": "7620126a15c103f42f5362100b4c60229855ec9e5753309565414d353c82a616",
+  "materials": {
+    "aged_floorboards": {
+      "texture": "res://assets/production/materials/aged_floorboards_v002.png",
+      "source_cell": [
+        0,
+        0
+      ],
+      "source_region_px": [
+        4,
+        4,
+        310,
+        310
+      ],
+      "world_span_m": 2.1,
+      "sha256": "837a4040e34b66c1ef1f75a85485d3067647d60ff49948c0e59ef3d6b3a2f34f",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "worn_plaster": {
+      "texture": "res://assets/production/materials/worn_plaster_v002.png",
+      "source_cell": [
+        1,
+        0
+      ],
+      "source_region_px": [
+        318,
+        4,
+        623,
+        310
+      ],
+      "world_span_m": 6.8,
+      "sha256": "ef6cf5e6ca3dbcc8c589d02f60b2bc56e7d9fb73996dd106f0ee4b8b164438fc",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "institution_tile": {
+      "texture": "res://assets/production/materials/institution_tile_v002.png",
+      "source_cell": [
+        2,
+        0
+      ],
+      "source_region_px": [
+        631,
+        4,
+        936,
+        310
+      ],
+      "world_span_m": 2.4,
+      "sha256": "bbc14e16919c12e1563c4467b5bb311cabfd81ad65b0e94a0b7a8e879ff9e911",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "sage_paint": {
+      "texture": "res://assets/production/materials/sage_paint_v002.png",
+      "source_cell": [
+        3,
+        0
+      ],
+      "source_region_px": [
+        944,
+        4,
+        1250,
+        310
+      ],
+      "world_span_m": 5.5,
+      "sha256": "0e9874f0dde82fd67d00eb2a2cac26b0843823c7473de48b3e658b0c59b7a22f",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "cortical_fibers": {
+      "texture": "res://assets/production/materials/cortical_fibers_v002.png",
+      "source_cell": [
+        0,
+        1
+      ],
+      "source_region_px": [
+        4,
+        318,
+        310,
+        623
+      ],
+      "world_span_m": 14.0,
+      "sha256": "a10076c042482dd4562e29c796d8423d3e5fdcb5893c1e9cc2d2c086954157f4",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "white_matter": {
+      "texture": "res://assets/production/materials/white_matter_v002.png",
+      "source_cell": [
+        1,
+        1
+      ],
+      "source_region_px": [
+        318,
+        318,
+        623,
+        623
+      ],
+      "world_span_m": 15.0,
+      "sha256": "eccd459ef17dce671ea9dd06019d543a7551441c0d7d770150b6d1204312bd25",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "street_stone": {
+      "texture": "res://assets/production/materials/street_stone_v002.png",
+      "source_cell": [
+        2,
+        1
+      ],
+      "source_region_px": [
+        631,
+        318,
+        936,
+        623
+      ],
+      "world_span_m": 3.4,
+      "sha256": "553c20c178962158410aa56916c75f7204421a3a56cfede6a922bae744499181",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "asphalt": {
+      "texture": "res://assets/production/materials/asphalt_v002.png",
+      "source_cell": [
+        3,
+        1
+      ],
+      "source_region_px": [
+        944,
+        318,
+        1250,
+        623
+      ],
+      "world_span_m": 6.0,
+      "sha256": "408b74a06ab27123195ee65b7f0169733de9b34d1ddaeaab302808eadf81d393",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "furniture_wood": {
+      "texture": "res://assets/production/materials/furniture_wood_v002.png",
+      "source_cell": [
+        0,
+        2
+      ],
+      "source_region_px": [
+        4,
+        631,
+        310,
+        936
+      ],
+      "world_span_m": 2.4,
+      "sha256": "10e154a3faaf11eac0174e8228d6977528f33f7d2e3bfb1a4172f70ab712be28",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "painted_metal": {
+      "texture": "res://assets/production/materials/painted_metal_v002.png",
+      "source_cell": [
+        1,
+        2
+      ],
+      "source_region_px": [
+        318,
+        631,
+        623,
+        936
+      ],
+      "world_span_m": 3.4,
+      "sha256": "cd2ac16e2dd5b2662d4be0e8c8947aa3cf8dd1e58c9ce93467bed3af065249f6",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "ivory_fabric": {
+      "texture": "res://assets/production/materials/ivory_fabric_v002.png",
+      "source_cell": [
+        2,
+        2
+      ],
+      "source_region_px": [
+        631,
+        631,
+        936,
+        936
+      ],
+      "world_span_m": 2.0,
+      "sha256": "b19fa245223d556509f681f0c62d7c53259c5785ca8b64f608adb7be257f8735",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "aged_paper": {
+      "texture": "res://assets/production/materials/aged_paper_v002.png",
+      "source_cell": [
+        3,
+        2
+      ],
+      "source_region_px": [
+        944,
+        631,
+        1250,
+        936
+      ],
+      "world_span_m": 1.8,
+      "sha256": "2215d5e4fd96d735d569006f14a473be6be68ebfd0956fcb7699c28dd0e4743c",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "bark": {
+      "texture": "res://assets/production/materials/bark_v002.png",
+      "source_cell": [
+        0,
+        3
+      ],
+      "source_region_px": [
+        4,
+        944,
+        310,
+        1250
+      ],
+      "world_span_m": 2.8,
+      "sha256": "33447fd82582d2b0a17315b5116d4e28908e8b8d82d2a943a427da8cd3a50bf8",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "tarnished_brass": {
+      "texture": "res://assets/production/materials/tarnished_brass_v002.png",
+      "source_cell": [
+        1,
+        3
+      ],
+      "source_region_px": [
+        318,
+        944,
+        623,
+        1250
+      ],
+      "world_span_m": 2.2,
+      "sha256": "20aaf19cc6771424ad09824ce06e2066e9eb06697ec1922a39b8cf601386bb47",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "smoky_glass": {
+      "texture": "res://assets/production/materials/smoky_glass_v002.png",
+      "source_cell": [
+        2,
+        3
+      ],
+      "source_region_px": [
+        631,
+        944,
+        936,
+        1250
+      ],
+      "world_span_m": 3.2,
+      "sha256": "6245ed4eeb2f981b4bbf1e8ddf97b654da869e7e605040534d14017bc6fcff52",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    },
+    "concrete": {
+      "texture": "res://assets/production/materials/concrete_v002.png",
+      "source_cell": [
+        3,
+        3
+      ],
+      "source_region_px": [
+        944,
+        944,
+        1250,
+        1250
+      ],
+      "world_span_m": 4.5,
+      "sha256": "f599dcb3be736963f090ae62ad51fade544ec29b7e1adce1da1615ad0a1f48b3",
+      "filter": "linear",
+      "repeat": "mirrored_repeat",
+      "notes": "Flat hand-painted material only; architecture/doors/placement come from current metric geometry."
+    }
+  },
+  "render_policy": {
+    "geometry_unchanged": true,
+    "world_space_uv": true,
+    "voids_remain_open": true,
+    "flat_normals_only": true,
+    "source": "Built-in image_gen: user-approved two paintings are style-only references; no generated room geometry."
+  }
+}

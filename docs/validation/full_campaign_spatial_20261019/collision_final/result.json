@@ -1,0 +1,33 @@
+{
+  "failures": [
+    "Production runtime error: BedBody.clear:54 attempted Dictionary -> Rect2 on InstitutionLayout.static_walls. Boolean false from the aborted call made the negative assertion appear to pass; the run is invalid until the engine error is fixed."
+  ],
+  "passes": [
+    "v1 solid=false floor layer permits actor footprint",
+    "v1 solid=false floor layer permits actor segment",
+    "v1 solid=false floor layer permits oriented bed",
+    "v1 collision=false floor layer permits actor footprint",
+    "v1 collision=false floor layer permits actor segment",
+    "v1 collision=false floor layer permits oriented bed",
+    "v1 separate banks preserve true centre passage, not enclosing hull",
+    "v1 real bank still blocks actor and segment",
+    "v1 oriented bed uses actual banks and centre opening",
+    "v2 solid=false floor layer permits actor footprint",
+    "v2 solid=false floor layer permits actor segment",
+    "v2 solid=false floor layer permits oriented bed",
+    "v2 collision=false floor layer permits actor footprint",
+    "v2 collision=false floor layer permits actor segment",
+    "v2 collision=false floor layer permits oriented bed",
+    "v2 separate banks preserve true centre passage, not enclosing hull",
+    "v2 real bank still blocks actor and segment",
+    "v2 oriented bed uses actual banks and centre opening",
+    "oriented bed cannot cross architectural walls collection",
+    "oriented bed cannot cross solid decorative rail",
+    "non-solid decorative layer does not become bed blocker",
+    "oriented bed respects institution static_walls as real walls",
+    "combat v2 respects explicit collision=false independently from solid",
+    "combat v3 respects explicit collision=false independently from solid"
+  ],
+  "scope": "Explicit local nonphysical/compound/wall/rail fixtures, real v1/v2/v3 production collision APIs. No game-rule mutation or natural-play claim.",
+  "engine_error_observed": "SCRIPT ERROR: Trying to assign value of type Dictionary to a variable of type Rect2. at clear (res://scripts/core/bed_body.gd:54), called by shared_collision_compat_20261019.gd:53."
+}

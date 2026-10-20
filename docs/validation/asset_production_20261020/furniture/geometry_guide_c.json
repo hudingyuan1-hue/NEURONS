@@ -1,0 +1,445 @@
+{
+  "actual_image_px": [
+    720,
+    720
+  ],
+  "coordinate_canvas_px": [
+    1536,
+    1536
+  ],
+  "items": [
+    {
+      "anchor_mode": "footprint_center",
+      "cell_index": 0,
+      "cell_rect_px": [
+        0.0,
+        0.0,
+        512,
+        512
+      ],
+      "cell_xy": [
+        0,
+        0
+      ],
+      "geometry_is_only_orientation_scale_guide": true,
+      "guide_anchor_px": [
+        256.0,
+        405.205322265625
+      ],
+      "guide_ground_corners_px": [
+        [
+          155.209716796875,
+          360.209716796875
+        ],
+        [
+          327.992919921875,
+          349.410888671875
+        ],
+        [
+          356.790283203125,
+          450.201171875
+        ],
+        [
+          184.0068359375,
+          461.0
+        ]
+      ],
+      "guide_pixels_per_world_pixel": 4.49956125955349,
+      "id": "stool",
+      "original_furniture_id": "stool",
+      "role": "body",
+      "world_height_m": 0.44,
+      "world_rect_m": [
+        2.34999990463257,
+        4.0,
+        0.400000005960464,
+        0.400000005960464
+      ]
+    },
+    {
+      "anchor_mode": "footprint_center",
+      "cell_index": 1,
+      "cell_rect_px": [
+        512.0,
+        0.0,
+        512,
+        512
+      ],
+      "cell_xy": [
+        1,
+        0
+      ],
+      "geometry_is_only_orientation_scale_guide": true,
+      "guide_anchor_px": [
+        256.0,
+        405.709716796875
+      ],
+      "guide_ground_corners_px": [
+        [
+          156.12109375,
+          361.12109375
+        ],
+        [
+          327.341796875,
+          350.419677734375
+        ],
+        [
+          355.87841796875,
+          450.298583984375
+        ],
+        [
+          184.657958984375,
+          461.0
+        ]
+      ],
+      "guide_pixels_per_world_pixel": 5.40469172465314,
+      "id": "stool_parcel",
+      "original_furniture_id": "stool_parcel",
+      "role": "body",
+      "world_height_m": 0.3,
+      "world_rect_m": [
+        2.38499999046326,
+        4.03499984741211,
+        0.330000013113022,
+        0.330000013113022
+      ]
+    },
+    {
+      "anchor_mode": "footprint_center",
+      "cell_index": 2,
+      "cell_rect_px": [
+        1024.0,
+        0.0,
+        512,
+        512
+      ],
+      "cell_xy": [
+        2,
+        0
+      ],
+      "geometry_is_only_orientation_scale_guide": true,
+      "guide_anchor_px": [
+        256.000244140625,
+        387.884033203125
+      ],
+      "guide_ground_corners_px": [
+        [
+          123.919677734375,
+          328.919311523438
+        ],
+        [
+          350.34326171875,
+          314.767944335938
+        ],
+        [
+          388.08056640625,
+          446.8486328125
+        ],
+        [
+          161.656982421875,
+          461.0
+        ]
+      ],
+      "guide_pixels_per_world_pixel": 3.93096767039149,
+      "id": "box_lower",
+      "original_furniture_id": "box_lower",
+      "role": "body",
+      "world_height_m": 0.45,
+      "world_rect_m": [
+        3.09999990463257,
+        3.95000004768372,
+        0.600000023841858,
+        0.600000023841858
+      ]
+    },
+    {
+      "anchor_mode": "footprint_center",
+      "cell_index": 3,
+      "cell_rect_px": [
+        0.0,
+        512.0,
+        512,
+        512
+      ],
+      "cell_xy": [
+        0,
+        1
+      ],
+      "geometry_is_only_orientation_scale_guide": true,
+      "guide_anchor_px": [
+        256.000244140625,
+        387.884033203125
+      ],
+      "guide_ground_corners_px": [
+        [
+          123.919677734375,
+          328.919311523438
+        ],
+        [
+          350.34326171875,
+          314.767944335938
+        ],
+        [
+          388.08056640625,
+          446.8486328125
+        ],
+        [
+          161.656982421875,
+          461.0
+        ]
+      ],
+      "guide_pixels_per_world_pixel": 3.93096767039149,
+      "id": "box_upper",
+      "original_furniture_id": "box_upper",
+      "role": "body",
+      "world_height_m": 0.45,
+      "world_rect_m": [
+        3.09999990463257,
+        3.95000004768372,
+        0.600000023841858,
+        0.600000023841858
+      ]
+    },
+    {
+      "anchor_mode": "footprint_center",
+      "cell_index": 4,
+      "cell_rect_px": [
+        512.0,
+        512.0,
+        512,
+        512
+      ],
+      "cell_xy": [
+        1,
+        1
+      ],
+      "geometry_is_only_orientation_scale_guide": true,
+      "guide_anchor_px": [
+        255.999755859375,
+        408.427612304688
+      ],
+      "guide_ground_corners_px": [
+        [
+          174.8203125,
+          364.275390625
+        ],
+        [
+          309.5439453125,
+          355.855163574219
+        ],
+        [
+          337.179443359375,
+          452.579772949219
+        ],
+        [
+          202.455810546875,
+          461.0
+        ]
+      ],
+      "guide_pixels_per_world_pixel": 2.15903131185827,
+      "id": "storage",
+      "original_furniture_id": "storage",
+      "role": "body",
+      "world_height_m": 1.4,
+      "world_rect_m": [
+        5.44999980926514,
+        0.949999988079071,
+        0.649999976158142,
+        0.800000011920929
+      ]
+    },
+    {
+      "anchor_mode": "footprint_center",
+      "cell_index": 5,
+      "cell_rect_px": [
+        1024.0,
+        512.0,
+        512,
+        512
+      ],
+      "cell_xy": [
+        2,
+        1
+      ],
+      "geometry_is_only_orientation_scale_guide": true,
+      "guide_anchor_px": [
+        256.0,
+        424.09521484375
+      ],
+      "guide_ground_corners_px": [
+        [
+          189.333374023438,
+          394.333312988281
+        ],
+        [
+          303.619018554688,
+          387.190490722656
+        ],
+        [
+          322.666625976563,
+          453.857116699219
+        ],
+        [
+          208.380981445313,
+          461.0
+        ]
+      ],
+      "guide_pixels_per_world_pixel": 2.38095242314803,
+      "id": "rack_coat",
+      "original_furniture_id": "rack_coat",
+      "role": "coat",
+      "world_height_m": 1.4,
+      "world_rect_m": [
+        4.19999980926514,
+        0.449999988079071,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "anchor_mode": "footprint_center",
+      "cell_index": 6,
+      "cell_rect_px": [
+        0.0,
+        1024.0,
+        512,
+        512
+      ],
+      "cell_xy": [
+        0,
+        2
+      ],
+      "geometry_is_only_orientation_scale_guide": true,
+      "guide_anchor_px": [
+        256.0,
+        412.318115234375
+      ],
+      "guide_ground_corners_px": [
+        [
+          145.237548828125,
+          375.962890625
+        ],
+        [
+          342.46630859375,
+          363.635986328125
+        ],
+        [
+          366.7626953125,
+          448.673095703125
+        ],
+        [
+          169.533935546875,
+          460.999755859375
+        ]
+      ],
+      "guide_pixels_per_world_pixel": 8.93246306142544,
+      "id": "bedside_book",
+      "original_furniture_id": "bedside_book",
+      "role": "body",
+      "world_height_m": 0.0384615384615385,
+      "world_rect_m": [
+        0.0,
+        0.0,
+        0.230000004172325,
+        0.170000001788139
+      ]
+    },
+    {
+      "anchor_mode": "footprint_center",
+      "cell_index": 7,
+      "cell_rect_px": [
+        512.0,
+        1024.0,
+        512,
+        512
+      ],
+      "cell_xy": [
+        1,
+        2
+      ],
+      "geometry_is_only_orientation_scale_guide": true,
+      "guide_anchor_px": [
+        256.0,
+        436.47607421875
+      ],
+      "guide_ground_corners_px": [
+        [
+          186.687622070313,
+          419.882446289063
+        ],
+        [
+          313.564453125,
+          411.952758789063
+        ],
+        [
+          325.312255859375,
+          453.0703125
+        ],
+        [
+          198.435546875,
+          461.0
+        ]
+      ],
+      "guide_pixels_per_world_pixel": 7.34240735832197,
+      "id": "bedside_clock",
+      "original_furniture_id": "bedside_clock",
+      "role": "clock",
+      "world_height_m": 0.22,
+      "world_rect_m": [
+        0.0,
+        0.0,
+        0.180000007152557,
+        0.100000001490116
+      ]
+    },
+    {
+      "anchor_mode": "footprint_center",
+      "cell_index": 8,
+      "cell_rect_px": [
+        1024.0,
+        1024.0,
+        512,
+        512
+      ],
+      "cell_xy": [
+        2,
+        2
+      ],
+      "geometry_is_only_orientation_scale_guide": true,
+      "guide_anchor_px": [
+        256.000122070313,
+        409.640380859375
+      ],
+      "guide_ground_corners_px": [
+        [
+          129.576049804688,
+          372.50341796875
+        ],
+        [
+          357.139282226563,
+          358.28076171875
+        ],
+        [
+          382.424072265625,
+          446.77734375
+        ],
+        [
+          154.86083984375,
+          461.0
+        ]
+      ],
+      "guide_pixels_per_world_pixel": 8.77944669714069,
+      "id": "desk_paper",
+      "original_furniture_id": "desk_paper",
+      "role": "paper",
+      "world_height_m": 0.0384615384615385,
+      "world_rect_m": [
+        0.0,
+        0.0,
+        0.270000010728836,
+        0.180000007152557
+      ]
+    }
+  ],
+  "source": "Original remaining bedroom slots plus separately moving contents; no additional gameplay object IDs or placements."
+}

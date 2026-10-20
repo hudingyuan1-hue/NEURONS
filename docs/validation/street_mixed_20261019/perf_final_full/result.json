@@ -1,0 +1,10 @@
+{
+  "failures": [],
+  "passes": [
+    "performance sample restores same ten-body explicit occupancy fixture",
+    "timed ordinary ten-body encounter actually reaches next source segment alive",
+    "timed passage retains unique damage receipts and original identities"
+  ],
+  "rendered": true,
+  "scope": "New fourteen-identity dual-door/rigid-body finite recovery and separate ten-body ordinary-process passage. Initial object deaths are explicit occupancy fixtures, never claimed as actual attack/death events. Real disk/pause/movement/crossing retained. Not old four-body retest, final art/audio, all crowds or B7."
+}

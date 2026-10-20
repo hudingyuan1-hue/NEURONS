@@ -1,0 +1,11 @@
+{
+  "entry": "Unchanged actual exit baseline checkpoint",
+  "planned_actions": [
+    "At x>=2m, real star-cabinet purchases",
+    "Close normally, allow existing automatic growth dialogue",
+    "Real Tab/STARTLE twice separated by original cooldown"
+  ],
+  "prohibited_writes": "No direct RNG, resources, skill, NPC, route, position, damage, completion or game ticking writes.",
+  "purchases": "Actual star-cabinet mouse node and confirm: TEMP1 cluster then STARTLE2 clusters; no free unlocks or resources",
+  "reason": "Bounded existing backward intervention, not a new mechanic or forced death."
+}

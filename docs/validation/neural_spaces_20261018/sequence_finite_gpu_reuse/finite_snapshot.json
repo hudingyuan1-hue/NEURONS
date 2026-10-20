@@ -1,0 +1,3753 @@
+{
+  "action_left": -0.000000000000000270616862252382,
+  "action_phase": "autonomy",
+  "arrival_left": 0.0,
+  "arrival_origin": [
+    0.0,
+    0.0
+  ],
+  "asylum_state": {
+    "actors": {
+      "archivist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "office",
+        "route": []
+      },
+      "assistant": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "cleaner": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "bathroom",
+        "route": []
+      },
+      "corner_patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "double_ward",
+        "route": []
+      },
+      "doctor": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "guard": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "office",
+        "route": []
+      },
+      "head_nurse": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "corridor",
+        "route": []
+      },
+      "informer": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "activity",
+        "route": []
+      },
+      "isolation_orderly": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "quiet",
+        "route": []
+      },
+      "labor_patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "workshop",
+        "route": []
+      },
+      "med_nurse": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "pharmacy",
+        "route": []
+      },
+      "ordinary_orderly": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "ward",
+        "route": []
+      },
+      "patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "office",
+        "route": []
+      },
+      "pharmacist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "pharmacy",
+        "route": []
+      },
+      "porter": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "corridor",
+        "route": []
+      },
+      "postop_patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "activity",
+        "route": []
+      },
+      "registration_nurse": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "speaker": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "group_therapy",
+        "route": []
+      },
+      "supervisor": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "workshop",
+        "route": []
+      },
+      "therapist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "group_therapy",
+        "route": []
+      },
+      "transport_patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "corridor",
+        "route": []
+      }
+    },
+    "batches": {},
+    "body": {},
+    "carry": {},
+    "clock": 0.0,
+    "cup_full": false,
+    "diagnosed": false,
+    "dispensed": false,
+    "exam": {},
+    "groups": {
+      "chief": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "cleaner": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "clinic": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "corner": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "isolation": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "office": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "orderly": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "patient": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "pharmacy": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "postop": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "registration": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "therapy": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "transport": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "work": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      }
+    },
+    "holder": "",
+    "medicine_stop": 0.0,
+    "order_delivered": false,
+    "order_source": "",
+    "order_written": false,
+    "receipts": {},
+    "refused": false,
+    "registered": false,
+    "regrab_elapsed": 0.8,
+    "room_left": {},
+    "swallowed": false,
+    "ward_events": {},
+    "wrist_checked": false,
+    "wrist_done": false
+  },
+  "audio_state": {
+    "playing": [],
+    "receipts": {}
+  },
+  "closing_left": 0.0,
+  "combat_state": {},
+  "completed": [
+    "atrium:0",
+    "atrium:1",
+    "atrium:2",
+    "memory:0",
+    "memory:1",
+    "memory:2",
+    "memory:3",
+    "memory:4",
+    "memory:5",
+    "memory:6",
+    "visual:0",
+    "visual:1",
+    "visual:2",
+    "visual:3",
+    "visual:4",
+    "visual:5",
+    "decision:0",
+    "decision:1",
+    "decision:2",
+    "decision:3",
+    "decision:4",
+    "decision:5",
+    "decision:6",
+    "body:0",
+    "body:1",
+    "body:2",
+    "body:3",
+    "body:4",
+    "body:5",
+    "body:6",
+    "body:7",
+    "bridge:0",
+    "bridge:1",
+    "bridge:2",
+    "bridge:3",
+    "rhythm:0",
+    "rhythm:1",
+    "rhythm:2",
+    "rhythm:3",
+    "index:0",
+    "index:1",
+    "index:2",
+    "index:3",
+    "index:4",
+    "index:5",
+    "switch:0",
+    "switch:1",
+    "switch:2",
+    "verify:0",
+    "verify:1",
+    "verify:2",
+    "verify:3",
+    "verify:4",
+    "verify:5",
+    "verify:6",
+    "identity:0",
+    "identity:1",
+    "identity:2",
+    "identity:3",
+    "identity:4",
+    "identity:5",
+    "identity:6"
+  ],
+  "controlled_route": false,
+  "cortex_state": {
+    "actors": {
+      "backward": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "atrium",
+        "route": [],
+        "stand_done": false
+      },
+      "blindfold": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "visual",
+        "route": [],
+        "stand_done": false
+      },
+      "double_face": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "identity",
+        "route": [],
+        "stand_done": false
+      },
+      "dual_head": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "bridge",
+        "route": [],
+        "stand_done": false
+      },
+      "face_press": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "verify",
+        "route": [],
+        "stand_done": false
+      },
+      "faceless": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "index",
+        "route": [],
+        "stand_done": false
+      },
+      "misaligned": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "body",
+        "route": [],
+        "stand_done": false
+      },
+      "repeater": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "decision",
+        "route": [],
+        "stand_done": false
+      },
+      "reverse": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "switch",
+        "route": [],
+        "stand_done": false
+      },
+      "stitched": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "memory",
+        "route": [],
+        "stand_done": false
+      },
+      "twitch": {
+        "elapsed": 0.0,
+        "facing": [
+          0.0,
+          -1.0
+        ],
+        "phase": "absent",
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "room": "rhythm",
+        "route": [],
+        "stand_done": false
+      }
+    },
+    "back": {
+      "back_seen": false,
+      "elapsed": 0.0,
+      "front_seen": false,
+      "phase": "idle"
+    },
+    "batches": {},
+    "body": {},
+    "carry": {
+      "asylum": {},
+      "hospital": {}
+    },
+    "clamp": {
+      "attempted": false,
+      "elapsed": 0.0,
+      "hand_out": false,
+      "hurt": false,
+      "pain_light": false,
+      "phase": "idle",
+      "retract_left": 0.0
+    },
+    "clock": 0.0,
+    "completed_observations": {},
+    "groups": {
+      "backward": {
+        "checks": 1.0,
+        "drawn": true,
+        "pending": true
+      },
+      "blindfold": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "double_face": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "dual_head": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "face_press": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "faceless": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "misaligned": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "repeater": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "reverse": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "stitched": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      },
+      "twitch": {
+        "checks": 0.0,
+        "drawn": false,
+        "pending": false
+      }
+    },
+    "holder": "",
+    "mimic": {
+      "attempted": false,
+      "elapsed": 0.0,
+      "phase": "idle",
+      "source": {},
+      "witnessed": false,
+      "written": false
+    },
+    "observation": {},
+    "observed_fields": {},
+    "paper": {
+      "attempted": false,
+      "elapsed": 0.0,
+      "gripped": false,
+      "original": {
+        "injury": null,
+        "name": null,
+        "number": null,
+        "signature": null,
+        "source_event": {}
+      },
+      "phase": "idle",
+      "progress": 0.0,
+      "read": false,
+      "read_fields": {},
+      "remaining": "whole",
+      "revised": {
+        "actual_records": [],
+        "injury": null,
+        "name": null,
+        "number": null,
+        "signature": null,
+        "source_event_id": null
+      },
+      "source": {},
+      "taken": false
+    },
+    "playbacks": {},
+    "receipts": {},
+    "regrab_elapsed": 0.8,
+    "room_left": {},
+    "upper_state": {
+      "bridge": {
+        "elapsed": 0.0,
+        "heard": [],
+        "phase": "idle",
+        "playback": 0.0,
+        "source": {},
+        "spoken": []
+      },
+      "face": {
+        "attempted": false,
+        "contact": false,
+        "elapsed": 0.0,
+        "had_body": false,
+        "phase": "idle"
+      },
+      "identity": {
+        "back": false,
+        "elapsed": 0.0,
+        "front": false,
+        "left_result": false,
+        "phase": "idle",
+        "right_result": false,
+        "turn_started": false
+      },
+      "index": {
+        "attempted": false,
+        "elapsed": 0.0,
+        "open": false,
+        "phase": "idle",
+        "seen_removed": false,
+        "seen_start": false
+      },
+      "rhythm": {
+        "bypass": false,
+        "count": 0.0,
+        "direction": 1.0,
+        "elapsed": 0.0,
+        "from": [],
+        "phase": "gap",
+        "to": [],
+        "wait_cycle": -1.0,
+        "waiting": false
+      },
+      "switch": {
+        "attempted": false,
+        "await_landmark": false,
+        "elapsed": 0.0,
+        "phase": "idle",
+        "route": [],
+        "steps": []
+      }
+    },
+    "video": {
+      "elapsed": 0.0,
+      "mask_count": 0.0,
+      "mask_targets": [],
+      "overlay": false,
+      "overlay_seen": false,
+      "phase": "idle",
+      "playback": 0.0,
+      "playing": false,
+      "source": {}
+    },
+    "visible_reaction": {}
+  },
+  "death_left": 0.0,
+  "deferred_targets": {},
+  "destination": "identity",
+  "dialogue": [
+    {
+      "_display_duration": 2.50909090909091,
+      "_display_elapsed": 0.0,
+      "_display_elapsed_usec": 0,
+      "_display_token": 63,
+      "speaker": "角色",
+      "text": "终端后面没有。"
+    }
+  ],
+  "drawer_open": {},
+  "family_state": {
+    "actions": 61.0,
+    "auto_food_used": false,
+    "blood_door": false,
+    "checks": {},
+    "collapse": {},
+    "dialogue_choices": {},
+    "eating": {},
+    "eating_serial": 0.0,
+    "extra_checked": false,
+    "fact_cursor": 124.0,
+    "father": {
+      "branch": "",
+      "elapsed": 0.0,
+      "facing": [
+        0.0,
+        1.0
+      ],
+      "phase": "absent",
+      "pos": [
+        4.6,
+        0.22
+      ],
+      "present": false,
+      "release_left": 0.0,
+      "route": [],
+      "used": false
+    },
+    "food_types": {},
+    "gift": [],
+    "gift_pick": 0.0,
+    "gift_roll": -1.0,
+    "gift_wait": 0.0,
+    "hidden_pending": false,
+    "inventory": [],
+    "mother": {
+      "branch": "",
+      "elapsed": 0.0,
+      "facing": [
+        0.0,
+        1.0
+      ],
+      "phase": "absent",
+      "pos": [
+        4.6,
+        0.22
+      ],
+      "present": false,
+      "release_left": 0.0,
+      "route": [],
+      "used": false
+    },
+    "mother_rest": false,
+    "picking_gift": false,
+    "pressure": 0.0,
+    "queued": [],
+    "rescued": false,
+    "spawn_order": [],
+    "startle": {},
+    "system_prompts": {}
+  },
+  "first_damage": false,
+  "first_damage_pending": false,
+  "footstep_left": 0.15,
+  "footstep_serial": 647,
+  "hero_facing": [
+    0.999539792537689,
+    0.0303353257477283
+  ],
+  "hero_pos": [
+    8.43352890014648,
+    4.27672529220581
+  ],
+  "hero_state": "idle",
+  "hidden_state": {},
+  "home_state": {
+    "blocked_left": 0.0,
+    "blocked_search": "",
+    "cat": {
+      "left": 0.0,
+      "phase": "occupy",
+      "point": 8.0,
+      "pos": [
+        5.25,
+        2.40000009536743
+      ],
+      "present": false,
+      "rounds": 0.0,
+      "route": []
+    },
+    "counted": {},
+    "dialogue_choices": {
+      "S1_START:attempt": 7.0
+    },
+    "dialogue_played": {
+      "S1_START:attempt": true
+    },
+    "dog": {
+      "alive": true,
+      "left": 0.0,
+      "phase": "idle",
+      "pos": [
+        3.1,
+        1.6
+      ],
+      "present": false,
+      "remaining": 3.0,
+      "route": [],
+      "target": -1.0
+    },
+    "dog_serial": 0.0,
+    "fighting": false,
+    "key_drop": [],
+    "tracked_search": ""
+  },
+  "hospital_state": {
+    "actors": {
+      "archivist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "office",
+        "route": []
+      },
+      "assistant": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "doctor": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "clinic",
+        "route": []
+      },
+      "guard": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "office",
+        "route": []
+      },
+      "guide": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "nurse": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "ward",
+        "route": []
+      },
+      "patient": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "pharmacist": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "pharmacy",
+        "route": []
+      },
+      "porter": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "lobby",
+        "route": []
+      },
+      "wheelchair": {
+        "elapsed": 0.0,
+        "left": 0.0,
+        "phase": "absent",
+        "pos": [
+          4.40000009536743,
+          0.349999994039536
+        ],
+        "room": "lobby",
+        "route": []
+      }
+    },
+    "bag": "ward",
+    "bag_order": false,
+    "bandage": 0.0,
+    "batches": {},
+    "body": {},
+    "clock": 0.0,
+    "dispensed": false,
+    "exam_done": false,
+    "geometry_version": 1,
+    "groups": {
+      "clinic": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "lobby": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "nurse": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "office": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "patient": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      },
+      "pharmacist": {
+        "checks": 0,
+        "drawn": false,
+        "pending": false
+      }
+    },
+    "healed": false,
+    "holder": "",
+    "hospital_attempt": 1,
+    "known_pages": [],
+    "medicine_stop": 0.0,
+    "nurse_checked": false,
+    "prescribed": false,
+    "prescription_visit": "",
+    "receipts": {},
+    "refused": false,
+    "registered": false,
+    "regrab_elapsed": 0.8,
+    "room_left": {},
+    "sample": false,
+    "suspended_body": {},
+    "swallowed": false,
+    "transport": {},
+    "visit": ""
+  },
+  "menu_open": false,
+  "menu_page": "cast",
+  "motion": {},
+  "observing_index": -1,
+  "opening_state": {},
+  "paused_manual": true,
+  "presentation_id": "a",
+  "profile": {
+    "invader_id": 3405.0,
+    "name": "新脑部空间动作与自主链路",
+    "opening_completed": true,
+    "tutorial_completed": true
+  },
+  "prop_receipts": {},
+  "rng_state": "2466192026031132651",
+  "room_id": "identity",
+  "route": [
+    [
+      8.42640018463135,
+      4.3105001449585
+    ]
+  ],
+  "route_action_origin": "autonomous",
+  "rules": {
+    "_cast_serial": 0,
+    "_completed_targets": {
+      "atrium:0": true,
+      "atrium:1": true,
+      "atrium:2": true,
+      "body:0": true,
+      "body:1": true,
+      "body:2": true,
+      "body:3": true,
+      "body:4": true,
+      "body:5": true,
+      "body:6": true,
+      "body:7": true,
+      "bridge:0": true,
+      "bridge:1": true,
+      "bridge:2": true,
+      "bridge:3": true,
+      "decision:0": true,
+      "decision:1": true,
+      "decision:2": true,
+      "decision:3": true,
+      "decision:4": true,
+      "decision:5": true,
+      "decision:6": true,
+      "identity:0": true,
+      "identity:1": true,
+      "identity:2": true,
+      "identity:3": true,
+      "identity:4": true,
+      "identity:5": true,
+      "identity:6": true,
+      "index:0": true,
+      "index:1": true,
+      "index:2": true,
+      "index:3": true,
+      "index:4": true,
+      "index:5": true,
+      "memory:0": true,
+      "memory:1": true,
+      "memory:2": true,
+      "memory:3": true,
+      "memory:4": true,
+      "memory:5": true,
+      "memory:6": true,
+      "rhythm:0": true,
+      "rhythm:1": true,
+      "rhythm:2": true,
+      "rhythm:3": true,
+      "switch:0": true,
+      "switch:1": true,
+      "switch:2": true,
+      "verify:0": true,
+      "verify:1": true,
+      "verify:2": true,
+      "verify:3": true,
+      "verify:4": true,
+      "verify:5": true,
+      "verify:6": true,
+      "visual:0": true,
+      "visual:1": true,
+      "visual:2": true,
+      "visual:3": true,
+      "visual:4": true,
+      "visual:5": true
+    },
+    "_search_id": "search:1:62",
+    "_search_serial": 62,
+    "_sp_depleted": false,
+    "absent": false,
+    "action": {},
+    "action_serial": 0,
+    "actual_attempt": 1,
+    "allow_supplemental_search": true,
+    "awakening_receipts": {},
+    "awareness_feedback": [],
+    "awareness_stage": 0,
+    "body_feedback": [],
+    "book_extensions": {},
+    "combat_regen": 0.0,
+    "config": {
+      "book_extensions": {
+        "book_item_parameters": {
+          "category": "物品",
+          "cost": 5.0,
+          "name": "已见物品参数",
+          "source": "体验:P428；R1:P39–42；S4:T4"
+        },
+        "book_person_parameters": {
+          "category": "人物",
+          "cost": 5.0,
+          "name": "已见人物行为参数",
+          "source": "体验:P429；R1:P39–42；S3/S4第一关规则"
+        },
+        "book_role_resistance": {
+          "category": "角色",
+          "cost": 5.0,
+          "name": "抗性明细",
+          "source": "体验:P427；R1:P39–42"
+        }
+      },
+      "schema": 1.0,
+      "skills": [
+        {
+          "combat_description": "消耗1神经元。侧挪：向选定方向短移一步；无无敌效果，不能穿过障碍。。角色表现：侧挪。",
+          "combat_dialogue": [
+            "[警惕]“不能站在这里。”",
+            "[紧张]“对，别停在那儿。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式取消未完成搜寻，战斗模式向选择方向短移。角色分别表现为收手抓挠、侧挪。",
+          "exploration_description": "消耗1神经元。抓挠，取消尚未完成的搜寻。角色表现：收手抓挠。",
+          "exploration_dialogue": [
+            "收手抓挠",
+            "[烦躁]“哪来的蚊子……”"
+          ],
+          "id": "SKIN",
+          "name": "皮肤刺激",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 0.0
+        },
+        {
+          "combat_description": "消耗1神经元。俯身：短暂降低上身受击范围；不能避开低位、地面及覆盖全身的攻击。。角色表现：俯身。",
+          "combat_dialogue": [
+            "[难受]“偏偏这时候……”",
+            "[紧张]“先低着头，别急着起来。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式中断搜寻或本次劝休，战斗模式俯身降低上身受击范围。角色捂腹弯腰。",
+          "exploration_description": "消耗1神经元。腹痛，取消搜寻；可中断本次劝休。角色表现：捂腹弯腰。",
+          "exploration_dialogue": [
+            "捂腹弯腰",
+            "[难受]“偏偏这个时候……”"
+          ],
+          "id": "GUT",
+          "name": "肠胃蠕动",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。警觉转身：转向已经感知的最近威胁，中止无关动作；不透视发现敌人。。角色表现：警觉转身。",
+          "combat_dialogue": [
+            "[警惕]“在那边。”",
+            "[认真]“……看到了。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式产生旁人可以察觉的皮肤异常、搜寻继续，战斗模式转向已感知的威胁。角色分别表现为查看手臂、转身警戒。",
+          "exploration_description": "消耗1神经元。出现可见异常，可引起附近人物注意；搜寻继续。角色表现：查看手臂。",
+          "exploration_dialogue": [
+            "查看手臂",
+            "[疑惑]“怎么起鸡皮疙瘩了？”"
+          ],
+          "id": "PORES",
+          "name": "毛孔变化",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。短时提速：加快移动，结束后恢复；不叠加，不附带免伤。。角色表现：短时提速。",
+          "combat_dialogue": [
+            "[凝重]“先离开这里。”",
+            "[着急]“快快快，别停。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式短暂减慢移动与搜寻，战斗模式短暂提高移动速度。角色分别表现为打颤、加快步频。",
+          "exploration_description": "消耗1神经元。颤抖，延缓当前移动或搜寻。角色表现：打颤、搓手。",
+          "exploration_dialogue": [
+            "打颤、搓手",
+            "[抱怨]“这地方空调不要钱啊？”"
+          ],
+          "id": "TEMP",
+          "name": "冷热感",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。止步：停止当前前进，短暂停顿后重新判断路线；不取消敌人攻击。。角色表现：止步。",
+          "combat_dialogue": [
+            "[警惕]“等一下……看看别的路。”",
+            "[紧张]“先别往前冲。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式短暂停顿后继续行动，战斗模式停止移动并重新判断路线。角色侧头停步，耳鸣不产生外界声源。",
+          "exploration_description": "消耗1神经元。短暂停步，随后继续；声音仅角色听见。角色表现：停步侧头。",
+          "exploration_dialogue": [
+            "停步侧头",
+            "[疑惑]“谁在响？……我耳朵？”"
+          ],
+          "id": "TINNITUS",
+          "name": "耳鸣",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗1神经元。抑制出声：暂时压低惊叫、求助等声音；脚步和碰撞声仍存在，仅影响具有听觉判定的人物。。角色表现：抑制出声。",
+          "combat_dialogue": [
+            "[克制]“……先别出声。”",
+            "[紧张]“别喊，我看着呢。”"
+          ],
+          "cooldown": 2.0,
+          "cost": 1.0,
+          "description": "消耗1神经元。探索模式延缓未完成的物品交接，战斗模式暂时抑制角色出声。角色抿嘴吞咽，脚步与碰撞声仍存在。",
+          "exploration_description": "消耗1神经元。延缓尚未完成的物品交接，不撤销已获物品。角色表现：抿嘴吞咽，递出的手稍停。",
+          "exploration_dialogue": [
+            "抿嘴吞咽，递出的手稍停",
+            "[尴尬]“等一下……嗓子有点干。”"
+          ],
+          "id": "DRYMOUTH",
+          "name": "口腔干涩",
+          "power": 1.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 1.0,
+          "unlock_cost": 1.0
+        },
+        {
+          "combat_description": "消耗2神经元。踢击：近距离向前攻击；命中才结算伤害，能否击退按目标规则处理。。角色表现：踢击。",
+          "combat_dialogue": [
+            "[警惕]“别靠过来。”",
+            "[紧张]“踢完就走，别耗着。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并向前踢击，实际命中才结算伤害与对应击退。角色突然向前弹腿。",
+          "exploration_description": "消耗2神经元。取消搜寻，向前弹腿；实际命中才伤害。角色表现：突然向前弹腿。",
+          "exploration_dialogue": [
+            "突然向前弹腿",
+            "[震惊]“不是……我腿怎么了？”"
+          ],
+          "id": "KNEE",
+          "name": "膝跳反射",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "GUT"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗2神经元。收臂：及时撤回手臂；不能解除已经锁紧的束缚，也不能防御全身攻击。。角色表现：收臂。",
+          "combat_dialogue": [
+            "[凝重]“手……又自己动了。”",
+            "[认真]“收回来了，接着走。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并收回手臂，可避开尚未命中的手部抓握、不能解除已经成立的控制。角色迅速收手。",
+          "exploration_description": "消耗2神经元。取消搜寻，避开尚未成立的手臂抓握。角色表现：猛地收手。",
+          "exploration_dialogue": [
+            "猛地收手",
+            "[警惕]“别碰我！”"
+          ],
+          "id": "WITHDRAW",
+          "name": "缩手反射",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "SKIN"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗2神经元。后撤：距离大于皮肤刺激的侧挪；依靠实际位移避开攻击，无无敌效果，后方受阻则不能完整撤出。。角色表现：后撤。",
+          "combat_dialogue": [
+            "[警惕]“退开点。”",
+            "[紧张]“后面也得看着点。”"
+          ],
+          "cooldown": 4.0,
+          "cost": 2.0,
+          "description": "消耗2神经元。中断未完成搜寻并尝试向后移动，实际退开才可能避过攻击。角色后撤，遇到障碍不能穿过。",
+          "exploration_description": "消耗2神经元。取消搜寻，向后短移。角色表现：惊跳，后方可走时退步。",
+          "exploration_dialogue": [
+            "惊跳，后方可走时退步",
+            "[惊疑]“什么东西？！”"
+          ],
+          "id": "STARTLE",
+          "name": "惊跳反应",
+          "power": 2.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "TEMP"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 2.0,
+          "unlock_cost": 2.0
+        },
+        {
+          "combat_description": "消耗3神经元。撤离倾向：停止主动进攻，远离已感知威胁；仍降低精神，不自动找到出口。。角色表现：撤离倾向。",
+          "combat_dialogue": [
+            "[不安]“不行……离它远点。”",
+            "[凝重]“先退，别硬撑。”"
+          ],
+          "cooldown": 8.0,
+          "cost": 3.0,
+          "description": "消耗3神经元。降低精神，探索模式取消搜寻并延后当前目标，战斗模式停止进攻并远离已感知威胁。角色收手、警戒并尝试退离。",
+          "exploration_description": "消耗3神经元。降低精神，取消搜寻，将当前目标延后。角色表现：缩手，盯住目标。",
+          "exploration_dialogue": [
+            "缩手，盯住目标",
+            "[不安]“这个……先不看了。”"
+          ],
+          "id": "FEAR",
+          "name": "恐惧",
+          "power": 3.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "TINNITUS",
+            "STARTLE"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 3.0,
+          "unlock_cost": 3.0
+        },
+        {
+          "combat_description": "消耗3神经元。稳定状态：恢复精神，解除自身情绪造成的犹豫；不回血、不解除物理束缚、不取消敌人威胁。。角色表现：稳定状态。",
+          "combat_dialogue": [
+            "[克制]“别慌……先看清楚。”",
+            "[认真]“还没出去呢。”"
+          ],
+          "cooldown": 8.0,
+          "cost": 3.0,
+          "description": "消耗3神经元。恢复精神并缓解角色自身恐惧，不恢复生命、不解除抓握。角色紧绷动作减轻、呼吸趋稳。",
+          "exploration_description": "消耗3神经元。恢复精神，缓解角色自身恐慌、犹豫；搜寻继续。角色表现：肩膀放松，轻笑后继续。",
+          "exploration_dialogue": [
+            "肩膀放松，轻笑后继续",
+            "[轻松]“算了，再找找。”"
+          ],
+          "id": "JOY",
+          "name": "开心",
+          "power": 3.0,
+          "prerequisite_mode": "all",
+          "prerequisites": [
+            "PORES",
+            "WITHDRAW"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 3.0,
+          "unlock_cost": 3.0
+        },
+        {
+          "combat_description": "消耗5神经元。直接控制：接管移动、朝向及角色已经具备的攻击、互动；不自动获得其他技能，不保证命中或逃脱。。角色表现：直接控制。",
+          "combat_dialogue": [
+            "未识破：[惊疑]“我没想这么走……”；已识破：[冷漠]“看路。别停。”",
+            "[紧张]“先离开这里。”"
+          ],
+          "cooldown": 20.0,
+          "cost": 5.0,
+          "description": "消耗5神经元。接管移动、朝向与互动6秒，战斗模式可调用已解锁的踢击。角色响应输入，仍正常承受攻击与控制。",
+          "exploration_description": "消耗5神经元。接管移动与互动。角色表现：动作短暂停顿，随后响应操作。",
+          "exploration_dialogue": [
+            "动作短暂停顿，随后响应操作",
+            "[冷漠]“这一步，是你选的。”"
+          ],
+          "id": "CONTROL",
+          "name": "完全掌控",
+          "power": 4.0,
+          "prerequisite_mode": "any",
+          "prerequisites": [
+            "FEAR",
+            "JOY"
+          ],
+          "source": "S2:T8/T9/T12/T17–19; S4:T3/T14; R1:T2",
+          "tier": 4.0,
+          "unlock_cost": 5.0
+        }
+      ],
+      "test_parameters": {
+        "exploration_startle_distance": 0.4,
+        "note": "探索后撤距离为集中测试表现参数；完成判定按真实位移，不套战斗0.35秒。膝跳分段已按S4:P170定值。"
+      },
+      "timing": {
+        "combat_skin_distance": 0.8,
+        "combat_skin_duration": 0.25,
+        "combat_startle_distance": 1.4,
+        "combat_startle_duration": 0.35,
+        "control": 6.0,
+        "drymouth_combat": 6.0,
+        "drymouth_transfer_delay": 2.0,
+        "fear_combat": 3.0,
+        "fear_retry": 6.0,
+        "gut_reaction": 1.2,
+        "kick_attack": 0.15,
+        "kick_damage": 15.0,
+        "kick_prepare": 0.15,
+        "kick_push": 0.8,
+        "kick_range": 1.0,
+        "kick_recover": 0.35,
+        "kick_source": "S4:P170",
+        "kick_stun": 0.8,
+        "pores": 3.0,
+        "skin_reaction": 0.5,
+        "temp": 3.0,
+        "temp_combat_rate": 1.25,
+        "temp_exploration_rate": 0.75,
+        "tinnitus_combat": 0.3,
+        "tinnitus_exploration": 1.0,
+        "withdraw": 0.3
+      }
+    },
+    "control_context": {},
+    "control_event": "",
+    "control_evidence_receipts": {},
+    "control_feedback": [],
+    "control_fraction_ms": 0.0,
+    "control_left": 0.0,
+    "control_ms": 0,
+    "control_stage": 0,
+    "control_stage_receipts": {},
+    "cooldown_until": 0.0,
+    "effects": {},
+    "evidence": [],
+    "facts": [
+      {
+        "duration": 4.0,
+        "event_id": "search:1:1",
+        "kind": "search_started",
+        "target": "atrium:0",
+        "time": 2.05
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:1",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "atrium:0",
+        "time": 9.05000000000006
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:2",
+        "kind": "search_started",
+        "target": "atrium:1",
+        "time": 11.5250000000001
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:2",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "atrium:1",
+        "time": 18.525
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:3",
+        "kind": "search_started",
+        "target": "atrium:2",
+        "time": 26.7499999999995
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:3",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "atrium:2",
+        "time": 33.7499999999992
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:4",
+        "kind": "search_started",
+        "target": "memory:0",
+        "time": 50.3499999999982
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:4",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "memory:0",
+        "time": 57.3499999999978
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:5",
+        "kind": "search_started",
+        "target": "memory:1",
+        "time": 59.9999999999977
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:5",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "memory:1",
+        "time": 66.9999999999981
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:6",
+        "kind": "search_started",
+        "target": "memory:2",
+        "time": 68.8499999999985
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:6",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "memory:2",
+        "time": 75.8500000000001
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:7",
+        "kind": "search_started",
+        "target": "memory:3",
+        "time": 77.0500000000004
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:7",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "memory:3",
+        "time": 84.050000000002
+      },
+      {
+        "event_id": "key_discovery:4:1",
+        "finder": "hero",
+        "kind": "key_discovered",
+        "search_receipt": "search:1:7",
+        "target": "memory:3",
+        "time": 84.050000000002
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:8",
+        "kind": "search_started",
+        "target": "memory:4",
+        "time": 89.1750000000032
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:8",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "memory:4",
+        "time": 96.1750000000047
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:9",
+        "kind": "search_started",
+        "target": "memory:5",
+        "time": 98.7750000000053
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:9",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "memory:5",
+        "time": 105.775000000007
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:10",
+        "kind": "search_started",
+        "target": "memory:6",
+        "time": 106.525000000007
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:10",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "memory:6",
+        "time": 113.525000000009
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:11",
+        "kind": "search_started",
+        "target": "visual:0",
+        "time": 117.80000000001
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:11",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "visual:0",
+        "time": 124.800000000011
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:12",
+        "kind": "search_started",
+        "target": "visual:1",
+        "time": 129.675000000012
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:12",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "visual:1",
+        "time": 136.675000000014
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:13",
+        "kind": "search_started",
+        "target": "visual:2",
+        "time": 139.000000000014
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:13",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "visual:2",
+        "time": 146.000000000016
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:14",
+        "kind": "search_started",
+        "target": "visual:3",
+        "time": 149.775000000017
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:14",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "visual:3",
+        "time": 156.775000000019
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:15",
+        "kind": "search_started",
+        "target": "visual:4",
+        "time": 159.250000000019
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:15",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "visual:4",
+        "time": 166.250000000021
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:16",
+        "kind": "search_started",
+        "target": "visual:5",
+        "time": 169.250000000021
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:16",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "visual:5",
+        "time": 176.250000000023
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:17",
+        "kind": "search_started",
+        "target": "decision:0",
+        "time": 191.875000000026
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:17",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "decision:0",
+        "time": 198.875000000028
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:18",
+        "kind": "search_started",
+        "target": "decision:1",
+        "time": 201.150000000029
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:18",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "decision:1",
+        "time": 208.15000000003
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:19",
+        "kind": "search_started",
+        "target": "decision:2",
+        "time": 210.175000000031
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:19",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "decision:2",
+        "time": 217.175000000032
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:20",
+        "kind": "search_started",
+        "target": "decision:3",
+        "time": 219.875000000033
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:20",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "decision:3",
+        "time": 226.875000000034
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:21",
+        "kind": "search_started",
+        "target": "decision:4",
+        "time": 229.900000000035
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:21",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "decision:4",
+        "time": 236.900000000037
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:22",
+        "kind": "search_started",
+        "target": "decision:5",
+        "time": 238.850000000037
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:22",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "decision:5",
+        "time": 245.850000000039
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:23",
+        "kind": "search_started",
+        "target": "decision:6",
+        "time": 248.550000000039
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:23",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "decision:6",
+        "time": 255.550000000041
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:24",
+        "kind": "search_started",
+        "target": "body:0",
+        "time": 270.750000000028
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:24",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "body:0",
+        "time": 277.750000000021
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:25",
+        "kind": "search_started",
+        "target": "body:1",
+        "time": 279.42500000002
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:25",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "body:1",
+        "time": 286.425000000013
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:26",
+        "kind": "search_started",
+        "target": "body:2",
+        "time": 288.050000000012
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:26",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "body:2",
+        "time": 295.050000000006
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:27",
+        "kind": "search_started",
+        "target": "body:3",
+        "time": 296.850000000004
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:27",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "body:3",
+        "time": 303.849999999998
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:28",
+        "kind": "search_started",
+        "target": "body:4",
+        "time": 310.024999999992
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:28",
+        "kind": "search_completed",
+        "neurons": 1.0,
+        "target": "body:4",
+        "time": 317.024999999986
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:29",
+        "kind": "search_started",
+        "target": "body:5",
+        "time": 319.574999999983
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:29",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "body:5",
+        "time": 326.574999999977
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:30",
+        "kind": "search_started",
+        "target": "body:6",
+        "time": 328.149999999975
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:30",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "body:6",
+        "time": 335.149999999969
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:31",
+        "kind": "search_started",
+        "target": "body:7",
+        "time": 337.949999999967
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:31",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "body:7",
+        "time": 344.94999999996
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:32",
+        "kind": "search_started",
+        "target": "bridge:0",
+        "time": 367.924999999939
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:32",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bridge:0",
+        "time": 374.924999999933
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:33",
+        "kind": "search_started",
+        "target": "bridge:1",
+        "time": 377.89999999993
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:33",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bridge:1",
+        "time": 384.899999999924
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:34",
+        "kind": "search_started",
+        "target": "bridge:2",
+        "time": 390.674999999919
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:34",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bridge:2",
+        "time": 397.674999999912
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:35",
+        "kind": "search_started",
+        "target": "bridge:3",
+        "time": 400.52499999991
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:35",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "bridge:3",
+        "time": 407.524999999903
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:36",
+        "kind": "search_started",
+        "target": "rhythm:0",
+        "time": 414.599999999897
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:36",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "rhythm:0",
+        "time": 421.59999999989
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:37",
+        "kind": "search_started",
+        "target": "rhythm:1",
+        "time": 424.949999999887
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:37",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "rhythm:1",
+        "time": 431.949999999881
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:38",
+        "kind": "search_started",
+        "target": "rhythm:2",
+        "time": 435.199999999878
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:38",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "rhythm:2",
+        "time": 442.199999999872
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:39",
+        "kind": "search_started",
+        "target": "rhythm:3",
+        "time": 444.874999999869
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:39",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "rhythm:3",
+        "time": 451.874999999863
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:40",
+        "kind": "search_started",
+        "target": "index:0",
+        "time": 468.999999999847
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:40",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "index:0",
+        "time": 475.999999999841
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:41",
+        "kind": "search_started",
+        "target": "index:1",
+        "time": 481.424999999836
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:41",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "index:1",
+        "time": 488.42499999983
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:42",
+        "kind": "search_started",
+        "target": "index:2",
+        "time": 495.124999999824
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:42",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "index:2",
+        "time": 502.124999999817
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:43",
+        "kind": "search_started",
+        "target": "index:3",
+        "time": 505.299999999814
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:43",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "index:3",
+        "time": 512.299999999808
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:44",
+        "kind": "search_started",
+        "target": "index:4",
+        "time": 513.724999999807
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:44",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "index:4",
+        "time": 520.7249999998
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:45",
+        "kind": "search_started",
+        "target": "index:5",
+        "time": 524.499999999797
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:45",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "index:5",
+        "time": 531.499999999791
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:46",
+        "kind": "search_started",
+        "target": "switch:0",
+        "time": 538.874999999784
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:46",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "switch:0",
+        "time": 545.874999999778
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:47",
+        "kind": "search_started",
+        "target": "switch:1",
+        "time": 548.524999999775
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:47",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "switch:1",
+        "time": 555.524999999769
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:48",
+        "kind": "search_started",
+        "target": "switch:2",
+        "time": 561.774999999763
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:48",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "switch:2",
+        "time": 568.774999999757
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:49",
+        "kind": "search_started",
+        "target": "verify:0",
+        "time": 576.29999999975
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:49",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "verify:0",
+        "time": 583.299999999743
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:50",
+        "kind": "search_started",
+        "target": "verify:1",
+        "time": 588.124999999739
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:50",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "verify:1",
+        "time": 595.124999999733
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:51",
+        "kind": "search_started",
+        "target": "verify:2",
+        "time": 599.824999999728
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:51",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "verify:2",
+        "time": 606.824999999722
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:52",
+        "kind": "search_started",
+        "target": "verify:3",
+        "time": 611.649999999718
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:52",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "verify:3",
+        "time": 618.649999999711
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:53",
+        "kind": "search_started",
+        "target": "verify:4",
+        "time": 623.299999999707
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:53",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "verify:4",
+        "time": 630.299999999701
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:54",
+        "kind": "search_started",
+        "target": "verify:5",
+        "time": 635.649999999696
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:54",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "verify:5",
+        "time": 642.64999999969
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:55",
+        "kind": "search_started",
+        "target": "verify:6",
+        "time": 645.374999999687
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:55",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "verify:6",
+        "time": 652.374999999681
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:56",
+        "kind": "search_started",
+        "target": "identity:0",
+        "time": 662.149999999672
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:56",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "identity:0",
+        "time": 669.149999999665
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:57",
+        "kind": "search_started",
+        "target": "identity:1",
+        "time": 670.799999999664
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:57",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "identity:1",
+        "time": 677.799999999658
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:58",
+        "kind": "search_started",
+        "target": "identity:2",
+        "time": 679.624999999656
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:58",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "identity:2",
+        "time": 686.62499999965
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:59",
+        "kind": "search_started",
+        "target": "identity:3",
+        "time": 689.649999999647
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:59",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "identity:3",
+        "time": 696.64999999964
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:60",
+        "kind": "search_started",
+        "target": "identity:4",
+        "time": 703.024999999635
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:60",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "identity:4",
+        "time": 710.024999999628
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:61",
+        "kind": "search_started",
+        "target": "identity:5",
+        "time": 716.199999999623
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:61",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "identity:5",
+        "time": 723.199999999616
+      },
+      {
+        "duration": 4.0,
+        "event_id": "search:1:62",
+        "kind": "search_started",
+        "target": "identity:6",
+        "time": 725.474999999614
+      },
+      {
+        "already_completed": false,
+        "event_id": "search:1:62",
+        "kind": "search_completed",
+        "neurons": 1,
+        "target": "identity:6",
+        "time": 732.474999999608
+      }
+    ],
+    "global_resistance": 0,
+    "gripped": false,
+    "hp": 100,
+    "hurt_left": 0.0,
+    "institutional_records": [],
+    "intervention_lock": false,
+    "kick_until": 0.0,
+    "known": [
+      "memory:3"
+    ],
+    "loading": false,
+    "lock_after_serial": 0,
+    "mode": "exploration",
+    "neurons": 70,
+    "observations": [],
+    "owners": {
+      "cortex_original_page": "memory_table",
+      "cortex_page_fragment": "none",
+      "cortex_page_scraps": "none",
+      "key": "memory:3",
+      "porridge": "mother"
+    },
+    "pending_global_growth": 0,
+    "pending_neural": {},
+    "pending_skin": {},
+    "plexus": 5,
+    "public_action": {},
+    "public_serial": 124,
+    "reaction_left": 0.0,
+    "reaction_skill": "",
+    "search_active": false,
+    "search_attempts": 62,
+    "search_count": 62,
+    "search_duration": 7.0,
+    "search_elapsed": 7.0,
+    "search_limit": 16,
+    "search_target": "identity:6",
+    "settled": {
+      "search:1:1": "completed",
+      "search:1:10": "completed",
+      "search:1:11": "completed",
+      "search:1:12": "completed",
+      "search:1:13": "completed",
+      "search:1:14": "completed",
+      "search:1:15": "completed",
+      "search:1:16": "completed",
+      "search:1:17": "completed",
+      "search:1:18": "completed",
+      "search:1:19": "completed",
+      "search:1:2": "completed",
+      "search:1:20": "completed",
+      "search:1:21": "completed",
+      "search:1:22": "completed",
+      "search:1:23": "completed",
+      "search:1:24": "completed",
+      "search:1:25": "completed",
+      "search:1:26": "completed",
+      "search:1:27": "completed",
+      "search:1:28": "completed",
+      "search:1:29": "completed",
+      "search:1:3": "completed",
+      "search:1:30": "completed",
+      "search:1:31": "completed",
+      "search:1:32": "completed",
+      "search:1:33": "completed",
+      "search:1:34": "completed",
+      "search:1:35": "completed",
+      "search:1:36": "completed",
+      "search:1:37": "completed",
+      "search:1:38": "completed",
+      "search:1:39": "completed",
+      "search:1:4": "completed",
+      "search:1:40": "completed",
+      "search:1:41": "completed",
+      "search:1:42": "completed",
+      "search:1:43": "completed",
+      "search:1:44": "completed",
+      "search:1:45": "completed",
+      "search:1:46": "completed",
+      "search:1:47": "completed",
+      "search:1:48": "completed",
+      "search:1:49": "completed",
+      "search:1:5": "completed",
+      "search:1:50": "completed",
+      "search:1:51": "completed",
+      "search:1:52": "completed",
+      "search:1:53": "completed",
+      "search:1:54": "completed",
+      "search:1:55": "completed",
+      "search:1:56": "completed",
+      "search:1:57": "completed",
+      "search:1:58": "completed",
+      "search:1:59": "completed",
+      "search:1:6": "completed",
+      "search:1:60": "completed",
+      "search:1:61": "completed",
+      "search:1:62": "completed",
+      "search:1:7": "completed",
+      "search:1:8": "completed",
+      "search:1:9": "completed"
+    },
+    "skill_states": {
+      "CONTROL": {
+        "growth": false,
+        "power": 4.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "DRYMOUTH": {
+        "growth": false,
+        "power": 1.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "FEAR": {
+        "growth": false,
+        "power": 3.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "GUT": {
+        "growth": false,
+        "power": 1.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "JOY": {
+        "growth": false,
+        "power": 3.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "KNEE": {
+        "growth": false,
+        "power": 2.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "PORES": {
+        "growth": false,
+        "power": 1.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "SKIN": {
+        "growth": false,
+        "power": 1,
+        "reactions": 0,
+        "resistance": 0,
+        "unlocked": true,
+        "until": 0.0
+      },
+      "STARTLE": {
+        "growth": false,
+        "power": 2.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "TEMP": {
+        "growth": false,
+        "power": 1.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "TINNITUS": {
+        "growth": false,
+        "power": 1.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      },
+      "WITHDRAW": {
+        "growth": false,
+        "power": 2.0,
+        "reactions": 0.0,
+        "resistance": 0.0,
+        "unlocked": false,
+        "until": 0.0
+      }
+    },
+    "skin_pending_resistance": false,
+    "skin_power": 1,
+    "skin_reactions": 0,
+    "skin_resistance": 0,
+    "sp": 100,
+    "stun_left": 0.0,
+    "transitioning": false,
+    "trial": {},
+    "trial_attempt": 0,
+    "trial_evidence_count": 0,
+    "tutorial_demo": false,
+    "world_time": 732.474999999608
+  },
+  "schema": 3,
+  "search_action_origin": "autonomous",
+  "search_props": {
+    "atrium:atrium:0": {
+      "geometry_version": 2.0
+    },
+    "atrium:atrium:1": {
+      "geometry_version": 2.0
+    },
+    "atrium:atrium:2": {
+      "geometry_version": 2.0
+    },
+    "bedroom:bed": {
+      "geometry_version": 2.0
+    },
+    "bedroom:bedside": {
+      "geometry_version": 2.0
+    },
+    "bedroom:books": {
+      "geometry_version": 2.0
+    },
+    "bedroom:box": {
+      "geometry_version": 2.0
+    },
+    "bedroom:chair": {
+      "geometry_version": 2.0
+    },
+    "bedroom:desk": {
+      "geometry_version": 2.0
+    },
+    "bedroom:fan": {
+      "geometry_version": 2.0
+    },
+    "bedroom:rack": {
+      "geometry_version": 2.0
+    },
+    "bedroom:stool": {
+      "geometry_version": 2.0
+    },
+    "bedroom:storage": {
+      "geometry_version": 2.0
+    },
+    "bedroom:wardrobe": {
+      "geometry_version": 2.0
+    },
+    "body:body:0": {
+      "geometry_version": 2.0
+    },
+    "body:body:1": {
+      "geometry_version": 2.0
+    },
+    "body:body:2": {
+      "geometry_version": 2.0
+    },
+    "body:body:3": {
+      "geometry_version": 2.0
+    },
+    "body:body:4": {
+      "geometry_version": 2.0
+    },
+    "body:body:5": {
+      "geometry_version": 2.0
+    },
+    "body:body:6": {
+      "geometry_version": 2.0
+    },
+    "body:body:7": {
+      "geometry_version": 2.0
+    },
+    "bridge:bridge:0": {
+      "geometry_version": 2
+    },
+    "bridge:bridge:1": {
+      "geometry_version": 2
+    },
+    "bridge:bridge:2": {
+      "geometry_version": 2
+    },
+    "bridge:bridge:3": {
+      "geometry_version": 2
+    },
+    "decision:decision:0": {
+      "geometry_version": 2.0
+    },
+    "decision:decision:1": {
+      "geometry_version": 2.0
+    },
+    "decision:decision:2": {
+      "geometry_version": 2.0
+    },
+    "decision:decision:3": {
+      "geometry_version": 2.0
+    },
+    "decision:decision:4": {
+      "geometry_version": 2.0
+    },
+    "decision:decision:5": {
+      "geometry_version": 2.0
+    },
+    "decision:decision:6": {
+      "geometry_version": 2.0
+    },
+    "identity:identity:0": {
+      "geometry_version": 2
+    },
+    "identity:identity:1": {
+      "geometry_version": 2
+    },
+    "identity:identity:2": {
+      "geometry_version": 2
+    },
+    "identity:identity:3": {
+      "geometry_version": 2
+    },
+    "identity:identity:4": {
+      "geometry_version": 2
+    },
+    "identity:identity:5": {
+      "geometry_version": 2
+    },
+    "identity:identity:6": {
+      "geometry_version": 2
+    },
+    "index:index:0": {
+      "geometry_version": 2
+    },
+    "index:index:1": {
+      "geometry_version": 2
+    },
+    "index:index:2": {
+      "geometry_version": 2
+    },
+    "index:index:3": {
+      "geometry_version": 2
+    },
+    "index:index:4": {
+      "geometry_version": 2
+    },
+    "index:index:5": {
+      "geometry_version": 2
+    },
+    "memory:memory:0": {
+      "geometry_version": 2.0
+    },
+    "memory:memory:1": {
+      "geometry_version": 2.0
+    },
+    "memory:memory:2": {
+      "geometry_version": 2.0
+    },
+    "memory:memory:3": {
+      "geometry_version": 2.0
+    },
+    "memory:memory:4": {
+      "geometry_version": 2.0
+    },
+    "memory:memory:5": {
+      "geometry_version": 2.0
+    },
+    "memory:memory:6": {
+      "geometry_version": 2.0
+    },
+    "rhythm:rhythm:0": {
+      "geometry_version": 2
+    },
+    "rhythm:rhythm:1": {
+      "geometry_version": 2
+    },
+    "rhythm:rhythm:2": {
+      "geometry_version": 2
+    },
+    "rhythm:rhythm:3": {
+      "geometry_version": 2
+    },
+    "switch:switch:0": {
+      "geometry_version": 2
+    },
+    "switch:switch:1": {
+      "geometry_version": 2
+    },
+    "switch:switch:2": {
+      "geometry_version": 2
+    },
+    "verify:verify:0": {
+      "geometry_version": 2
+    },
+    "verify:verify:1": {
+      "geometry_version": 2
+    },
+    "verify:verify:2": {
+      "geometry_version": 2
+    },
+    "verify:verify:3": {
+      "geometry_version": 2
+    },
+    "verify:verify:4": {
+      "geometry_version": 2
+    },
+    "verify:verify:5": {
+      "geometry_version": 2
+    },
+    "verify:verify:6": {
+      "geometry_version": 2
+    },
+    "visual:visual:0": {
+      "geometry_version": 2.0
+    },
+    "visual:visual:1": {
+      "geometry_version": 2.0
+    },
+    "visual:visual:2": {
+      "geometry_version": 2.0
+    },
+    "visual:visual:3": {
+      "geometry_version": 2.0
+    },
+    "visual:visual:4": {
+      "geometry_version": 2.0
+    },
+    "visual:visual:5": {
+      "geometry_version": 2.0
+    }
+  },
+  "session": {
+    "asylum_space_versions": {},
+    "attempts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1
+    },
+    "cortex_exit_crossed": false,
+    "cortex_geometry_version": 2.0,
+    "cortex_lower_persistent": {},
+    "cortex_upper_persistent": {
+      "bridge_heard": {},
+      "fields": {},
+      "identity_read": {},
+      "index_holder": "index_slot",
+      "index_removed": false,
+      "losses": {},
+      "route_known": false
+    },
+    "cycle": 1,
+    "exploration_boundary": true,
+    "institution_geometry_version": 1,
+    "key_discovery": {
+      "attempt": 1.0,
+      "completed": {
+        "atrium:0": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:1"
+        },
+        "atrium:1": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:2"
+        },
+        "atrium:2": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:3"
+        },
+        "body:0": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:24"
+        },
+        "body:1": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:25"
+        },
+        "body:2": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:26"
+        },
+        "body:3": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:27"
+        },
+        "body:4": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:28"
+        },
+        "body:5": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:29"
+        },
+        "body:6": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:30"
+        },
+        "body:7": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:31"
+        },
+        "bridge:0": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:32"
+        },
+        "bridge:1": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:33"
+        },
+        "bridge:2": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:34"
+        },
+        "bridge:3": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:35"
+        },
+        "decision:0": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:17"
+        },
+        "decision:1": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:18"
+        },
+        "decision:2": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:19"
+        },
+        "decision:3": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:20"
+        },
+        "decision:4": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:21"
+        },
+        "decision:5": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:22"
+        },
+        "decision:6": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:23"
+        },
+        "identity:0": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:56"
+        },
+        "identity:1": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:57"
+        },
+        "identity:2": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:58"
+        },
+        "identity:3": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:59"
+        },
+        "identity:4": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:60"
+        },
+        "identity:5": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:61"
+        },
+        "identity:6": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:62"
+        },
+        "index:0": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:40"
+        },
+        "index:1": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:41"
+        },
+        "index:2": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:42"
+        },
+        "index:3": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:43"
+        },
+        "index:4": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:44"
+        },
+        "index:5": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:45"
+        },
+        "memory:0": {
+          "draw": 0.14769080208631,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0625,
+          "receipt": "search:1:4"
+        },
+        "memory:1": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:5"
+        },
+        "memory:2": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:6"
+        },
+        "memory:3": {
+          "draw": 0.0537368016242838,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": true,
+          "guaranteed": false,
+          "probability": 0.0666666666666667,
+          "receipt": "search:1:7"
+        },
+        "memory:4": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:8"
+        },
+        "memory:5": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:9"
+        },
+        "memory:6": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:10"
+        },
+        "rhythm:0": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:36"
+        },
+        "rhythm:1": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:37"
+        },
+        "rhythm:2": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:38"
+        },
+        "rhythm:3": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:39"
+        },
+        "switch:0": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:46"
+        },
+        "switch:1": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:47"
+        },
+        "switch:2": {
+          "draw": -1.0,
+          "eligible": true,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:48"
+        },
+        "verify:0": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:49"
+        },
+        "verify:1": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:50"
+        },
+        "verify:2": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:51"
+        },
+        "verify:3": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:52"
+        },
+        "verify:4": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:53"
+        },
+        "verify:5": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:54"
+        },
+        "verify:6": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:55"
+        },
+        "visual:0": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:11"
+        },
+        "visual:1": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:12"
+        },
+        "visual:2": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:13"
+        },
+        "visual:3": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:14"
+        },
+        "visual:4": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:15"
+        },
+        "visual:5": {
+          "draw": -1.0,
+          "eligible": false,
+          "evidence": [],
+          "finder": "hero",
+          "found": false,
+          "guaranteed": false,
+          "probability": 0.0,
+          "receipt": "search:1:16"
+        }
+      },
+      "completion_receipts": {
+        "search:1:1": "atrium:0",
+        "search:1:10": "memory:6",
+        "search:1:11": "visual:0",
+        "search:1:12": "visual:1",
+        "search:1:13": "visual:2",
+        "search:1:14": "visual:3",
+        "search:1:15": "visual:4",
+        "search:1:16": "visual:5",
+        "search:1:17": "decision:0",
+        "search:1:18": "decision:1",
+        "search:1:19": "decision:2",
+        "search:1:2": "atrium:1",
+        "search:1:20": "decision:3",
+        "search:1:21": "decision:4",
+        "search:1:22": "decision:5",
+        "search:1:23": "decision:6",
+        "search:1:24": "body:0",
+        "search:1:25": "body:1",
+        "search:1:26": "body:2",
+        "search:1:27": "body:3",
+        "search:1:28": "body:4",
+        "search:1:29": "body:5",
+        "search:1:3": "atrium:2",
+        "search:1:30": "body:6",
+        "search:1:31": "body:7",
+        "search:1:32": "bridge:0",
+        "search:1:33": "bridge:1",
+        "search:1:34": "bridge:2",
+        "search:1:35": "bridge:3",
+        "search:1:36": "rhythm:0",
+        "search:1:37": "rhythm:1",
+        "search:1:38": "rhythm:2",
+        "search:1:39": "rhythm:3",
+        "search:1:4": "memory:0",
+        "search:1:40": "index:0",
+        "search:1:41": "index:1",
+        "search:1:42": "index:2",
+        "search:1:43": "index:3",
+        "search:1:44": "index:4",
+        "search:1:45": "index:5",
+        "search:1:46": "switch:0",
+        "search:1:47": "switch:1",
+        "search:1:48": "switch:2",
+        "search:1:49": "verify:0",
+        "search:1:5": "memory:1",
+        "search:1:50": "verify:1",
+        "search:1:51": "verify:2",
+        "search:1:52": "verify:3",
+        "search:1:53": "verify:4",
+        "search:1:54": "verify:5",
+        "search:1:55": "verify:6",
+        "search:1:56": "identity:0",
+        "search:1:57": "identity:1",
+        "search:1:58": "identity:2",
+        "search:1:59": "identity:3",
+        "search:1:6": "memory:2",
+        "search:1:60": "identity:4",
+        "search:1:61": "identity:5",
+        "search:1:62": "identity:6",
+        "search:1:7": "memory:3",
+        "search:1:8": "memory:4",
+        "search:1:9": "memory:5"
+      },
+      "configuration_version": 2.0,
+      "diagnostic": "",
+      "discovered": "memory:3",
+      "eligible_targets": [
+        "decision:5",
+        "memory:0",
+        "decision:6",
+        "memory:3",
+        "body:2",
+        "decision:2",
+        "memory:4",
+        "body:1",
+        "bridge:3",
+        "switch:2",
+        "rhythm:0",
+        "identity:2",
+        "index:0",
+        "rhythm:1",
+        "index:3",
+        "index:5"
+      ],
+      "evidence": {},
+      "interference": {},
+      "level": 4.0,
+      "seed": "00026be4acfbfeff2dced9460fb70f9ed55e9536371b1066d9b2576574b3d17b",
+      "version": 2.0
+    },
+    "key_discovery_history": [
+      {
+        "attempt": 1.0,
+        "level": 4.0,
+        "target": "memory:3"
+      }
+    ],
+    "key_owner": "memory:3",
+    "key_seed_root": "00026be4acfbfeff2dced9460fb70f9ed55e9536371b1066d9b2576574b3d17b",
+    "key_seen": true,
+    "key_target": "memory:3",
+    "level": 4,
+    "profile": {
+      "invader_id": 3405.0,
+      "name": "新脑部空间动作与自主链路",
+      "opening_completed": true,
+      "tutorial_completed": false
+    },
+    "receipts": {},
+    "room_geometry_version": 2.0,
+    "rooms": {
+      "atrium": {
+        "drawer": {}
+      },
+      "body": {
+        "drawer": {}
+      },
+      "bridge": {
+        "drawer": {}
+      },
+      "decision": {
+        "drawer": {}
+      },
+      "index": {
+        "drawer": {}
+      },
+      "memory": {
+        "drawer": {}
+      },
+      "rhythm": {
+        "drawer": {}
+      },
+      "switch": {
+        "drawer": {}
+      },
+      "verify": {
+        "drawer": {}
+      },
+      "visual": {
+        "drawer": {}
+      }
+    },
+    "search_route_watch": {
+      "stalled": 0.0,
+      "target": "identity:6"
+    },
+    "targets": [
+      "decision:5",
+      "memory:0",
+      "decision:6",
+      "memory:3",
+      "body:2",
+      "decision:2",
+      "memory:4",
+      "body:1",
+      "bridge:3",
+      "switch:2",
+      "rhythm:0",
+      "identity:2",
+      "index:0",
+      "rhythm:1",
+      "index:3",
+      "index:5"
+    ],
+    "unlocked": [
+      1,
+      4
+    ]
+  },
+  "status_visible": false,
+  "street_state": {},
+  "target_index": -1,
+  "view_state": {
+    "manual": false,
+    "miniature": false,
+    "position": [
+      714.400024414063,
+      351.199981689453
+    ]
+  },
+  "vitality_display": {
+    "automatic": false,
+    "hint_acknowledged": false,
+    "hint_demo_seen": false,
+    "last_action": "search:search:1:62",
+    "manual": false,
+    "pending": false
+  },
+  "world_visual_time": 732.474999999608,
+  "zoom_index": 1
+}

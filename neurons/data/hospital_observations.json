@@ -294,7 +294,7 @@
       "room": "office",
       "furniture": 5,
       "kind": "file",
-      "source": "S3:T17R4",
+      "source": "S3:T17R5",
       "text": "实际读到一份既往病例的摘除记录；编号字形待核，不自动绑定给角色、病友或其他活着的人。",
       "fields": {
         "case_number": "past_case_number"
@@ -304,7 +304,8 @@
         "removal_record"
       ],
       "item": "case_removal",
-      "home_owner": "office:5"
+      "home_owner": "office:5",
+      "document_relation": "hospital_past_case"
     },
     {
       "id": "case_death",
@@ -312,7 +313,7 @@
       "room": "office",
       "furniture": 10,
       "kind": "file",
-      "source": "S3:T17R4",
+      "source": "S3:T17R5",
       "text": "实际读到一份既往病例死亡页；与摘除、费用及离院页逐页保留，未读页面仍未知。",
       "fields": {
         "case_number": "past_case_number"
@@ -321,7 +322,8 @@
         "case_death"
       ],
       "item": "case_death",
-      "home_owner": "office:10"
+      "home_owner": "office:10",
+      "document_relation": "hospital_past_case"
     },
     {
       "id": "case_fees",
@@ -329,7 +331,7 @@
       "room": "office",
       "furniture": 10,
       "kind": "file",
-      "source": "S3:T17R4",
+      "source": "S3:T17R5",
       "text": "实际读到一份既往病例费用页；金额与编号字形待核，不据费用标签补造身体事件。",
       "fields": {
         "case_number": "past_case_number",
@@ -339,7 +341,8 @@
         "case_fees"
       ],
       "item": "case_fees",
-      "home_owner": "office:10"
+      "home_owner": "office:10",
+      "document_relation": "hospital_past_case"
     },
     {
       "id": "case_discharge",
@@ -347,7 +350,7 @@
       "room": "office",
       "furniture": 10,
       "kind": "file",
-      "source": "S3:T17R4",
+      "source": "S3:T17R5",
       "text": "实际读到一份既往病例离院页；离院记载与死亡、摘除页分别保存，不把该死者当成在场病友。",
       "fields": {
         "case_number": "past_case_number"
@@ -356,7 +359,8 @@
         "case_discharge"
       ],
       "item": "case_discharge",
-      "home_owner": "office:10"
+      "home_owner": "office:10",
+      "document_relation": "hospital_past_case"
     },
     {
       "id": "complaint_original",
@@ -464,6 +468,17 @@
       ],
       "same_person": true,
       "source": "S3:T17 投诉及异常报告：明确同一人的两份文件，不以未提供的具体编号替代这一已确认关系"
+    },
+    "past_case": {
+      "id": "hospital_past_case",
+      "members": [
+        "case_removal",
+        "case_death",
+        "case_fees",
+        "case_discharge"
+      ],
+      "same_person": true,
+      "source": "S3:T17R5：原文明示同一编号的四份既往案件原件；具体编号字形未提供，只有实际逐页读完才建立语义关联。"
     }
   }
 }

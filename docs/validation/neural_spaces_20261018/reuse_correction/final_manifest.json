@@ -1,0 +1,54 @@
+{
+  "time_local": "2026-10-19T01:37:51",
+  "status": "FINAL FROZEN after source-backed same-base correction",
+  "owned_files_at_freeze": {
+    "neurons/data/neural_spaces.json": "17d0100124679c55db15125c91c107ea1c65a2d11301a1904ae3033f8d7c59c7",
+    "neurons/tests/neural_reuse_check.gd": "64cbff9fd8da24c50708043330bd1b03e7a826f57467f2eb34114fafa08a3702",
+    "neurons/tests/neural_spatial_check.gd": "d14b9b82a6e23b99e42efa8ef6eb18b3b46b6c4dfd1c451ecad6da8b5d499d0a",
+    "neurons/tests/spatial_neural_sequence_check.gd": "e78689cdf570e22d0c356e58c5785a57394380b6a015898ae606a821d905de44"
+  },
+  "same_base_rooms": 11,
+  "body_door_pairs_checked": 48,
+  "bed_portal_entries_checked": 27,
+  "bed_entry_sweeps_complete": true,
+  "reuse_failures": [],
+  "same_wall_portal_adjustments": 13,
+  "natural_r2": {
+    "elapsed_game_seconds": 176.133333333326,
+    "visits": [
+      "L4:atrium",
+      "L4:memory",
+      "L4:decision",
+      "L4:bridge",
+      "L4:switch",
+      "L4:verify",
+      "L5:atrium",
+      "L5:decision",
+      "L5:bridge",
+      "L5:switch",
+      "L5:verify",
+      "L5:hippocampus",
+      "L5:thalamus",
+      "L5:brainstem",
+      "L6:street_plaza"
+    ],
+    "deaths": [],
+    "hp": 100,
+    "level": 6,
+    "still_seconds": 0.0
+  },
+  "natural_r2_passes": 7,
+  "natural_r2_failures": [],
+  "finite_gpu_reuse": {
+    "searches": 62,
+    "passes": 264,
+    "failures": []
+  },
+  "preservation": "L4/L5v3 first11 exact shared furniture/architecture/camera geometry. Destination-only combat_exit→hippocampus change. Seven deep specifications unchanged semantically; cold-zone/pulse definitions unchanged. Old L5v2 constructor retains original11.2x7.6 and old doors. No attack, body radius, actor config, time/key/ending rules changed by this agent.",
+  "limits": [
+    "Natural r2 is one new profile/seed with actual NPCs; not a controlled same-seed difficulty comparison or all crowds.",
+    "All bed landing-to-entry sweeps checked; not every possible continuous bed chase/turning/NPC combination.",
+    "Formal art/audio listening/human pacing/B7 not accepted."
+  ],
+  "source_reuse_correction": "Initial newly expanded L5 first11 was an implementation error relative to existing BASE/ALTERED same-canvas production contract. That stage is retained in before_neural_spaces.json, not treated as final or as eleven extra manual background orders."
+}

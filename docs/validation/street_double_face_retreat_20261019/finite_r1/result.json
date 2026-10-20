@@ -1,0 +1,31 @@
+{
+  "failures": [],
+  "passes": [
+    "uninjured neutral witness does not retreat, counter or lose HP from proximity",
+    "original actually paid CONTROL permits legal player knee toward neutral double-face body",
+    "actual knee retains original15HP and .8m physical push without authorizing a new counter",
+    "original .8s injury response finishes before any new retreat locomotion",
+    "after original injury the neutral body actually begins its bounded retreat",
+    "ordinary actual retreat increases distance from the frozen local contact origin",
+    "real JSON serializes ongoing retreat position, local origin and remaining time",
+    "actual pause after disk freezes the same retreat instead of consuming or replaying it",
+    "one existing .5s episode uses original .85m/s without teleport, duration extension or speed bonus",
+    "completed retreat restores neutral idle with original injury only and no counter",
+    "proximity after recovery does not queue repeated retreats or pursue the attacker",
+    "real injury discards unfinished head turn immediately but retains the already witnessed cast fact",
+    "retreat neither replays interrupted turn nor invents target memory, following or hostility",
+    "a completed witnessed head turn remains true after hurt and movement",
+    "resisted/preview neural states and no injury do not trigger retreat",
+    "each accepted retreat step stays on actual side of solid cabinet; blocked retreat has no bypass teleport",
+    "actual living body blocks the retreat path without overlap",
+    "complete actual wheelchair footprint is respected instead of testing only its center",
+    "short retreat cannot enter an existing portal aperture or become an unauthorized room transition",
+    "a separate second real hit restarts injury reaction, not movement during hurt or a per-frame duration refresh",
+    "second injury receives one bounded episode rather than an endless per-frame retreat",
+    "absent body cancels retreat without queued offscreen movement",
+    "death interrupts any pending movement and cannot counter posthumously",
+    "a different actor room cancels stale local-space origin instead of applying it across maps",
+    "old JSON with actual hurt and no module reconstructs only current neutral recovery, with no damage replay"
+  ],
+  "scope": "Explicit position/solid/body/old-snapshot fixtures. Real paid CONTROL/legal knee or named direct actual injury; original hurt first, bounded source-backed neutral retreat, physical walls/body/wheelchair/portal, JSON and pause. No new counter, source identity, timing or stats. Not human full B7 or final art."
+}

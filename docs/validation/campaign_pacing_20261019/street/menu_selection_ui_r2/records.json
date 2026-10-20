@@ -1,0 +1,116 @@
+[
+  {
+    "clock": 0.4,
+    "clusters": 6,
+    "description": "// Java\nString TEMP = \"冷热感\";\nint COIN = 1;\n/*\n###消耗1神经元。\n###探索模式短暂减慢移动与搜寻，战斗模式短暂提高移动速度。\n###角色分别表现为打颤、加快步频。\n*/\n\n消耗 1 神经元  ·  冷却 2.0 秒\n强度 1  ·  战斗\n可提交",
+    "direction": [
+      1.0,
+      0.0
+    ],
+    "direction_visible": true,
+    "label": "hover_other_unlocked",
+    "menu_visible": true,
+    "neurons": 14,
+    "pos": [
+      1.7599995136261,
+      5.5
+    ],
+    "selected": "SKIN",
+    "status": "选择实际位移方向；取消不扣费"
+  },
+  {
+    "clock": 0.4,
+    "clusters": 6,
+    "description": "// C\nchar* SKIN = \"皮肤刺激\";\nint COIN = 1;\n/*\n###消耗1神经元。\n###探索模式取消未完成搜寻，战斗模式向选择方向短移。\n###角色分别表现为收手抓挠、侧挪。\n*/\n\n消耗 1 神经元  ·  冷却 2.0 秒\n强度 1  ·  战斗\n请选择方向",
+    "direction": [
+      1.0,
+      0.0
+    ],
+    "direction_visible": true,
+    "label": "leave_preview_for_direction",
+    "menu_visible": true,
+    "neurons": 14,
+    "pos": [
+      1.7599995136261,
+      5.5
+    ],
+    "selected": "SKIN",
+    "status": "选择实际位移方向；取消不扣费"
+  },
+  {
+    "clock": 0.4,
+    "clusters": 6,
+    "description": "-- Lua\nSKIN = \"皮肤刺激\"\nCOIN = 1\n--[[\n###消耗1神经元。\n###探索模式取消未完成搜寻，战斗模式向选择方向短移。\n###角色分别表现为收手抓挠、侧挪。\n]]\n\n消耗 1 神经元  ·  冷却 2.0 秒\n强度 1  ·  战斗\n请选择方向",
+    "direction": [
+      1.0,
+      0.0
+    ],
+    "direction_visible": false,
+    "label": "actual_direction_cancel",
+    "menu_visible": true,
+    "neurons": 14,
+    "pos": [
+      1.7599995136261,
+      5.5
+    ],
+    "selected": "SKIN",
+    "status": "已取消；未扣费"
+  },
+  {
+    "clock": 0.766666666666667,
+    "clusters": 6,
+    "description": "// C\nchar* SKIN = \"皮肤刺激\";\nint COIN = 1;\n/*\n###消耗1神经元。\n###探索模式取消未完成搜寻，战斗模式向选择方向短移。\n###角色分别表现为收手抓挠、侧挪。\n*/\n\n消耗 1 神经元  ·  冷却 2.0 秒\n强度 1  ·  战斗\n请选择方向",
+    "direction": [
+      0.0,
+      -1.0
+    ],
+    "direction_visible": false,
+    "label": "actual_skin_resolved",
+    "menu_visible": false,
+    "neurons": 13,
+    "pos": [
+      1.88437271118164,
+      4.7072319984436
+    ],
+    "selected": "SKIN",
+    "status": "选择实际位移方向；取消不扣费"
+  },
+  {
+    "clock": 0.8,
+    "clusters": 6,
+    "description": "// JavaScript\nconst SKIN = \"皮肤刺激\";\nconst COIN = 1;\n/*\n###消耗1神经元。\n###探索模式取消未完成搜寻，战斗模式向选择方向短移。\n###角色分别表现为收手抓挠、侧挪。\n*/\n\n消耗 1 神经元  ·  冷却 2.0 秒\n强度 1  ·  战斗\n冷却尚未结束",
+    "direction": [
+      0.0,
+      -1.0
+    ],
+    "direction_visible": true,
+    "label": "actual_cooldown_refusal",
+    "menu_visible": true,
+    "neurons": 13,
+    "pos": [
+      1.92264139652252,
+      4.70945692062378
+    ],
+    "selected": "SKIN",
+    "status": "冷却尚未结束"
+  },
+  {
+    "clock": 0.866666666666667,
+    "clusters": 6,
+    "description": "// C++\n#include <string>\nstd::string SKIN = \"皮肤刺激\";\nint COIN = 1;\n/*\n###消耗1神经元。\n###探索模式取消未完成搜寻，战斗模式向选择方向短移。\n###角色分别表现为收手抓挠、侧挪。\n*/\n\n消耗 1 神经元  ·  冷却 2.0 秒\n强度 1  ·  战斗\n冷却尚未结束",
+    "direction": [
+      0.0,
+      -1.0
+    ],
+    "direction_visible": false,
+    "label": "finished",
+    "menu_visible": true,
+    "neurons": 13,
+    "pos": [
+      1.99917876720428,
+      4.71390676498413
+    ],
+    "selected": "SKIN",
+    "status": ""
+  }
+]

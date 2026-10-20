@@ -31,7 +31,7 @@
     },
     "parasite": {
       "next": "tutorial",
-      "auto_play": false,
+      "auto_play": true,
       "cards": [
         {"id":"intro_name","source":"体验P23 left","visual":"back","speaker":"玩家","text":"我叫{name} \n..."},
         {"id":"intro_id","source":"体验P31 left","visual":"back","speaker":"玩家","text":"据资料\n我是这里的第{invader_id}名入侵生物　"},

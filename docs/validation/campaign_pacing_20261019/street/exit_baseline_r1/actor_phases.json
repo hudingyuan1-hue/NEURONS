@@ -1,0 +1,74 @@
+[
+  {
+    "actor": "skinface",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.98246169090271,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 0.0
+  },
+  {
+    "actor": "self",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.41404724121094,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 0.0
+  },
+  {
+    "actor": "guard_hospital",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.3776330947876,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 0.0
+  },
+  {
+    "actor": "archivist_asylum",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 3.80788683891296,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 0.0
+  },
+  {
+    "actor": "informant",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 6.51920223236084,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 0.0
+  },
+  {
+    "actor": "mimic",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 9.30483722686768,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 0.0
+  },
+  {
+    "actor": "informant",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 5.76423597335815,
+    "phase": "point",
+    "room": "street_end",
+    "street_s": 0.8
+  },
+  {
+    "actor": "informant",
+    "attack_id": "",
+    "attack_target": "hero",
+    "distance_m": 5.06415271759033,
+    "phase": "idle",
+    "room": "street_end",
+    "street_s": 1.6
+  }
+]

@@ -1,0 +1,1683 @@
+[
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 0.0333333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      1.29999995231628,
+      5.5
+    ],
+    "pose": "idle",
+    "room": "street_end",
+    "route_points": 0,
+    "sp": 100,
+    "street_clock_s": 0.0,
+    "street_s": 0.0,
+    "visible_actors": [
+      "skinface",
+      "archivist_asylum"
+    ],
+    "world_s": 0.0
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 0.3,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      1.60666632652283,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.266666666666667,
+    "street_s": 0.266666666666667,
+    "visible_actors": [
+      "skinface",
+      "archivist_asylum"
+    ],
+    "world_s": 0.266666666666667
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 0.566666666666667,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      1.91333270072937,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.533333333333333,
+    "street_s": 0.533333333333333,
+    "visible_actors": [
+      "skinface",
+      "archivist_asylum"
+    ],
+    "world_s": 0.533333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 0.833333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      2.21999835968018,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 0.8,
+    "street_s": 0.8,
+    "visible_actors": [
+      "skinface",
+      "archivist_asylum"
+    ],
+    "world_s": 0.8
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 1.1,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      2.5266637802124,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 1.06666666666667,
+    "street_s": 1.06666666666667,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "archivist_asylum"
+    ],
+    "world_s": 1.06666666666667
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 1.36666666666667,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      2.83332920074463,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 1.33333333333333,
+    "street_s": 1.33333333333333,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "archivist_asylum"
+    ],
+    "world_s": 1.33333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 1.63333333333334,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      3.13999462127686,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 1.6,
+    "street_s": 1.6,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "archivist_asylum"
+    ],
+    "world_s": 1.6
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 1.9,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      3.44666004180908,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 1.86666666666667,
+    "street_s": 1.86666666666667,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "archivist_asylum",
+      "informant"
+    ],
+    "world_s": 1.86666666666667
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 2.16666666666667,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      3.75332546234131,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 2.13333333333334,
+    "street_s": 2.13333333333334,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "archivist_asylum",
+      "informant"
+    ],
+    "world_s": 2.13333333333334
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 2.43333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      4.05999135971069,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 2.4,
+    "street_s": 2.4,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "archivist_asylum",
+      "informant"
+    ],
+    "world_s": 2.4
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 2.7,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      4.36665868759155,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 2.66666666666667,
+    "street_s": 2.66666666666667,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "archivist_asylum",
+      "informant"
+    ],
+    "world_s": 2.66666666666667
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 2.96666666666667,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      4.67332601547241,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 2.93333333333333,
+    "street_s": 2.93333333333333,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "archivist_asylum",
+      "informant"
+    ],
+    "world_s": 2.93333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 3.23333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      4.97999334335327,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 3.2,
+    "street_s": 3.2,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant"
+    ],
+    "world_s": 3.2
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 3.5,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      5.28666067123413,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 3.46666666666666,
+    "street_s": 3.46666666666666,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant"
+    ],
+    "world_s": 3.46666666666666
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 3.76666666666666,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      5.59332799911499,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 3.73333333333333,
+    "street_s": 3.73333333333333,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant"
+    ],
+    "world_s": 3.73333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 4.03333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      5.89999532699585,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 4.0,
+    "street_s": 4.0,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant"
+    ],
+    "world_s": 4.0
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 4.29999999999999,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      6.20666265487671,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 4.26666666666666,
+    "street_s": 4.26666666666666,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant"
+    ],
+    "world_s": 4.26666666666666
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 4.56666666666666,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      6.51332998275757,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 4.53333333333333,
+    "street_s": 4.53333333333333,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 4.53333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 4.83333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      6.81999731063843,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 4.79999999999999,
+    "street_s": 4.79999999999999,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 4.79999999999999
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 5.09999999999999,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      7.12666463851929,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 5.06666666666666,
+    "street_s": 5.06666666666666,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 5.06666666666666
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 5.36666666666666,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      7.43333196640015,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 5.33333333333332,
+    "street_s": 5.33333333333332,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 5.33333333333332
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 5.63333333333332,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      7.73999929428101,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 5.59999999999999,
+    "street_s": 5.59999999999999,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 5.59999999999999
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 5.89999999999999,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      8.04666709899902,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 5.86666666666666,
+    "street_s": 5.86666666666666,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 5.86666666666666
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 6.16666666666665,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      8.35333824157715,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 6.13333333333332,
+    "street_s": 6.13333333333332,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 6.13333333333332
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 6.43333333333332,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      8.66000938415527,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 6.39999999999999,
+    "street_s": 6.39999999999999,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 6.39999999999999
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 6.69999999999999,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      8.9666805267334,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 6.66666666666665,
+    "street_s": 6.66666666666665,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 6.66666666666665
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 6.96666666666665,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      9.27335166931152,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 6.93333333333332,
+    "street_s": 6.93333333333332,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 6.93333333333332
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 7.23333333333332,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      9.58002281188965,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 7.19999999999998,
+    "street_s": 7.19999999999998,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 7.19999999999998
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 7.49999999999998,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      9.88669395446777,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 7.46666666666665,
+    "street_s": 7.46666666666665,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 7.46666666666665
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 7.76666666666665,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      10.1933650970459,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 7.73333333333332,
+    "street_s": 7.73333333333332,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "informant",
+      "mimic"
+    ],
+    "world_s": 7.73333333333332
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 8.03333333333332,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      10.500036239624,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 7.99999999999998,
+    "street_s": 7.99999999999998,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 7.99999999999998
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 8.29999999999998,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      10.8067073822021,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 8.26666666666665,
+    "street_s": 8.26666666666665,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 8.26666666666665
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 8.56666666666665,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      11.1133785247803,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 8.53333333333331,
+    "street_s": 8.53333333333331,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 8.53333333333331
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 8.83333333333331,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      11.4200496673584,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 8.79999999999998,
+    "street_s": 8.79999999999998,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 8.79999999999998
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 9.09999999999998,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      11.7267208099365,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 9.06666666666665,
+    "street_s": 9.06666666666665,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 9.06666666666665
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 9.36666666666664,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      12.0333919525146,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 9.33333333333331,
+    "street_s": 9.33333333333331,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 9.33333333333331
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 9.63333333333331,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      12.3400630950928,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 9.59999999999998,
+    "street_s": 9.59999999999998,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 9.59999999999998
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 9.89999999999998,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      12.6467342376709,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 9.86666666666664,
+    "street_s": 9.86666666666664,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 9.86666666666664
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 10.1666666666666,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      12.953405380249,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 10.1333333333333,
+    "street_s": 10.1333333333333,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 10.1333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 10.4333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      13.2600765228271,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 10.4,
+    "street_s": 10.4,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 10.4
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 10.7,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      13.5667476654053,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 10.6666666666666,
+    "street_s": 10.6666666666666,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum",
+      "mimic"
+    ],
+    "world_s": 10.6666666666666
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 10.9666666666666,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      13.8734188079834,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 10.9333333333333,
+    "street_s": 10.9333333333333,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum"
+    ],
+    "world_s": 10.9333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 11.2333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      14.1800899505615,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 11.2,
+    "street_s": 11.2,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum"
+    ],
+    "world_s": 11.2
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 11.5,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      14.4867610931396,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 11.4666666666666,
+    "street_s": 11.4666666666666,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum"
+    ],
+    "world_s": 11.4666666666666
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 11.7666666666666,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      14.7934322357178,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 11.7333333333333,
+    "street_s": 11.7333333333333,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum"
+    ],
+    "world_s": 11.7333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 12.0333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      15.1001033782959,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 12.0,
+    "street_s": 12.0,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum"
+    ],
+    "world_s": 12.0
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "",
+    "door_left_s": -1.0,
+    "elapsed_s": 12.3,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      15.406774520874,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 12.2666666666666,
+    "street_s": 12.2666666666666,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum"
+    ],
+    "world_s": 12.2666666666666
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "ending_gate",
+    "door_left_s": 0.4,
+    "elapsed_s": 12.5666666666666,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      15.4834423065186,
+      5.5
+    ],
+    "pose": "give",
+    "room": "street_end",
+    "route_points": 0,
+    "sp": 100,
+    "street_clock_s": 12.5333333333333,
+    "street_s": 12.5333333333333,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum"
+    ],
+    "world_s": 12.5333333333333
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "ending_gate",
+    "door_left_s": 0.133333333333333,
+    "elapsed_s": 12.8333333333333,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      15.4834423065186,
+      5.5
+    ],
+    "pose": "give",
+    "room": "street_end",
+    "route_points": 0,
+    "sp": 100,
+    "street_clock_s": 12.8,
+    "street_s": 12.8,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum"
+    ],
+    "world_s": 12.8
+  },
+  {
+    "available_skills": [
+      "SKIN"
+    ],
+    "clusters": 7,
+    "control_ms": 0,
+    "destination": "ending_gate",
+    "door_left_s": 0.0,
+    "elapsed_s": 13.1,
+    "ending": {},
+    "gripped": false,
+    "hp": 100,
+    "level": 6,
+    "neurons": 14,
+    "paused": false,
+    "pos_m": [
+      15.6367778778076,
+      5.5
+    ],
+    "pose": "walk",
+    "room": "street_end",
+    "route_points": 1,
+    "sp": 100,
+    "street_clock_s": 13.0666666666666,
+    "street_s": 13.0666666666666,
+    "visible_actors": [
+      "skinface",
+      "self",
+      "guard_hospital",
+      "archivist_asylum"
+    ],
+    "world_s": 13.0666666666666
+  }
+]

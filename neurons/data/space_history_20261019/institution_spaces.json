@@ -1,0 +1,3746 @@
+{
+  "schema_version": 1,
+  "scope": "医院五个基础房L2/L3同构复用，以及楼梯和二层七房共13种米制房型。完整建筑与运行时遮挡透明分别配置；旧平面图厚度和临时剖切不是美术要求。",
+  "projection": {
+    "viewport_px": [
+      1280,
+      720
+    ],
+    "origin_px": [
+      180,
+      270
+    ],
+    "x_px_per_m": 96,
+    "depth_px_per_m": [
+      30,
+      56
+    ],
+    "height_px_per_m": 78,
+    "source_scale": 2,
+    "note": "Fixed affine oblique projection shared with bedroom; export scale 2 without changing actor or furniture dimensions."
+  },
+  "asset_template": {"coordinate_unit": "metre", "ground_anchor": "footprint_center", "action_anchor": "approach_m is the actor standing point, not furniture pivot or hand contact", "layers": ["architecture", "furniture", "movable_props", "foreground_occluders"], "background_under_movable_props": "Complete material, no baked-in silhouette", "geometry_status": "Runtime spatial contract; formal drawing and normal-play acceptance are separate"},
+  "body_radius_m": 0.21,
+  "rooms": {
+    "ward": {
+      "id": "L2_WARD",
+      "geometry_version": 2,
+      "status": "技术起测布局；未获正式美术或正常游玩验收",
+      "source": "S1:P34–42/P103; L2/L3共用基础房型",
+      "size_m": [
+        6.4,
+        4.8
+      ],
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "search_counts": {
+        "2": 0,
+        "3": 0
+      },
+      "furniture": [
+        {
+          "name": "病床",
+          "kind": "bed",
+          "rect_m": [
+            0.35,
+            0.35,
+            2.1,
+            1.05
+          ],
+          "approach_m": [
+            1.55,
+            1.85
+          ],
+          "height_m": 0.64,
+          "color": "a8b8b6",
+          "attachments": [
+            "covered_bed_card",
+            "under_bed_straps"
+          ],
+          "id": "ward:0"
+        },
+        {
+          "name": "床头柜",
+          "kind": "drawer",
+          "rect_m": [
+            2.75,
+            0.45,
+            0.55,
+            0.55
+          ],
+          "approach_m": [
+            3.025,
+            1.4
+          ],
+          "height_m": 0.65,
+          "color": "8d9d95",
+          "id": "ward:1"
+        },
+        {
+          "name": "椅子",
+          "kind": "chair",
+          "rect_m": [
+            0.4,
+            2.6,
+            0.55,
+            0.55
+          ],
+          "approach_m": [
+            1.35,
+            2.875
+          ],
+          "height_m": 0.95,
+          "color": "8b9e9b",
+          "id": "ward:2"
+        },
+        {
+          "name": "书桌",
+          "kind": "desk",
+          "rect_m": [
+            0.35,
+            3.8,
+            1.55,
+            0.6
+          ],
+          "approach_m": [
+            1.4,
+            3.45
+          ],
+          "height_m": 0.76,
+          "color": "9ca69a",
+          "id": "ward:3"
+        },
+        {
+          "name": "小书架",
+          "kind": "books",
+          "rect_m": [
+            5.65,
+            2.45,
+            0.45,
+            0.7
+          ],
+          "approach_m": [
+            5.25,
+            2.8
+          ],
+          "height_m": 1.4,
+          "color": "9d947d",
+          "id": "ward:4"
+        },
+        {
+          "name": "储物柜",
+          "kind": "drawer",
+          "rect_m": [
+            5.35,
+            0.55,
+            0.65,
+            1
+          ],
+          "approach_m": [
+            4.95,
+            1.05
+          ],
+          "height_m": 1.4,
+          "color": "8d9d95",
+          "id": "ward:5"
+        },
+        {
+          "name": "挂衣处与白大褂",
+          "kind": "rack",
+          "rect_m": [
+            3.55,
+            2.35,
+            0.45,
+            0.45
+          ],
+          "approach_m": [
+            3.775,
+            3.2
+          ],
+          "height_m": 1.75,
+          "color": "969c8e",
+          "attachments": [
+            "white_coat_badge_site"
+          ],
+          "id": "ward:6"
+        },
+        {
+          "name": "衣柜",
+          "kind": "drawer",
+          "rect_m": [
+            5.2,
+            3.65,
+            0.9,
+            0.8
+          ],
+          "approach_m": [
+            4.8,
+            4.05
+          ],
+          "height_m": 2,
+          "color": "8d9d95",
+          "id": "ward:7"
+        }
+      ],
+      "decor": [
+        {
+          "id": "ward_laundry_bag",
+          "name": "污衣袋原位置",
+          "kind": "bag",
+          "rect_m": [
+            2.55,
+            1.55,
+            0.35,
+            0.3
+          ],
+          "approach_m": [
+            2.7249999999999996,
+            2.25
+          ],
+          "height_m": 0.5,
+          "color": "9aa79c",
+          "collision": false,
+          "conditional": "实际bag=ward时显示；已搬走仅空位，不重建物品"
+        }
+      ],
+      "static_walls": [],
+      "anchors": {
+        "spawn": [
+          1.55,
+          1.85
+        ],
+        "bed": [
+          1.55,
+          1.85
+        ],
+        "door": [
+          4.45,
+          0.65
+        ],
+        "nurse_contact": [
+          2.1,
+          1.85
+        ],
+        "laundry_bag": [
+          2.725,
+          1.7
+        ],
+        "laundry_pickup": [
+          2.725,
+          2.2
+        ],
+        "laundry_manifest": [
+          2.725,
+          2.2
+        ],
+        "ward_window_inside": [
+          4.45,
+          0.7
+        ],
+        "nurse_wait": [
+          3.4,
+          1.8
+        ],
+        "porter_wait": [
+          3.5,
+          3.3
+        ],
+        "ordinary_orderly_wait": [
+          3.4,
+          1.8
+        ],
+        "actor_idle": [
+          1.55,
+          1.85
+        ],
+        "entry": [
+          1.55,
+          1.85
+        ]
+      },
+      "pairs": [
+        {
+          "id": "bed_wrist",
+          "a": "bed",
+          "b": "nurse_contact",
+          "max_distance_m": 0.65
+        }
+      ],
+      "wide_routes": [
+        {
+          "id": "bed_to_door",
+          "from": [
+            1.6,
+            2.1
+          ],
+          "to": [
+            4.45,
+            0.7
+          ],
+          "radius_m": 0.45
+        }
+      ],
+      "portals": [
+        {
+          "toward": "lobby",
+          "wall": "north",
+          "wall_point": [
+            4.45,
+            0
+          ],
+          "at": [
+            4.45,
+            0.65
+          ],
+          "threshold": [
+            4.45,
+            0.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "landing": [
+            4.45,
+            1.25
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ],
+      "legacy_index_map": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "6": 6,
+        "7": 7,
+        "8": 4,
+        "9": 5
+      },
+      "removed_legacy_non_source": [
+        {
+          "index": 4,
+          "id": "stool"
+        },
+        {
+          "index": 5,
+          "id": "box"
+        },
+        {
+          "index": 10,
+          "id": "fan"
+        }
+      ]
+    },
+    "lobby": {
+      "id": "L2_LOBBY",
+      "geometry_version": 2,
+      "status": "技术起测布局；未获正式美术或正常游玩验收",
+      "source": "S1:P43–52/P96–101; 第五门仍是既有楼梯，不增加第六医院场景",
+      "size_m": [
+        12,
+        8
+      ],
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "search_counts": {
+        "2": 6,
+        "3": 0
+      },
+      "furniture": [
+        {
+          "name": "挂号导诊台",
+          "kind": "counter",
+          "rect_m": [
+            0.55,
+            0.65,
+            2.5,
+            0.7
+          ],
+          "approach_m": [
+            1.8,
+            1.8
+          ],
+          "height_m": 1.05,
+          "color": "93aaa4",
+          "attachments": [
+            "registration_pages",
+            "number_clip",
+            "ticket_drawer"
+          ],
+          "id": "lobby:0"
+        },
+        {
+          "name": "叫号屏低位控制盒",
+          "kind": "machine",
+          "rect_m": [
+            3.7,
+            0.35,
+            0.7,
+            0.35
+          ],
+          "approach_m": [
+            4.05,
+            1.1
+          ],
+          "height_m": 0.45,
+          "color": "8aa4a5",
+          "attachments": [
+            "number_display"
+          ],
+          "display_height_m": 1.9,
+          "id": "lobby:1"
+        },
+        {
+          "name": "自助机出票槽",
+          "kind": "machine",
+          "rect_m": [
+            6.15,
+            0.4,
+            0.75,
+            0.65
+          ],
+          "approach_m": [
+            6.525,
+            1.45
+          ],
+          "height_m": 1.55,
+          "color": "8aa4a5",
+          "id": "lobby:2"
+        },
+        {
+          "name": "绿植底托",
+          "kind": "plant",
+          "rect_m": [
+            10.4,
+            6.4,
+            0.75,
+            0.75
+          ],
+          "approach_m": [
+            9.95,
+            6.775
+          ],
+          "height_m": 1.1,
+          "color": "7e967b",
+          "id": "lobby:3"
+        },
+        {
+          "name": "宣传架",
+          "kind": "rack",
+          "rect_m": [
+            0.45,
+            6.2,
+            0.6,
+            1
+          ],
+          "approach_m": [
+            1.45,
+            6.7
+          ],
+          "height_m": 1.5,
+          "color": "969c8e",
+          "id": "lobby:4"
+        },
+        {
+          "name": "饮水机下柜",
+          "kind": "drawer",
+          "rect_m": [
+            8,
+            6.8,
+            0.7,
+            0.65
+          ],
+          "approach_m": [
+            8.35,
+            6.4
+          ],
+          "height_m": 1.1,
+          "color": "8d9d95",
+          "id": "lobby:5"
+        }
+      ],
+      "decor": [
+        {
+          "id": "waiting_seats",
+          "name": "候诊椅组",
+          "kind": "chairs",
+          "rect_m": [
+            3.3,
+            5.8,
+            3,
+            0.6
+          ],
+          "approach_m": [
+            4.8,
+            6.8
+          ],
+          "height_m": 0.85,
+          "color": "9aa79c",
+          "collision": true
+        },
+        {
+          "id": "wheelchair_parking_mark",
+          "name": "轮椅停靠区",
+          "kind": "parking",
+          "rect_m": [
+            2.9,
+            2.7,
+            0.8,
+            1.2
+          ],
+          "approach_m": [
+            3.3,
+            4.300000000000001
+          ],
+          "height_m": 0.02,
+          "color": "9aa79c",
+          "collision": false
+        },
+        {
+          "id": "patient_shoe_source",
+          "name": "遗留鞋定位参考",
+          "kind": "marker",
+          "rect_m": [
+            1.1,
+            3.3,
+            0.25,
+            0.2
+          ],
+          "approach_m": [
+            1.225,
+            3.9
+          ],
+          "height_m": 0.1,
+          "color": "9aa79c",
+          "collision": false,
+          "conditional": "仅实际转运留下鞋后显示"
+        }
+      ],
+      "static_walls": [
+        {
+          "id": "stair_return_wall",
+          "rect_m": [
+            9.25,
+            0,
+            0.15,
+            2.55
+          ],
+          "height_m": 2.55,
+          "color": "859c96",
+          "source": "既有楼梯口局部转角，不增加房间或门"
+        }
+      ],
+      "anchors": {
+        "spawn": [
+          5.35,
+          1.25
+        ],
+        "registration_hero": [
+          1.8,
+          1.8
+        ],
+        "registration_nurse": [
+          2.35,
+          1.8
+        ],
+        "guide_wait": [
+          2.35,
+          1.8
+        ],
+        "wheelchair_wait": [
+          3.3,
+          3.3
+        ],
+        "porter_wait": [
+          3.85,
+          3.3
+        ],
+        "patient_wait": [
+          6,
+          4.1
+        ],
+        "patient_walk_center": [
+          6,
+          4.1
+        ],
+        "wheelchair_frame": [
+          0.65,
+          3.65
+        ],
+        "transport_frame": [
+          0.65,
+          3.65
+        ],
+        "finger_release": [
+          0.65,
+          4.2
+        ],
+        "transport_exit": [
+          0.25,
+          3.65
+        ],
+        "relic_pack": [
+          1.35,
+          3.65
+        ],
+        "ward_window_outside": [
+          0.7,
+          3.65
+        ],
+        "stair_corner_before": [
+          8.55,
+          1.3
+        ],
+        "stair_turn": [
+          10.2,
+          3.15
+        ],
+        "stair_corner_after": [
+          10.7,
+          1.3
+        ],
+        "stair_morph": [
+          10.7,
+          0.65
+        ],
+        "intake_handoff": [
+          2.35,
+          1.8
+        ],
+        "intake_arrival": [
+          10.7,
+          1.25
+        ],
+        "ordinary_orderly_wait": [
+          4.2,
+          4
+        ],
+        "registration_nurse_wait": [
+          2.35,
+          1.8
+        ],
+        "actor_idle": [
+          5.35,
+          1.25
+        ],
+        "entry": [
+          5.35,
+          1.25
+        ]
+      },
+      "pairs": [
+        {
+          "id": "registration",
+          "a": "registration_hero",
+          "b": "registration_nurse",
+          "max_distance_m": 0.65
+        },
+        {
+          "id": "wheelchair_transfer",
+          "a": "wheelchair_wait",
+          "b": "porter_wait",
+          "max_distance_m": 0.65
+        },
+        {
+          "id": "fingers_at_frame",
+          "a": "wheelchair_frame",
+          "b": "finger_release",
+          "max_distance_m": 0.65
+        }
+      ],
+      "wide_routes": [
+        {
+          "id": "wheelchair_frame",
+          "from": [
+            3.3,
+            3.3
+          ],
+          "to": [
+            0.75,
+            3.65
+          ],
+          "radius_m": 0.55
+        },
+        {
+          "id": "stair_corner",
+          "from": [
+            8.55,
+            1.3
+          ],
+          "to": [
+            10.7,
+            0.7
+          ],
+          "radius_m": 0.5
+        }
+      ],
+      "portals": [
+        {
+          "toward": "ward",
+          "wall": "west",
+          "wall_point": [
+            0,
+            3.65
+          ],
+          "at": [
+            0.65,
+            3.65
+          ],
+          "threshold": [
+            0.25,
+            3.65
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "landing": [
+            1.25,
+            3.65
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "clinic",
+          "wall": "north",
+          "wall_point": [
+            5.35,
+            0
+          ],
+          "at": [
+            5.35,
+            0.65
+          ],
+          "threshold": [
+            5.35,
+            0.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "landing": [
+            5.35,
+            1.25
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "pharmacy",
+          "wall": "east",
+          "wall_point": [
+            12,
+            3.55
+          ],
+          "at": [
+            11.35,
+            3.55
+          ],
+          "threshold": [
+            11.75,
+            3.55
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "landing": [
+            10.75,
+            3.55
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "office",
+          "wall": "east",
+          "wall_point": [
+            12,
+            5.35
+          ],
+          "at": [
+            11.35,
+            5.35
+          ],
+          "threshold": [
+            11.75,
+            5.35
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "landing": [
+            10.75,
+            5.35
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "stairs",
+          "wall": "north",
+          "wall_point": [
+            10.7,
+            0
+          ],
+          "at": [
+            10.7,
+            0.65
+          ],
+          "threshold": [
+            10.7,
+            0.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "landing": [
+            10.7,
+            1.25
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ],
+      "stairs_geometry": {
+        "flights": [
+          {
+            "id": "visible_stair_approach",
+            "rect_m": [
+              10.05,
+              0.3,
+              1.3,
+              1.8
+            ],
+            "direction": [
+              0,
+              -1
+            ],
+            "steps": 7,
+            "display_only": true
+          }
+        ],
+        "landings": [
+          [
+            9.7,
+            2.2,
+            1.9,
+            1.4
+          ]
+        ],
+        "note": "实际门槛后衔接L3 stairs；L2不新增可搜寻场景"
+      }
+    },
+    "clinic": {
+      "id": "L2_CLINIC",
+      "geometry_version": 2,
+      "status": "技术起测布局；未获正式美术或正常游玩验收",
+      "source": "S1:P53–62; 检查床与搜寻是不同动作",
+      "size_m": [
+        8,
+        6
+      ],
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "search_counts": {
+        "2": 8,
+        "3": 0
+      },
+      "furniture": [
+        {
+          "name": "医生桌抽屉",
+          "kind": "desk",
+          "rect_m": [
+            0.45,
+            0.5,
+            1.8,
+            0.75
+          ],
+          "approach_m": [
+            1.35,
+            1.65
+          ],
+          "height_m": 0.76,
+          "color": "9ca69a",
+          "id": "clinic:0"
+        },
+        {
+          "name": "储物柜",
+          "kind": "drawer",
+          "rect_m": [
+            6.8,
+            0.5,
+            0.7,
+            1.1
+          ],
+          "approach_m": [
+            6.4,
+            1.05
+          ],
+          "height_m": 1.65,
+          "color": "8d9d95",
+          "id": "clinic:1"
+        },
+        {
+          "name": "洗手池下柜",
+          "kind": "sink",
+          "rect_m": [
+            0.4,
+            4.5,
+            0.7,
+            0.65
+          ],
+          "approach_m": [
+            1.45,
+            4.825
+          ],
+          "height_m": 0.85,
+          "color": "afc2ba",
+          "id": "clinic:2"
+        },
+        {
+          "name": "检查床床沿与床底",
+          "kind": "bed",
+          "rect_m": [
+            4.6,
+            3.6,
+            2.2,
+            1
+          ],
+          "approach_m": [
+            5.7,
+            3.15
+          ],
+          "height_m": 0.72,
+          "color": "a8b8b6",
+          "attachments": [
+            "sample_tray",
+            "restraint_cuffs_for_L3"
+          ],
+          "id": "clinic:3"
+        },
+        {
+          "name": "器械柜",
+          "kind": "drawer",
+          "rect_m": [
+            6.9,
+            2.25,
+            0.65,
+            0.85
+          ],
+          "approach_m": [
+            6.5,
+            2.675
+          ],
+          "height_m": 1.7,
+          "color": "8d9d95",
+          "id": "clinic:4"
+        },
+        {
+          "name": "壁架",
+          "kind": "shelf",
+          "rect_m": [
+            0.4,
+            2.25,
+            0.45,
+            1
+          ],
+          "approach_m": [
+            1.25,
+            2.75
+          ],
+          "height_m": 1.25,
+          "color": "9ba99d",
+          "id": "clinic:5"
+        },
+        {
+          "name": "垃圾桶",
+          "kind": "bin",
+          "rect_m": [
+            3.2,
+            4.85,
+            0.45,
+            0.45
+          ],
+          "approach_m": [
+            3.425,
+            4.45
+          ],
+          "height_m": 0.55,
+          "color": "778b88",
+          "id": "clinic:6"
+        },
+        {
+          "name": "窗台",
+          "kind": "window",
+          "rect_m": [
+            4.2,
+            0.1,
+            1.6,
+            0.12
+          ],
+          "approach_m": [
+            5,
+            0.7
+          ],
+          "height_m": 1.1,
+          "color": "a3bfc0",
+          "collision": false,
+          "id": "clinic:7",
+          "wall_mount": "north",
+          "sill_height_m": 1.1,
+          "opening_height_m": 0.8333333333333334
+        }
+      ],
+      "decor": [
+        {
+          "id": "clinic_curtain",
+          "name": "检查床隔帘",
+          "kind": "curtain",
+          "rect_m": [
+            4.3,
+            2.5,
+            2.7,
+            0.08
+          ],
+          "approach_m": [
+            5.65,
+            2.98
+          ],
+          "height_m": 1.95,
+          "color": "9aa79c",
+          "collision": false,
+          "note": "两端保留通行，帘布不是封死唯一通路的实体墙"
+        }
+      ],
+      "static_walls": [],
+      "anchors": {
+        "spawn": [
+          2.4,
+          4.75
+        ],
+        "doctor_wait": [
+          5.1,
+          3.15
+        ],
+        "assistant_wait": [
+          5.7,
+          2.6
+        ],
+        "exam_hero": [
+          5.7,
+          3.15
+        ],
+        "exam_doctor": [
+          5.15,
+          3.15
+        ],
+        "prescription_write": [
+          1.35,
+          1.65
+        ],
+        "exam_retreat": [
+          4,
+          3.1
+        ],
+        "sample_support": [
+          5.1,
+          3.15
+        ],
+        "actor_idle": [
+          2.4,
+          4.75
+        ],
+        "entry": [
+          2.4,
+          4.75
+        ]
+      },
+      "pairs": [
+        {
+          "id": "exam_contact",
+          "a": "exam_hero",
+          "b": "exam_doctor",
+          "max_distance_m": 0.65
+        }
+      ],
+      "wide_routes": [
+        {
+          "id": "exam_bedside",
+          "from": [
+            2.4,
+            4.75
+          ],
+          "to": [
+            5.6,
+            2.9
+          ],
+          "radius_m": 0.45
+        }
+      ],
+      "portals": [
+        {
+          "toward": "lobby",
+          "wall": "south",
+          "wall_point": [
+            2.4,
+            6
+          ],
+          "at": [
+            2.4,
+            5.35
+          ],
+          "threshold": [
+            2.4,
+            5.75
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "landing": [
+            2.4,
+            4.75
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ]
+    },
+    "pharmacy": {
+      "id": "L2_PHARMACY",
+      "geometry_version": 2,
+      "status": "技术起测布局；未获正式美术或正常游玩验收",
+      "source": "S1:P63–73/P120–122; L3增加治疗椅/车不增加门或候选",
+      "size_m": [
+        8,
+        6
+      ],
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "search_counts": {
+        "2": 7,
+        "3": 0
+      },
+      "furniture": [
+        {
+          "name": "取药柜台",
+          "kind": "counter",
+          "rect_m": [
+            1.2,
+            3.4,
+            3,
+            0.75
+          ],
+          "approach_m": [
+            4.65,
+            3.8
+          ],
+          "height_m": 1.05,
+          "color": "93aaa4",
+          "id": "pharmacy:0"
+        },
+        {
+          "name": "冷藏药柜开放层",
+          "kind": "drawer",
+          "rect_m": [
+            6.65,
+            0.4,
+            0.85,
+            1.25
+          ],
+          "approach_m": [
+            6.2,
+            1.025
+          ],
+          "height_m": 1.85,
+          "color": "8d9d95",
+          "id": "pharmacy:1"
+        },
+        {
+          "name": "洗手池下柜",
+          "kind": "sink",
+          "rect_m": [
+            0.4,
+            0.45,
+            0.7,
+            0.65
+          ],
+          "approach_m": [
+            1.5,
+            0.775
+          ],
+          "height_m": 0.85,
+          "color": "afc2ba",
+          "id": "pharmacy:2"
+        },
+        {
+          "name": "储物柜",
+          "kind": "drawer",
+          "rect_m": [
+            0.4,
+            1.65,
+            0.65,
+            1.05
+          ],
+          "approach_m": [
+            1.45,
+            2.175
+          ],
+          "height_m": 1.7,
+          "color": "8d9d95",
+          "id": "pharmacy:3"
+        },
+        {
+          "name": "药架",
+          "kind": "shelf",
+          "rect_m": [
+            3,
+            0.45,
+            2.3,
+            0.55
+          ],
+          "approach_m": [
+            4.15,
+            1.4
+          ],
+          "height_m": 1.9,
+          "color": "9ba99d",
+          "id": "pharmacy:4"
+        },
+        {
+          "name": "处方配药台",
+          "kind": "desk",
+          "rect_m": [
+            5.3,
+            2.1,
+            2.2,
+            0.7
+          ],
+          "approach_m": [
+            6.4,
+            3.2
+          ],
+          "height_m": 0.86,
+          "color": "9ca69a",
+          "id": "pharmacy:5"
+        },
+        {
+          "name": "宣传架",
+          "kind": "rack",
+          "rect_m": [
+            6.9,
+            4.45,
+            0.6,
+            0.95
+          ],
+          "approach_m": [
+            6.45,
+            4.925
+          ],
+          "height_m": 1.45,
+          "color": "969c8e",
+          "id": "pharmacy:6"
+        }
+      ],
+      "decor": [
+        {
+          "id": "treatment_chair",
+          "name": "治疗椅",
+          "kind": "chair",
+          "rect_m": [
+            2.1,
+            5.3,
+            0.6,
+            0.6
+          ],
+          "approach_m": [
+            2.4,
+            4.9
+          ],
+          "height_m": 1,
+          "color": "8b9e9b",
+          "collision": true,
+          "levels": [
+            3
+          ]
+        },
+        {
+          "id": "medicine_cart",
+          "name": "药盘车",
+          "kind": "cart",
+          "rect_m": [
+            3.45,
+            5.35,
+            0.65,
+            0.55
+          ],
+          "approach_m": [
+            3.775,
+            4.9
+          ],
+          "height_m": 0.85,
+          "color": "9aa79c",
+          "collision": true,
+          "levels": [
+            3
+          ]
+        }
+      ],
+      "static_walls": [],
+      "anchors": {
+        "spawn": [
+          1.25,
+          5.0
+        ],
+        "pharmacist_wait": [
+          4.65,
+          3.25
+        ],
+        "med_nurse_wait": [
+          2.5,
+          4.65
+        ],
+        "nurse_wait": [
+          2.5,
+          4.65
+        ],
+        "cup_hero": [
+          4.65,
+          3.8
+        ],
+        "cup_staff": [
+          4.65,
+          3.25
+        ],
+        "cup_counter": [
+          4.65,
+          3.8
+        ],
+        "mix_station": [
+          6.4,
+          3.2
+        ],
+        "treatment_chair": [
+          2.4,
+          4.7
+        ],
+        "actor_idle": [
+          1.25,
+          5.0
+        ],
+        "entry": [
+          1.25,
+          5.0
+        ]
+      },
+      "pairs": [
+        {
+          "id": "cup_handoff",
+          "a": "cup_hero",
+          "b": "cup_staff",
+          "max_distance_m": 0.65
+        }
+      ],
+      "wide_routes": [
+        {
+          "id": "counter_side_access",
+          "from": [
+            1.25,
+            4.7
+          ],
+          "to": [
+            4.8,
+            3.8
+          ],
+          "radius_m": 0.45
+        }
+      ],
+      "portals": [
+        {
+          "toward": "lobby",
+          "wall": "west",
+          "wall_point": [
+            0,
+            5.0
+          ],
+          "at": [
+            0.65,
+            5.0
+          ],
+          "threshold": [
+            0.25,
+            5.0
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "landing": [
+            1.25,
+            5.0
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ]
+    },
+    "office": {
+      "id": "L2_OFFICE",
+      "geometry_version": 2,
+      "status": "技术起测布局；未获正式美术或正常游玩验收",
+      "source": "S1:P74–84; 桌①登记转运、桌②死亡费用异常报告；原候选顺序",
+      "size_m": [
+        9,
+        6
+      ],
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "search_counts": {
+        "2": 11,
+        "3": 0
+      },
+      "furniture": [
+        {
+          "name": "资料架",
+          "kind": "shelf",
+          "rect_m": [
+            0.35,
+            0.45,
+            1.2,
+            0.5
+          ],
+          "approach_m": [
+            0.95,
+            1.4
+          ],
+          "height_m": 1.65,
+          "color": "9ba99d",
+          "id": "office:0"
+        },
+        {
+          "name": "窗台",
+          "kind": "window",
+          "rect_m": [
+            2.4,
+            0.1,
+            1.2,
+            0.12
+          ],
+          "approach_m": [
+            3,
+            0.7
+          ],
+          "height_m": 1.1,
+          "color": "a3bfc0",
+          "collision": false,
+          "id": "office:1",
+          "wall_mount": "north",
+          "sill_height_m": 1.1,
+          "opening_height_m": 0.8333333333333334
+        },
+        {
+          "name": "饮水机下柜",
+          "kind": "drawer",
+          "rect_m": [
+            7.7,
+            0.45,
+            0.7,
+            0.6
+          ],
+          "approach_m": [
+            7.25,
+            0.75
+          ],
+          "height_m": 1.1,
+          "color": "8d9d95",
+          "id": "office:2"
+        },
+        {
+          "name": "垃圾桶",
+          "kind": "bin",
+          "rect_m": [
+            7.9,
+            2.05,
+            0.45,
+            0.45
+          ],
+          "approach_m": [
+            7.45,
+            2.275
+          ],
+          "height_m": 0.55,
+          "color": "778b88",
+          "id": "office:3"
+        },
+        {
+          "name": "小边柜",
+          "kind": "drawer",
+          "rect_m": [
+            0.35,
+            2.15,
+            0.7,
+            0.65
+          ],
+          "approach_m": [
+            1.45,
+            2.475
+          ],
+          "height_m": 0.85,
+          "color": "8d9d95",
+          "id": "office:4"
+        },
+        {
+          "name": "文件柜",
+          "kind": "drawer",
+          "rect_m": [
+            7.7,
+            3.35,
+            0.8,
+            1.15
+          ],
+          "approach_m": [
+            7.25,
+            3.925
+          ],
+          "height_m": 1.9,
+          "color": "8d9d95",
+          "id": "office:5"
+        },
+        {
+          "name": "办公桌①",
+          "kind": "desk",
+          "rect_m": [
+            2.05,
+            2.25,
+            1.65,
+            0.75
+          ],
+          "approach_m": [
+            2.875,
+            3.4
+          ],
+          "height_m": 0.76,
+          "color": "9ca69a",
+          "id": "office:6"
+        },
+        {
+          "name": "打印机出纸托盘",
+          "kind": "machine",
+          "rect_m": [
+            4.4,
+            0.45,
+            0.65,
+            0.5
+          ],
+          "approach_m": [
+            4.725,
+            1.35
+          ],
+          "height_m": 1,
+          "color": "8aa4a5",
+          "id": "office:7"
+        },
+        {
+          "name": "洗手池下柜",
+          "kind": "sink",
+          "rect_m": [
+            0.4,
+            4.55,
+            0.7,
+            0.65
+          ],
+          "approach_m": [
+            1.5,
+            4.875
+          ],
+          "height_m": 0.85,
+          "color": "afc2ba",
+          "id": "office:8"
+        },
+        {
+          "name": "储物柜",
+          "kind": "drawer",
+          "rect_m": [
+            2.6,
+            4.85,
+            1,
+            0.65
+          ],
+          "approach_m": [
+            3.1,
+            4.45
+          ],
+          "height_m": 1.5,
+          "color": "8d9d95",
+          "id": "office:9"
+        },
+        {
+          "name": "办公桌②",
+          "kind": "desk",
+          "rect_m": [
+            5,
+            4.65,
+            1.7,
+            0.75
+          ],
+          "approach_m": [
+            5.85,
+            4.2
+          ],
+          "height_m": 0.76,
+          "color": "9ca69a",
+          "id": "office:10"
+        }
+      ],
+      "decor": [],
+      "static_walls": [],
+      "anchors": {
+        "spawn": [
+          1.25,
+          3.65
+        ],
+        "archivist_wait": [
+          2.875,
+          3.4
+        ],
+        "guard_wait": [
+          3.425,
+          3.4
+        ],
+        "patient_wait": [
+          5.6,
+          2.6
+        ],
+        "report_writer": [
+          2.875,
+          3.4
+        ],
+        "report_receiver": [
+          3.425,
+          3.4
+        ],
+        "guard_release": [
+          1.25,
+          3.65
+        ],
+        "patient_retreat": [
+          5.6,
+          1.8
+        ],
+        "death_files": [
+          5.85,
+          4.2
+        ],
+        "actor_idle": [
+          1.25,
+          3.65
+        ],
+        "entry": [
+          1.25,
+          3.65
+        ]
+      },
+      "pairs": [
+        {
+          "id": "report_handoff",
+          "a": "report_writer",
+          "b": "report_receiver",
+          "max_distance_m": 0.65
+        }
+      ],
+      "wide_routes": [
+        {
+          "id": "guard_drag_exit",
+          "from": [
+            5.85,
+            4.1
+          ],
+          "to": [
+            0.7,
+            3.65
+          ],
+          "radius_m": 0.45
+        }
+      ],
+      "portals": [
+        {
+          "toward": "lobby",
+          "wall": "west",
+          "wall_point": [
+            0,
+            3.65
+          ],
+          "at": [
+            0.65,
+            3.65
+          ],
+          "threshold": [
+            0.25,
+            3.65
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "landing": [
+            1.25,
+            3.65
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ]
+    },
+    "stairs": {
+      "id": "L3_STAIRS",
+      "geometry_version": 2,
+      "status": "技术起测布局；未获正式美术或正常游玩验收",
+      "source": "S1:P135–146/S4:T24R4; 原三路线，无第三医院楼层",
+      "size_m": [
+        7,
+        5
+      ],
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "search_counts": {
+        "2": 0,
+        "3": 1
+      },
+      "furniture": [
+        {
+          "name": "平台窗台",
+          "kind": "window",
+          "rect_m": [
+            0.1,
+            1.3,
+            0.12,
+            1.4
+          ],
+          "approach_m": [
+            0.7,
+            2
+          ],
+          "height_m": 1.15,
+          "color": "a3bfc0",
+          "collision": false,
+          "id": "stairs:0",
+          "wall_mount": "west",
+          "sill_height_m": 1.15,
+          "opening_height_m": 0.8333333333333334
+        }
+      ],
+      "decor": [],
+      "static_walls": [
+        {
+          "id": "stair_central_return",
+          "rect_m": [
+            2.75,
+            1.6,
+            0.18,
+            3.4
+          ],
+          "height_m": 1.1,
+          "color": "8a9d96"
+        }
+      ],
+      "anchors": {
+        "spawn": [
+          1.4,
+          3.75
+        ],
+        "stair_lower": [
+          1.4,
+          3.75
+        ],
+        "stair_turn": [
+          1.8,
+          1.1
+        ],
+        "stair_upper": [
+          5.75,
+          1.3
+        ],
+        "exit_approach": [
+          5,
+          1.25
+        ],
+        "rest_return": [
+          1.4,
+          4.35
+        ],
+        "window_observe": [
+          0.7,
+          2
+        ],
+        "actor_idle": [
+          1.4,
+          3.75
+        ],
+        "entry": [
+          1.4,
+          3.75
+        ]
+      },
+      "pairs": [],
+      "wide_routes": [
+        {
+          "id": "stair_corner",
+          "from": [
+            1.4,
+            3.75
+          ],
+          "to": [
+            5.75,
+            1.3
+          ],
+          "radius_m": 0.5
+        }
+      ],
+      "levels": [
+        3
+      ],
+      "portals": [
+        {
+          "toward": "lobby",
+          "wall": "south",
+          "wall_point": [
+            1.4,
+            5
+          ],
+          "at": [
+            1.4,
+            4.35
+          ],
+          "threshold": [
+            1.4,
+            4.75
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "landing": [
+            1.4,
+            3.75
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "corridor",
+          "wall": "east",
+          "wall_point": [
+            7,
+            1.3
+          ],
+          "at": [
+            6.35,
+            1.3
+          ],
+          "threshold": [
+            6.75,
+            1.3
+          ],
+          "inward": [
+            -1,
+            0
+          ],
+          "landing": [
+            5.75,
+            1.3
+          ],
+          "width_m": 1.4,
+          "height_m": 2.15
+        },
+        {
+          "toward": "cortex_exit",
+          "wall": "north",
+          "wall_point": [
+            5,
+            0
+          ],
+          "at": [
+            5,
+            0.65
+          ],
+          "threshold": [
+            5,
+            0.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "landing": [
+            5,
+            1.25
+          ],
+          "width_m": 1.2,
+          "height_m": 2.15
+        }
+      ],
+      "stairs_geometry": {
+        "flights": [
+          {
+            "id": "lower_flight",
+            "rect_m": [
+              0.65,
+              2,
+              1.5,
+              2.2
+            ],
+            "direction": [
+              0,
+              -1
+            ],
+            "steps": 9,
+            "display_only": true
+          },
+          {
+            "id": "upper_flight",
+            "rect_m": [
+              3.5,
+              0.55,
+              2.3,
+              1.5
+            ],
+            "direction": [
+              1,
+              0
+            ],
+            "steps": 9,
+            "display_only": true
+          }
+        ],
+        "landings": [
+          [
+            0.55,
+            0.55,
+            2.55,
+            1
+          ],
+          [
+            5.8,
+            0.55,
+            0.95,
+            1.8
+          ]
+        ],
+        "note": "二维台阶与返墙；导航沿真实转角通路，不新增门、房、搜寻或治疗门槛"
+      }
+    },
+    "corridor": {
+      "geometry_version": 2,
+      "size_m": [
+        16,
+        5
+      ],
+      "authority": "S1:P147–164; original topology and stable points retained; placements are technical trial",
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "furniture": [
+        {
+          "id": "corridor:0",
+          "name": "护士站办公桌",
+          "rect_m": [
+            0.55,
+            0.35,
+            1.8,
+            0.75
+          ],
+          "approach_m": [
+            1.5,
+            1.5
+          ],
+          "kind": "desk",
+          "height_m": 0.75,
+          "color": "8c9b90"
+        },
+        {
+          "id": "corridor:1",
+          "name": "花坛",
+          "rect_m": [
+            14.75,
+            0.4,
+            0.65,
+            0.65
+          ],
+          "approach_m": [
+            14.35,
+            0.9
+          ],
+          "kind": "plant",
+          "height_m": 0.7,
+          "color": "8c9b90"
+        },
+        {
+          "id": "corridor:2",
+          "name": "候诊椅组",
+          "rect_m": [
+            1.8,
+            4.1,
+            1.8,
+            0.55
+          ],
+          "approach_m": [
+            2.7,
+            3.75
+          ],
+          "kind": "chairs",
+          "height_m": 0.9,
+          "color": "8c9b90"
+        },
+        {
+          "id": "corridor:3",
+          "name": "桌旁柜子",
+          "rect_m": [
+            0.5,
+            3.4,
+            0.6,
+            0.8
+          ],
+          "approach_m": [
+            1.45,
+            3.8
+          ],
+          "kind": "drawer",
+          "height_m": 1.1,
+          "color": "8c9b90"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "stairs",
+          "wall": "west",
+          "wall_point": [
+            0,
+            2.5
+          ],
+          "at": [
+            0.65,
+            2.5
+          ],
+          "threshold": [
+            0.25,
+            2.5
+          ],
+          "landing": [
+            1.25,
+            2.5
+          ],
+          "inward": [
+            1,
+            0
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "activity",
+          "wall": "north",
+          "wall_point": [
+            3.5,
+            0
+          ],
+          "at": [
+            3.5,
+            0.65
+          ],
+          "threshold": [
+            3.5,
+            0.25
+          ],
+          "landing": [
+            3.5,
+            1.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "group_therapy",
+          "wall": "north",
+          "wall_point": [
+            7.5,
+            0
+          ],
+          "at": [
+            7.5,
+            0.65
+          ],
+          "threshold": [
+            7.5,
+            0.25
+          ],
+          "landing": [
+            7.5,
+            1.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "quiet",
+          "wall": "north",
+          "wall_point": [
+            12,
+            0
+          ],
+          "at": [
+            12.0,
+            0.65
+          ],
+          "threshold": [
+            12.0,
+            0.25
+          ],
+          "landing": [
+            12.0,
+            1.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "bathroom",
+          "wall": "south",
+          "wall_point": [
+            13.5,
+            5
+          ],
+          "at": [
+            13.5,
+            4.35
+          ],
+          "threshold": [
+            13.5,
+            4.75
+          ],
+          "landing": [
+            13.5,
+            3.75
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "double_ward",
+          "wall": "south",
+          "wall_point": [
+            9.5,
+            5
+          ],
+          "at": [
+            9.5,
+            4.35
+          ],
+          "threshold": [
+            9.5,
+            4.75
+          ],
+          "landing": [
+            9.5,
+            3.75
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        },
+        {
+          "toward": "workshop",
+          "wall": "south",
+          "wall_point": [
+            5.5,
+            5
+          ],
+          "at": [
+            5.5,
+            4.35
+          ],
+          "threshold": [
+            5.5,
+            4.75
+          ],
+          "landing": [
+            5.5,
+            3.75
+          ],
+          "inward": [
+            0,
+            -1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ],
+      "anchors": {
+        "spawn": [
+          1.25,
+          2.5
+        ],
+        "actor_idle": [
+          1.25,
+          2.5
+        ],
+        "entry": [
+          1.25,
+          2.5
+        ],
+        "head_nurse_wait": [
+          1.5,
+          1.5
+        ],
+        "med_nurse_wait": [
+          2.1,
+          1.5
+        ],
+        "ordinary_orderly_wait": [
+          2.7,
+          2.2
+        ],
+        "isolation_orderly_wait": [
+          11,
+          1.1
+        ],
+        "station_side": [
+          2.7,
+          2.2
+        ],
+        "chief_station_side": [
+          0.85,
+          1.5
+        ],
+        "station_write_pos": [
+          2.1,
+          1.5
+        ],
+        "transfer_station_bed": [
+          2.3,
+          2.1
+        ],
+        "transfer_station_nurse": [
+          1.85,
+          2.0
+        ],
+        "station_work_surface": [
+          1.5,
+          1.5
+        ],
+        "corridor_parking": [
+          13.3,
+          2.6
+        ],
+        "corner_waiting": [
+          9.5,
+          3.2
+        ],
+        "isolation_staff_side": [
+          11,
+          1.1
+        ],
+        "ordinary_patient_stop": [
+          2.8,
+          2.2
+        ]
+      },
+      "decor": [],
+      "static_walls": [],
+      "pairs": [
+        {
+          "id": "station_document_contact",
+          "a": "transfer_station_bed",
+          "b": "transfer_station_nurse",
+          "max_distance_m": 0.55
+        },
+        {
+          "id": "nurse_at_real_station",
+          "a": "transfer_station_nurse",
+          "b": "station_work_surface",
+          "max_distance_m": 0.65
+        }
+      ],
+      "wide_routes": [
+        {
+          "id": "bed_main_lane",
+          "radius_m": 0.45,
+          "from": [
+            1.25,
+            2.5
+          ],
+          "to": [
+            14.2,
+            2.5
+          ]
+        }
+      ],
+      "search_counts": {
+        "3": 4
+      },
+      "search_metadata": "asylum_upper",
+      "camera_track": true
+    },
+    "activity": {
+      "geometry_version": 2,
+      "size_m": [
+        10,
+        8
+      ],
+      "authority": "S1:P147–164; original topology and stable points retained; placements are technical trial",
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "furniture": [
+        {
+          "id": "activity:0",
+          "name": "电视柜",
+          "rect_m": [
+            0.2,
+            1.1,
+            1.6,
+            0.5
+          ],
+          "approach_m": [
+            1,
+            1.95
+          ],
+          "kind": "drawer",
+          "height_m": 0.7,
+          "color": "8c9b90"
+        },
+        {
+          "id": "activity:1",
+          "name": "窗①",
+          "rect_m": [
+            0,
+            2.3,
+            0.08,
+            1.2
+          ],
+          "approach_m": [
+            0.7,
+            2.9
+          ],
+          "kind": "window",
+          "height_m": 1.15,
+          "color": "8c9b90",
+          "collision": false,
+          "wall_mount": "west",
+          "sill_height_m": 1.15,
+          "opening_height_m": 0.8333333333333334
+        },
+        {
+          "id": "activity:2",
+          "name": "沙发组",
+          "rect_m": [
+            0.7,
+            3.5,
+            2.4,
+            1
+          ],
+          "approach_m": [
+            1.9,
+            3.15
+          ],
+          "kind": "sofa",
+          "height_m": 0.85,
+          "color": "8c9b90"
+        },
+        {
+          "id": "activity:3",
+          "name": "茶几",
+          "rect_m": [
+            3.8,
+            3.55,
+            1.1,
+            0.7
+          ],
+          "approach_m": [
+            4.35,
+            3.2
+          ],
+          "kind": "table",
+          "height_m": 0.43,
+          "color": "8c9b90"
+        },
+        {
+          "id": "activity:4",
+          "name": "活动桌",
+          "rect_m": [
+            6.6,
+            3.5,
+            2,
+            0.9
+          ],
+          "approach_m": [
+            7.6,
+            3.15
+          ],
+          "kind": "desk",
+          "height_m": 0.75,
+          "color": "8c9b90"
+        },
+        {
+          "id": "activity:5",
+          "name": "绿植",
+          "rect_m": [
+            8.8,
+            6.7,
+            0.6,
+            0.6
+          ],
+          "approach_m": [
+            8.35,
+            6.9
+          ],
+          "kind": "plant",
+          "height_m": 1,
+          "color": "8c9b90"
+        },
+        {
+          "id": "activity:6",
+          "name": "窗②",
+          "rect_m": [
+            9.92,
+            1.8,
+            0.08,
+            1.2
+          ],
+          "approach_m": [
+            9.3,
+            2.4
+          ],
+          "kind": "window",
+          "height_m": 1.15,
+          "color": "8c9b90",
+          "collision": false,
+          "wall_mount": "east",
+          "sill_height_m": 1.15,
+          "opening_height_m": 0.8333333333333334
+        },
+        {
+          "id": "activity:7",
+          "name": "书架",
+          "rect_m": [
+            6.7,
+            0.35,
+            2,
+            0.45
+          ],
+          "approach_m": [
+            7.7,
+            1.2
+          ],
+          "kind": "books",
+          "height_m": 1.6,
+          "color": "8c9b90"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "corridor",
+          "wall": "north",
+          "wall_point": [
+            5,
+            0
+          ],
+          "at": [
+            5.0,
+            0.65
+          ],
+          "threshold": [
+            5.0,
+            0.25
+          ],
+          "landing": [
+            5.0,
+            1.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ],
+      "anchors": {
+        "spawn": [
+          5,
+          1.25
+        ],
+        "actor_idle": [
+          5,
+          1.25
+        ],
+        "entry": [
+          5,
+          1.25
+        ],
+        "postop_patient_wait": [
+          3.4,
+          2.5
+        ],
+        "informer_wait": [
+          4.6,
+          2.3
+        ]
+      },
+      "decor": [],
+      "static_walls": [],
+      "pairs": [],
+      "wide_routes": [
+        {
+          "id": "door_to_sofa_side",
+          "radius_m": 0.45,
+          "from": [
+            5,
+            1.25
+          ],
+          "to": [
+            3.45,
+            2.85
+          ]
+        }
+      ],
+      "search_counts": {
+        "3": 8
+      },
+      "search_metadata": "asylum_upper",
+      "camera_track": true
+    },
+    "group_therapy": {
+      "geometry_version": 2,
+      "size_m": [
+        9,
+        8
+      ],
+      "authority": "S1:P165–216; original topology/search parts; technical proportions only",
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "furniture": [
+        {
+          "id": "group_therapy:0",
+          "name": "储物柜",
+          "rect_m": [
+            0.4,
+            1.6,
+            0.9,
+            1.5
+          ],
+          "approach_m": [
+            1.65,
+            2.35
+          ],
+          "kind": "drawer",
+          "height_m": 1.5,
+          "color": "8c9b90"
+        },
+        {
+          "id": "group_therapy:1",
+          "name": "窗①",
+          "rect_m": [
+            0,
+            4.9,
+            0.08,
+            1.3
+          ],
+          "approach_m": [
+            0.7,
+            5.55
+          ],
+          "kind": "window",
+          "height_m": 1.2,
+          "color": "8c9b90",
+          "collision": false,
+          "wall_mount": "west",
+          "sill_height_m": 1.2,
+          "opening_height_m": 0.8333333333333334
+        },
+        {
+          "id": "group_therapy:2",
+          "name": "团体座椅组",
+          "rect_m": [
+            2.3,
+            3,
+            4.2,
+            3.5
+          ],
+          "approach_m": [
+            4.4,
+            3.9
+          ],
+          "kind": "chairs",
+          "height_m": 0.9,
+          "color": "8c9b90",
+          "collision_rects_m": [
+            [
+              2.3,
+              3.4,
+              0.6,
+              2.6
+            ],
+            [
+              5.9,
+              3.4,
+              0.6,
+              2.6
+            ],
+            [
+              2.9,
+              6.0,
+              3,
+              0.5
+            ],
+            [
+              2.3,
+              3,
+              1.1,
+              0.5
+            ],
+            [
+              5.4,
+              3,
+              1.1,
+              0.5
+            ]
+          ]
+        },
+        {
+          "id": "group_therapy:3",
+          "name": "绿植",
+          "rect_m": [
+            7.7,
+            6.8,
+            0.6,
+            0.6
+          ],
+          "approach_m": [
+            7.2,
+            7.1
+          ],
+          "kind": "plant",
+          "height_m": 1,
+          "color": "8c9b90"
+        },
+        {
+          "id": "group_therapy:4",
+          "name": "窗②",
+          "rect_m": [
+            8.92,
+            4.8,
+            0.08,
+            1.3
+          ],
+          "approach_m": [
+            8.3,
+            5.45
+          ],
+          "kind": "window",
+          "height_m": 1.2,
+          "color": "8c9b90",
+          "collision": false,
+          "wall_mount": "east",
+          "sill_height_m": 1.2,
+          "opening_height_m": 0.8333333333333334
+        },
+        {
+          "id": "group_therapy:5",
+          "name": "白板",
+          "rect_m": [
+            5.2,
+            0.25,
+            1.8,
+            0.12
+          ],
+          "approach_m": [
+            6.1,
+            1.2
+          ],
+          "kind": "board",
+          "height_m": 1.65,
+          "color": "8c9b90"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "corridor",
+          "wall": "north",
+          "wall_point": [
+            4.5,
+            0
+          ],
+          "at": [
+            4.5,
+            0.65
+          ],
+          "threshold": [
+            4.5,
+            0.25
+          ],
+          "landing": [
+            4.5,
+            1.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ],
+      "anchors": {
+        "spawn": [
+          4.5,
+          1.25
+        ],
+        "entry": [
+          4.5,
+          1.25
+        ],
+        "actor_idle": [
+          4.5,
+          1.25
+        ],
+        "therapist_wait": [
+          6.1,
+          1.2
+        ],
+        "speaker_wait": [
+          4.4,
+          3.9
+        ],
+        "speaker_release": [
+          4.4,
+          1.8
+        ],
+        "observer_wait": [
+          4.4,
+          2.7
+        ]
+      },
+      "decor": [],
+      "static_walls": [],
+      "pairs": [],
+      "wide_routes": [
+        {
+          "id": "open_seat_group_entry",
+          "radius_m": 0.45,
+          "from": [
+            4.5,
+            1.25
+          ],
+          "to": [
+            4.4,
+            4.8
+          ]
+        }
+      ],
+      "search_counts": {
+        "3": 6
+      },
+      "search_metadata": "asylum_upper",
+      "camera_track": true
+    },
+    "quiet": {
+      "geometry_version": 2,
+      "size_m": [
+        6,
+        5
+      ],
+      "authority": "S1:P165–216; original topology/search parts; technical proportions only",
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "furniture": [
+        {
+          "id": "quiet:0",
+          "name": "固定储物柜",
+          "rect_m": [
+            0.4,
+            1.4,
+            0.8,
+            1.3
+          ],
+          "approach_m": [
+            1.55,
+            2
+          ],
+          "kind": "drawer",
+          "height_m": 1.6,
+          "color": "8c9b90"
+        },
+        {
+          "id": "quiet:1",
+          "name": "普通储物柜",
+          "rect_m": [
+            4.8,
+            1.4,
+            0.8,
+            1.3
+          ],
+          "approach_m": [
+            4.45,
+            2
+          ],
+          "kind": "drawer",
+          "height_m": 1.6,
+          "color": "8c9b90"
+        },
+        {
+          "id": "quiet:2",
+          "name": "软垫休息椅",
+          "rect_m": [
+            0.55,
+            3.7,
+            1.7,
+            0.65
+          ],
+          "approach_m": [
+            1.4,
+            3.35
+          ],
+          "kind": "chair",
+          "height_m": 0.85,
+          "color": "8c9b90"
+        },
+        {
+          "id": "quiet:3",
+          "name": "高窗",
+          "rect_m": [
+            5.92,
+            3.45,
+            0.08,
+            1.2
+          ],
+          "approach_m": [
+            5.3,
+            4.05
+          ],
+          "kind": "window",
+          "height_m": 1.55,
+          "color": "8c9b90",
+          "collision": false,
+          "wall_mount": "east",
+          "sill_height_m": 1.55,
+          "opening_height_m": 0.8333333333333334
+        }
+      ],
+      "portals": [
+        {
+          "toward": "corridor",
+          "wall": "north",
+          "wall_point": [
+            3,
+            0
+          ],
+          "at": [
+            3.0,
+            0.65
+          ],
+          "threshold": [
+            3.0,
+            0.25
+          ],
+          "landing": [
+            3.0,
+            1.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ],
+      "anchors": {
+        "spawn": [
+          3,
+          1.25
+        ],
+        "entry": [
+          3,
+          1.25
+        ],
+        "actor_idle": [
+          3,
+          1.25
+        ],
+        "ordinary_patient_stop": [
+          3,
+          2.8
+        ],
+        "transport_bed_park": [
+          3,
+          2.2
+        ],
+        "isolation_observation": [
+          3,
+          2.8
+        ]
+      },
+      "decor": [],
+      "static_walls": [],
+      "pairs": [],
+      "wide_routes": [
+        {
+          "id": "bed_to_actual_parking",
+          "radius_m": 0.45,
+          "from": [
+            3,
+            1.25
+          ],
+          "to": [
+            3,
+            2.2
+          ]
+        }
+      ],
+      "search_counts": {
+        "3": 4
+      },
+      "search_metadata": "asylum_upper",
+      "camera_track": true
+    },
+    "bathroom": {
+      "geometry_version": 2,
+      "size_m": [
+        8,
+        7
+      ],
+      "authority": "S1:P165–216; original topology/search parts; technical proportions only",
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "furniture": [
+        {
+          "id": "bathroom:0",
+          "name": "洗手池①",
+          "rect_m": [
+            0.35,
+            1,
+            0.7,
+            1.2
+          ],
+          "approach_m": [
+            1.4,
+            1.6
+          ],
+          "kind": "sink",
+          "height_m": 0.8,
+          "color": "8c9b90"
+        },
+        {
+          "id": "bathroom:1",
+          "name": "洗手池②",
+          "rect_m": [
+            0.35,
+            3,
+            0.7,
+            1.2
+          ],
+          "approach_m": [
+            1.4,
+            3.6
+          ],
+          "kind": "sink",
+          "height_m": 0.8,
+          "color": "8c9b90"
+        },
+        {
+          "id": "bathroom:2",
+          "name": "公共地漏",
+          "rect_m": [
+            2.8,
+            3.2,
+            0.25,
+            0.25
+          ],
+          "approach_m": [
+            3.05,
+            3.45
+          ],
+          "kind": "drain",
+          "height_m": 0.02,
+          "color": "8c9b90",
+          "collision": false
+        },
+        {
+          "id": "bathroom:3",
+          "name": "淋浴间①",
+          "rect_m": [
+            5.6,
+            1.5,
+            1.9,
+            1.5
+          ],
+          "approach_m": [
+            6.3,
+            2.3
+          ],
+          "kind": "shower",
+          "height_m": 1.9,
+          "color": "8c9b90",
+          "collision_rects_m": [
+            [
+              5.6,
+              1.5,
+              1.9,
+              0.12
+            ],
+            [
+              7.38,
+              1.5,
+              0.12,
+              1.5
+            ],
+            [
+              5.6,
+              2.88,
+              1.9,
+              0.12
+            ]
+          ],
+          "screen_target": true
+        },
+        {
+          "id": "bathroom:4",
+          "name": "淋浴间②",
+          "rect_m": [
+            5.6,
+            4.2,
+            1.9,
+            1.5
+          ],
+          "approach_m": [
+            6.3,
+            4.95
+          ],
+          "kind": "shower",
+          "height_m": 1.9,
+          "color": "8c9b90",
+          "collision_rects_m": [
+            [
+              5.6,
+              4.2,
+              1.9,
+              0.12
+            ],
+            [
+              7.38,
+              4.2,
+              0.12,
+              1.5
+            ],
+            [
+              5.6,
+              5.58,
+              1.9,
+              0.12
+            ]
+          ]
+        },
+        {
+          "id": "bathroom:5",
+          "name": "高窗",
+          "rect_m": [
+            0,
+            5.25,
+            0.08,
+            1.2
+          ],
+          "approach_m": [
+            0.7,
+            5.85
+          ],
+          "kind": "window",
+          "height_m": 1.55,
+          "color": "8c9b90",
+          "collision": false,
+          "wall_mount": "west",
+          "sill_height_m": 1.55,
+          "opening_height_m": 0.8333333333333334
+        },
+        {
+          "id": "bathroom:6",
+          "name": "马桶",
+          "rect_m": [
+            3.3,
+            5.8,
+            0.65,
+            0.65
+          ],
+          "approach_m": [
+            3.6,
+            5.35
+          ],
+          "kind": "toilet",
+          "height_m": 0.75,
+          "color": "8c9b90"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "corridor",
+          "wall": "north",
+          "wall_point": [
+            4,
+            0
+          ],
+          "at": [
+            4.0,
+            0.65
+          ],
+          "threshold": [
+            4.0,
+            0.25
+          ],
+          "landing": [
+            4.0,
+            1.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ],
+      "anchors": {
+        "spawn": [
+          4,
+          1.25
+        ],
+        "entry": [
+          4,
+          1.25
+        ],
+        "actor_idle": [
+          4,
+          1.25
+        ],
+        "cleaner_wait": [
+          4.5,
+          1.25
+        ],
+        "observer_wait": [
+          4.75,
+          2.3
+        ],
+        "corpse_origin": [
+          6.3,
+          2.3
+        ],
+        "relic_asylum_corpse_wristband": [
+          3.05,
+          3.45
+        ],
+        "relic_asylum_meal_list": [
+          6.3,
+          4.95
+        ],
+        "wash_shower1": [
+          6.3,
+          2.3
+        ],
+        "wash_drain": [
+          3.05,
+          3.45
+        ],
+        "wash_shower2": [
+          6.3,
+          4.95
+        ]
+      },
+      "decor": [
+        {
+          "id": "bathroom:-1",
+          "name": "清洁车停靠位",
+          "rect_m": [
+            1.8,
+            5.8,
+            0.8,
+            0.6
+          ],
+          "approach_m": [
+            2.2,
+            5.3
+          ],
+          "kind": "cart",
+          "height_m": 0.8,
+          "color": "8c9b90",
+          "collision": true
+        }
+      ],
+      "static_walls": [],
+      "pairs": [],
+      "wide_routes": [
+        {
+          "id": "corpse_board_stall_to_door",
+          "radius_m": 0.45,
+          "from": [
+            6.3,
+            2.3
+          ],
+          "to": [
+            4,
+            1.25
+          ]
+        }
+      ],
+      "search_counts": {
+        "3": 7
+      },
+      "search_metadata": "asylum_upper",
+      "camera_track": true
+    },
+    "double_ward": {
+      "geometry_version": 2,
+      "size_m": [
+        8,
+        6
+      ],
+      "authority": "S1:P165–216; original topology/search parts; technical proportions only",
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "furniture": [
+        {
+          "id": "double_ward:0",
+          "name": "衣柜",
+          "rect_m": [
+            0.4,
+            1,
+            0.75,
+            1.25
+          ],
+          "approach_m": [
+            1.55,
+            1.6
+          ],
+          "kind": "wardrobe",
+          "height_m": 2,
+          "color": "8c9b90"
+        },
+        {
+          "id": "double_ward:1",
+          "name": "储物柜",
+          "rect_m": [
+            5.6,
+            0.45,
+            0.9,
+            1
+          ],
+          "approach_m": [
+            6.85,
+            1
+          ],
+          "kind": "drawer",
+          "height_m": 1.4,
+          "color": "8c9b90"
+        },
+        {
+          "id": "double_ward:2",
+          "name": "单人床①",
+          "rect_m": [
+            1.3,
+            3,
+            2.05,
+            1
+          ],
+          "approach_m": [
+            3.75,
+            3.5
+          ],
+          "kind": "bed",
+          "height_m": 0.5,
+          "color": "8c9b90"
+        },
+        {
+          "id": "double_ward:3",
+          "name": "单人床②",
+          "rect_m": [
+            4.65,
+            3,
+            2.05,
+            1
+          ],
+          "approach_m": [
+            4.25,
+            3.5
+          ],
+          "kind": "bed",
+          "height_m": 0.5,
+          "color": "8c9b90"
+        },
+        {
+          "id": "double_ward:4",
+          "name": "床头柜①",
+          "rect_m": [
+            1.3,
+            4.5,
+            0.55,
+            0.55
+          ],
+          "approach_m": [
+            2.25,
+            4.8
+          ],
+          "kind": "drawer",
+          "height_m": 0.65,
+          "color": "8c9b90"
+        },
+        {
+          "id": "double_ward:5",
+          "name": "床头柜②",
+          "rect_m": [
+            6.15,
+            4.5,
+            0.55,
+            0.55
+          ],
+          "approach_m": [
+            5.75,
+            4.8
+          ],
+          "kind": "drawer",
+          "height_m": 0.65,
+          "color": "8c9b90"
+        },
+        {
+          "id": "double_ward:6",
+          "name": "窗",
+          "rect_m": [
+            3.3,
+            5.92,
+            1.4,
+            0.08
+          ],
+          "approach_m": [
+            4,
+            5.3
+          ],
+          "kind": "window",
+          "height_m": 1.2,
+          "color": "8c9b90",
+          "collision": false,
+          "wall_mount": "south",
+          "sill_height_m": 1.2,
+          "opening_height_m": 0.8333333333333334
+        }
+      ],
+      "portals": [
+        {
+          "toward": "corridor",
+          "wall": "north",
+          "wall_point": [
+            4,
+            0
+          ],
+          "at": [
+            4.0,
+            0.65
+          ],
+          "threshold": [
+            4.0,
+            0.25
+          ],
+          "landing": [
+            4.0,
+            1.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ],
+      "anchors": {
+        "spawn": [
+          4,
+          1.25
+        ],
+        "entry": [
+          4,
+          1.25
+        ],
+        "actor_idle": [
+          4,
+          1.25
+        ],
+        "corner_patient_wait": [
+          5,
+          1.4
+        ],
+        "patient_wait": [
+          3.75,
+          3.5
+        ],
+        "observer_wait": [
+          4.9,
+          2.2
+        ]
+      },
+      "decor": [],
+      "static_walls": [],
+      "pairs": [],
+      "wide_routes": [
+        {
+          "id": "between_two_numbered_beds",
+          "radius_m": 0.45,
+          "from": [
+            4,
+            1.25
+          ],
+          "to": [
+            4,
+            4.25
+          ]
+        }
+      ],
+      "search_counts": {
+        "3": 7
+      },
+      "search_metadata": "asylum_upper",
+      "camera_track": true
+    },
+    "workshop": {
+      "geometry_version": 2,
+      "size_m": [
+        10,
+        7
+      ],
+      "authority": "S1:P165–216; original topology/search parts; technical proportions only",
+      "wall": {
+        "thickness_m": 0.15,
+        "height_m": 2.55,
+        "display": {"logical_full_height": true, "near_sides": ["west", "south"], "near_alpha": 0.20, "occluded_alpha": 0.07}
+      },
+      "furniture": [
+        {
+          "id": "workshop:0",
+          "name": "操作桌①",
+          "rect_m": [
+            0.5,
+            2.3,
+            2.2,
+            1
+          ],
+          "approach_m": [
+            1.6,
+            1.85
+          ],
+          "kind": "desk",
+          "height_m": 0.75,
+          "color": "8c9b90"
+        },
+        {
+          "id": "workshop:1",
+          "name": "操作桌②",
+          "rect_m": [
+            6.8,
+            2.3,
+            2.2,
+            1
+          ],
+          "approach_m": [
+            7.9,
+            1.85
+          ],
+          "kind": "desk",
+          "height_m": 0.75,
+          "color": "8c9b90"
+        },
+        {
+          "id": "workshop:2",
+          "name": "矮柜",
+          "rect_m": [
+            0.4,
+            5.8,
+            1.2,
+            0.7
+          ],
+          "approach_m": [
+            1,
+            5.4
+          ],
+          "kind": "drawer",
+          "height_m": 0.65,
+          "color": "8c9b90"
+        },
+        {
+          "id": "workshop:3",
+          "name": "洗手池",
+          "rect_m": [
+            0.4,
+            0.4,
+            1,
+            0.55
+          ],
+          "approach_m": [
+            0.9,
+            1.3
+          ],
+          "kind": "sink",
+          "height_m": 0.8,
+          "color": "8c9b90"
+        },
+        {
+          "id": "workshop:4",
+          "name": "窗",
+          "rect_m": [
+            0,
+            3.7,
+            0.08,
+            1.4
+          ],
+          "approach_m": [
+            0.7,
+            4.4
+          ],
+          "kind": "window",
+          "height_m": 1.2,
+          "color": "8c9b90",
+          "collision": false,
+          "wall_mount": "west",
+          "sill_height_m": 1.2,
+          "opening_height_m": 0.8333333333333334
+        },
+        {
+          "id": "workshop:5",
+          "name": "作品展示板",
+          "rect_m": [
+            4,
+            6.8,
+            1.8,
+            0.12
+          ],
+          "approach_m": [
+            4.9,
+            6.15
+          ],
+          "kind": "board",
+          "height_m": 1.5,
+          "color": "8c9b90"
+        },
+        {
+          "id": "workshop:6",
+          "name": "材料柜",
+          "rect_m": [
+            8.6,
+            4.3,
+            1,
+            1.6
+          ],
+          "approach_m": [
+            9.1,
+            6.35
+          ],
+          "kind": "drawer",
+          "height_m": 1.6,
+          "color": "8c9b90",
+          "locked_upper": true,
+          "contact_height_m": 1.0
+        },
+        {
+          "id": "workshop:7",
+          "name": "材料架",
+          "rect_m": [
+            8.5,
+            0.4,
+            1,
+            0.55
+          ],
+          "approach_m": [
+            9,
+            1.25
+          ],
+          "kind": "material_rack",
+          "height_m": 1.6,
+          "color": "8c9b90"
+        }
+      ],
+      "portals": [
+        {
+          "toward": "corridor",
+          "wall": "north",
+          "wall_point": [
+            5,
+            0
+          ],
+          "at": [
+            5.0,
+            0.65
+          ],
+          "threshold": [
+            5.0,
+            0.25
+          ],
+          "landing": [
+            5.0,
+            1.25
+          ],
+          "inward": [
+            0,
+            1
+          ],
+          "width_m": 1.35,
+          "height_m": 2.15
+        }
+      ],
+      "anchors": {
+        "spawn": [
+          5,
+          1.25
+        ],
+        "entry": [
+          5,
+          1.25
+        ],
+        "actor_idle": [
+          5,
+          1.25
+        ],
+        "labor_patient_wait": [
+          9,
+          1.25
+        ],
+        "worker_table": [
+          8.45,
+          1.85
+        ],
+        "worker_rack": [
+          9.45,
+          1.2
+        ],
+        "table_search": [
+          7.9,
+          1.85
+        ],
+        "supervisor_wait": [
+          8.65,
+          6.35
+        ],
+        "observer_wait": [
+          7.9,
+          1.2
+        ]
+      },
+      "decor": [],
+      "static_walls": [],
+      "pairs": [
+        {
+          "id": "separate_worker_and_searcher",
+          "a": "worker_table",
+          "b": "table_search",
+          "max_distance_m": 0.65
+        }
+      ],
+      "wide_routes": [
+        {
+          "id": "between_work_tables",
+          "radius_m": 0.45,
+          "from": [
+            5,
+            1.25
+          ],
+          "to": [
+            5,
+            5.5
+          ]
+        }
+      ],
+      "search_counts": {
+        "3": 8
+      },
+      "search_metadata": "asylum_upper",
+      "camera_track": true,
+      "object_anchors": {
+        "product_surface": {
+          "pos_m": [
+            8.15,
+            2.35
+          ],
+          "height_m": 0.75,
+          "support": "workshop:1",
+          "contact_anchors": [
+            "worker_table",
+            "table_search"
+          ],
+          "reach_m": 0.65
+        }
+      }
+    }
+  },
+  "upper_trial_rooms": [
+    "corridor",
+    "activity",
+    "group_therapy",
+    "quiet",
+    "bathroom",
+    "double_ward",
+    "workshop"
+  ]
+}

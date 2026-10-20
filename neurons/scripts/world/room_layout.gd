@@ -55,6 +55,24 @@ func rebuild_grid() -> void:
   for x in range(cells.x):
    grid.set_point_solid(Vector2i(x,y), not walkable(Vector2(x,y)*CELL))
 
+func push_movable_blocker(blocker:Rect2) -> Dictionary:
+ # Only cells within this rectangle's body-radius expansion can change.
+ # Preserve existing temporary occupancy and restore its exact solid mask.
+ var previous:Array[Rect2]=movable_blockers.duplicate();var changed:Array=[]
+ movable_blockers.append(blocker)
+ var grown:Rect2=blocker.grow(body_radius+CELL)
+ for y in range(floori(grown.position.y/CELL),ceili(grown.end.y/CELL)+1):
+  for x in range(floori(grown.position.x/CELL),ceili(grown.end.x/CELL)+1):
+   var cell:=Vector2i(x,y)
+   if not grid.is_in_boundsv(cell):continue
+   var was:bool=grid.is_point_solid(cell);var solid:bool=not walkable(Vector2(cell)*CELL)
+   if was!=solid:changed.append({"cell":cell,"solid":was});grid.set_point_solid(cell,solid)
+ return {"previous":previous,"changed":changed}
+
+func pop_movable_blocker(state:Dictionary) -> void:
+ movable_blockers=state.previous
+ for item:Dictionary in state.changed:grid.set_point_solid(item.cell,item.solid)
+
 func project(p:Vector2) -> Vector2:
  return Vector2(45.0 + 80.0*p.x + 28.0*p.y, 132.0 + 46.0*p.y)
 
@@ -67,8 +85,9 @@ func walkable(p:Vector2, radius:float=-1.0) -> bool:
  if not Rect2(Vector2(radius,radius),world_size()-Vector2.ONE*radius*2).has_point(p):
   return false
  for f in furniture:
-  if footprint_contains((f.rect as Rect2).grow(radius),p):
-   return false
+  if not f.get("solid",true) or not f.get("collision",true):continue
+  for rect:Rect2 in f.get("collision_rects",[f.rect]):
+   if footprint_contains(rect.grow(radius),p):return false
  for rect in movable_blockers:
   if footprint_contains(rect.grow(radius),p):return false
  return true
@@ -104,7 +123,9 @@ func clear_segment(a:Vector2,b:Vector2,radius:float=0.0) -> bool:
  if geometry_version>=2:
   if not walkable(a,radius) or not walkable(b,radius):return false
   for item:Dictionary in furniture:
-   if segment_hits_rect(a,b,(item.rect as Rect2).grow(radius)):return false
+   if not item.get("solid",true) or not item.get("collision",true):continue
+   for rect:Rect2 in item.get("collision_rects",[item.rect]):
+    if segment_hits_rect(a,b,rect.grow(radius)):return false
   for rect:Rect2 in movable_blockers:
    if segment_hits_rect(a,b,rect.grow(radius)):return false
   return true
@@ -113,8 +134,9 @@ func clear_segment(a:Vector2,b:Vector2,radius:float=0.0) -> bool:
   var p := a.lerp(b,float(i)/steps)
   if not Rect2(Vector2(radius,radius),world_size()-Vector2.ONE*radius*2).has_point(p):return false
   for f in furniture:
-   if (f.rect as Rect2).grow(radius).has_point(p):
-    return false
+   if not f.get("solid",true) or not f.get("collision",true):continue
+   for rect:Rect2 in f.get("collision_rects",[f.rect]):
+    if rect.grow(radius).has_point(p):return false
   for rect in movable_blockers:
    if rect.grow(radius).has_point(p):return false
  return true

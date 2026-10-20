@@ -1,0 +1,63 @@
+{
+  "failures": [],
+  "passes": [
+    "L1:bedroom actual entry is walkable",
+    "L1:bedroom camera projection round trip",
+    "L1:bedroom uses metric geometry",
+    "L1:bedroom full-size world viewport",
+    "projection kernel selects west over east",
+    "actual prism and visible-face hit geometry use west boundary",
+    "complete-wall visibility follows the same projection kernel",
+    "L2:ward actual entry is walkable",
+    "L2:ward camera projection round trip",
+    "L2:ward uses metric geometry",
+    "L2:ward full-size world viewport",
+    "L2:clinic actual entry is walkable",
+    "L2:clinic camera projection round trip",
+    "L2:clinic uses metric geometry",
+    "L2:clinic full-size world viewport"
+  ],
+  "rendered": true,
+  "rooms": [
+    {
+      "chapter": 1,
+      "room": "bedroom",
+      "size": [
+        6.40000009536743,
+        4.80000019073486
+      ],
+      "spawn": [
+        1.70000004768372,
+        1.70000004768372
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 2,
+      "room": "ward",
+      "size": [
+        6.40000009536743,
+        4.80000019073486
+      ],
+      "spawn": [
+        4.44999980926514,
+        1.25
+      ],
+      "version": 2
+    },
+    {
+      "chapter": 2,
+      "room": "clinic",
+      "size": [
+        8.0,
+        6.0
+      ],
+      "spawn": [
+        2.40000009536743,
+        4.75
+      ],
+      "version": 2
+    }
+  ],
+  "scope": "Three declared new-layout fixtures, actual GPU rendering and visible-face geometry derived from projection kernel. No layout/rule changes, natural route or aesthetic approval."
+}

@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-10-18T17:04:35.906691+00:00",
+  "baseline": "2a5887f91a69e135979d504d333c5b2d289f3dcc",
+  "source": {
+    "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+    "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+    "actually_read": [
+      "S3:P1717–1727",
+      "S3:P1772–1789",
+      "S3:P1813–1824",
+      "S3:P1836–1847",
+      "S3:P1870–1891"
+    ],
+    "adopted": [
+      "Existing archivist ID is second-level identity, actual opened staple-like fingers→wrist/forearm closure; never steal inventory/known records.",
+      "supervisor is separate from dislocated: attached dual clamps, actual closure before damage, one receipt/holder, miss fully opens before next attack.",
+      "stitched existing partial paper-tear progress is reused and never regenerated; actual wrist closure then release.",
+      "self is the same existing entity, actual wrist closure, original release interval, no forced duel, no pull-back after ending."
+    ]
+  },
+  "protected_semantics": {
+    "actors": true,
+    "attacks": true,
+    "rooms": true,
+    "materials": true,
+    "all_original_test_parameter_values": true
+  },
+  "new_tunable_geometry_only": {
+    "hand_grip_start_m": 1.05,
+    "hand_grip_shoulder_m": 0.14,
+    "hand_grip_wrist_offset_m": 0.18,
+    "hand_grip_near_m": 0.28,
+    "hand_grip_arm_radius_m": 0.035,
+    "hand_grip_hand_outer_m": 0.09,
+    "hand_grip_clamp_outer_m": 0.12,
+    "hand_grip_capture_m": 0.065,
+    "hand_grip_forearm_m": 0.14,
+    "hand_grip_withdraw_m": 0.32,
+    "hand_grip_extend_ratio": 0.7,
+    "hand_grip_contact_ratio": 0.94,
+    "hand_grip_sample_m": 0.025,
+    "hand_grip_height_px": 75
+  },
+  "original_contract": {
+    "attack": "grab unchanged .8/.3/.6/1.5;10HP0SP;1.2m reach/.4m width;1.2s sole original hold",
+    "ending_keys_growth_music": "unchanged",
+    "action_contacts": "Only real forearm centers enclosed near closure count; body-box grazes/walls/far/behind do not. Timely withdrawal displaces unheld forearm; established hold cannot retroactively retract away.",
+    "legacy": "Existing receipt/deadline restored; only physically consistent local holds reconstructed. Invalid long-range hold releases in place, no injury replay or pulling host to actor."
+  },
+  "verification": {
+    "finite_final": "119passed/0failed, including second prepared gripper cannot steal another actual clamp, nonowner injury cannot release owner; fixed forearm/obstacle/legacy fixtures, original damage and real paid CONTROL/knee/JSON.",
+    "live_r3": "36passed/0failed; four explicit cast/HP-SP scenes and actual paid CONTROL, ordinary AI/process, real Space/Book/Escape/running wheel;507frames/30=16.9s silent movie plus screenshots",
+    "regressions": "Actual window Street54/0 (including actual E3 result panel), existing clamp23/0 and grasp43/0.",
+    "visual_math": "Parent requested projection-derived WEST/SOUTH foreground and EndingStory call integrated; shared prism/shell changed by parent, not claimed authored by this subagent.",
+    "inspected": "Actual screenshots default/1.15 wrist, dual-clamp, stitched original paper, self; continuous frames180/320 from final r3 looked at. Formal anatomy/animation not accepted.",
+    "failures_preserved": [
+      "finite_r1:116/1, final paper1.199999 floating>=1.2; same actual1.2 progress printed, tolerance corrected, no production-rule change",
+      "live_r1:36/0 but relative movie output failed WAV initialization, not valid movie; absolute r2 and finalr3 recorded correctly"
+    ],
+    "natural": "Actual window directStreet entry, then no seed/NPC/position/resource/route/damage fixture;92.6667game seconds,HP80, full E2 registration/dialogue/wake/planet/complete,6passed0failed. Not L1-through-game or human balance approval."
+  },
+  "files": [
+    {
+      "path": "neurons/scripts/core/street_hand_grips.gd",
+      "sha256": "ad57c7d8094a0540baafaf6bf9216a5b5476f7c80f9b801a8e04bd0739efce2c"
+    },
+    {
+      "path": "neurons/scripts/core/street_chapter.gd",
+      "sha256": "cda17fced98ea564f8152340b1563e5b63794a945db4760bc71bd78489e4444d"
+    },
+    {
+      "path": "neurons/scripts/world/combat_view.gd",
+      "sha256": "8fb3948504e3e90109986c58716a95f0c1560ef380511b5d6417078b8403def0"
+    },
+    {
+      "path": "neurons/data/street_chapter.json",
+      "sha256": "c42cb50b8fa956fbadf6a6e6433d49f1aeb768fa042bd7ac36892493ec587357"
+    },
+    {
+      "path": "neurons/tests/street_hand_grips_check.gd",
+      "sha256": "5d52aa1f5116ccc653ca604151593e89776b6e7c765dda511b6f3ab0ca38fc44"
+    },
+    {
+      "path": "neurons/tests/street_hand_grips_live_check.gd",
+      "sha256": "68f4439b8b7984ce0b6925e9e34e9cf612a0ef3192cac5e699f7d033d003308f"
+    }
+  ],
+  "git_writes": false,
+  "still_not_approved": [
+    "Formal monster/character designs/anatomy/animation",
+    "Natural large mixed crowds and all door/death ownership combinations",
+    "Human normal-speed whole game/ear audition/two-machine B7"
+  ],
+  "live_movie": {
+    "path": "docs/validation/street_hand_grips_20261019/live_r3/continuous_silent.mp4",
+    "sha256": "6cd3d6b74a305378df1a9aa30491e9cb098287884356fea64ee7294d21d92996",
+    "frames": 507,
+    "fps": 30,
+    "seconds": 16.9,
+    "audio": "silent exported review clip; runtime WAV preserved in ignored tmp; no ear audition"
+  }
+}

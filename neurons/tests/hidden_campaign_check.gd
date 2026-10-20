@@ -127,6 +127,7 @@ func _ready() -> void:
  if not app.paused_manual:trace("hidden_pause_rejected");await finish_run();return
  check(app.rules.mode=="combat" and app.world_rate()==1.0 and not app.rules.gripped and not app.family.present("father"),"hidden entry ends father grip/half-rate/pressure and switches to combat")
  check(app.rules.hp==74 and app.rules.sp<=86 and app.rules.sp>70,"hidden entry preserves actual HP and SP already lost to father pressure")
+ var hidden_entry_hp:int=app.rules.hp
  check(app.rules.neurons==0 and app.rules.plexus==0 and app.rules.owners[item]=="hero","hidden entry preserves zero resources and unique owned candy")
  check(app.session.data.level==1 and app.session.data.unlocked==[1] and app.visible_doors.is_empty() and not app.key_visible(),"hidden route remains L1, grants no hospital/L6 unlock and does not create a key task")
  check(app.layout.furniture[0].id=="fountain" and not app.layout.clear_segment(Vector2(1.5,1.8),Vector2(4,1.8)),"actual 2D layout contains solid, sight-blocking fountain")
@@ -163,7 +164,14 @@ func _ready() -> void:
  check(int(app.hidden_route.data.hunter.hp)==60 and int(app.session.data.level)==1 and app.session.data.unlocked.size()==1 and int(app.session.data.unlocked[0])==1,"E1 does not require killing hunter or grant hospital/L6 unlock")
  var boundary:Vector2=app.hidden_route.vector(app.hidden_route.config.layout.exit)
  check((app.hero_pos-boundary).dot(app.hidden_route.EXIT_OUTWARD)>=0,"E1 is reached beyond the visible threshold, not by approaching its radius")
- check(app.hidden_route.data.feedback_receipts.has("evaded") or "evaded" in app.hidden_route.data.get("ending_feedback",[]),"actual evade feedback is either presented or retained across exit settlement")
+ # Exact collision-aware routes may legitimately take a real hit and escape.
+ # E1 never required a guaranteed miss; verify the actual contact receipts,
+ # damage and corresponding feedback instead of manufacturing an evade.
+ var actual_hunter_hits:int=0
+ for receipt in app.rules.settled:
+  if app.rules.settled[receipt]=="hunter_hit":actual_hunter_hits+=1
+ var actual_feedback:Array=app.hidden_route.data.feedback_receipts.keys()+app.hidden_route.data.get("ending_feedback",[])
+ check(app.rules.hp==hidden_entry_hp-actual_hunter_hits*int(app.hidden_route.config.rules.attack_hp_damage) and ((actual_hunter_hits>0 and "hit" in actual_feedback) or (actual_hunter_hits==0 and "evaded" in actual_feedback)),"actual hit or evade feedback matches unique contact receipts and real HP across exit settlement")
  await key(KEY_ESCAPE)
  await capture("05_E1_plaza_first_beat")
  var ending_elapsed:float=app.hidden_route.data.ending.elapsed

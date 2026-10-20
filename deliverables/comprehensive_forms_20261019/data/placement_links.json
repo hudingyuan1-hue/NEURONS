@@ -1,0 +1,3961 @@
+{
+  "schema": 1,
+  "by_asset": {
+    "ENV_BED": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "bed",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_BEDSIDE": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "bedside",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_double_ward",
+        "furniture_id": "double_ward:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_double_ward",
+        "furniture_id": "double_ward:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_BEDSIDE_OPEN": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "bedside",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:1",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:1",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_double_ward",
+        "furniture_id": "double_ward:4",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_double_ward",
+        "furniture_id": "double_ward:5",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_CHAIR": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "chair",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_DESK": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "desk",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_DESK_OPEN": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "desk",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:3",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:3",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_STOOL": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "stool",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_TRUNK": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "box",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_TRUNK_OPEN": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "box",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_COATRACK": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "rack",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_hippocampus",
+        "furniture_id": "memory_clothes_rack",
+        "reason": "陈列衣架沿衣帽架类派生；记忆衣物独立，不搬入卧室白褂摆位。",
+        "match_kind": "family_variant",
+        "generation_note": "陈列衣架沿衣帽架类派生；记忆衣物独立，不搬入卧室白褂摆位。",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_WARDROBE": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "wardrobe",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:7",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:7",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_double_ward",
+        "furniture_id": "double_ward:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_WARDROBE_OPEN": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "wardrobe",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:7",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:7",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_double_ward",
+        "furniture_id": "double_ward:0",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_BOOKSHELF": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "books",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_activity",
+        "furniture_id": "activity:7",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_STORAGE": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "storage",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_clinic",
+        "furniture_id": "clinic:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_pharmacy",
+        "furniture_id": "pharmacy:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:9",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_clinic",
+        "furniture_id": "clinic:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "pharmacy:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:9",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_quiet",
+        "furniture_id": "quiet:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_double_ward",
+        "furniture_id": "double_ward:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_index",
+        "furniture_id": "index:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_index",
+        "furniture_id": "index:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_cerebellum",
+        "furniture_id": "储物柜",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_STORAGE_OPEN": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "storage",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:5",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_clinic",
+        "furniture_id": "clinic:1",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_pharmacy",
+        "furniture_id": "pharmacy:3",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:9",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:5",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_clinic",
+        "furniture_id": "clinic:1",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "pharmacy:3",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:9",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_quiet",
+        "furniture_id": "quiet:1",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_double_ward",
+        "furniture_id": "double_ward:1",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_index",
+        "furniture_id": "index:4",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_index",
+        "furniture_id": "index:4",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_cerebellum",
+        "furniture_id": "储物柜",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_FAN": [
+      {
+        "room_id": "L1_bedroom",
+        "furniture_id": "fan",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_013": [
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_double_ward",
+        "furniture_id": "double_ward:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_double_ward",
+        "furniture_id": "double_ward:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_051": [
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:2",
+        "reason": "普通床边椅；沿椅类母图派生普通椅，不添加固定束带或治疗装置。",
+        "match_kind": "family_variant",
+        "generation_note": "普通床边椅；沿椅类母图派生普通椅，不添加固定束带或治疗装置。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:2",
+        "reason": "普通床边椅；沿椅类母图派生普通椅，不添加固定束带或治疗装置。",
+        "match_kind": "family_variant",
+        "generation_note": "普通床边椅；沿椅类母图派生普通椅，不添加固定束带或治疗装置。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "treatment_chair",
+        "reason": "治疗椅沿固定椅类派生，实际扶手与坐面按本处尺寸；不因名称新增束带。",
+        "match_kind": "family_variant",
+        "generation_note": "治疗椅沿固定椅类派生，实际扶手与坐面按本处尺寸；不因名称新增束带。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_memory",
+        "furniture_id": "memory_group_chair",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_memory",
+        "furniture_id": "memory_group_chair",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_014": [
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_SMALL_PROPS_LAUNDRY_BAG": [
+      {
+        "room_id": "L2_ward",
+        "furniture_id": "ward_laundry_bag",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_ward",
+        "furniture_id": "ward_laundry_bag",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_015": [
+      {
+        "room_id": "L2_lobby",
+        "furniture_id": "lobby:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_lobby",
+        "furniture_id": "lobby:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_016": [
+      {
+        "room_id": "L2_lobby",
+        "furniture_id": "lobby:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_lobby",
+        "furniture_id": "lobby:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_017": [
+      {
+        "room_id": "L2_lobby",
+        "furniture_id": "lobby:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_lobby",
+        "furniture_id": "lobby:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_018": [
+      {
+        "room_id": "L2_lobby",
+        "furniture_id": "lobby:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_lobby",
+        "furniture_id": "lobby:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_activity",
+        "furniture_id": "activity:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_group_therapy",
+        "furniture_id": "group_therapy:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_memory",
+        "furniture_id": "memory_group_plant",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_decision",
+        "furniture_id": "decision:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_memory",
+        "furniture_id": "memory_group_plant",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_decision",
+        "furniture_id": "decision:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_019": [
+      {
+        "room_id": "L2_lobby",
+        "furniture_id": "lobby:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_pharmacy",
+        "furniture_id": "pharmacy:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_lobby",
+        "furniture_id": "lobby:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "pharmacy:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_020": [
+      {
+        "room_id": "L2_lobby",
+        "furniture_id": "lobby:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_lobby",
+        "furniture_id": "lobby:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_021": [
+      {
+        "room_id": "L2_lobby",
+        "furniture_id": "waiting_seats",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_lobby",
+        "furniture_id": "waiting_seats",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_corridor",
+        "furniture_id": "corridor:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_verify",
+        "furniture_id": "verify:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_verify",
+        "furniture_id": "verify:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_037": [
+      {
+        "room_id": "L2_clinic",
+        "furniture_id": "clinic:0",
+        "reason": "医生桌（含搜寻抽屉）沿办公桌类派生；抽屉保持独立，不是普通卧室床或独立漂浮抽屉。",
+        "match_kind": "family_variant",
+        "generation_note": "医生桌（含搜寻抽屉）沿办公桌类派生；抽屉保持独立，不是普通卧室床或独立漂浮抽屉。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:10",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_clinic",
+        "furniture_id": "clinic:0",
+        "reason": "医生桌（含搜寻抽屉）沿办公桌类派生；抽屉保持独立，不是普通卧室床或独立漂浮抽屉。",
+        "match_kind": "family_variant",
+        "generation_note": "医生桌（含搜寻抽屉）沿办公桌类派生；抽屉保持独立，不是普通卧室床或独立漂浮抽屉。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:10",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_memory",
+        "furniture_id": "memory:1",
+        "reason": "本处是查阅桌，沿桌类母图按桌面和支腿派生，不自动加办公室设备。",
+        "match_kind": "family_variant",
+        "generation_note": "本处是查阅桌，沿桌类母图按桌面和支腿派生，不自动加办公室设备。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_decision",
+        "furniture_id": "decision:3",
+        "reason": "本处是决策会议桌，按本处桌面宽长与多侧操作面派生，不能拉伸小书桌。",
+        "match_kind": "family_variant",
+        "generation_note": "本处是决策会议桌，按本处桌面宽长与多侧操作面派生，不能拉伸小书桌。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_index",
+        "furniture_id": "index:1",
+        "reason": "查询工作台沿桌类派生，终端另层；保留本处操作侧。",
+        "match_kind": "family_variant",
+        "generation_note": "查询工作台沿桌类派生，终端另层；保留本处操作侧。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_memory",
+        "furniture_id": "memory:1",
+        "reason": "本处是查阅桌，沿桌类母图按桌面和支腿派生，不自动加办公室设备。",
+        "match_kind": "family_variant",
+        "generation_note": "本处是查阅桌，沿桌类母图按桌面和支腿派生，不自动加办公室设备。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_decision",
+        "furniture_id": "decision:3",
+        "reason": "本处是决策会议桌，按本处桌面宽长与多侧操作面派生，不能拉伸小书桌。",
+        "match_kind": "family_variant",
+        "generation_note": "本处是决策会议桌，按本处桌面宽长与多侧操作面派生，不能拉伸小书桌。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_index",
+        "furniture_id": "index:1",
+        "reason": "查询工作台沿桌类派生，终端另层；保留本处操作侧。",
+        "match_kind": "family_variant",
+        "generation_note": "查询工作台沿桌类派生，终端另层；保留本处操作侧。",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_023": [
+      {
+        "room_id": "L2_clinic",
+        "furniture_id": "clinic:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_pharmacy",
+        "furniture_id": "pharmacy:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:8",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_clinic",
+        "furniture_id": "clinic:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "pharmacy:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:8",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_024": [
+      {
+        "room_id": "L2_clinic",
+        "furniture_id": "clinic:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_clinic",
+        "furniture_id": "clinic:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_025": [
+      {
+        "room_id": "L2_clinic",
+        "furniture_id": "clinic:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_clinic",
+        "furniture_id": "clinic:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_body",
+        "furniture_id": "body:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_body",
+        "furniture_id": "body:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_025_OPEN": [
+      {
+        "room_id": "L2_clinic",
+        "furniture_id": "clinic:4",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_clinic",
+        "furniture_id": "clinic:4",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_body",
+        "furniture_id": "body:6",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_body",
+        "furniture_id": "body:6",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_026": [
+      {
+        "room_id": "L2_clinic",
+        "furniture_id": "clinic:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_clinic",
+        "furniture_id": "clinic:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_027": [
+      {
+        "room_id": "L2_clinic",
+        "furniture_id": "clinic:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_clinic",
+        "furniture_id": "clinic:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_029": [
+      {
+        "room_id": "L2_clinic",
+        "furniture_id": "clinic_curtain",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_clinic",
+        "furniture_id": "clinic_curtain",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_030": [
+      {
+        "room_id": "L2_pharmacy",
+        "furniture_id": "pharmacy:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "pharmacy:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_031": [
+      {
+        "room_id": "L2_pharmacy",
+        "furniture_id": "pharmacy:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "pharmacy:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_031_OPEN": [
+      {
+        "room_id": "L2_pharmacy",
+        "furniture_id": "pharmacy:1",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "pharmacy:1",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_032": [
+      {
+        "room_id": "L2_pharmacy",
+        "furniture_id": "pharmacy:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "pharmacy:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_032_OPEN": [
+      {
+        "room_id": "L2_pharmacy",
+        "furniture_id": "pharmacy:4",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "pharmacy:4",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_033": [
+      {
+        "room_id": "L2_pharmacy",
+        "furniture_id": "pharmacy:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "pharmacy:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_034": [
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_035": [
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_corridor",
+        "furniture_id": "corridor:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_036": [
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_memory",
+        "furniture_id": "memory:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_visual",
+        "furniture_id": "visual:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_decision",
+        "furniture_id": "decision:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_index",
+        "furniture_id": "index:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_identity",
+        "furniture_id": "identity:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_identity",
+        "furniture_id": "identity:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_memory",
+        "furniture_id": "memory:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_visual",
+        "furniture_id": "visual:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_decision",
+        "furniture_id": "decision:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_index",
+        "furniture_id": "index:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_identity",
+        "furniture_id": "identity:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_identity",
+        "furniture_id": "identity:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_hippocampus",
+        "furniture_id": "档案柜",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_036_OPEN": [
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:5",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:5",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_memory",
+        "furniture_id": "memory:6",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_visual",
+        "furniture_id": "visual:2",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_decision",
+        "furniture_id": "decision:0",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_index",
+        "furniture_id": "index:2",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_identity",
+        "furniture_id": "identity:4",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_identity",
+        "furniture_id": "identity:5",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_memory",
+        "furniture_id": "memory:6",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_visual",
+        "furniture_id": "visual:2",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_decision",
+        "furniture_id": "decision:0",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_index",
+        "furniture_id": "index:2",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_identity",
+        "furniture_id": "identity:4",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_identity",
+        "furniture_id": "identity:5",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_hippocampus",
+        "furniture_id": "档案柜",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_038": [
+      {
+        "room_id": "L2_office",
+        "furniture_id": "office:7",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_office",
+        "furniture_id": "office:7",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_060": [
+      {
+        "room_id": "L3_pharmacy",
+        "furniture_id": "medicine_cart",
+        "reason": "仅借清洁车的轮架尺度模板；本处改药盘车，托盘和用途不同，不能直接使用清洁污物车造型。",
+        "match_kind": "family_variant",
+        "generation_note": "仅借清洁车的轮架尺度模板；本处改药盘车，托盘和用途不同，不能直接使用清洁污物车造型。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_bathroom",
+        "furniture_id": "bathroom:-1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_maintenance",
+        "furniture_id": "street_cleaner_cart",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_042": [
+      {
+        "room_id": "L3_corridor",
+        "furniture_id": "corridor:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_041": [
+      {
+        "room_id": "L3_corridor",
+        "furniture_id": "corridor:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_043": [
+      {
+        "room_id": "L3_activity",
+        "furniture_id": "activity:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_044": [
+      {
+        "room_id": "L3_activity",
+        "furniture_id": "activity:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_045": [
+      {
+        "room_id": "L3_activity",
+        "furniture_id": "activity:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_046": [
+      {
+        "room_id": "L3_activity",
+        "furniture_id": "activity:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_workshop",
+        "furniture_id": "workshop:0",
+        "reason": "作业操作桌，保留宽桌面和裁纸活动空间；不是公共娱乐桌摆设。",
+        "match_kind": "family_variant",
+        "generation_note": "作业操作桌，保留宽桌面和裁纸活动空间；不是公共娱乐桌摆设。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_workshop",
+        "furniture_id": "workshop:1",
+        "reason": "第二张作业操作桌，保持本处占地；桌面材料另层。",
+        "match_kind": "family_variant",
+        "generation_note": "第二张作业操作桌，保持本处占地；桌面材料另层。",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_062": [
+      {
+        "room_id": "L3_group_therapy",
+        "furniture_id": "group_therapy:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_workshop",
+        "furniture_id": "workshop:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_062_OPEN": [
+      {
+        "room_id": "L3_group_therapy",
+        "furniture_id": "group_therapy:0",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_workshop",
+        "furniture_id": "workshop:2",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_048": [
+      {
+        "room_id": "L3_group_therapy",
+        "furniture_id": "group_therapy:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_049": [
+      {
+        "room_id": "L3_group_therapy",
+        "furniture_id": "group_therapy:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_052": [
+      {
+        "room_id": "L3_quiet",
+        "furniture_id": "quiet:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_052_OPEN": [
+      {
+        "room_id": "L3_quiet",
+        "furniture_id": "quiet:0",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_053": [
+      {
+        "room_id": "L3_quiet",
+        "furniture_id": "quiet:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_056": [
+      {
+        "room_id": "L3_bathroom",
+        "furniture_id": "bathroom:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_bathroom",
+        "furniture_id": "bathroom:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L3_workshop",
+        "furniture_id": "workshop:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_059": [
+      {
+        "room_id": "L3_bathroom",
+        "furniture_id": "bathroom:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_063": [
+      {
+        "room_id": "L3_workshop",
+        "furniture_id": "workshop:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_064": [
+      {
+        "room_id": "L3_workshop",
+        "furniture_id": "workshop:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_064_OPEN": [
+      {
+        "room_id": "L3_workshop",
+        "furniture_id": "workshop:6",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_065": [
+      {
+        "room_id": "L3_workshop",
+        "furniture_id": "workshop:7",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_066": [
+      {
+        "room_id": "L4_atrium",
+        "furniture_id": "atrium:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_atrium",
+        "furniture_id": "atrium:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_SMALL_PROPS_OLD_DOOR_SIGN": [
+      {
+        "room_id": "L4_atrium",
+        "furniture_id": "old_doorplate",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_atrium",
+        "furniture_id": "old_doorplate",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_SMALL_PROPS_WRISTBAND": [
+      {
+        "room_id": "L4_atrium",
+        "furniture_id": "broken_wristband",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_atrium",
+        "furniture_id": "broken_wristband",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_069": [
+      {
+        "room_id": "L4_memory",
+        "furniture_id": "memory:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_memory",
+        "furniture_id": "memory:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_047": [
+      {
+        "room_id": "L4_memory",
+        "furniture_id": "memory:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_visual",
+        "furniture_id": "visual:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_memory",
+        "furniture_id": "memory:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_visual",
+        "furniture_id": "visual:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_050": [
+      {
+        "room_id": "L4_memory",
+        "furniture_id": "memory:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_memory",
+        "furniture_id": "memory:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_072": [
+      {
+        "room_id": "L4_memory",
+        "furniture_id": "memory:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_memory",
+        "furniture_id": "memory:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_073": [
+      {
+        "room_id": "L4_visual",
+        "furniture_id": "visual:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_visual",
+        "furniture_id": "visual:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_079": [
+      {
+        "room_id": "L4_visual",
+        "furniture_id": "visual:3",
+        "reason": "终端/屏幕/控制台设备族：本处为弧形屏基座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为弧形屏基座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_decision",
+        "furniture_id": "decision:1",
+        "reason": "终端/屏幕/控制台设备族：本处为资料终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为资料终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_body",
+        "furniture_id": "body:0",
+        "reason": "终端/屏幕/控制台设备族：本处为姿态检测屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为姿态检测屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_bridge",
+        "furniture_id": "bridge:1",
+        "reason": "终端/屏幕/控制台设备族：本处为左侧检测终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为左侧检测终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_bridge",
+        "furniture_id": "bridge:2",
+        "reason": "终端/屏幕/控制台设备族：本处为右侧检测终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为右侧检测终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_index",
+        "furniture_id": "index:3",
+        "reason": "终端/屏幕/控制台设备族：本处为索引终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为索引终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_index",
+        "furniture_id": "index:5",
+        "reason": "终端/屏幕/控制台设备族：本处为身份档案显示屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为身份档案显示屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_switch",
+        "furniture_id": "switch:1",
+        "reason": "终端/屏幕/控制台设备族：本处为信号检测屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为信号检测屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_verify",
+        "furniture_id": "verify:0",
+        "reason": "终端/屏幕/控制台设备族：本处为身份识别终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为身份识别终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_verify",
+        "furniture_id": "verify:1",
+        "reason": "终端/屏幕/控制台设备族：本处为核验控制台；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为核验控制台；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_verify",
+        "furniture_id": "verify:4",
+        "reason": "终端/屏幕/控制台设备族：本处为维护终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为维护终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_verify",
+        "furniture_id": "verify:5",
+        "reason": "终端/屏幕/控制台设备族：本处为身份信息显示屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为身份信息显示屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_identity",
+        "furniture_id": "identity:0",
+        "reason": "终端/屏幕/控制台设备族：本处为记录终端①；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为记录终端①；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_identity",
+        "furniture_id": "identity:1",
+        "reason": "终端/屏幕/控制台设备族：本处为核验台①；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为核验台①；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_identity",
+        "furniture_id": "identity:3",
+        "reason": "终端/屏幕/控制台设备族：本处为核验台②；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为核验台②；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_identity",
+        "furniture_id": "identity:6",
+        "reason": "终端/屏幕/控制台设备族：本处为记录终端②；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为记录终端②；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_visual",
+        "furniture_id": "visual:3",
+        "reason": "终端/屏幕/控制台设备族：本处为弧形屏基座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为弧形屏基座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_decision",
+        "furniture_id": "decision:1",
+        "reason": "终端/屏幕/控制台设备族：本处为资料终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为资料终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_body",
+        "furniture_id": "body:0",
+        "reason": "终端/屏幕/控制台设备族：本处为姿态检测屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为姿态检测屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_bridge",
+        "furniture_id": "bridge:1",
+        "reason": "终端/屏幕/控制台设备族：本处为左侧检测终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为左侧检测终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_bridge",
+        "furniture_id": "bridge:2",
+        "reason": "终端/屏幕/控制台设备族：本处为右侧检测终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为右侧检测终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_index",
+        "furniture_id": "index:3",
+        "reason": "终端/屏幕/控制台设备族：本处为索引终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为索引终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_index",
+        "furniture_id": "index:5",
+        "reason": "终端/屏幕/控制台设备族：本处为身份档案显示屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为身份档案显示屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_switch",
+        "furniture_id": "switch:1",
+        "reason": "终端/屏幕/控制台设备族：本处为信号检测屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为信号检测屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_verify",
+        "furniture_id": "verify:0",
+        "reason": "终端/屏幕/控制台设备族：本处为身份识别终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为身份识别终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_verify",
+        "furniture_id": "verify:1",
+        "reason": "终端/屏幕/控制台设备族：本处为核验控制台；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为核验控制台；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_verify",
+        "furniture_id": "verify:4",
+        "reason": "终端/屏幕/控制台设备族：本处为维护终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为维护终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_verify",
+        "furniture_id": "verify:5",
+        "reason": "终端/屏幕/控制台设备族：本处为身份信息显示屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为身份信息显示屏底座；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_identity",
+        "furniture_id": "identity:0",
+        "reason": "终端/屏幕/控制台设备族：本处为记录终端①；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为记录终端①；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_identity",
+        "furniture_id": "identity:1",
+        "reason": "终端/屏幕/控制台设备族：本处为核验台①；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为核验台①；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_identity",
+        "furniture_id": "identity:3",
+        "reason": "终端/屏幕/控制台设备族：本处为核验台②；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为核验台②；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_identity",
+        "furniture_id": "identity:6",
+        "reason": "终端/屏幕/控制台设备族：本处为记录终端②；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为记录终端②；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_hippocampus",
+        "furniture_id": "记录终端",
+        "reason": "终端/屏幕/控制台设备族：本处为记录终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为记录终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_thalamus",
+        "furniture_id": "监测屏",
+        "reason": "终端/屏幕/控制台设备族：本处为监测屏；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为监测屏；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_thalamus",
+        "furniture_id": "控制台",
+        "reason": "终端/屏幕/控制台设备族：本处为控制台；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为控制台；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_cerebellum",
+        "furniture_id": "控制终端",
+        "reason": "终端/屏幕/控制台设备族：本处为控制终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为控制终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_hypothalamus",
+        "furniture_id": "温控台",
+        "reason": "温控控制台沿终端类派生，温度读数由代码绘制，不烘入图片。",
+        "match_kind": "family_variant",
+        "generation_note": "温控控制台沿终端类派生，温度读数由代码绘制，不烘入图片。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_hypothalamus",
+        "furniture_id": "传感器",
+        "reason": "传感检测设备沿数据终端类派生；本处应是小型传感器外壳与探头，不生成完整大型显示台。",
+        "match_kind": "family_variant",
+        "generation_note": "传感检测设备沿数据终端类派生；本处应是小型传感器外壳与探头，不生成完整大型显示台。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_hypothalamus",
+        "furniture_id": "监测屏",
+        "reason": "终端/屏幕/控制台设备族：本处为监测屏；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为监测屏；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_basal",
+        "furniture_id": "状态屏",
+        "reason": "终端/屏幕/控制台设备族：本处为状态屏；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为状态屏；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_basal",
+        "furniture_id": "路径终端",
+        "reason": "终端/屏幕/控制台设备族：本处为路径终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为路径终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_basal",
+        "furniture_id": "校准台",
+        "reason": "校准控制台沿终端类派生，台体与可接触面按当前安装处。",
+        "match_kind": "family_variant",
+        "generation_note": "校准控制台沿终端类派生，台体与可接触面按当前安装处。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_amygdala",
+        "furniture_id": "监测屏",
+        "reason": "终端/屏幕/控制台设备族：本处为监测屏；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为监测屏；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_amygdala",
+        "furniture_id": "情绪记录台",
+        "reason": "记录控制台沿终端类派生，屏幕、记录面和台体独立保留。",
+        "match_kind": "family_variant",
+        "generation_note": "记录控制台沿终端类派生，屏幕、记录面和台体独立保留。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_brainstem",
+        "furniture_id": "生命监测终端",
+        "reason": "终端/屏幕/控制台设备族：本处为生命监测终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为生命监测终端；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_brainstem",
+        "furniture_id": "维生控制台",
+        "reason": "终端/屏幕/控制台设备族：本处为维生控制台；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "match_kind": "family_variant",
+        "generation_note": "终端/屏幕/控制台设备族：本处为维生控制台；只复用绘画语言，按本处真实体积与操作面画独立外壳，屏幕留白给UI。",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_076": [
+      {
+        "room_id": "L4_visual",
+        "furniture_id": "visual:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_visual",
+        "furniture_id": "visual:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_077": [
+      {
+        "room_id": "L4_visual",
+        "furniture_id": "visual:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_visual",
+        "furniture_id": "visual:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_atrium",
+        "furniture_id": "atrium:2",
+        "reason": "本处名为脑沟通道，但实际独立对象是通道侧可拨查的低矮堆积物；沿杂物堆类派生少量灰粉/纸片/硬质碎屑，腕带独立，不能把整条通道生成家具或画成血肉残块。",
+        "match_kind": "family_variant",
+        "generation_note": "本处名为脑沟通道，但实际独立对象是通道侧可拨查的低矮堆积物；沿杂物堆类派生少量灰粉/纸片/硬质碎屑，腕带独立，不能把整条通道生成家具或画成血肉残块。",
+        "source": "runtime kind=debris, action=拨查堆积物露腕带, S3:T35R4"
+      },
+      {
+        "room_id": "L5_atrium",
+        "furniture_id": "atrium:2",
+        "reason": "本处名为脑沟通道，但实际独立对象是通道侧可拨查的低矮堆积物；沿杂物堆类派生少量灰粉/纸片/硬质碎屑，腕带独立，不能把整条通道生成家具或画成血肉残块。",
+        "match_kind": "family_variant",
+        "generation_note": "本处名为脑沟通道，但实际独立对象是通道侧可拨查的低矮堆积物；沿杂物堆类派生少量灰粉/纸片/硬质碎屑，腕带独立，不能把整条通道生成家具或画成血肉残块。",
+        "source": "runtime kind=debris, action=拨查堆积物露腕带, S3:T35R4"
+      }
+    ],
+    "ENV_ALL_080": [
+      {
+        "room_id": "L4_decision",
+        "furniture_id": "decision:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_decision",
+        "furniture_id": "decision:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_082": [
+      {
+        "room_id": "L4_decision",
+        "furniture_id": "decision:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_decision",
+        "furniture_id": "decision:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_083": [
+      {
+        "room_id": "L4_decision",
+        "furniture_id": "decision:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_decision",
+        "furniture_id": "decision:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_085": [
+      {
+        "room_id": "L4_body",
+        "furniture_id": "body:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_body",
+        "furniture_id": "body:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_086": [
+      {
+        "room_id": "L4_body",
+        "furniture_id": "body:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_body",
+        "furniture_id": "body:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_087": [
+      {
+        "room_id": "L4_body",
+        "furniture_id": "body:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_body",
+        "furniture_id": "body:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_088": [
+      {
+        "room_id": "L4_body",
+        "furniture_id": "body:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_body",
+        "furniture_id": "body:4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_089": [
+      {
+        "room_id": "L4_body",
+        "furniture_id": "body:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_body",
+        "furniture_id": "body:5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_091": [
+      {
+        "room_id": "L4_bridge",
+        "furniture_id": "bridge:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_bridge",
+        "furniture_id": "bridge:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_093": [
+      {
+        "room_id": "L4_bridge",
+        "furniture_id": "bridge:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_rhythm",
+        "furniture_id": "rhythm:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_switch",
+        "furniture_id": "switch:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_bridge",
+        "furniture_id": "bridge:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_rhythm",
+        "furniture_id": "rhythm:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_switch",
+        "furniture_id": "switch:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_thalamus",
+        "furniture_id": "设备柜",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_cerebellum",
+        "furniture_id": "工具柜",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_hypothalamus",
+        "furniture_id": "设备柜",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_093_OPEN": [
+      {
+        "room_id": "L4_bridge",
+        "furniture_id": "bridge:3",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_rhythm",
+        "furniture_id": "rhythm:3",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_switch",
+        "furniture_id": "switch:2",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_bridge",
+        "furniture_id": "bridge:3",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_rhythm",
+        "furniture_id": "rhythm:3",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_switch",
+        "furniture_id": "switch:2",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_thalamus",
+        "furniture_id": "设备柜",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_cerebellum",
+        "furniture_id": "工具柜",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_hypothalamus",
+        "furniture_id": "设备柜",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_095": [
+      {
+        "room_id": "L4_bridge",
+        "furniture_id": "bridge_fibers",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L4_rhythm",
+        "furniture_id": "rhythm:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_bridge",
+        "furniture_id": "bridge_fibers",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_rhythm",
+        "furniture_id": "rhythm:1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_094": [
+      {
+        "room_id": "L4_rhythm",
+        "furniture_id": "rhythm:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_rhythm",
+        "furniture_id": "rhythm:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_096": [
+      {
+        "room_id": "L4_rhythm",
+        "furniture_id": "rhythm:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_rhythm",
+        "furniture_id": "rhythm:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_098": [
+      {
+        "room_id": "L4_index",
+        "furniture_id": "index:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_index",
+        "furniture_id": "index:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_103": [
+      {
+        "room_id": "L4_switch",
+        "furniture_id": "switch:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_switch",
+        "furniture_id": "switch:0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_108": [
+      {
+        "room_id": "L4_verify",
+        "furniture_id": "verify:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_verify",
+        "furniture_id": "verify:3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_111": [
+      {
+        "room_id": "L4_verify",
+        "furniture_id": "verify:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_verify",
+        "furniture_id": "verify:6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_114": [
+      {
+        "room_id": "L4_identity",
+        "furniture_id": "identity:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_identity",
+        "furniture_id": "identity:2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_150": [
+      {
+        "room_id": "L5_hippocampus",
+        "furniture_id": "记忆陈列",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_151": [
+      {
+        "room_id": "L5_hippocampus",
+        "furniture_id": "航迹地图",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_152": [
+      {
+        "room_id": "L5_hippocampus",
+        "furniture_id": "时光装置",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_153": [
+      {
+        "room_id": "L5_hippocampus",
+        "furniture_id": "记忆胶囊",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_155": [
+      {
+        "room_id": "L5_hippocampus",
+        "furniture_id": "陈列墙",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_116": [
+      {
+        "room_id": "L5_thalamus",
+        "furniture_id": "中继核心",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_basal",
+        "furniture_id": "动作选择核心",
+        "reason": "这是动作选择核心的中继核心类变体；功能、轮廓和安装面沿本处，不把丘脑核心原图任意拉伸。",
+        "match_kind": "family_variant",
+        "generation_note": "这是动作选择核心的中继核心类变体；功能、轮廓和安装面沿本处，不把丘脑核心原图任意拉伸。",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_117": [
+      {
+        "room_id": "L5_thalamus",
+        "furniture_id": "维护面板",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_118": [
+      {
+        "room_id": "L5_thalamus",
+        "furniture_id": "电缆接点",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_123": [
+      {
+        "room_id": "L5_cerebellum",
+        "furniture_id": "校准机械臂",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_basal",
+        "furniture_id": "机械臂",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_125": [
+      {
+        "room_id": "L5_cerebellum",
+        "furniture_id": "姿态架",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_126": [
+      {
+        "room_id": "L5_cerebellum",
+        "furniture_id": "平衡平台",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_138": [
+      {
+        "room_id": "L5_hypothalamus",
+        "furniture_id": "维护设备",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_basal",
+        "furniture_id": "维护区",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_139": [
+      {
+        "room_id": "L5_hypothalamus",
+        "furniture_id": "冷却管路与液罐",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_140": [
+      {
+        "room_id": "L5_hypothalamus",
+        "furniture_id": "阀组",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_142": [
+      {
+        "room_id": "L5_hypothalamus",
+        "furniture_id": "加热装置",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_145": [
+      {
+        "room_id": "L5_basal",
+        "furniture_id": "测试舱",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_156": [
+      {
+        "room_id": "L5_amygdala",
+        "furniture_id": "警报灯",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_158": [
+      {
+        "room_id": "L5_amygdala",
+        "furniture_id": "观察位",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_159": [
+      {
+        "room_id": "L5_amygdala",
+        "furniture_id": "封抑柜",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_amygdala",
+        "furniture_id": "隔离储柜",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_160": [
+      {
+        "room_id": "L5_amygdala",
+        "furniture_id": "低刺激灯",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_161": [
+      {
+        "room_id": "L5_amygdala",
+        "furniture_id": "安抚座椅",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_129": [
+      {
+        "room_id": "L5_brainstem",
+        "furniture_id": "脉冲核心与护栏",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_131": [
+      {
+        "room_id": "L5_brainstem",
+        "furniture_id": "检修平台",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_133": [
+      {
+        "room_id": "L5_brainstem",
+        "furniture_id": "导管接口",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_134": [
+      {
+        "room_id": "L5_brainstem",
+        "furniture_id": "brainstem_guard_w",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L5_brainstem",
+        "furniture_id": "brainstem_guard_e",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_165": [
+      {
+        "room_id": "L6_street_plaza",
+        "furniture_id": "street_prop_0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "HIDDEN_PLAZA",
+        "furniture_id": "fountain",
+        "reason": "隐藏片段独立小喷泉，沿喷泉类画法派生；是否带雕像服从本段实际，不复制L6整座广场。",
+        "match_kind": "family_variant",
+        "generation_note": "隐藏片段独立小喷泉，沿喷泉类画法派生；是否带雕像服从本段实际，不复制L6整座广场。",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_173": [
+      {
+        "room_id": "L6_street_plaza",
+        "furniture_id": "street_prop_1",
+        "reason": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "match_kind": "family_variant",
+        "generation_note": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_side",
+        "furniture_id": "street_prop_0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_narrow",
+        "furniture_id": "street_prop_1",
+        "reason": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "match_kind": "family_variant",
+        "generation_note": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_twisted",
+        "furniture_id": "street_prop_2",
+        "reason": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "match_kind": "family_variant",
+        "generation_note": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_node",
+        "furniture_id": "street_prop_4",
+        "reason": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "match_kind": "family_variant",
+        "generation_note": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_end",
+        "furniture_id": "street_prop_3",
+        "reason": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "match_kind": "family_variant",
+        "generation_note": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "HIDDEN_PLAZA",
+        "furniture_id": "bench_west",
+        "reason": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "match_kind": "family_variant",
+        "generation_note": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "HIDDEN_PLAZA",
+        "furniture_id": "bench_east",
+        "reason": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "match_kind": "family_variant",
+        "generation_note": "同属室外长椅，按本处完整长椅状态派生；不为了复用而增加破损或休息功能。",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_167": [
+      {
+        "room_id": "L6_street_plaza",
+        "furniture_id": "street_prop_2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_side",
+        "furniture_id": "street_prop_1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_169": [
+      {
+        "room_id": "L6_street_plaza",
+        "furniture_id": "street_prop_4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_twisted",
+        "furniture_id": "street_prop_4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_168": [
+      {
+        "room_id": "L6_street_plaza",
+        "furniture_id": "street_prop_3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_twisted",
+        "furniture_id": "street_prop_5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "HIDDEN_PLAZA",
+        "furniture_id": "lamp",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_171": [
+      {
+        "room_id": "L6_street_plaza",
+        "furniture_id": "street_prop_6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_172": [
+      {
+        "room_id": "L6_street_plaza",
+        "furniture_id": "street_prop_7",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_side",
+        "furniture_id": "street_prop_8",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_narrow",
+        "furniture_id": "street_extra_10",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_node",
+        "furniture_id": "street_prop_2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_174": [
+      {
+        "room_id": "L6_street_side",
+        "furniture_id": "street_prop_2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_narrow",
+        "furniture_id": "street_extra_6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_maintenance",
+        "furniture_id": "street_prop_1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_174_OPEN": [
+      {
+        "room_id": "L6_street_side",
+        "furniture_id": "street_prop_2",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_narrow",
+        "furniture_id": "street_extra_6",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_maintenance",
+        "furniture_id": "street_prop_1",
+        "reason": "同一物件打开态继承闭合主体安装位置、体积与锚点；只改活动件。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_175": [
+      {
+        "room_id": "L6_street_side",
+        "furniture_id": "street_prop_3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_176": [
+      {
+        "room_id": "L6_street_side",
+        "furniture_id": "street_prop_4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_narrow",
+        "furniture_id": "street_extra_9",
+        "reason": "本处杂物箱沿箱体类派生，按本处材质和大小，不带入侧室木箱的固定破损。",
+        "match_kind": "family_variant",
+        "generation_note": "本处杂物箱沿箱体类派生，按本处材质和大小，不带入侧室木箱的固定破损。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_twisted",
+        "furniture_id": "street_prop_3",
+        "reason": "本处箱体沿箱体类派生，按本处材质和大小，不带入侧室木箱的固定破损。",
+        "match_kind": "family_variant",
+        "generation_note": "本处箱体沿箱体类派生，按本处材质和大小，不带入侧室木箱的固定破损。",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_node",
+        "furniture_id": "street_prop_7",
+        "reason": "本处箱体沿箱体类派生，按本处材质和大小，不带入侧室木箱的固定破损。",
+        "match_kind": "family_variant",
+        "generation_note": "本处箱体沿箱体类派生，按本处材质和大小，不带入侧室木箱的固定破损。",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_177": [
+      {
+        "room_id": "L6_street_side",
+        "furniture_id": "street_prop_5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_narrow",
+        "furniture_id": "street_prop_0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_maintenance",
+        "furniture_id": "street_prop_2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_node",
+        "furniture_id": "street_prop_5",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_end",
+        "furniture_id": "street_prop_4",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_183": [
+      {
+        "room_id": "L6_street_twisted",
+        "furniture_id": "street_prop_8",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_node",
+        "furniture_id": "street_prop_6",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      },
+      {
+        "room_id": "L6_street_end",
+        "furniture_id": "street_prop_2",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_186": [
+      {
+        "room_id": "L6_street_maintenance",
+        "furniture_id": "street_prop_3",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_187": [
+      {
+        "room_id": "L6_street_node",
+        "furniture_id": "street_prop_0",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ],
+    "ENV_ALL_192": [
+      {
+        "room_id": "L6_street_end",
+        "furniture_id": "street_prop_1",
+        "reason": "按场景语义与稳定物件ID匹配；同房阶段复用相同占地，不更改物权或功能。",
+        "match_kind": "exact_or_named_alias",
+        "generation_note": "",
+        "source": "runtime template anchors; explicit room/locator map"
+      }
+    ]
+  },
+  "unmapped": [
+    {
+      "room_id": "L2_lobby",
+      "furniture_id": "patient_shoe_source",
+      "name": "遗留鞋定位参考",
+      "kind": "dynamic_marker",
+      "reason": "这是遗留鞋事件的定位标记，不是按该标记体积生成鞋子；复用ENV_SMALL_PROPS_SHOES，位置由事件配置。",
+      "related_asset_ids": [
+        "ENV_SMALL_PROPS_SHOES"
+      ],
+      "manual_order": false
+    },
+    {
+      "room_id": "L3_lobby",
+      "furniture_id": "patient_shoe_source",
+      "name": "遗留鞋定位参考",
+      "kind": "dynamic_marker",
+      "reason": "这是遗留鞋事件的定位标记，不是按该标记体积生成鞋子；复用ENV_SMALL_PROPS_SHOES，位置由事件配置。",
+      "related_asset_ids": [
+        "ENV_SMALL_PROPS_SHOES"
+      ],
+      "manual_order": false
+    },
+    {
+      "room_id": "L3_bathroom",
+      "furniture_id": "bathroom:3",
+      "name": "淋浴间①",
+      "kind": "fixed_architecture",
+      "reason": "淋浴间①的隔断、地面与固定管路是本房建筑分区；保持占地和排水。活动件需要时沿既有通用设施加工，不另订整间图。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L3_bathroom",
+      "furniture_id": "bathroom:4",
+      "name": "淋浴间②",
+      "kind": "fixed_architecture",
+      "reason": "淋浴间②与第一间同类复用，固定隔断和排水属于卫浴底图；本处操作留位保持。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L4_body",
+      "furniture_id": "body:7",
+      "name": "身体映射区边缘凹槽",
+      "kind": "architecture_surface",
+      "reason": "身体映射边缘凹槽属于连续地面固定构造与可检查边缘，画入本房建筑；不可把定位矩形生成独立家具。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L4_switch",
+      "furniture_id": "switch_fixed_frame",
+      "name": "固定门框特征",
+      "kind": "fixed_architecture",
+      "reason": "固定门框特征属于既有通路的建筑框沿，不新增房门或入口；沿对应场景底图表达。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L5_body",
+      "furniture_id": "body:7",
+      "name": "身体映射区边缘凹槽",
+      "kind": "architecture_surface",
+      "reason": "身体映射边缘凹槽属于连续地面固定构造与可检查边缘，画入本房建筑；不可把定位矩形生成独立家具。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L5_switch",
+      "furniture_id": "switch_fixed_frame",
+      "name": "固定门框特征",
+      "kind": "fixed_architecture",
+      "reason": "固定门框特征属于既有通路的建筑框沿，不新增房门或入口；沿对应场景底图表达。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_plaza",
+      "furniture_id": "street_prop_5",
+      "name": "排水口",
+      "kind": "surface_detail",
+      "reason": "现有排水口的固定地面构造，画入本段底图或Codex分层贴片；不把标记高度当独立家具高度。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_side",
+      "furniture_id": "street_prop_6",
+      "name": "管道",
+      "kind": "fixed_architecture",
+      "reason": "侧室固定管路的线形与墙体安装关系沿本房底图，不新增独立操作家具。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_side",
+      "furniture_id": "street_prop_7",
+      "name": "排水口",
+      "kind": "surface_detail",
+      "reason": "现有排水口的固定地面构造，画入本段底图或Codex分层贴片；不把标记高度当独立家具高度。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_narrow",
+      "furniture_id": "street_prop_2",
+      "name": "管线",
+      "kind": "fixed_architecture",
+      "reason": "窄道固定管线沿墙布置，属于建筑表面/局部层；不生成医疗冷却台。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_narrow",
+      "furniture_id": "street_extra_7",
+      "name": "排水口",
+      "kind": "surface_detail",
+      "reason": "现有排水口的固定地面构造，画入本段底图或Codex分层贴片；不把标记高度当独立家具高度。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_narrow",
+      "furniture_id": "street_extra_8",
+      "name": "积水",
+      "kind": "surface_effect",
+      "reason": "积水是地面反射/湿痕层，沿本段位置加工；不需要独立体积家具。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_twisted",
+      "furniture_id": "street_prop_0",
+      "name": "杂货铺",
+      "kind": "fixed_architecture",
+      "reason": "封闭杂货铺的固定外立面画入本段底图，实际不能进入；不按体积占位生成可活动柜子。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_twisted",
+      "furniture_id": "street_prop_1",
+      "name": "报刊铺立面",
+      "kind": "fixed_architecture",
+      "reason": "封闭报刊铺的建筑外立面画入本段底图，报纸小件沿既有纸页素材复用；不新增房门。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_twisted",
+      "furniture_id": "street_prop_10",
+      "name": "局部塌陷",
+      "kind": "architecture_surface",
+      "reason": "扭曲段小范围塌陷边界属于本段地面，保留通路；不复用中央节点巨型核心。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_twisted",
+      "furniture_id": "street_prop_6",
+      "name": "积水",
+      "kind": "surface_effect",
+      "reason": "积水是地面反射/湿痕层，沿本段位置加工；不需要独立体积家具。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_twisted",
+      "furniture_id": "street_prop_7",
+      "name": "排水口",
+      "kind": "surface_detail",
+      "reason": "现有排水口的固定地面构造，画入本段底图或Codex分层贴片；不把标记高度当独立家具高度。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_twisted",
+      "furniture_id": "street_prop_9",
+      "name": "扭曲地面",
+      "kind": "architecture_surface",
+      "reason": "本段地面形态与材质变化，底图表达且可走边界保持，不生成独立箱体。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_maintenance",
+      "furniture_id": "street_prop_0",
+      "name": "沿墙管架",
+      "kind": "fixed_architecture",
+      "reason": "维护段固定粗管架，按本段底图或Codex分层加工；不复用室内冷却液罐强行改同款家具。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_node",
+      "furniture_id": "street_prop_1",
+      "name": "外围步道",
+      "kind": "architecture_surface",
+      "reason": "外围完整可走地面属于节点底图，不是长方体家具，不新增步道图片订单。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_node",
+      "furniture_id": "street_prop_3",
+      "name": "店铺立面",
+      "kind": "fixed_architecture",
+      "reason": "店铺外壳属于本段固定建筑立面，底图按模板留边界；不新增可进入店室。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_node",
+      "furniture_id": "street_prop_8",
+      "name": "设备间",
+      "kind": "fixed_architecture",
+      "reason": "固定设备间外壳作为街景建筑画入底图，保持不能进入的边界；不新增室内空间。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_node",
+      "furniture_id": "street_prop_9",
+      "name": "封闭维修门",
+      "kind": "fixed_architecture",
+      "reason": "封闭维修门是不可通行的立面构件，画入原墙面；可用ENV_DOOR的门板加工，不新加转场。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_end",
+      "furniture_id": "street_prop_0",
+      "name": "检查岗亭",
+      "kind": "fixed_architecture",
+      "reason": "终点检查岗亭外壳属于出口固定建筑；窗口/活动门需要时从同体结构分层加工。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_end",
+      "furniture_id": "street_prop_7",
+      "name": "设备间",
+      "kind": "fixed_architecture",
+      "reason": "固定设备间外壳作为街景建筑画入底图，保持不能进入的边界；不新增室内空间。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_end",
+      "furniture_id": "street_prop_9",
+      "name": "出口平台",
+      "kind": "fixed_architecture",
+      "reason": "既有出口落脚平台属于底图，保留实际高差和可达边界。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_end",
+      "furniture_id": "street_prop_5",
+      "name": "积水",
+      "kind": "surface_effect",
+      "reason": "积水是地面反射/湿痕层，沿本段位置加工；不需要独立体积家具。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_end",
+      "furniture_id": "street_prop_6",
+      "name": "排水口",
+      "kind": "surface_detail",
+      "reason": "现有排水口的固定地面构造，画入本段底图或Codex分层贴片；不把标记高度当独立家具高度。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_end",
+      "furniture_id": "street_prop_8",
+      "name": "收束门廊",
+      "kind": "fixed_architecture",
+      "reason": "既有出口门廊和柱/顶面属于建筑底图，连续转角而非家具堆叠。",
+      "related_asset_ids": [],
+      "manual_order": false
+    },
+    {
+      "room_id": "L6_street_end",
+      "furniture_id": "street_prop_10",
+      "name": "终点门框",
+      "kind": "fixed_architecture",
+      "reason": "唯一结局阈值的固定门框，沿底图形成连续墙身；活动扇复用ENV_DOOR，不能新增第二处门。",
+      "related_asset_ids": [],
+      "manual_order": false
+    }
+  ],
+  "context_only": [
+    {
+      "asset_id": "ENV_SMALL_PROPS_PACKING_BOX",
+      "room_id": "L1_bedroom",
+      "furniture_id": "stool",
+      "reason": "凳面小纸箱仅沿圆凳模板看相对比例；纸箱必须独立，不能采用整个凳子体积或与凳腿融合。",
+      "use_volume_as_object_size": false
+    },
+    {
+      "asset_id": "ENV_SMALL_PROPS_DOCTOR_COAT",
+      "room_id": "L1_bedroom",
+      "furniture_id": "rack",
+      "reason": "白褂是衣架上的独立软物，使用衣架安装处看悬挂高度；不使用衣架总体积生成衣物。",
+      "use_volume_as_object_size": false
+    },
+    {
+      "asset_id": "ENV_SMALL_PROPS_PATIENT_GOWN",
+      "room_id": "L1_bedroom",
+      "furniture_id": "storage",
+      "reason": "柜中旧病服独立；柜体只用于看层格容纳尺度，不按柜体体积画病服。",
+      "use_volume_as_object_size": false
+    },
+    {
+      "asset_id": "ENV_ALL_071",
+      "room_id": "L4_memory",
+      "furniture_id": "memory_group_chair",
+      "reason": "地毯是地面平面层，不是椅子体积；本椅处只用于查地毯组所在区域，不按椅高生成地毯。",
+      "use_volume_as_object_size": false
+    },
+    {
+      "asset_id": "ENV_ALL_071",
+      "room_id": "L5_memory",
+      "furniture_id": "memory_group_chair",
+      "reason": "同一地毯组沿前阶段地面层复用；椅子定位仅供找区域，不作为地毯体积模板。",
+      "use_volume_as_object_size": false
+    },
+    {
+      "asset_id": "ENV_ALL_141",
+      "room_id": "L5_hypothalamus",
+      "furniture_id": "冷却管路与液罐",
+      "reason": "液罐与管路已有组合定位；加热/冷却部件须沿相应实际侧分层，不能把整组管路体积当单罐大小。",
+      "use_volume_as_object_size": false
+    },
+    {
+      "asset_id": "ENV_ALL_124",
+      "room_id": "L5_cerebellum",
+      "furniture_id": "姿态架",
+      "reason": "小脑折叶阵列是本房建筑/固定折列构造，当前姿态架定位不代表阵列体积；只用本房定位图定折列和绕行，禁止套用姿态架体积。",
+      "use_volume_as_object_size": false
+    }
+  ],
+  "coverage": {
+    "runtime_spaces": 56,
+    "locator_count": 381,
+    "mapped_unique_locators": 349,
+    "architectural_or_other_unmapped": 32,
+    "mapped_asset_rows": 137,
+    "family_variant_links": 75,
+    "unresolved_unique_locators": 0,
+    "new_manual_orders": 0
+  },
+  "rules": [
+    "显式room_id+furniture_id优先；禁止substring挂错形体。",
+    "L2与L3同房基础家具继承；L4与L5同房家具继承，阶段仅改画法状态，新增物件单独处理。",
+    "family_variant表示既有设备/桌椅类在此处的明确变体，需要沿generation_note制作；不表示现图可任意拉伸适配。",
+    "context_only不得作为独立物体的体积模板；小道具和墙面安装件只查看实际局部。",
+    "建筑表面、固定外壳、门框、排水与积水不转成新人工家具订单。"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "asset_id": "CHR_OTHER_NPCS_N07",
+  "source_path": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N07_v001.png",
+  "tool": "built_in_image_gen",
+  "prompt": "EDIT TARGET: supplied CHR_OTHER_NPCS_N07_v001.png. Isolate the exact young adult hospital nurse with dark tied hair, gentle attentive face, pale short-sleeve uniform with lavender-blue piping, slightly raised hand and both white shoes as one complete game character on genuine transparent alpha. Technical preparation only: preserve this particular face, age, hairstyle, clothes, pose, body proportions, oblique overhead exploration view, colors and hand-painted brushwork. Remove only neutral gray background and any floor/shadow, including spaces between arms, body and legs. White coat, clothes and shoes must remain opaque. Entire hair and both shoes inside generous clear margins. No redesign, beautification, changed expression, new props, new anatomy, relighting, outline, rim, floor, fog or text. The supplied user drawing is authoritative.",
+  "generated_path": "C:\\Users\\23623\\.codex\\generated_images\\01a13afd-29cd-7b90-b2e9-586f1ffdee3b\\exec-8d8bb1bf-94e2-4b71-a239-71fae98713aa.png",
+  "purpose": "Approved exact character technical alpha preparation. No aesthetic redesign; preserve identity, source pose, clothes, view and painterly marks.",
+  "registered_at": "2026-10-20T08:01:00.244688+08:00",
+  "source_sha256": "2dac38925dbf6bc3fbd16f0e2aec86ca4f6109c61c500e095ba056d678def533",
+  "output_sha256": "267521bd4cae46307ed526cf643f63b3e95307c032bc8d6c7d13788637ba2484",
+  "production_texture": "res://assets/production/characters/CHR_OTHER_NPCS_N07/CHR_OTHER_NPCS_N07_cutout_267521bd4cae.png",
+  "pixel_size": [
+    1122,
+    1402
+  ],
+  "alpha_bbox": [
+    362,
+    11,
+    765,
+    1392
+  ],
+  "alpha_bbox_threshold": 8,
+  "transparent_fraction": 0.789160379493517,
+  "ground_anchor_px": [
+    563.5,
+    1392
+  ],
+  "source_original_unchanged": true,
+  "generated_pixels_unchanged": true,
+  "identity_view_pose_technical_comparison": "checked; no aesthetic reassessment",
+  "runtime_binding_enabled": false,
+  "status": "transparent_source_prepared_pending_runtime_contact_and_motion"
+}

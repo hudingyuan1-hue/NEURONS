@@ -1,0 +1,23 @@
+{
+  "failures": [],
+  "passes": [
+    "Street nested rigid occupancy exact nested mask restored after local pop 0.0",
+    "Street nested rigid occupancy local mask equals every old rebuilt cell 0.0",
+    "Street nested rigid occupancy actual path equals old rebuilt path 0.0",
+    "Street nested rigid occupancy old full restoration equals local restoration 0.0",
+    "Street nested rigid occupancy exact nested mask restored after local pop 0.41",
+    "Street nested rigid occupancy local mask equals every old rebuilt cell 0.41",
+    "Street nested rigid occupancy actual path equals old rebuilt path 0.41",
+    "Street nested rigid occupancy old full restoration equals local restoration 0.41",
+    "Street nested rigid occupancy exact nested mask restored after local pop 1.18",
+    "Street nested rigid occupancy local mask equals every old rebuilt cell 1.18",
+    "Street nested rigid occupancy actual path equals old rebuilt path 1.18",
+    "Street nested rigid occupancy old full restoration equals local restoration 1.18",
+    "Street nested rigid occupancy exact nested mask restored after local pop 1.5707963267949",
+    "Street nested rigid occupancy local mask equals every old rebuilt cell 1.5707963267949",
+    "Street nested rigid occupancy actual path equals old rebuilt path 1.5707963267949",
+    "Street nested rigid occupancy old full restoration equals local restoration 1.5707963267949"
+  ],
+  "rendered": false,
+  "scope": "New fourteen-identity dual-door/rigid-body finite recovery and separate ten-body ordinary-process passage. Initial object deaths are explicit occupancy fixtures, never claimed as actual attack/death events. Real disk/pause/movement/crossing retained. Not old four-body retest, final art/audio, all crowds or B7."
+}

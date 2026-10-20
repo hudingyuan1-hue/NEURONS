@@ -1,0 +1,11 @@
+{
+  "asset_id": "CHR_OTHER_NPCS_FATHER",
+  "mode": "built_in_image_gen_background_extraction",
+  "source_path": "C:\\Users\\23623\\Documents\\GitHub\\NEURONS\\DOCX\\最终素材\\人物\\CHR_OTHER_NPCS_FATHER_v001.png",
+  "source_project_path": "DOCX/最终素材/人物/CHR_OTHER_NPCS_FATHER_v001.png",
+  "source_sha256": "2a279871199cc28b1cb42d70e2cf56ac9e089d48ae49065db95870a575f7b648",
+  "prompt": "Use case: background-extraction. Asset type: NEURONS full-body NPC sprite source. Input image 1 is the edit target. Remove ONLY the warm grey background and any cast shadow outside the figure, producing a genuinely transparent alpha background. Keep the same person, exact face, hair, costume, clothing colors, body proportions, pose, hands and feet, original oblique viewing angle and original painterly brushwork. Do not redesign, beautify, change expression or relight the person. Preserve internal clothing highlights and the thin hair silhouette; white fabric must stay opaque, never be mistaken for background. Keep the entire head and both shoes, preserving the portrait canvas and figure placement. No environment, floor, glow, drop shadow, checkerboard, text, extra props or extra characters. Keep his brown glasses, messy brown hair, stubble, loose brown tie, worn grey-brown suit and both relaxed empty hands.",
+  "transparent_background": true,
+  "original_unchanged": true,
+  "status": "requested_not_yet_generated"
+}

@@ -1,0 +1,3335 @@
+{
+  "failures": [],
+  "passes": [
+    "bedroom: retains versioned metre geometry",
+    "bedroom: full four-wall architecture is independent of near-wall visibility",
+    "bedroom: near-wall fade preserves actor/action visibility",
+    "bedroom: shared world-pixel scale",
+    "bedroom: exact floor projection inverse",
+    "bedroom: source search/action approach reachable bed",
+    "bedroom: source search/action approach reachable bedside",
+    "bedroom: source search/action approach reachable chair",
+    "bedroom: source search/action approach reachable desk",
+    "bedroom: source search/action approach reachable stool",
+    "bedroom: source search/action approach reachable box",
+    "bedroom: source search/action approach reachable rack",
+    "bedroom: source search/action approach reachable wardrobe",
+    "bedroom: source search/action approach reachable books",
+    "bedroom: source search/action approach reachable storage",
+    "bedroom: source search/action approach reachable fan",
+    "ward: real portal landing and threshold are walkable toward lobby",
+    "ward: actual doorway inward route remains unobstructed toward lobby",
+    "ward: retains versioned metre geometry",
+    "ward: full four-wall architecture is independent of near-wall visibility",
+    "ward: near-wall fade preserves actor/action visibility",
+    "ward: shared world-pixel scale",
+    "ward: exact floor projection inverse",
+    "ward: source search/action approach reachable ward:0",
+    "ward: source search/action approach reachable ward:1",
+    "ward: source search/action approach reachable ward:2",
+    "ward: source search/action approach reachable ward:3",
+    "ward: source search/action approach reachable ward:4",
+    "ward: source search/action approach reachable ward:5",
+    "ward: source search/action approach reachable ward:6",
+    "ward: source search/action approach reachable ward:7",
+    "lobby: real portal landing and threshold are walkable toward ward",
+    "lobby: actual doorway inward route remains unobstructed toward ward",
+    "lobby: real portal landing and threshold are walkable toward clinic",
+    "lobby: actual doorway inward route remains unobstructed toward clinic",
+    "lobby: real portal landing and threshold are walkable toward pharmacy",
+    "lobby: actual doorway inward route remains unobstructed toward pharmacy",
+    "lobby: real portal landing and threshold are walkable toward office",
+    "lobby: actual doorway inward route remains unobstructed toward office",
+    "lobby: real portal landing and threshold are walkable toward stairs",
+    "lobby: actual doorway inward route remains unobstructed toward stairs",
+    "lobby: retains versioned metre geometry",
+    "lobby: full four-wall architecture is independent of near-wall visibility",
+    "lobby: near-wall fade preserves actor/action visibility",
+    "lobby: shared world-pixel scale",
+    "lobby: exact floor projection inverse",
+    "lobby: source search/action approach reachable lobby:0",
+    "lobby: source search/action approach reachable lobby:1",
+    "lobby: source search/action approach reachable lobby:2",
+    "lobby: source search/action approach reachable lobby:3",
+    "lobby: source search/action approach reachable lobby:4",
+    "lobby: source search/action approach reachable lobby:5",
+    "clinic: real portal landing and threshold are walkable toward lobby",
+    "clinic: actual doorway inward route remains unobstructed toward lobby",
+    "clinic: retains versioned metre geometry",
+    "clinic: full four-wall architecture is independent of near-wall visibility",
+    "clinic: near-wall fade preserves actor/action visibility",
+    "clinic: shared world-pixel scale",
+    "clinic: exact floor projection inverse",
+    "clinic: source search/action approach reachable clinic:0",
+    "clinic: source search/action approach reachable clinic:1",
+    "clinic: source search/action approach reachable clinic:2",
+    "clinic: source search/action approach reachable clinic:3",
+    "clinic: source search/action approach reachable clinic:4",
+    "clinic: source search/action approach reachable clinic:5",
+    "clinic: source search/action approach reachable clinic:6",
+    "clinic: source search/action approach reachable clinic:7",
+    "clinic: wall-mounted window and opening fit actual wall height clinic:7",
+    "pharmacy: real portal landing and threshold are walkable toward lobby",
+    "pharmacy: actual doorway inward route remains unobstructed toward lobby",
+    "pharmacy: retains versioned metre geometry",
+    "pharmacy: full four-wall architecture is independent of near-wall visibility",
+    "pharmacy: near-wall fade preserves actor/action visibility",
+    "pharmacy: shared world-pixel scale",
+    "pharmacy: exact floor projection inverse",
+    "pharmacy: source search/action approach reachable pharmacy:0",
+    "pharmacy: source search/action approach reachable pharmacy:1",
+    "pharmacy: source search/action approach reachable pharmacy:2",
+    "pharmacy: source search/action approach reachable pharmacy:3",
+    "pharmacy: source search/action approach reachable pharmacy:4",
+    "pharmacy: source search/action approach reachable pharmacy:5",
+    "pharmacy: source search/action approach reachable pharmacy:6",
+    "office: real portal landing and threshold are walkable toward lobby",
+    "office: actual doorway inward route remains unobstructed toward lobby",
+    "office: retains versioned metre geometry",
+    "office: full four-wall architecture is independent of near-wall visibility",
+    "office: near-wall fade preserves actor/action visibility",
+    "office: shared world-pixel scale",
+    "office: exact floor projection inverse",
+    "office: source search/action approach reachable office:0",
+    "office: source search/action approach reachable office:1",
+    "office: wall-mounted window and opening fit actual wall height office:1",
+    "office: source search/action approach reachable office:2",
+    "office: source search/action approach reachable office:3",
+    "office: source search/action approach reachable office:4",
+    "office: source search/action approach reachable office:5",
+    "office: source search/action approach reachable office:6",
+    "office: source search/action approach reachable office:7",
+    "office: source search/action approach reachable office:8",
+    "office: source search/action approach reachable office:9",
+    "office: source search/action approach reachable office:10",
+    "stairs: real portal landing and threshold are walkable toward lobby",
+    "stairs: actual doorway inward route remains unobstructed toward lobby",
+    "stairs: real portal landing and threshold are walkable toward corridor",
+    "stairs: actual doorway inward route remains unobstructed toward corridor",
+    "stairs: real portal landing and threshold are walkable toward cortex_exit",
+    "stairs: actual doorway inward route remains unobstructed toward cortex_exit",
+    "stairs: retains versioned metre geometry",
+    "stairs: full four-wall architecture is independent of near-wall visibility",
+    "stairs: near-wall fade preserves actor/action visibility",
+    "stairs: shared world-pixel scale",
+    "stairs: exact floor projection inverse",
+    "stairs: source search/action approach reachable stairs:0",
+    "stairs: wall-mounted window and opening fit actual wall height stairs:0",
+    "corridor: real portal landing and threshold are walkable toward stairs",
+    "corridor: actual doorway inward route remains unobstructed toward stairs",
+    "corridor: real portal landing and threshold are walkable toward activity",
+    "corridor: actual doorway inward route remains unobstructed toward activity",
+    "corridor: real portal landing and threshold are walkable toward group_therapy",
+    "corridor: actual doorway inward route remains unobstructed toward group_therapy",
+    "corridor: real portal landing and threshold are walkable toward quiet",
+    "corridor: actual doorway inward route remains unobstructed toward quiet",
+    "corridor: real portal landing and threshold are walkable toward bathroom",
+    "corridor: actual doorway inward route remains unobstructed toward bathroom",
+    "corridor: real portal landing and threshold are walkable toward double_ward",
+    "corridor: actual doorway inward route remains unobstructed toward double_ward",
+    "corridor: real portal landing and threshold are walkable toward workshop",
+    "corridor: actual doorway inward route remains unobstructed toward workshop",
+    "corridor: retains versioned metre geometry",
+    "corridor: full four-wall architecture is independent of near-wall visibility",
+    "corridor: near-wall fade preserves actor/action visibility",
+    "corridor: shared world-pixel scale",
+    "corridor: exact floor projection inverse",
+    "corridor: source search/action approach reachable corridor:0",
+    "corridor: source search/action approach reachable corridor:1",
+    "corridor: source search/action approach reachable corridor:2",
+    "corridor: source search/action approach reachable corridor:3",
+    "activity: real portal landing and threshold are walkable toward corridor",
+    "activity: actual doorway inward route remains unobstructed toward corridor",
+    "activity: retains versioned metre geometry",
+    "activity: full four-wall architecture is independent of near-wall visibility",
+    "activity: near-wall fade preserves actor/action visibility",
+    "activity: shared world-pixel scale",
+    "activity: exact floor projection inverse",
+    "activity: source search/action approach reachable activity:0",
+    "activity: source search/action approach reachable activity:1",
+    "activity: wall-mounted window and opening fit actual wall height activity:1",
+    "activity: source search/action approach reachable activity:2",
+    "activity: source search/action approach reachable activity:3",
+    "activity: source search/action approach reachable activity:4",
+    "activity: source search/action approach reachable activity:5",
+    "activity: source search/action approach reachable activity:6",
+    "activity: wall-mounted window and opening fit actual wall height activity:6",
+    "activity: source search/action approach reachable activity:7",
+    "group_therapy: real portal landing and threshold are walkable toward corridor",
+    "group_therapy: actual doorway inward route remains unobstructed toward corridor",
+    "group_therapy: retains versioned metre geometry",
+    "group_therapy: full four-wall architecture is independent of near-wall visibility",
+    "group_therapy: near-wall fade preserves actor/action visibility",
+    "group_therapy: shared world-pixel scale",
+    "group_therapy: exact floor projection inverse",
+    "group_therapy: source search/action approach reachable group_therapy:0",
+    "group_therapy: source search/action approach reachable group_therapy:1",
+    "group_therapy: wall-mounted window and opening fit actual wall height group_therapy:1",
+    "group_therapy: source search/action approach reachable group_therapy:2",
+    "group_therapy: source search/action approach reachable group_therapy:3",
+    "group_therapy: source search/action approach reachable group_therapy:4",
+    "group_therapy: wall-mounted window and opening fit actual wall height group_therapy:4",
+    "group_therapy: source search/action approach reachable group_therapy:5",
+    "quiet: real portal landing and threshold are walkable toward corridor",
+    "quiet: actual doorway inward route remains unobstructed toward corridor",
+    "quiet: retains versioned metre geometry",
+    "quiet: full four-wall architecture is independent of near-wall visibility",
+    "quiet: near-wall fade preserves actor/action visibility",
+    "quiet: shared world-pixel scale",
+    "quiet: exact floor projection inverse",
+    "quiet: source search/action approach reachable quiet:0",
+    "quiet: source search/action approach reachable quiet:1",
+    "quiet: source search/action approach reachable quiet:2",
+    "quiet: source search/action approach reachable quiet:3",
+    "quiet: wall-mounted window and opening fit actual wall height quiet:3",
+    "bathroom: real portal landing and threshold are walkable toward corridor",
+    "bathroom: actual doorway inward route remains unobstructed toward corridor",
+    "bathroom: retains versioned metre geometry",
+    "bathroom: full four-wall architecture is independent of near-wall visibility",
+    "bathroom: near-wall fade preserves actor/action visibility",
+    "bathroom: shared world-pixel scale",
+    "bathroom: exact floor projection inverse",
+    "bathroom: source search/action approach reachable bathroom:0",
+    "bathroom: source search/action approach reachable bathroom:1",
+    "bathroom: source search/action approach reachable bathroom:2",
+    "bathroom: source search/action approach reachable bathroom:3",
+    "bathroom: source search/action approach reachable bathroom:4",
+    "bathroom: source search/action approach reachable bathroom:5",
+    "bathroom: wall-mounted window and opening fit actual wall height bathroom:5",
+    "bathroom: source search/action approach reachable bathroom:6",
+    "double_ward: real portal landing and threshold are walkable toward corridor",
+    "double_ward: actual doorway inward route remains unobstructed toward corridor",
+    "double_ward: retains versioned metre geometry",
+    "double_ward: full four-wall architecture is independent of near-wall visibility",
+    "double_ward: near-wall fade preserves actor/action visibility",
+    "double_ward: shared world-pixel scale",
+    "double_ward: exact floor projection inverse",
+    "double_ward: source search/action approach reachable double_ward:0",
+    "double_ward: source search/action approach reachable double_ward:1",
+    "double_ward: source search/action approach reachable double_ward:2",
+    "double_ward: source search/action approach reachable double_ward:3",
+    "double_ward: source search/action approach reachable double_ward:4",
+    "double_ward: source search/action approach reachable double_ward:5",
+    "double_ward: source search/action approach reachable double_ward:6",
+    "double_ward: wall-mounted window and opening fit actual wall height double_ward:6",
+    "workshop: real portal landing and threshold are walkable toward corridor",
+    "workshop: actual doorway inward route remains unobstructed toward corridor",
+    "workshop: retains versioned metre geometry",
+    "workshop: full four-wall architecture is independent of near-wall visibility",
+    "workshop: near-wall fade preserves actor/action visibility",
+    "workshop: shared world-pixel scale",
+    "workshop: exact floor projection inverse",
+    "workshop: source search/action approach reachable workshop:0",
+    "workshop: source search/action approach reachable workshop:1",
+    "workshop: source search/action approach reachable workshop:2",
+    "workshop: source search/action approach reachable workshop:3",
+    "workshop: source search/action approach reachable workshop:4",
+    "workshop: wall-mounted window and opening fit actual wall height workshop:4",
+    "workshop: source search/action approach reachable workshop:5",
+    "workshop: source search/action approach reachable workshop:6",
+    "workshop: source search/action approach reachable workshop:7"
+  ],
+  "rooms": [
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.70000004768372,
+            1.70000004768372
+          ],
+          "height_m": 0.55,
+          "id": "bed",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 4
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 1
+            }
+          ],
+          "rect_m": [
+            0.349999994039536,
+            0.349999994039536,
+            2.04999995231628,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            2.92499995231628,
+            1.25
+          ],
+          "height_m": 0.6,
+          "id": "bedside",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            2.65000009536743,
+            0.400000005960464,
+            0.550000011920929,
+            0.5
+          ]
+        },
+        {
+          "approach_m": [
+            1.89999997615814,
+            3.20000004768372
+          ],
+          "height_m": 1.05,
+          "id": "chair",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            1.0,
+            2.95000004768372,
+            0.550000011920929,
+            0.550000011920929
+          ]
+        },
+        {
+          "approach_m": [
+            1.89999997615814,
+            3.54999995231628
+          ],
+          "height_m": 0.76,
+          "id": "desk",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.349999994039536,
+            3.90000009536743,
+            1.64999997615814,
+            0.600000023841858
+          ]
+        },
+        {
+          "approach_m": [
+            2.54999995231628,
+            3.65000009536743
+          ],
+          "height_m": 0.45,
+          "id": "stool",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            2.34999990463257,
+            4.0,
+            0.400000005960464,
+            0.400000005960464
+          ]
+        },
+        {
+          "approach_m": [
+            3.40000009536743,
+            3.54999995231628
+          ],
+          "height_m": 0.9,
+          "id": "box",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            3.09999990463257,
+            3.95000004768372,
+            0.600000023841858,
+            0.600000023841858
+          ]
+        },
+        {
+          "approach_m": [
+            4.44999980926514,
+            1.29999995231628
+          ],
+          "height_m": 1.75,
+          "id": "rack",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            4.19999980926514,
+            0.449999988079071,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "approach_m": [
+            5.15000009536743,
+            3.75
+          ],
+          "height_m": 2.05,
+          "id": "wardrobe",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            5.5,
+            3.04999995231628,
+            0.600000023841858,
+            1.39999997615814
+          ]
+        },
+        {
+          "approach_m": [
+            5.25,
+            2.40000009536743
+          ],
+          "height_m": 1.6,
+          "id": "books",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            5.65000009536743,
+            2.0,
+            0.449999988079071,
+            0.75
+          ]
+        },
+        {
+          "approach_m": [
+            5.09999990463257,
+            1.35000002384186
+          ],
+          "height_m": 1.4,
+          "id": "storage",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            5.44999980926514,
+            0.949999988079071,
+            0.649999976158142,
+            0.800000011920929
+          ]
+        },
+        {
+          "approach_m": [
+            3.72499990463257,
+            1.14999997615814
+          ],
+          "height_m": 1.35,
+          "id": "fan",
+          "paths": [
+            {
+              "from": [
+                5.30000019073486,
+                0.300000011920929
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                1.70000004768372,
+                1.70000004768372
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            3.5,
+            0.349999994039536,
+            0.449999988079071,
+            0.449999988079071
+          ]
+        }
+      ],
+      "room": "bedroom",
+      "size_m": [
+        6.40000009536743,
+        4.80000019073486
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.54999995231628,
+            1.85000002384186
+          ],
+          "height_m": 0.64,
+          "id": "ward:0",
+          "paths": [
+            {
+              "from": [
+                4.44999980926514,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.349999994039536,
+            0.349999994039536,
+            2.09999990463257,
+            1.04999995231628
+          ]
+        },
+        {
+          "approach_m": [
+            3.02500009536743,
+            1.39999997615814
+          ],
+          "height_m": 0.65,
+          "id": "ward:1",
+          "paths": [
+            {
+              "from": [
+                4.44999980926514,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            2.75,
+            0.449999988079071,
+            0.550000011920929,
+            0.550000011920929
+          ]
+        },
+        {
+          "approach_m": [
+            1.35000002384186,
+            2.875
+          ],
+          "height_m": 0.95,
+          "id": "ward:2",
+          "paths": [
+            {
+              "from": [
+                4.44999980926514,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            2.59999990463257,
+            0.550000011920929,
+            0.550000011920929
+          ]
+        },
+        {
+          "approach_m": [
+            1.39999997615814,
+            3.45000004768372
+          ],
+          "height_m": 0.76,
+          "id": "ward:3",
+          "paths": [
+            {
+              "from": [
+                4.44999980926514,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.349999994039536,
+            3.79999995231628,
+            1.54999995231628,
+            0.600000023841858
+          ]
+        },
+        {
+          "approach_m": [
+            5.25,
+            2.79999995231628
+          ],
+          "height_m": 1.4,
+          "id": "ward:4",
+          "paths": [
+            {
+              "from": [
+                4.44999980926514,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            5.65000009536743,
+            2.45000004768372,
+            0.449999988079071,
+            0.699999988079071
+          ]
+        },
+        {
+          "approach_m": [
+            4.94999980926514,
+            1.04999995231628
+          ],
+          "height_m": 1.4,
+          "id": "ward:5",
+          "paths": [
+            {
+              "from": [
+                4.44999980926514,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            5.34999990463257,
+            0.550000011920929,
+            0.649999976158142,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            3.77500009536743,
+            3.20000004768372
+          ],
+          "height_m": 1.75,
+          "id": "ward:6",
+          "paths": [
+            {
+              "from": [
+                4.44999980926514,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            3.54999995231628,
+            2.34999990463257,
+            0.449999988079071,
+            0.449999988079071
+          ]
+        },
+        {
+          "approach_m": [
+            4.80000019073486,
+            4.05000019073486
+          ],
+          "height_m": 2.0,
+          "id": "ward:7",
+          "paths": [
+            {
+              "from": [
+                4.44999980926514,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            5.19999980926514,
+            3.65000009536743,
+            0.899999976158142,
+            0.800000011920929
+          ]
+        }
+      ],
+      "room": "ward",
+      "size_m": [
+        6.40000009536743,
+        4.80000019073486
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.79999995231628,
+            1.79999995231628
+          ],
+          "height_m": 1.05,
+          "id": "lobby:0",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                5.34999990463257,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.75,
+                3.54999995231628
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.75,
+                5.34999990463257
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.6999998092651,
+                1.25
+              ],
+              "legal": true,
+              "points": 4
+            }
+          ],
+          "rect_m": [
+            0.550000011920929,
+            0.649999976158142,
+            2.5,
+            0.699999988079071
+          ]
+        },
+        {
+          "approach_m": [
+            4.05000019073486,
+            1.10000002384186
+          ],
+          "height_m": 0.45,
+          "id": "lobby:1",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                5.34999990463257,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.75,
+                3.54999995231628
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.75,
+                5.34999990463257
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.6999998092651,
+                1.25
+              ],
+              "legal": true,
+              "points": 4
+            }
+          ],
+          "rect_m": [
+            3.70000004768372,
+            0.349999994039536,
+            0.699999988079071,
+            0.349999994039536
+          ]
+        },
+        {
+          "approach_m": [
+            6.52500009536743,
+            1.45000004768372
+          ],
+          "height_m": 1.55,
+          "id": "lobby:2",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                5.34999990463257,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.75,
+                3.54999995231628
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                10.75,
+                5.34999990463257
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.6999998092651,
+                1.25
+              ],
+              "legal": true,
+              "points": 4
+            }
+          ],
+          "rect_m": [
+            6.15000009536743,
+            0.400000005960464,
+            0.75,
+            0.649999976158142
+          ]
+        },
+        {
+          "approach_m": [
+            9.94999980926514,
+            6.77500009536743
+          ],
+          "height_m": 1.1,
+          "id": "lobby:3",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                5.34999990463257,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.75,
+                3.54999995231628
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.75,
+                5.34999990463257
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                10.6999998092651,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            10.3999996185303,
+            6.40000009536743,
+            0.75,
+            0.75
+          ]
+        },
+        {
+          "approach_m": [
+            1.45000004768372,
+            6.69999980926514
+          ],
+          "height_m": 1.5,
+          "id": "lobby:4",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                5.34999990463257,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.75,
+                3.54999995231628
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                10.75,
+                5.34999990463257
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                10.6999998092651,
+                1.25
+              ],
+              "legal": true,
+              "points": 4
+            }
+          ],
+          "rect_m": [
+            0.449999988079071,
+            6.19999980926514,
+            0.600000023841858,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            8.35000038146973,
+            6.40000009536743
+          ],
+          "height_m": 1.1,
+          "id": "lobby:5",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                5.34999990463257,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.75,
+                3.54999995231628
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.75,
+                5.34999990463257
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                10.6999998092651,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            8.0,
+            6.80000019073486,
+            0.699999988079071,
+            0.649999976158142
+          ]
+        }
+      ],
+      "room": "lobby",
+      "size_m": [
+        12.0,
+        8.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.35000002384186,
+            1.64999997615814
+          ],
+          "height_m": 0.76,
+          "id": "clinic:0",
+          "paths": [
+            {
+              "from": [
+                2.40000009536743,
+                4.75
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.449999988079071,
+            0.5,
+            1.79999995231628,
+            0.75
+          ]
+        },
+        {
+          "approach_m": [
+            6.40000009536743,
+            1.04999995231628
+          ],
+          "height_m": 1.65,
+          "id": "clinic:1",
+          "paths": [
+            {
+              "from": [
+                2.40000009536743,
+                4.75
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            6.80000019073486,
+            0.5,
+            0.699999988079071,
+            1.10000002384186
+          ]
+        },
+        {
+          "approach_m": [
+            1.45000004768372,
+            4.82499980926514
+          ],
+          "height_m": 0.85,
+          "id": "clinic:2",
+          "paths": [
+            {
+              "from": [
+                2.40000009536743,
+                4.75
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            4.5,
+            0.699999988079071,
+            0.649999976158142
+          ]
+        },
+        {
+          "approach_m": [
+            5.69999980926514,
+            3.15000009536743
+          ],
+          "height_m": 0.72,
+          "id": "clinic:3",
+          "paths": [
+            {
+              "from": [
+                2.40000009536743,
+                4.75
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            4.59999990463257,
+            3.59999990463257,
+            2.20000004768372,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            6.5,
+            2.67499995231628
+          ],
+          "height_m": 1.7,
+          "id": "clinic:4",
+          "paths": [
+            {
+              "from": [
+                2.40000009536743,
+                4.75
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            6.90000009536743,
+            2.25,
+            0.649999976158142,
+            0.850000023841858
+          ]
+        },
+        {
+          "approach_m": [
+            1.25,
+            2.75
+          ],
+          "height_m": 1.25,
+          "id": "clinic:5",
+          "paths": [
+            {
+              "from": [
+                2.40000009536743,
+                4.75
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            2.25,
+            0.449999988079071,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            3.42499995231628,
+            4.44999980926514
+          ],
+          "height_m": 0.55,
+          "id": "clinic:6",
+          "paths": [
+            {
+              "from": [
+                2.40000009536743,
+                4.75
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            3.20000004768372,
+            4.84999990463257,
+            0.449999988079071,
+            0.449999988079071
+          ]
+        },
+        {
+          "approach_m": [
+            5.0,
+            0.699999988079071
+          ],
+          "height_m": 1.1,
+          "id": "clinic:7",
+          "paths": [
+            {
+              "from": [
+                2.40000009536743,
+                4.75
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            4.19999980926514,
+            0.100000001490116,
+            1.60000002384186,
+            0.119999997317791
+          ]
+        }
+      ],
+      "room": "clinic",
+      "size_m": [
+        8.0,
+        6.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            4.65000009536743,
+            3.79999995231628
+          ],
+          "height_m": 1.05,
+          "id": "pharmacy:0",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                5.0
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            1.20000004768372,
+            3.40000009536743,
+            3.0,
+            0.75
+          ]
+        },
+        {
+          "approach_m": [
+            6.19999980926514,
+            1.02499997615814
+          ],
+          "height_m": 1.85,
+          "id": "pharmacy:1",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                5.0
+              ],
+              "legal": true,
+              "points": 4
+            }
+          ],
+          "rect_m": [
+            6.65000009536743,
+            0.400000005960464,
+            0.850000023841858,
+            1.25
+          ]
+        },
+        {
+          "approach_m": [
+            1.5,
+            0.774999976158142
+          ],
+          "height_m": 0.85,
+          "id": "pharmacy:2",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                5.0
+              ],
+              "legal": true,
+              "points": 5
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            0.449999988079071,
+            0.699999988079071,
+            0.649999976158142
+          ]
+        },
+        {
+          "approach_m": [
+            1.45000004768372,
+            2.17499995231628
+          ],
+          "height_m": 1.7,
+          "id": "pharmacy:3",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                5.0
+              ],
+              "legal": true,
+              "points": 5
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            1.64999997615814,
+            0.649999976158142,
+            1.04999995231628
+          ]
+        },
+        {
+          "approach_m": [
+            4.15000009536743,
+            1.39999997615814
+          ],
+          "height_m": 1.9,
+          "id": "pharmacy:4",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                5.0
+              ],
+              "legal": true,
+              "points": 5
+            }
+          ],
+          "rect_m": [
+            3.0,
+            0.449999988079071,
+            2.29999995231628,
+            0.550000011920929
+          ]
+        },
+        {
+          "approach_m": [
+            6.40000009536743,
+            3.20000004768372
+          ],
+          "height_m": 0.86,
+          "id": "pharmacy:5",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                5.0
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            5.30000019073486,
+            2.09999990463257,
+            2.20000004768372,
+            0.699999988079071
+          ]
+        },
+        {
+          "approach_m": [
+            6.44999980926514,
+            4.92500019073486
+          ],
+          "height_m": 1.45,
+          "id": "pharmacy:6",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                5.0
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            6.90000009536743,
+            4.44999980926514,
+            0.600000023841858,
+            0.949999988079071
+          ]
+        }
+      ],
+      "room": "pharmacy",
+      "size_m": [
+        8.0,
+        6.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            0.949999988079071,
+            1.39999997615814
+          ],
+          "height_m": 1.65,
+          "id": "office:0",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            0.349999994039536,
+            0.449999988079071,
+            1.20000004768372,
+            0.5
+          ]
+        },
+        {
+          "approach_m": [
+            3.0,
+            0.699999988079071
+          ],
+          "height_m": 1.1,
+          "id": "office:1",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            2.40000009536743,
+            0.100000001490116,
+            1.20000004768372,
+            0.119999997317791
+          ]
+        },
+        {
+          "approach_m": [
+            7.25,
+            0.75
+          ],
+          "height_m": 1.1,
+          "id": "office:2",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            7.69999980926514,
+            0.449999988079071,
+            0.699999988079071,
+            0.600000023841858
+          ]
+        },
+        {
+          "approach_m": [
+            7.44999980926514,
+            2.27500009536743
+          ],
+          "height_m": 0.55,
+          "id": "office:3",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            7.90000009536743,
+            2.04999995231628,
+            0.449999988079071,
+            0.449999988079071
+          ]
+        },
+        {
+          "approach_m": [
+            1.45000004768372,
+            2.47499990463257
+          ],
+          "height_m": 0.85,
+          "id": "office:4",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.349999994039536,
+            2.15000009536743,
+            0.699999988079071,
+            0.649999976158142
+          ]
+        },
+        {
+          "approach_m": [
+            7.25,
+            3.92499995231628
+          ],
+          "height_m": 1.9,
+          "id": "office:5",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            7.69999980926514,
+            3.34999990463257,
+            0.800000011920929,
+            1.14999997615814
+          ]
+        },
+        {
+          "approach_m": [
+            2.875,
+            3.40000009536743
+          ],
+          "height_m": 0.76,
+          "id": "office:6",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            2.04999995231628,
+            2.25,
+            1.64999997615814,
+            0.75
+          ]
+        },
+        {
+          "approach_m": [
+            4.72499990463257,
+            1.35000002384186
+          ],
+          "height_m": 1.0,
+          "id": "office:7",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            4.40000009536743,
+            0.449999988079071,
+            0.649999976158142,
+            0.5
+          ]
+        },
+        {
+          "approach_m": [
+            1.5,
+            4.875
+          ],
+          "height_m": 0.85,
+          "id": "office:8",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            4.55000019073486,
+            0.699999988079071,
+            0.649999976158142
+          ]
+        },
+        {
+          "approach_m": [
+            3.09999990463257,
+            4.44999980926514
+          ],
+          "height_m": 1.5,
+          "id": "office:9",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            2.59999990463257,
+            4.84999990463257,
+            1.0,
+            0.649999976158142
+          ]
+        },
+        {
+          "approach_m": [
+            5.84999990463257,
+            4.19999980926514
+          ],
+          "height_m": 0.76,
+          "id": "office:10",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                3.65000009536743
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            5.0,
+            4.65000009536743,
+            1.70000004768372,
+            0.75
+          ]
+        }
+      ],
+      "room": "office",
+      "size_m": [
+        9.0,
+        6.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            0.699999988079071,
+            2.0
+          ],
+          "height_m": 1.15,
+          "id": "stairs:0",
+          "paths": [
+            {
+              "from": [
+                1.39999997615814,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                5.75,
+                1.29999995231628
+              ],
+              "legal": true,
+              "points": 3
+            },
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            0.100000001490116,
+            1.29999995231628,
+            0.119999997317791,
+            1.39999997615814
+          ]
+        }
+      ],
+      "room": "stairs",
+      "size_m": [
+        7.0,
+        5.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.5,
+            1.5
+          ],
+          "height_m": 0.75,
+          "id": "corridor:0",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                2.5
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                3.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                7.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                12.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                13.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                9.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                5.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.550000011920929,
+            0.349999994039536,
+            1.79999995231628,
+            0.75
+          ]
+        },
+        {
+          "approach_m": [
+            14.3500003814697,
+            0.899999976158142
+          ],
+          "height_m": 0.7,
+          "id": "corridor:1",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                2.5
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                3.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                7.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                12.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                13.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                9.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                5.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            14.75,
+            0.400000005960464,
+            0.649999976158142,
+            0.649999976158142
+          ]
+        },
+        {
+          "approach_m": [
+            2.70000004768372,
+            3.75
+          ],
+          "height_m": 0.9,
+          "id": "corridor:2",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                2.5
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                3.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                7.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                12.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                13.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                9.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                5.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            1.79999995231628,
+            4.09999990463257,
+            1.79999995231628,
+            0.550000011920929
+          ]
+        },
+        {
+          "approach_m": [
+            1.45000004768372,
+            3.79999995231628
+          ],
+          "height_m": 1.1,
+          "id": "corridor:3",
+          "paths": [
+            {
+              "from": [
+                1.25,
+                2.5
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                3.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                7.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                12.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                13.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                9.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            },
+            {
+              "from": [
+                5.5,
+                3.75
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.5,
+            3.40000009536743,
+            0.600000023841858,
+            0.800000011920929
+          ]
+        }
+      ],
+      "room": "corridor",
+      "size_m": [
+        16.0,
+        5.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.0,
+            1.95000004768372
+          ],
+          "height_m": 0.7,
+          "id": "activity:0",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            0.200000002980232,
+            1.10000002384186,
+            1.60000002384186,
+            0.5
+          ]
+        },
+        {
+          "approach_m": [
+            0.699999988079071,
+            2.90000009536743
+          ],
+          "height_m": 1.15,
+          "id": "activity:1",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.0,
+            2.29999995231628,
+            0.0799999982118607,
+            1.20000004768372
+          ]
+        },
+        {
+          "approach_m": [
+            1.89999997615814,
+            3.15000009536743
+          ],
+          "height_m": 0.85,
+          "id": "activity:2",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.699999988079071,
+            3.5,
+            2.40000009536743,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            4.34999990463257,
+            3.20000004768372
+          ],
+          "height_m": 0.43,
+          "id": "activity:3",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            3.79999995231628,
+            3.54999995231628,
+            1.10000002384186,
+            0.699999988079071
+          ]
+        },
+        {
+          "approach_m": [
+            7.59999990463257,
+            3.15000009536743
+          ],
+          "height_m": 0.75,
+          "id": "activity:4",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            6.59999990463257,
+            3.5,
+            2.0,
+            0.899999976158142
+          ]
+        },
+        {
+          "approach_m": [
+            8.35000038146973,
+            6.90000009536743
+          ],
+          "height_m": 1.0,
+          "id": "activity:5",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            8.80000019073486,
+            6.69999980926514,
+            0.600000023841858,
+            0.600000023841858
+          ]
+        },
+        {
+          "approach_m": [
+            9.30000019073486,
+            2.40000009536743
+          ],
+          "height_m": 1.15,
+          "id": "activity:6",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            9.92000007629395,
+            1.79999995231628,
+            0.0799999982118607,
+            1.20000004768372
+          ]
+        },
+        {
+          "approach_m": [
+            7.69999980926514,
+            1.20000004768372
+          ],
+          "height_m": 1.6,
+          "id": "activity:7",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            6.69999980926514,
+            0.349999994039536,
+            2.0,
+            0.449999988079071
+          ]
+        }
+      ],
+      "room": "activity",
+      "size_m": [
+        10.0,
+        8.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.64999997615814,
+            2.34999990463257
+          ],
+          "height_m": 1.5,
+          "id": "group_therapy:0",
+          "paths": [
+            {
+              "from": [
+                4.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            1.60000002384186,
+            0.899999976158142,
+            1.5
+          ]
+        },
+        {
+          "approach_m": [
+            0.699999988079071,
+            5.55000019073486
+          ],
+          "height_m": 1.2,
+          "id": "group_therapy:1",
+          "paths": [
+            {
+              "from": [
+                4.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            0.0,
+            4.90000009536743,
+            0.0799999982118607,
+            1.29999995231628
+          ]
+        },
+        {
+          "approach_m": [
+            4.40000009536743,
+            3.90000009536743
+          ],
+          "height_m": 0.9,
+          "id": "group_therapy:2",
+          "paths": [
+            {
+              "from": [
+                4.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            2.29999995231628,
+            3.0,
+            4.19999980926514,
+            3.5
+          ]
+        },
+        {
+          "approach_m": [
+            7.19999980926514,
+            7.09999990463257
+          ],
+          "height_m": 1.0,
+          "id": "group_therapy:3",
+          "paths": [
+            {
+              "from": [
+                4.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            7.69999980926514,
+            6.80000019073486,
+            0.600000023841858,
+            0.600000023841858
+          ]
+        },
+        {
+          "approach_m": [
+            8.30000019073486,
+            5.44999980926514
+          ],
+          "height_m": 1.2,
+          "id": "group_therapy:4",
+          "paths": [
+            {
+              "from": [
+                4.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            8.92000007629395,
+            4.80000019073486,
+            0.0799999982118607,
+            1.29999995231628
+          ]
+        },
+        {
+          "approach_m": [
+            6.09999990463257,
+            1.20000004768372
+          ],
+          "height_m": 1.65,
+          "id": "group_therapy:5",
+          "paths": [
+            {
+              "from": [
+                4.5,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            5.19999980926514,
+            0.25,
+            1.79999995231628,
+            0.119999997317791
+          ]
+        }
+      ],
+      "room": "group_therapy",
+      "size_m": [
+        9.0,
+        8.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.54999995231628,
+            2.0
+          ],
+          "height_m": 1.6,
+          "id": "quiet:0",
+          "paths": [
+            {
+              "from": [
+                3.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            1.39999997615814,
+            0.800000011920929,
+            1.29999995231628
+          ]
+        },
+        {
+          "approach_m": [
+            4.44999980926514,
+            2.0
+          ],
+          "height_m": 1.6,
+          "id": "quiet:1",
+          "paths": [
+            {
+              "from": [
+                3.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            4.80000019073486,
+            1.39999997615814,
+            0.800000011920929,
+            1.29999995231628
+          ]
+        },
+        {
+          "approach_m": [
+            1.39999997615814,
+            3.34999990463257
+          ],
+          "height_m": 0.85,
+          "id": "quiet:2",
+          "paths": [
+            {
+              "from": [
+                3.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.550000011920929,
+            3.70000004768372,
+            1.70000004768372,
+            0.649999976158142
+          ]
+        },
+        {
+          "approach_m": [
+            5.30000019073486,
+            4.05000019073486
+          ],
+          "height_m": 1.55,
+          "id": "quiet:3",
+          "paths": [
+            {
+              "from": [
+                3.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            5.92000007629395,
+            3.45000004768372,
+            0.0799999982118607,
+            1.20000004768372
+          ]
+        }
+      ],
+      "room": "quiet",
+      "size_m": [
+        6.0,
+        5.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.39999997615814,
+            1.60000002384186
+          ],
+          "height_m": 0.8,
+          "id": "bathroom:0",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.349999994039536,
+            1.0,
+            0.699999988079071,
+            1.20000004768372
+          ]
+        },
+        {
+          "approach_m": [
+            1.39999997615814,
+            3.59999990463257
+          ],
+          "height_m": 0.8,
+          "id": "bathroom:1",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.349999994039536,
+            3.0,
+            0.699999988079071,
+            1.20000004768372
+          ]
+        },
+        {
+          "approach_m": [
+            3.04999995231628,
+            3.45000004768372
+          ],
+          "height_m": 0.02,
+          "id": "bathroom:2",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            2.79999995231628,
+            3.20000004768372,
+            0.25,
+            0.25
+          ]
+        },
+        {
+          "approach_m": [
+            6.30000019073486,
+            2.29999995231628
+          ],
+          "height_m": 1.9,
+          "id": "bathroom:3",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            5.59999990463257,
+            1.5,
+            1.89999997615814,
+            1.5
+          ]
+        },
+        {
+          "approach_m": [
+            6.30000019073486,
+            4.94999980926514
+          ],
+          "height_m": 1.9,
+          "id": "bathroom:4",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            5.59999990463257,
+            4.19999980926514,
+            1.89999997615814,
+            1.5
+          ]
+        },
+        {
+          "approach_m": [
+            0.699999988079071,
+            5.84999990463257
+          ],
+          "height_m": 1.55,
+          "id": "bathroom:5",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.0,
+            5.25,
+            0.0799999982118607,
+            1.20000004768372
+          ]
+        },
+        {
+          "approach_m": [
+            3.59999990463257,
+            5.34999990463257
+          ],
+          "height_m": 0.75,
+          "id": "bathroom:6",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            3.29999995231628,
+            5.80000019073486,
+            0.649999976158142,
+            0.649999976158142
+          ]
+        }
+      ],
+      "room": "bathroom",
+      "size_m": [
+        8.0,
+        7.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.54999995231628,
+            1.60000002384186
+          ],
+          "height_m": 2.0,
+          "id": "double_ward:0",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            1.0,
+            0.75,
+            1.25
+          ]
+        },
+        {
+          "approach_m": [
+            6.84999990463257,
+            1.0
+          ],
+          "height_m": 1.4,
+          "id": "double_ward:1",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 4
+            }
+          ],
+          "rect_m": [
+            5.59999990463257,
+            0.449999988079071,
+            0.899999976158142,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            3.75,
+            3.5
+          ],
+          "height_m": 0.5,
+          "id": "double_ward:2",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            1.29999995231628,
+            3.0,
+            2.04999995231628,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            4.25,
+            3.5
+          ],
+          "height_m": 0.5,
+          "id": "double_ward:3",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            4.65000009536743,
+            3.0,
+            2.04999995231628,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            2.25,
+            4.80000019073486
+          ],
+          "height_m": 0.65,
+          "id": "double_ward:4",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            1.29999995231628,
+            4.5,
+            0.550000011920929,
+            0.550000011920929
+          ]
+        },
+        {
+          "approach_m": [
+            5.75,
+            4.80000019073486
+          ],
+          "height_m": 0.65,
+          "id": "double_ward:5",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            6.15000009536743,
+            4.5,
+            0.550000011920929,
+            0.550000011920929
+          ]
+        },
+        {
+          "approach_m": [
+            4.0,
+            5.30000019073486
+          ],
+          "height_m": 1.2,
+          "id": "double_ward:6",
+          "paths": [
+            {
+              "from": [
+                4.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            3.29999995231628,
+            5.92000007629395,
+            1.39999997615814,
+            0.0799999982118607
+          ]
+        }
+      ],
+      "room": "double_ward",
+      "size_m": [
+        8.0,
+        6.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    },
+    {
+      "furniture": [
+        {
+          "approach_m": [
+            1.60000002384186,
+            1.85000002384186
+          ],
+          "height_m": 0.75,
+          "id": "workshop:0",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.5,
+            2.29999995231628,
+            2.20000004768372,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            7.90000009536743,
+            1.85000002384186
+          ],
+          "height_m": 0.75,
+          "id": "workshop:1",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            6.80000019073486,
+            2.29999995231628,
+            2.20000004768372,
+            1.0
+          ]
+        },
+        {
+          "approach_m": [
+            1.0,
+            5.40000009536743
+          ],
+          "height_m": 0.65,
+          "id": "workshop:2",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            5.80000019073486,
+            1.20000004768372,
+            0.699999988079071
+          ]
+        },
+        {
+          "approach_m": [
+            0.899999976158142,
+            1.29999995231628
+          ],
+          "height_m": 0.8,
+          "id": "workshop:3",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            0.400000005960464,
+            0.400000005960464,
+            1.0,
+            0.550000011920929
+          ]
+        },
+        {
+          "approach_m": [
+            0.699999988079071,
+            4.40000009536743
+          ],
+          "height_m": 1.2,
+          "id": "workshop:4",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            0.0,
+            3.70000004768372,
+            0.0799999982118607,
+            1.39999997615814
+          ]
+        },
+        {
+          "approach_m": [
+            4.90000009536743,
+            6.15000009536743
+          ],
+          "height_m": 1.5,
+          "id": "workshop:5",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            4.0,
+            6.80000019073486,
+            1.79999995231628,
+            0.119999997317791
+          ]
+        },
+        {
+          "approach_m": [
+            9.10000038146973,
+            6.34999990463257
+          ],
+          "height_m": 1.6,
+          "id": "workshop:6",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 3
+            }
+          ],
+          "rect_m": [
+            8.60000038146973,
+            4.30000019073486,
+            1.0,
+            1.60000002384186
+          ]
+        },
+        {
+          "approach_m": [
+            9.0,
+            1.25
+          ],
+          "height_m": 1.6,
+          "id": "workshop:7",
+          "paths": [
+            {
+              "from": [
+                5.0,
+                1.25
+              ],
+              "legal": true,
+              "points": 2
+            }
+          ],
+          "rect_m": [
+            8.5,
+            0.400000005960464,
+            1.0,
+            0.550000011920929
+          ]
+        }
+      ],
+      "room": "workshop",
+      "size_m": [
+        10.0,
+        7.0
+      ],
+      "wall": {
+        "display": {
+          "logical_full_height": true,
+          "near_alpha": 0.2,
+          "near_sides": [
+            "east",
+            "south"
+          ],
+          "occluded_alpha": 0.07
+        },
+        "height_m": 2.55,
+        "thickness_m": 0.15
+      }
+    }
+  ],
+  "scope": "Runtime-layout projection, original source search/action approaches, all real portal paths and full-wall visibility contract. No normal-play, formal-art or subjective aesthetic acceptance."
+}

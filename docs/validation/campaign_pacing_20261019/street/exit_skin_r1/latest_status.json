@@ -1,0 +1,24 @@
+{
+  "clusters": 7,
+  "control_ms": 0,
+  "destination": "",
+  "door_left_s": -1.0,
+  "elapsed_s": 10.0666666666666,
+  "ending": {},
+  "gripped": false,
+  "hp": 100,
+  "level": 6,
+  "neurons": 11,
+  "paused": false,
+  "pos_m": [
+    7.71298694610596,
+    3.86050724983215
+  ],
+  "pose": "walk",
+  "room": "street_end",
+  "route_points": 1,
+  "sp": 100,
+  "street_clock_s": 6.43333333333332,
+  "street_s": 10.0333333333333,
+  "world_s": 6.43333333333332
+}

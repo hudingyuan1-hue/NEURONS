@@ -2,6 +2,8 @@ extends RefCounted
 ## S3:P1826–1830. Actual multi-arm impact and torso enclosure are separate.
 const ID="mother"
 var owner_ref:WeakRef
+var prediction_key:Array=[]
+var prediction_arms:Array=[]
 var battle:
  get:return owner_ref.get_ref()
 var app:
@@ -40,6 +42,9 @@ func clipped(arms:Array) -> Array:
  for arm in out:
   for j in range(1,3):
    var start:Vector2=battle.vector(arm[j-1]);var end:Vector2=battle.vector(arm[j]);var last:Vector2=start;var steps:int=maxi(1,ceili(start.distance_to(end)/param("mother_sample_m")))
+   # The exact continuous query proves a whole arm segment clear. Keep the
+   # original samples whenever obstructed so accepted stop poses stay equal.
+   if floor.clear_segment(start,end,param("mother_arm_m")):continue
    for n in range(1,steps+1):
     var next:Vector2=start.lerp(end,float(n)/steps)
     if not floor.clear_segment(last,next,param("mother_arm_m")):break
@@ -111,10 +116,26 @@ func prepare(delta:float) -> void:
   var candidate:Array=shape(lerpf(begin,end,float(n)/steps))
   if not clear_arms(candidate,s.arms):s.blocked=true;actor().elapsed=maxf(float(actor().elapsed),float(attack().active)-delta);break
   s.arms=candidate;s.sweep.append(candidate)
+func _prediction_key() -> Array:
+ var floor=battle.floor_for(str(actor().room));var geometry:Array=[];var parameters:Dictionary={}
+ for key in battle.config.test_parameters:
+  if str(key).begins_with("mother_"):parameters[key]=battle.config.test_parameters[key]
+ for property:Dictionary in floor.get_property_list():
+  if str(property.name) not in ["furniture","decor","walls","static_walls","movable_blockers","oriented_beds","bounds_size","geometry_version","spatial_version","metric_spec","floor_polygon_m","body_radius"]:continue
+  var value=floor.get(property.name)
+  geometry.append([property.name,value.duplicate(true) if value is Array or value is Dictionary else value])
+ return [str(actor().room),battle.position(ID),direction(),floor.get_instance_id(),attack().duplicate(true),parameters,geometry]
+
+func _windup_arms() -> Array:
+ var current:Array=_prediction_key()
+ if current!=prediction_key:
+  prediction_key=current;prediction_arms=clipped(shape(1))
+ return prediction_arms
+
 func contains(target:Vector2) -> bool:
  var a:Dictionary=actor()
  if not a.present or a.hp<=0 or a.hurt>0 or not battle.data.ending.is_empty():return false
- if a.phase=="windup":return touching(clipped(shape(1)),target)
+ if a.phase=="windup":return touching(_windup_arms(),target)
  if a.phase!="attack":return false
  for pose in state().sweep:
   if touching(pose,target):return true

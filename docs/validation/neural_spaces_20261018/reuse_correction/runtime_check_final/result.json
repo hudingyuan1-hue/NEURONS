@@ -1,0 +1,771 @@
+{
+  "failures": [],
+  "rows": [
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "memory"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "visual"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "decision"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "body"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "memory"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "visual"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "decision"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "body"
+        }
+      ],
+      "room": "atrium",
+      "routes": [
+        {
+          "distance_m": 9.46000003814697,
+          "from": "memory",
+          "reachable": true,
+          "to": "visual"
+        },
+        {
+          "distance_m": 2.47585999965668,
+          "from": "memory",
+          "reachable": true,
+          "to": "decision"
+        },
+        {
+          "distance_m": 5.79120016098022,
+          "from": "memory",
+          "reachable": true,
+          "to": "body"
+        },
+        {
+          "distance_m": 9.46000003814697,
+          "from": "visual",
+          "reachable": true,
+          "to": "memory"
+        },
+        {
+          "distance_m": 7.14492750167847,
+          "from": "visual",
+          "reachable": true,
+          "to": "decision"
+        },
+        {
+          "distance_m": 9.43404722213745,
+          "from": "visual",
+          "reachable": true,
+          "to": "body"
+        },
+        {
+          "distance_m": 2.56164026260376,
+          "from": "decision",
+          "reachable": true,
+          "to": "memory"
+        },
+        {
+          "distance_m": 7.46739530563354,
+          "from": "decision",
+          "reachable": true,
+          "to": "visual"
+        },
+        {
+          "distance_m": 6.25999975204468,
+          "from": "decision",
+          "reachable": true,
+          "to": "body"
+        },
+        {
+          "distance_m": 5.59088516235352,
+          "from": "body",
+          "reachable": true,
+          "to": "memory"
+        },
+        {
+          "distance_m": 9.55657148361206,
+          "from": "body",
+          "reachable": true,
+          "to": "visual"
+        },
+        {
+          "distance_m": 6.25999975204468,
+          "from": "body",
+          "reachable": true,
+          "to": "decision"
+        }
+      ],
+      "same_base": true,
+      "size_m": [
+        10.8000001907349,
+        7.59999990463257
+      ]
+    },
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "atrium"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "visual"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "atrium"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "visual"
+        }
+      ],
+      "room": "memory",
+      "routes": [
+        {
+          "distance_m": 5.40814161300659,
+          "from": "atrium",
+          "reachable": true,
+          "to": "visual"
+        },
+        {
+          "distance_m": 5.28734302520752,
+          "from": "visual",
+          "reachable": true,
+          "to": "atrium"
+        }
+      ],
+      "same_base": true,
+      "size_m": [
+        9.60000038146973,
+        7.19999980926514
+      ]
+    },
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "atrium"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "memory"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "atrium"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "memory"
+        }
+      ],
+      "room": "visual",
+      "routes": [
+        {
+          "distance_m": 4.26830452680588,
+          "from": "atrium",
+          "reachable": true,
+          "to": "memory"
+        },
+        {
+          "distance_m": 4.21650958061218,
+          "from": "memory",
+          "reachable": true,
+          "to": "atrium"
+        }
+      ],
+      "same_base": true,
+      "size_m": [
+        10.3999996185303,
+        7.59999990463257
+      ]
+    },
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "atrium"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "bridge"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "atrium"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "bridge"
+        }
+      ],
+      "room": "decision",
+      "routes": [
+        {
+          "distance_m": 7.09934735298157,
+          "from": "atrium",
+          "reachable": true,
+          "to": "bridge"
+        },
+        {
+          "distance_m": 7.10664319992065,
+          "from": "bridge",
+          "reachable": true,
+          "to": "atrium"
+        }
+      ],
+      "same_base": true,
+      "size_m": [
+        9.60000038146973,
+        8.0
+      ]
+    },
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "atrium"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "atrium"
+        }
+      ],
+      "room": "body",
+      "routes": [],
+      "same_base": true,
+      "size_m": [
+        10.3999996185303,
+        8.0
+      ]
+    },
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "decision"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "index"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "rhythm"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "switch"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "decision"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "index"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "rhythm"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "switch"
+        }
+      ],
+      "room": "bridge",
+      "routes": [
+        {
+          "distance_m": 8.96829795837402,
+          "from": "decision",
+          "reachable": true,
+          "to": "index"
+        },
+        {
+          "distance_m": 6.04744577407837,
+          "from": "decision",
+          "reachable": true,
+          "to": "rhythm"
+        },
+        {
+          "distance_m": 1.6144255399704,
+          "from": "decision",
+          "reachable": true,
+          "to": "switch"
+        },
+        {
+          "distance_m": 8.63981437683105,
+          "from": "index",
+          "reachable": true,
+          "to": "decision"
+        },
+        {
+          "distance_m": 7.47054433822632,
+          "from": "index",
+          "reachable": true,
+          "to": "rhythm"
+        },
+        {
+          "distance_m": 9.86000061035156,
+          "from": "index",
+          "reachable": true,
+          "to": "switch"
+        },
+        {
+          "distance_m": 6.04744577407837,
+          "from": "rhythm",
+          "reachable": true,
+          "to": "decision"
+        },
+        {
+          "distance_m": 7.56102180480957,
+          "from": "rhythm",
+          "reachable": true,
+          "to": "index"
+        },
+        {
+          "distance_m": 5.70903253555298,
+          "from": "rhythm",
+          "reachable": true,
+          "to": "switch"
+        },
+        {
+          "distance_m": 1.61195230484009,
+          "from": "switch",
+          "reachable": true,
+          "to": "decision"
+        },
+        {
+          "distance_m": 9.86000061035156,
+          "from": "switch",
+          "reachable": true,
+          "to": "index"
+        },
+        {
+          "distance_m": 5.74952459335327,
+          "from": "switch",
+          "reachable": true,
+          "to": "rhythm"
+        }
+      ],
+      "same_base": true,
+      "size_m": [
+        11.1999998092651,
+        6.80000019073486
+      ]
+    },
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "bridge"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "identity"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "bridge"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "identity"
+        }
+      ],
+      "room": "rhythm",
+      "routes": [
+        {
+          "distance_m": 11.3435952663422,
+          "from": "bridge",
+          "reachable": true,
+          "to": "identity"
+        },
+        {
+          "distance_m": 11.3162496089935,
+          "from": "identity",
+          "reachable": true,
+          "to": "bridge"
+        }
+      ],
+      "same_base": true,
+      "size_m": [
+        12.0,
+        7.59999990463257
+      ]
+    },
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "bridge"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "switch"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "bridge"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "switch"
+        }
+      ],
+      "room": "index",
+      "routes": [
+        {
+          "distance_m": 9.36483955383301,
+          "from": "bridge",
+          "reachable": true,
+          "to": "switch"
+        },
+        {
+          "distance_m": 9.39301872253418,
+          "from": "switch",
+          "reachable": true,
+          "to": "bridge"
+        }
+      ],
+      "same_base": true,
+      "size_m": [
+        10.3999996185303,
+        8.0
+      ]
+    },
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "index"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "bridge"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "verify"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "index"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "bridge"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "verify"
+        }
+      ],
+      "room": "switch",
+      "routes": [
+        {
+          "distance_m": 5.33113241195679,
+          "from": "index",
+          "reachable": true,
+          "to": "bridge"
+        },
+        {
+          "distance_m": 9.14582443237305,
+          "from": "index",
+          "reachable": true,
+          "to": "verify"
+        },
+        {
+          "distance_m": 5.61613798141479,
+          "from": "bridge",
+          "reachable": true,
+          "to": "index"
+        },
+        {
+          "distance_m": 5.58702421188354,
+          "from": "bridge",
+          "reachable": true,
+          "to": "verify"
+        },
+        {
+          "distance_m": 9.36031103134155,
+          "from": "verify",
+          "reachable": true,
+          "to": "index"
+        },
+        {
+          "distance_m": 5.71443939208984,
+          "from": "verify",
+          "reachable": true,
+          "to": "bridge"
+        }
+      ],
+      "same_base": true,
+      "size_m": [
+        9.60000038146973,
+        7.19999980926514
+      ]
+    },
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "switch"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "identity"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "hippocampus"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "switch"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "identity"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "hippocampus"
+        }
+      ],
+      "room": "verify",
+      "routes": [
+        {
+          "distance_m": 9.0600004196167,
+          "from": "switch",
+          "reachable": true,
+          "to": "identity"
+        },
+        {
+          "distance_m": 6.792848944664,
+          "from": "switch",
+          "reachable": true,
+          "to": "hippocampus"
+        },
+        {
+          "distance_m": 9.0600004196167,
+          "from": "identity",
+          "reachable": true,
+          "to": "switch"
+        },
+        {
+          "distance_m": 6.81447923183441,
+          "from": "identity",
+          "reachable": true,
+          "to": "hippocampus"
+        },
+        {
+          "distance_m": 6.82723426818848,
+          "from": "hippocampus",
+          "reachable": true,
+          "to": "switch"
+        },
+        {
+          "distance_m": 6.77169561386108,
+          "from": "hippocampus",
+          "reachable": true,
+          "to": "identity"
+        }
+      ],
+      "same_base": true,
+      "size_m": [
+        10.3999996185303,
+        8.39999961853027
+      ]
+    },
+    {
+      "bed_entries": [
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "rhythm"
+        },
+        {
+          "actual_entry_sweep_complete": true,
+          "landing_clear": true,
+          "precise_landing_clear": true,
+          "precise_spawn_clear": true,
+          "spawn_clear": true,
+          "toward": "verify"
+        }
+      ],
+      "passing": [
+        {
+          "one_actor_route": true,
+          "toward": "rhythm"
+        },
+        {
+          "one_actor_route": true,
+          "toward": "verify"
+        }
+      ],
+      "room": "identity",
+      "routes": [
+        {
+          "distance_m": 9.46000003814697,
+          "from": "rhythm",
+          "reachable": true,
+          "to": "verify"
+        },
+        {
+          "distance_m": 9.46000003814697,
+          "from": "verify",
+          "reachable": true,
+          "to": "rhythm"
+        }
+      ],
+      "same_base": true,
+      "size_m": [
+        10.8000001907349,
+        8.39999961853027
+      ]
+    }
+  ],
+  "scope": "Read-only data probe: L4 actual metre contract copied into in-memory L5 layout; real Godot full-radius door routes, one-actor passing and original oriented bed entry geometry. No production file rewrite or actual AI acceptance."
+}

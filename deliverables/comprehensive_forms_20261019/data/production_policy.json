@@ -1,0 +1,9 @@
+{
+  "current_owner": "codex",
+  "scope": "剩余人物、动作、场景、家具物件、UI、通用效果均由Codex生产加工；用户不必继续逐帧生成。",
+  "preserve": "已认可具体文件与用户已修订异化保留；异化不再评估。",
+  "main_animation": "主角只制作一套服装动作并用于全关；其他衣装仅留静态来源或历史，不增加独立动作序列。",
+  "single_main_mother": "CHR_MAIN",
+  "history": "资产ID与原始责任保留在origin_role；当前责任写current_owner，不删旧进度。",
+  "ui_exception": "用户生成本版UI必要底片/图标；Codex负责切片、透明、程序文字/控件/状态/接入。其余资产沿原Codex责任。"
+}

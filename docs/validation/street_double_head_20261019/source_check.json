@@ -1,0 +1,98 @@
+{
+  "created_at": "2026-10-18T17:56:04.611654+00:00",
+  "baseline": "2a5887f91a69e135979d504d333c5b2d289f3dcc",
+  "scope": "Source-backed two-head one-body counter pose and local two-arm contact. Double-face witnessed-intervention chain already implemented, unchanged.",
+  "source": {
+    "path": "DOCX/AI整理后文档/NEURONS_第三阶段_人物物品_合并修订版.docx",
+    "sha256": "fd5cd334da1ed8866339175a29d7a23a371e917fe6387ef9dfa53a444a325b59",
+    "actually_read": [
+      "S3:P1842–1847",
+      "S3:P1728–1741 directly parsed original DOCX paragraphs"
+    ],
+    "adopted": [
+      "Two heads share one neutral body/HP/position; mutual neck pose does not self-damage.",
+      "Original real legal player knee contact authorizes retaliation; misses, walking by, other enemy injury do not.",
+      "Original injury reaction precedes neck release→two-head turn→two forward arms→original recovery→neutral.",
+      "One original15HP counter receipt; no double-head duplication or added grasp.",
+      "Original last-seen investigation, fatal hit/death precedence and no queued multiple counters retained."
+    ]
+  },
+  "protected_semantics": {
+    "actors": true,
+    "attacks": true,
+    "rooms": true,
+    "materials": true,
+    "all_original_test_parameter_values": true
+  },
+  "new_trial_geometry_only": {
+    "double_head_shoulder_m": 0.16,
+    "double_head_hand_side_m": 0.18,
+    "double_head_near_m": 0.25,
+    "double_head_elbow_m": 0.28,
+    "double_head_arm_radius_m": 0.035,
+    "double_head_sample_m": 0.025,
+    "double_head_height_px": 75,
+    "double_head_release_ratio": 0.45
+  },
+  "runtime_changes": [
+    "Dedicated attached two-arm sweep contact replaces filled forward rectangle; actual obstacles stop arm paths at accepted side.",
+    "AI walks inside original1.2m reach before actual arm attack, no attack reach/width expansion.",
+    "Current visual two-head placeholder no longer also draws third generic center head. Neck release interpolates from original crossed pose rather than teleporting forearms.",
+    "Legacy mid-active save reconstructs only currently possible arms, not missing past sweep; no injury replay."
+  ],
+  "verification": {
+    "finite_release_final": "46passed0failed; actual paid CONTROL/legal knee starts counter. Includes exact obstacle/receipt/JSON/pause/neutral/lost-target/death and missing legacy sweep negative case.",
+    "live_release_final": "15passed0failed,245frames/30=8.1667s continuous silent MP4. Explicit initial neutral body/host/home placement only; actual paid CONTROL, actual F key, ordinary AI/process, actual Book/Escape/Space/running zoom. No hostile/attack/hit/receipt success fields injected.",
+    "regressions": "Actual window Street54/0 including E3 panel; prior four wrist grips119/0; witnessed displays/double-face58/0.",
+    "natural": "Actual window declared directStreet entry only, then no seed/NPC/position/resource/route/damage fixtures.92.6667game seconds,HP80, full E2 registration/dialogue/wake/planet/complete6/0. Before final neck-release drawing interpolation only; final local46/0 and live15/0 include current code.",
+    "inspected": [
+      "exact two heads/one body",
+      "actual neck release",
+      "early hands short of target",
+      "one real15HP contact",
+      "actual1.15 zoom",
+      "neutral restored",
+      "continuous raw movie frames90/170"
+    ],
+    "failures_preserved": [
+      "live_r1:2passed1failed because explicit actor placement retained original home, neutral actor legitimately moved out of F kick range. Corrected fixture home to declared initial station; no production AI/kick change."
+    ],
+    "live_approved": "15passed0failed,245frames/30=8.1667s continuous silent MP4. Final current code; explicit neutral initial body/host/home only, actual paid CONTROL/F, ordinary AI/process/Book/Escape/Space/1.15zoom; idle keeps crossed-neck pose until original release portion of windup."
+  },
+  "formal_acceptance": "Procedural placeholder only; formal character/anatomy/animation/audio audition and human full B7 remain unaccepted.",
+  "movie": {
+    "path": "docs/validation/street_double_head_20261019/live_approved/continuous_silent.mp4",
+    "sha256": "6ec327609c9c1863e2fbd41ab070817d65b18bf71d140b67cd2869067a194353",
+    "frames": 245,
+    "fps": 30,
+    "audio": "silent review clip"
+  },
+  "files": [
+    {
+      "path": "neurons/scripts/core/street_double_head.gd",
+      "sha256": "5858f6688cd405b73a03725cc5727671407df8a046b7a48cf2aa60accf2eab8f"
+    },
+    {
+      "path": "neurons/scripts/core/street_chapter.gd",
+      "sha256": "24770bdc60e8e95f31238e6f705046a47a7c3239c63801c088048ec593d004cb"
+    },
+    {
+      "path": "neurons/scripts/world/combat_view.gd",
+      "sha256": "8384f399e93c3216405328a7f4d2cbd92edfe302fa358a170259411fdc15125e"
+    },
+    {
+      "path": "neurons/data/street_chapter.json",
+      "sha256": "04ca0cbd70fdde4dcb5d3dc132afc1410a5eecb6327449603facc886bc3c23c1"
+    },
+    {
+      "path": "neurons/tests/street_double_head_check.gd",
+      "sha256": "e74cf932fa3f0f521db71ddaf301b15ab2e2a23ad9a7ba56a1fcbb73e4a6dd0d"
+    },
+    {
+      "path": "neurons/tests/street_double_head_live_check.gd",
+      "sha256": "7c3ced8ad5532f4120acb426cc27d52ca52ff578504268c159d91a8bf52d3213"
+    }
+  ],
+  "git_writes": false,
+  "remaining_source_supported_gap": "Double-face S3:P1734 hurt retreat: current watch/middle neutral branch only decrements hurt; no actual retreat, not covered by58display checks. Witnessed successful visible-intervention→turn chain already exists and unchanged; do not infer full actor acceptance from that regression."
+}

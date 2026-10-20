@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-19T16:36:06.705373+08:00",
+  "checks": {
+    "source_fingerprints_current": true,
+    "gameplay_and_logical_layout_preserved": true,
+    "desktop_html_and_zip_exact": true,
+    "form_zip_crc": true,
+    "embedded_page_current": true,
+    "all_png_in_zip": true,
+    "gallery_runtime": true,
+    "input_runtime": true,
+    "package_runtime": true,
+    "form_contract": true,
+    "engine_logs_clean": true,
+    "independent_exe_opengl_started": true
+  },
+  "runtime_sources_changed": [
+    "scripts/world/architectural_surface.gd",
+    "scripts/world/campaign_view.gd",
+    "scripts/world/combat_view.gd",
+    "scripts/world/metric_bedroom_view.gd",
+    "scripts/world/metric_institution_view.gd",
+    "scripts/world/spatial_presentation.gd",
+    "scripts/world/spatial_shell.gd"
+  ],
+  "scenes": 56,
+  "furniture_templates": 381,
+  "PNG_count": 493,
+  "actual_runtime_screenshots": "gallery/ (56) and *_contact.png",
+  "independent_EXE_exit_code": 0,
+  "source_sha256": {
+    "neurons/scripts/world/architectural_surface.gd": "6818bf41278dd94d56353339791ac3fb895b9781e7958e3f3c0017910116ef98",
+    "neurons/scripts/world/campaign_view.gd": "1fef9670396c4b59dcb08e5fba8807d58833c26b474b3b7b331d35fc95e62220",
+    "neurons/scripts/world/combat_view.gd": "0bedba671d3d567575b384a0f666c3c4a7a943380a9bc32bdbdc777827221c18",
+    "neurons/scripts/world/metric_bedroom_view.gd": "ffdf4352f009b3ffb3aed1fd632c98e80cbf37c8b4f5a4beac8235db31e1eeb2",
+    "neurons/scripts/world/metric_institution_view.gd": "a89c23dda6f48d000095057fd641de06348fd3d7a1465622f7ac8a55d30af4c3",
+    "neurons/scripts/world/spatial_presentation.gd": "868b94245c4eb2edb6e8b8faddc9b670577c68c840989163f02c14773389f44f",
+    "neurons/scripts/world/spatial_shell.gd": "21db34a20f3f0c3cc8eaa9f49b82bd6d6cb5b74bfb1ac489e1a6fd18c3383024",
+    "tools/build_runtime_space_templates.py": "ca2fd3348fc62877a80d81d442e8568ba1cfaee554670f7c60beae3aa4a7e270",
+    "tools/check_runtime_space_templates.cjs": "ffa8efb8ee37567cfed8e5b9d585e2103ae9777c9f73da73e78b39432b80592f",
+    "tools/export_runtime_spaces.gd": "a9c5beb2161a78db150ed1b3cb9076a606f38c0e2527ade7cb11b280f73e5e37",
+    "docs/HANDOFF.md": "e972d1f5de3d484862c232f6ee5e047c814fb01ed1ba246eaab23996f7243803",
+    "docs/ART_SPEC.md": "d0e1aeceeeb49308a4915a7c993950a5e520ebcecf51eda9780eee62194ede47"
+  },
+  "artifact_sha256": {
+    "deliverables/space_templates_corrected_20261019/00_空间与家具模板_可分享.html": "52c062c9b1793beab170a38ca2c2b7516182e48b5f141c0ca4c2508ee6570a95",
+    "deliverables/space_templates_corrected_20261019/NEURONS_空间与家具模板_20261019.zip": "dea22642944a25723e0e9789bd01c51ff874c2ce98034ff721c221511c3082d8",
+    "exports/wall_continuity_20261019/NEURONS.exe": "3d19ee4a764e8bb153bfa7f811f98e0dfb0139c9e0c8bc6b76b93d3ed09185bf",
+    "exports/wall_continuity_20261019/NEURONS.pck": "8ff02bd4e13cddd73f015713174493cd565c1e57f920c9c0456ed1caad16ab5a",
+    "exports/wall_continuity_20261019/NEURONS_Windows_墙面与模板同步修订.zip": "8d3bb6c329a4922523f505e9330c3891b5df4e63d8c39153f19b898ab2a8f85c"
+  },
+  "scope": "Actual continuous architecture display and game-derived locator repair. Logical gameplay untouched; actual GPU gallery, finite input and exported PCK/EXE smoke, offline HTML contract. No AI art generation, final art or human full B7/second-computer acceptance."
+}

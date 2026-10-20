@@ -206,6 +206,7 @@ func complete(target:Dictionary) -> void:
  if value.active.get("controlled",false):owner.app.rules.controlled_execution("observe",id)
  value.completed[id]=current_revision
  value.read[id]={"source":target.source,"room":owner.app.room_id,"fields":fields,"revision":current_revision,"visit_reference":str(owner.data.get("visit",""))}
+ if target.has("document_relation"):value.read[id].document_relation=str(target.document_relation)
  var text:String=str(target.text)
  if id=="laundry_stub" and str(owner.data.get("bag",""))=="removed":
   text="实际搬运已完成后，重新读到污衣交接存根的袋号、对象和完成记录；具体字形待核，未补造领标与袋号同号结论。"
@@ -237,11 +238,35 @@ func note_link(id:String,text:String) -> void:
  if state().links.has(id):return
  state().links[id]=true;owner.observe(id,text)
 
+func past_case_pair_proved() -> bool:
+ # S3:T17R5 explicitly supplies this one case's four original pages. Their
+ # semantic source relation is known; the concrete numeral glyph is not.
+ # This is not the rule that null numbers compare equal (same_number rejects
+ # them), nor permission to merge arbitrary or incompletely read case files.
+ var authored:Dictionary=config.get("document_relations",{}).get("past_case",{})
+ var group:String=str(authored.get("id",""));var members:Array=authored.get("members",[])
+ var expected:Array=["case_removal","case_death","case_fees","case_discharge"]
+ if not authored.get("same_person",false) or group.is_empty() or members.size()!=expected.size():return false
+ var number:Variant=null
+ for id in expected:
+  if id not in members or not state().read.has(id):return false
+  var actual:Dictionary=state().read[id]
+  # Old saves have the same completed stable original IDs, source and read
+  # revisions but predate this metadata field. Do not grant an unread page.
+  var identity:String=str(actual.get("document_relation",""))
+  if not actual.has("document_relation"):
+   if str(actual.get("revision","")).is_empty() or str(actual.get("source","")) not in ["S3:T17R4","S3:T17R5"]:return false
+   identity=str(specification(id).get("document_relation",""))
+  if identity!=group:return false
+  var value:Variant=actual.get("fields",{}).get("case_number",null)
+  if value==null or str(value).strip_edges().is_empty():continue
+  if number==null:number=value
+  elif str(number)!=str(value):return false
+ return true
+
 func update_links() -> void:
- # Null glyphs are never treated as equal identity evidence. Each page stays
- # individually known until the actual identifiers can be checked.
- if same_number(["case_removal","case_death","case_fees","case_discharge"],"case_number"):
-  note_link("hospital_case_link","逐页读到并核对同一编号的摘除、死亡、费用与离院材料；未把该既往死者当成在场活人。")
+ if past_case_pair_proved():
+  note_link("hospital_case_link","实际逐页读完原文明示为同一既往案件的摘除、死亡、费用与离院材料，建立该组原件的对应关系；具体编号字形仍未提供，未补写号码，也未把该既往死者当成在场活人。")
  # S3:T17 explicitly identifies these two texts as the same person's pair.
  # Reading both proves the rewrite; their undelivered number stays unknown.
  var complaint:Dictionary=config.get("document_relations",{}).get("complaint_pair",{})

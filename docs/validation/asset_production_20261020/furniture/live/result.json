@@ -1,0 +1,39 @@
+{
+  "entries": [
+    {
+      "id": "01_original_slots",
+      "material_override": false,
+      "painted_furniture_override": false
+    },
+    {
+      "id": "02_painted_furniture_existing_surfaces",
+      "material_override": false,
+      "painted_furniture_override": true
+    },
+    {
+      "id": "03_painted_furniture_materials_candidate",
+      "material_override": true,
+      "painted_furniture_override": true
+    },
+    {
+      "id": "04_separate_drawer_and_blanket",
+      "material_override": true,
+      "painted_furniture_override": true
+    }
+  ],
+  "failures": [],
+  "passes": [
+    "visual overrides preserve hp",
+    "visual overrides preserve sp",
+    "visual overrides preserve neurons",
+    "visual overrides preserve world_time",
+    "visual overrides preserve rng",
+    "visual overrides preserve targets",
+    "visual overrides preserve owners",
+    "eight original bedroom IDs use calibrated painted layers",
+    "global furniture switch remains off pending combination review",
+    "global material switch remains off pending painting review"
+  ],
+  "rendered": true,
+  "scope": "Actual bedroom renderer, existing draw slots and declared drawer/blanket visual states. No natural gameplay/rig/action or all-assets formal-art acceptance claimed."
+}

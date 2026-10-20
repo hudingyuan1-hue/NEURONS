@@ -1,0 +1,27 @@
+{
+  "failures": [],
+  "passes": [
+    "declared unchanged actual checkpoint restores into isolated save root",
+    "actual star-cabinet button opens real purchase UI",
+    "actual one-cluster TEMP purchase supplies second hoverable node without free resource writes",
+    "actual Tab opens current CRT",
+    "public describe retains explicit rescue-prompt selection semantics",
+    "actual SKIN click chooses SKIN and exposes direction controls",
+    "real hover previews TEMP while retaining clicked SKIN and zero fee",
+    "real pointer entering direction area restores selected fee action and cooldown description",
+    "hover does not change existing direction choice",
+    "locked node hover retains old blank-preview rule without selecting it",
+    "leaving locked preview restores selected node",
+    "actual cancel keeps selected information and charges nothing",
+    "real pointer preview direction and cancel preserve ordinary menu world freeze",
+    "actual selected-direction click closes CRT and resolves through production cast handler",
+    "hovering TEMP did not swap real cast; exactly one SKIN receipt charges one neuron",
+    "actual direction is north and previewed TEMP has not been applied",
+    "actual close and reopen regenerate selected information",
+    "actual cooldown refusal retains selected cost action cooldown text and adds no charge",
+    "actual refusal does not restart and hide the already-visible selected description",
+    "actual cancel close reopen preserves selection without another payment"
+  ],
+  "rendered": true,
+  "scope": "Actual mouse across unlocked/locked nodes, selected direction, cancel, successful one-neuron SKIN, cooldown refusal, close and reopen. Actual TEMP purchase1C; only direct UI call is compatibility check of public describe used by rescue prompt. No resources/skill/RNG/NPC/route/position/damage writes after production checkpoint restore; not a full campaign or artwork/audio acceptance."
+}

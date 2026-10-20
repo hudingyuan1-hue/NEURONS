@@ -5,6 +5,7 @@ var current:Dictionary={}
 var active_set:String=""
 var textures:Dictionary={}
 var errors:Array[String]=[]
+var actor_presentation:Dictionary={}
 
 func _init() -> void:
  var data=JSON.parse_string(FileAccess.get_file_as_string("res://data/presentation.json"))
@@ -61,6 +62,9 @@ func select_set(id:String) -> bool:
 
 func actor_frame(state:String,facing:Vector2,phase:float) -> Dictionary:
  var spec:Dictionary=current.CHR_MAIN
+ # Long-term presentation never retimes walking or a contact action. Until
+ # dedicated poses are delivered, only idle fidgeting becomes restrained.
+ if state=="idle" and actor_presentation.get("stance","")=="restrained":phase=0.0
  var direction:int=0 if absf(facing.x)>=absf(facing.y) else (1 if facing.y<0 else 3)
  if absf(facing.x)>=absf(facing.y) and facing.x<0:direction=2
  var row:int=spec.states.find(state)

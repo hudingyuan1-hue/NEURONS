@@ -38,7 +38,8 @@ func silent_stream(seconds:float) -> AudioStreamWAV:
  return result
 
 func position(channel:String) -> float:
- return app.audio.channels[channel][0].get_playback_position()
+ var slot:int=maxi(0,app.audio.music_slot) if channel=="music" else 0
+ return app.audio.channels[channel][slot].get_playback_position()
 
 func _ready() -> void:
  folder="res://../docs/validation/dialogue_20261016"
@@ -64,10 +65,13 @@ func _ready() -> void:
  var formatted:String=Dialogue.display_text(raw)
  check(formatted=="\"测试\",继续...?! (●'◡'●) 䵴䵰䶷" and Dialogue.display_text(formatted)==formatted,"display formatting normalizes punctuation and ellipsis without corrupting emoticons or authored unusual glyphs")
  check(Dialogue.reading_seconds("这是比较长的一段对白，需要留出实际可读时间。")>Dialogue.reading_seconds("嗯。"),"silent reading duration depends on text length, not render frame count")
- app.audio.register_asset("TEST_DIALOGUE_MUSIC",silent_stream(12),"music",true)
- app.audio.register_asset("TEST_DIALOGUE_AMBIENCE",silent_stream(12),"ambience",true)
+ # Match the actual bedroom music context. The production selector remains
+ # enabled; it must not fight an unrelated test-only music ID each frame.
+ app.audio.register_asset("MUS_ROOM",silent_stream(12),"music",false)
+ app.audio.register_asset("AMB_FAN",silent_stream(12),"ambience",false)
  app.audio.register_asset("TEST_DIALOGUE_ACTION",silent_stream(12),"world")
- app.audio.cue("TEST_DIALOGUE_MUSIC","test_music");app.audio.cue("TEST_DIALOGUE_AMBIENCE","test_ambience");app.audio.cue("TEST_DIALOGUE_ACTION","test_action")
+ app.audio.stop_channel("music");app.audio.set_music("MUS_ROOM",0.0)
+ app.audio.stop_channel("ambience");app.audio.set_ambience("AMB_FAN",0.0);app.audio.cue("TEST_DIALOGUE_ACTION","test_action")
  var world_time:float=app.rules.world_time
  app.add_dialogue("角色",raw)
  # AudioServer pauses with a short fade on its next mix, independent of

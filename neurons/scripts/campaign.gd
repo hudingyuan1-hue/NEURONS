@@ -38,10 +38,15 @@ const AsylumIntake=preload("res://scripts/core/asylum_intake.gd")
 const AsylumNurseDuty=preload("res://scripts/core/asylum_nurse_duty.gd")
 const CortexMap=preload("res://scripts/core/cortex_map.gd")
 const CortexLayout=preload("res://scripts/world/cortex_layout.gd")
+const SpatialRevision=preload("res://scripts/world/spatial_revision.gd")
 const CortexEvents=preload("res://scripts/core/cortex_events.gd")
 const CortexUpperEvents=preload("res://scripts/core/cortex_upper_events.gd")
 const InterventionFeedback=preload("res://scripts/ui/intervention_feedback.gd")
 const ViewControls=preload("res://scripts/presentation/view_controls.gd")
+const CharacterPresentation=preload("res://scripts/core/character_presentation.gd")
+var character_presentation
+const ProductionActors=preload("res://scripts/presentation/production_actor_provider.gd")
+var production_actors
 const CombatMap=preload("res://scripts/core/combat_map.gd")
 const CombatChapter=preload("res://scripts/core/combat_chapter.gd")
 var combat
@@ -66,6 +71,7 @@ var destination:String=""
 var status_note:String=""
 var runtime_generation:int=1
 var institution_layouts:Dictionary={}
+var cortex_layouts:Dictionary={}
 var save_requested:bool=false
 var title_requested:bool=false
 var new_profile_requested:bool=false
@@ -214,6 +220,7 @@ func _ready() -> void:
  asylum.nurse_duty=AsylumNurseDuty.new(asylum)
  cortex=CortexEvents.new(self)
  cortex.upper_events=CortexUpperEvents.new(cortex)
+ character_presentation=CharacterPresentation.new(self)
  hidden_route=HiddenStreet.new(self)
  ending_panel=EndingPanel.new(self)
  add_child(ending_panel)
@@ -226,6 +233,7 @@ func _ready() -> void:
  achievements=Achievements.new();achievements.root=store.root
  bind_achievement_rules()
  search_actions=SearchActions.new(self)
+ production_actors=ProductionActors.new();add_child(production_actors);production_actors.setup(self)
  menu.rules=rules
  menu.context_provider=skill_context
  menu.inventory_provider=inventory_contents
@@ -328,12 +336,13 @@ func _process(delta:float) -> void:
    if death_left<=0:restart_attempt(3,true)
   update_ui();view.queue_redraw();return
  super._process(delta)
+ if character_presentation!=null:character_presentation.tick()
+ if character_presentation!=null:view.catalog.actor_presentation=character_presentation.view_state()
  if not world_paused():keep_metric_actor_visible()
  # Ordinary dialogue freezes the world, not the background soundtrack.
  # The audio channel itself rejects hard/menu pause starts.
- audio.cue(gameplay_music_cue(),"music:%d:%d"%[session.data.level,rules.actual_attempt])
- if not world_paused():
-  if room_id=="bedroom":audio.cue("AMB_FAN","fan:%d"%rules.actual_attempt)
+ audio.set_music(gameplay_music_cue())
+ audio.set_ambience("AMB_FAN" if room_id=="bedroom" else "")
 
 func gameplay_music_cue() -> String:
  # 2026-10-17 user delivery: exploration shares the hospital recording;
@@ -465,12 +474,17 @@ func advance_dialogue() -> void:
 func layout_for_room(id:String):
  if int(session.data.level)==6:return street.floor_for(id)
  if int(session.data.level)==5:return combat.floor_for(id)
- if int(session.data.level)==4:return CortexLayout.new(id)
- if id=="hidden_street":return HiddenLayout.new()
- if id=="bedroom" and int(session.data.get("room_geometry_version",1))>=2:return BedroomLayout.new()
+ if int(session.data.level)==4:
+  var revision:int=int(session.data.get("spatial_revision",SpatialRevision.CURRENT))
+  var key:String="%d:%d:%s"%[int(session.data.get("cortex_geometry_version",1)),revision,id]
+  if not cortex_layouts.has(key):cortex_layouts[key]=CortexLayout.new(id,int(session.data.get("cortex_geometry_version",1)),revision)
+  return cortex_layouts[key]
+ if id=="hidden_street":return HiddenLayout.new(int(session.data.get("spatial_revision",SpatialRevision.CURRENT)))
+ if id=="bedroom" and int(session.data.get("room_geometry_version",1))>=2:return BedroomLayout.new(int(session.data.get("spatial_revision",SpatialRevision.CURRENT)))
  if metric_institution_room(id):
-  var cache_id:String="%d:%s"%[int(session.data.level),id]
-  if not institution_layouts.has(cache_id):institution_layouts[cache_id]=InstitutionLayout.new(id,int(session.data.level))
+  var revision:int=int(session.data.get("spatial_revision",SpatialRevision.CURRENT))
+  var cache_id:String="%d:%d:%s"%[int(session.data.level),revision,id]
+  if not institution_layouts.has(cache_id):institution_layouts[cache_id]=InstitutionLayout.new(id,int(session.data.level),revision)
   return institution_layouts[cache_id]
  if int(session.data.level)==3 and id in AsylumMap.UPPER_ROOMS:return AsylumLayout.new(id)
  var floor_layout=Layout.new()
@@ -498,12 +512,14 @@ func enter_room(id:String) -> void:
  view.layout=layout
  configure_room_viewport()
  hero_pos=layout.bed_position() if id=="bedroom" or id=="ward" else Vector2(2.8,1.4)
+ if id=="hidden_street":hero_pos=HiddenLayout.ENTRY
  if int(session.data.level)==3 and not restoring and previous in AsylumMap.GRAPH.get(id,[]):hero_pos=AsylumMap.doorway(id,previous)
  if metric_institution_room(id):
   var arrival:Dictionary=layout.portal(previous)
   hero_pos=arrival.landing if not restoring and not arrival.is_empty() else layout.get_anchor("spawn")
  if int(session.data.level)==4:
-  hero_pos=CortexMap.doorway(id,previous) if not restoring and previous in CortexMap.GRAPH.get(id,[]) else CortexMap.SPAWN
+  var arrival:Dictionary=layout.portal(previous)
+  hero_pos=arrival.landing if not restoring and not arrival.is_empty() else layout.spawn()
  if int(session.data.level)>=5:
   var arrival:Dictionary=layout.portal(previous)
   hero_pos=arrival.landing if not restoring and not arrival.is_empty() else layout.spawn()
@@ -518,8 +534,7 @@ func enter_room(id:String) -> void:
  action_phase="autonomy"
  status_note="进入"+room_title(id)
  if search_actions!=null:search_actions.enter_room()
- if audio!=null:
-  if id!="bedroom":audio.stop_channel("ambience")
+ if audio!=null:audio.set_ambience("AMB_FAN" if id=="bedroom" else "")
  if hospital!=null and not restoring:hospital.on_enter(previous,id)
  if asylum!=null and not restoring:asylum.on_enter(previous,id)
  if cortex!=null and not restoring:cortex.on_enter(previous,id)
@@ -546,7 +561,9 @@ func keep_metric_actor_visible() -> void:
   var safe_box:=Rect2(200,285,880,260)
   var wanted:Vector2=actor.clamp(safe_box.position,safe_box.end)
   camera.position+=(actor-wanted)/camera.zoom;camera.force_update_scroll();return
- if layout==null or not metric_institution_room(room_id) or not layout.config.get("camera_track",false):return
+ if layout==null:return
+ var follows:bool=int(session.data.level)==4 or room_id=="hidden_street"
+ if not follows and (not metric_institution_room(room_id) or not layout.config.get("camera_track",false)):return
  var screen:Vector2=world_viewport.get_canvas_transform()*layout.project(hero_pos)
  var safe:=Rect2(200,270,880,270)
  var wanted:Vector2=screen.clamp(safe.position,safe.end)
@@ -567,7 +584,7 @@ func enter_hidden_street() -> void:
  configure_room_viewport()
  menu.close_menu();dialogue_queue.clear();show_dialogue()
  status_note="隐藏Street · 自主逃离；猎手与场景均为程序占位"
- audio.stop_channel("ambience")
+ audio.set_ambience("")
 
 func point_id(index:int) -> String:
  return "%s:%d"%[room_id,index]
@@ -578,12 +595,12 @@ func door_point(id:String) -> Vector2:
 func door_point_for(room:String,id:String) -> Vector2:
  if int(session.data.level)==6:
   if room==room_id and street!=null and not street.data.is_empty():return street.hero_doorway(id)
-  return StreetMap.doorway(room,id)
- if int(session.data.level)==5:return CombatMap.doorway(room,id)
+  return street.floor_for(room).portal(id).at
+ if int(session.data.level)==5:return combat.floor_for(room).portal(id).at
  return portal_for_room(room,id).at
 
 func portal_for_room(room:String,id:String) -> Dictionary:
- if metric_institution_room(room):
+ if metric_institution_room(room) or int(session.data.level)==4:
   var portal:Dictionary=layout_for_room(room).portal(id)
   if not portal.is_empty():return portal
  var at:Vector2
@@ -680,6 +697,7 @@ func advance_world(delta:float) -> void:
  if home!=null:home.settle_key_contact()
  if result.search_completed:
   vitality_panel.action_completed("search:"+str(result.event_id))
+  character_presentation.normal_action_completed(str(result.event_id),"search",room_id)
   rules.finish_public_action(search_action_origin)
   var id:String=result.target_id
   if not id in completed:completed.append(id)
@@ -960,7 +978,7 @@ func advance_world(delta:float) -> void:
  choose_public_target(delta)
 
 func cortex_arrival_clear(room:String) -> bool:
- var arrival:Vector2=CortexMap.doorway(room,room_id)
+ var arrival:Vector2=layout_for_room(room).portal(room_id).landing
  for id in cortex.data.get("actors",{}):
   if not cortex.present(str(id)) or str(cortex.actor(str(id)).room)!=room:continue
   var radius:float=0.42 if str(id)=="twitch" else 0.32
@@ -1228,6 +1246,7 @@ func unlock_cortex() -> void:
  rules._completed_targets.clear();completed.clear();deferred_targets.clear();motion.clear()
  session.new_attempt(4,rng);rules.actual_attempt=int(session.data.attempts["4"])
  rules.owners.key=session.data.key_owner;rules.mode="exploration"
+ cortex_layouts.clear()
  cortex.start_attempt({"hospital":hospital.data.duplicate(true),"asylum":asylum.data.duplicate(true)})
  room_id="";enter_room("atrium")
 
@@ -1328,7 +1347,8 @@ func restart_attempt(cycle_increment:int,revival:bool) -> void:
  hidden_route.data.clear();rules.mode="exploration"
  if session.data.level==2:hospital.start_attempt()
  if session.data.level==3:asylum.start_attempt(asylum.data.get("carry",{}).duplicate(true))
- if session.data.level==4:cortex.start_attempt(cortex.data.get("carry",{}).duplicate(true))
+ if session.data.level==4:
+  cortex_layouts.clear();cortex.start_attempt(cortex.data.get("carry",{}).duplicate(true))
  enter_room("atrium" if session.data.level==4 else "bedroom" if session.data.level==1 else "ward")
  family.start_attempt()
  if mother_unlock:unlock_hospital()
@@ -1466,6 +1486,8 @@ func move_hero(delta:float) -> void:
    audio.cue("SFX_FOOTSTEP","foot:%d"%footstep_serial)
  if had_route and hero_route.is_empty() and rules.public_action.get("kind","")=="navigation":
   vitality_panel.action_completed("navigation:%d"%rules.public_action.serial)
+  if int(session.data.level)<5:
+   character_presentation.normal_action_completed("navigation:%d:%d:%d"%[rules.actual_attempt,session.data.level,rules.public_action.serial],"navigation",room_id)
   rules.finish_public_action(route_action_origin)
 
 func cortex_detour(target:Vector2,body:Vector2,radius:float=0.42) -> PackedVector2Array:
@@ -1709,6 +1731,8 @@ func restore_snapshot(data:Dictionary) -> bool:
  profile=data.profile.duplicate(true)
  invader_id=int(profile.invader_id)
  session.data=data.session.duplicate(true)
+ if not session.data.has("spatial_revision"):session.data.spatial_revision=SpatialRevision.LEGACY
+ institution_layouts.clear()
  combat.layouts.clear();combat.data=data.get("combat_state",{}).duplicate(true)
  street.layouts.clear();street.data=data.get("street_state",{}).duplicate(true)
  if not street.data.is_empty():street.box.normalize();street.lateral_bed.normalize();street.materials.normalize()
@@ -1719,6 +1743,8 @@ func restore_snapshot(data:Dictionary) -> bool:
  if not session.data.has("room_geometry_version"):session.data.room_geometry_version=1
  if not session.data.has("institution_geometry_version"):session.data.institution_geometry_version=1
  if not session.data.has("asylum_space_versions"):session.data.asylum_space_versions={}
+ if not session.data.has("cortex_geometry_version"):session.data.cortex_geometry_version=1
+ cortex_layouts.clear()
  session.normalize_restored_numbers()
  home.data=data.get("home_state",{}).duplicate(true)
  search_actions.states=data.get("search_props",{}).duplicate(true)

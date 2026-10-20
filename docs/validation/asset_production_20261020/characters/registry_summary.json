@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "kind": "NPC_SOURCE_PREPARATION_REGISTRY",
+  "captured_at": "2026-10-20T03:40:29+08:00",
+  "scope": "NPC/parents/animals/hunter sources and named poses; main host and player creature are owned by the separate rig workflow. No active presentation or catalog load is modified.",
+  "source_policy": [
+    "Original sources and all variants preserved",
+    "Explicit altered subdirectory has precedence; no aesthetic reevaluation of user revisions",
+    "Approved normal/key-pose hashes retained; higher version alone never means approval",
+    "Copy only genuine existing alpha without pixel modifications",
+    "Reference direction and pose number are not inferred runtime direction/playback order"
+  ],
+  "source_files": 264,
+  "stable_components": 174,
+  "source_alpha_copies": 22
+}

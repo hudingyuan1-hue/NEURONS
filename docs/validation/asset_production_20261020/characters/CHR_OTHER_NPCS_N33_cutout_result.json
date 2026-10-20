@@ -1,0 +1,33 @@
+{
+  "asset_id": "CHR_OTHER_NPCS_N33",
+  "source_path": "DOCX/最终素材/人物/CHR_OTHER_NPCS_N33_v001.png",
+  "tool": "built_in_image_gen",
+  "prompt": "EDIT TARGET: supplied CHR_OTHER_NPCS_N33_v001.png. Isolate the exact adult woman hospital doctor with dark bun and stern attentive face, white long coat over a dark teal shirt and dark trousers, both hands and both black shoes as one complete game character on genuine transparent alpha. Technical preparation only: preserve this particular face, age, hairstyle, clothes, pose, body proportions, oblique overhead exploration view, colors and hand-painted brushwork. Remove only neutral gray background and any floor/shadow, including spaces between arms, body and legs. White coat, clothes and shoes must remain opaque. Entire hair and both shoes inside generous clear margins. No redesign, beautification, changed expression, new props, new anatomy, relighting, outline, rim, floor, fog or text. The supplied user drawing is authoritative.",
+  "generated_path": "C:\\Users\\23623\\.codex\\generated_images\\01a13afd-29cd-7b90-b2e9-586f1ffdee3b\\exec-72632c58-9168-41e7-b57e-63c8dbf706f8.png",
+  "purpose": "Approved exact character technical alpha preparation. No aesthetic redesign; preserve identity, source pose, clothes, view and painterly marks.",
+  "registered_at": "2026-10-20T08:01:00.962897+08:00",
+  "source_sha256": "7f766f17bfa2a20b587e018d75ccf00bd5e2cff96053ace458aca1b0f3b0f3b9",
+  "output_sha256": "1beb1854697bc5c3553eb25e9681150d844936a80f243f7d3d5b935328028963",
+  "production_texture": "res://assets/production/characters/CHR_OTHER_NPCS_N33/CHR_OTHER_NPCS_N33_cutout_1beb1854697b.png",
+  "pixel_size": [
+    1122,
+    1402
+  ],
+  "alpha_bbox": [
+    342,
+    22,
+    772,
+    1369
+  ],
+  "alpha_bbox_threshold": 8,
+  "transparent_fraction": 0.7572172170644941,
+  "ground_anchor_px": [
+    557.0,
+    1369
+  ],
+  "source_original_unchanged": true,
+  "generated_pixels_unchanged": true,
+  "identity_view_pose_technical_comparison": "checked; no aesthetic reassessment",
+  "runtime_binding_enabled": false,
+  "status": "transparent_source_prepared_pending_runtime_contact_and_motion"
+}

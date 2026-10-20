@@ -2,6 +2,9 @@ extends "res://scripts/world/room_view.gd"
 const Catalog=preload("res://scripts/presentation/asset_catalog.gd")
 const MetricBedroom=preload("res://scripts/world/metric_bedroom_view.gd")
 const MetricInstitution=preload("res://scripts/world/metric_institution_view.gd")
+const SpatialShell=preload("res://scripts/world/spatial_shell.gd")
+const NeuralDisplay=preload("res://scripts/world/spatial_presentation.gd")
+const SpatialProp=preload("res://scripts/world/spatial_prop.gd")
 const CombatView=preload("res://scripts/world/combat_view.gd")
 var combat_view=CombatView.new()
 var catalog=Catalog.new()
@@ -12,15 +15,15 @@ func draw_hidden_plaza() -> void:
  if app==null or layout==null:return
  if app.room_id!="hidden_street":super._draw();return
  draw_rect(Rect2(-800,-600,2200,1600),Color("172426"))
- poly([layout.project(Vector2.ZERO),layout.project(Vector2(5.6,0)),layout.project(layout.SIZE),layout.project(Vector2(0,3.8))],Color("596a69"))
- for i in range(20):draw_line(layout.project(Vector2(0,i*0.2)),layout.project(Vector2(5.6,i*0.2)),Color("4b5b5b"),1)
+ SpatialShell.draw_back(self,layout,true)
  var ordered:Array=[]
- for f in layout.furniture:ordered.append({"type":"furniture","data":f,"depth":layout.project(f.rect.end).y})
+ for f in layout.furniture:ordered.append({"type":"furniture","data":f,"depth":NeuralDisplay.footprint_depth(layout,f.rect)})
  ordered.append({"type":"actor","data":"hero","depth":layout.project(app.hero_pos).y})
  ordered.append_array(extra_actors());ordered.sort_custom(func(a,b):return a.depth<b.depth)
  for entry in ordered:
-  if entry.type=="furniture":draw_furniture(entry.data)
+  if entry.type=="furniture":SpatialProp.draw(self,layout,entry.data,entry.data.get("color",Color("7e8987")))
   else:draw_actor(entry.data)
+ SpatialShell.draw_urban_front(self,layout)
  var threshold:PackedVector2Array=app.hidden_route.exit_segment()
  var exit:Vector2=layout.project((threshold[0]+threshold[1])*0.5)
  draw_line(layout.project(threshold[0]),layout.project(threshold[1]),Color("b7c7b0"),3)
@@ -57,6 +60,9 @@ func rest_pose() -> Dictionary:
 
 func hero_body_rect() -> Rect2:
  if app!=null and app.metric_institution_room(app.room_id):return MetricInstitution.hero_body_rect(app,layout)
+ if app!=null and app.room_id=="hidden_street" and layout.geometry_version>=2:
+  var h:float=136.5*app.hidden_route.body_height()/float(app.hidden_route.config.test_parameters.standing_body_height)
+  return Rect2(layout.project(app.hero_pos)+Vector2(-25,-h),Vector2(50,h+4))
  if layout!=null and layout.geometry_version>=2:return MetricBedroom.hero_body_rect(app,layout)
  if app.action_phase!="resting":return Rect2(layout.project(app.hero_pos)+Vector2(-16,-62),Vector2(32,65))
  var pose:Dictionary=rest_pose()
@@ -65,7 +71,17 @@ func hero_body_rect() -> Rect2:
 
 func door_hit(toward:String,pixel:Vector2) -> bool:
  if app.metric_institution_room(app.room_id):return MetricInstitution.door_at_pixel(layout,pixel)==toward
- if layout.geometry_version>=2:return MetricBedroom.door_hit(layout,pixel)
+ if app.room_id=="bedroom" and layout.geometry_version>=2:return MetricBedroom.door_hit(layout,pixel)
+ if int(app.session.data.level)==4 and layout.geometry_version>=2:
+  for candidate in app.visible_doors:
+   var p:Dictionary=layout.portal(str(candidate))
+   var axis:Vector2=Vector2.RIGHT if str(p.wall) in ["north","south"] else Vector2.DOWN
+   var wall_point:Vector2=p.get("wall_point",p.at)
+   var a:Vector2=layout.project(wall_point-axis*float(p.width_m)*.5)
+   var b:Vector2=layout.project(wall_point+axis*float(p.width_m)*.5)
+   var up:=Vector2(0,float(p.height_m)*78.0)
+   if Geometry2D.is_point_in_polygon(pixel,PackedVector2Array([a,b,b-up,a-up])):return str(candidate)==toward
+  return false
  return pixel.distance_to(layout.project(app.door_point(toward)))<18
 
 func furniture_at_pixel(pixel:Vector2) -> int:
@@ -175,10 +191,17 @@ func asylum_item_pixel(item:Dictionary) -> Vector2:
  return layout.project(Vector2(float(item.pos[0]),float(item.pos[1])))+Vector2(float(offset[0]),float(offset[1]))+Vector2(0,-5)
 
 func draw_actor(who:String) -> void:
+ if layout.geometry_version>=2 and (int(app.session.data.level)==4 or app.room_id=="hidden_street"):
+  if who=="hero":draw_metric_neural_hero();return
+  if who=="hidden_hunter":draw_metric_hunter();return
  if who.begins_with("cortex_"):
   var id:String=who.trim_prefix("cortex_")
   var actor:Dictionary=app.cortex.actor(id)
   var at:Vector2=layout.project(app.cortex.position(id))
+  var metric_scale:float=136.5/55.0 if layout.geometry_version>=2 else 1.0
+  var origin:Vector2=at
+  if metric_scale>1.0:
+   draw_set_transform(origin,0,Vector2.ONE*metric_scale);at=Vector2.ZERO
   var imitation:Dictionary=app.cortex.imitated_pose(id)
   var phase:String=str(actor.get("phase","idle"))
   phase=app.cortex.action_label(id)
@@ -196,16 +219,17 @@ func draw_actor(who:String) -> void:
   if id=="blindfold":draw_line(at+Vector2(-7,-48),at+Vector2(7,-48),Color("353d48"),4)
   var hand:Vector2=at+Vector2(13,-22)
   var body:Dictionary=app.cortex.data.get("body",{})
-  if body.get("actor","")==id and app.cortex.near(id,0.65):hand=layout.project(app.hero_pos)+Vector2(5,-33)
+  if body.get("actor","")==id and app.cortex.near(id,0.65):hand=(layout.project(app.hero_pos)-origin)/metric_scale+Vector2(5,-33) if metric_scale>1.0 else layout.project(app.hero_pos)+Vector2(5,-33)
   if imitation.is_empty():draw_line(at+Vector2(7,-34),hand,tone.lightened(0.2),3)
   else:draw_cortex_gesture(at,imitation,tone)
-  var arrow:Vector2=(layout.project(app.cortex.position(id)+direction*0.2)-at).normalized()*12
+  var arrow:Vector2=(layout.project(app.cortex.position(id)+direction*0.2)-origin).normalized()*12
   draw_line(at,at+arrow,Color("d5b887"),2)
   var label:String=str(app.cortex.config.get("names",{}).get(id,id))
   var width:float=font.get_string_size(label,HORIZONTAL_ALIGNMENT_LEFT,-1,9).x
   draw_rect(Rect2(at+Vector2(-width/2-3,-71),Vector2(width+6,24)),Color(0.07,0.09,0.13,0.94))
   draw_string(font,at+Vector2(-width/2,-61),label,HORIZONTAL_ALIGNMENT_LEFT,-1,9,Color("ece2d6"))
   draw_string(font,at+Vector2(-width/2,-51),phase,HORIZONTAL_ALIGNMENT_LEFT,width,7,Color("b0c8cf"))
+  draw_set_transform(Vector2.ZERO)
   return
  if who.begins_with("hospital_prop:"):
   for item in app.hospital.relic_markers():
@@ -620,10 +644,8 @@ func draw_furniture(f:Dictionary) -> void:
  # Only presentation alpha changes; depth ordering/collision stay intact.
  if float(f.height)>=40 and app.rules.search_active and app.target_index>=0 and app.layout.furniture[app.target_index].id!=f.id:
   var hero:Vector2=layout.project(app.hero_pos)
-  var left:Vector2=layout.project(f.rect.position)
-  var right:Vector2=layout.project(f.rect.end)
-  var bounds:=Rect2(Vector2(minf(left.x,right.x),left.y-float(f.height)),Vector2(absf(right.x-left.x),right.y-left.y+float(f.height)))
-  if right.y>hero.y and bounds.intersects(Rect2(hero+Vector2(-12,-57),Vector2(24,57))):
+  var bounds:Rect2=NeuralDisplay.prism_bounds(layout,f.rect,float(f.height))
+  if NeuralDisplay.footprint_depth(layout,f.rect)>hero.y and bounds.intersects(hero_body_rect()):
    f=f.duplicate()
    var color:Color=f.color
    f.color=Color(color.r,color.g,color.b,0.35)
@@ -722,19 +744,30 @@ func _draw() -> void:
 func draw_cortex_room() -> void:
  # Deliberate 2D placeholder: actual topology and silhouettes stay visible.
  draw_rect(Rect2(-800,-600,2200,1600),Color("171b25"))
- var corners:Array=[layout.project(Vector2.ZERO),layout.project(Vector2(5.6,0)),layout.project(layout.SIZE),layout.project(Vector2(0,3.8))]
- poly(corners,Color("555765") if app.room_id in app.CortexMap.FIRST_ROOMS else Color("465763"))
- for y in range(1,8):
-  draw_line(layout.project(Vector2(0,y*0.475)),layout.project(Vector2(5.6,y*0.475)),Color(0.7,0.7,0.75,0.09),1)
+ var size:Vector2=layout.world_size()
+ var corners:Array=[layout.project(Vector2.ZERO),layout.project(Vector2(size.x,0)),layout.project(size),layout.project(Vector2(0,size.y))]
+ if layout.geometry_version>=2 and layout.space_spec().has("floor_polygon_m"):
+  corners.clear()
+  for p:Array in layout.space_spec().floor_polygon_m:corners.append(layout.project(Vector2(float(p[0]),float(p[1]))))
+ if layout.geometry_version>=2:SpatialShell.draw_back(self,layout)
+ else:
+  poly(corners,Color("555765") if app.room_id in app.CortexMap.FIRST_ROOMS else Color("465763"))
+  for y in range(1,ceili(size.y)):
+   draw_line(layout.project(Vector2(0,y)),layout.project(Vector2(size.x,y)),Color(0.7,0.7,0.75,0.09),1)
  draw_polyline(PackedVector2Array(corners+[corners[0]]),Color("929ba6"),3)
  for door in app.visible_doors:
   var at:Vector2=layout.project(app.door_point(door))
   draw_circle(at,12,Color("263d43"));draw_arc(at,12,0,TAU,24,Color("a8c2bc"),2)
  var ordered:Array=[]
- for item in layout.furniture:ordered.append({"type":"furniture","data":item,"depth":layout.project(item.rect.end).y})
- for item in layout.decor:ordered.append({"type":"furniture","data":item,"depth":layout.project(item.rect.end).y})
- for wall in layout.walls:
-  ordered.append({"type":"wall","data":wall,"depth":layout.project(wall.end).y})
+ for item in layout.furniture:ordered.append({"type":"furniture","data":item,"depth":NeuralDisplay.footprint_depth(layout,item.rect)})
+ var architectural_decor:Dictionary=SpatialShell.architectural_decor_ids(layout) if layout.geometry_version>=2 else {}
+ for item in layout.decor:
+  if not architectural_decor.has(str(item.id)):ordered.append({"type":"furniture","data":item,"depth":NeuralDisplay.footprint_depth(layout,item.rect)})
+ for i in range(layout.walls.size()):
+  var wall:Rect2=layout.walls[i]
+  var partitions:Array=layout.space_spec().get("partitions",[]) if layout.geometry_version>=2 else []
+  if i<partitions.size() and (partitions[i].get("logical_exclusion",false) or not partitions[i].get("render",true)):continue
+  ordered.append({"type":"wall","data":wall,"depth":NeuralDisplay.footprint_depth(layout,wall)})
  ordered.append({"type":"actor","data":"hero","depth":layout.project(app.hero_pos).y})
  ordered.append_array(app.cortex.actors())
  ordered.sort_custom(func(a,b):return a.depth<b.depth)
@@ -743,7 +776,8 @@ func draw_cortex_room() -> void:
   elif entry.type=="wall":prism(entry.data,30,Color("596977"))
   else:
    var item:Dictionary=entry.data
-   prism(item.rect,float(item.get("height",24)),item.get("color",Color("6a7580")))
+   if item.get("logical_exclusion",false) or not item.get("render",true):continue
+   SpatialProp.draw(self,layout,item,item.get("color",Color("6a7580")))
    var top:Vector2=layout.project(item.rect.get_center())+Vector2(0,-float(item.get("height",24)))
    var label:String=str(item.get("name",""))
    if not label.is_empty():
@@ -759,11 +793,13 @@ func draw_cortex_room() -> void:
   var at:Vector2=layout.project(layout.furniture[app.target_index].at)
   draw_arc(at,8,0,TAU,24,Color("e3c69c"),1)
   if app.rules.search_active:draw_arc(at,10,-PI/2,-PI/2+TAU*app.rules.search_elapsed/app.rules.search_duration,32,Color("a0d3c0"),2)
+ if layout.geometry_version>=2:SpatialShell.draw_front(self,layout)
 
 func draw_cortex_marker(marker:Dictionary) -> void:
  if str(marker.get("room",""))!=app.room_id:return
  var position:Array=marker.pos
  var at:Vector2=layout.project(Vector2(float(position[0]),float(position[1])))+Vector2(0,-24)
+ if layout.geometry_version>=2 and str(marker.kind)=="clamp":at=layout.project(app.cortex.touch_anchor())-Vector2(0,float(layout.furniture[5].height)+4)
  var progress:float=float(marker.get("progress",0))
  match str(marker.kind):
   "paper":
@@ -799,7 +835,7 @@ func draw_cortex_marker(marker:Dictionary) -> void:
    draw_rect(Rect2(at+Vector2(3+gap,-3),Vector2(11,6)),Color("9fa8af"))
    var hand:Dictionary=marker.get("hand",{})
    if hand.get("contact",false):
-    var shoulder:Vector2=layout.project(app.hero_pos)+Vector2(10,-28)
+    var shoulder:Vector2=layout.project(app.hero_pos)+Vector2(14,-136.5*.62) if layout.geometry_version>=2 else layout.project(app.hero_pos)+Vector2(10,-28)
     draw_line(shoulder,shoulder.lerp(at,float(hand.extension)),Color("d0baab"),3)
    draw_circle(at+Vector2(22,-9),3,Color("bd5656") if marker.get("pain_light",false) else Color("556875"))
    if marker.get("hurt",false):draw_line(at+Vector2(-2,3),at+Vector2(3,9),Color("9a3e4c"),2)
@@ -854,3 +890,31 @@ func draw_cortex_source_frame(at:Vector2,marker:Dictionary) -> void:
  if marker.get("overlay",false):draw_circle(at+Vector2(4,-26),6,Color("b9d6ca"))
  draw_line(at+Vector2(-31,-3),at+Vector2(-31+62*progress,-3),Color("a9c7b6"),2)
 
+
+
+func draw_metric_neural_hero() -> void:
+ var at:Vector2=layout.project(app.hero_pos)
+ var frame:Dictionary=catalog.actor_frame(app.hero_state,app.hero_facing,app.world_visual_time)
+ var crouch:float=app.hidden_route.body_height()/float(app.hidden_route.config.test_parameters.standing_body_height) if app.room_id=="hidden_street" else .68 if app.hero_state=="search" and app.search_actions!=null and app.search_actions.pose=="low" else 1.0
+ var scale_value:=Vector2(136.5/57.0,136.5/57.0*crouch)
+ draw_circle(at,17,Color(0,0,0,.22))
+ var production:bool=app.get("production_actors")!=null and app.production_actors.draw_hero(self,at,136.5)
+ if not production:draw_texture_rect_region(frame.texture,Rect2(at-frame.foot*scale_value,frame.size*scale_value),frame.source)
+ if not production and int(app.session.data.level)==4:
+  draw_set_transform(at,0,Vector2.ONE*(136.5/57.0))
+  draw_cortex_gesture(Vector2.ZERO,app.cortex.visible_reaction_pose(),Color("9bb7b7"))
+  draw_set_transform(Vector2.ZERO)
+
+func draw_metric_hunter() -> void:
+ var at:Vector2=layout.project(app.hidden_route.position())
+ var hunter:Dictionary=app.hidden_route.data.hunter
+ var tone:=Color("906f79")
+ draw_circle(at,18,Color(0,0,0,.25))
+ poly([at+Vector2(-18,-96),at+Vector2(18,-96),at+Vector2(23,-28),at+Vector2(-23,-28)],tone)
+ draw_circle(at+Vector2(0,-119),17,Color("a99897"))
+ for side in [-1,1]:draw_line(at+Vector2(side*10,-30),at+Vector2(side*12,0),tone,9)
+ if str(hunter.phase) in ["windup","attack"]:
+  var d:Array=hunter.direction;var direction:=Vector2(float(d[0]),float(d[1]))
+  var hand:Vector2=layout.project(app.hidden_route.position()+direction*float(app.hidden_route.config.test_parameters.attack_arm_reach))-Vector2(0,float(app.hidden_route.config.test_parameters.attack_trajectory_height)*78.0)
+  draw_line(at+Vector2(10,-92),hand,Color("baa69d"),7)
+ draw_string(font,at+Vector2(-24,-148),"猎手 · "+str(hunter.phase),HORIZONTAL_ALIGNMENT_LEFT,-1,12,Color("d8cbbd"))

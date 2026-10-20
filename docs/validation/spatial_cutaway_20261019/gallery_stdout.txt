@@ -1,0 +1,236 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 560.94 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+PASS L1:bedroom actual entry is walkable
+PASS L1:bedroom camera projection round trip
+PASS L1:bedroom uses metric geometry
+PASS L1:bedroom full-size world viewport
+PASS L2:ward actual entry is walkable
+PASS L2:ward camera projection round trip
+PASS L2:ward uses metric geometry
+PASS L2:ward full-size world viewport
+PASS L2:lobby actual entry is walkable
+PASS L2:lobby camera projection round trip
+PASS L2:lobby uses metric geometry
+PASS L2:lobby full-size world viewport
+PASS L2:clinic actual entry is walkable
+PASS L2:clinic camera projection round trip
+PASS L2:clinic uses metric geometry
+PASS L2:clinic full-size world viewport
+PASS L2:pharmacy actual entry is walkable
+PASS L2:pharmacy camera projection round trip
+PASS L2:pharmacy uses metric geometry
+PASS L2:pharmacy full-size world viewport
+PASS L2:office actual entry is walkable
+PASS L2:office camera projection round trip
+PASS L2:office uses metric geometry
+PASS L2:office full-size world viewport
+PASS L3:ward actual entry is walkable
+PASS L3:ward camera projection round trip
+PASS L3:ward uses metric geometry
+PASS L3:ward full-size world viewport
+PASS L3:lobby actual entry is walkable
+PASS L3:lobby camera projection round trip
+PASS L3:lobby uses metric geometry
+PASS L3:lobby full-size world viewport
+PASS L3:clinic actual entry is walkable
+PASS L3:clinic camera projection round trip
+PASS L3:clinic uses metric geometry
+PASS L3:clinic full-size world viewport
+PASS L3:pharmacy actual entry is walkable
+PASS L3:pharmacy camera projection round trip
+PASS L3:pharmacy uses metric geometry
+PASS L3:pharmacy full-size world viewport
+PASS L3:office actual entry is walkable
+PASS L3:office camera projection round trip
+PASS L3:office uses metric geometry
+PASS L3:office full-size world viewport
+PASS L3:stairs actual entry is walkable
+PASS L3:stairs camera projection round trip
+PASS L3:stairs uses metric geometry
+PASS L3:stairs full-size world viewport
+PASS L3:corridor actual entry is walkable
+PASS L3:corridor camera projection round trip
+PASS L3:corridor uses metric geometry
+PASS L3:corridor full-size world viewport
+PASS L3:activity actual entry is walkable
+PASS L3:activity camera projection round trip
+PASS L3:activity uses metric geometry
+PASS L3:activity full-size world viewport
+PASS L3:group_therapy actual entry is walkable
+PASS L3:group_therapy camera projection round trip
+PASS L3:group_therapy uses metric geometry
+PASS L3:group_therapy full-size world viewport
+PASS L3:quiet actual entry is walkable
+PASS L3:quiet camera projection round trip
+PASS L3:quiet uses metric geometry
+PASS L3:quiet full-size world viewport
+PASS L3:bathroom actual entry is walkable
+PASS L3:bathroom camera projection round trip
+PASS L3:bathroom uses metric geometry
+PASS L3:bathroom full-size world viewport
+PASS L3:double_ward actual entry is walkable
+PASS L3:double_ward camera projection round trip
+PASS L3:double_ward uses metric geometry
+PASS L3:double_ward full-size world viewport
+PASS L3:workshop actual entry is walkable
+PASS L3:workshop camera projection round trip
+PASS L3:workshop uses metric geometry
+PASS L3:workshop full-size world viewport
+PASS fresh L4 selects version2 without migrating an in-flight save
+PASS L4:atrium actual entry is walkable
+PASS L4:atrium camera projection round trip
+PASS L4:atrium uses metric geometry
+PASS L4:atrium full-size world viewport
+PASS L4:memory actual entry is walkable
+PASS L4:memory camera projection round trip
+PASS L4:memory uses metric geometry
+PASS L4:memory full-size world viewport
+PASS L4:visual actual entry is walkable
+PASS L4:visual camera projection round trip
+PASS L4:visual uses metric geometry
+PASS L4:visual full-size world viewport
+PASS L4:decision actual entry is walkable
+PASS L4:decision camera projection round trip
+PASS L4:decision uses metric geometry
+PASS L4:decision full-size world viewport
+PASS L4:body actual entry is walkable
+PASS L4:body camera projection round trip
+PASS L4:body uses metric geometry
+PASS L4:body full-size world viewport
+PASS L4:bridge actual entry is walkable
+PASS L4:bridge camera projection round trip
+PASS L4:bridge uses metric geometry
+PASS L4:bridge full-size world viewport
+PASS L4:rhythm actual entry is walkable
+PASS L4:rhythm camera projection round trip
+PASS L4:rhythm uses metric geometry
+PASS L4:rhythm full-size world viewport
+PASS L4:index actual entry is walkable
+PASS L4:index camera projection round trip
+PASS L4:index uses metric geometry
+PASS L4:index full-size world viewport
+PASS L4:switch actual entry is walkable
+PASS L4:switch camera projection round trip
+PASS L4:switch uses metric geometry
+PASS L4:switch full-size world viewport
+PASS L4:verify actual entry is walkable
+PASS L4:verify camera projection round trip
+PASS L4:verify uses metric geometry
+PASS L4:verify full-size world viewport
+PASS L4:identity actual entry is walkable
+PASS L4:identity camera projection round trip
+PASS L4:identity uses metric geometry
+PASS L4:identity full-size world viewport
+PASS metric L4 actual JSON snapshot restores
+PASS metric L4 snapshot preserves new version
+PASS legacy L4 snapshot without version remains loadable
+PASS legacy active action keeps its old metre geometry
+PASS fresh L5 selects per-room geometry version3
+PASS L5:atrium actual entry is walkable
+PASS L5:atrium camera projection round trip
+PASS L5:atrium uses metric geometry
+PASS L5:atrium full-size world viewport
+PASS L5:memory actual entry is walkable
+PASS L5:memory camera projection round trip
+PASS L5:memory uses metric geometry
+PASS L5:memory full-size world viewport
+PASS L5:visual actual entry is walkable
+PASS L5:visual camera projection round trip
+PASS L5:visual uses metric geometry
+PASS L5:visual full-size world viewport
+PASS L5:decision actual entry is walkable
+PASS L5:decision camera projection round trip
+PASS L5:decision uses metric geometry
+PASS L5:decision full-size world viewport
+PASS L5:body actual entry is walkable
+PASS L5:body camera projection round trip
+PASS L5:body uses metric geometry
+PASS L5:body full-size world viewport
+PASS L5:bridge actual entry is walkable
+PASS L5:bridge camera projection round trip
+PASS L5:bridge uses metric geometry
+PASS L5:bridge full-size world viewport
+PASS L5:rhythm actual entry is walkable
+PASS L5:rhythm camera projection round trip
+PASS L5:rhythm uses metric geometry
+PASS L5:rhythm full-size world viewport
+PASS L5:index actual entry is walkable
+PASS L5:index camera projection round trip
+PASS L5:index uses metric geometry
+PASS L5:index full-size world viewport
+PASS L5:switch actual entry is walkable
+PASS L5:switch camera projection round trip
+PASS L5:switch uses metric geometry
+PASS L5:switch full-size world viewport
+PASS L5:verify actual entry is walkable
+PASS L5:verify camera projection round trip
+PASS L5:verify uses metric geometry
+PASS L5:verify full-size world viewport
+PASS L5:identity actual entry is walkable
+PASS L5:identity camera projection round trip
+PASS L5:identity uses metric geometry
+PASS L5:identity full-size world viewport
+PASS L5:hippocampus actual entry is walkable
+PASS L5:hippocampus camera projection round trip
+PASS L5:hippocampus uses metric geometry
+PASS L5:hippocampus full-size world viewport
+PASS L5:thalamus actual entry is walkable
+PASS L5:thalamus camera projection round trip
+PASS L5:thalamus uses metric geometry
+PASS L5:thalamus full-size world viewport
+PASS L5:cerebellum actual entry is walkable
+PASS L5:cerebellum camera projection round trip
+PASS L5:cerebellum uses metric geometry
+PASS L5:cerebellum full-size world viewport
+PASS L5:hypothalamus actual entry is walkable
+PASS L5:hypothalamus camera projection round trip
+PASS L5:hypothalamus uses metric geometry
+PASS L5:hypothalamus full-size world viewport
+PASS L5:basal actual entry is walkable
+PASS L5:basal camera projection round trip
+PASS L5:basal uses metric geometry
+PASS L5:basal full-size world viewport
+PASS L5:amygdala actual entry is walkable
+PASS L5:amygdala camera projection round trip
+PASS L5:amygdala uses metric geometry
+PASS L5:amygdala full-size world viewport
+PASS L5:brainstem actual entry is walkable
+PASS L5:brainstem camera projection round trip
+PASS L5:brainstem uses metric geometry
+PASS L5:brainstem full-size world viewport
+PASS new L5 layout round-trips actual snapshot
+PASS L6:street_plaza actual entry is walkable
+PASS L6:street_plaza camera projection round trip
+PASS L6:street_plaza uses metric geometry
+PASS L6:street_plaza full-size world viewport
+PASS L6:street_side actual entry is walkable
+PASS L6:street_side camera projection round trip
+PASS L6:street_side uses metric geometry
+PASS L6:street_side full-size world viewport
+PASS L6:street_narrow actual entry is walkable
+PASS L6:street_narrow camera projection round trip
+PASS L6:street_narrow uses metric geometry
+PASS L6:street_narrow full-size world viewport
+PASS L6:street_twisted actual entry is walkable
+PASS L6:street_twisted camera projection round trip
+PASS L6:street_twisted uses metric geometry
+PASS L6:street_twisted full-size world viewport
+PASS L6:street_maintenance actual entry is walkable
+PASS L6:street_maintenance camera projection round trip
+PASS L6:street_maintenance uses metric geometry
+PASS L6:street_maintenance full-size world viewport
+PASS L6:street_node actual entry is walkable
+PASS L6:street_node camera projection round trip
+PASS L6:street_node uses metric geometry
+PASS L6:street_node full-size world viewport
+PASS L6:street_end actual entry is walkable
+PASS L6:street_end camera projection round trip
+PASS L6:street_end uses metric geometry
+PASS L6:street_end full-size world viewport
+PASS L0:hidden_street actual entry is walkable
+PASS L0:hidden_street camera projection round trip
+PASS L0:hidden_street uses metric geometry
+PASS L0:hidden_street full-size world viewport
+PASS all55 regular instances and independent hidden fragment rendered
+ALL_SPACES_LIVE 56 rooms; 0 failures

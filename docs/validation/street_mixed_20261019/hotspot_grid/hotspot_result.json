@@ -1,0 +1,34 @@
+{
+  "fixture": "Actual performance snapshot after 98 ordinary process frames, no actor/route edits.",
+  "method_seconds": {
+    "actor:assistant": 0.000055,
+    "actor:back": 0.000059,
+    "actor:director": 0.000055,
+    "actor:mother": 0.000241,
+    "actor:postop": 0.000159,
+    "actor:register_nurse": 0.000048,
+    "actor:speaker": 0.000157,
+    "actor:transporter_asylum": 0.000019,
+    "actor:warder": 0.000826,
+    "actor:wheelchair": 0.000023,
+    "full_tick": 2.437207,
+    "hero": 2.297808,
+    "patched_body_path": 0.000036,
+    "patched_clipped_step": 0.000764,
+    "patched_full_grid_rebuild": 0.125201,
+    "patched_static_path": 0.00004
+  },
+  "path_inputs": {
+    "a": [
+      4.79547357559204,
+      6.38097763061523
+    ],
+    "b": [
+      19.5200004577637,
+      6.0
+    ],
+    "bodies": 4,
+    "body_points": 2,
+    "static_points": 2
+  }
+}

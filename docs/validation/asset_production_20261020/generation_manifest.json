@@ -1,0 +1,65 @@
+{
+  "outputs": [
+    {
+      "file": "neurons\\assets\\production\\characters\\main\\CHR_MAIN_BLUE_D0_PARTS_v001.png",
+      "sha256": "46a30ca2c679ec49e81ec55d5575d7f584c4efde80ff0f78c234c023ec86e4f4",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "method": "built-in image_gen",
+      "purpose": "15-piece reusable cutout atlas, not an animation sequence",
+      "status": "assembly calibration pending"
+    },
+    {
+      "file": "neurons\\assets\\production\\characters\\main\\CHR_MAIN_BLUE_D1_PARTS_v001.png",
+      "sha256": "dcca07e8e6eb21947a56334d56986c250a1450c1a910800a7bdb20115071dc63",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "method": "built-in image_gen",
+      "purpose": "15-piece reusable cutout atlas, not an animation sequence",
+      "status": "assembly calibration pending"
+    },
+    {
+      "file": "neurons\\assets\\production\\characters\\main\\CHR_MAIN_BLUE_D1_PARTS_v002.png",
+      "sha256": "7e9c06e8833cadb52c5a30958059d2b79ed18687691ca9751e1b7db4c988948e",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "method": "built-in image_gen",
+      "purpose": "15-piece reusable cutout atlas, not an animation sequence",
+      "status": "assembly calibration pending"
+    },
+    {
+      "file": "neurons\\assets\\production\\characters\\main\\CHR_MAIN_BLUE_D2_PARTS_v001.png",
+      "sha256": "5dbe32fe9b9aab6e1ae7087a825dcc5c99f02b837f09c61f4808b2032371b65c",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "method": "built-in image_gen",
+      "purpose": "15-piece reusable cutout atlas, not an animation sequence",
+      "status": "assembly calibration pending"
+    },
+    {
+      "file": "neurons\\assets\\production\\characters\\main\\CHR_MAIN_BLUE_D3_PARTS_v001.png",
+      "sha256": "9aada2dfaa0dd0f5124f50032dba4a0ee34d4fdfeb23942f85f17d1ab4ce9d1c",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "method": "built-in image_gen",
+      "purpose": "15-piece reusable cutout atlas, not an animation sequence",
+      "status": "assembly calibration pending"
+    }
+  ],
+  "source_policy": "Original user files untouched; one pajama outfit only; D1 v002 removes baked hanging sleeve; generated piece scales need rest-coordinate calibration."
+}

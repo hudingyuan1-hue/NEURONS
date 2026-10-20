@@ -1,0 +1,24 @@
+{
+  "clusters": 7,
+  "control_ms": 0,
+  "destination": "",
+  "door_left_s": -1.0,
+  "elapsed_s": 0.0333333333333333,
+  "ending": {},
+  "gripped": false,
+  "hp": 100,
+  "level": 6,
+  "neurons": 15,
+  "paused": false,
+  "pos_m": [
+    0.860000014305115,
+    4.0
+  ],
+  "pose": "idle",
+  "room": "street_maintenance",
+  "route_points": 0,
+  "sp": 100,
+  "street_clock_s": 0.0,
+  "street_s": 0.0,
+  "world_s": 0.0
+}

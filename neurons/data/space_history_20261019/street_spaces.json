@@ -1,0 +1,1349 @@
+{
+  "schema": 1,
+  "geometry_version": 3,
+  "scope": "Street7 and independent L1 hidden fragment",
+  "projection": {
+    "origin_px": [
+      70,
+      200
+    ],
+    "x_px_per_m": 96,
+    "depth_x_px_per_m": 30,
+    "depth_y_px_per_m": 56,
+    "height_px_per_m": 78
+  },
+  "reference": {
+    "adult_height_m": 1.75,
+    "minimum_single_actor_clearance_m": 0.55,
+    "main_portal_width_m": 1.4,
+    "notes": "Visual measuring references, not new character identity or building-code claims. Existing bounds, graph, actor/save coordinates and all combat/ending rules retained. Props are independent; no baked people, labels, halos or scenery."
+  },
+  "rooms": {
+    "street_plaza": {
+      "id": "street_plaza",
+      "title": "初始广场",
+      "size_m": [
+        16,
+        11
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "street-facing building boundary; no roof; runtime near facades may fade without deleting logical boundary"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "中央雕像喷泉",
+          "rect": [
+            6.6,
+            4.15,
+            2.8,
+            2.7
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 1.0,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_1",
+          "name": "长椅",
+          "rect": [
+            2.2,
+            8.6,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_2",
+          "name": "壁龛雕像",
+          "rect": [
+            7.2,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "statue",
+          "height_m": 1.45,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_3",
+          "name": "路灯",
+          "rect": [
+            10.105,
+            1.005,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_4",
+          "name": "枯树",
+          "rect": [
+            12.100000000000001,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "tree",
+          "height_m": 2.5,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_5",
+          "name": "排水口",
+          "rect": [
+            2.3,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_6",
+          "name": "墙面标识",
+          "rect": [
+            4.75,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_7",
+          "name": "异常组织",
+          "rect": [
+            7.2,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "geometry corrected, procedural placeholder; natural pacing and final art remain unapproved"
+    },
+    "street_side": {
+      "id": "street_side",
+      "title": "侧室",
+      "size_m": [
+        10,
+        9
+      ],
+      "environment": "covered_interior",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "street-facing building boundary; no roof; runtime near facades may fade without deleting logical boundary"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "破损长椅",
+          "rect": [
+            1.4,
+            0.7,
+            1.6,
+            0.55
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_1",
+          "name": "壁龛小雕像",
+          "rect": [
+            3.5,
+            0.7,
+            0.7,
+            0.45
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "statue",
+          "height_m": 1.45,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_2",
+          "name": "封闭维护柜",
+          "rect": [
+            5.0,
+            0.7,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_3",
+          "name": "旧皮箱",
+          "rect": [
+            6.7,
+            0.7,
+            0.75,
+            0.55
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_4",
+          "name": "木箱",
+          "rect": [
+            8.0,
+            0.7,
+            0.75,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_5",
+          "name": "灯具",
+          "rect": [
+            2.755,
+            7.605,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_6",
+          "name": "管道",
+          "rect": [
+            4.75,
+            7.4,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_7",
+          "name": "排水口",
+          "rect": [
+            7.2,
+            7.4,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_8",
+          "name": "异常组织",
+          "rect": [
+            8.5,
+            7.4,
+            0.7,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "geometry corrected, procedural placeholder; natural pacing and final art remain unapproved"
+    },
+    "street_narrow": {
+      "id": "street_narrow",
+      "title": "狭窄通道",
+      "size_m": [
+        18,
+        8
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "street-facing building boundary; no roof; runtime near facades may fade without deleting logical boundary"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "壁灯",
+          "rect": [
+            2.3,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "wall_lamp",
+          "height_m": 1.95,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_1",
+          "name": "长椅",
+          "rect": [
+            8.9,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "notes": "旧长椅被通用北侧实体凹槽间墙吞入；移至已存在凹槽，不扩大路程或新增房间。"
+        },
+        {
+          "id": "street_prop_2",
+          "name": "管线",
+          "rect": [
+            7.2,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "recess_top_left",
+          "name": "凹槽间墙",
+          "rect": [
+            4.4,
+            0.1,
+            2.6,
+            1.7
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "wall",
+          "notes": "此矩形为街道建筑占地与凹槽实体，不等于普通墙体厚度。",
+          "height_m": 2,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "recess_top_right",
+          "name": "凹槽间墙",
+          "rect": [
+            10.6,
+            0.1,
+            2.6,
+            1.7
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "wall",
+          "notes": "此矩形为街道建筑占地与凹槽实体，不等于普通墙体厚度。",
+          "height_m": 2,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "recess_bottom",
+          "name": "侧墙",
+          "rect": [
+            6,
+            6.3,
+            6,
+            1.6
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "wall",
+          "notes": "此矩形为街道建筑占地与凹槽实体，不等于普通墙体厚度。",
+          "height_m": 2,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_extra_6",
+          "name": "维护柜",
+          "rect": [
+            2,
+            1,
+            1,
+            0.55
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_extra_7",
+          "name": "排水口",
+          "rect": [
+            7.8,
+            5.85,
+            0.5,
+            0.4
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow",
+          "notes": "排水口移至南侧实体墙前的可见地面，不嵌在墙体碰撞内部。"
+        },
+        {
+          "id": "street_extra_8",
+          "name": "积水",
+          "rect": [
+            8.2,
+            5.6,
+            2,
+            0.4
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_extra_9",
+          "name": "杂物箱",
+          "rect": [
+            15.5,
+            6.4,
+            1,
+            0.55
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_extra_10",
+          "name": "墙面异常组织",
+          "rect": [
+            13.6,
+            0.4,
+            0.5,
+            0.5
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "geometry corrected, procedural placeholder; natural pacing and final art remain unapproved"
+    },
+    "street_twisted": {
+      "id": "street_twisted",
+      "title": "扭曲街道",
+      "size_m": [
+        20,
+        12
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "street-facing building boundary; no roof; runtime near facades may fade without deleting logical boundary"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "杂货铺",
+          "rect": [
+            2.3,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_1",
+          "name": "报刊铺立面",
+          "rect": [
+            4.75,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_2",
+          "name": "长椅",
+          "rect": [
+            16.5,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_3",
+          "name": "箱体",
+          "rect": [
+            9.65,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_4",
+          "name": "枯树",
+          "rect": [
+            12.100000000000001,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "tree",
+          "height_m": 2.5,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_5",
+          "name": "路灯",
+          "rect": [
+            2.755,
+            10.605,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_6",
+          "name": "积水",
+          "rect": [
+            4.75,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_7",
+          "name": "排水口",
+          "rect": [
+            7.2,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_8",
+          "name": "栏杆",
+          "rect": [
+            9.65,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_9",
+          "name": "扭曲地面",
+          "rect": [
+            12.100000000000001,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_10",
+          "name": "局部塌陷",
+          "rect": [
+            2.3,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "geometry corrected, procedural placeholder; natural pacing and final art remain unapproved"
+    },
+    "street_maintenance": {
+      "id": "street_maintenance",
+      "title": "维护通道",
+      "size_m": [
+        12,
+        8
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "street-facing building boundary; no roof; runtime near facades may fade without deleting logical boundary"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "沿墙管架",
+          "rect": [
+            6.0,
+            2.2,
+            1.0,
+            0.7
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 1.0,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_1",
+          "name": "维护柜",
+          "rect": [
+            4.75,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_2",
+          "name": "照明",
+          "rect": [
+            7.655,
+            1.005,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_3",
+          "name": "集中成矮堆的检修杂物",
+          "rect": [
+            9.65,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_cleaner_cart",
+          "name": "侧停清洁车",
+          "rect": [
+            1.6,
+            6.1,
+            0.65,
+            0.65
+          ],
+          "solid": true,
+          "kind": "cleaner_cart",
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.65,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "geometry corrected, procedural placeholder; natural pacing and final art remain unapproved"
+    },
+    "street_node": {
+      "id": "street_node",
+      "title": "异化节点",
+      "size_m": [
+        17,
+        12
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "street-facing building boundary; no roof; runtime near facades may fade without deleting logical boundary"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "中央异化塌陷核心",
+          "rect": [
+            7.1,
+            4.65,
+            2.8,
+            2.7
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 1.0,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_1",
+          "name": "外围步道",
+          "rect": [
+            4.75,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_2",
+          "name": "异常组织",
+          "rect": [
+            7.2,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_3",
+          "name": "店铺立面",
+          "rect": [
+            9.65,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_4",
+          "name": "长椅",
+          "rect": [
+            12.100000000000001,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_5",
+          "name": "灯具",
+          "rect": [
+            2.755,
+            10.605,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_6",
+          "name": "栏杆",
+          "rect": [
+            4.75,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_7",
+          "name": "箱体",
+          "rect": [
+            7.2,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_8",
+          "name": "设备间",
+          "rect": [
+            9.65,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_9",
+          "name": "封闭维修门",
+          "rect": [
+            12.100000000000001,
+            10.4,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "geometry corrected, procedural placeholder; natural pacing and final art remain unapproved"
+    },
+    "street_end": {
+      "id": "street_end",
+      "title": "出口",
+      "size_m": [
+        16,
+        11
+      ],
+      "environment": "open_air_urban",
+      "wall": {
+        "height_m": 2.8,
+        "thickness_m": 0.18,
+        "role": "street-facing building boundary; no roof; runtime near facades may fade without deleting logical boundary"
+      },
+      "props": [
+        {
+          "id": "street_prop_0",
+          "name": "检查岗亭",
+          "rect": [
+            2.3,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_1",
+          "name": "破损道闸",
+          "rect": [
+            4.75,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_2",
+          "name": "栏杆",
+          "rect": [
+            7.2,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_3",
+          "name": "长椅",
+          "rect": [
+            9.65,
+            0.8,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "bench",
+          "height_m": 0.85,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_4",
+          "name": "灯具",
+          "rect": [
+            12.555,
+            1.005,
+            0.24,
+            0.24
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "lamp",
+          "height_m": 2.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_5",
+          "name": "积水",
+          "rect": [
+            2.3,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_6",
+          "name": "排水口",
+          "rect": [
+            4.75,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "solid": false,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.05,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_7",
+          "name": "设备间",
+          "rect": [
+            7.2,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "kind": "facade",
+          "height_m": 2.55,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_8",
+          "name": "收束门廊",
+          "rect": [
+            13.5,
+            4.3,
+            1.5,
+            2.4
+          ],
+          "solid": false,
+          "kind": "floor",
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.03,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_9",
+          "name": "出口平台",
+          "rect": [
+            12.100000000000001,
+            9.4,
+            1.15,
+            0.65
+          ],
+          "solid": true,
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 0.7,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        },
+        {
+          "id": "street_prop_10",
+          "name": "终点门框",
+          "rect": [
+            15.25,
+            4.75,
+            0.3,
+            1.5
+          ],
+          "solid": false,
+          "kind": "gate",
+          "source": "S1:P476–503/T16–22; existing stable prop ID",
+          "height_m": 2.35,
+          "anchor": "footprint_center",
+          "render_layer": "independent_prop",
+          "shadow": "separate_contact_shadow"
+        }
+      ],
+      "source": "S1:P476–503/T16–22",
+      "status": "geometry corrected, procedural placeholder; natural pacing and final art remain unapproved"
+    }
+  },
+  "hidden": {
+    "id": "hidden_street",
+    "title": "第一关隐藏广场片段",
+    "size_m": [
+      5.6,
+      3.8
+    ],
+    "environment": "open_air_plaza_fragment",
+    "wall": {
+      "height_m": 2.8,
+      "thickness_m": 0.18,
+      "role": "bounded plaza fragment facades; not a miniature whole city"
+    },
+    "source": "S1:P24–26/P511; hidden_street.json layout and original E1 threshold retained",
+    "status": "compact combat fragment, saved logical anchors retained; not Street7 or final balance approval",
+    "props": [
+      {
+        "id": "fountain",
+        "name": "喷泉",
+        "rect": [
+          2.25,
+          1.25,
+          1.0,
+          1.2
+        ],
+        "height_m": 1.0,
+        "kind": "fountain",
+        "solid": true
+      },
+      {
+        "id": "bench_west",
+        "name": "长椅 · 不可休息",
+        "rect": [
+          0.25,
+          0.25,
+          1.0,
+          0.35
+        ],
+        "height_m": 0.85,
+        "kind": "bench",
+        "solid": true
+      },
+      {
+        "id": "bench_east",
+        "name": "长椅 · 不可休息",
+        "rect": [
+          4.1,
+          3.2,
+          1.0,
+          0.35
+        ],
+        "height_m": 0.85,
+        "kind": "bench",
+        "solid": true
+      },
+      {
+        "id": "lamp",
+        "name": "路灯",
+        "rect": [
+          4.7,
+          1.55,
+          0.2,
+          0.2
+        ],
+        "height_m": 2.7,
+        "kind": "lamp",
+        "solid": true
+      }
+    ],
+    "portals": [
+      {
+        "toward": "bedroom",
+        "wall": "west",
+        "at": [
+          0.6,
+          3.35
+        ],
+        "wall_point": [
+          0,
+          3.35
+        ],
+        "threshold": [
+          0.37,
+          3.35
+        ],
+        "landing": [
+          0.98,
+          3.35
+        ],
+        "inward": [
+          1,
+          0
+        ],
+        "width_m": 0.95,
+        "height_m": 2.2,
+        "role": "entry_only_no_return_transition"
+      },
+      {
+        "toward": "E1",
+        "wall": "north",
+        "at": [
+          5.12,
+          0.42
+        ],
+        "wall_point": [
+          5.12,
+          0
+        ],
+        "threshold": [
+          5.12,
+          0.42
+        ],
+        "landing": [
+          5.12,
+          0.22
+        ],
+        "inward": [
+          0,
+          1
+        ],
+        "width_m": 0.72,
+        "height_m": 2.2,
+        "role": "existing_one_way_E1_threshold_not_new_room"
+      }
+    ]
+  }
+}
